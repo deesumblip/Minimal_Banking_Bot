@@ -1,0 +1,45 @@
+## Level 3: Responses + Actions + Slots
+#
+# This domain adds slots (memory) to Level 2.
+# - Responses (predefined bot messages)
+# - Actions (custom Python code)
+# - Slots (conversation memory)
+
+version: "3.1"
+
+slots:
+  # Slots are the bot's memory
+  # They store information the user provides during the conversation
+  account:
+    type: text
+    # This slot will store the user's account number
+
+responses:
+  utter_greet:
+    - text: "Hi! I'm a banking assistant. How can I help you today?"
+      metadata:
+        rephrase: True
+
+  utter_help:
+    - text: |
+        I can help you with:
+        - Checking your balance
+        - Transferring money
+        - Bank hours
+        - Contact information
+      metadata:
+        rephrase: True
+
+  utter_contact:
+    - text: "You can reach us at support@bank.com or call 1-800-BANK-123."
+      metadata:
+        rephrase: True
+
+  utter_ask_account:
+    - text: "What is your account number?"
+      metadata:
+        rephrase: True
+
+actions:
+  - action_bank_hours
+  - action_check_balance_simple

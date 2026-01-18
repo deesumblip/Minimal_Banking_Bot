@@ -1,0 +1,18 @@
+action_endpoint:
+  actions_module: "actions"
+
+nlg:
+  type: rephrase
+  llm:
+    model_group: gpt-4o-mini
+
+# Tools registration - NEW in Level 5
+tools:
+  tools_module: "tools"
+
+model_groups:
+  - id: gpt-4o-mini
+    models:
+      - provider: openai
+        model: gpt-4o-mini-2024-07-18
+        temperature: 0.3

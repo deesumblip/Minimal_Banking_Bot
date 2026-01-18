@@ -1,0 +1,17 @@
+﻿# secrets
+.env
+
+# python
+.venv/
+__pycache__/
+*.pyc
+
+# rasa artifacts
+models/
+.rasa/
+logs/
+
+# editor
+.vscode/
+.idea/
+.DS_Store

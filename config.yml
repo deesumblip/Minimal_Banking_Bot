@@ -1,0 +1,16 @@
+## dockerless_first_principles/config.yml
+#
+# Same configuration as first_principles/, but intended for local (non-Docker) runs.
+
+recipe: default.v1
+language: en
+assistant_id: dockerless-first-principles-bot
+
+pipeline:
+  - name: SearchReadyLLMCommandGenerator
+    llm:
+      model_group: gpt-4o-mini
+
+policies:
+  - name: FlowPolicy
+

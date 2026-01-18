@@ -1,0 +1,266 @@
+#!/usr/bin/env python3
+"""
+Convert CODIO_IMPLEMENTATION_GUIDE.md to HTML with GitHub-style CSS.
+
+Usage:
+    python convert_codio_guide_to_html.py
+    python convert_codio_guide_to_html.py --open
+"""
+
+import markdown
+from pathlib import Path
+import sys
+import webbrowser
+import argparse
+
+# GitHub-style CSS (matching VS Code/Cursor preview) - Dark Reader compatible
+GITHUB_CSS = """
+<style>
+.markdown-body {
+    box-sizing: border-box;
+    min-width: 200px;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 45px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    word-wrap: break-word;
+    color: #24292e;
+    background-color: #ffffff;
+}
+
+@media (max-width: 767px) {
+    .markdown-body {
+        padding: 15px;
+    }
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+    margin-top: 24px;
+    margin-bottom: 16px;
+    font-weight: 600;
+    line-height: 1.25;
+    color: #24292e;
+    border-bottom: 1px solid #eaecef;
+    padding-bottom: .3em;
+}
+
+.markdown-body h1 { font-size: 2em; }
+.markdown-body h2 { font-size: 1.5em; }
+.markdown-body h3 { font-size: 1.25em; margin-top: 24px; margin-bottom: 16px; }
+.markdown-body h4 { font-size: 1em; margin-top: 24px; margin-bottom: 16px; }
+
+.markdown-body p {
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+    margin-top: 0;
+    margin-bottom: 16px;
+    padding-left: 2em;
+}
+
+.markdown-body li {
+    margin-top: .25em;
+}
+
+.markdown-body code {
+    padding: .2em .4em;
+    margin: 0;
+    font-size: 85%;
+    background-color: rgba(27,31,35,.05);
+    border-radius: 3px;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+.markdown-body pre {
+    padding: 16px;
+    overflow: auto;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f6f8fa;
+    border-radius: 6px;
+    margin-bottom: 16px;
+}
+
+.markdown-body pre code {
+    display: inline;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    border: 0;
+}
+
+.markdown-body blockquote {
+    padding: 0 1em;
+    color: #6a737d;
+    border-left: .25em solid #dfe2e5;
+    margin: 0 0 16px 0;
+}
+
+.markdown-body table {
+    border-spacing: 0;
+    border-collapse: collapse;
+    margin-top: 0;
+    margin-bottom: 16px;
+    width: 100%;
+    display: block;
+    overflow: auto;
+}
+
+.markdown-body table th {
+    font-weight: 600;
+    padding: 6px 13px;
+    border: 1px solid #dfe2e5;
+    background-color: #f6f8fa;
+}
+
+.markdown-body table td {
+    padding: 6px 13px;
+    border: 1px solid #dfe2e5;
+}
+
+.markdown-body table tr {
+    background-color: #fff;
+    border-top: 1px solid #c6cbd1;
+}
+
+.markdown-body table tr:nth-child(2n) {
+    background-color: #f6f8fa;
+}
+
+.markdown-body hr {
+    height: .25em;
+    padding: 0;
+    margin: 24px 0;
+    background-color: #e1e4e8;
+    border: 0;
+}
+
+.markdown-body a {
+    color: #0366d6;
+    text-decoration: none;
+}
+
+.markdown-body a:hover {
+    text-decoration: underline;
+}
+
+@media print {
+    .markdown-body {
+        max-width: 100%;
+        padding: 20px;
+    }
+    
+    .markdown-body h1,
+    .markdown-body h2 {
+        page-break-after: avoid;
+    }
+    
+    .markdown-body pre,
+    .markdown-body blockquote {
+        page-break-inside: avoid;
+    }
+}
+</style>
+"""
+
+def convert_codio_guide(open_browser=False):
+    """Convert CODIO_IMPLEMENTATION_GUIDE.md to HTML."""
+    script_dir = Path(__file__).parent
+    md_file = script_dir / "CODIO_IMPLEMENTATION_GUIDE.md"
+    html_file = script_dir / "CODIO_IMPLEMENTATION_GUIDE.html"
+    
+    if not md_file.exists():
+        print(f"[ERROR] CODIO_IMPLEMENTATION_GUIDE.md not found in {script_dir}")
+        return False
+    
+    print(f"Reading {md_file.name}...")
+    try:
+        with open(md_file, 'r', encoding='utf-8') as f:
+            md_content = f.read()
+        print(f"   [OK] Read {len(md_content)} characters")
+    except Exception as e:
+        print(f"   [ERROR] Error reading file: {e}")
+        return False
+    
+    print(f"   Converting markdown to HTML...")
+    try:
+        html_content = markdown.markdown(
+            md_content,
+            extensions=['extra', 'codehilite', 'tables', 'fenced_code', 'nl2br', 'sane_lists']
+        )
+        print(f"   [OK] Converted to HTML")
+    except Exception as e:
+        print(f"   [ERROR] Error converting markdown: {e}")
+        return False
+    
+    print(f"   Creating HTML document...")
+    html_document = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level 1: Complete Codio Course Guide</title>
+    {GITHUB_CSS}
+</head>
+<body>
+    <article class="markdown-body">
+{html_content}
+    </article>
+</body>
+</html>"""
+    
+    print(f"   Saving HTML file...")
+    try:
+        with open(html_file, 'w', encoding='utf-8') as f:
+            f.write(html_document)
+        file_size = html_file.stat().st_size / 1024
+        print(f"   [OK] Saved to {html_file.name} ({file_size:.1f} KB)")
+        
+        if open_browser:
+            webbrowser.open(f"file://{html_file.absolute()}")
+            print(f"   [OK] Opened in browser")
+        
+        return True
+    except Exception as e:
+        print(f"   [ERROR] Error saving file: {e}")
+        return False
+
+def main():
+    parser = argparse.ArgumentParser(
+        description='Convert CODIO_IMPLEMENTATION_GUIDE.md to HTML with GitHub-style CSS',
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="""
+Examples:
+  python convert_codio_guide_to_html.py          # Convert to HTML
+  python convert_codio_guide_to_html.py --open   # Convert and open in browser
+        """
+    )
+    parser.add_argument(
+        '--open',
+        action='store_true',
+        help='Open HTML file in browser after conversion'
+    )
+    
+    args = parser.parse_args()
+    
+    print("Converting CODIO_IMPLEMENTATION_GUIDE.md to HTML...")
+    
+    if convert_codio_guide(open_browser=args.open):
+        print(f"\nConversion complete!")
+        print(f"\nNext steps:")
+        print(f"   1. Open {Path(__file__).parent / 'CODIO_IMPLEMENTATION_GUIDE.html'} in your browser")
+        print(f"   2. Press Ctrl+P to print")
+        print(f"   3. Choose 'Save as PDF' or 'Microsoft Print to PDF'")
+        print(f"   4. Save your PDF file")
+    else:
+        print(f"\nConversion failed!")
+        sys.exit(1)
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,19 @@
+## dockerless_first_principles/endpoints.yml
+#
+# Same wiring as first_principles/.
+
+action_endpoint:
+  actions_module: "actions"
+
+nlg:
+  type: rephrase
+  llm:
+    model_group: gpt-4o-mini
+
+model_groups:
+  - id: gpt-4o-mini
+    models:
+      - provider: openai
+        model: gpt-4o-mini-2024-07-18
+        temperature: 0.3
+
