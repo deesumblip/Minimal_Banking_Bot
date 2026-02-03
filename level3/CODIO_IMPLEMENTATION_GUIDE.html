@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level 3: Complete Codio Course Guide</title>
+    
+<style>
+.markdown-body {
+    box-sizing: border-box;
+    min-width: 200px;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 45px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    word-wrap: break-word;
+    color: #24292e;
+    background-color: #ffffff;
+}
+
+@media (max-width: 767px) {
+    .markdown-body {
+        padding: 15px;
+    }
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+    margin-top: 24px;
+    margin-bottom: 16px;
+    font-weight: 600;
+    line-height: 1.25;
+    color: #24292e;
+    border-bottom: 1px solid #eaecef;
+    padding-bottom: .3em;
+}
+
+.markdown-body h1 { font-size: 2em; }
+.markdown-body h2 { font-size: 1.5em; }
+.markdown-body h3 { font-size: 1.25em; margin-top: 24px; margin-bottom: 16px; }
+.markdown-body h4 { font-size: 1em; margin-top: 24px; margin-bottom: 16px; }
+
+.markdown-body p {
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+    margin-top: 0;
+    margin-bottom: 16px;
+    padding-left: 2em;
+}
+
+.markdown-body li {
+    margin-top: .25em;
+}
+
+.markdown-body code {
+    padding: .2em .4em;
+    margin: 0;
+    font-size: 85%;
+    background-color: rgba(27,31,35,.05);
+    border-radius: 3px;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+.markdown-body pre {
+    padding: 16px;
+    overflow: auto;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f6f8fa;
+    border-radius: 6px;
+    margin-bottom: 16px;
+}
+
+.markdown-body pre code {
+    display: inline;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    border: 0;
+}
+
+.markdown-body blockquote {
+    padding: 0 1em;
+    color: #6a737d;
+    border-left: .25em solid #dfe2e5;
+    margin: 0 0 16px 0;
+}
+
+.markdown-body table {
+    border-spacing: 0;
+    border-collapse: collapse;
+    margin-top: 0;
+    margin-bottom: 16px;
+    width: 100%;
+    display: block;
+    overflow: auto;
+}
+
+.markdown-body table th {
+    font-weight: 600;
+    padding: 6px 13px;
+    border: 1px solid #dfe2e5;
+    background-color: #f6f8fa;
+}
+
+.markdown-body table td {
+    padding: 6px 13px;
+    border: 1px solid #dfe2e5;
+}
+
+.markdown-body table tr {
+    background-color: #fff;
+    border-top: 1px solid #c6cbd1;
+}
+
+.markdown-body table tr:nth-child(2n) {
+    background-color: #f6f8fa;
+}
+
+.markdown-body hr {
+    height: .25em;
+    padding: 0;
+    margin: 24px 0;
+    background-color: #e1e4e8;
+    border: 0;
+}
+
+.markdown-body a {
+    color: #0366d6;
+    text-decoration: none;
+}
+
+.markdown-body a:hover {
+    text-decoration: underline;
+}
+
+@media print {
+    .markdown-body {
+        max-width: 100%;
+        padding: 20px;
+    }
+    
+    .markdown-body h1,
+    .markdown-body h2 {
+        page-break-after: avoid;
+    }
+    
+    .markdown-body pre,
+    .markdown-body blockquote {
+        page-break-inside: avoid;
+    }
+}
+</style>
+
+</head>
+<body>
+    <article class="markdown-body">
+<h1>Level 3: Slot Collection - Complete Codio Course Guide</h1>
+<p><strong>Complete Course Content and Implementation Guide for Codio Platform</strong></p>
+<p><strong>Purpose</strong>: This document serves as both:<br />
+- <strong>Complete course content</strong> for students (Level 3 tutorial content integrated)<br />
+- <strong>Implementation guide</strong> for the Codio team (technical specifications and deployment notes)</p>
+<hr />
+<h2>For Students (Full Tutorial Content)</h2>
+<p><strong>A Complete Guide to Adding Memory to Your Banking Bot</strong></p>
+<hr />
+<h2>Table of Contents</h2>
+<ol start="0">
+<li><a href="#module-0-recap-what-you-built-in-level-2">Recap: What You Built in Level 2</a></li>
+<li><a href="#module-1-introduction-to-slots">Introduction to Slots</a></li>
+<li><a href="#module-2-understanding-slot-types">Understanding Slot Types</a></li>
+<li><a href="#module-3-defining-slots-in-the-domain">Defining Slots in the Domain</a></li>
+<li><a href="#module-4-collecting-slots-in-flows">Collecting Slots in Flows</a></li>
+<li><a href="#module-5-reading-slots-in-actions">Reading Slots in Actions</a></li>
+<li><a href="#module-6-training-and-testing-with-slots">Training and Testing with Slots</a></li>
+<li><a href="#module-7-putting-it-all-together">Putting It All Together</a></li>
+<li><a href="#module-8-assessment-and-next-steps">Assessment and Next Steps</a></li>
+</ol>
+<hr />
+<h2>Module 0: Recap - What You Built in Level 2</h2>
+<h3>0.1 Your Level 2 Banking Bot</h3>
+<p>Before we add slots (memory), let's recap what you've already built in Level 2. <strong>All of this remains unchanged</strong> - Level 3 builds on top of it!</p>
+<h4>What You Have from Level 2</h4>
+<p><strong>Domain File (<code>domain/basics.yml</code>)</strong>:<br />
+- ✅ All Level 1 responses (<code>utter_greet</code>, <code>utter_help</code>, <code>utter_contact</code>)<br />
+- ✅ <code>actions:</code> section with <code>action_bank_hours</code> registered</p>
+<p><strong>Flows (<code>data/basics/</code>)</strong>:<br />
+- ✅ All Level 1 flows (<code>greet</code>, <code>help</code>, <code>contact</code>)<br />
+- ✅ New Level 2 flow (<code>hours</code>) that uses <code>action_bank_hours</code></p>
+<p><strong>Actions (<code>actions/</code>)</strong>:<br />
+- ✅ <code>action_bank_hours.py</code> - Returns bank hours dynamically</p>
+<p><strong>System Patterns</strong>: Unchanged from Level 1</p>
+<p><strong>Configuration Files</strong>: Unchanged from Level 2</p>
+<h4>What Level 2 Couldn't Do</h4>
+<p>Your Level 2 bot could execute custom Python code, but it couldn't:<br />
+- ❌ Remember information from the conversation<br />
+- ❌ Store user-provided data<br />
+- ❌ Use information from earlier in the conversation<br />
+- ❌ Ask for missing information and remember it</p>
+<p><strong>Example</strong>: If a user asked "Check my balance", your Level 2 bot couldn't:<br />
+- Remember which account the user has<br />
+- Ask for the account number and remember it<br />
+- Use that account number in subsequent actions</p>
+<hr />
+<h3>0.2 What Level 3 Adds</h3>
+<p>Level 3 introduces <strong>Slots</strong> - the bot's memory. This enables:</p>
+<ul>
+<li>✅ Remembering information from the conversation</li>
+<li>✅ Storing user-provided data (like account numbers)</li>
+<li>✅ Asking for missing information</li>
+<li>✅ Using stored information in actions</li>
+</ul>
+<p><strong>Your existing Level 2 bot continues to work</strong> - Level 3 adds memory on top of it!</p>
+<h4>What's New in Level 3</h4>
+<p><strong>New in Domain</strong>:<br />
+- <code>slots:</code> section - Defines what the bot remembers<br />
+- <code>account</code> slot - Stores the user's account number<br />
+- New response <code>utter_ask_account</code> - Used when asking for account number</p>
+<p><strong>New Files</strong>:<br />
+- <code>actions/action_check_balance_simple.py</code> - Action that reads the <code>account</code> slot</p>
+<p><strong>New Flows</strong>:<br />
+- <code>data/basics/check_balance.yml</code> - Flow that collects account number before checking balance</p>
+<p><strong>Unchanged</strong>:<br />
+- All Level 2 responses remain<br />
+- All Level 2 flows remain<br />
+- All Level 2 actions remain</p>
+<hr />
+<h2>Module 1: Introduction to Slots</h2>
+<h3>1.1 What is a Slot?</h3>
+<p>A <strong>slot</strong> is a memory variable that stores information from the conversation. Slots allow your bot to remember what users tell it and use that information later.</p>
+<h4>Slots = Bot Memory</h4>
+<p>Think of slots like a form that the bot fills out during the conversation:<br />
+- User provides information → Bot stores it in a slot<br />
+- Bot needs information → Bot asks user and stores answer in slot<br />
+- Action needs information → Bot reads it from the slot</p>
+<h4>Example: Account Number</h4>
+<p><strong>Without slots (Level 2)</strong>:</p>
+<div class="codehilite"><pre><span></span><code>User: &quot;Check my balance&quot;
+Bot: &quot;I need your account number&quot; (but forgets immediately)
+User: &quot;1234&quot;
+Bot: &quot;What account number?&quot; (forgot it!)
+</code></pre></div>
+
+<p><strong>With slots (Level 3)</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="nv">User</span>:<span class="w"> </span><span class="s2">&quot;Check my balance&quot;</span>
+<span class="nv">Bot</span>:<span class="w"> </span><span class="s2">&quot;What is your account number?&quot;</span>
+<span class="nv">User</span>:<span class="w"> </span><span class="s2">&quot;1234&quot;</span>
+<span class="nv">Bot</span>:<span class="w"> </span>[<span class="nv">Stores</span><span class="w"> </span><span class="s2">&quot;1234&quot;</span><span class="w"> </span><span class="nv">in</span><span class="w"> </span><span class="nv">account</span><span class="w"> </span><span class="nv">slot</span>]
+<span class="nv">Bot</span>:<span class="w"> </span><span class="s2">&quot;Balance for account 1234 is $123.45&quot;</span>
+[<span class="nv">Later</span><span class="w"> </span><span class="nv">in</span><span class="w"> </span><span class="nv">conversation</span>]
+<span class="nv">User</span>:<span class="w"> </span><span class="s2">&quot;What&#39;s my balance?&quot;</span>
+<span class="nv">Bot</span>:<span class="w"> </span>[<span class="nv">Remembers</span><span class="w"> </span><span class="nv">account</span><span class="w"> </span><span class="mi">1234</span><span class="w"> </span><span class="nv">from</span><span class="w"> </span><span class="nv">slot</span>]
+<span class="nv">Bot</span>:<span class="w"> </span><span class="s2">&quot;Balance for account 1234 is $123.45&quot;</span>
+</code></pre></div>
+
+<hr />
+<h3>1.2 How Slots Work</h3>
+<p>Slots work in three steps:</p>
+<ol>
+<li>
+<p><strong>Define the slot</strong> in <code>domain/basics.yml</code>:<br />
+<code>yaml
+   slots:
+     account:
+       type: text</code></p>
+</li>
+<li>
+<p><strong>Collect the slot</strong> in a flow:<br />
+   ```yaml<br />
+   steps:</p>
+<ul>
+<li>collect: account<br />
+   description: "account number"<br />
+   ```</li>
+</ul>
+</li>
+<li>
+<p><strong>Read the slot</strong> in an action:<br />
+<code>python
+   account = tracker.get_slot("account")</code></p>
+</li>
+</ol>
+<hr />
+<h3>1.3 Slot Collection</h3>
+<p>When a flow has a <code>collect:</code> step:</p>
+<ul>
+<li><strong>If slot is empty</strong>: Bot asks for it (using <code>utter_ask_*</code> response)</li>
+<li><strong>If slot has value</strong>: Flow continues immediately (no asking)</li>
+<li><strong>User provides value</strong>: Bot stores it in the slot</li>
+</ul>
+<p><strong>Example Flow</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">steps</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">collect</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">account</span><span class="w">        </span><span class="c1"># Step 1: Get account number</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;account</span><span class="nv"> </span><span class="s">number&quot;</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">action_check_balance_simple</span><span class="w">  </span><span class="c1"># Step 2: Use it</span>
+</code></pre></div>
+
+<p><strong>What happens</strong>:<br />
+1. Flow starts<br />
+2. Bot checks: Does <code>account</code> slot have a value?<br />
+   - <strong>No</strong> → Bot asks: "What is your account number?" (using <code>utter_ask_account</code>)<br />
+   - <strong>Yes</strong> → Skip to step 2<br />
+3. User provides account number<br />
+4. Bot stores it in <code>account</code> slot<br />
+5. Flow continues to step 2<br />
+6. Action reads <code>account</code> slot and uses it</p>
+<hr />
+<h2>Module 2: Understanding Slot Types</h2>
+<h3>2.1 Slot Types</h3>
+<p>Slots can have different types. For Level 3, we use the simplest type: <code>text</code>.</p>
+<h4>Text Slots</h4>
+<div class="codehilite"><pre><span></span><code><span class="nt">slots</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">account</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+</code></pre></div>
+
+<p><strong>Text slots</strong>:<br />
+- Store any text value<br />
+- Most flexible type<br />
+- Good for: names, account numbers, descriptions, any text input</p>
+<p><strong>Example values</strong>:<br />
+- <code>"1234"</code> (account number)<br />
+- <code>"John Doe"</code> (name)<br />
+- <code>"checking"</code> (account type)</p>
+<h4>Other Slot Types (Advanced)</h4>
+<p>For Level 3, we only use <code>text</code> slots. Other types exist (like <code>bool</code>, <code>float</code>, <code>list</code>) but are covered in advanced tutorials.</p>
+<hr />
+<h3>2.2 Slot Naming</h3>
+<p><strong>Good slot names</strong>:<br />
+- ✅ <code>account</code> - Clear and descriptive<br />
+- ✅ <code>user_name</code> - Descriptive<br />
+- ✅ <code>transfer_amount</code> - Clear purpose</p>
+<p><strong>Bad slot names</strong>:<br />
+- ❌ <code>a</code> - Too vague<br />
+- ❌ <code>slot1</code> - Not descriptive<br />
+- ❌ <code>data</code> - Too generic</p>
+<p><strong>Convention</strong>: Use lowercase, descriptive names. Use underscores for multi-word names.</p>
+<hr />
+<h2>Module 3: Defining Slots in the Domain</h2>
+<h3>3.1 The Slots Section</h3>
+<p>Slots are defined in the domain file, just like responses and actions.</p>
+<h4>Domain Structure in Level 3</h4>
+<div class="codehilite"><pre><span></span><code><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;3.1&quot;</span>
+
+<span class="nt">slots</span><span class="p">:</span><span class="w">                    </span><span class="c1"># ← NEW in Level 3</span>
+<span class="w">  </span><span class="nt">account</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span>
+
+<span class="nt">responses</span><span class="p">:</span><span class="w">                </span><span class="c1"># ← From Level 1 &amp; 2 (unchanged)</span>
+<span class="w">  </span><span class="nt">utter_greet</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Hi!</span><span class="nv"> </span><span class="s">I&#39;m</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">banking</span><span class="nv"> </span><span class="s">assistant...&quot;</span>
+<span class="w">  </span><span class="c1"># ... other responses</span>
+<span class="w">  </span><span class="nt">utter_ask_account</span><span class="p">:</span><span class="w">      </span><span class="c1"># ← NEW: Used when collecting account slot</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;What</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">your</span><span class="nv"> </span><span class="s">account</span><span class="nv"> </span><span class="s">number?&quot;</span>
+
+<span class="nt">actions</span><span class="p">:</span><span class="w">                  </span><span class="c1"># ← From Level 2 (unchanged)</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">action_bank_hours</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">action_check_balance_simple</span><span class="w">  </span><span class="c1"># ← NEW: Uses the account slot</span>
+</code></pre></div>
+
+<hr />
+<h3>3.2 Step-by-Step: Defining a Slot</h3>
+<p><strong>Step 1: Open the Domain File</strong></p>
+<ol>
+<li>Navigate to <code>domain/basics.yml</code></li>
+<li>Open it in your editor</li>
+</ol>
+<p><strong>What you should see</strong>: Your Level 2 content (responses and actions)</p>
+<hr />
+<p><strong>Step 2: Add the Slots Section</strong></p>
+<ol>
+<li>Add the <code>slots:</code> section at the top (before <code>responses:</code>):</li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;3.1&quot;</span>
+
+<span class="nt">slots</span><span class="p">:</span><span class="w">                    </span><span class="c1"># ← Add this section</span>
+<span class="w">  </span><span class="nt">account</span><span class="p">:</span><span class="w">                </span><span class="c1"># ← Slot name</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text</span><span class="w">            </span><span class="c1"># ← Slot type</span>
+
+<span class="nt">responses</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># ... existing responses</span>
+</code></pre></div>
+
+<p>⚠️ <strong>Important</strong>:<br />
+- <code>slots:</code> is at the same indentation level as <code>responses:</code> and <code>actions:</code><br />
+- <code>account:</code> is indented 2 spaces under <code>slots:</code><br />
+- <code>type: text</code> is indented 2 spaces under <code>account:</code></p>
+<hr />
+<p><strong>Step 3: Add the Ask Response</strong></p>
+<p>When collecting a slot, Rasa needs a response to ask for it. Add <code>utter_ask_account</code>:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">responses</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">utter_greet</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Hi!</span><span class="nv"> </span><span class="s">I&#39;m</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">banking</span><span class="nv"> </span><span class="s">assistant.</span><span class="nv"> </span><span class="s">How</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">I</span><span class="nv"> </span><span class="s">help</span><span class="nv"> </span><span class="s">you</span><span class="nv"> </span><span class="s">today?&quot;</span>
+<span class="w">      </span><span class="nt">metadata</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">rephrase</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">True</span>
+
+<span class="w">  </span><span class="c1"># ... other responses</span>
+
+<span class="w">  </span><span class="nt">utter_ask_account</span><span class="p">:</span><span class="w">      </span><span class="c1"># ← NEW: Used when collecting account slot</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;What</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">your</span><span class="nv"> </span><span class="s">account</span><span class="nv"> </span><span class="s">number?&quot;</span>
+<span class="w">      </span><span class="nt">metadata</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">rephrase</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">True</span>
+</code></pre></div>
+
+<p><strong>Naming convention</strong>: <code>utter_ask_&lt;slot_name&gt;</code><br />
+- Slot: <code>account</code> → Response: <code>utter_ask_account</code><br />
+- Slot: <code>name</code> → Response: <code>utter_ask_name</code></p>
+<hr />
+<p><strong>Step 4: Verify Your Domain</strong></p>
+<p>Check:<br />
+- ✅ <code>slots:</code> section exists with <code>account</code> slot<br />
+- ✅ <code>utter_ask_account</code> response exists<br />
+- ✅ All Level 2 responses remain<br />
+- ✅ All Level 2 actions remain<br />
+- ✅ YAML syntax is correct</p>
+<hr />
+<h2>Module 4: Collecting Slots in Flows</h2>
+<h3>4.1 The Collect Step</h3>
+<p>The <code>collect:</code> step in a flow tells Rasa: "Get this slot value before continuing."</p>
+<h4>Collect Step Structure</h4>
+<div class="codehilite"><pre><span></span><code><span class="nt">steps</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">collect</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">account</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;account</span><span class="nv"> </span><span class="s">number&quot;</span>
+</code></pre></div>
+
+<p><strong>Breaking it down</strong>:<br />
+- <strong><code>collect: account</code></strong> - Which slot to collect<br />
+- <strong><code>description:</code></strong> - Helps the LLM understand what to extract (optional but recommended)</p>
+<hr />
+<h3>4.2 Creating a Flow with Slot Collection</h3>
+<p>Let's create the <code>check_balance.yml</code> flow that collects the account number.</p>
+<h4>Step-by-Step Tutorial</h4>
+<p><strong>Step 1: Navigate to Data Folder</strong></p>
+<ol>
+<li>Go to <code>data/basics/</code> folder</li>
+<li>You should see your Level 2 flows: <code>greet.yml</code>, <code>help.yml</code>, <code>contact.yml</code>, <code>hours.yml</code></li>
+</ol>
+<hr />
+<p><strong>Step 2: Create the Check Balance Flow</strong></p>
+<ol>
+<li>Create a new file: <code>data/basics/check_balance.yml</code></li>
+<li>Add the flow structure:</li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="nt">flows</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">check_balance</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">check a balance (demo)</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">      </span><span class="no">Demonstrates a flow with slot collection.</span>
+<span class="w">      </span><span class="no">The bot will ask for an account number if not provided,</span>
+<span class="w">      </span><span class="no">then call the action to check the balance.</span>
+<span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">collect</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">account</span>
+<span class="w">        </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;account</span><span class="nv"> </span><span class="s">number&quot;</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">action_check_balance_simple</span>
+</code></pre></div>
+
+<p><strong>Complete file</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">flows</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">check_balance</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">check a balance (demo)</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">      </span><span class="no">Demonstrates a flow with slot collection.</span>
+<span class="w">      </span><span class="no">The bot will ask for an account number if not provided,</span>
+<span class="w">      </span><span class="no">then call the action to check the balance.</span>
+<span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">collect</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">account</span>
+<span class="w">        </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;account</span><span class="nv"> </span><span class="s">number&quot;</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">action_check_balance_simple</span>
+</code></pre></div>
+
+<hr />
+<p><strong>Step 3: Understanding the Flow</strong></p>
+<p><strong>Flow execution</strong>:<br />
+1. User says "Check my balance" or "What's my balance?"<br />
+2. LLM matches to <code>check_balance</code> flow<br />
+3. Flow step 1: <code>collect: account</code><br />
+   - Bot checks: Does <code>account</code> slot have a value?<br />
+   - <strong>No</strong> → Bot asks: "What is your account number?" (uses <code>utter_ask_account</code>)<br />
+   - User provides: "1234"<br />
+   - Bot stores "1234" in <code>account</code> slot<br />
+4. Flow step 2: <code>action: action_check_balance_simple</code><br />
+   - Action reads <code>account</code> slot (gets "1234")<br />
+   - Action checks balance for account 1234<br />
+   - Action responds with balance</p>
+<p><strong>If slot already has value</strong>:<br />
+- User already provided account number earlier<br />
+- Flow skips the asking step<br />
+- Goes directly to action (which uses the stored value)</p>
+<hr />
+<p><strong>Step 4: Verify the Flow</strong></p>
+<p>Check:<br />
+- ✅ File is in <code>data/basics/</code> folder<br />
+- ✅ Flow has <code>name:</code>, <code>description:</code>, and <code>steps:</code><br />
+- ✅ <code>collect: account</code> step exists<br />
+- ✅ Action name matches registered action<br />
+- ✅ YAML syntax is correct</p>
+<hr />
+<h3>4.3 How Collection Works</h3>
+<h4>Collection Process</h4>
+<div class="codehilite"><pre><span></span><code><span class="nx">Flow</span><span class="w"> </span><span class="nx">starts</span>
+<span class="w">    </span><span class="err">↓</span>
+<span class="nx">Step</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="w"> </span><span class="nx">collect</span><span class="p">:</span><span class="w"> </span><span class="nx">account</span>
+<span class="w">    </span><span class="err">↓</span>
+<span class="nx">Does</span><span class="w"> </span><span class="nx">account</span><span class="w"> </span><span class="nx">slot</span><span class="w"> </span><span class="nx">have</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="nx">value</span><span class="p">?</span>
+<span class="w">    </span><span class="err">├─</span><span class="w"> </span><span class="nx">NO</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="nx">Bot</span><span class="w"> </span><span class="nx">asks</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;What is your account number?&quot;</span>
+<span class="w">    </span><span class="err">│</span><span class="w">        </span><span class="err">↓</span>
+<span class="w">    </span><span class="err">│</span><span class="w">   </span><span class="nx">User</span><span class="w"> </span><span class="nx">provides</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1234&quot;</span>
+<span class="w">    </span><span class="err">│</span><span class="w">        </span><span class="err">↓</span>
+<span class="w">    </span><span class="err">│</span><span class="w">   </span><span class="nx">Bot</span><span class="w"> </span><span class="nx">stores</span><span class="w"> </span><span class="s">&quot;1234&quot;</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">account</span><span class="w"> </span><span class="nx">slot</span>
+<span class="w">    </span><span class="err">│</span><span class="w">        </span><span class="err">↓</span>
+<span class="w">    </span><span class="err">└─</span><span class="w"> </span><span class="nx">YES</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="nx">Skip</span><span class="w"> </span><span class="nx">asking</span><span class="w"> </span><span class="p">(</span><span class="nx">use</span><span class="w"> </span><span class="nx">existing</span><span class="w"> </span><span class="nx">value</span><span class="p">)</span>
+<span class="w">            </span><span class="err">↓</span>
+<span class="nx">Step</span><span class="w"> </span><span class="mi">2</span><span class="p">:</span><span class="w"> </span><span class="nx">action_check_balance_simple</span>
+<span class="w">    </span><span class="err">↓</span>
+<span class="nx">Action</span><span class="w"> </span><span class="nx">reads</span><span class="w"> </span><span class="nx">account</span><span class="w"> </span><span class="nx">slot</span>
+<span class="w">    </span><span class="err">↓</span>
+<span class="nx">Action</span><span class="w"> </span><span class="nx">uses</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">value</span>
+</code></pre></div>
+
+<p><strong>Key Point</strong>: The bot only asks if the slot is empty. If it already has a value, it uses that value immediately.</p>
+<hr />
+<h2>Module 5: Reading Slots in Actions</h2>
+<h3>5.1 Accessing Slots in Actions</h3>
+<p>To use slot values in your actions, you read them from the <code>tracker</code> parameter.</p>
+<h4>Reading a Slot</h4>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dispatcher</span><span class="p">,</span> <span class="n">tracker</span><span class="p">,</span> <span class="n">domain</span><span class="p">):</span>
+    <span class="c1"># Read the slot value</span>
+    <span class="n">account</span> <span class="o">=</span> <span class="n">tracker</span><span class="o">.</span><span class="n">get_slot</span><span class="p">(</span><span class="s2">&quot;account&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Use the slot value</span>
+    <span class="k">if</span> <span class="n">account</span><span class="p">:</span>
+        <span class="n">dispatcher</span><span class="o">.</span><span class="n">utter_message</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Balance for account </span><span class="si">{</span><span class="n">account</span><span class="si">}</span><span class="s2"> is $123.45&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">dispatcher</span><span class="o">.</span><span class="n">utter_message</span><span class="p">(</span><span class="s2">&quot;I don&#39;t have your account number.&quot;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="p">[]</span>
+</code></pre></div>
+
+<hr />
+<h3>5.2 Understanding the Tracker</h3>
+<p>The <code>tracker</code> contains all conversation information:</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Get a slot value</span>
+<span class="n">account</span> <span class="o">=</span> <span class="n">tracker</span><span class="o">.</span><span class="n">get_slot</span><span class="p">(</span><span class="s2">&quot;account&quot;</span><span class="p">)</span>
+
+<span class="c1"># Slot might be None if not set yet</span>
+<span class="k">if</span> <span class="n">account</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="c1"># Handle missing slot</span>
+    <span class="k">pass</span>
+</code></pre></div>
+
+<p><strong>Important</strong>: Slots can be <code>None</code> if they haven't been set yet. Always check!</p>
+<hr />
+<h3>5.3 Creating an Action That Uses Slots</h3>
+<p>Let's examine <code>action_check_balance_simple.py</code> to see how it uses slots.</p>
+<h4>Complete Action File</h4>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Text</span>
+
+<span class="kn">from</span> <span class="nn">rasa_sdk</span> <span class="kn">import</span> <span class="n">Action</span><span class="p">,</span> <span class="n">Tracker</span>
+<span class="kn">from</span> <span class="nn">rasa_sdk.executor</span> <span class="kn">import</span> <span class="n">CollectingDispatcher</span>
+
+
+<span class="k">class</span> <span class="nc">ActionCheckBalanceSimple</span><span class="p">(</span><span class="n">Action</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;A custom action that reads a slot and returns a balance.</span>
+
+<span class="sd">    This demonstrates:</span>
+<span class="sd">    - How to read slots (conversation memory) from the tracker</span>
+<span class="sd">    - How to handle placeholder values that the LLM might extract incorrectly</span>
+<span class="sd">    - How to re-prompt the user if needed</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">name</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Text</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;action_check_balance_simple&quot;</span>
+
+    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">dispatcher</span><span class="p">:</span> <span class="n">CollectingDispatcher</span><span class="p">,</span>
+        <span class="n">tracker</span><span class="p">:</span> <span class="n">Tracker</span><span class="p">,</span>
+        <span class="n">domain</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="n">Text</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="n">Text</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]:</span>
+        <span class="c1"># Read the &#39;account&#39; slot from conversation memory</span>
+        <span class="n">account</span> <span class="o">=</span> <span class="n">tracker</span><span class="o">.</span><span class="n">get_slot</span><span class="p">(</span><span class="s2">&quot;account&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="s2">&quot;&lt;missing&gt;&quot;</span>
+
+        <span class="c1"># Check if the account is a placeholder value</span>
+        <span class="c1"># Sometimes the LLM extracts &quot;account number&quot; or &quot;user_account_number&quot;</span>
+        <span class="c1"># as the value, which isn&#39;t a real account number</span>
+        <span class="n">placeholder_values</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;account number&quot;</span><span class="p">,</span> <span class="s2">&quot;user_account_number&quot;</span><span class="p">,</span> <span class="s2">&quot;&lt;missing&gt;&quot;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">account</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">in</span> <span class="p">[</span><span class="n">p</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">placeholder_values</span><span class="p">]:</span>
+            <span class="c1"># Ask for the account number instead</span>
+            <span class="n">dispatcher</span><span class="o">.</span><span class="n">utter_message</span><span class="p">(</span><span class="n">response</span><span class="o">=</span><span class="s2">&quot;utter_ask_account&quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="p">[]</span>
+
+        <span class="c1"># If we have a real account number, show the balance</span>
+        <span class="n">dispatcher</span><span class="o">.</span><span class="n">utter_message</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;(Demo) Balance for account </span><span class="si">{</span><span class="n">account</span><span class="si">}</span><span class="s2"> is $123.45.&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">[]</span>
+</code></pre></div>
+
+<h4>Breaking Down the Logic</h4>
+<ol>
+<li>
+<p><strong>Read the slot</strong>:<br />
+<code>python
+   account = tracker.get_slot("account") or "&lt;missing&gt;"</code><br />
+   - Gets the slot value<br />
+   - Uses <code>"&lt;missing&gt;"</code> as default if slot is <code>None</code></p>
+</li>
+<li>
+<p><strong>Check for placeholder values</strong>:<br />
+<code>python
+   placeholder_values = ["account number", "user_account_number", "&lt;missing&gt;"]
+   if account.lower() in [p.lower() for p in placeholder_values]:</code><br />
+   - Sometimes the LLM extracts generic text like "account number" instead of the actual number<br />
+   - We check if the value is a placeholder</p>
+</li>
+<li>
+<p><strong>Re-prompt if needed</strong>:<br />
+<code>python
+   dispatcher.utter_message(response="utter_ask_account")
+   return []</code><br />
+   - If it's a placeholder, ask again<br />
+   - Use the <code>utter_ask_account</code> response</p>
+</li>
+<li>
+<p><strong>Use the real value</strong>:<br />
+<code>python
+   dispatcher.utter_message(text=f"Balance for account {account} is $123.45.")</code><br />
+   - If we have a real account number, use it</p>
+</li>
+</ol>
+<hr />
+<h3>5.4 Handling Missing Slots</h3>
+<p>Always check if a slot has a value before using it:</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># ✅ GOOD: Check for None</span>
+<span class="n">account</span> <span class="o">=</span> <span class="n">tracker</span><span class="o">.</span><span class="n">get_slot</span><span class="p">(</span><span class="s2">&quot;account&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">account</span><span class="p">:</span>
+    <span class="c1"># Use the account</span>
+    <span class="n">dispatcher</span><span class="o">.</span><span class="n">utter_message</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Balance: </span><span class="si">{</span><span class="n">account</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="c1"># Handle missing value</span>
+    <span class="n">dispatcher</span><span class="o">.</span><span class="n">utter_message</span><span class="p">(</span><span class="s2">&quot;I need your account number.&quot;</span><span class="p">)</span>
+
+<span class="c1"># ❌ BAD: Don&#39;t assume slot has value</span>
+<span class="n">account</span> <span class="o">=</span> <span class="n">tracker</span><span class="o">.</span><span class="n">get_slot</span><span class="p">(</span><span class="s2">&quot;account&quot;</span><span class="p">)</span>
+<span class="n">dispatcher</span><span class="o">.</span><span class="n">utter_message</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Balance: </span><span class="si">{</span><span class="n">account</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>  <span class="c1"># Might be None!</span>
+</code></pre></div>
+
+<hr />
+<h2>Module 6: Training and Testing with Slots</h2>
+<h3>6.1 Training with Slots</h3>
+<p>Training with slots is similar to Level 2, but Rasa now also processes slot definitions.</p>
+<h4>Training Command</h4>
+<div class="codehilite"><pre><span></span><code><span class="p">.</span> <span class="p">.\</span><span class="n">load_env</span><span class="p">.</span><span class="n">ps1</span>
+<span class="n">python</span> <span class="n">-m</span> <span class="n">rasa</span> <span class="n">train</span>
+</code></pre></div>
+
+<h4>What Happens During Training</h4>
+<p>Rasa:<br />
+1. Reads slot definitions from <code>domain/basics.yml</code><br />
+2. Validates slot types and structure<br />
+3. Processes flows with <code>collect:</code> steps<br />
+4. Ensures <code>utter_ask_*</code> responses exist for collected slots<br />
+5. Creates model with slot information</p>
+<hr />
+<h3>6.2 Testing Slot Collection</h3>
+<h4>Basic Testing Workflow</h4>
+<ol>
+<li>
+<p><strong>Train your bot</strong>: <code>python -m rasa train</code></p>
+</li>
+<li>
+<p><strong>Start Inspector</strong>: <br />
+<code>powershell
+   python -m rasa inspect --debug --log-file logs/logs.out</code></p>
+</li>
+<li>
+<p><strong>Test slot collection</strong>:<br />
+   - Type "Check my balance"<br />
+   - Bot should ask: "What is your account number?"<br />
+   - Type "1234"<br />
+   - Bot should respond with balance for account 1234</p>
+</li>
+<li>
+<p><strong>Test slot persistence</strong>:<br />
+   - Type "What's my balance?" again<br />
+   - Bot should remember account 1234 (no asking)<br />
+   - Bot should respond immediately</p>
+</li>
+<li>
+<p><strong>Verify Level 2 flows still work</strong>:<br />
+   - Type "What are your hours?" → Should work (Level 2)<br />
+   - Type "Hello" → Should work (Level 1)</p>
+</li>
+</ol>
+<hr />
+<h3>6.3 Understanding Slot State</h3>
+<p>In Inspector, you can see slot values in the debug panel:<br />
+- <strong>Before collection</strong>: <code>account: null</code><br />
+- <strong>After user provides</strong>: <code>account: "1234"</code><br />
+- <strong>In action</strong>: Action can read <code>account: "1234"</code></p>
+<p><strong>Key Point</strong>: Slots persist throughout the conversation until the session ends.</p>
+<hr />
+<h3>6.4 Common Issues with Slots</h3>
+<h4>Issue: Slot Not Collected</h4>
+<p><strong>Symptoms</strong>: Bot doesn't ask for slot value</p>
+<p><strong>Possible Causes</strong>:<br />
+1. Slot not defined in domain<br />
+2. <code>collect:</code> step missing or incorrect<br />
+3. <code>utter_ask_*</code> response missing</p>
+<p><strong>Solutions</strong>:<br />
+1. Check <code>slots:</code> section in domain<br />
+2. Verify <code>collect: account</code> step exists in flow<br />
+3. Ensure <code>utter_ask_account</code> response exists</p>
+<hr />
+<h4>Issue: Slot Always None in Action</h4>
+<p><strong>Symptoms</strong>: Action reads slot but gets <code>None</code></p>
+<p><strong>Possible Causes</strong>:<br />
+1. Slot not collected before action runs<br />
+2. User didn't provide value<br />
+3. Slot name mismatch</p>
+<p><strong>Solutions</strong>:<br />
+1. Ensure <code>collect:</code> step comes before action in flow<br />
+2. Check user actually provided a value<br />
+3. Verify slot name matches exactly (case-sensitive)</p>
+<hr />
+<h2>Module 7: Putting It All Together</h2>
+<h3>7.1 Complete Bot Walkthrough</h3>
+<p>Let's trace through a complete conversation showing how Levels 1, 2, and 3 work together.</p>
+<h4>Conversation Example</h4>
+<div class="codehilite"><pre><span></span><code><span class="k">[User opens chat - new session starts]</span>
+
+<span class="na">1. pattern_session_start triggers (Level 1)</span>
+<span class="w">   </span><span class="na">↓</span>
+<span class="na">Bot</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Hi! I&#39;m a banking assistant. How can I help you today?&quot;</span>
+
+<span class="k">[User types: &quot;Check my balance&quot;]</span>
+
+<span class="na">2. LLM understands</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;User wants to check balance&quot;</span>
+<span class="w">   </span><span class="na">↓</span>
+<span class="w">   </span><span class="na">Flow</span><span class="o">:</span><span class="w"> </span><span class="s">check_balance (Level 3)</span>
+<span class="w">   </span><span class="na">Step 1</span><span class="o">:</span><span class="w"> </span><span class="s">collect: account</span>
+<span class="w">   </span><span class="na">↓</span>
+<span class="w">   </span><span class="na">Bot checks</span><span class="o">:</span><span class="w"> </span><span class="s">Does account slot have value? NO</span>
+<span class="w">   </span><span class="na">↓</span>
+<span class="w">   </span><span class="na">Bot asks</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;What is your account number?&quot; (utter_ask_account)</span>
+
+<span class="k">[User types: &quot;1234&quot;]</span>
+
+<span class="na">3. Bot stores &quot;1234&quot; in account slot</span>
+<span class="w">   </span><span class="na">↓</span>
+<span class="w">   </span><span class="na">Flow continues to Step 2</span><span class="o">:</span><span class="w"> </span><span class="s">action_check_balance_simple</span>
+<span class="w">   </span><span class="na">↓</span>
+<span class="w">   </span><span class="na">Action reads account slot</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;1234&quot;</span>
+<span class="w">   </span><span class="na">↓</span>
+<span class="w">   </span><span class="na">Action checks balance for account 1234</span>
+<span class="w">   </span><span class="na">↓</span>
+<span class="na">Bot</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;(Demo) Balance for account 1234 is $123.45.&quot;</span>
+
+<span class="k">[User types: &quot;What&#39;s my balance?&quot;]</span>
+
+<span class="na">4. LLM understands</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;User wants balance again&quot;</span>
+<span class="w">   </span><span class="na">↓</span>
+<span class="w">   </span><span class="na">Flow</span><span class="o">:</span><span class="w"> </span><span class="s">check_balance (Level 3)</span>
+<span class="w">   </span><span class="na">Step 1</span><span class="o">:</span><span class="w"> </span><span class="s">collect: account</span>
+<span class="w">   </span><span class="na">↓</span>
+<span class="w">   </span><span class="na">Bot checks</span><span class="o">:</span><span class="w"> </span><span class="s">Does account slot have value? YES (&quot;1234&quot;)</span>
+<span class="w">   </span><span class="na">↓</span>
+<span class="w">   </span><span class="na">Flow skips asking, goes directly to Step 2</span>
+<span class="w">   </span><span class="na">↓</span>
+<span class="w">   </span><span class="na">Action reads account slot</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;1234&quot; (remembers from before!)</span>
+<span class="w">   </span><span class="na">↓</span>
+<span class="na">Bot</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;(Demo) Balance for account 1234 is $123.45.&quot;</span>
+
+<span class="k">[User types: &quot;What are your hours?&quot;]</span>
+
+<span class="na">5. LLM understands</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;User wants bank hours&quot;</span>
+<span class="w">   </span><span class="na">↓</span>
+<span class="w">   </span><span class="na">Flow</span><span class="o">:</span><span class="w"> </span><span class="s">hours (Level 2)</span>
+<span class="w">   </span><span class="na">Step</span><span class="o">:</span><span class="w"> </span><span class="s">action_bank_hours</span>
+<span class="w">   </span><span class="na">↓</span>
+<span class="na">Bot</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Our bank hours are Monday-Friday 9am-5pm...&quot;</span>
+</code></pre></div>
+
+<p><strong>Notice</strong>: The bot seamlessly uses:<br />
+- Level 1 responses (greet)<br />
+- Level 2 actions (hours)<br />
+- Level 3 slots (remembering account number)</p>
+<hr />
+<h3>7.2 Your Level 3 Banking Bot: Summary</h3>
+<p>Congratulations! You've extended your Level 2 banking bot with memory capabilities.</p>
+<h4>Your Complete Bot Structure</h4>
+<p><strong>Domain (<code>domain/basics.yml</code>)</strong>:<br />
+- ✅ All Level 1 &amp; 2 responses<br />
+- ✅ New <code>utter_ask_account</code> response<br />
+- ✅ <code>slots:</code> section with <code>account</code> slot<br />
+- ✅ All Level 2 actions<br />
+- ✅ New <code>action_check_balance_simple</code> action</p>
+<p><strong>Flows (<code>data/basics/</code>)</strong>:<br />
+- ✅ All Level 1 &amp; 2 flows<br />
+- ✅ New <code>check_balance</code> flow with slot collection</p>
+<p><strong>Actions (<code>actions/</code>)</strong>:<br />
+- ✅ All Level 2 actions<br />
+- ✅ New <code>action_check_balance_simple</code> that uses slots</p>
+<h4>What Your Bot Can Do Now</h4>
+<p>Your Level 3 banking bot can:<br />
+- ✅ Everything Level 1 &amp; 2 could do<br />
+- ✅ Remember information from the conversation (slots)<br />
+- ✅ Ask for missing information<br />
+- ✅ Use remembered information in actions<br />
+- ✅ Have multi-turn conversations with context</p>
+<h4>What's Still Missing (Coming in Future Levels)</h4>
+<p>Your Level 3 bot cannot yet:<br />
+- ❌ Collect multiple pieces of information in one flow (Level 4: Multiple Slots)<br />
+- ❌ Use dynamic tool calling (Level 5: Tools)</p>
+<p>But you now have memory - a huge step forward!</p>
+<hr />
+<h3>7.3 Best Practices</h3>
+<h4>Slot Design</h4>
+<ol>
+<li><strong>One slot per piece of information</strong>: Don't try to store multiple values in one slot</li>
+<li><strong>Descriptive names</strong>: Use clear slot names (<code>account</code> not <code>a</code>)</li>
+<li><strong>Appropriate types</strong>: Use <code>text</code> for Level 3 (other types come later)</li>
+</ol>
+<h4>Slot Collection</h4>
+<ol>
+<li><strong>Always provide descriptions</strong>: Help the LLM understand what to extract</li>
+<li><strong>Collect before using</strong>: Make sure <code>collect:</code> comes before actions that need the slot</li>
+<li><strong>Handle missing values</strong>: Always check if slot is <code>None</code> in actions</li>
+</ol>
+<h4>Ask Responses</h4>
+<ol>
+<li><strong>Clear questions</strong>: Make <code>utter_ask_*</code> responses clear and specific</li>
+<li><strong>Consistent naming</strong>: Use <code>utter_ask_&lt;slot_name&gt;</code> convention</li>
+<li><strong>Helpful context</strong>: Tell users why you need the information</li>
+</ol>
+<hr />
+<h2>Module 8: Assessment and Next Steps</h2>
+<h3>8.1 Knowledge Check</h3>
+<h4>Question 1: What is a Slot?</h4>
+<p>a) A predefined bot message<br />
+b) A memory variable that stores conversation information<br />
+c) Custom Python code<br />
+d) A conversation script</p>
+<p><strong>Answer</strong>: b) A memory variable that stores conversation information</p>
+<p><strong>Explanation</strong>: Slots are the bot's memory - they store information the user provides so the bot can remember and use it later.</p>
+<hr />
+<h4>Question 2: How Do You Collect a Slot in a Flow?</h4>
+<p>a) <code>- action: collect_account</code><br />
+b) <code>- collect: account</code><br />
+c) <code>- slot: account</code><br />
+d) <code>- remember: account</code></p>
+<p><strong>Answer</strong>: b) <code>- collect: account</code></p>
+<p><strong>Explanation</strong>: Use <code>collect: &lt;slot_name&gt;</code> in a flow step to collect a slot value before continuing.</p>
+<hr />
+<h4>Question 3: How Do You Read a Slot in an Action?</h4>
+<p>a) <code>slot.get("account")</code><br />
+b) <code>tracker.get_slot("account")</code><br />
+c) <code>domain.get_slot("account")</code><br />
+d) <code>dispatcher.get_slot("account")</code></p>
+<p><strong>Answer</strong>: b) <code>tracker.get_slot("account")</code></p>
+<p><strong>Explanation</strong>: The <code>tracker</code> parameter in the <code>run()</code> method provides access to slots via <code>tracker.get_slot()</code>.</p>
+<hr />
+<h4>Question 4: What Response is Used When Collecting a Slot?</h4>
+<p>a) <code>utter_account</code><br />
+b) <code>utter_ask_account</code><br />
+c) <code>utter_collect_account</code><br />
+d) <code>utter_get_account</code></p>
+<p><strong>Answer</strong>: b) <code>utter_ask_account</code></p>
+<p><strong>Explanation</strong>: The convention is <code>utter_ask_&lt;slot_name&gt;</code>. When collecting the <code>account</code> slot, Rasa uses <code>utter_ask_account</code>.</p>
+<hr />
+<h3>8.2 What You've Learned</h3>
+<h4>Key Concepts</h4>
+<ol>
+<li><strong>Slots</strong>: Memory variables that store conversation information</li>
+<li><strong>Slot Collection</strong>: Using <code>collect:</code> in flows to ask for and store information</li>
+<li><strong>Reading Slots</strong>: Using <code>tracker.get_slot()</code> in actions to access stored values</li>
+<li><strong>Ask Responses</strong>: <code>utter_ask_*</code> responses used when collecting slots</li>
+</ol>
+<h4>Skills You've Developed</h4>
+<ul>
+<li>✅ Can define slots in the domain file</li>
+<li>✅ Can collect slots in flows</li>
+<li>✅ Can read slots in actions</li>
+<li>✅ Can handle missing or placeholder slot values</li>
+<li>✅ Can create multi-turn conversations with memory</li>
+</ul>
+<hr />
+<h3>8.3 Limitations of Level 3</h3>
+<h4>What Level 3 Cannot Do</h4>
+<ol>
+<li>
+<p><strong>Collect Multiple Slots Efficiently</strong>: Can only collect one slot at a time easily<br />
+   - Example: "Transfer money" needs amount, recipient, and account<br />
+   - Solution: Level 4 adds multiple slot collection</p>
+</li>
+<li>
+<p><strong>Complex Validation</strong>: Limited validation of slot values<br />
+   - Example: Can't easily validate account format<br />
+   - Solution: Can be handled in actions, but Level 4 makes it easier</p>
+</li>
+</ol>
+<h4>When Level 3 is Sufficient</h4>
+<p>Level 3 is perfect for:<br />
+- ✅ Single piece of information (account number, name)<br />
+- ✅ Simple multi-turn conversations<br />
+- ✅ Remembering one key piece of data</p>
+<h4>When You Need More</h4>
+<p>Move to Level 4 when you need:<br />
+- To collect multiple pieces of information<br />
+- Complex forms with multiple fields<br />
+- Validating multiple slot values together</p>
+<hr />
+<h3>8.4 What's Next: Level 4 Preview</h3>
+<p>⚠️ <strong>Important: Building on Your Existing Banking Bot</strong></p>
+<p>When you move to Level 4, you will <strong>continue working on the same banking bot</strong> you've built throughout Levels 1, 2, and 3. Level 4 doesn't start from scratch - it builds on what you've already created:</p>
+<ul>
+<li><strong>Your existing responses</strong> (all Level 1-3 responses) stay</li>
+<li><strong>Your existing flows</strong> (all Level 1-3 flows) stay</li>
+<li><strong>Your existing actions</strong> (all Level 2-3 actions) stay</li>
+<li><strong>Your existing slots</strong> (<code>account</code>) stay</li>
+<li><strong>Level 4 adds</strong>: More slots, more ask responses, actions that use multiple slots, flows that collect multiple slots</li>
+</ul>
+<p><strong>You don't start a new bot</strong> - you extend your existing Level 3 banking bot with multiple slot collection!</p>
+<hr />
+<p><strong>Level 4: Multiple Slots</strong> introduces collecting multiple pieces of information.</p>
+<h4>What Multiple Slots Enable</h4>
+<p><strong>Example Scenario</strong>: "Transfer $100 to John from account 1234"</p>
+<ul>
+<li><strong>Level 3</strong>: Can only easily collect one piece of information at a time</li>
+<li><strong>Level 4</strong>: Can collect:</li>
+<li>Amount: $100</li>
+<li>Recipient: John</li>
+<li>Source account: 1234</li>
+<li>All in one flow, in order</li>
+</ul>
+<p>In Level 4, you'll add:<br />
+- Additional slots: <code>amount</code>, <code>recipient</code>, <code>account_from</code><br />
+- Additional ask responses: <code>utter_ask_amount</code>, <code>utter_ask_recipient</code>, <code>utter_ask_account_from</code><br />
+- <code>action_process_transfer</code> action that uses all three slots<br />
+- <code>transfer_money</code> flow that collects all three slots before processing</p>
+<h4>Key Concepts in Level 4</h4>
+<ol>
+<li><strong>Multiple Slot Collection</strong>: Collecting several slots in sequence</li>
+<li><strong>Slot Validation</strong>: Ensuring all required slots have valid values</li>
+<li><strong>Complex Conversations</strong>: Handling users providing information in different orders</li>
+</ol>
+<h4>When to Move to Level 4</h4>
+<p>Move to Level 4 when you need:<br />
+- To collect multiple pieces of information before performing an action<br />
+- Complex forms or multi-step data collection<br />
+- Actions that require multiple data points</p>
+<p><strong>Your Level 3 banking bot is the foundation</strong> - Level 4 adds multiple slot collection on top of it!</p>
+<hr />
+<h3>8.5 Course Completion Checklist</h3>
+<p>Before moving to Level 4, ensure you can:</p>
+<ul>
+<li>[ ] Explain what a slot is and how it differs from a response or action</li>
+<li>[ ] Define a slot in the domain file</li>
+<li>[ ] Create a flow that collects a slot</li>
+<li>[ ] Read a slot value in an action</li>
+<li>[ ] Handle missing or placeholder slot values</li>
+<li>[ ] Understand that Level 3 builds on Level 2 (all Level 2 content remains)</li>
+</ul>
+<p>If you can check all these boxes, you're ready for Level 4!</p>
+<hr />
+<h2>Troubleshooting Guide</h2>
+<h3>Common Issues and Solutions</h3>
+<h4>Issue: Slot Not Being Collected</h4>
+<p><strong>Symptoms</strong>: Bot doesn't ask for slot value, or slot is always None</p>
+<p><strong>Possible Causes</strong>:<br />
+1. Slot not defined in domain<br />
+2. <code>collect:</code> step missing in flow<br />
+3. <code>utter_ask_*</code> response missing</p>
+<p><strong>Solutions</strong>:<br />
+1. Check <code>slots:</code> section exists in <code>domain/basics.yml</code><br />
+2. Verify flow has <code>- collect: account</code> step<br />
+3. Ensure <code>utter_ask_account</code> response exists</p>
+<hr />
+<h4>Issue: Slot Always None in Action</h4>
+<p><strong>Symptoms</strong>: <code>tracker.get_slot("account")</code> returns <code>None</code> even after user provided value</p>
+<p><strong>Possible Causes</strong>:<br />
+1. Slot name mismatch (domain vs. flow vs. action)<br />
+2. Slot not collected before action runs<br />
+3. User didn't actually provide value</p>
+<p><strong>Solutions</strong>:<br />
+1. Verify slot name matches exactly everywhere (case-sensitive)<br />
+2. Ensure <code>collect:</code> step comes before action in flow<br />
+3. Check user actually provided a value (test in Inspector)</p>
+<hr />
+<h2>Conclusion</h2>
+<p>Congratulations! You've completed Level 3 and learned how to add memory to your Rasa bot.</p>
+<h3>What You Can Do Now</h3>
+<ul>
+<li>Remember information from conversations</li>
+<li>Ask for missing information</li>
+<li>Use remembered information in actions</li>
+<li>Create multi-turn conversations with context</li>
+<li>Build more intelligent, personalized bots</li>
+</ul>
+<h3>What's Coming Next</h3>
+<ul>
+<li><strong>Level 4</strong>: Collect multiple pieces of information</li>
+<li><strong>Level 5</strong>: Enable dynamic tool calling</li>
+</ul>
+<h3>Keep Learning</h3>
+<ul>
+<li>Practice by adding more slots</li>
+<li>Experiment with different slot collection patterns</li>
+<li>Try validating slot values</li>
+<li>Read the Rasa documentation on slots</li>
+<li>Join the Rasa community</li>
+</ul>
+<p><strong>Happy building! 🚀</strong></p>
+<hr />
+<h2>Implementation Overview for Codio Team</h2>
+<h3>Executive Summary</h3>
+<p>This document is a <strong>combined student course + Codio implementation guide</strong> for <strong>Level 3: Slot Collection</strong>.</p>
+<p><strong>Key goals</strong>:<br />
+- Preserve the complete student tutorial content (integrated above)<br />
+- Convert exercises into Codio labs with auto-grading and clear feedback<br />
+- Minimize setup friction (pre-configured environment, templates, helper scripts)<br />
+- Use Codio AI Coach for hints and troubleshooting support</p>
+<h3>Content Integration Strategy</h3>
+<ul>
+<li>The full content from <code>TUTORIAL.md</code> is included in this document (to keep the course self-contained).</li>
+<li>Exercises should be implemented as <strong>auto-graded labs</strong> wherever possible.</li>
+</ul>
+<hr />
+<h2>Technical Specifications for Codio Team</h2>
+<h3>Lab Environment Configuration</h3>
+<p><strong>Base Environment Requirements</strong>:<br />
+- Operating System: Linux (Ubuntu 22.04 or similar)<br />
+- Python: 3.11<br />
+- IDE: Browser-based VS Code (Codio standard)<br />
+- Terminal: Bash shell</p>
+<p><strong>Pre-Installed Software</strong>:<br />
+- Python 3.11 + pip (latest)<br />
+- <code>rasa-pro</code> (latest stable)<br />
+- <code>git</code> (optional)</p>
+<p><strong>Pre-Configured Project Structure</strong> (representative):</p>
+<div class="codehilite"><pre><span></span><code><span class="n">project</span><span class="o">/</span>
+<span class="err">├──</span><span class="w"> </span><span class="n">domain</span><span class="o">/</span>
+<span class="err">│</span><span class="w">   </span><span class="err">└──</span><span class="w"> </span><span class="n">basics</span><span class="o">.</span><span class="n">yml</span>
+<span class="err">├──</span><span class="w"> </span><span class="n">data</span><span class="o">/</span>
+<span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="n">basics</span><span class="o">/</span>
+<span class="err">│</span><span class="w">   </span><span class="err">│</span><span class="w">   </span><span class="err">└──</span><span class="w"> </span><span class="o">*.</span><span class="n">yml</span>
+<span class="err">│</span><span class="w">   </span><span class="err">└──</span><span class="w"> </span><span class="n">system</span><span class="o">/</span>
+<span class="err">│</span><span class="w">       </span><span class="err">└──</span><span class="w"> </span><span class="n">patterns</span><span class="o">/</span>
+<span class="err">│</span><span class="w">           </span><span class="err">└──</span><span class="w"> </span><span class="n">patterns</span><span class="o">.</span><span class="n">yml</span>
+<span class="err">├──</span><span class="w"> </span><span class="n">config</span><span class="o">.</span><span class="n">yml</span>
+<span class="err">├──</span><span class="w"> </span><span class="n">credentials</span><span class="o">.</span><span class="n">yml</span>
+<span class="err">├──</span><span class="w"> </span><span class="n">endpoints</span><span class="o">.</span><span class="n">yml</span>
+<span class="err">├──</span><span class="w"> </span><span class="o">.</span><span class="n">env</span><span class="w"> </span><span class="p">(</span><span class="n">template</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">placeholders</span><span class="p">)</span>
+<span class="err">├──</span><span class="w"> </span><span class="n">load_env</span><span class="o">.</span><span class="n">ps1</span><span class="w"> </span><span class="p">(</span><span class="k">for</span><span class="w"> </span><span class="n">Windows</span><span class="o">-</span><span class="n">based</span><span class="w"> </span><span class="n">local</span><span class="w"> </span><span class="n">runs</span><span class="p">;</span><span class="w"> </span><span class="n">optional</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">Codio</span><span class="p">)</span>
+<span class="err">└──</span><span class="w"> </span><span class="n">run_inspector</span><span class="o">.</span><span class="n">ps1</span><span class="w"> </span><span class="p">(</span><span class="n">optional</span><span class="w"> </span><span class="n">helper</span><span class="p">)</span>
+
+<span class="err">├──</span><span class="w"> </span><span class="n">actions</span><span class="o">/</span>
+<span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="n">__init__</span><span class="o">.</span><span class="n">py</span>
+<span class="err">│</span><span class="w">   </span><span class="err">└──</span><span class="w"> </span><span class="n">action_</span><span class="o">*.</span><span class="n">py</span>
+</code></pre></div>
+
+<p><strong>Environment Variables</strong>:<br />
+- <code>RASA_LICENSE=...</code><br />
+- <code>OPENAI_API_KEY=...</code></p>
+<p><strong>Port Configuration</strong>:<br />
+- Rasa Inspector: 5005 (default)</p>
+<hr />
+<h2>Auto-Grading Guidance (Codio Team)</h2>
+<p><strong>Recommended auto-grading checks</strong>:<br />
+- Validate YAML files parse successfully and required keys exist (domain + flows + patterns)<br />
+- Validate required new artifacts for Level 3 exist (e.g., new flows/actions/tools)<br />
+- Smoke-test bot starts (<code>rasa inspect</code>) and responds to a small scripted conversation</p>
+<p><strong>Implementation notes</strong>:<br />
+- Prefer deterministic checks (file existence + YAML structure + expected strings) over LLM-output matching.<br />
+- Provide actionable error output (“Expected <code>actions:</code> section in <code>domain/basics.yml</code>”, etc.).</p>
+<hr />
+<h2>AI Coach Configuration Reference (Codio Team)</h2>
+<p><strong>Guidelines</strong>:<br />
+- Provide hints, not full solutions<br />
+- Point learners to the right file and the relevant section<br />
+- Explain why a concept matters (actions vs responses, slots, tools, etc.)<br />
+- Encourage incremental testing (train + inspect frequently)</p>
+<hr />
+<h2>Quality Assurance Checklist (Codio Team)</h2>
+<ul>
+<li>[ ] Course runs end-to-end in a clean Codio environment</li>
+<li>[ ] All links/anchors in the student tutorial work in Codio’s markdown renderer</li>
+<li>[ ] Auto-grader messages are specific and helpful</li>
+<li>[ ] At least one “happy-path” conversation is validated for this level’s new capability</li>
+</ul>
+    </article>
+</body>
+</html>
