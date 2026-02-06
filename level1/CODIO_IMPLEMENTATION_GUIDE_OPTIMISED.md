@@ -450,11 +450,13 @@ Bot responds
 
 **Important**: This is your first step! You must create a virtual environment and install Rasa Pro before you can proceed with any other exercises.
 
+**Before you start**: Open a terminal in Codio. Run `cd level1` so you are in the `level1` folder. All commands in this lab should be run from there.
+
 #### Steps
 
 1. **Create a Virtual Environment**
    
-   Open a terminal in Codio and run:
+   In the terminal, run:
    ```bash
    python3.11 -m venv .venv
    source .venv/bin/activate
@@ -485,24 +487,25 @@ Bot responds
    
    **If you see an error**: The installation may not have completed successfully. Review any error messages from Step 1 and try installing again.
 
-3. **Check Project Structure** (After installation)
+4. **Check Project Structure** *(After installation)*
    ```bash
    # Check that project folders exist
    ls -la domain/
    ls -la data/
    ```
-   - Check that `domain/` folder exists
-   - Check that `data/` folder exists
-   - Check that `config.yml`, `credentials.yml`, and `endpoints.yml` exist
+   Confirm:
+   - The `domain/` folder exists
+   - The `data/` folder exists
+   - `config.yml`, `credentials.yml`, and `endpoints.yml` exist in the current directory
 
-4. **Check Environment Variables**
+5. **Check Environment Variables**
    ```bash
    # Check .env file exists
    ls -la .env
    ```
-   The `.env` file should exist in your project root. If it doesn't, you'll create it in a later lab.
+   The `.env` file should exist in `level1`. If it doesn't, you'll create it in a later lab.
 
-**✅ Success Criteria**: Once you can run `python3.11 -m rasa --version` successfully and see version information, you're ready to move on to the next exercises!
+**✅ Success Criteria**: Once you can run `rasa --version` successfully and see version information, you're ready to move on to the next exercises. You can then run the assessment for this lab to confirm your setup.
 
 ---
 
@@ -1328,9 +1331,9 @@ Show Hints: ✓ (optional, but helpful for students)
 **Lab 0.1 Configuration** (Standard Code Test):
 ```
 Type: Standard Code Test (or Code Test)
-Command: bash -c 'source .venv/bin/activate && rasa --version'
+Command: bash -c 'cd /home/codio/workspace/level1 && source .venv/bin/activate && rasa --version'
 Expected Output: Rasa 3.
-Working Directory: /home/codio/workspace
+Working Directory: /home/codio/workspace/level1 (if field exists; otherwise cd is in the command)
 Points: 10
 Timeout: 30 seconds
 Fail Message: [Copy from Unit 0 Step 2 instructions - includes virtual environment creation steps]
@@ -2098,7 +2101,7 @@ Codio provides **four main assessment types**. Choose the right one based on wha
 - **When Student Runs**: Command executes, output shown, pass/fail displayed
 
 **💡 Example Use Cases**:
-- **Unit 0 Lab 0.1**: Verify virtual environment exists and Rasa Pro is installed (`bash -c 'source .venv/bin/activate && rasa --version'`)
+- **Unit 0 Lab 0.1**: Verify virtual environment exists and Rasa Pro is installed (`bash -c 'cd /home/codio/workspace/level1 && source .venv/bin/activate && rasa --version'`)
 - **Unit 6 Lab 6.1**: Verify `python3.11 -m rasa train` completes successfully
 - **Any unit**: Check if required file exists (`test -f domain/basics.yml`)
 
@@ -2866,13 +2869,15 @@ Each lab has a **Step 0.5** section in the "For Codio Team" implementation notes
 
 **Important**: This is your first step! You must create a virtual environment and install Rasa Pro before you can proceed with any other exercises.
 
+**Before you start**: Open a terminal in Codio. Run `cd level1` so you are in the `level1` folder. All commands in this lab should be run from there.
+
 #### Steps
 
 1. **Open Terminal in Codio**
    
    - Click **Tools** → **Terminal** (or press `Ctrl+Shift+` `)
    - **Expected Result**: Terminal window opens at bottom of screen, showing command prompt
-   - **Verify you're in the project directory**: You should see a prompt like `codio@box-name:~/workspace$` or similar
+   - **Verify you're in the project directory**: Run `cd level1` if needed. You should see a prompt like `codio@box-name:~/workspace/level1$` or similar
 
 2. **Create a Virtual Environment**
    
@@ -2890,7 +2895,7 @@ Each lab has a **Step 0.5** section in the "For Codio Team" implementation notes
    
    **If you encounter errors**:
    - Make sure Python 3.11 is available: `python3.11 -V` (should show Python 3.11.x)
-   - Check you're in the project root directory: `pwd` (should show `/home/codio/workspace` or similar)
+   - Check you're in the level1 directory: `pwd` (should show `/home/codio/workspace/level1` or similar)
    - If you see "command not found", try `python3 -m venv .venv` instead
 
 3. **Activate the Virtual Environment**
@@ -2942,24 +2947,25 @@ Each lab has a **Step 0.5** section in the "For Codio Team" implementation notes
    
    **If you see an error**: The installation may not have completed successfully. Review any error messages from Step 4 and try installing again.
 
-6. **Check Project Structure** (After installation)
+6. **Check Project Structure** *(After installation)*
    ```bash
    # Check that project folders exist
    ls -la domain/
    ls -la data/
    ```
-   - Check that `domain/` folder exists
-   - Check that `data/` folder exists
-   - Check that `config.yml`, `credentials.yml`, and `endpoints.yml` exist
+   Confirm:
+   - The `domain/` folder exists
+   - The `data/` folder exists
+   - `config.yml`, `credentials.yml`, and `endpoints.yml` exist in the current directory
 
 7. **Check Environment Variables**
    ```bash
    # Check .env file exists
    ls -la .env
    ```
-   The `.env` file should exist in your project root. If it doesn't, you'll create it in a later lab.
+   The `.env` file should exist in `level1`. If it doesn't, you'll create it in a later lab.
 
-**✅ Success Criteria**: Once you can run `rasa --version` successfully (with virtual environment activated) and see version information, you're ready to move on to the next exercises!
+**✅ Success Criteria**: Once you can run `rasa --version` successfully (with virtual environment activated) and see version information, you're ready to move on to the next exercises. You can then run the assessment for this lab to confirm your setup.
 
 **💡 Remember**: Each time you open a new terminal session, you'll need to activate your virtual environment again with `source .venv/bin/activate`. The virtual environment stays active for the current terminal session.
 
@@ -3025,10 +3031,10 @@ Each lab has a **Step 0.5** section in the "For Codio Team" implementation notes
    
    **a. In the Settings Panel** (below the code editor, or click gear icon ⚙️):
    
-   - **Command field**: Type exactly: `bash -c 'source .venv/bin/activate && rasa --version'`
-     - **What this does**: Activates the virtual environment and runs Rasa version command
+   - **Command field**: Type exactly: `bash -c 'cd /home/codio/workspace/level1 && source .venv/bin/activate && rasa --version'`
+     - **What this does**: Changes to level1, activates the virtual environment, and runs Rasa version command
      - **Expected output**: Should contain "Rasa 3." or similar version string
-     - **Why this approach**: Verifies both that `.venv` exists AND that Rasa Pro is installed in it
+     - **Why this approach**: Verifies both that `.venv` exists in level1 AND that Rasa Pro is installed in it
    
    - **Expected Output field**: Type: `Rasa 3.`
      - **What this does**: Codio checks if command output contains this text
@@ -3074,7 +3080,7 @@ Each lab has a **Step 0.5** section in the "For Codio Team" implementation notes
    
    **b. Code Editor Box** (optional):
    - **You can leave this empty** - Standard Code Test uses the Command field from settings
-   - **OR** type the command here: `bash -c 'source .venv/bin/activate && rasa --version'`
+   - **OR** type the command here: `bash -c 'cd /home/codio/workspace/level1 && source .venv/bin/activate && rasa --version'`
    - **Note**: Settings panel takes precedence, so command field in settings is what matters
 
 4. **Save the assessment**:
@@ -3240,8 +3246,8 @@ You can add **additional Standard Code Tests** for other checks:
   
 - [ ] **Lab 0.1 Code Test assessment created**
   - ✅ Assessment appears in Guide editor (Unit 0 section)
-  - ✅ Command configured: `bash -c 'source .venv/bin/activate && rasa --version'`
-  - ✅ Settings configured (10 points, 30s timeout, working directory: /home/codio/workspace)
+  - ✅ Command configured: `bash -c 'cd /home/codio/workspace/level1 && source .venv/bin/activate && rasa --version'`
+  - ✅ Settings configured (10 points, 30s timeout, working directory: /home/codio/workspace/level1 if field exists)
   - ✅ Fail message includes virtual environment creation instructions
   - ✅ Assessment saved
   
