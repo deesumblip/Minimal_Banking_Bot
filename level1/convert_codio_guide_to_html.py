@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """
-Convert CODIO_IMPLEMENTATION_GUIDE.md to HTML with GitHub-style CSS.
+Convert CODIO_IMPLEMENTATION_GUIDE*.md files to HTML with GitHub-style CSS.
+
+Converts both CODIO_IMPLEMENTATION_GUIDE_OPTIMISED.md and CODIO_IMPLEMENTATION_GUIDE_LINEAR.md.
 
 Usage:
     python convert_codio_guide_to_html.py
@@ -169,16 +171,15 @@ GITHUB_CSS = """
 </style>
 """
 
-def convert_codio_guide(open_browser=False):
-    """Convert CODIO_IMPLEMENTATION_GUIDE.md to HTML."""
-    script_dir = Path(__file__).parent
-    md_file = script_dir / "CODIO_IMPLEMENTATION_GUIDE.md"
-    html_file = script_dir / "CODIO_IMPLEMENTATION_GUIDE.html"
-    
+def convert_md_to_html(md_file, html_file, title=None, open_browser=False):
+    """Convert a single Markdown file to HTML."""
     if not md_file.exists():
-        print(f"[ERROR] CODIO_IMPLEMENTATION_GUIDE.md not found in {script_dir}")
+        print(f"[ERROR] {md_file.name} not found")
         return False
-    
+
+    if title is None:
+        title = md_file.stem.replace("_", " ").replace("-", " ").title()
+
     print(f"Reading {md_file.name}...")
     try:
         with open(md_file, 'r', encoding='utf-8') as f:
@@ -205,7 +206,7 @@ def convert_codio_guide(open_browser=False):
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Level 1: Complete Codio Course Guide</title>
+    <title>{title}</title>
     {GITHUB_CSS}
 </head>
 <body>
@@ -222,42 +223,55 @@ def convert_codio_guide(open_browser=False):
         file_size = html_file.stat().st_size / 1024
         print(f"   [OK] Saved to {html_file.name} ({file_size:.1f} KB)")
         
-        if open_browser:
-            webbrowser.open(f"file://{html_file.absolute()}")
-            print(f"   [OK] Opened in browser")
-        
-        return True
+        return html_file
     except Exception as e:
         print(f"   [ERROR] Error saving file: {e}")
-        return False
+        return None
 
 def main():
     parser = argparse.ArgumentParser(
-        description='Convert CODIO_IMPLEMENTATION_GUIDE.md to HTML with GitHub-style CSS',
+        description='Convert CODIO_IMPLEMENTATION_GUIDE*.md to HTML with GitHub-style CSS',
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-  python convert_codio_guide_to_html.py          # Convert to HTML
-  python convert_codio_guide_to_html.py --open   # Convert and open in browser
+  python convert_codio_guide_to_html.py          # Convert both guides to HTML
+  python convert_codio_guide_to_html.py --open   # Convert and open first HTML in browser
         """
     )
     parser.add_argument(
         '--open',
         action='store_true',
-        help='Open HTML file in browser after conversion'
+        help='Open first HTML file in browser after conversion'
     )
     
     args = parser.parse_args()
     
-    print("Converting CODIO_IMPLEMENTATION_GUIDE.md to HTML...")
+    script_dir = Path(__file__).parent
+    guides = [
+        ("CODIO_IMPLEMENTATION_GUIDE_OPTIMISED.md", "Level 1: Codio Course Guide (Optimised)"),
+        ("CODIO_IMPLEMENTATION_GUIDE_LINEAR.md", "Level 1: Codio Course Guide (Linear)"),
+    ]
     
-    if convert_codio_guide(open_browser=args.open):
-        print(f"\nConversion complete!")
+    converted = []
+    for md_name, title in guides:
+        md_file = script_dir / md_name
+        html_file = script_dir / md_name.replace(".md", ".html")
+        print(f"\nConverting {md_name}...")
+        result = convert_md_to_html(md_file, html_file, title=title)
+        if result:
+            converted.append(result)
+    
+    if converted:
+        print(f"\nConversion complete! Generated {len(converted)} file(s).")
+        if args.open and converted:
+            webbrowser.open(f"file://{converted[0].absolute()}")
+            print(f"Opened {converted[0].name} in browser.")
         print(f"\nNext steps:")
-        print(f"   1. Open {Path(__file__).parent / 'CODIO_IMPLEMENTATION_GUIDE.html'} in your browser")
+        for html_path in converted:
+            print(f"   - {html_path.name}")
+        print(f"   1. Open HTML in your browser")
         print(f"   2. Press Ctrl+P to print")
         print(f"   3. Choose 'Save as PDF' or 'Microsoft Print to PDF'")
-        print(f"   4. Save your PDF file")
     else:
         print(f"\nConversion failed!")
         sys.exit(1)
