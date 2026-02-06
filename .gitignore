@@ -1,4 +1,4 @@
-﻿# secrets
+# secrets
 .env
 
 # python
@@ -15,3 +15,7 @@ logs/
 .vscode/
 .idea/
 .DS_Store
+
+# Cursor saved chats
+cursor_*.md
+*cursor*chat*.md

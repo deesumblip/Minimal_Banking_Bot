@@ -19,6 +19,38 @@
 
 ---
 
+### 📊 Implementation at a Glance (Path A)
+
+| | First Course (Ground Zero) | Future Courses |
+|---|---|---|
+| **Total Time** | **13.5–18 hours** | **9–11 hours** |
+| **Flow** | Pre-Implementation (1–2h) → Day 1 (7–9h) → Day 2 (5–7h) | Import from Library + Starter Pack |
+| **Key Entry** | [Quick Start](#quick-start) → [Path A Checklist](#path-a) → [Adding Guide Content](#adding-guide-content) | Same, but import assessments |
+
+---
+
+### 📋 Before You Start: Dependencies
+
+**You need:**
+- Codio account with instructor/admin access
+- Assessment Library access (org admin may need to create; see Optimization 1)
+- Rasa Pro license and OpenAI API key (for testing the course)
+
+**Codio features this guide assumes:** Assessment Library, Starter Packs, Bulk Virtual Coach CSV, LLM Rubric Autograde, Sandboxed Terminal (for venv). If a feature is unavailable, see each optimization's Fallback section.
+
+---
+
+### ✅ What's Included / Not Included
+
+| Included (copy-paste ready) | Not Included |
+|---|---|
+| All guide content (main units + labs) | Codio account setup |
+| Assessment questions, answers, rubrics | Rasa Pro license procurement |
+| Configurations (commands, settings, fail messages) | Codio org/admin configuration |
+| Virtual Coach prompts per unit | Starter Pack creation (steps provided) |
+
+---
+
 ## ⚠️ CRITICAL: Document Structure for Codio Implementers
 
 **This document contains TWO types of content that MUST be kept separate:**
@@ -96,18 +128,17 @@
 - [Additional Resources](#additional-resources)
 - [Glossary](#glossary)
 
-### For Codio Team
-- [Quick Start: Optimized Implementation Path](#-quick-start-optimized-implementation-path) ⭐ **NEW**
-- [Implementation Overview](#implementation-overview-for-codio-team)
-- [Codio AI-Powered Time Savers](#codio-ai-powered-time-savers-no-coding-required)
-- [Technical Specifications](#technical-specifications-for-codio-team)
-- [Unit-by-Unit Implementation Notes](#unit-by-unit-implementation-notes)
-- [Auto-Grading Specifications](#auto-grading-specifications)
-- [AI Coach Configuration](#ai-coach-configuration-reference)
-- [Code Playback Configuration](#code-playback-configuration)
-- [Assessment Specifications](#assessment-specifications)
-- [Implementation Phases](#implementation-phases)
-- [Quality Assurance Checklist](#quality-assurance-checklist)
+### For Codio Team (Implementer Quick Navigation)
+| Task | Section |
+|------|---------|
+| Start here | [Quick Start: Optimized Implementation Path](#quick-start) |
+| Day-by-day workflow | [PATH A: Step-by-Step Guide](#path-a) |
+| Add student content | [Adding Guide Content](#adding-guide-content) |
+| Create assessments | [Codio Native Assessment Features](#codio-assessment-features) |
+| AI shortcuts | [Codio AI-Powered Time Savers](#codio-ai-savers) |
+| Reference | [Technical Specifications](#technical-specifications), [Implementation Overview](#implementation-overview) |
+| Templates | [Assessment Templates Library](#assessment-templates) |
+| QA | [Quality Assurance Checklist](#quality-assurance) |
 
 ---
 
@@ -486,47 +517,14 @@ Bot responds
 
 ---
 
-## 🚀 QUICK START GUIDE FOR CODIO IMPLEMENTATION
-
-**Target: Complete Level 1 implementation in 2 days (9-14 hours)** ⬇️ *Optimized from 13.5-20.5 hours*
-
-This section provides everything you need to implement Level 1 efficiently. Read this first, then follow the detailed unit-by-unit instructions.
-
-**🚀 NEW: Optimized Implementation Path** - This guide includes verified Codio optimizations that can save 4-6 hours:
-- **Assessment Library Import** (saves 2-3 hours)
-- **Starter Pack Project Template** (saves 30-60 min)
-- **Bulk Virtual Coach Configuration** (saves 1-2 hours)
-- **Enhanced AI Assessment Prompts** (saves 1-2 hours)
-
-See "Quick Start: Optimized Implementation Path" section below for detailed instructions.
-
-### 📖 How to Use This Guide
-
-**For Complete Codio Beginners**:
-1. **Start here** → Read "Quick Start: Optimized Implementation Path" section ⭐ **PATH A - saves 4-6 hours!**
-2. **This guide defaults to Path A** → All instructions assume you're using optimizations
-3. **One-Time Setup First** → Set up Assessment Library, Starter Pack, Bulk Virtual Coach CSV
-4. **Then** → Follow "PATH A: Complete Step-by-Step Implementation Guide" below
-5. **Read Guide Content Section** → See "Adding Guide Content to Codio" (explains how to add student-facing content)
-6. **Follow the Path A Checklist** → Step-by-step workflow with all optimizations
-
-**For Experienced Codio Users**:
-- Skip to Master Checklist → Use as your roadmap
-- Reference Templates Library → Copy-paste code snippets
-- Use Time-Saving Strategies → Batch create similar assessments
-
-**Key Icons Used**:
-- ⏱️ = Time estimate
-- 💡 = Time-saving tip or important note
-- ✅ = Success indicator or completion checkpoint
-- ❌ = Error or failure indicator
-- ⚠️ = Warning or caution
-- 📋 = Checklist item
-- 🔍 = Troubleshooting or debugging
-
----
-
+<a id="quick-start"></a>
 ## 🚀 Quick Start: Optimized Implementation Path
+
+**Key Icons**: ⏱️ Time estimate | 💡 Tip | ✅ Done | ❌ Error | ⚠️ Warning | 📋 Checklist | 🔍 Troubleshooting
+
+**How to Use This Guide**:
+- **Beginners**: Follow Path A (below) step-by-step. This guide defaults to Path A.
+- **Experienced**: Skip to Master Checklist; use Templates Library and Time-Saving Strategies for reference.
 
 **⏱️ Time Savings: 4-6 hours** (Verified with Codio Official Documentation)
 
@@ -1075,42 +1073,7 @@ Show Hints: ✓ (optional, but helpful for students)
 
 **✅ Checkpoint**: Unit is tested and working correctly.
 
-### 🌳 Decision Trees: Quick Problem Solving
-
-#### Decision Tree 1: Which Assessment Type Should I Use?
-
-```
-Start → What are you testing?
-  ├─ Command/file exists? → Standard Code Test
-  ├─ YAML structure/code quality? → LLM Rubric Autograde
-  ├─ Knowledge/concepts? → Multiple Choice
-  ├─ Simple facts/definitions? → Fill in the Blanks
-  ├─ Complex logic/API calls? → Advanced Code Test (use sparingly)
-  └─ Not sure? → Check unit instructions - they specify the type
-```
-
-#### Decision Tree 2: Assessment Fails - What to Check?
-
-```
-Assessment fails → What's the error?
-  ├─ "Command not found" → Check command path, verify Python/Rasa installed
-  ├─ "File not found" → Check file path (use /home/codio/workspace/level1/...)
-  ├─ "Timeout" → Increase timeout, check if command hangs
-  ├─ "Syntax error" → Check code copied correctly (no missing lines)
-  ├─ "Wrong output" → Check Expected Output field (might be too strict/lenient)
-  └─ "Assessment not found" → Verify assessment is saved, refresh preview
-```
-
-#### Decision Tree 3: Guide Content Doesn't Render Correctly
-
-```
-Content looks wrong → What's the issue?
-  ├─ Headings too large/small → Check Markdown heading levels (# vs ##)
-  ├─ Code blocks show as plain text → Verify triple backticks (```) are preserved
-  ├─ Lists not bulleted → Check dashes/spaces in Markdown
-  ├─ Formatting completely broken → Verify you're in Edit mode (not Preview)
-  └─ Content missing → Check you copied entire section (including headers)
-```
+**💡 Decision Trees**: Search for "🗺️ Decision Trees" for assessment type, UI navigation, and troubleshooting flows.
 
 ### ⚡ Parallel Work Opportunities
 
@@ -1221,8 +1184,7 @@ Content looks wrong → What's the issue?
   - **Time**: Spend 15-20 minutes browsing the examples - you'll understand the Codio UI much faster
   - **Expected Result**: You'll see how assessments look, where settings are, and how students experience them
 - [ ] **Project created** - `BankingBot-Level1` project exists
-- [ ] **Python 3.11 verified** - `python3.11 -V` works in terminal
-- [ ] **Python 3.11 verified** - `python3.11 -V` works (Rasa Pro will be installed by students in Lab 0.1)
+- [ ] **Python 3.11 verified** - `python3.11 -V` works (Rasa Pro installed by students in Lab 0.1)
 - [ ] **Project files visible** - Can see `level1/` folder in file tree
 - [ ] **Guide editor accessible** - `Tools` → `Guides` → `Edit` opens
 - [ ] **Terminal accessible** - `Tools` → `Terminal` opens
@@ -1232,6 +1194,7 @@ Content looks wrong → What's the issue?
 
 ---
 
+<a id="codio-ai-savers"></a>
 ### 🤖 Codio AI-Powered Time Savers (No Coding Required!)
 
 **📖 What This Is**: Codio has built-in AI features that can generate assessments and content for you. These save 2-5 hours total and require **zero coding**—just review and approve.
@@ -1552,6 +1515,7 @@ Next Steps: [Unit-specific - see each unit]
 
 **⚠️ Warning**: Only use this if you're confident. Beginners should follow full instructions.
 
+<a id="path-a"></a>
 ## 🚀 PATH A: Complete Step-by-Step Implementation Guide
 
 **⏱️ Total Time: 9-11 hours** | **Target: Complete in 2 days**
@@ -1579,6 +1543,8 @@ This section provides a complete, transparent workflow for Path A (Optimized Pat
 ---
 
 #### Pre-Implementation: One-Time Setup (Required - Starting from Ground Zero)
+
+**📖 "Ground Zero" means**: No pre-existing Codio materials for this course. You'll CREATE the project, assessments, and guides from scratch (using this guide's copy-paste content). You'll SAVE to Assessment Library and Starter Pack as you go—so future courses only need to import.
 
 **⏱️ Estimated Time**: 1-2 hours (just creating containers/templates)
 
@@ -1612,7 +1578,7 @@ This section provides a complete, transparent workflow for Path A (Optimized Pat
 
 **Step 1: Project Setup** (30-60 minutes) ⚡ **FIRST TIME SETUP**
 
-**Note**: Since you're starting from ground zero, you'll CREATE the project manually first. After this first project is complete, you can convert it to a Starter Pack for future courses.
+**Ground Zero**: Create project manually; convert to Starter Pack when done (see Pre-Implementation).
 
 - [ ] **Create Codio Project**: Follow Unit 0 implementation notes to create project manually:
   - Create new Codio project (`BankingBot-Level1`, Ubuntu 22.04)
@@ -1638,7 +1604,7 @@ This section provides a complete, transparent workflow for Path A (Optimized Pat
 
 **Step 3: Create and Save Assessments - Units 0-2** (2-3 hours) ⚡ **OPTIMIZED WORKFLOW**
 
-**Note**: Since you're starting from ground zero, you'll CREATE assessments (not import). As you create each one, save it to your Assessment Library for future use.
+**Ground Zero**: Create assessments (not import); save each to Assessment Library.
 
 - [ ] **Create Lab 0.1 assessment**: Follow Unit 0 implementation notes → Save to Library with tags `Course: Level 1`, `Unit: 0`, `Lab: 0.1`
 - [ ] **Create Unit 1 assessments**: Follow Unit 1 implementation notes → Create 3 multiple choice questions → Save each to Library with tags `Course: Level 1`, `Unit: 1`
@@ -1682,7 +1648,7 @@ This section provides a complete, transparent workflow for Path A (Optimized Pat
 
 **Step 7: Create and Save Assessments - Units 3-5** (2-3 hours) ⚡ **OPTIMIZED WORKFLOW**
 
-**Note**: Since you're starting from ground zero, you'll CREATE assessments (not import). As you create each one, save it to your Assessment Library for future use.
+**Ground Zero**: Create (not import); save each to Assessment Library.
 
 - [ ] **Create Unit 3 assessments**: Follow Unit 3 implementation notes → Create Labs 3.1, 3.2, 3.3 assessments → Save each to Library with tags `Course: Level 1`, `Unit: 3`, `Lab: X.X`
 - [ ] **Create Unit 4 assessments**: Follow Unit 4 implementation notes → Create Labs 4.1, 4.2 assessments → Save each to Library with tags `Course: Level 1`, `Unit: 4`, `Lab: X.X`
@@ -1726,7 +1692,7 @@ This section provides a complete, transparent workflow for Path A (Optimized Pat
 
 **Step 11: Create and Save Assessments - Units 6-7** (1.5-2 hours) ⚡ **OPTIMIZED WORKFLOW**
 
-**Note**: Since you're starting from ground zero, you'll CREATE assessments (not import). As you create each one, save it to your Assessment Library for future use.
+**Ground Zero**: Create (not import); save each to Assessment Library.
 
 - [ ] **Create Unit 6 assessments**: Follow Unit 6 implementation notes → Create Labs 6.1, 6.2, 6.3 assessments → Save each to Library with tags `Course: Level 1`, `Unit: 6`, `Lab: X.X`
 - [ ] **Create Unit 7 assessments**: Follow Unit 7 implementation notes → Create Lab 7.2 assessment (Lab 7.1 has no assessment) → Save to Library with tags `Course: Level 1`, `Unit: 7`, `Lab: 7.2`
@@ -1767,7 +1733,7 @@ This section provides a complete, transparent workflow for Path A (Optimized Pat
 
 **Step 15: Create and Save Assessments - Unit 8** (1.5-2 hours) ⚡ **OPTIMIZED WORKFLOW**
 
-**Note**: Since you're starting from ground zero, you'll CREATE assessments (not import). As you create each one, save it to your Assessment Library for future use.
+**Ground Zero**: Create (not import); save each to Assessment Library.
 
 - [ ] **Create Unit 8 assessments**: Follow Unit 8 implementation notes → Create Knowledge Check and Practical Exercise assessments → Save each to Library with tags `Course: Level 1`, `Unit: 8`
 - [ ] **Note**: Code Review is manual grading only (no assessment to create)
@@ -1831,54 +1797,13 @@ This section provides a complete, transparent workflow for Path A (Optimized Pat
 
 ### 💡 Time-Saving Strategies
 
-**⭐ NEW: See "Quick Start: Optimized Implementation Path" section above for verified optimizations that save 4-6 hours!**
+**Start with**: Optimizations 1-4 (above) and Codio AI features (Generate, Duplicate, Generate Rubrics). See "Codio AI-Powered Time Savers" section.
 
-**1. Use Verified Optimizations First** (saves ~4-6 hours) ⭐ **HIGHEST IMPACT**:
-- **Assessment Library**: Create assessments once, save to library, reuse for future courses (saves 2-3 hours on future courses) - See Optimization 1 above
-- **Starter Pack Project Template**: Create project once, convert to pack, reuse for future courses (saves 30-60 min on future courses) - See Optimization 2 above
-- **Bulk Virtual Coach Configuration**: Configure all units via CSV (saves 1-2 hours) - See Optimization 3 above
-- **Enhanced AI Prompts**: Use pre-written prompts for better results (saves 1-2 hours) - See Optimization 4 above
-
-**2. Use Codio AI Features** (saves ~2-5 hours):
-- **AI Assessment Generation**: For Multiple Choice, Fill in the Blanks—add empty assessment, click **Generate** → **Generate Using AI**, review, apply
-- **LLM Rubric Generate Rubrics**: For Lab 2.2, 2.3, 3.2, 3.3, 4.2, 7.2—fill instructions, add solution file, click **Generate Rubrics**, refine
-- **Duplicate Assessment**: Create one Multiple Choice, click **Duplicate and Save**, edit the copy—repeat for more questions
-- **Demo Guides Starter Pack**: Load "Demo Guides and Assessments" from Starter Packs first—see live examples before building
-
-**3. Batch Creation** (saves ~1 hour):
-- Create ALL multiple choice questions in one session (Units 1, 3, 4, 5, 8)
-- Use similar questions as templates - copy and modify (or Duplicate)
-- Pre-fill all standard settings before creating questions
-
-**4. Parallel Work** (saves ~1 hour):
-- Set up Virtual Coach once with all unit contexts, then refine per unit (or use Bulk Configuration - Optimization 3)
-- Enable Code Playback once for all tracked files
-- Create all simple assessments first, then tackle complex ones
-
-**5. Template Reuse** (saves ~1.5 hours):
-- Lab 2.2 LLM Rubric → duplicate and modify for Lab 3.2 (similar YAML validation)
-- Lab 2.3 LLM Rubric → duplicate and modify for Lab 3.3 (similar structure checks)
-- Use Assessment Templates Library (see appendix) for common patterns
-- **Better**: Import from Assessment Library (Optimization 1) - even faster!
-
-**6. Testing Efficiency** (saves ~30 min):
-- Test assessments in batches (all Unit 2, then all Unit 3, etc.)
-- Use Codio's preview mode to test multiple assessments quickly
-- Fix errors immediately rather than accumulating them
-
-**7. Configuration Shortcuts** (saves ~30 min):
-- **Use Bulk Virtual Coach Configuration** (Optimization 3) instead of manual configuration
-- Use pre-filled configuration values from Quick Reference above
-- Save common error messages as templates
-
-**8. Bulk Assessment Update** (saves ~15-30 min):
-- After creating all assessments, use Codio's **Bulk Assessment Update** (in course/module settings) to adjust points or timeouts across many at once
-
-**9. Assessment Libraries** (for Levels 2-5):
-- Save validated assessments to Codio's **Assessment Library** for reuse when building Level 2+
-- **See Optimization 1** for detailed instructions
-
-**⚠️ Newbie Note**: Start with the verified optimizations (Optimization 1-4) - they save the most time! Then use Codio's AI features—Generate, Duplicate, Generate Rubrics. Always review AI output before deploying.
+**Additional tips**:
+- **Batch create**: All Multiple Choice for Units 1, 3, 4, 5, 8 in one session; create one, Duplicate and edit
+- **Template reuse**: Lab 2.2 → duplicate for Lab 3.2; Lab 2.3 → Lab 3.3 (or import from Assessment Library)
+- **Test in batches**: All Unit 2, then Unit 3, etc.; fix errors immediately
+- **Bulk Assessment Update**: Adjust points/timeouts across many assessments at once (course settings)
 
 ### 🐛 Common Errors & Quick Fixes
 
@@ -2038,6 +1963,16 @@ Start → What are you creating?
   └─ Not sure? → Read the unit instructions - they specify which template
 ```
 
+**Problem: "Guide content doesn't render correctly"**
+```
+Content looks wrong → What's the issue?
+  ├─ Headings too large/small → Check Markdown heading levels (# vs ##)
+  ├─ Code blocks show as plain text → Verify triple backticks (```) preserved
+  ├─ Lists not bulleted → Check dashes/spaces in Markdown
+  ├─ Formatting broken → Verify Edit mode (not Preview)
+  └─ Content missing → Check you copied entire section (including headers)
+```
+
 ### 📸 Visual Guide: What Codio Looks Like
 
 **While we can't include screenshots, here's what you'll see:**
@@ -2073,6 +2008,7 @@ Start → What are you creating?
 
 ---
 
+<a id="codio-assessment-features"></a>
 ## 🎯 Codio Native Assessment Features Guide
 
 **📖 Purpose**: This section explains Codio's built-in assessment features and when/how to use them. **Read this before creating any assessments** to save time and avoid unnecessary custom coding.
@@ -2516,12 +2452,12 @@ import sys
 
 ---
 
+<a id="adding-guide-content"></a>
 ## 📝 Adding Guide Content to Codio: Complete Instructions
 
+**🎯 Purpose**: How to add all student-facing content (main unit + labs) to Codio's Guide Editor.
 
-**🎯 Purpose**: This section explains how to add ALL student-facing content to Codio's Guide Editor, including both main unit content and lab content. Read this before starting any unit implementation.
-
-**📋 Important**: Codio's Guide Editor uses **Markdown format**. All content in this guide is already formatted in Markdown and ready to copy-paste directly.
+**📋 Copy rules**: See "⚠️ CRITICAL: Document Structure" at the top. Content uses Markdown and is copy-paste ready.
 
 ### Understanding Guide Content Structure
 
@@ -2594,19 +2530,10 @@ Each lab has a **Step 0.5** section in the "For Codio Team" implementation notes
 - Troubleshooting tips (for YOU, NOT for students)
 
 **Process**:
-1. Navigate to the lab's Step 0.5 section in this guide
-2. Follow the instructions in that section (these are for you to understand how to add content)
-3. **Find the heading `**📋 Copy This Markdown for Lab X.X:**`**
-4. **Look for the visual marker `⬇️ START COPYING HERE ⬇️`**
-5. **Copy ALL content from that marker until `⬆️ STOP COPYING HERE ⬆️`** (do NOT copy the markers themselves)
-6. **DO NOT copy** anything after `⬆️ STOP COPYING HERE ⬆️` (troubleshooting, Step 1, etc. - these are for implementers only)
-7. Paste the copied markdown into Codio's Guide Editor (in the appropriate unit section, after the main content)
-
-**⚠️ CRITICAL**: The content between the visual markers contains ONLY student-facing content. Everything outside these markers (instructions, troubleshooting, Step 1, etc.) is for implementers and should NEVER be copied to Codio.
-
-**💡 Preview Mode Note**: In Cursor's preview, the copyable content will render as formatted Markdown. This is correct - you're copying the rendered Markdown, not a code block. Just select the content between the markers.
-
-**📋 Quick Reference**: See "Quick Reference: Step 0.5 Locations" table below for all lab locations.
+1. Navigate to the lab's Step 0.5 section (see table below)
+2. Copy from `⬇️ START COPYING HERE ⬇️` to `⬆️ STOP COPYING HERE ⬆️` (exclude markers)
+3. Paste into Codio Guide Editor in the unit section, after main content
+4. Do NOT copy troubleshooting or Step 1+ content—implementers only
 
 ### 🚀 Batch Operations: Adding All Guide Content Efficiently
 
@@ -3331,7 +3258,7 @@ You can add **additional Standard Code Tests** for other checks:
   - ✅ Error augmentation configured
   - ✅ Tested in preview (ask Coach a question)
 
-**🎯 Ready for Next Unit?**: If all checkboxes above are checked, you're ready to move to Unit 1!
+**🎯 Unit 0 = First Checkpoint**: If all checkboxes above are checked, your foundation is solid. Students can create venvs and install Rasa Pro; Lab 0.1 passes; Virtual Coach works. **You're ready for Day 1 (Units 1–2).**
 
 ---
 
@@ -9367,17 +9294,18 @@ Quick reference for key terms used in this tutorial.
 ---
 
 
+<a id="implementation-overview"></a>
 ## Implementation Overview for Codio Team
 
 ### Executive Summary
 
-This guide outlines how to transform the comprehensive Level 1 Rasa Bot tutorial (currently ~1,829 lines of detailed text in TUTORIAL.md) into an interactive Codio course that leverages Codio's AI-enhanced learning features, auto-grading, Code Playback, and AI Coach capabilities.
+This guide outlines how to implement the Level 1 Rasa Bot course as an interactive Codio experience with AI-enhanced learning, auto-grading, Code Playback, and AI Coach.
 
-**Key Transformation Goals**:
-- Preserve all educational content from TUTORIAL.md (comprehensive explanations, examples, step-by-step tutorials)
+**Key Goals**:
+- All educational content is in this guide (copy-paste ready)
 - Convert hands-on exercises into auto-graded labs with immediate feedback
-- Eliminate setup friction with pre-configured environments
-- Leverage AI Coach for student support instead of extensive troubleshooting text
+- Students create their own virtual environment and install Rasa Pro (Lab 0.1); project structure is pre-configured
+- AI Coach provides real-time student support
 - Use Code Playback for instructor review and student debugging
 - Implement comprehensive analytics for learning insights
 
@@ -9389,14 +9317,13 @@ This guide outlines how to transform the comprehensive Level 1 Rasa Bot tutorial
 
 ### Content Integration Strategy
 
-**All content from TUTORIAL.md is preserved** in this integrated document:
-- Full conceptual explanations (no reduction in educational content)
-- Complete step-by-step tutorials
+**All content is in this guide** (no separate TUTORIAL.md):
+- Full conceptual explanations
+- Complete step-by-step labs
 - All examples, analogies, and code samples
-- All troubleshooting content (kept for reference, AI Coach handles real-time help)
-- All glossary terms and definitions
+- Glossary and troubleshooting (AI Coach handles real-time help)
 
-**Exercises are converted to labs**:
+**Exercises are labs**:
 - Step-by-step tutorials → Hands-on labs with auto-grading
 - Knowledge checks → Auto-graded assessments
 - Verification steps → Auto-grading checks
@@ -9405,6 +9332,7 @@ This guide outlines how to transform the comprehensive Level 1 Rasa Bot tutorial
 
 ---
 
+<a id="technical-specifications"></a>
 ## Technical Specifications for Codio Team
 
 ### Lab Environment Configuration
@@ -9415,17 +9343,15 @@ This guide outlines how to transform the comprehensive Level 1 Rasa Bot tutorial
 - IDE: Browser-based VSCode (Codio standard)
 - Terminal: Bash shell
 
-**Pre-Installed Software**:
+**Pre-Installed / Student-Installed**:
 ```bash
-# Python and pip
+# Pre-installed in Codio
 python3.11
 pip (latest version)
-
-# Rasa Pro
-rasa-pro (latest stable version)
-
-# Git (for version control if needed)
 git
+
+# Students install in Lab 0.1 (venv + Rasa Pro)
+# python3.11 -m venv .venv && source .venv/bin/activate && pip install rasa-pro
 ```
 
 **Pre-Configured Project Structure**:
@@ -9598,6 +9524,7 @@ Each unit should have appropriate context:
 
 ---
 
+<a id="quality-assurance"></a>
 ## Quality Assurance Checklist
 
 ### Content Quality
@@ -9654,14 +9581,13 @@ Each unit should have appropriate context:
 
 ## 📋 APPENDIX: Consolidated Guide Content Reference
 
-
-**🎯 Purpose**: Quick reference for finding all guide content that needs to be added to Codio. Use this when implementing to quickly locate content sections.
+**📌 Reference Only**: This Appendix consolidates lookup tables for quick access. **Workflow instructions** (how to copy, where to paste) are in the main body—see [Adding Guide Content](#adding-guide-content). Use this section when you need to find content locations fast.
 
 ### How to Use This Appendix
 
-1. **For Main Unit Content**: See "Main Unit Content Locations" table below
-2. **For Lab Content**: See "Lab Content Locations" table below (each has Step 0.5 with explicit Markdown)
-3. **For Batch Operations**: See "Adding Guide Content to Codio" section (earlier in guide)
+1. **Main Unit Content**: Table below → search `# Unit X:` and `## For Students`
+2. **Lab Content**: Table below → go to Step 0.5 for each lab
+3. **Batch workflow**: See "Adding Guide Content" section (main body)
 
 ### Main Unit Content Locations
 
@@ -9681,17 +9607,7 @@ Each unit should have appropriate context:
 | 7 | Search: `# Unit 7:` → Find `## For Students` | Before `### Lab 7.1` | 10-15 min |
 | 8 | Search: `# Unit 8:` → Find `## For Students` | Before `## For Codio Team` | 10-15 min |
 
-**How to Copy Main Content**:
-1. Search for `# Unit X:` in this guide
-2. Find the `## For Students` section
-3. Select everything from `## For Students` down to (but NOT including) the first `### Lab X.X:` heading
-4. Copy and paste into Codio's Guide Editor
-
-**💡 Copy-Paste Instructions**:
-1. Find the unit in this guide (use line numbers above or search for `# Unit X:`)
-2. Locate `## For Students` section
-3. Select everything from `## For Students` down to (but NOT including) the first `### Lab X.X:` heading
-4. Copy and paste into Codio's Guide Editor in the appropriate unit section
+**How to copy**: Search `# Unit X:` → Find `## For Students` → Copy to (exclude) first `### Lab X.X:` → Paste into Codio Guide Editor.
 
 ### Lab Content Locations (Step 0.5 Sections)
 
@@ -9717,11 +9633,7 @@ Each unit should have appropriate context:
 | 7 | 7.2 | Unit 7 → Lab 7.2 → Step 0.5 | After "📋 Copy This Markdown for Lab 7.2" |
 | 7 | 7.3 | Unit 7 → Lab 7.3 → Step 0.5 | After "📋 Copy This Markdown for Lab 7.3" |
 
-**💡 Copy-Paste Instructions**:
-1. Navigate to the lab's Step 0.5 section in this guide
-2. Find the code block that starts with `📋 Copy This Markdown for Lab X.X`
-3. Copy the entire Markdown block (from ```markdown to ```)
-4. Paste into Codio's Guide Editor in the appropriate unit section, after the main unit content
+**How to copy**: Go to lab's Step 0.5 → Copy from `⬇️ START COPYING HERE` to `⬆️ STOP COPYING HERE` → Paste after main unit content.
 
 ### Quick Content Addition Workflow
 
@@ -9755,6 +9667,7 @@ After adding content for each unit, verify:
 
 ---
 
+<a id="assessment-templates"></a>
 ## 📚 ASSESSMENT TEMPLATES LIBRARY
 
 **💡 Time-Saving**: Copy these templates and modify for your specific needs. Saves 1-2 hours of coding time.
