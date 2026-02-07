@@ -1,0 +1,58 @@
+{
+	"type": "multiple-choice",
+	"taskId": "multiple-choice-1308821528",
+	"source": {
+		"name": "File Structure Understanding",
+		"showName": true,
+		"instructions": "**Which file would you need to modify to change the text responses that the bot can give to users?**",
+		"multipleResponse": false,
+		"isRandomized": false,
+		"answers": [
+			{
+				"_id": "84b10b1d-497f-e0d8-a895-1021f376d6bd",
+				"correct": true,
+				"answer": "`domain/basics.yml`"
+			},
+			{
+				"_id": "ef33b765-b3b5-d182-eb8d-d88aef79a401",
+				"correct": false,
+				"answer": "`config.yml`"
+			},
+			{
+				"_id": "f9aeb7a5-d8d9-4aab-2d4f-3df33bb8009e",
+				"correct": false,
+				"answer": "`data/basics/greet.yml`"
+			},
+			{
+				"_id": "f3944449-4fcd-8c8a-1de2-60ea0ae261cc",
+				"correct": false,
+				"answer": "`endpoints.yml`"
+			}
+		],
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Multiple Choice"
+				}
+			],
+			"files": [],
+			"opened": []
+		},
+		"bloomsObjectiveLevel": "3",
+		"learningObjectives": "SWBAT identify which files serve specific purposes in the Rasa project structure",
+		"guidance": "The correct answer is `domain/basics.yml`. As described in the topic, the domain file serves as \"the bot's knowledge base—defines all responses the bot can say.\" The other files have different purposes: `config.yml` defines how the bot is built, `data/basics/greet.yml` defines conversation flows, and `endpoints.yml` defines where to find custom actions and LLM configurations.",
+		"showGuidanceAfterResponseOption": {
+			"type": "Attempts",
+			"passedFrom": 1
+		},
+		"maxAttemptsCount": 1,
+		"showExpectedAnswerOption": {
+			"type": "Always"
+		},
+		"points": 20,
+		"incorrectPoints": 0,
+		"arePartialPointsAllowed": false,
+		"useMaximumScore": false
+	}
+}

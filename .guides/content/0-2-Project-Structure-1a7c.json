@@ -1,0 +1,17 @@
+{
+	"id": "1a7cfeec-8aa4-0883-492e-faa3717a5a2b",
+	"title": "0.2 Project Structure",
+	"files": [
+		{
+			"path": "#tabs",
+			"action": "close"
+		}
+	],
+	"layout": "2-panels",
+	"path": [],
+	"type": "page",
+	"contentType": "markdown",
+	"teacherOnly": false,
+	"closeTerminalSession": true,
+	"learningObjectives": ""
+}

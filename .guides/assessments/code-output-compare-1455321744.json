@@ -1,0 +1,56 @@
+{
+	"type": "code-output-compare",
+	"taskId": "code-output-compare-1455321744",
+	"source": {
+		"name": "Lab 0.1: Verify venv and Rasa Pro",
+		"showName": true,
+		"instructions": "Complete Lab 0.1 in the guide, then click Run Assessment to verify your setup.",
+		"command": "bash -c 'cd /home/codio/workspace/level1 && source .venv/bin/activate && rasa --version'",
+		"preExecuteCommand": "",
+		"options": {
+			"timeout": 30,
+			"ignoreCase": true,
+			"ignoreWhitespaces": true,
+			"ignoreNewline": true,
+			"matchSubstring": false
+		},
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Standard Code Test"
+				}
+			],
+			"files": [],
+			"opened": [
+				{
+					"type": "terminal",
+					"panelNumber": 0,
+					"content": ""
+				}
+			]
+		},
+		"bloomsObjectiveLevel": "",
+		"learningObjectives": "",
+		"guidance": "",
+		"showGuidanceAfterResponseOption": {
+			"type": "Never"
+		},
+		"maxAttemptsCount": 0,
+		"points": 20,
+		"showExpectedAnswerOption": {
+			"type": "Always"
+		},
+		"arePartialPointsAllowed": true,
+		"useMaximumScore": false,
+		"sequence": [
+			{
+				"arguments": "",
+				"input": "",
+				"output": "",
+				"showFeedback": false,
+				"feedback": ""
+			}
+		]
+	}
+}

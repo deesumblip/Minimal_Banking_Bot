@@ -1,0 +1,17 @@
+{
+	"id": "4f099ff4-88e4-14c9-d912-849bbf075a24",
+	"title": "Lab 0.1: Create Virtual Environment and Install Rasa Pro",
+	"files": [
+		{
+			"path": "#tabs",
+			"action": "close"
+		}
+	],
+	"layout": "2-panels",
+	"path": [],
+	"type": "page",
+	"contentType": "markdown",
+	"teacherOnly": false,
+	"closeTerminalSession": true,
+	"learningObjectives": ""
+}

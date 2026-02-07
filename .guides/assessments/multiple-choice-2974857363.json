@@ -1,0 +1,58 @@
+{
+	"type": "multiple-choice",
+	"taskId": "multiple-choice-2974857363",
+	"source": {
+		"name": "YAML Syntax Assessment",
+		"showName": true,
+		"instructions": "**Which of the following YAML snippets contains syntax errors? Select all that apply.**",
+		"multipleResponse": true,
+		"isRandomized": false,
+		"answers": [
+			{
+				"_id": "4eb9d2c4-6763-88ea-8232-a54c59db9024",
+				"correct": false,
+				"answer": "```yaml-hide-clipboard\nresponses:\n  utter_greet:\n    - text: \"Hello there!\"\n      buttons:\n        - title: \"Help\"\n          payload: \"/help\"\n```"
+			},
+			{
+				"_id": "1b86164d-e679-e489-a1c7-967a1451af65",
+				"correct": true,
+				"answer": "```yaml-hide-clipboard\nresponses:\nutter_greet:\n  - text:\"Hello there!\"\n```"
+			},
+			{
+				"_id": "6a49a224-0c22-b381-4919-7f999dc2a3e4",
+				"correct": true,
+				"answer": "```yaml-hide-clipboard\nresponses:\n    utter_greet:\n        - text: \"Hello there!\"\n```"
+			},
+			{
+				"_id": "56846f81-ef06-50e8-93d2-5455d61666a2",
+				"correct": true,
+				"answer": "```yaml-hide-clipboard\nresponses:\n  utter_greet:\n    text: \"Hello there!\"\n```"
+			}
+		],
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Multiple Choice"
+				}
+			],
+			"files": [],
+			"opened": []
+		},
+		"bloomsObjectiveLevel": "3",
+		"learningObjectives": "SWBAT identify correct YAML syntax for Rasa configuration files",
+		"guidance": "The correct answers are options 2, 3, and 4 because they all contain syntax errors:\n\nOption 2: Two errors: (1) Missing indentation for 'utter_greet' (should be indented 2 spaces under 'responses') and (2) Missing a space after the colon in 'text:\"Hello there!\"'\n\nOption 3: Incorrect indentation - using 4 spaces instead of the required 2 spaces for YAML in Rasa configuration files\n\nOption 4: Missing the dash (-) before 'text:' that indicates a list item\n\nOption 1 is correct YAML syntax with proper 2-space indentation, spaces after colons, and proper list formatting with dashes.",
+		"showGuidanceAfterResponseOption": {
+			"type": "Attempts",
+			"passedFrom": 1
+		},
+		"maxAttemptsCount": 1,
+		"showExpectedAnswerOption": {
+			"type": "Always"
+		},
+		"points": 20,
+		"incorrectPoints": 0,
+		"arePartialPointsAllowed": false,
+		"useMaximumScore": false
+	}
+}
