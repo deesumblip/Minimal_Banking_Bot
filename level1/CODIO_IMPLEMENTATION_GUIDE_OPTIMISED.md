@@ -5192,27 +5192,35 @@ Create 2 new flow files in `data/basics/` folder. Use `greet.yml` or `goodbye.ym
 
 #### Example: Good Descriptions
 
-**For hours.yml**:
+Here are examples of good flow descriptions for **different** flows (not the ones you're creating):
+
+**Example 1: Contact Information Flow**:
 ```yaml
 flows:
-  hours:
-    name: bank hours
-    description: "Tell the user when the bank is open and what the operating hours are"
+  contact:
+    name: contact info
+    description: "Provide contact information for the bank, including phone numbers and email addresses"
     steps:
-      - action: utter_hours
+      - action: utter_contact
 ```
 
-**For balance.yml**:
+**Example 2: Services Flow**:
 ```yaml
 flows:
-  balance:
-    name: balance help
-    description: "Explain the process for checking account balance, including what information is needed"
+  services:
+    name: available services
+    description: "List all the services and features the bot can help with, including account management and support options"
     steps:
-      - action: utter_balance_help
+      - action: utter_help
 ```
 
-**Key**: Be specific about what the flow does, not how the user asks for it.
+**Key**: Be specific about what the flow does, not how the user asks for it. Notice how these descriptions:
+- Use action verbs ("Provide", "List")
+- Are specific about what information is given
+- Include context about what the flow accomplishes
+- Are at least 20 characters long
+
+**Your Task**: Create similar descriptions for `hours.yml` and `balance.yml` following this pattern, but write your own descriptions (don't copy these examples).
 
 #### Checklist
 
@@ -6025,27 +6033,35 @@ Create 2 new flow files in `data/basics/` folder. Use `greet.yml` or `goodbye.ym
 
 #### Example: Good Descriptions
 
-**For hours.yml**:
+Here are examples of good flow descriptions for **different** flows (not the ones you're creating):
+
+**Example 1: Contact Information Flow**:
 ```yaml
 flows:
-  hours:
-    name: bank hours
-    description: "Tell the user when the bank is open and what the operating hours are"
+  contact:
+    name: contact info
+    description: "Provide contact information for the bank, including phone numbers and email addresses"
     steps:
-      - action: utter_hours
+      - action: utter_contact
 ```
 
-**For balance.yml**:
+**Example 2: Services Flow**:
 ```yaml
 flows:
-  balance:
-    name: balance help
-    description: "Explain the process for checking account balance, including what information is needed"
+  services:
+    name: available services
+    description: "List all the services and features the bot can help with, including account management and support options"
     steps:
-      - action: utter_balance_help
+      - action: utter_help
 ```
 
-**Key**: Be specific about what the flow does, not how the user asks for it.
+**Key**: Be specific about what the flow does, not how the user asks for it. Notice how these descriptions:
+- Use action verbs ("Provide", "List")
+- Are specific about what information is given
+- Include context about what the flow accomplishes
+- Are at least 20 characters long
+
+**Your Task**: Create similar descriptions for `hours.yml` and `balance.yml` following this pattern, but write your own descriptions (don't copy these examples).
 
 #### Checklist
 
