@@ -12,11 +12,6 @@
 	"hideBackToDashboard": false,
 	"protectLayout": false,
 	"order": [
-		"Unit-0--Prerequisites-and-Setup-1039",
-		"0-1-What-You-Need-Before-Starting-36b7",
-		"Lab-0-1--Create-Virtual-Environment-and-Install-Rasa-Pro-4f09",
-		"0-2-Project-Structure-1a7c",
-		"0-3-Understanding-YAML-Syntax-488d",
-		"0-4-Getting-Help-7fac"
+		"Level-1-1-d3b4"
 	]
 }

@@ -1,0 +1,45 @@
+{
+	"type": "llm-based-auto-rubric",
+	"taskId": "llm-based-auto-rubric-3562566144",
+	"source": {
+		"name": "Adding Response Variations",
+		"showName": true,
+		"instructions": "Add a second variation to the utter_goodbye response in domain/basics.yml.\n\nThe response should:\n- Have at least 2 text variations (two '- text:' items with different farewell messages)\n- Include metadata with rephrase: True (can be on the last variation)\n- Use proper YAML syntax (2 spaces indentation)\n- Each variation must have different text (no duplicates)",
+		"metadata": {
+			"tags": [],
+			"files": [
+				"level1/domain/basics.yml"
+			],
+			"opened": [
+				{
+					"type": "file",
+					"panelNumber": 1,
+					"content": "level1/domain/basics.yml"
+				}
+			]
+		},
+		"bloomsObjectiveLevel": "",
+		"learningObjectives": "",
+		"guidance": "",
+		"showGuidanceAfterResponseOption": {
+			"type": "Always"
+		},
+		"maxAttemptsCount": 0,
+		"points": 1,
+		"arePartialPointsAllowed": true,
+		"rubrics": [
+			{
+				"id": "1",
+				"title": "Response variations validation",
+				"description": "Requirements Checklist (all must be met):\n\n1. File Location and Existence:\n   - File domain/basics.yml exists and is valid YAML\n\n2. Response Structure:\n   - Response \"utter_goodbye\" exists under responses: section\n   - Response is a list with at least 2 items (2 or more '- text:' variations)\n   - Each variation has a 'text' field with non-empty content\n   - Variation texts are different (no duplicate text)\n\n3. YAML Syntax:\n   - Uses exactly 2 spaces for indentation (not tabs)\n   - Proper structure: utter_goodbye: (2 spaces), - text: (4 spaces), metadata: (6 spaces), rephrase: True (8 spaces)\n\n4. Metadata:\n   - At least one variation includes metadata with rephrase: True\n   - metadata is properly indented (aligned with text:)\n\n5. Variation Content:\n   - All variation texts are non-empty\n   - All variation texts are unique (different farewell messages)\n   - No duplicate text across variations\n\nGrading: Award full points (8) if all requirements are met.",
+				"points": 1
+			}
+		],
+		"solutions": [
+			{
+				"path": "level1/domain/basics.yml",
+				"content": "## Level 1: Just Responses\n#\n# This is the simplest possible domain file.\n# - Only responses (predefined bot messages)\n# - No slots (memory)\n# - No actions (custom code)\n\nversion: \"3.1\"\n\nresponses:\n  utter_greet:\n    - text: \"Hi! I'm a banking assistant. How can I help you today?\"\n      metadata:\n        rephrase: True\n\n  utter_help:\n    - text: |\n        I can help you with:\n        - Checking your balance\n        - Transferring money\n        - Bank hours\n        - Contact information\n      metadata:\n        rephrase: True\n\n  utter_contact:\n    - text: \"You can reach us at support@bank.com or call 1-800-BANK-123.\"\n      metadata:\n        rephrase: True\n  \n  utter_goodbye:\n    - text: \"Goodbye! Have a great day!\"\n      metadata:\n        rephrase: True\n"
+			}
+		]
+	}
+}

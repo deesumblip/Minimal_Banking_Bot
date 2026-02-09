@@ -1,12 +1,7 @@
 {
-	"id": "488d9b82-784e-3665-541f-22df01db6bbb",
-	"title": "0.3 Understanding YAML Syntax",
-	"files": [
-		{
-			"path": "#tabs",
-			"action": "close"
-		}
-	],
+	"id": "c2ed34b9-75a5-7e82-406a-3b4340eaee08",
+	"title": "0.2 Project Structure",
+	"files": [],
 	"layout": "1-panel",
 	"path": [],
 	"type": "page",

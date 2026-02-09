@@ -1,0 +1,58 @@
+{
+	"type": "multiple-choice",
+	"taskId": "multiple-choice-2551832351",
+	"source": {
+		"name": "Simplest Bot Review",
+		"showName": true,
+		"instructions": "**Which of the following statements about simple bots is correct?**",
+		"multipleResponse": false,
+		"isRandomized": false,
+		"answers": [
+			{
+				"_id": "7f7473ce-a246-a0b4-be04-612df240284b",
+				"correct": true,
+				"answer": "Simple bots can only respond to specific pre-programmed inputs with fixed responses"
+			},
+			{
+				"_id": "9dd55676-d714-434e-ad77-46ddb22cb6dc",
+				"correct": false,
+				"answer": "Simple bots can understand the context of a conversation"
+			},
+			{
+				"_id": "6af06eee-82ee-9ce1-5ecb-49e6454f3358",
+				"correct": false,
+				"answer": "Simple bots use complex neural networks to generate responses"
+			},
+			{
+				"_id": "dfe8677c-3b49-fc4a-152e-4e70f6122a16",
+				"correct": false,
+				"answer": "Simple bots can learn from user interactions to improve their responses over time"
+			}
+		],
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Multiple Choice"
+				}
+			],
+			"files": [],
+			"opened": []
+		},
+		"bloomsObjectiveLevel": "2",
+		"learningObjectives": "SWBAT identify key concepts about simple bot implementation",
+		"guidance": "The correct answer is that simple bots can only respond to specific pre-programmed inputs with fixed responses. Simple bots operate on basic pattern matching between user input and predefined rules or responses. They cannot understand context, do not use complex neural networks, and cannot learn from interactions to improve over time. These limitations are what make them 'simple' compared to more advanced conversational AI systems.",
+		"showGuidanceAfterResponseOption": {
+			"type": "Attempts",
+			"passedFrom": 1
+		},
+		"maxAttemptsCount": 1,
+		"showExpectedAnswerOption": {
+			"type": "Always"
+		},
+		"points": 20,
+		"incorrectPoints": 0,
+		"arePartialPointsAllowed": false,
+		"useMaximumScore": false
+	}
+}

@@ -73,4 +73,3 @@
 
 
 ---{Check It!|assessment}(code-output-compare-1455321744)
-

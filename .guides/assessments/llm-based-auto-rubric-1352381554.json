@@ -1,0 +1,37 @@
+{
+	"type": "llm-based-auto-rubric",
+	"taskId": "llm-based-auto-rubric-1352381554",
+	"source": {
+		"name": "Test the Greet Flow",
+		"showName": true,
+		"instructions": "Test the Greet flow in data/basics/greet.yml to have at least 2 steps.\n\nThe flow should:\n- Have at least 2 actions in the steps section (e.g., utter_greet and utter_help)\n- Use proper YAML syntax (2 spaces indentation)\n- All action references (utter_*) should exist in domain/basics.yml\n- Steps execute in order (first action, then second)",
+		"metadata": {
+			"tags": [],
+			"files": [],
+			"opened": []
+		},
+		"bloomsObjectiveLevel": "",
+		"learningObjectives": "",
+		"guidance": "",
+		"showGuidanceAfterResponseOption": {
+			"type": "Always"
+		},
+		"maxAttemptsCount": 0,
+		"points": 8,
+		"arePartialPointsAllowed": true,
+		"rubrics": [
+			{
+				"id": "1",
+				"title": "Requirements for Adjusting the Greet Flow",
+				"description": "Requirements Checklist (all must be met):\n                        \n                        **Reference**: The file structure should match the format shown in data/basics/greet.yml. The file already exists - students are modifying it to add a second step.\n                        \n                        1. File Location and Existence:\n                           - File data/basics/greet.yml exists in /home/codio/workspace/level1/\n                           - File is valid YAML (no syntax errors, parses correctly)\n                           - File is in correct location (data/basics/, not data/ root)\n                        \n                        2. Flow Structure:\n                           - File contains a flows: section (top level, no indentation)\n                           - Flow named \"greet\" exists under flows: section\n                           - Flow is properly indented (greet: is 2 spaces from left margin)\n                        \n                        3. Required Fields:\n                           - Flow has a \"name\" field (e.g., name: say hello or similar)\n                           - Flow has a \"description\" field (non-empty, descriptive text)\n                           - Flow has a \"steps\" field (list of actions)\n                           - All fields are properly indented (4 spaces from left margin, under greet:)\n                        \n                        4. Steps Section (CRITICAL - This is what students are modifying):\n                           - steps: section contains at least 2 actions (this is the main requirement)\n                           - Each action format is correct: \"- action: utter_X\"\n                           - All actions are properly indented (6 spaces from left margin, under steps:)\n                           - Actions are at the same indentation level (both 6 spaces)\n                           - Actions reference existing responses in domain/basics.yml (e.g., utter_greet, utter_help)\n                           - Actions are listed in order (first action executes first, then second)\n                        \n                        5. YAML Syntax and Indentation:\n                           - Uses exactly 2 spaces for indentation (not tabs, not 4 spaces)\n                           - flows: is at left margin (0 spaces)\n                           - greet: is indented 2 spaces\n                           - name:/description:/steps: are indented 4 spaces\n                           - - action: items are indented 6 spaces\n                           - No tabs used anywhere\n                           - Overall indentation pattern matches standard flow file format\n                        \n                        Grading: Award full points (8) if all requirements are met, especially that steps: contains at least 2 actions. Deduct points for each missing requirement, with particular attention to having fewer than 2 steps.",
+				"points": 8
+			}
+		],
+		"solutions": [
+			{
+				"path": "level1/data/basics/greet.yml",
+				"content": "flows:\n  greet:\n    name: say hello\n    description: Greet the user when they start a conversation.\n    steps:\n      - action: utter_greet\n"
+			}
+		]
+	}
+}

@@ -1,0 +1,17 @@
+{
+	"id": "0971eeda-a497-84e7-c96a-0102d7066fa0",
+	"title": "0.3 Understanding YAML Syntax",
+	"files": [
+		{
+			"path": "#tabs",
+			"action": "close"
+		}
+	],
+	"layout": "1-panel",
+	"path": [],
+	"type": "page",
+	"contentType": "markdown",
+	"teacherOnly": false,
+	"closeTerminalSession": true,
+	"learningObjectives": ""
+}

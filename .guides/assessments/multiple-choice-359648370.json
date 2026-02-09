@@ -1,0 +1,58 @@
+{
+	"type": "multiple-choice",
+	"taskId": "multiple-choice-359648370",
+	"source": {
+		"name": "Conversation Bot Definition",
+		"showName": true,
+		"instructions": "**Which of the following best describes a conversational bot?**",
+		"multipleResponse": false,
+		"isRandomized": false,
+		"answers": [
+			{
+				"_id": "21a633d0-921a-2849-d85a-41379a842278",
+				"correct": true,
+				"answer": "A program designed to simulate conversation with human users through text or voice interactions"
+			},
+			{
+				"_id": "940d8ce2-e3cc-b39d-9099-4075ba1a9526",
+				"correct": false,
+				"answer": "A physical robot that can perform automated tasks in the real world"
+			},
+			{
+				"_id": "cfc494da-d621-57ef-82ea-57d86af08b51",
+				"correct": false,
+				"answer": "A software that only responds to specific commands with predetermined responses"
+			},
+			{
+				"_id": "6a6ef0a8-5189-b6bf-7e43-6845d18b4592",
+				"correct": false,
+				"answer": "A virtual assistant that can only answer questions from a fixed database of information"
+			}
+		],
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Multiple Choice"
+				}
+			],
+			"files": [],
+			"opened": []
+		},
+		"bloomsObjectiveLevel": "1",
+		"learningObjectives": "SWBAT identify the key characteristics of conversational bots",
+		"guidance": "A conversational bot (also called a chatbot) is a computer program designed to simulate conversation with human users, typically through text or voice interactions. Unlike physical robots that operate in the physical world, conversational bots exist in digital environments. They're also more sophisticated than simple command-response systems, as they can engage in natural-seeming dialogue and aren't limited to fixed responses from a database.",
+		"showGuidanceAfterResponseOption": {
+			"type": "Attempts",
+			"passedFrom": 1
+		},
+		"maxAttemptsCount": 1,
+		"showExpectedAnswerOption": {
+			"type": "Always"
+		},
+		"points": 20,
+		"incorrectPoints": 0,
+		"arePartialPointsAllowed": false,
+		"useMaximumScore": false
+	}
+}

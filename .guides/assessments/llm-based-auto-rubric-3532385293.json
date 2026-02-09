@@ -1,0 +1,37 @@
+{
+	"type": "llm-based-auto-rubric",
+	"taskId": "llm-based-auto-rubric-3532385293",
+	"source": {
+		"name": "Good Flow Descriptions",
+		"showName": true,
+		"instructions": "Improve or add descriptions to at least 2 flows in your data/basics/ folder.\n\nEach description should:\n- Be non-empty and meaningful (at least 20 characters)\n- Clearly explain what the flow does\n- Be specific and action-oriented (use verbs like \"tell\", \"explain\", \"provide\")\n- Help the LLM understand when to trigger the flow\n- Be unique (different from other flow descriptions)",
+		"metadata": {
+			"tags": [],
+			"files": [],
+			"opened": []
+		},
+		"bloomsObjectiveLevel": "",
+		"learningObjectives": "",
+		"guidance": "",
+		"showGuidanceAfterResponseOption": {
+			"type": "Always"
+		},
+		"maxAttemptsCount": 0,
+		"points": 1,
+		"arePartialPointsAllowed": true,
+		"rubrics": [
+			{
+				"id": "1",
+				"title": "Improved Flow Descriptions",
+				"description": "Requirements Checklist (all must be met):\n\n**Reference**: Review existing flow files in data/basics/ folder (e.g., greet.yml, goodbye.yml) to see examples of good descriptions.\n\n1. File Location and Existence:\n   - At least 2 flow files exist in data/basics/ folder (e.g., greet.yml, goodbye.yml, or other flows)\n   - Files are valid YAML (no syntax errors, parses correctly)\n   - Files are in correct location (data/basics/, not data/ root)\n\n2. Description Presence:\n   - Each flow has a \"description\" field\n   - All descriptions are non-empty (not just whitespace or empty strings)\n   - All descriptions are at least 20 characters long\n   - Descriptions are properly formatted as YAML strings\n\n3. Description Quality (CRITICAL - This is the main learning objective):\n   - Descriptions are specific (explain what the flow does, not vague like \"help user\" or \"flow\")\n   - Descriptions are action-oriented (use verbs like \"tell\", \"explain\", \"provide\", \"list\", \"greet\")\n   - Descriptions include context (when/why the flow triggers, what it accomplishes)\n   - Descriptions help LLM understand the flow's purpose (clear enough for matching)\n   - Descriptions avoid being too vague (not just \"help\" or \"information\")\n   - Descriptions avoid being too specific about exact user phrases (focus on what, not how user asks)\n\n4. Uniqueness:\n   - Each flow has a unique description (not identical to other flows)\n   - Descriptions are tailored to each flow's specific purpose\n   - No duplicate descriptions across different flows\n\n5. YAML Structure and Formatting:\n   - Descriptions are properly formatted (string values, correct indentation)\n   - Descriptions are under the correct flow name (4 spaces indentation under flow name)\n   - Descriptions use proper YAML syntax (quoted strings if needed, correct colon placement)\n   - No syntax errors in description field\n\n6. Integration with Flow Structure:\n   - Descriptions are part of valid flow structures (flows: section exists)\n   - Flow has other required fields (name:, steps:) in addition to description:\n\nGrading: Award full points (1) if all requirements are met, especially description quality. Descriptions must be specific, action-oriented, and helpful for LLM matching. Deduct points for missing descriptions, vague descriptions (like \"help user\"), duplicate descriptions, or descriptions that are too short (<20 characters).",
+				"points": 1
+			}
+		],
+		"solutions": [
+			{
+				"path": "level1/data/basics/greet.yml",
+				"content": "flows:\n  greet:\n    name: say hello\n    description: Greet the user when they start a conversation.\n    steps:\n      - action: utter_greet\n      - action: utter_help"
+			}
+		]
+	}
+}

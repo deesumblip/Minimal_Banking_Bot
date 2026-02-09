@@ -1,0 +1,71 @@
+{
+	"type": "multiple-choice",
+	"taskId": "multiple-choice-1420316307",
+	"source": {
+		"name": "Flow Structure Components",
+		"showName": true,
+		"instructions": "**Which of the following statements about flow structure in YAML files are correct? Select all that apply.**",
+		"multipleResponse": true,
+		"isRandomized": false,
+		"answers": [
+			{
+				"_id": "210380c6-96ef-0ca2-2f33-4d336e06b328",
+				"correct": true,
+				"answer": "The flow description is critical because the LLM uses it to match user messages to flows"
+			},
+			{
+				"_id": "b02c9b74-8c22-ddaf-2608-5ca64e63a72f",
+				"correct": false,
+				"answer": "The human-readable name (`name:`) must match the flow identifier"
+			},
+			{
+				"_id": "d2276922-9c0d-cd55-cd86-80523053c917",
+				"correct": true,
+				"answer": "All flows in a file must be defined under the top-level `flows:` key"
+			},
+			{
+				"_id": "6f2d204c-8521-c360-e562-fbdffa405ad9",
+				"correct": false,
+				"answer": "A vague description like \"Say hello\" is sufficient for the LLM to understand when to trigger a flow"
+			},
+			{
+				"_id": "163ffba0-88d3-dab8-a42a-c1cdeeb76433",
+				"correct": true,
+				"answer": "Each step in a flow must be indented with a dash (`-`)"
+			}
+		],
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Multiple Choice"
+				}
+			],
+			"files": [
+				"level1/data/basics/greet.yml"
+			],
+			"opened": [
+				{
+					"type": "file",
+					"panelNumber": 1,
+					"content": "level1/data/basics/greet.yml"
+				}
+			]
+		},
+		"bloomsObjectiveLevel": "3",
+		"learningObjectives": "SWBAT identify critical components of flow structure in YAML",
+		"guidance": "The correct answers are:\n\n1. The flow description is critical because the LLM uses it to match user messages to flows - This is explicitly stated as critical in the topic, as the LLM relies on descriptions to understand when to trigger flows.\n\n2. All flows in a file must be defined under the top-level `flows:` key - The topic explains that \"flows:\" is the top-level key and all flows in the file go under this key.\n\n3. Each step in a flow must be indented with a dash (`-`) - The topic specifies that under \"steps:\", each step is indented with a dash.\n\nThe incorrect options are:\n\n1. The human-readable name must match the flow identifier - The topic explicitly states that the name \"Can be different from the flow identifier\" and is used for logs and debugging.\n\n2. A vague description is sufficient - The topic emphasizes that good descriptions are essential and provides examples of bad (\"Say hello\") versus good descriptions.",
+		"showGuidanceAfterResponseOption": {
+			"type": "Attempts",
+			"passedFrom": 1
+		},
+		"maxAttemptsCount": 1,
+		"showExpectedAnswerOption": {
+			"type": "Always"
+		},
+		"points": 20,
+		"incorrectPoints": 0,
+		"arePartialPointsAllowed": false,
+		"useMaximumScore": false
+	}
+}

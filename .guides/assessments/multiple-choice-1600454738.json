@@ -1,0 +1,48 @@
+{
+	"type": "multiple-choice",
+	"taskId": "multiple-choice-1600454738",
+	"source": {
+		"name": "Level 1 Bot Understanding",
+		"showName": true,
+		"instructions": "**True or False: Level 1 bots can remember previous interactions in a conversation and use that context to perform complex multi-step tasks.**",
+		"multipleResponse": false,
+		"isRandomized": false,
+		"answers": [
+			{
+				"_id": "f39e2650-334c-1784-10ad-6cbdaffe559e",
+				"correct": false,
+				"answer": "True"
+			},
+			{
+				"_id": "a9fca485-1753-1d75-28fd-6d60a71d99e7",
+				"correct": true,
+				"answer": "False"
+			}
+		],
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Multiple Choice"
+				}
+			],
+			"files": [],
+			"opened": []
+		},
+		"bloomsObjectiveLevel": "2",
+		"learningObjectives": "SWBAT identify the appropriate uses and limitations of Level 1 bots",
+		"guidance": "This statement is False. Level 1 bots are designed to provide static information but cannot remember context from previous messages or perform complex actions. They're ideal for simple FAQs, company information, and basic help systems where each interaction is independent. These bots respond to individual queries without maintaining conversation history or performing multi-step processes.",
+		"showGuidanceAfterResponseOption": {
+			"type": "Attempts",
+			"passedFrom": 1
+		},
+		"maxAttemptsCount": 1,
+		"showExpectedAnswerOption": {
+			"type": "Always"
+		},
+		"points": 20,
+		"incorrectPoints": 0,
+		"arePartialPointsAllowed": false,
+		"useMaximumScore": false
+	}
+}

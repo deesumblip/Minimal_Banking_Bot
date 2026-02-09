@@ -1,0 +1,45 @@
+{
+	"type": "llm-based-auto-rubric",
+	"taskId": "llm-based-auto-rubric-3895222681",
+	"source": {
+		"name": "Adding a New Response",
+		"showName": true,
+		"instructions": "Add a new response called \"utter_goodbye\" to the domain/basics.yml file. \n\nThe response should:\n- Be added under the responses: section\n- Have at least one text variation with a farewell message\n- Include metadata with rephrase: True\n- Use proper YAML syntax with correct indentation (2 spaces per level)",
+		"metadata": {
+			"tags": [],
+			"files": [
+				"level1/domain/basics.yml"
+			],
+			"opened": [
+				{
+					"type": "file",
+					"panelNumber": 1,
+					"content": "level1/domain/basics.yml"
+				}
+			]
+		},
+		"bloomsObjectiveLevel": "",
+		"learningObjectives": "",
+		"guidance": "If the assessment fails, review the feedback and ensure your utter_goodbye response matches the structure in the guide (2-space indentation, metadata with rephrase: True).",
+		"showGuidanceAfterResponseOption": {
+			"type": "Always"
+		},
+		"maxAttemptsCount": 0,
+		"points": 10,
+		"arePartialPointsAllowed": true,
+		"rubrics": [
+			{
+				"id": "2",
+				"title": "Response Validation",
+				"description": "Requirements Checklist (all must be met):\n\n1. File Location and Existence:\n   - File domain/basics.yml exists in /home/codio/workspace/level1/\n   - File is valid YAML (no syntax errors, parses correctly)\n\n2. Response Structure:\n   - Response \"utter_goodbye\" exists under the responses: section\n   - Response is a list (starts with \"- text:\")\n   - Response has at least one text variation (non-empty text)\n   - Response text contains a farewell message (e.g., \"Goodbye\", \"See you\", etc.)\n\n3. YAML Syntax and Indentation:\n   - Uses exactly 2 spaces for indentation (not tabs, not 4 spaces)\n   - utter_goodbye: is indented 2 spaces from left margin\n   - - text: is indented 4 spaces from left margin\n   - metadata: is aligned with text: (6 spaces)\n   - rephrase: True is indented 8 spaces (under metadata:)\n   - No tabs used\n\n4. Metadata:\n   - metadata: section exists\n   - metadata contains rephrase: True\n   - metadata is properly indented (aligned with text:)\n\n5. Response Content:\n   - Response text is not empty\n   - Response text is a meaningful farewell message\n\nGrading: Award full points (10) if all requirements are met. Deduct points for each missing requirement.",
+				"points": 10
+			}
+		],
+		"solutions": [
+			{
+				"path": "level1/domain/basics.yml",
+				"content": "## Level 1: Just Responses\n#\n# This is the simplest possible domain file.\n# - Only responses (predefined bot messages)\n# - No slots (memory)\n# - No actions (custom code)\n\nversion: \"3.1\"\n\nresponses:\n  utter_greet:\n    - text: \"Hi! I'm a banking assistant. How can I help you today?\"\n      metadata:\n        rephrase: True\n\n  utter_help:\n    - text: |\n        I can help you with:\n        - Checking your balance\n        - Transferring money\n        - Bank hours\n        - Contact information\n      metadata:\n        rephrase: True\n\n  utter_contact:\n    - text: \"You can reach us at support@bank.com or call 1-800-BANK-123.\"\n      metadata:\n        rephrase: True\n"
+			}
+		]
+	}
+}

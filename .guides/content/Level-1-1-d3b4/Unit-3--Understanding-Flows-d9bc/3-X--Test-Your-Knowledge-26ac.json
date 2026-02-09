@@ -1,0 +1,19 @@
+{
+	"id": "26ac0075-299d-6b97-9314-39a1a9cdb79a",
+	"title": "3.X: Test Your Knowledge",
+	"files": [
+		{
+			"path": "#tabs",
+			"action": "close"
+		}
+	],
+	"layout": "2-panels-tree-guides-left",
+	"path": [
+		"level1"
+	],
+	"type": "page",
+	"contentType": "markdown",
+	"teacherOnly": false,
+	"closeTerminalSession": true,
+	"learningObjectives": ""
+}

@@ -1,12 +1,7 @@
 {
-	"id": "7face74d-2d92-d7ef-3b7f-ac7f657e6595",
-	"title": "0.4 Getting Help",
-	"files": [
-		{
-			"path": "#tabs",
-			"action": "close"
-		}
-	],
+	"id": "b29b7aa1-92c2-8b96-c0a0-bb12b9035c56",
+	"title": "0.1 What You Need Before Starting",
+	"files": [],
 	"layout": "1-panel",
 	"path": [],
 	"type": "page",

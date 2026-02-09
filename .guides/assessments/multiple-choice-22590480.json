@@ -1,0 +1,68 @@
+{
+	"type": "multiple-choice",
+	"taskId": "multiple-choice-22590480",
+	"source": {
+		"name": "Identifying Bot Capabilities",
+		"showName": true,
+		"instructions": "**Which of these scenarios can be handled by a Level 1 bot that can only handle responses?**",
+		"multipleResponse": true,
+		"isRandomized": false,
+		"answers": [
+			{
+				"_id": "74c4654c-6431-80b1-5e0b-e89871e6e662",
+				"correct": true,
+				"answer": "Providing company contact information"
+			},
+			{
+				"_id": "3fb1ab8f-a407-6d36-b6d8-ef17f235907b",
+				"correct": false,
+				"answer": "Checking account balance (requires account number)"
+			},
+			{
+				"_id": "f5f41705-954c-919e-0d4b-d690b4f675c9",
+				"correct": true,
+				"answer": "Listing product features"
+			},
+			{
+				"_id": "5d393b09-474e-6fb9-2b78-54ed8372e635",
+				"correct": false,
+				"answer": "Processing a payment (requires payment details and processing)"
+			},
+			{
+				"_id": "752c1ce3-e31a-3c6f-e8b9-b779c3c3e531",
+				"correct": true,
+				"answer": "Explaining how to use a feature"
+			},
+			{
+				"_id": "46fe9e8e-9915-d90d-6d9a-3c58006d38e9",
+				"correct": false,
+				"answer": "Remembering user preferences"
+			}
+		],
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Multiple Choice"
+				}
+			],
+			"files": [],
+			"opened": []
+		},
+		"bloomsObjectiveLevel": "3",
+		"learningObjectives": "SWBAT identify which scenarios can be handled by a Level 1 bot",
+		"guidance": "Level 1 bots can only provide information but cannot remember anything or perform actions. Therefore:\n\n- **Can handle**: Providing company contact information, listing product features, explaining how to use a feature (these only require providing information)\n\n- **Cannot handle**: Checking account balance (requires remembering the account number), processing a payment (requires both memory for details and code to execute the payment), and remembering user preferences (requires memory/slots)",
+		"showGuidanceAfterResponseOption": {
+			"type": "Attempts",
+			"passedFrom": 1
+		},
+		"maxAttemptsCount": 1,
+		"showExpectedAnswerOption": {
+			"type": "Always"
+		},
+		"points": 20,
+		"incorrectPoints": 0,
+		"arePartialPointsAllowed": false,
+		"useMaximumScore": false
+	}
+}
