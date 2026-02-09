@@ -5130,23 +5130,100 @@ The `description` field is **critical** because the LLM uses it to match user me
 
 ### Lab 3.4: Flow Descriptions and LLM Matching
 
-**Objective**: Practice writing good flow descriptions.
+**Objective**: Create new flows with good descriptions that help the LLM match user messages.
 
-#### Task
+**Before You Begin**:
+- ✅ You've completed Lab 3.2 (created goodbye.yml)
+- ✅ You understand flow structure (flows:, name:, description:, steps:)
+- ✅ You know where `data/basics/` folder is located
+- ✅ You can reference existing flows (greet.yml, goodbye.yml) as templates
 
-For each of these scenarios, write a good flow description:
+#### Understanding Flow Descriptions
 
-1. A flow that provides bank hours
-2. A flow that explains how to check balance
-3. A flow that lists available services
+The `description` field is **critical** because the LLM uses it to match user messages to flows.
 
-#### Example Solutions
+**How It Works**:
+1. User sends a message: "What are your hours?"
+2. LLM reads all flow descriptions
+3. LLM matches the message to the best-fitting description
+4. Rasa triggers that flow
 
-1. `description: "Tell the user when the bank is open and what the operating hours are."`
-2. `description: "Explain the process for checking account balance, including what information is needed."`
-3. `description: "List all the services and features the bot can help with."`
+**Writing Good Descriptions**:
+
+✅ **Good descriptions**:
+- Clear and specific: "Tell the user when the bank is open and what the operating hours are"
+- Action-oriented: "Provide contact information for the bank"
+- Context-aware: "Explain what the bot can help with"
+
+❌ **Bad descriptions**:
+- Too vague: "Help user" (what kind of help?)
+- Too specific: "Respond when user says exactly 'hello'" (misses "hi", "hey")
+- Missing context: "Say hello" (when? why?)
+
+#### Task: Create 2 New Flows
+
+Create 2 new flow files in `data/basics/` folder. Use `greet.yml` or `goodbye.yml` as templates for structure.
+
+**Flow 1: Bank Hours**
+- **File**: `data/basics/hours.yml`
+- **Flow name**: `hours`
+- **Description**: Write a clear, specific description about providing bank hours
+- **Steps**: At least one action (e.g., `utter_hours` - you may need to create this response in domain/basics.yml first, or use an existing response)
+
+**Flow 2: Account Balance Help**
+- **File**: `data/basics/balance.yml`
+- **Flow name**: `balance`
+- **Description**: Write a clear, specific description about explaining how to check account balance
+- **Steps**: At least one action (e.g., `utter_balance_help` or use an existing response)
+
+#### Step-by-Step Instructions
+
+1. **Create hours.yml**:
+   - Copy the structure from `greet.yml` or `goodbye.yml` as a template
+   - Change the flow name to `hours`
+   - Write a good description (see examples below)
+   - Add at least one step with an action
+
+2. **Create balance.yml**:
+   - Copy the structure from `greet.yml` or `goodbye.yml` as a template
+   - Change the flow name to `balance`
+   - Write a good description (see examples below)
+   - Add at least one step with an action
+
+#### Example: Good Descriptions
+
+**For hours.yml**:
+```yaml
+flows:
+  hours:
+    name: bank hours
+    description: "Tell the user when the bank is open and what the operating hours are"
+    steps:
+      - action: utter_hours
+```
+
+**For balance.yml**:
+```yaml
+flows:
+  balance:
+    name: balance help
+    description: "Explain the process for checking account balance, including what information is needed"
+    steps:
+      - action: utter_balance_help
+```
 
 **Key**: Be specific about what the flow does, not how the user asks for it.
+
+#### Checklist
+
+Before submitting, verify:
+- ✅ Both files exist in `data/basics/` folder
+- ✅ Both flows have `name:` fields
+- ✅ Both flows have `description:` fields (at least 20 characters, specific and action-oriented)
+- ✅ Both flows have `steps:` sections with at least one action
+- ✅ Descriptions are unique (different from each other and from other flows)
+- ✅ YAML syntax is correct (2 spaces indentation, no tabs)
+- ✅ File structure matches the template (flows: at top level, proper indentation)
 
 **AI Coach**: Ask "How do I write a good flow description?" or "What makes a description too vague?"
 
@@ -5837,7 +5914,22 @@ This creates a more helpful greeting experience!
 
 ### Lab 3.4: Flow Descriptions and LLM Matching
 
-**Type**: Hands-On Lab with Auto-Grading
+**Type**: Hands-On Lab with Auto-Grading (LLM Rubric Autograde)
+
+**⏱️ Estimated Time**: 10-15 minutes (using LLM Rubric instead of custom script)
+
+**💡 Time-Saving Tip**: This assessment is similar to Lab 3.2 but validates 2 files and focuses on description quality. You can duplicate Lab 3.2's assessment and modify it.
+
+**Content Structure**:
+- Explain how `description:` field helps LLM match user messages
+- Show examples of good vs bad descriptions
+- Guide students to create 2 new flows from scratch (hours.yml, balance.yml)
+- Remind students they can use existing flows (greet.yml, goodbye.yml) as templates
+
+**Hands-On Exercise**:
+- Student creates 2 new flow files: hours.yml and balance.yml
+- Each flow must have proper structure (flows:, name:, description:, steps:)
+- Focus on writing good, specific descriptions that help LLM matching
 
 #### Step 0.5: Add Lab 3.4 Guide Content to Codio
 
@@ -5871,23 +5963,100 @@ This creates a more helpful greeting experience!
 
 ### Lab 3.4: Flow Descriptions and LLM Matching
 
-**Objective**: Practice writing good flow descriptions.
+**Objective**: Create new flows with good descriptions that help the LLM match user messages.
 
-#### Task
+**Before You Begin**:
+- ✅ You've completed Lab 3.2 (created goodbye.yml)
+- ✅ You understand flow structure (flows:, name:, description:, steps:)
+- ✅ You know where `data/basics/` folder is located
+- ✅ You can reference existing flows (greet.yml, goodbye.yml) as templates
 
-For each of these scenarios, write a good flow description:
+#### Understanding Flow Descriptions
 
-1. A flow that provides bank hours
-2. A flow that explains how to check balance
-3. A flow that lists available services
+The `description` field is **critical** because the LLM uses it to match user messages to flows.
 
-#### Example Solutions
+**How It Works**:
+1. User sends a message: "What are your hours?"
+2. LLM reads all flow descriptions
+3. LLM matches the message to the best-fitting description
+4. Rasa triggers that flow
 
-1. `description: "Tell the user when the bank is open and what the operating hours are."`
-2. `description: "Explain the process for checking account balance, including what information is needed."`
-3. `description: "List all the services and features the bot can help with."`
+**Writing Good Descriptions**:
+
+✅ **Good descriptions**:
+- Clear and specific: "Tell the user when the bank is open and what the operating hours are"
+- Action-oriented: "Provide contact information for the bank"
+- Context-aware: "Explain what the bot can help with"
+
+❌ **Bad descriptions**:
+- Too vague: "Help user" (what kind of help?)
+- Too specific: "Respond when user says exactly 'hello'" (misses "hi", "hey")
+- Missing context: "Say hello" (when? why?)
+
+#### Task: Create 2 New Flows
+
+Create 2 new flow files in `data/basics/` folder. Use `greet.yml` or `goodbye.yml` as templates for structure.
+
+**Flow 1: Bank Hours**
+- **File**: `data/basics/hours.yml`
+- **Flow name**: `hours`
+- **Description**: Write a clear, specific description about providing bank hours
+- **Steps**: At least one action (e.g., `utter_hours` - you may need to create this response in domain/basics.yml first, or use an existing response)
+
+**Flow 2: Account Balance Help**
+- **File**: `data/basics/balance.yml`
+- **Flow name**: `balance`
+- **Description**: Write a clear, specific description about explaining how to check account balance
+- **Steps**: At least one action (e.g., `utter_balance_help` or use an existing response)
+
+#### Step-by-Step Instructions
+
+1. **Create hours.yml**:
+   - Copy the structure from `greet.yml` or `goodbye.yml` as a template
+   - Change the flow name to `hours`
+   - Write a good description (see examples below)
+   - Add at least one step with an action
+
+2. **Create balance.yml**:
+   - Copy the structure from `greet.yml` or `goodbye.yml` as a template
+   - Change the flow name to `balance`
+   - Write a good description (see examples below)
+   - Add at least one step with an action
+
+#### Example: Good Descriptions
+
+**For hours.yml**:
+```yaml
+flows:
+  hours:
+    name: bank hours
+    description: "Tell the user when the bank is open and what the operating hours are"
+    steps:
+      - action: utter_hours
+```
+
+**For balance.yml**:
+```yaml
+flows:
+  balance:
+    name: balance help
+    description: "Explain the process for checking account balance, including what information is needed"
+    steps:
+      - action: utter_balance_help
+```
 
 **Key**: Be specific about what the flow does, not how the user asks for it.
+
+#### Checklist
+
+Before submitting, verify:
+- ✅ Both files exist in `data/basics/` folder
+- ✅ Both flows have `name:` fields
+- ✅ Both flows have `description:` fields (at least 20 characters, specific and action-oriented)
+- ✅ Both flows have `steps:` sections with at least one action
+- ✅ Descriptions are unique (different from each other and from other flows)
+- ✅ YAML syntax is correct (2 spaces indentation, no tabs)
+- ✅ File structure matches the template (flows: at top level, proper indentation)
 
 **AI Coach**: Ask "How do I write a good flow description?" or "What makes a description too vague?"
 
@@ -5911,22 +6080,205 @@ For each of these scenarios, write a good flow description:
 **The steps below are for creating assessments in Codio. Students will NOT see these instructions.**
 
 **Content Structure**:
-- Brief instructions (preserved from TUTORIAL.md)
 - Explain how `description:` field helps LLM match user messages
 - Show examples of good vs bad descriptions
+- Guide students to create 2 new flows from scratch (hours.yml, balance.yml)
+- Remind students they can use existing flows (greet.yml, goodbye.yml) as templates
 
 **Hands-On Exercise**:
-- Student improves flow descriptions
-- Or writes new descriptions for flows
+- Student creates 2 new flow files: hours.yml and balance.yml
+- Each flow must have proper structure (flows:, name:, description:, steps:)
+- Focus on writing good, specific descriptions that help LLM matching
 
 **Auto-Grading**:
-- Validates descriptions exist and are descriptive (not empty, >10 characters)
-- Checks descriptions are unique
-- Points: 5
+- Validates both files exist (hours.yml, balance.yml)
+- Validates flow structure (flows:, name:, description:, steps:)
+- Validates descriptions are descriptive (not empty, >20 characters, specific, action-oriented)
+- Checks descriptions are unique (different from each other and other flows)
+- Validates YAML syntax and indentation
+- Points: 8
 
 **Deliverables**:
 - Lab instructions
-- Auto-grading specification for text validation
+- LLM Rubric Autograde assessment
+
+#### Step 1: Create Lab 3.4 Assessment Using LLM Rubric Autograde
+
+**⏱️ Estimated Time**: 10-15 minutes (using LLM Rubric instead of custom script)
+
+**💡 Time-Saving Tip**: This assessment is similar to Lab 3.2 but validates 2 files and focuses on description quality. You can duplicate Lab 3.2's assessment and modify it.
+
+**📖 Assessment Type**: **LLM Rubric Autograde** (see "Codio Native Assessment Features Guide" above for details)
+
+**What you're doing**: Creating an LLM Rubric assessment that validates students created 2 new flow files (hours.yml, balance.yml) with proper structure and good descriptions.
+
+**How to do it**:
+
+1. **Navigate to Lab 3.4 in Guides**:
+   - Click **Tools** → **Guides** → **Edit**
+   - Find **Lab 3.4: Flow Descriptions and LLM Matching** subsection
+   - Scroll to bottom
+   - **Expected Result**: You see the end of Lab 3.4 content, with `+` button visible
+
+2. **Add LLM Rubric Assessment**:
+   - Click **`+`** button
+   - Select **"LLM Rubric"** or **"Autograde"** from dropdown
+   - **Expected Result**: Form appears with multiple fields
+
+3. **Configure the Assessment** (Fill in all fields):
+
+   **a. Assessment Instructions**:
+   - **Field Name**: "Instructions" or "Task Description"
+   - **What to type**:
+     ```
+     Create 2 new flow files in the data/basics/ folder:
+     1. hours.yml - A flow that provides bank hours
+     2. balance.yml - A flow that explains how to check account balance
+     
+     You can use greet.yml or goodbye.yml as templates for the structure.
+     
+     Each flow must have:
+     - Proper flow structure (flows: section, flow name, name:, description:, steps:)
+     - A clear, specific description (at least 20 characters, action-oriented)
+     - At least one step with an action
+     - Correct YAML syntax and indentation (2 spaces)
+     - Unique descriptions (different from each other and from other flows)
+     ```
+
+   **b. Rubric/Requirements** (Be very specific):
+   - **Field Name**: "Rubric" or "Requirements"
+   - **What to type**:
+     ```
+     Requirements Checklist (all must be met):
+     
+     **Reference**: Use data/basics/greet.yml or data/basics/goodbye.yml as templates for structure and formatting.
+     
+     1. File Location and Existence:
+        - File data/basics/hours.yml exists in /home/codio/workspace/level1/
+        - File data/basics/balance.yml exists in /home/codio/workspace/level1/
+        - Both files are valid YAML (no syntax errors, parses correctly)
+        - Both files are in correct location (data/basics/, not data/ root)
+     
+     2. Flow Structure (hours.yml):
+        - File contains a flows: section (top level, no indentation)
+        - Flow named "hours" exists under flows: section
+        - Flow is properly indented (hours: is 2 spaces from left margin)
+        - Flow has a "name" field (e.g., name: bank hours)
+        - Flow has a "description" field (non-empty, descriptive text)
+        - Flow has a "steps" field (list of actions)
+        - All fields are properly indented (4 spaces from left margin, under hours:)
+     
+     3. Flow Structure (balance.yml):
+        - File contains a flows: section (top level, no indentation)
+        - Flow named "balance" exists under flows: section
+        - Flow is properly indented (balance: is 2 spaces from left margin)
+        - Flow has a "name" field (e.g., name: balance help)
+        - Flow has a "description" field (non-empty, descriptive text)
+        - Flow has a "steps" field (list of actions)
+        - All fields are properly indented (4 spaces from left margin, under balance:)
+     
+     4. Steps Sections:
+        - hours.yml steps: section contains at least one action
+        - balance.yml steps: section contains at least one action
+        - Each action format is correct: "- action: utter_X"
+        - Actions are properly indented (6 spaces from left margin, under steps:)
+        - Actions reference existing responses in domain/basics.yml (or student may need to create them)
+     
+     5. Description Quality (CRITICAL - This is the main learning objective):
+        - hours.yml description is non-empty and at least 20 characters long
+        - balance.yml description is non-empty and at least 20 characters long
+        - hours.yml description is specific (explains what the flow does, not vague like "help user")
+        - balance.yml description is specific (explains what the flow does, not vague like "help user")
+        - hours.yml description is action-oriented (uses verbs like "tell", "explain", "provide")
+        - balance.yml description is action-oriented (uses verbs like "tell", "explain", "provide")
+        - hours.yml description includes context (when/why the flow triggers, what it accomplishes)
+        - balance.yml description includes context (when/why the flow triggers, what it accomplishes)
+        - Descriptions help LLM understand each flow's purpose (clear enough for matching)
+        - Descriptions avoid being too vague (not just "help" or "information")
+        - Descriptions avoid being too specific about exact user phrases (focus on what, not how user asks)
+     
+     6. Description Uniqueness:
+        - hours.yml description is unique (different from balance.yml description)
+        - balance.yml description is unique (different from hours.yml description)
+        - Both descriptions are different from other existing flow descriptions (greet.yml, goodbye.yml, etc.)
+        - Each description is tailored to its flow's specific purpose
+     
+     7. YAML Syntax and Indentation:
+        - Uses exactly 2 spaces for indentation (not tabs, not 4 spaces)
+        - flows: is at left margin (0 spaces)
+        - Flow names (hours:, balance:) are indented 2 spaces
+        - name:/description:/steps: are indented 4 spaces
+        - - action: items are indented 6 spaces
+        - No tabs used anywhere
+        - Overall indentation pattern matches template files (greet.yml, goodbye.yml)
+     
+     Grading: Award full points (8) if all requirements are met, especially description quality and uniqueness. Descriptions must be specific, action-oriented, and helpful for LLM matching. Deduct points for missing files, missing descriptions, vague descriptions (like "help user"), duplicate descriptions, incorrect structure, or syntax errors.
+     ```
+
+   **c. Solution File**:
+   - **Field Name**: "Solution File" or "Reference File"
+   - **What to type**: `/home/codio/workspace/level1/data/basics/greet.yml` (or path to example flow file)
+   - **Purpose**: Helps LLM understand expected flow structure
+
+   **d. Files to Check** (if available):
+   - **Field Name**: "Files to Grade" or "Student Files"
+   - **What to type**: `/home/codio/workspace/level1/data/basics/hours.yml, /home/codio/workspace/level1/data/basics/balance.yml`
+   - **Purpose**: Tells LLM which files to analyze
+   - **Note**: If this field doesn't exist, the LLM will check files mentioned in the rubric
+
+   **e. Guide Content Context**:
+   - **Field Name**: "Guide Content" or "Context"
+   - **What to type**: Copy Lab 3.4 instructions from guide (student-facing content about creating flows with good descriptions)
+
+   **f. Points**: `8`
+
+   **g. Timeout**: `60` (seconds)
+
+4. **Save the Assessment**:
+   - Click **Save** button
+   - **Expected Result**: Assessment saved, no errors
+
+5. **Enable Code Playback** (Optional):
+   - Click **Education** → **Monitoring** → **Code Playback**
+   - Add `data/basics/hours.yml` and `data/basics/balance.yml` to tracked files
+
+6. **Test the Assessment**:
+   - Test with both files created correctly with good descriptions (should pass)
+   - Test with missing files (should fail)
+   - Test with vague descriptions like "help user" (should fail)
+   - Test with duplicate descriptions (should fail)
+   - Test with incorrect structure (should fail)
+   - Test with missing description fields (should fail)
+
+**Expected output when passing**:
+```
+✅ Assessment Passed
+
+Feedback:
+- ✓ Both files (hours.yml, balance.yml) exist in data/basics/
+- ✓ Both flows have proper structure (flows:, name:, description:, steps:)
+- ✓ Descriptions are specific, action-oriented, and meaningful (>20 characters)
+- ✓ Descriptions are unique (different from each other and other flows)
+- ✓ Steps sections contain actions
+- ✓ Correct indentation (2 spaces per level)
+- ✓ YAML syntax is correct
+
+Score: 8/8
+```
+
+**Troubleshooting**:
+- **"Missing files"**: Student didn't create both files. Remind them to create hours.yml and balance.yml.
+- **"Vague descriptions"**: Descriptions are too generic (e.g., "help user"). Show examples of specific, action-oriented descriptions.
+- **"Duplicate descriptions"**: Both flows have the same description. Remind students each flow needs a unique description tailored to its purpose.
+- **"Missing description"**: Student forgot the description field. Remind them it's critical for LLM matching.
+
+**Deliverables Checklist**:
+- [ ] Lab 3.4 LLM Rubric Autograde created
+- [ ] Checks for both files (hours.yml, balance.yml)
+- [ ] Validates flow structure (flows:, name:, description:, steps:)
+- [ ] Validates description quality (specific, action-oriented, >20 characters)
+- [ ] Validates description uniqueness
+- [ ] Assessment tested with various student submissions
 
 ---
 
