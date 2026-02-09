@@ -221,63 +221,144 @@ Before diving into building your first Rasa bot, let's make sure you have everyt
 
 ---
 
-### 0.2 Environment Setup
+### 0.2 Project Structure
 
-**Note for Codio Students**: Start with [Lab 0.1: Create Virtual Environment and Install Rasa Pro](#lab-01-create-virtual-environment-and-install-rasa-pro) to create a virtual environment and install Rasa Pro in it, then verify the installation.
+Understanding the file structure will help you navigate the codebase and understand how everything fits together.
 
-#### Step 1: Create a Virtual Environment
+#### Complete File Tree
 
-**Why?** A virtual environment keeps your project's Python packages separate from other projects.
-
-```powershell
-# Navigate to your project folder
-cd path\to\your\project
-
-# Create a virtual environment
-py -3.11 -m venv .venv
-
-# Activate it (you'll need to do this each time you work on the project)
-.\.venv\Scripts\Activate.ps1
+```
+level1/
+├── config.yml              # How to build the bot (pipeline, policies)
+├── credentials.yml         # How to connect (REST, Socket.IO)
+├── endpoints.yml           # Where to find actions/LLMs
+├── .env                    # Environment variables (secrets - not committed)
+├── domain/
+│   └── basics.yml          # Bot knowledge base (responses)
+├── data/
+│   ├── basics/             # User-facing flows (conversation scripts)
+│   │   ├── greet.yml
+│   │   ├── help.yml
+│   │   └── contact.yml
+│   └── system/
+│       └── patterns/
+│           └── patterns.yml # System patterns (session start, completed)
+└── models/                 # Generated during training (don't edit)
 ```
 
-**How to verify it worked**: Your command prompt should show `(.venv)` at the beginning.
+#### File Purpose Overview
 
-#### Step 2: Install Rasa Pro
+**Configuration Files** (root level):
+- **`config.yml`**: Defines how Rasa builds your bot (which LLM to use, which policies, etc.)
+- **`credentials.yml`**: Defines how the bot connects to chat interfaces
+- **`endpoints.yml`**: Defines where to find custom actions and LLM configurations
 
-```powershell
-# Upgrade pip first
-python -m pip install --upgrade pip
+**Domain Files** (`domain/`):
+- **`domain/basics.yml`**: The bot's knowledge base - defines all responses the bot can say
 
-# Install Rasa Pro
-python -m pip install --no-cache-dir rasa-pro
+**Flow Files** (`data/`):
+- **`data/basics/*.yml`**: User-facing conversation scripts (flows)
+- **`data/system/patterns/patterns.yml`**: System-level behaviors (session start, flow completion)
+
+**Generated Files** (created automatically):
+- **`models/`**: Compiled bot models (created when you run `rasa train`)
+- **`logs/`**: Log files for debugging
+
+#### How Files Work Together
+
+```
+User sends message
+    ↓
+config.yml (defines how to understand it)
+    ↓
+data/*.yml (flows define what to do)
+    ↓
+domain/basics.yml (responses define what to say)
+    ↓
+Bot responds
 ```
 
-**How to verify it worked**: Run `python -m rasa --version` - you should see version information.
+**Key Relationships**:
+- **Flows** (in `data/`) reference **Responses** (in `domain/`)
+- **Config** tells Rasa how to process everything
+- **System patterns** control conversation lifecycle
 
-#### Step 3: Set Up Environment Variables
+---
 
-Create a `.env` file in your project root with:
+### Lab 0.1: Create Virtual Environment and Install Rasa Pro
 
-```text
-RASA_LICENSE=your-rasa-pro-license-here
-OPENAI_API_KEY=your-openai-api-key-here
-```
+**Objective**: Create a virtual environment, install Rasa Pro in it, and verify the installation is successful.
 
-⚠️ **Important**: 
-- Never commit `.env` files to version control (they contain secrets)
-- Replace the placeholder values with your actual license and API key
+**Important**: This is your first step! You must create a virtual environment and install Rasa Pro before you can proceed with any other exercises.
 
-#### Step 4: Load Environment Variables
+**Before you start**: Open a terminal in Codio. Run `cd level1` so you are in the `level1` folder. All commands in this lab should be run from there.
 
-Before running Rasa commands, load your environment variables:
+#### Steps
 
-```powershell
-# Load environment variables
-. .\load_env.ps1
+1. **Create a Virtual Environment**
+   
+   In the terminal, first check that Python 3.11 is installed correctly:
+   ```bash
+   python3.11 -V
+   ```
+   Then type:
+   ```bash
+   python3.11 -m venv .venv
+   source .venv/bin/activate
+   ```
+   
+   **What to expect**: Your command prompt should show `(.venv)` at the beginning, indicating the virtual environment is active.
 
-# Or use the helper script that does this automatically
-powershell -ExecutionPolicy Bypass -File .\run_inspector.ps1
-```
+2. **Install Rasa Pro**
+   
+   With the virtual environment activated, run:
+   ```bash
+   pip install --no-cache-dir rasa-pro
+   ```
+   
+   **What to expect**:
+   - Installation will take 2-5 minutes
+   - You'll see progress messages as packages are downloaded and installed
+   - At the end, you should see "Successfully installed rasa-pro-x.x.x" along with a list of dependencies
+
+3. **Verify Installation**
+   
+   Once installation completes, verify Rasa Pro is installed correctly:
+   ```bash
+   rasa --version
+   ```
+   
+   **Expected output**: You should see version information like "Rasa 3.x.x" (no errors).
+   
+   **If you see an error**: The installation may not have completed successfully. Review any error messages from Step 1 and try installing again.
+
+4. **Check Project Structure** *(After installation)*
+   ```bash
+   # Check that project folders exist
+   ls -la domain/
+   ls -la data/
+   ```
+   Confirm:
+   - The `domain/` folder exists
+   - The `data/` folder exists
+
+   ```bash
+   # Check that the following .yml files exist
+   ls -la config.yml credentials.yml endpoints.yml
+   ```
+
+5. **Check Environment Variables**
+
+   **Codio**: Credentials are pre-configured. To verify they're loaded, run:
+   ```bash
+   [ -n "$RASA_LICENSE" ] && echo "RASA_LICENSE is set" || echo "RASA_LICENSE is not set"
+   [ -n "$OPENAI_API_KEY" ] && echo "OPENAI_API_KEY is set" || echo "OPENAI_API_KEY is not set"
+   ```
+   Both should report "is set". If not, ask your instructor.
+   
+   **Local setup**: The .env file should exist in your project root. Run **ls -la .env** to confirm. If it doesn't, create it using the instructions in section 0.1.
+
+**✅ Success Criteria**: Once you can run `rasa --version` successfully and see version information, you're ready to move on to the next exercises. You can then run the assessment for this lab to confirm your setup.
 
 ---
 
@@ -380,136 +461,7 @@ responses:
 
 ---
 
-### 0.4 Project File Structure
-
-Understanding the file structure will help you navigate the codebase and understand how everything fits together.
-
-#### Complete File Tree
-
-```
-level1/
-├── config.yml              # How to build the bot (pipeline, policies)
-├── credentials.yml         # How to connect (REST, Socket.IO)
-├── endpoints.yml           # Where to find actions/LLMs
-├── .env                    # Environment variables (secrets - not committed)
-├── domain/
-│   └── basics.yml          # Bot knowledge base (responses)
-├── data/
-│   ├── basics/             # User-facing flows (conversation scripts)
-│   │   ├── greet.yml
-│   │   ├── help.yml
-│   │   └── contact.yml
-│   └── system/
-│       └── patterns/
-│           └── patterns.yml # System patterns (session start, completed)
-└── models/                 # Generated during training (don't edit)
-```
-
-#### File Purpose Overview
-
-**Configuration Files** (root level):
-- **`config.yml`**: Defines how Rasa builds your bot (which LLM to use, which policies, etc.)
-- **`credentials.yml`**: Defines how the bot connects to chat interfaces
-- **`endpoints.yml`**: Defines where to find custom actions and LLM configurations
-
-**Domain Files** (`domain/`):
-- **`domain/basics.yml`**: The bot's knowledge base - defines all responses the bot can say
-
-**Flow Files** (`data/`):
-- **`data/basics/*.yml`**: User-facing conversation scripts (flows)
-- **`data/system/patterns/patterns.yml`**: System-level behaviors (session start, flow completion)
-
-**Generated Files** (created automatically):
-- **`models/`**: Compiled bot models (created when you run `rasa train`)
-- **`logs/`**: Log files for debugging
-
-#### How Files Work Together
-
-```
-User sends message
-    ↓
-config.yml (defines how to understand it)
-    ↓
-data/*.yml (flows define what to do)
-    ↓
-domain/basics.yml (responses define what to say)
-    ↓
-Bot responds
-```
-
-**Key Relationships**:
-- **Flows** (in `data/`) reference **Responses** (in `domain/`)
-- **Config** tells Rasa how to process everything
-- **System patterns** control conversation lifecycle
-
----
-
-### Lab 0.1: Create Virtual Environment and Install Rasa Pro
-
-**Objective**: Create a virtual environment, install Rasa Pro in it, and verify the installation is successful.
-
-**Important**: This is your first step! You must create a virtual environment and install Rasa Pro before you can proceed with any other exercises.
-
-**Before you start**: Open a terminal in Codio. Run `cd level1` so you are in the `level1` folder. All commands in this lab should be run from there.
-
-#### Steps
-
-1. **Create a Virtual Environment**
-   
-   In the terminal, run:
-   ```bash
-   python3.11 -m venv .venv
-   source .venv/bin/activate
-   ```
-   
-   **What to expect**: Your command prompt should show `(.venv)` at the beginning, indicating the virtual environment is active.
-
-2. **Install Rasa Pro**
-   
-   With the virtual environment activated, run:
-   ```bash
-   pip install --no-cache-dir rasa-pro
-   ```
-   
-   **What to expect**:
-   - Installation will take 2-5 minutes
-   - You'll see progress messages as packages are downloaded and installed
-   - At the end, you should see "Successfully installed rasa-pro-x.x.x" along with a list of dependencies
-
-3. **Verify Installation**
-   
-   Once installation completes, verify Rasa Pro is installed correctly:
-   ```bash
-   rasa --version
-   ```
-   
-   **Expected output**: You should see version information like "Rasa 3.x.x" (no errors).
-   
-   **If you see an error**: The installation may not have completed successfully. Review any error messages from Step 1 and try installing again.
-
-4. **Check Project Structure** *(After installation)*
-   ```bash
-   # Check that project folders exist
-   ls -la domain/
-   ls -la data/
-   ```
-   Confirm:
-   - The `domain/` folder exists
-   - The `data/` folder exists
-   - `config.yml`, `credentials.yml`, and `endpoints.yml` exist in the current directory
-
-5. **Check Environment Variables**
-   ```bash
-   # Check .env file exists
-   ls -la .env
-   ```
-   The `.env` file should exist in `level1`. If it doesn't, you'll create it in a later lab.
-
-**✅ Success Criteria**: Once you can run `rasa --version` successfully and see version information, you're ready to move on to the next exercises. You can then run the assessment for this lab to confirm your setup.
-
----
-
-### 0.5 Getting Help
+### 0.4 Getting Help
 
 **Stuck?** Here are resources:
 
@@ -2873,81 +2825,44 @@ Each lab has a **Step 0.5** section in the "For Codio Team" implementation notes
 
 #### Steps
 
-1. **Open Terminal in Codio**
+1. **Create a Virtual Environment**
    
-   - Click **Tools** → **Terminal** (or press `Ctrl+Shift+` `)
-   - **Expected Result**: Terminal window opens at bottom of screen, showing command prompt
-   - **Verify you're in the project directory**: Run `cd level1` if needed. You should see a prompt like `codio@box-name:~/workspace/level1$` or similar
-
-2. **Create a Virtual Environment**
-   
-   In the terminal, run:
+   In the terminal, first check that Python 3.11 is installed correctly:
+   ```bash
+   python3.11 -V
+   ```
+   Then type:
    ```bash
    python3.11 -m venv .venv
-   ```
-   
-   **What this does**: Creates a new virtual environment in a folder called `.venv` in your project directory.
-   
-   **What to expect**:
-   - Command completes quickly (1-2 seconds)
-   - No error messages
-   - A new `.venv` folder appears in your project (you may need to refresh the file tree to see it)
-   
-   **If you encounter errors**:
-   - Make sure Python 3.11 is available: `python3.11 -V` (should show Python 3.11.x)
-   - Check you're in the level1 directory: `pwd` (should show `/home/codio/workspace/level1` or similar)
-   - If you see "command not found", try `python3 -m venv .venv` instead
-
-3. **Activate the Virtual Environment**
-   
-   In the terminal, run:
-   ```bash
    source .venv/bin/activate
    ```
    
-   **What this does**: Activates the virtual environment so all Python packages you install will go into this isolated environment.
-   
-   **What to expect**:
-   - Your command prompt changes to show `(.venv)` at the beginning
-   - Example: `(.venv) codio@box-name:~/workspace$`
-   - This means the virtual environment is active
-   
-   **✅ Checkpoint**: Your prompt should show `(.venv)`. If it doesn't, the activation didn't work - try the command again.
+   **What to expect**: Your command prompt should show `(.venv)` at the beginning, indicating the virtual environment is active.
 
-4. **Install Rasa Pro**
+2. **Install Rasa Pro**
    
    With the virtual environment activated, run:
    ```bash
    pip install --no-cache-dir rasa-pro
    ```
    
-   **Note**: You can use `pip` (not `python3.11 -m pip`) because the virtual environment is activated.
-   
    **What to expect**:
    - Installation will take 2-5 minutes
    - You'll see progress messages as packages are downloaded and installed
    - At the end, you should see "Successfully installed rasa-pro-x.x.x" along with a list of dependencies
-   
-   **If you encounter errors**:
-   - Make sure the virtual environment is activated (check for `(.venv)` in your prompt)
-   - Check your internet connection
-   - Try upgrading pip first: `pip install --upgrade pip`
-   - Then retry the installation command
 
-5. **Verify Installation**
+3. **Verify Installation**
    
    Once installation completes, verify Rasa Pro is installed correctly:
    ```bash
    rasa --version
    ```
    
-   **Note**: You can use `rasa` (not `python3.11 -m rasa`) because the virtual environment is activated.
-   
    **Expected output**: You should see version information like "Rasa 3.x.x" (no errors).
    
-   **If you see an error**: The installation may not have completed successfully. Review any error messages from Step 4 and try installing again.
+   **If you see an error**: The installation may not have completed successfully. Review any error messages from Step 1 and try installing again.
 
-6. **Check Project Structure** *(After installation)*
+4. **Check Project Structure** *(After installation)*
    ```bash
    # Check that project folders exist
    ls -la domain/
@@ -2956,18 +2871,24 @@ Each lab has a **Step 0.5** section in the "For Codio Team" implementation notes
    Confirm:
    - The `domain/` folder exists
    - The `data/` folder exists
-   - `config.yml`, `credentials.yml`, and `endpoints.yml` exist in the current directory
 
-7. **Check Environment Variables**
    ```bash
-   # Check .env file exists
-   ls -la .env
+   # Check that the following .yml files exist
+   ls -la config.yml credentials.yml endpoints.yml
    ```
-   The `.env` file should exist in `level1`. If it doesn't, you'll create it in a later lab.
 
-**✅ Success Criteria**: Once you can run `rasa --version` successfully (with virtual environment activated) and see version information, you're ready to move on to the next exercises. You can then run the assessment for this lab to confirm your setup.
+5. **Check Environment Variables**
 
-**💡 Remember**: Each time you open a new terminal session, you'll need to activate your virtual environment again with `source .venv/bin/activate`. The virtual environment stays active for the current terminal session.
+   **Codio**: Credentials are pre-configured. To verify they're loaded, run:
+   ```bash
+   [ -n "$RASA_LICENSE" ] && echo "RASA_LICENSE is set" || echo "RASA_LICENSE is not set"
+   [ -n "$OPENAI_API_KEY" ] && echo "OPENAI_API_KEY is set" || echo "OPENAI_API_KEY is not set"
+   ```
+   Both should report "is set". If not, ask your instructor.
+   
+   **Local setup**: The .env file should exist in your project root. Run **ls -la .env** to confirm. If it doesn't, create it using the instructions in section 0.1.
+
+**✅ Success Criteria**: Once you can run `rasa --version` successfully and see version information, you're ready to move on to the next exercises. You can then run the assessment for this lab to confirm your setup.
 
 ⬆️ STOP COPYING HERE ⬆️
 
@@ -3380,6 +3301,18 @@ Notice: The bot provides information but doesn't remember anything or perform an
 - Checking balance needs the account number (memory/slots - Level 3)
 - Processing payment needs code to actually transfer money (actions - Level 2)
 - Remembering preferences needs memory (slots - Level 3)
+
+---
+
+### 1.4 Test Your Knowledge
+
+**Objective**: Assess your understanding of conversational bots and Level 1 bot capabilities.
+
+This section contains multiple choice questions to test your knowledge of:
+- What conversational bots are and how they work
+- Natural Language Understanding (NLU)
+- Level 1 bot capabilities and limitations
+- Real-world use cases for simple bots
 
 ---
 
@@ -4819,6 +4752,33 @@ Flow completes
 
 ---
 
+### Lab 3.1: Exploring Existing Flows
+
+**Objective**: Understand flow structure by examining existing flows.
+
+#### Steps
+
+1. **Navigate to the Data Folder**
+   - Open the `data/basics/` folder in your IDE
+   - You should see files like `greet.yml`, `help.yml`, and `contact.yml`
+
+2. **Examine Flow Structure**
+   - Open `greet.yml` and identify:
+     - The `flows:` key
+     - The flow identifier (`greet:`)
+     - The `name:` field
+     - The `description:` field (notice how it's written!)
+     - The `steps:` section
+
+3. **Compare Flows**
+   - Open `help.yml` and `contact.yml`
+   - Notice they all follow the same structure
+   - Compare their descriptions - how are they different?
+
+**AI Coach**: Ask questions like "Why does every flow need a description?" or "What happens if I remove the description field?"
+
+---
+
 ### 3.2 Flow Structure Deep Dive
 
 Let's examine a real flow from `data/basics/greet.yml`:
@@ -4866,33 +4826,6 @@ flows:
 6. **`- action: utter_greet`**: A single step
    - `action:` indicates this is an action step
    - `utter_greet` is the response to use (must be defined in domain)
-
----
-
-### Lab 3.1: Exploring Existing Flows
-
-**Objective**: Understand flow structure by examining existing flows.
-
-#### Steps
-
-1. **Navigate to the Data Folder**
-   - Open the `data/basics/` folder in your IDE
-   - You should see files like `greet.yml`, `help.yml`, and `contact.yml`
-
-2. **Examine Flow Structure**
-   - Open `greet.yml` and identify:
-     - The `flows:` key
-     - The flow identifier (`greet:`)
-     - The `name:` field
-     - The `description:` field (notice how it's written!)
-     - The `steps:` section
-
-3. **Compare Flows**
-   - Open `help.yml` and `contact.yml`
-   - Notice they all follow the same structure
-   - Compare their descriptions - how are they different?
-
-**AI Coach**: Ask questions like "Why does every flow need a description?" or "What happens if I remove the description field?"
 
 ---
 
@@ -5019,32 +4952,6 @@ Rasa automatically searches the `data/` folder (and subfolders) for `.yml` files
 
 ---
 
-### 3.3 Multiple Steps in a Flow
-
-Flows can have multiple steps, executed in order. This is useful for:
-- Providing context before answering
-- Giving multiple pieces of information
-- Creating multi-part responses
-
-#### Example: Greet Then Help
-
-```yaml
-flows:
-  greet_and_help:
-    name: greet and show help
-    description: Greet the user and then show what the bot can do.
-    steps:
-      - action: utter_greet
-      - action: utter_help
-```
-
-**Execution Order**:
-1. Bot says the greet message
-2. Bot says the help message
-3. Flow completes
-
----
-
 ### Lab 3.3: Multi-Step Flow
 
 **Objective**: Modify `greet.yml` to have two steps.
@@ -5090,7 +4997,7 @@ This creates a more helpful greeting experience!
 
 ---
 
-### 3.4 Flow Descriptions and LLM Understanding
+### 3.3 Flow Descriptions and LLM Understanding
 
 The `description` field is **critical** because the LLM uses it to match user messages to flows.
 
@@ -5234,6 +5141,18 @@ Before submitting, verify:
 - ✅ File structure matches the template (flows: at top level, proper indentation)
 
 **AI Coach**: Ask "How do I write a good flow description?" or "What makes a description too vague?"
+
+---
+
+### 3.5 Test Your Knowledge
+
+**Objective**: Assess your understanding of flows and flow descriptions.
+
+This section contains multiple choice questions to test your knowledge of:
+- What flows are and how they work
+- Flow structure and components
+- Multi-step flows
+- Flow descriptions and LLM matching
 
 ---
 
@@ -7217,14 +7136,17 @@ Before training, ensure:
 3. ✅ All YAML files have correct syntax
 4. ✅ All responses referenced in flows exist in domain
 
+**For Codio Students**: Credentials are pre-configured (you verified them in Lab 0.1 with the RASA_LICENSE/OPENAI_API_KEY checks). Rasa loads them when you run commands from the `level1/` directory—no separate "load" step is needed.
+
 #### Training Command
 
 ```bash
-# In Codio terminal:
+# In Codio terminal (run from level1/ where your .env and config live):
+cd level1
 python -m rasa train
 ```
 
-**For Codio Students**: Make sure your virtual environment is activated (you should see `(.venv)` in your prompt). If not, run `source .venv/bin/activate` first, then run the training command.
+**For Codio Students**: Make sure your virtual environment is activated (you should see `(.venv)` in your prompt). If not, run `source .venv/bin/activate` first. Run the training command from the `level1/` folder so Rasa can find your `.env` file (same as in Lab 0.1).
 
 #### What You'll See
 
@@ -7444,12 +7366,13 @@ Rasa needs your license and API keys, but it can't find them.
 - The `.env` file has the wrong format
 - The environment variables have placeholder values
 
-**For Codio Students**: The `.env` file should be pre-configured. If you see this error, check that the `.env` file exists and has real values (not placeholders).
+**For Codio Students**: Credentials are pre-configured (Lab 0.1). If you see this error, run the verification commands from Lab 0.1 step 5; if they report "is not set", ask your instructor. Otherwise ensure you run training from the `level1/` folder.
 
 **How to fix it:**
 
-1. **Check if `.env` file exists:**
-   - Should be in the root of your project folder
+1. **Check if `.env` file exists** (local setup only; on Codio, credentials are pre-configured):
+   - On Codio: if RASA_LICENSE/OPENAI_API_KEY are not set, ask your instructor
+   - Local: `.env` should be in the root of your project folder (or in `level1/` if that’s your project root)
    - Should contain: `RASA_LICENSE=...` and `OPENAI_API_KEY=...`
 
 2. **Verify the format:**
