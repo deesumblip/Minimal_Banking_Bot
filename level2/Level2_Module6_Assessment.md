@@ -4,7 +4,7 @@
 
 This assessment verifies that students can successfully train their bot with actions and that the training completes without errors.
 
-## Assessment Type
+### Assessment Type
 
 **Standard Code Test** (Bash script)
 
@@ -19,7 +19,6 @@ Save the grader script at:
 
 ```bash
 #!/bin/bash
-set -e
 cd /home/codio/workspace/level2
 
 score=0
@@ -33,13 +32,11 @@ echo "Check 0: Verifying virtual environment..."
 if [ ! -d ".venv" ]; then
     echo "❌ Check 0: FAILED - Virtual environment (.venv) not found (0 points)"
     echo "Hint: Create virtual environment with 'python3.11 -m venv .venv'"
-    exit 1
+else
+    source .venv/bin/activate 2>/dev/null || true
+    echo "✅ Check 0: PASSED - Virtual environment found and activated (2 points)"
+    score=$((score + 2))
 fi
-
-# Activate venv for checks
-source .venv/bin/activate
-echo "✅ Check 0: PASSED - Virtual environment found and activated (2 points)"
-score=$((score + 2))
 echo ""
 
 # Check 1: Model file exists (2 points)
@@ -50,7 +47,6 @@ if [ -d "models" ] && [ -n "$(ls -A models/*.tar.gz 2>/dev/null)" ]; then
 else
     echo "❌ Check 1: FAILED - No model file found in models/ directory (0 points)"
     echo "Hint: Run 'python -m rasa train' (with venv activated) to create the model"
-    exit 1
 fi
 echo ""
 
@@ -59,11 +55,8 @@ echo "Check 2: Verifying model is recent..."
 model_file=$(ls -t models/*.tar.gz 2>/dev/null | head -1)
 if [ -z "$model_file" ]; then
     echo "❌ Check 2: FAILED - No model files found (0 points)"
-    exit 1
-fi
-
-# Check model is recent (created in last 10 minutes)
-if [ -f "$model_file" ]; then
+    echo "Hint: Run 'python -m rasa train' and wait for it to finish"
+elif [ -f "$model_file" ]; then
     model_age=$(( $(date +%s) - $(stat -c %Y "$model_file") ))
     if [ $model_age -lt 600 ]; then
         echo "✅ Check 2: PASSED - Model file is recent (training completed within 10 minutes) (3 points)"
@@ -87,7 +80,7 @@ if [ -f "logs/logs.out" ]; then
     fi
 else
     echo "✅ Check 3: PASSED - No log file found (training may not have logged) (2 points)"
-    score=$((score + 2))  # Give points if no log file (training might not have logged)
+    score=$((score + 2))
 fi
 echo ""
 
@@ -98,24 +91,24 @@ if [ -f "actions/action_bank_hours.py" ]; then
     score=$((score + 1))
 else
     echo "❌ Check 4: FAILED - action_bank_hours.py not found (0 points)"
-    echo "Hint: Ensure actions/action_bank_hours.py exists"
-    exit 1
+    echo "Hint: Ensure actions/action_bank_hours.py exists (complete Lab 3.1 first)"
 fi
 echo ""
 
 # Final summary
 echo "=========================================="
-echo "✅ PASS: Training verification complete! Score: $score/$max_score"
+if [ $score -eq $max_score ]; then
+    echo "✅ PASS: Training verification complete! Score: $score/$max_score"
+else
+    echo "❌ FAIL: Score $score/$max_score - Review the failed checks above and try again."
+fi
 echo "=========================================="
 echo ""
-echo "Summary of checks:"
-echo "✓ Check 0: Virtual environment exists and activated"
-echo "✓ Check 1: Model file created"
-echo "✓ Check 2: Model file is recent"
-echo "✓ Check 3: No critical errors detected"
-echo "✓ Check 4: Action file exists"
-echo ""
-echo "✅ PASS: Training verification complete! Score: $score/$max_score"
+echo "Summary: Check 0 (venv) | Check 1 (model exists) | Check 2 (model recent) | Check 3 (no errors) | Check 4 (action file)"
+echo "Score: $score/$max_score"
+if [ $score -lt $max_score ]; then
+    exit 1
+fi
 ```
 
 ## Assessment Configuration

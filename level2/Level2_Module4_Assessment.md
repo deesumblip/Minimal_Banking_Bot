@@ -4,7 +4,7 @@
 
 This assessment verifies that students can register actions in the domain file with correct YAML syntax and matching action names.
 
-## Assessment Type
+### Assessment Type
 
 **Standard Code Test** (Bash script)
 
@@ -19,7 +19,6 @@ Save the grader script at:
 
 ```bash
 #!/bin/bash
-set -e
 cd /home/codio/workspace/level2
 
 score=0
@@ -33,13 +32,11 @@ echo "Check 0: Verifying virtual environment..."
 if [ ! -d ".venv" ]; then
     echo "❌ Check 0: FAILED - Virtual environment (.venv) not found (0 points)"
     echo "Hint: Create virtual environment with 'python3.11 -m venv .venv'"
-    exit 1
+else
+    source .venv/bin/activate 2>/dev/null || true
+    echo "✅ Check 0: PASSED - Virtual environment found and activated (1 point)"
+    score=$((score + 1))
 fi
-
-# Activate venv for checks
-source .venv/bin/activate
-echo "✅ Check 0: PASSED - Virtual environment found and activated (1 point)"
-score=$((score + 1))
 echo ""
 
 # Check 1: domain/basics.yml exists (1 point)
@@ -47,29 +44,27 @@ echo "Check 1: Verifying domain file exists..."
 if [ ! -f "domain/basics.yml" ]; then
     echo "❌ Check 1: FAILED - domain/basics.yml not found (0 points)"
     echo "Hint: Ensure domain/basics.yml exists"
-    exit 1
+else
+    echo "✅ Check 1: PASSED - domain/basics.yml exists (1 point)"
+    score=$((score + 1))
 fi
-echo "✅ Check 1: PASSED - domain/basics.yml exists (1 point)"
-score=$((score + 1))
 echo ""
 
 # Check 2: actions: section exists (2 points)
 echo "Check 2: Verifying actions: section exists..."
-if grep -q "^actions:" domain/basics.yml; then
+if [ -f "domain/basics.yml" ] && grep -q "^actions:" domain/basics.yml 2>/dev/null; then
     echo "✅ Check 2: PASSED - actions: section found (2 points)"
     score=$((score + 2))
 else
     echo "❌ Check 2: FAILED - actions: section not found (0 points)"
     echo "Hint: Add 'actions:' section to domain/basics.yml"
-    exit 1
 fi
 echo ""
 
 # Check 3: action_bank_hours is registered (2 points)
 echo "Check 3: Verifying action_bank_hours is registered..."
-if grep -q "action_bank_hours" domain/basics.yml; then
-    # Check it's under actions: section (look for pattern)
-    if awk '/^actions:/,/^[a-z]/ {if (/action_bank_hours/) found=1} END {exit !found}' domain/basics.yml; then
+if [ -f "domain/basics.yml" ] && grep -q "action_bank_hours" domain/basics.yml 2>/dev/null; then
+    if awk '/^actions:/,/^[a-z]/ {if (/action_bank_hours/) found=1} END {exit !found}' domain/basics.yml 2>/dev/null; then
         echo "✅ Check 3: PASSED - action_bank_hours is registered under actions: (2 points)"
         score=$((score + 2))
     else
@@ -79,14 +74,12 @@ if grep -q "action_bank_hours" domain/basics.yml; then
 else
     echo "❌ Check 3: FAILED - action_bank_hours not found in domain file (0 points)"
     echo "Hint: Add '- action_bank_hours' under the actions: section"
-    exit 1
 fi
 echo ""
 
 # Check 4: Correct YAML syntax (indentation and dash) (2 points)
 echo "Check 4: Verifying YAML syntax..."
-# Check for proper list format (dash followed by space)
-if grep -q "^- action_bank_hours" domain/basics.yml || grep -q "^- action_bank_hours" domain/basics.yml; then
+if [ -f "domain/basics.yml" ] && (grep -q "^- action_bank_hours" domain/basics.yml 2>/dev/null || grep -q "^- action_bank_hours" domain/basics.yml 2>/dev/null); then
     echo "✅ Check 4: PASSED - Correct YAML list syntax (dash format) (2 points)"
     score=$((score + 2))
 else
@@ -97,30 +90,29 @@ echo ""
 
 # Check 5: Domain file is valid YAML (2 points)
 echo "Check 5: Verifying domain file is valid YAML..."
-if python3 -c "import yaml; yaml.safe_load(open('domain/basics.yml'))" 2>/dev/null; then
+if [ -f "domain/basics.yml" ] && python3 -c "import yaml; yaml.safe_load(open('domain/basics.yml'))" 2>/dev/null; then
     echo "✅ Check 5: PASSED - domain/basics.yml is valid YAML (2 points)"
     score=$((score + 2))
 else
-    echo "❌ Check 5: FAILED - domain/basics.yml has YAML syntax errors (0 points)"
+    echo "❌ Check 5: FAILED - domain/basics.yml has YAML syntax errors or file missing (0 points)"
     echo "Hint: Check YAML syntax (indentation, colons, dashes)"
-    exit 1
 fi
 echo ""
 
 # Final summary
 echo "=========================================="
-echo "✅ PASS: Action registration verification complete! Score: $score/$max_score"
+if [ $score -eq $max_score ]; then
+    echo "✅ PASS: Action registration verification complete! Score: $score/$max_score"
+else
+    echo "❌ FAIL: Score $score/$max_score - Review the failed checks above and try again."
+fi
 echo "=========================================="
 echo ""
-echo "Summary of checks:"
-echo "✓ Check 0: Virtual environment exists and activated"
-echo "✓ Check 1: domain/basics.yml exists"
-echo "✓ Check 2: actions: section exists"
-echo "✓ Check 3: action_bank_hours is registered"
-echo "✓ Check 4: Correct YAML syntax"
-echo "✓ Check 5: Domain file is valid YAML"
-echo ""
-echo "✅ PASS: Action registration verification complete! Score: $score/$max_score"
+echo "Summary: Check 0 (venv) | Check 1 (domain file) | Check 2 (actions:) | Check 3 (registered) | Check 4 (syntax) | Check 5 (valid YAML)"
+echo "Score: $score/$max_score"
+if [ $score -lt $max_score ]; then
+    exit 1
+fi
 ```
 
 ## Assessment Configuration

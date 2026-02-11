@@ -4,7 +4,7 @@
 
 This assessment verifies that students can create a flow file that uses an action, with correct YAML structure and action reference.
 
-## Assessment Type
+### Assessment Type
 
 **Standard Code Test** (Bash script)
 
@@ -19,7 +19,6 @@ Save the grader script at:
 
 ```bash
 #!/bin/bash
-set -e
 cd /home/codio/workspace/level2
 
 score=0
@@ -33,13 +32,11 @@ echo "Check 0: Verifying virtual environment..."
 if [ ! -d ".venv" ]; then
     echo "❌ Check 0: FAILED - Virtual environment (.venv) not found (0 points)"
     echo "Hint: Create virtual environment with 'python3.11 -m venv .venv'"
-    exit 1
+else
+    source .venv/bin/activate 2>/dev/null || true
+    echo "✅ Check 0: PASSED - Virtual environment found and activated (1 point)"
+    score=$((score + 1))
 fi
-
-# Activate venv for checks
-source .venv/bin/activate
-echo "✅ Check 0: PASSED - Virtual environment found and activated (1 point)"
-score=$((score + 1))
 echo ""
 
 # Check 1: hours.yml file exists in data/basics/ (2 points)
@@ -47,39 +44,37 @@ echo "Check 1: Verifying hours.yml flow file exists..."
 if [ ! -f "data/basics/hours.yml" ]; then
     echo "❌ Check 1: FAILED - data/basics/hours.yml not found (0 points)"
     echo "Hint: Create hours.yml in the data/basics/ folder"
-    exit 1
+else
+    echo "✅ Check 1: PASSED - hours.yml file exists (2 points)"
+    score=$((score + 2))
 fi
-echo "✅ Check 1: PASSED - hours.yml file exists (2 points)"
-score=$((score + 2))
 echo ""
 
 # Check 2: Flow file has flows: section (1 point)
 echo "Check 2: Verifying flows: section exists..."
-if grep -q "^flows:" data/basics/hours.yml; then
+if [ -f "data/basics/hours.yml" ] && grep -q "^flows:" data/basics/hours.yml 2>/dev/null; then
     echo "✅ Check 2: PASSED - flows: section found (1 point)"
     score=$((score + 1))
 else
     echo "❌ Check 2: FAILED - flows: section not found (0 points)"
     echo "Hint: Add 'flows:' section to hours.yml"
-    exit 1
 fi
 echo ""
 
 # Check 3: hours flow exists (1 point)
 echo "Check 3: Verifying hours flow exists..."
-if grep -q "^  hours:" data/basics/hours.yml; then
+if [ -f "data/basics/hours.yml" ] && grep -q "^  hours:" data/basics/hours.yml 2>/dev/null; then
     echo "✅ Check 3: PASSED - hours flow found (1 point)"
     score=$((score + 1))
 else
     echo "❌ Check 3: FAILED - hours flow not found (0 points)"
     echo "Hint: Add 'hours:' flow under flows: section"
-    exit 1
 fi
 echo ""
 
 # Check 4: Flow has name and description (2 points)
 echo "Check 4: Verifying flow has name and description..."
-if grep -q "name:" data/basics/hours.yml && grep -q "description:" data/basics/hours.yml; then
+if [ -f "data/basics/hours.yml" ] && grep -q "name:" data/basics/hours.yml 2>/dev/null && grep -q "description:" data/basics/hours.yml 2>/dev/null; then
     echo "✅ Check 4: PASSED - Flow has name and description (2 points)"
     score=$((score + 2))
 else
@@ -90,21 +85,19 @@ echo ""
 
 # Check 5: Flow has steps: section (1 point)
 echo "Check 5: Verifying flow has steps: section..."
-if grep -q "steps:" data/basics/hours.yml; then
+if [ -f "data/basics/hours.yml" ] && grep -q "steps:" data/basics/hours.yml 2>/dev/null; then
     echo "✅ Check 5: PASSED - steps: section found (1 point)"
     score=$((score + 1))
 else
     echo "❌ Check 5: FAILED - steps: section not found (0 points)"
     echo "Hint: Add 'steps:' section to the hours flow"
-    exit 1
 fi
 echo ""
 
 # Check 6: Flow uses action_bank_hours (2 points)
 echo "Check 6: Verifying flow uses action_bank_hours..."
-if grep -q "action_bank_hours" data/basics/hours.yml; then
-    # Check it's in the steps section
-    if awk '/steps:/,/^[a-z]/ {if (/action_bank_hours/) found=1} END {exit !found}' data/basics/hours.yml; then
+if [ -f "data/basics/hours.yml" ] && grep -q "action_bank_hours" data/basics/hours.yml 2>/dev/null; then
+    if awk '/steps:/,/^[a-z]/ {if (/action_bank_hours/) found=1} END {exit !found}' data/basics/hours.yml 2>/dev/null; then
         echo "✅ Check 6: PASSED - action_bank_hours is used in steps (2 points)"
         score=$((score + 2))
     else
@@ -114,25 +107,23 @@ if grep -q "action_bank_hours" data/basics/hours.yml; then
 else
     echo "❌ Check 6: FAILED - action_bank_hours not found in flow (0 points)"
     echo "Hint: Add '- action: action_bank_hours' under steps:"
-    exit 1
 fi
 echo ""
 
 # Final summary
 echo "=========================================="
-echo "✅ PASS: Flow creation verification complete! Score: $score/$max_score"
+if [ $score -eq $max_score ]; then
+    echo "✅ PASS: Flow creation verification complete! Score: $score/$max_score"
+else
+    echo "❌ FAIL: Score $score/$max_score - Review the failed checks above and try again."
+fi
 echo "=========================================="
 echo ""
-echo "Summary of checks:"
-echo "✓ Check 0: Virtual environment exists and activated"
-echo "✓ Check 1: hours.yml file exists"
-echo "✓ Check 2: flows: section exists"
-echo "✓ Check 3: hours flow exists"
-echo "✓ Check 4: Flow has name and description"
-echo "✓ Check 5: Flow has steps: section"
-echo "✓ Check 6: Flow uses action_bank_hours"
-echo ""
-echo "✅ PASS: Flow creation verification complete! Score: $score/$max_score"
+echo "Summary: Check 0 (venv) | Check 1 (hours.yml) | Check 2 (flows:) | Check 3 (hours) | Check 4 (name/description) | Check 5 (steps) | Check 6 (action_bank_hours)"
+echo "Score: $score/$max_score"
+if [ $score -lt $max_score ]; then
+    exit 1
+fi
 ```
 
 ## Assessment Configuration

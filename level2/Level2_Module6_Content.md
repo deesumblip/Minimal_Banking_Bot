@@ -8,7 +8,7 @@ Training with actions is the same as Level 1, but Rasa now also processes your a
 
 **In Codio**:
 ```bash
-cd level1
+cd level2
 source .venv/bin/activate
 python -m rasa train
 ```
