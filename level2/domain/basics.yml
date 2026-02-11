@@ -28,6 +28,11 @@ responses:
       metadata:
         rephrase: True
 
+  utter_goodbye:
+    - text: "Goodbye! Have a great day!"
+      metadata:
+        rephrase: True
+
 actions:
   # List all custom actions here
   # The name must match the class name in actions/*.py

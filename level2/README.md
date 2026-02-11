@@ -14,8 +14,8 @@
 ⚠️ **Important**: This level builds on your Level 1 banking bot. You don't start from scratch!
 
 **What stays the same:**
-- All responses from Level 1 (`utter_greet`, `utter_help`, `utter_contact`)
-- All flows from Level 1 (`greet`, `help`, `contact`)
+- All responses from Level 1 (`utter_greet`, `utter_help`, `utter_contact`, `utter_goodbye`)
+- All flows from Level 1 (`greet`, `help`, `contact`, `goodbye`)
 - All configuration files (`config.yml`, `credentials.yml`, `endpoints.yml`)
 
 **What this level adds:**
@@ -78,7 +78,7 @@
 ### New Flow (`data/basics/hours.yml`)
 - Uses `action_bank_hours` instead of `utter_*`
 - Demonstrates calling custom Python code
-- All Level 1 flows (greet, help, contact) remain unchanged
+- All Level 1 flows (greet, help, contact, goodbye) remain unchanged
 
 ## Key Concepts
 
