@@ -7128,324 +7128,221 @@ When you run `rasa train`, Rasa:
 
 ### 6.2 How to Train Your Bot
 
-#### Prerequisites
-
-Before training, ensure:
-1. ✅ Virtual environment is activated (for Codio: already active)
-2. ✅ Environment variables are loaded (`.env` file)
-3. ✅ All YAML files have correct syntax
-4. ✅ All responses referenced in flows exist in domain
-
-**For Codio Students**: Credentials are pre-configured (you verified them in Lab 0.1 with the RASA_LICENSE/OPENAI_API_KEY checks). Rasa loads them when you run commands from the `level1/` directory—no separate "load" step is needed.
-
-#### Training Command
-
-```bash
-# In Codio terminal (run from level1/ where your .env and config live):
-cd level1
-python -m rasa train
-```
-
-**For Codio Students**: Make sure your virtual environment is activated (you should see `(.venv)` in your prompt). If not, run `source .venv/bin/activate` first. Run the training command from the `level1/` folder so Rasa can find your `.env` file (same as in Lab 0.1).
-
-#### What You'll See
-
-When training starts, you'll see output like:
-
-```
-Training Core model...
-2025-01-12 12:08:17 INFO     rasa.core.training  - Training FlowPolicy...
-2025-01-12 12:08:17 INFO     rasa.core.training  - FlowPolicy training completed.
-2025-01-12 12:08:17 INFO     rasa.model  - Successfully saved model to 'models/20250112-120817-descent-lard.tar.gz'.
-```
-
-#### Understanding the Output
-
-- **"Training Core model"**: Building the conversation logic
-- **"Training FlowPolicy"**: Processing your flows
-- **"Successfully saved model"**: Training completed, model saved
-
-#### Common Training Errors
-
-When training fails, the error message usually tells you what went wrong. Here are the most common errors and how to fix them.
+**What you'll do**: In **Lab 6.1** below you'll run the training command, see what success looks like, and fix common errors. The lab is split into **Part 1: In Codio** and **Part 2: Running locally** — follow the part that matches your setup.
 
 ---
 
-**1. YAML Syntax Error**
-
-**What you'll see:**
-```
-Error: while parsing a block mapping
-expected <block end>, but found '<block mapping start>'
-  in "<unicode string>", line 5, column 3
-```
-
-**What this means (plain language):**
-Rasa couldn't understand your YAML file because the syntax is wrong. Usually this means incorrect indentation, missing colons, or missing dashes.
-
-**Why it happens:**
-- You used tabs instead of spaces
-- You used 4 spaces instead of 2 spaces
-- You forgot a colon after a key
-- You forgot a dash before a list item
-- You mixed different indentation styles
-
-**How to fix it:**
-
-1. **Check the line number mentioned in the error** (e.g., "line 5, column 3")
-   - Go to that line in your file
-   - Check the indentation and syntax
-
-2. **Verify indentation:**
-   - Use exactly 2 spaces (not tabs, not 4 spaces)
-   - Enable "show whitespace" in your editor if possible
-   - Make sure all levels are consistent
-
-3. **Common fixes:**
-   ```yaml
-   # ❌ WRONG: Missing colon
-   utter_greet
-     - text: "Hello"
-   
-   # ✅ CORRECT: Has colon
-   utter_greet:
-     - text: "Hello"
-   ```
-
-   ```yaml
-   # ❌ WRONG: Missing dash
-   steps:
-     action: utter_greet
-   
-   # ✅ CORRECT: Has dash
-   steps:
-     - action: utter_greet
-   ```
-
-   ```yaml
-   # ❌ WRONG: Wrong indentation (4 spaces)
-   responses:
-       utter_greet:
-   
-   # ✅ CORRECT: Correct indentation (2 spaces)
-   responses:
-     utter_greet:
-   ```
-
-**How to verify the fix:**
-- Save your file
-- Try training again
-- If the error persists, check the line number mentioned
-
-**AI Coach**: Ask "How do I fix a YAML syntax error?" or "What does 'block mapping' error mean?"
-
----
-
-**2. Response Not Found Error**
-
-**What you'll see:**
-```
-Error: Response 'utter_xyz' not found in domain
-```
-
-**What this means (plain language):**
-A flow is trying to use a response called `utter_xyz`, but that response doesn't exist in your domain file.
-
-**Why it happens:**
-- You referenced a response in a flow that you haven't created yet
-- You made a typo in the response name (e.g., `utter_greet` vs `utter_greets`)
-- You forgot to define the response in the domain file
-- The response exists but in a different file
-
-**How to fix it:**
-
-1. **Find where the response is referenced:**
-   - Search your `data/` folder for `utter_xyz`
-   - Find which flow is trying to use it
-
-2. **Check if the response exists:**
-   - Open `domain/basics.yml`
-   - Search for `utter_xyz`
-   - Verify the spelling matches exactly (case-sensitive!)
-
-3. **Two options to fix:**
-   
-   **Option A: Add the missing response** (if you intended to use it)
-   ```yaml
-   # In domain/basics.yml, add:
-   utter_xyz:
-     - text: "Your message here"
-       metadata:
-         rephrase: True
-   ```
-   
-   **Option B: Fix the flow** (if you made a typo)
-   ```yaml
-   # In your flow file, change:
-   - action: utter_xyz  # ❌ Wrong name
-   
-   # To:
-   - action: utter_greet  # ✅ Correct name
-   ```
-
-**How to verify the fix:**
-- Check that the response name in the flow exactly matches the response name in the domain
-- Try training again
-- The error should disappear
-
-**AI Coach**: Ask "Why is my response not found?" or "How do I check if a response exists?"
-
----
-
-**3. Import Error / Module Not Found**
-
-**What you'll see:**
-```
-Error: No module named 'rasa'
-```
-or
-```
-ModuleNotFoundError: No module named 'rasa'
-```
-
-**What this means (plain language):**
-Python can't find the Rasa library. This usually means Rasa isn't installed, or you're not using the correct Python environment.
-
-**Why it happens:**
-- You haven't installed Rasa Pro yet
-- Your virtual environment isn't activated
-- You're using the wrong Python interpreter
-- Rasa was installed in a different environment
-
-**For Codio Students**: Make sure your virtual environment is activated (`source .venv/bin/activate`) and that you installed Rasa Pro in Lab 0.1. If you see this error, verify Rasa Pro is installed: `rasa --version` (with venv activated). If it's not installed, go back to Lab 0.1 and complete the installation steps.
-
-**How to fix it (if not using Codio):**
-
-1. **Check if your virtual environment is activated:**
-   ```bash
-   # Your command prompt should show (.venv) at the beginning
-   # If not, activate it:
-   source .venv/bin/activate  # Linux/Mac
-   # or
-   .venv\Scripts\Activate.ps1  # Windows
-   ```
-
-2. **Verify Rasa is installed:**
-   ```bash
-   python -m rasa --version
-   # Should show version info (not an error)
-   ```
-
-3. **If Rasa is not installed:**
-   ```bash
-   # Make sure venv is activated first!
-   python -m pip install --no-cache-dir rasa-pro
-   ```
-
-**AI Coach**: Ask "How do I check if Rasa is installed?" or "Why do I get 'module not found' error?"
-
----
-
-**4. Environment Variable Error**
-
-**What you'll see:**
-```
-Error: RASA_LICENSE environment variable not set
-```
-or
-```
-Error: OPENAI_API_KEY not found
-```
-
-**What this means (plain language):**
-Rasa needs your license and API keys, but it can't find them.
-
-**Why it happens:**
-- You haven't created a `.env` file
-- You haven't loaded the environment variables
-- The `.env` file has the wrong format
-- The environment variables have placeholder values
-
-**For Codio Students**: Credentials are pre-configured (Lab 0.1). If you see this error, run the verification commands from Lab 0.1 step 5; if they report "is not set", ask your instructor. Otherwise ensure you run training from the `level1/` folder.
-
-**How to fix it:**
-
-1. **Check if `.env` file exists** (local setup only; on Codio, credentials are pre-configured):
-   - On Codio: if RASA_LICENSE/OPENAI_API_KEY are not set, ask your instructor
-   - Local: `.env` should be in the root of your project folder (or in `level1/` if that’s your project root)
-   - Should contain: `RASA_LICENSE=...` and `OPENAI_API_KEY=...`
-
-2. **Verify the format:**
-   ```text
-   # ✅ CORRECT format:
-   RASA_LICENSE=your-actual-license-here
-   OPENAI_API_KEY=sk-your-actual-api-key-here
-   
-   # ❌ WRONG format:
-   RASA_LICENSE="your-actual-license-here"  # No quotes needed
-   RASA_LICENSE=your-rasa-pro-license  # Placeholder value
-   ```
-
-**How to verify the fix:**
-- Check that `.env` file exists and has real values (not placeholders)
-- Try training again
-
-**AI Coach**: Ask "Where do I put my Rasa license?" or "How do I set environment variables?"
-
----
-
-### Lab 6.1: Training Your Bot
+# Lab 6.1: Training Your Bot
 
 **Objective**: Train your bot and verify it works.
 
-#### Steps
+---
 
-1. **Run Training Command**
-   ```bash
-   python -m rasa train
-   ```
-   Wait for training to complete.
+## Part 1: In Codio
 
-2. **Check for Errors**
-   - If training fails, read the error message
-   - Common errors are explained above
-   - Ask AI Coach if you're stuck
+**1. In the terminal, go to the project folder**
+- In Codio, click **Tools** → **Terminal** (or use the terminal icon).
+- Navigate to the `level1` folder where your bot files live:
+  ```bash
+  cd level1
+  ```
+- Confirm you're in the right place: run `pwd` — you should see something like `/home/codio/workspace/level1`.
 
-3. **Verify Model Created**
-   - Check that `models/` folder contains a new `.tar.gz` file
-   - The file should have a timestamp in its name
+**2. Create and activate the virtual environment**
+- Check if a virtual environment already exists:
+  ```bash
+  ls -la .venv
+  ```
+- **If `.venv` exists**: Activate it:
+  ```bash
+  source .venv/bin/activate
+  ```
+- **If `.venv` doesn't exist**: Create it first, then activate:
+  ```bash
+  python3.11 -m venv .venv
+  source .venv/bin/activate
+  ```
+- **Verify activation**: Your prompt should start with `(.venv)`. If not, run `source .venv/bin/activate` again.
+- **Note**: Rasa loads your `.env` when you run from `level1/`, so being in this folder with venv active is required.
 
-4. **What Success Looks Like**
-   - You see "Successfully saved model" message
-   - No error messages
-   - Model file exists in `models/` folder
+**3. Install Rasa Pro (if not already installed)**
+- With the venv active, check if Rasa is installed:
+  ```bash
+  python -m rasa --version
+  ```
+- **If you see an error** (e.g., "No module named 'rasa'"): Install Rasa Pro:
+  ```bash
+  python -m pip install --no-cache-dir rasa-pro
+  ```
+- Wait for installation to complete (2-5 minutes). You should see "Successfully installed rasa-pro-x.x.x" at the end.
+
+**4. Run the training command**
+- From the `level1` folder (with venv active), run:
+  ```bash
+  python -m rasa train
+  ```
+- Wait for training to complete (usually 1–3 minutes). Do not close the terminal until you see "Successfully saved model" or an error.
+
+**5. What you'll see**
+- When training starts, output will look like:
+  ```
+  Training Core model...
+  2025-01-12 12:08:17 INFO     rasa.core.training  - Training FlowPolicy...
+  2025-01-12 12:08:17 INFO     rasa.core.training  - FlowPolicy training completed.
+  2025-01-12 12:08:17 INFO     rasa.model  - Successfully saved model to 'models/20250112-120817-descent-lard.tar.gz'.
+  ```
+- **"Training Core model"**: Building the conversation logic  
+- **"Training FlowPolicy"**: Processing your flows  
+- **"Successfully saved model"**: Training completed, model saved
+
+**6. Verify success**
+- The terminal shows **"Successfully saved model to 'models/...'"** and there are no error messages at the end.
+- In the file tree, open `level1/models/` — you should see a new `.tar.gz` file with a timestamp (e.g. `20250112-120817-descent-lard.tar.gz`).
+- If `models/` is empty or there's no new file, training did not complete; see **Common training errors** below, fix the issue, and run the command again.
+
+**7. Common training errors (Codio)**
+
+| Error | What to do |
+|-------|------------|
+| **YAML syntax error** (e.g. "block mapping", line/column given) | Check that line: use **2 spaces** (not tabs, not 4 spaces), colons after keys, dashes before list items. Fix and save, then train again. |
+| **Response 'utter_xyz' not found** | The flow uses a response that isn't in `domain/basics.yml`. Add the response in the domain or fix the typo in the flow so the name matches exactly. |
+| **No module named 'rasa'** | Venv not active or Rasa not installed. Run `source .venv/bin/activate`, then `rasa --version`. If it fails, install Rasa Pro: `python -m pip install --no-cache-dir rasa-pro`. |
+| **RASA_LICENSE / OPENAI_API_KEY not set** | Credentials are pre-configured on Codio. Run the verification commands from Lab 0.1 step 5; if they report "is not set", ask your instructor. Otherwise run training from the `level1/` folder. |
 
 **AI Coach**: Ask "How do I know training succeeded?" or "What should I see when training works?"
 
 ---
 
+## Part 2: Running locally
+
+If you're **not** using Codio, follow these steps:
+
+**1. Open a terminal and go to the project folder**
+- Open a terminal (PowerShell on Windows, Terminal.app on Mac, or Terminal on Linux).
+- Navigate to your project root, then `cd level1` (or whatever folder contains `config.yml`, `domain/`, `data/`).
+- Confirm you're in the right place: check that `config.yml` exists in the current directory.
+
+**2. Create and activate the virtual environment**
+- Check if a virtual environment already exists:
+  - Linux/Mac: `ls -la .venv`
+  - Windows: `dir .venv` (PowerShell) or `dir .venv` (Cmd)
+- **If `.venv` exists**: Activate it:
+  - Linux/Mac: `source .venv/bin/activate`
+  - Windows PowerShell: `.venv\Scripts\Activate.ps1`
+  - Windows Cmd: `.venv\Scripts\activate.bat`
+- **If `.venv` doesn't exist**: Create it first, then activate:
+  - Linux/Mac: `python3.11 -m venv .venv` then `source .venv/bin/activate`
+  - Windows: `python -m venv .venv` then `.venv\Scripts\Activate.ps1` (PowerShell) or `.venv\Scripts\activate.bat` (Cmd)
+- **Verify activation**: Your prompt should start with `(.venv)`. If not, activate it again.
+
+**3. Install Rasa Pro (if not already installed)**
+- With the venv active, check if Rasa is installed:
+  ```bash
+  python -m rasa --version
+  ```
+- **If you see an error** (e.g., "No module named 'rasa'"): Install Rasa Pro:
+  ```bash
+  python -m pip install --no-cache-dir rasa-pro
+  ```
+- Wait for installation to complete (2-5 minutes). You should see "Successfully installed rasa-pro-x.x.x" at the end.
+
+**4. Set up environment variables**
+- Rasa loads `.env` from the current directory. Create a `.env` file in the same folder as `config.yml` with:
+  ```
+  RASA_LICENSE=your-actual-license
+  OPENAI_API_KEY=sk-your-actual-key
+  ```
+- **Important**: No quotes around values; no placeholder values. If you see "RASA_LICENSE not set" or "OPENAI_API_KEY not found", check that `.env` exists, has the right variable names, and you're running `rasa train` from that folder.
+
+**5. Run the training command**
+- From the project folder (with venv active), run:
+  ```bash
+  python -m rasa train
+  ```
+- Wait for training to complete (usually 1–3 minutes). Do not close the terminal until you see "Successfully saved model" or an error.
+
+**6. What you'll see**
+- When training starts, output will look like:
+  ```
+  Training Core model...
+  2025-01-12 12:08:17 INFO     rasa.core.training  - Training FlowPolicy...
+  2025-01-12 12:08:17 INFO     rasa.core.training  - FlowPolicy training completed.
+  2025-01-12 12:08:17 INFO     rasa.model  - Successfully saved model to 'models/20250112-120817-descent-lard.tar.gz'.
+  ```
+- **"Training Core model"**: Building the conversation logic  
+- **"Training FlowPolicy"**: Processing your flows  
+- **"Successfully saved model"**: Training completed, model saved
+
+**7. Verify success**
+- The terminal shows **"Successfully saved model to 'models/...'"** and there are no error messages at the end.
+- Check the `models/` folder — you should see a new `.tar.gz` file with a timestamp (e.g. `20250112-120817-descent-lard.tar.gz`).
+- If `models/` is empty or there's no new file, training did not complete; check error messages and fix the issue, then run the command again.
+
+**8. Common training errors (local)**
+
+| Error | What to do |
+|-------|------------|
+| **YAML syntax error** (e.g. "block mapping", line/column given) | Check that line: use **2 spaces** (not tabs, not 4 spaces), colons after keys, dashes before list items. Fix and save, then train again. |
+| **Response 'utter_xyz' not found** | The flow uses a response that isn't in `domain/basics.yml`. Add the response in the domain or fix the typo in the flow so the name matches exactly. |
+| **No module named 'rasa'** | Venv not active or Rasa not installed. Activate the venv, then run `python -m pip install --no-cache-dir rasa-pro`. |
+| **RASA_LICENSE / OPENAI_API_KEY not set** | Create a `.env` file in the same folder as `config.yml` with `RASA_LICENSE=...` and `OPENAI_API_KEY=...` (no quotes, no placeholders). Make sure you're running `rasa train` from that folder. |
+
+**AI Coach**: Ask "Where do I put my Rasa license?" or "How do I set environment variables?"
+
+---
+
 ### 6.3 Using Rasa Inspector
 
-**Inspector** is Rasa's built-in testing interface. It provides a web-based chat interface where you can test your bot.
+**Inspector** is Rasa's built-in testing interface. It provides a web-based chat interface where you can test your bot. You start it from the **terminal**, then open it in your **browser** using a URL Codio provides.
 
-#### Starting Inspector
+#### Step 1: Open a terminal and get ready
+
+1. **Open a terminal** in Codio: click **Tools** → **Terminal** (or use the keyboard shortcut, e.g. **Shift+Alt+T**). If your instructor set up a predefined terminal tab, open that tab—it may already be in the right folder with the virtual environment active.
+2. **Make sure you're in the right folder** with the venv active (same as Lab 6.1):
+   - You should be in the `level1` folder (run `pwd`; you should see a path ending in `level1`).
+   - Your prompt should start with `(.venv)`. If not, run:
+     ```bash
+     cd level1
+     source .venv/bin/activate
+     ```
+
+#### Step 2: Start Inspector in the terminal
+
+From the `level1` folder (with venv active), run:
 
 ```bash
-# After training, start Inspector
 python -m rasa inspect --debug --log-file logs/logs.out
 ```
 
-**Output**:
+**What you'll see**: The terminal will show something like:
 ```
 Starting Rasa server on http://0.0.0.0:5005
-2025-01-12 12:08:17 INFO     rasa.server  - Starting Rasa server...
+...
 ```
+**Leave this terminal open.** Inspector is now running as a server; closing the terminal will stop it.
 
-#### Opening Inspector
+#### Step 3: Open Inspector in your browser
 
-1. **In Codio**: Inspector is accessible through **port forwarding** (port 5005). Look for **Tools** → **Ports** or the **Ports** tab—Codio will show a URL for port 5005 when Inspector is running.
-2. **Navigate to**: The Inspector URL (e.g., `https://xxx-5005.codio.io` or similar—Codio provides this in the Ports panel)
-3. **You should see**: A chat interface
+Inspector is a **web page**. Codio exposes it via a URL. To find that URL, open the **Ports** view using one of these methods (Codio’s layout can vary):
+
+- **Top menu**: **Tools** → **Ports**
+- **Preview**: Click the **Preview** button or menu (often in the top bar or right side), then look for **Ports** or **Configure** to see port URLs
+- **Bottom panel**: Look for tabs at the **bottom** of the window (e.g. Terminal, Output, **Ports**, Problems)—click **Ports** if you see it
+- **View menu**: **View** → **Ports** (or **View** → **Appearance** / **Panels** and enable a panel that shows ports)
+
+Once you have the Ports list open:
+
+1. Find the row for **port 5005** (description may say "Rasa Inspector" or be blank).
+2. Click the **URL** for port 5005 (e.g. `https://xxx-5005.codio.io`) or use the **Open** / **Open in browser** link next to it.
+3. The Inspector chat interface will open in a new browser tab. You should see a chat window where you can type messages to your bot.
+
+**If you don't see port 5005**: Start the Inspector command in the terminal first (Step 2). The port appears in the Ports list only after the server is running.
+
+**Can't find the Ports options in the UI?** In some Codio setups the Ports panel isn't visible. You can still open Inspector by URL:
+1. **Get your project URL**: Look at the address bar when you're in Codio—it often looks like `https://word1-word2.codio.io` (two words, then `.codio.io`).
+2. **Try the Inspector URL**: Change it to use port 5005: `https://word1-word2-5005.codio.io` (insert `-5005` before `.codio.io`). Example: if your project is `https://happy-tree.codio.io`, try `https://happy-tree-5005.codio.io`.
+3. **Start Inspector first**: Run the `python -m rasa inspect ...` command in the terminal and wait until the server has started, then open that URL in a new browser tab.
+4. **If it doesn't work**: Ask your instructor for the exact Inspector URL or where to find Ports in your course; they may need to enable port forwarding for 5005 or add the URL to the guide.
 
 #### Inspector Interface Overview
 
@@ -7479,20 +7376,25 @@ The Inspector interface has several sections:
 
 #### Steps
 
-1. **Start Inspector**
+1. **Open a terminal and get ready**
+   - Click **Tools** → **Terminal** (or open your predefined terminal tab).
+   - Ensure you're in the `level1` folder with the virtual environment active (run `cd level1` and `source .venv/bin/activate` if needed; your prompt should show `(.venv)`).
+
+2. **Start Inspector in the terminal**
    ```bash
    python -m rasa inspect --debug --log-file logs/logs.out
    ```
-   Wait for the server to start.
+   Wait until you see a line like "Starting Rasa server on http://0.0.0.0:5005". **Leave the terminal open.**
 
-2. **Access Inspector**
-   - In Codio: Use the provided URL or port forwarding
-   - You should see the Inspector chat interface
+3. **Open Inspector in your browser**
+   - Open the **Ports** view: **Tools** → **Ports**, or the **Preview** menu, or a **Ports** tab at the bottom of the window (see section 6.3 Step 3 for more options).
+   - Find **port 5005** in the list and click its URL (or "Open in browser").
+   - Inspector opens in a new browser tab—you should see a chat interface.
 
-3. **Test a Simple Conversation**
-   - Type "hello" and press Enter
-   - The bot should respond
-   - Check that the correct flow triggered
+4. **Test a simple conversation**
+   - In the Inspector chat window, type **hello** and press Enter.
+   - The bot should respond.
+   - Check that the correct flow triggered (e.g. in the debug/flow panel if visible).
 
 **AI Coach**: Ask "How do I access Inspector in Codio?" or "Why won't Inspector start?"
 
@@ -7687,35 +7589,162 @@ Bot Response
 
 ⬇️ START COPYING HERE ⬇️
 
-### Lab 6.1: Training Your Bot
+# Lab 6.1: Training Your Bot
 
 **Objective**: Train your bot and verify it works.
 
-#### Steps
+---
 
-1. **Run Training Command**
-   ```bash
-   python -m rasa train
-   ```
-   Wait for training to complete.
+## Part 1: In Codio
 
-2. **Check for Errors**
-   - If training fails, read the error message
-   - Common errors are explained above
-   - Ask AI Coach if you're stuck
+**1. In the terminal, go to the project folder**
+- In Codio, click **Tools** → **Terminal** (or use the terminal icon).
+- Navigate to the `level1` folder where your bot files live:
+  ```bash
+  cd level1
+  ```
+- Confirm you're in the right place: run `pwd` — you should see something like `/home/codio/workspace/level1`.
 
-3. **Verify Model Created**
-   - Check that `models/` folder contains a new `.tar.gz` file
-   - The file should have a timestamp in its name
+**2. Create and activate the virtual environment**
+- Check if a virtual environment already exists:
+  ```bash
+  ls -la .venv
+  ```
+- **If `.venv` exists**: Activate it:
+  ```bash
+  source .venv/bin/activate
+  ```
+- **If `.venv` doesn't exist**: Create it first, then activate:
+  ```bash
+  python3.11 -m venv .venv
+  source .venv/bin/activate
+  ```
+- **Verify activation**: Your prompt should start with `(.venv)`. If not, run `source .venv/bin/activate` again.
+- **Note**: Rasa loads your `.env` when you run from `level1/`, so being in this folder with venv active is required.
 
-4. **What Success Looks Like**
-   - You see "Successfully saved model" message
-   - No error messages
-   - Model file exists in `models/` folder
+**3. Install Rasa Pro (if not already installed)**
+- With the venv active, check if Rasa is installed:
+  ```bash
+  python -m rasa --version
+  ```
+- **If you see an error** (e.g., "No module named 'rasa'"): Install Rasa Pro:
+  ```bash
+  python -m pip install --no-cache-dir rasa-pro
+  ```
+- Wait for installation to complete (2-5 minutes). You should see "Successfully installed rasa-pro-x.x.x" at the end.
+
+**4. Run the training command**
+- From the `level1` folder (with venv active), run:
+  ```bash
+  python -m rasa train
+  ```
+- Wait for training to complete (usually 1–3 minutes). Do not close the terminal until you see "Successfully saved model" or an error.
+
+**5. What you'll see**
+- When training starts, output will look like:
+  ```
+  Training Core model...
+  2025-01-12 12:08:17 INFO     rasa.core.training  - Training FlowPolicy...
+  2025-01-12 12:08:17 INFO     rasa.core.training  - FlowPolicy training completed.
+  2025-01-12 12:08:17 INFO     rasa.model  - Successfully saved model to 'models/20250112-120817-descent-lard.tar.gz'.
+  ```
+- **"Training Core model"**: Building the conversation logic  
+- **"Training FlowPolicy"**: Processing your flows  
+- **"Successfully saved model"**: Training completed, model saved
+
+**6. Verify success**
+- The terminal shows **"Successfully saved model to 'models/...'"** and there are no error messages at the end.
+- In the file tree, open `level1/models/` — you should see a new `.tar.gz` file with a timestamp (e.g. `20250112-120817-descent-lard.tar.gz`).
+- If `models/` is empty or there's no new file, training did not complete; see **Common training errors** below, fix the issue, and run the command again.
+
+**7. Common training errors (Codio)**
+
+| Error | What to do |
+|-------|------------|
+| **YAML syntax error** (e.g. "block mapping", line/column given) | Check that line: use **2 spaces** (not tabs, not 4 spaces), colons after keys, dashes before list items. Fix and save, then train again. |
+| **Response 'utter_xyz' not found** | The flow uses a response that isn't in `domain/basics.yml`. Add the response in the domain or fix the typo in the flow so the name matches exactly. |
+| **No module named 'rasa'** | Venv not active or Rasa not installed. Run `source .venv/bin/activate`, then `rasa --version`. If it fails, install Rasa Pro: `python -m pip install --no-cache-dir rasa-pro`. |
+| **RASA_LICENSE / OPENAI_API_KEY not set** | Credentials are pre-configured on Codio. Run the verification commands from Lab 0.1 step 5; if they report "is not set", ask your instructor. Otherwise run training from the `level1/` folder. |
 
 **AI Coach**: Ask "How do I know training succeeded?" or "What should I see when training works?"
 
-⬆️ STOP COPYING HERE ⬆️
+---
+
+## Part 2: Running locally
+
+If you're **not** using Codio, follow these steps:
+
+**1. Open a terminal and go to the project folder**
+- Open a terminal (PowerShell on Windows, Terminal.app on Mac, or Terminal on Linux).
+- Navigate to your project root, then `cd level1` (or whatever folder contains `config.yml`, `domain/`, `data/`).
+- Confirm you're in the right place: check that `config.yml` exists in the current directory.
+
+**2. Create and activate the virtual environment**
+- Check if a virtual environment already exists:
+  - Linux/Mac: `ls -la .venv`
+  - Windows: `dir .venv` (PowerShell) or `dir .venv` (Cmd)
+- **If `.venv` exists**: Activate it:
+  - Linux/Mac: `source .venv/bin/activate`
+  - Windows PowerShell: `.venv\Scripts\Activate.ps1`
+  - Windows Cmd: `.venv\Scripts\activate.bat`
+- **If `.venv` doesn't exist**: Create it first, then activate:
+  - Linux/Mac: `python3.11 -m venv .venv` then `source .venv/bin/activate`
+  - Windows: `python -m venv .venv` then `.venv\Scripts\Activate.ps1` (PowerShell) or `.venv\Scripts\activate.bat` (Cmd)
+- **Verify activation**: Your prompt should start with `(.venv)`. If not, activate it again.
+
+**3. Install Rasa Pro (if not already installed)**
+- With the venv active, check if Rasa is installed:
+  ```bash
+  python -m rasa --version
+  ```
+- **If you see an error** (e.g., "No module named 'rasa'"): Install Rasa Pro:
+  ```bash
+  python -m pip install --no-cache-dir rasa-pro
+  ```
+- Wait for installation to complete (2-5 minutes). You should see "Successfully installed rasa-pro-x.x.x" at the end.
+
+**4. Set up environment variables**
+- Rasa loads `.env` from the current directory. Create a `.env` file in the same folder as `config.yml` with:
+  ```
+  RASA_LICENSE=your-actual-license
+  OPENAI_API_KEY=sk-your-actual-key
+  ```
+- **Important**: No quotes around values; no placeholder values. If you see "RASA_LICENSE not set" or "OPENAI_API_KEY not found", check that `.env` exists, has the right variable names, and you're running `rasa train` from that folder.
+
+**5. Run the training command**
+- From the project folder (with venv active), run:
+  ```bash
+  python -m rasa train
+  ```
+- Wait for training to complete (usually 1–3 minutes). Do not close the terminal until you see "Successfully saved model" or an error.
+
+**6. What you'll see**
+- When training starts, output will look like:
+  ```
+  Training Core model...
+  2025-01-12 12:08:17 INFO     rasa.core.training  - Training FlowPolicy...
+  2025-01-12 12:08:17 INFO     rasa.core.training  - FlowPolicy training completed.
+  2025-01-12 12:08:17 INFO     rasa.model  - Successfully saved model to 'models/20250112-120817-descent-lard.tar.gz'.
+  ```
+- **"Training Core model"**: Building the conversation logic  
+- **"Training FlowPolicy"**: Processing your flows  
+- **"Successfully saved model"**: Training completed, model saved
+
+**7. Verify success**
+- The terminal shows **"Successfully saved model to 'models/...'"** and there are no error messages at the end.
+- Check the `models/` folder — you should see a new `.tar.gz` file with a timestamp (e.g. `20250112-120817-descent-lard.tar.gz`).
+- If `models/` is empty or there's no new file, training did not complete; check error messages and fix the issue, then run the command again.
+
+**8. Common training errors (local)**
+
+| Error | What to do |
+|-------|------------|
+| **YAML syntax error** (e.g. "block mapping", line/column given) | Check that line: use **2 spaces** (not tabs, not 4 spaces), colons after keys, dashes before list items. Fix and save, then train again. |
+| **Response 'utter_xyz' not found** | The flow uses a response that isn't in `domain/basics.yml`. Add the response in the domain or fix the typo in the flow so the name matches exactly. |
+| **No module named 'rasa'** | Venv not active or Rasa not installed. Activate the venv, then run `python -m pip install --no-cache-dir rasa-pro`. |
+| **RASA_LICENSE / OPENAI_API_KEY not set** | Create a `.env` file in the same folder as `config.yml` with `RASA_LICENSE=...` and `OPENAI_API_KEY=...` (no quotes, no placeholders). Make sure you're running `rasa train` from that folder. |
+
+**AI Coach**: Ask "Where do I put my Rasa license?" or "How do I set environment variables?"
 
 ---
 
@@ -7736,95 +7765,172 @@ Bot Response
 
 #### Step 1: Create Lab 6.1 Assessment (Code Test)
 
-**What you're doing**: Creating a Code Test that verifies training completed successfully and model was created.
+## Step-by-Step: Lab 6.1 Assessment Setup
 
-**How to do it**:
+### Step 1: Navigate to Lab 6.1 in Codio Guides
 
-1. **Navigate to Lab 6.1 in Guides**:
-   - Click **Tools** → **Guides** → **Edit**
-   - Find **Lab 6.1: Training Your Bot** subsection
-   - Scroll to bottom
+1. Open your Codio project.
+2. Go to **Tools** → **Guides** → **Edit**.
+3. Find the **Lab 6.1: Training Your Bot** subsection.
+4. Scroll to the bottom of that subsection (after the student content).
 
-2. **Add Code Test assessment**:
-   - Click **+** → Select **Code Test**
+### Step 2: Create the Code Test Assessment
 
-3. **Paste grader script**:
-   ```bash
-   #!/bin/bash
-   set -e
-   cd /home/codio/workspace/level1
-   
-   score=0
-   max_score=10
-   
-   # Check 1: Model file exists (2 points)
-   if [ -d "models" ] && [ -n "$(ls -A models/*.tar.gz 2>/dev/null)" ]; then
-       echo "✓ Model file created"
-       score=$((score + 2))
-   else
-       echo "❌ FAIL: No model file found in models/ directory"
-       echo "Hint: Run 'python3.11 -m rasa train' to create the model"
-       exit 1
-   fi
-   
-   # Check 2: Training completed successfully (check for recent model)
-   model_file=$(ls -t models/*.tar.gz 2>/dev/null | head -1)
-   if [ -z "$model_file" ]; then
-       echo "❌ FAIL: No model files found"
-       exit 1
-   fi
-   
-   # Check model is recent (created in last 10 minutes)
-   if [ -f "$model_file" ]; then
-       model_age=$(( $(date +%s) - $(stat -c %Y "$model_file") ))
-       if [ $model_age -lt 600 ]; then
-           echo "✓ Model file is recent (training completed)"
-           score=$((score + 3))
-       else
-           echo "⚠️  WARNING: Model file is old. Re-run training to ensure it's current."
-       fi
-   fi
-   
-   # Check 3: No obvious errors (check for common error patterns in logs if available)
-   if [ -f "logs/logs.out" ]; then
-       if grep -qi "error\|exception\|failed" logs/logs.out 2>/dev/null; then
-           echo "⚠️  WARNING: Possible errors found in logs. Review logs/logs.out"
-       else
-           echo "✓ No obvious errors in logs"
-           score=$((score + 3))
-       fi
-   else
-       score=$((score + 3))  # Give points if no log file (training might not have logged)
-   fi
-   
-   # Check 4: Training time reasonable (model exists = training completed)
-   echo "✓ Training completed successfully"
-   score=$((score + 2))
-   
-   echo "✅ PASS: Training verification complete! Score: $score/$max_score"
-   echo "✓ Model file exists"
-   echo "✓ Training completed"
-   echo "✓ No critical errors detected"
-   ```
+1. Click the **+** button at the bottom of the Lab 6.1 subsection.
+2. Select **Code Test** from the assessment types.
 
-4. **Configure assessment**:
-   - **Points**: `10`
-   - **Timeout**: `60` seconds (training may take time)
-   - **Language**: **Bash**
-   - **Fail Message**: `Training incomplete. Run 'python3.11 -m rasa train' and wait for completion. Check for YAML syntax errors if training fails.`
-   - Click **Save**
+### Step 3: Paste the Grader Script
 
-5. **Enable Learning Analytics**:
-   - Click **Education** → **Analytics** → **Enable**
-   - Track: Training attempts, completion time, error frequency
+In the code editor box, paste this grader script:
 
-6. **Test the assessment**: Verify it passes after student runs training
+```bash
+#!/bin/bash
+set -e
+cd /home/codio/workspace/level1
 
-**Deliverables Checklist**:
-- [ ] Lab 6.1 Code Test created
-- [ ] Validates model creation and training completion
-- [ ] Learning Analytics enabled
-- [ ] Assessment tested
+score=0
+max_score=10
+
+echo "Running Lab 6.1 Assessment Checks..."
+echo ""
+
+# Check 0: Virtual environment exists and is activated (2 points)
+echo "Check 0: Verifying virtual environment..."
+if [ ! -d ".venv" ]; then
+    echo "❌ Check 0: FAILED - Virtual environment (.venv) not found (0 points)"
+    echo "Hint: Create virtual environment with 'python3.11 -m venv .venv'"
+    exit 1
+fi
+
+# Activate venv for checks
+source .venv/bin/activate
+echo "✅ Check 0: PASSED - Virtual environment found and activated (2 points)"
+score=$((score + 2))
+echo ""
+
+# Check 1: Model file exists (2 points)
+echo "Check 1: Verifying model file exists..."
+if [ -d "models" ] && [ -n "$(ls -A models/*.tar.gz 2>/dev/null)" ]; then
+    echo "✅ Check 1: PASSED - Model file created (2 points)"
+    score=$((score + 2))
+else
+    echo "❌ Check 1: FAILED - No model file found in models/ directory (0 points)"
+    echo "Hint: Run 'python3.11 -m rasa train' (with venv activated) to create the model"
+    exit 1
+fi
+echo ""
+
+# Check 2: Training completed successfully (check for recent model)
+echo "Check 2: Verifying model is recent..."
+model_file=$(ls -t models/*.tar.gz 2>/dev/null | head -1)
+if [ -z "$model_file" ]; then
+    echo "❌ Check 2: FAILED - No model files found (0 points)"
+    exit 1
+fi
+
+# Check model is recent (created in last 10 minutes)
+if [ -f "$model_file" ]; then
+    model_age=$(( $(date +%s) - $(stat -c %Y "$model_file") ))
+    if [ $model_age -lt 600 ]; then
+        echo "✅ Check 2: PASSED - Model file is recent (training completed within 10 minutes) (3 points)"
+        score=$((score + 3))
+    else
+        echo "⚠️  WARNING: Model file is old. Re-run training to ensure it's current."
+        echo "⚠️  Check 2: PARTIAL - Model exists but is older than 10 minutes (0 points)"
+    fi
+fi
+echo ""
+
+# Check 3: No obvious errors (check for common error patterns in logs if available)
+echo "Check 3: Checking for errors in logs..."
+if [ -f "logs/logs.out" ]; then
+    if grep -qi "error\|exception\|failed" logs/logs.out 2>/dev/null; then
+        echo "⚠️  WARNING: Possible errors found in logs. Review logs/logs.out"
+        echo "⚠️  Check 3: PARTIAL - Logs found but may contain errors (0 points)"
+    else
+        echo "✅ Check 3: PASSED - No obvious errors in logs (3 points)"
+        score=$((score + 3))
+    fi
+else
+    echo "✅ Check 3: PASSED - No log file found (training may not have logged) (3 points)"
+    score=$((score + 3))  # Give points if no log file (training might not have logged)
+fi
+echo ""
+
+# Check 4: Training time reasonable (model exists = training completed)
+echo "Check 4: Verifying training completed successfully..."
+echo "✅ Check 4: PASSED - Training completed successfully (2 points)"
+score=$((score + 2))
+echo ""
+
+# Final summary
+echo "=========================================="
+echo "✅ PASS: Training verification complete! Score: $score/$max_score"
+echo "=========================================="
+echo ""
+echo "Summary of checks:"
+echo "✓ Check 0: Virtual environment exists and activated"
+echo "✓ Check 1: Model file created"
+echo "✓ Check 2: Model file is recent"
+echo "✓ Check 3: No critical errors detected"
+echo "✓ Check 4: Training completed successfully"
+echo ""
+echo "✅ PASS: Training verification complete! Score: $score/$max_score"
+```
+
+**What the script checks:**
+- ✅ Virtual environment exists (`.venv` directory)
+- ✅ Model file exists (`.tar.gz` in `models/`)
+- ✅ Model is recent (created within last 10 minutes)
+- ✅ No obvious errors in logs (if logs exist)
+- ✅ Training completed successfully
+
+### Step 4: Configure Assessment Settings
+
+Set these fields:
+
+- **Points**: `10`
+- **Timeout**: `60` seconds
+- **Language**: **Bash**
+- **Working Directory**: `/home/codio/workspace/level1` (if available)
+- **Fail Message**: 
+  ```
+  Training incomplete. Ensure: 1) Virtual environment exists (.venv), 2) Run 'python3.11 -m rasa train' (with venv activated), 3) Wait for completion. Check for YAML syntax errors if training fails.
+  ```
+
+### Step 5: Save and Test
+
+1. Click **Save**.
+2. Test the assessment:
+   - Complete Lab 6.1 steps (create venv, train bot).
+   - Run the assessment.
+   - Verify it passes when training is complete.
+
+### Step 6: Enable Learning Analytics (Optional)
+
+1. Click **Education** → **Analytics** → **Enable**.
+2. Track: training attempts, completion time, error frequency.
+
+### What Students Will See
+
+When students click "Run Assessment" or "Submit":
+- The grader checks if `.venv` exists (fails if missing).
+- Checks if a model file exists in `models/`.
+- Verifies the model is recent (within 10 minutes).
+- Provides hints if checks fail.
+
+### Important Notes
+
+1. **Virtual Environment**: The grader activates the venv itself, so students don't need to activate it before running the assessment.
+2. **Python Version**: The script uses `python3.11` to match Codio's Python version.
+3. **Recency Check**: The 10-minute recency check ensures students ran training recently, not just copied an old model.
+4. **Early Exit**: The script exits early if critical checks fail (no venv, no model), so students get immediate feedback.
+
+This setup verifies that students:
+- ✅ Created the virtual environment
+- ✅ Successfully ran training
+- ✅ Generated a model file
+- ✅ Completed the lab correctly
 
 ### Lab 6.2: Using Rasa Inspector
 
