@@ -26,10 +26,10 @@ Bot: "Hi! I'm a banking assistant. How can I help you today?"
    Flow: hours
    Step: action_bank_hours (Level 2 - custom Python code!)
    ↓
-   Action executes Python code
+   Action executes Python code (checks current day via datetime)
    dispatcher.utter_message() sends message
    ↓
-Bot: "Our bank hours are Monday-Friday 9am-5pm, Saturday 10am-2pm. We're closed on Sundays."
+Bot: [Dynamic message—e.g., "Today is Saturday—we're open 10am-2pm." or full schedule on weekdays]
 
 [User types: "How can I contact you?"]
 

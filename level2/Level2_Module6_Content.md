@@ -118,7 +118,7 @@ Error: Action name 'action_bank_hours' in domain doesn't match class name
    - Type "What are your hours?" or "When are you open?"
    - Should trigger `hours` flow
    - Should execute `action_bank_hours`
-   - Should see: "Our bank hours are Monday-Friday 9am-5pm..."
+   - Should see a message that varies by day—e.g., "Today is Saturday—we're open 10am-2pm." or the full schedule on weekdays
 
 4. **Verify Level 1 flows still work**:
    - Type "hello" → Should trigger `greet` flow (unchanged)

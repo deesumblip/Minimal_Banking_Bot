@@ -4,9 +4,12 @@
 
 Let's examine the actual `action_bank_hours.py` file to understand how actions work.
 
+**Why an action (not an utter)?** This action returns a *different* message depending on the current day—Saturday, Sunday, or weekday. That requires Python logic and `datetime`. A simple `utter_*` response can't change based on when the user asks, so we need an action.
+
 #### Complete Action File
 
 ```python
+from datetime import datetime
 from typing import Any, Dict, List, Text
 
 from rasa_sdk import Action, Tracker
@@ -14,10 +17,10 @@ from rasa_sdk.executor import CollectingDispatcher
 
 
 class ActionBankHours(Action):
-    """A simple custom action that returns bank hours.
+    """A custom action that returns bank hours based on the current day.
     
-    This action doesn't use any slots (memory) - it just returns
-    a hardcoded message. Perfect for learning how actions work!
+    Uses datetime to tailor the message—this can't be done with a simple
+    utter response because the message changes depending on when the user asks.
     """
 
     def name(self) -> Text:
@@ -36,19 +39,21 @@ class ActionBankHours(Action):
     ) -> List[Dict[Text, Any]]:
         """Execute the action.
         
-        Args:
-            dispatcher: Used to send messages back to the user
-            tracker: Contains the conversation history and slots
-            domain: The bot's domain configuration
-            
-        Returns:
-            A list of events (usually empty for simple actions)
+        Returns different messages based on the current day of the week.
         """
-        # This is where your custom logic goes!
-        # For now, we just return a hardcoded message.
-        dispatcher.utter_message(
-            text="Our bank hours are Monday-Friday 9am-5pm, Saturday 10am-2pm. We're closed on Sundays."
-        )
+        weekday = datetime.now().weekday()  # 0=Monday, 5=Saturday, 6=Sunday
+
+        if weekday == 6:  # Sunday
+            message = "Today is Sunday—we're closed."
+        elif weekday == 5:  # Saturday
+            message = "Today is Saturday—we're open 10am-2pm."
+        else:  # Monday–Friday
+            message = (
+                "Our bank hours are Monday-Friday 9am-5pm, "
+                "Saturday 10am-2pm. We're closed on Sundays."
+            )
+
+        dispatcher.utter_message(text=message)
         return []
 ```
 
@@ -56,9 +61,11 @@ class ActionBankHours(Action):
 
 1. **Imports**:
    ```python
+   from datetime import datetime
    from rasa_sdk import Action, Tracker
    from rasa_sdk.executor import CollectingDispatcher
    ```
+   - `datetime` - Used to get the current day of the week
    - `Action` - Base class all actions inherit from
    - `Tracker` - Contains conversation history and slots (we'll use this in Level 3)
    - `CollectingDispatcher` - Used to send messages to the user

@@ -12,13 +12,13 @@
 
 ---
 
-### Exercise 2: Dynamic Responses
+### Exercise 2: Extend Dynamic Responses
 
-**Task**: Modify `action_bank_hours.py` to:
-- Check the current day of week
-- Return different messages based on whether bank is currently open
+**Task**: Extend `action_bank_hours.py` (which already uses `datetime` to tailor the message by day) to:
+- Include the current date in the message (e.g., "As of [today's date], ...")
+- Or add logic for holiday closures (e.g., check if today is a known holiday)
 
-**Goal**: Learn to use Python logic in actions.
+**Goal**: Practice building on existing dynamic logic in actions.
 
 ---
 

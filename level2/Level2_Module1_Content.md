@@ -99,4 +99,6 @@ class ActionBankHours(Action):
 1. **`name()`** - Returns the action name (must match what's in domain)
 2. **`run()`** - Contains your custom logic
 
+**Note**: In Module 2 you'll see the full `action_bank_hours`—it uses `datetime` to return different messages for weekdays, Saturday, and Sunday. That's why it's an action, not a simple `utter_*` response.
+
 ---

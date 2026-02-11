@@ -206,9 +206,12 @@ class ActionBankHours(Action):
 
 Let's examine the actual `action_bank_hours.py` file to understand how actions work.
 
+**Why an action (not an utter)?** This action returns a *different* message depending on the current day—Saturday, Sunday, or weekday. That requires Python logic and `datetime`. A simple `utter_*` response can't change based on when the user asks, so we need an action.
+
 #### Complete Action File
 
 ```python
+from datetime import datetime
 from typing import Any, Dict, List, Text
 
 from rasa_sdk import Action, Tracker
@@ -216,10 +219,10 @@ from rasa_sdk.executor import CollectingDispatcher
 
 
 class ActionBankHours(Action):
-    """A simple custom action that returns bank hours.
+    """A custom action that returns bank hours based on the current day.
     
-    This action doesn't use any slots (memory) - it just returns
-    a hardcoded message. Perfect for learning how actions work!
+    Uses datetime to tailor the message—this can't be done with a simple
+    utter response because the message changes depending on when the user asks.
     """
 
     def name(self) -> Text:
@@ -238,19 +241,21 @@ class ActionBankHours(Action):
     ) -> List[Dict[Text, Any]]:
         """Execute the action.
         
-        Args:
-            dispatcher: Used to send messages back to the user
-            tracker: Contains the conversation history and slots
-            domain: The bot's domain configuration
-            
-        Returns:
-            A list of events (usually empty for simple actions)
+        Returns different messages based on the current day of the week.
         """
-        # This is where your custom logic goes!
-        # For now, we just return a hardcoded message.
-        dispatcher.utter_message(
-            text="Our bank hours are Monday-Friday 9am-5pm, Saturday 10am-2pm. We're closed on Sundays."
-        )
+        weekday = datetime.now().weekday()  # 0=Monday, 5=Saturday, 6=Sunday
+
+        if weekday == 6:  # Sunday
+            message = "Today is Sunday—we're closed."
+        elif weekday == 5:  # Saturday
+            message = "Today is Saturday—we're open 10am-2pm."
+        else:  # Monday–Friday
+            message = (
+                "Our bank hours are Monday-Friday 9am-5pm, "
+                "Saturday 10am-2pm. We're closed on Sundays."
+            )
+
+        dispatcher.utter_message(text=message)
         return []
 ```
 
@@ -258,9 +263,11 @@ class ActionBankHours(Action):
 
 1. **Imports**:
    ```python
+   from datetime import datetime
    from rasa_sdk import Action, Tracker
    from rasa_sdk.executor import CollectingDispatcher
    ```
+   - `datetime` - Used to get the current day of the week
    - `Action` - Base class all actions inherit from
    - `Tracker` - Contains conversation history and slots (we'll use this in Level 3)
    - `CollectingDispatcher` - Used to send messages to the user
@@ -290,9 +297,22 @@ class ActionBankHours(Action):
    - **`domain`**: Access domain configuration (rarely needed)
    - **Returns**: List of events (usually empty `[]` for simple actions)
 
-5. **Sending Messages**:
+5. **Conditional Logic**:
    ```python
-   dispatcher.utter_message(text="Your message here")
+   weekday = datetime.now().weekday()  # 0=Monday, 5=Saturday, 6=Sunday
+   if weekday == 6:  # Sunday
+       message = "Today is Sunday—we're closed."
+   elif weekday == 5:  # Saturday
+       message = "Today is Saturday—we're open 10am-2pm."
+   else:  # Monday–Friday
+       message = "Our bank hours are..."
+   ```
+   - `datetime.now().weekday()` returns the current day (0=Monday through 6=Sunday)
+   - Different messages for different days—this is why we need an action, not a static response
+
+6. **Sending Messages**:
+   ```python
+   dispatcher.utter_message(text=message)
    ```
    - This is how you send text to the user
    - Can also use `dispatcher.utter_message(response="utter_xyz")` to use a response
@@ -348,65 +368,20 @@ For Level 2, you typically don't need to access the domain directly.
 
 ### 3.1 Step-by-Step: Creating an Action
 
-Let's create a simple action to practice. We'll create `action_bank_hours.py` (which already exists, but we'll understand how it was created).
+You've seen `action_bank_hours.py`—it uses `datetime` and conditional logic to return different messages based on the current day. That's why it's an action, not a simple `utter_*` response. Now you'll create your own action in Lab 3.1.
 
-#### Before You Begin
-
-✅ **Checklist**:
-- You understand basic Python syntax
-- You know where the `actions/` folder is
-- You have a text editor ready
-- Your Level 1 bot is working
-
-#### Step-by-Step Tutorial
-
-**Step 1: Navigate to the Actions Folder**
-
-1. In your project folder, navigate to the `actions/` folder
-2. If it doesn't exist, create it
-3. You should see `__init__.py` (if the folder exists)
-
-**What you should see**: An `actions/` folder with `__init__.py` inside.
+**What you learned from `action_bank_hours`**:
+- Actions need imports (including `datetime` if you use the current date/time)
+- The class inherits from `Action`
+- `name()` returns the action identifier
+- `run()` contains your logic—conditionals, calculations, etc.—and calls `dispatcher.utter_message()` to send the result
 
 ---
 
-**Step 2: Create the Action File**
+**For reference, here's the structure of `action_bank_hours`** (the file already exists in your project):
 
-1. In the `actions/` folder, create a new file named `action_bank_hours.py`
-2. Open it in your text editor
-
-⚠️ **File naming**:
-- Use lowercase with underscores: `action_bank_hours.py`
-- Must start with `action_` (convention)
-- The filename should match the action name
-
----
-
-**Step 3: Add the Action Class Structure**
-
-1. Add the imports at the top:
-   ```python
-   from typing import Any, Dict, List, Text
-   
-   from rasa_sdk import Action, Tracker
-   from rasa_sdk.executor import CollectingDispatcher
-   ```
-
-2. Create the class:
-   ```python
-   class ActionBankHours(Action):
-       def name(self) -> Text:
-           return "action_bank_hours"
-       
-       def run(self, dispatcher, tracker, domain):
-           dispatcher.utter_message(
-               text="Our bank hours are Monday-Friday 9am-5pm, Saturday 10am-2pm. We're closed on Sundays."
-           )
-           return []
-   ```
-
-**Complete file**:
 ```python
+from datetime import datetime
 from typing import Any, Dict, List, Text
 
 from rasa_sdk import Action, Tracker
@@ -414,7 +389,7 @@ from rasa_sdk.executor import CollectingDispatcher
 
 
 class ActionBankHours(Action):
-    """A simple custom action that returns bank hours."""
+    """A custom action that returns bank hours based on the current day."""
 
     def name(self) -> Text:
         return "action_bank_hours"
@@ -425,21 +400,31 @@ class ActionBankHours(Action):
         tracker: Tracker,
         domain: Dict[Text, Any],
     ) -> List[Dict[Text, Any]]:
-        dispatcher.utter_message(
-            text="Our bank hours are Monday-Friday 9am-5pm, Saturday 10am-2pm. We're closed on Sundays."
-        )
+        weekday = datetime.now().weekday()  # 0=Monday, 5=Saturday, 6=Sunday
+
+        if weekday == 6:  # Sunday
+            message = "Today is Sunday—we're closed."
+        elif weekday == 5:  # Saturday
+            message = "Today is Saturday—we're open 10am-2pm."
+        else:  # Monday–Friday
+            message = (
+                "Our bank hours are Monday-Friday 9am-5pm, "
+                "Saturday 10am-2pm. We're closed on Sundays."
+            )
+
+        dispatcher.utter_message(text=message)
         return []
 ```
 
+**Next**: Complete Lab 3.1 to create a new action that follows this pattern.
+
 ---
 
-**Step 4: Verify Your Code**
+**When creating your action (Lab 3.1), verify**:
 
-Before saving, check:
-
-✅ **Imports**: All required imports are present
-✅ **Class name**: `ActionBankHours` (descriptive, starts with `Action`)
-✅ **`name()` method**: Returns `"action_bank_hours"` (matches filename)
+✅ **Imports**: Include `datetime` if you use the current date/time; include Rasa SDK imports
+✅ **Class name**: Descriptive, starts with `Action` (e.g., `ActionHolidayHours`)
+✅ **`name()` method**: Returns the action name (matches filename)
 ✅ **`run()` method**: Has correct parameters (`dispatcher`, `tracker`, `domain`)
 ✅ **Message sending**: Uses `dispatcher.utter_message()`
 ✅ **Return value**: Returns `[]` (empty list)
@@ -449,13 +434,6 @@ Before saving, check:
 - ❌ Wrong return type in `name()` (should return string, not call it)
 - ❌ Forgetting to return `[]` from `run()`
 - ❌ Typos in method names (`run` not `runs`, `name` not `names`)
-
----
-
-**Step 5: Save the File**
-
-1. Save your file as `action_bank_hours.py` in the `actions/` folder
-2. Your action is now created!
 
 ---
 
