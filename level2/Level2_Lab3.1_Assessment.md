@@ -1,8 +1,45 @@
-# Lab 3.1: Creating Your First Action - Assessment Setup
+# Lab 3.1: Create Your Own Action
 
-## Overview
+## Guide Content (For Students)
 
-This assessment verifies that students can create a custom action file with the correct structure, imports, and methods.
+**Placement**: This lab follows Module 3: Creating Your First Action.
+
+---
+
+### Your Task
+
+You've learned how actions are structured and how they work. Now create a **new** action that serves a different purpose: `action_holiday_hours`.
+
+This action should return the bank's holiday schedule—when the bank is closed for holidays, or limited hours on holidays. Use your own message content; the structure must follow the pattern you've already seen.
+
+---
+
+### What to Build
+
+1. **Create** `actions/action_holiday_hours.py`
+2. **Structure**: Same pattern as the action you've studied—imports, class inheriting from `Action`, `name()` method, `run()` method that uses `dispatcher.utter_message()`
+3. **Content**: Return a message about holiday hours. The exact text is up to you.
+
+---
+
+### Verification
+
+Before submitting, confirm:
+
+- The file is in the `actions/` folder
+- The class name matches the action purpose
+- `name()` returns the correct string
+- `run()` sends a message to the user and returns `[]`
+
+Run the assessment when you're done.
+
+---
+
+## Assessment Setup (For Implementers)
+
+### Overview
+
+This assessment verifies that students can create a custom action file (`action_holiday_hours.py`) with the correct structure, imports, and methods.
 
 ### Assessment Type
 
@@ -61,20 +98,20 @@ else
 fi
 echo ""
 
-# Check 3: action_bank_hours.py file exists (2 points)
-echo "Check 3: Verifying action_bank_hours.py exists..."
-if [ ! -f "actions/action_bank_hours.py" ]; then
-    echo "❌ Check 3: FAILED - actions/action_bank_hours.py not found (0 points)"
+# Check 3: action_holiday_hours.py file exists (2 points)
+echo "Check 3: Verifying action_holiday_hours.py exists..."
+if [ ! -f "actions/action_holiday_hours.py" ]; then
+    echo "❌ Check 3: FAILED - actions/action_holiday_hours.py not found (0 points)"
     echo "Hint: Create the action file in the actions/ folder"
 else
-    echo "✅ Check 3: PASSED - action_bank_hours.py file exists (2 points)"
+    echo "✅ Check 3: PASSED - action_holiday_hours.py file exists (2 points)"
     score=$((score + 2))
 fi
 echo ""
 
 # Check 4: Action file has correct imports (2 points)
 echo "Check 4: Verifying action file imports..."
-if [ -f "actions/action_bank_hours.py" ] && grep -q "from rasa_sdk import Action" actions/action_bank_hours.py 2>/dev/null && grep -q "from rasa_sdk.executor import CollectingDispatcher" actions/action_bank_hours.py 2>/dev/null; then
+if [ -f "actions/action_holiday_hours.py" ] && grep -q "from rasa_sdk import Action" actions/action_holiday_hours.py 2>/dev/null && grep -q "from rasa_sdk.executor import CollectingDispatcher" actions/action_holiday_hours.py 2>/dev/null; then
     echo "✅ Check 4: PASSED - Correct imports found (2 points)"
     score=$((score + 2))
 else
@@ -85,29 +122,29 @@ echo ""
 
 # Check 5: Action class inherits from Action (1 point)
 echo "Check 5: Verifying Action class structure..."
-if [ -f "actions/action_bank_hours.py" ] && grep -q "class ActionBankHours(Action)" actions/action_bank_hours.py 2>/dev/null; then
-    echo "✅ Check 5: PASSED - ActionBankHours class inherits from Action (1 point)"
+if [ -f "actions/action_holiday_hours.py" ] && grep -q "class ActionHolidayHours(Action)" actions/action_holiday_hours.py 2>/dev/null; then
+    echo "✅ Check 5: PASSED - ActionHolidayHours class inherits from Action (1 point)"
     score=$((score + 1))
 else
-    echo "❌ Check 5: FAILED - ActionBankHours class not found or doesn't inherit from Action (0 points)"
-    echo "Hint: Class should be 'class ActionBankHours(Action):'"
+    echo "❌ Check 5: FAILED - ActionHolidayHours class not found or doesn't inherit from Action (0 points)"
+    echo "Hint: Class should be 'class ActionHolidayHours(Action):'"
 fi
 echo ""
 
 # Check 6: name() method exists and returns correct value (1 point)
 echo "Check 6: Verifying name() method..."
-if [ -f "actions/action_bank_hours.py" ] && grep -q "def name" actions/action_bank_hours.py 2>/dev/null && grep -q "return \"action_bank_hours\"" actions/action_bank_hours.py 2>/dev/null; then
-    echo "✅ Check 6: PASSED - name() method exists and returns 'action_bank_hours' (1 point)"
+if [ -f "actions/action_holiday_hours.py" ] && grep -q "def name" actions/action_holiday_hours.py 2>/dev/null && grep -q "return \"action_holiday_hours\"" actions/action_holiday_hours.py 2>/dev/null; then
+    echo "✅ Check 6: PASSED - name() method exists and returns 'action_holiday_hours' (1 point)"
     score=$((score + 1))
 else
     echo "❌ Check 6: FAILED - name() method missing or incorrect return value (0 points)"
-    echo "Hint: name() method should return 'action_bank_hours'"
+    echo "Hint: name() method should return 'action_holiday_hours'"
 fi
 echo ""
 
 # Check 7: run() method exists and uses dispatcher.utter_message (1 point)
 echo "Check 7: Verifying run() method and message sending..."
-if [ -f "actions/action_bank_hours.py" ] && grep -q "def run" actions/action_bank_hours.py 2>/dev/null && grep -q "dispatcher.utter_message" actions/action_bank_hours.py 2>/dev/null; then
+if [ -f "actions/action_holiday_hours.py" ] && grep -q "def run" actions/action_holiday_hours.py 2>/dev/null && grep -q "dispatcher.utter_message" actions/action_holiday_hours.py 2>/dev/null; then
     echo "✅ Check 7: PASSED - run() method exists and uses dispatcher.utter_message() (1 point)"
     score=$((score + 1))
 else
@@ -135,8 +172,8 @@ fi
 ## Assessment Configuration
 
 ### General Tab
-- **Name**: Lab 3.1: Creating Your First Action
-- **Description**: Verify that students can create a custom action file with correct structure
+- **Name**: Lab 3.1: Create Your Own Action
+- **Description**: Verify that students can create action_holiday_hours.py with correct structure
 - **Points**: `11`
 - **Language**: `Bash`
 
@@ -157,24 +194,25 @@ fi
 
 ## Setup Instructions
 
-1. Navigate to the Lab 3.1 section in Codio Guide Editor
-2. Click **Add Code Test** → **Standard Code Test**
-3. In the **General** tab:
-   - Set Name: "Lab 3.1: Creating Your First Action"
+1. Create a new Codio Guide page for **Lab 3.1: Create Your Own Action** (standalone page with folder tree, guide editor, and terminal).
+2. Add the **Guide Content** section above as the page content for students.
+3. Click **Add Code Test** → **Standard Code Test**
+4. In the **General** tab:
+   - Set Name: "Lab 3.1: Create Your Own Action"
    - Set Points: `11`
    - Set Language: `Bash`
-4. In the **Execution** tab:
+5. In the **Execution** tab:
    - Set COMMAND: `bash /home/codio/workspace/.guides/assessments/level2_graders/lab_3.1_grader.sh`
    - Set TIMEOUT: `60`
    - Set Working Directory: `/home/codio/workspace/level2`
-5. In the **Grading** tab:
+6. In the **Grading** tab:
    - Set Points: `11`
    - Add test case with Expected Output containing "✅ PASS"
    - Set matching to "Contains"
-6. In the **Files** tab:
+7. In the **Files** tab:
    - Create the grader script at the specified path
    - Make it executable
-7. **Save & Test** the assessment
-8. Enable **Learning Analytics** if desired
+8. **Save & Test** the assessment
+9. Enable **Learning Analytics** if desired
 
 ---
