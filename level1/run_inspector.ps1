@@ -13,10 +13,10 @@ Write-Host "Ensuring logs/ folder exists..." -ForegroundColor Gray
 New-Item -ItemType Directory -Force logs | Out-Null
 
 Write-Host "Training (rasa train)..." -ForegroundColor Gray
-.\.venv\Scripts\python.exe -m rasa train
+C:\Users\dalin\Github\Rasa\Minimal_Banking_Bot\.venv\Scripts\python.exe -m rasa train
 if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 
 Write-Host "Starting Inspector on http://localhost:5005/webhooks/socketio/inspect.html" -ForegroundColor Green
 Write-Host "Press Ctrl+C in this window to stop." -ForegroundColor Yellow
-.\.venv\Scripts\python.exe -m rasa inspect --debug --log-file logs/logs.out
+C:\Users\dalin\Github\Rasa\Minimal_Banking_Bot\.venv\Scripts\python.exe -m rasa inspect --debug --log-file logs/logs.out
 exit $LASTEXITCODE

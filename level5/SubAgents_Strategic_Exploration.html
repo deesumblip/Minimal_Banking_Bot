@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sub-Agents: Strategic Exploration for Level 5</title>
+  <style>
+    body { font-family: system-ui, -apple-system, sans-serif; line-height: 1.6; max-width: 900px; margin: 0 auto; padding: 1.5rem; color: #222; }
+    h1 { font-size: 1.75rem; border-bottom: 1px solid #ccc; padding-bottom: 0.5rem; }
+    h2 { font-size: 1.35rem; margin-top: 2rem; color: #333; }
+    h3 { font-size: 1.15rem; margin-top: 1.25rem; color: #444; }
+    p { margin: 0.75rem 0; }
+    ul { margin: 0.75rem 0; padding-left: 1.5rem; }
+    li { margin: 0.35rem 0; }
+    table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.95rem; }
+    th, td { border: 1px solid #ccc; padding: 0.5rem 0.75rem; text-align: left; vertical-align: top; }
+    th { background: #f5f5f5; font-weight: 600; }
+    tr:nth-child(even) { background: #fafafa; }
+    pre, code { background: #f5f5f5; font-family: ui-monospace, monospace; font-size: 0.9em; }
+    pre { padding: 1rem; overflow-x: auto; border-radius: 4px; border: 1px solid #e0e0e0; }
+    code { padding: 0.15em 0.4em; border-radius: 3px; }
+    pre code { padding: 0; background: none; }
+    hr { border: none; border-top: 1px solid #ddd; margin: 2rem 0; }
+    a { color: #0066cc; }
+    a:hover { text-decoration: underline; }
+    strong { font-weight: 600; }
+    .purpose { margin: 1rem 0; padding: 0.75rem; background: #f8f9fa; border-left: 4px solid #0066cc; }
+    .footer { margin-top: 2rem; font-size: 0.9em; color: #666; }
+  </style>
+</head>
+<body>
+
+<h1>Sub-Agents: Strategic Exploration for Level 5</h1>
+
+<div class="purpose"><strong>Purpose:</strong> Assess whether Rasa's official <strong>sub-agents</strong> (ReAct and External/A2A) could be integrated into the Level 5 bot, and how, without making any implementation changes yet.</div>
+
+<hr>
+
+<h2>1. What the Official Rasa Docs Say About Sub-Agents</h2>
+
+<h3>1.1 Two Types (Beta, Rasa 3.14+)</h3>
+
+<table>
+  <thead>
+    <tr><th>Type</th><th>Protocol</th><th>Description</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>ReAct Sub Agent</strong></td>
+      <td>RASA</td>
+      <td>Built-in autonomous agent that uses <strong>MCP tools</strong> and/or <strong>custom Python tools</strong> in a ReAct loop. Can be general-purpose (open-ended) or task-specific (slot-filling with <code>exit_if</code>).</td>
+    </tr>
+    <tr>
+      <td><strong>External Sub Agent</strong></td>
+      <td>A2A</td>
+      <td>External agent (different stack/team) connected via Agent-to-Agent protocol. Rasa orchestrates; context and handoff are managed via A2A.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>1.2 How They Are Invoked</h3>
+
+<ul>
+  <li>Both are invoked from a <strong>flow</strong> using an <strong>autonomous step</strong>:
+    <pre><code>- call: agent_name</code></pre>
+  </li>
+  <li>For <strong>task-specific ReAct</strong> agents, you can add <strong>exit conditions</strong>:
+    <pre><code>- call: booking_agent
+  exit_if:
+    - slots.appointment_time is not null</code></pre>
+  </li>
+  <li>Sub-agents <strong>take control</strong> of the conversation until they signal completion (or exit conditions are met), then control returns to the main flow.</li>
+</ul>
+
+<h3>1.3 ReAct Sub-Agent Details (Relevant to Level 5)</h3>
+
+<ul>
+  <li><strong>Configuration:</strong> Each sub-agent lives under <code>sub_agents/&lt;agent_name&gt;/</code> with its own <code>config.yml</code>.</li>
+  <li><strong>Connections:</strong> The <code>connections</code> section is <strong>mandatory</strong>: at least one <strong>MCP server</strong> must be configured. Custom Python tools can be added <em>in addition</em> via <code>get_custom_tool_definitions()</code> in a custom module.</li>
+  <li><strong>General-purpose:</strong> Uses a built-in <code>task_completed</code> tool to signal "I'm done"; no slot-based exit.</li>
+  <li><strong>Task-specific:</strong> Gets automatic <code>set_slot_&lt;slot_name&gt;</code> tools for each slot in <code>exit_if</code>; completes when those conditions are satisfied.</li>
+  <li><strong>Context:</strong> Sub-agents receive user message, conversation history, slots, and events; they can update slots and send messages.</li>
+</ul>
+
+<h3>1.4 External (A2A) Sub-Agent Details</h3>
+
+<ul>
+  <li><strong>Configuration:</strong> <code>sub_agents/&lt;name&gt;/config.yml</code> with <code>protocol: A2A</code> and an <strong>agent card</strong> (local file or URL). Optional auth (API key, OAuth, token).</li>
+  <li><strong>Use case:</strong> Integrating agents built by other teams or on other tech stacks. Not for "extending our same bot with another process in the same repo" in the simple sense.</li>
+</ul>
+
+<hr>
+
+<h2>2. What Level 5 Does Today</h2>
+
+<ul>
+  <li><strong>Single agent</strong> with <strong>tool calling</strong>:
+    <ul>
+      <li><code>endpoints.yml</code>: <code>tools_module: "tools"</code> → <code>tools/banking_tools.py</code> (e.g. <code>check_balance</code>, <code>process_transfer</code>, <code>get_account_info</code>).</li>
+      <li>The <strong>main agent's LLM</strong> decides when to call these tools during the conversation.</li>
+    </ul>
+  </li>
+  <li><strong>Flow pattern:</strong> e.g. <code>transfer_money_tools</code>: <code>collect</code> steps (amount, recipient, account_from) then <code>action: action_process_transfer_with_tools</code>. No handoff to another "agent."</li>
+  <li><strong>Concept taught:</strong> "LLM dynamically selects and calls functions (tools) based on context."</li>
+</ul>
+
+<p>So: Level 5 = <strong>one agent + tools</strong>. Sub-agents = <strong>orchestrator + one or more child agents</strong> (each with its own ReAct loop or external A2A service).</p>
+
+<hr>
+
+<h2>3. Conceptual Fit: Sub-Agents vs Level 5</h2>
+
+<table>
+  <thead>
+    <tr><th>Aspect</th><th>Level 5 (current)</th><th>Sub-agents</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>Architecture</strong></td><td>One agent, one LLM, tools in same process</td><td>Orchestrator + sub-agents (each can have own LLM, tools, MCP)</td></tr>
+    <tr><td><strong>Who calls tools</strong></td><td>Main agent's LLM</td><td>Sub-agent's ReAct loop (or external A2A agent)</td></tr>
+    <tr><td><strong>Invocation</strong></td><td>Tools called during normal flow/action</td><td>Flow step <code>- call: agent_name</code> hands off until sub-agent completes</td></tr>
+    <tr><td><strong>Completion</strong></td><td>After action/tool use, flow continues</td><td>Sub-agent runs until it signals done (<code>task_completed</code> or <code>exit_if</code>)</td></tr>
+    <tr><td><strong>Use case</strong></td><td>"LLM picks which tools to call in this flow"</td><td>"Delegate this whole task to another agent (exploratory or slot-filling)"</td></tr>
+  </tbody>
+</table>
+
+<p>So sub-agents are a <strong>different pattern</strong> (delegation/orchestration), not a drop-in replacement for Level 5's tool calling.</p>
+
+<hr>
+
+<h2>4. Could Sub-Agents Be "Easily" Integrated into Level 5?</h2>
+
+<h3>4.1 ReAct Sub-Agent</h3>
+
+<ul>
+  <li><strong>Conceptually:</strong> Yes. You could add a "banking assistant" ReAct sub-agent that has access to tools (e.g. balance, transfer) and is invoked with <code>- call: banking_assistant</code> (and optionally <code>exit_if</code> for task-specific behaviour).</li>
+  <li><strong>Practically:</strong>
+    <ul>
+      <li>ReAct sub-agents <strong>require</strong> at least one <strong>MCP server</strong> in <code>connections.mcp_servers</code>. Level 5 currently has <strong>no MCP</strong> (only <code>tools_module</code>).</li>
+      <li>So you'd need to either:
+        <ul>
+          <li>Expose the existing banking tools via an <strong>MCP server</strong> and point the ReAct agent at it, or</li>
+          <li>Add a minimal MCP server that wraps the same logic, and keep custom Python tools only as an <em>extra</em> on top of that.</li>
+        </ul>
+      </li>
+      <li>You also need: <code>sub_agents/&lt;name&gt;/config.yml</code>, optional prompt template, optional custom module (e.g. for <code>process_input</code> / <code>process_output</code> or custom tools).</li>
+    </ul>
+  </li>
+  <li><strong>Verdict:</strong> <strong>Not "easy"</strong> in the sense of "add one file and one step." It requires new concepts (orchestration, <code>call</code> step, sub-agent config, MCP or MCP+Python tools) and new infrastructure (MCP server or integration). Better treated as a <strong>separate level or advanced module</strong> (e.g. Level 6: "Orchestration and sub-agents") rather than a small change inside Level 5.</li>
+</ul>
+
+<h3>4.2 External (A2A) Sub-Agent</h3>
+
+<ul>
+  <li><strong>Fit for "extend Level 5 bot":</strong> Low. A2A is for <strong>external</strong> agents (different process/team/stack). You could use Level 5 as the <strong>orchestrator</strong> and call an external "banking service" agent via A2A, but that's an integration/architecture topic, not a simple extension of the current Level 5 codebase.</li>
+  <li><strong>Verdict:</strong> Not a natural "integrate into Level 5" feature; more of a "Level 5 bot as orchestrator of external systems" scenario.</li>
+</ul>
+
+<hr>
+
+<h2>5. Strategic Options</h2>
+
+<h3>Option A: Leave Level 5 As-Is (Recommended for now)</h3>
+
+<ul>
+  <li>Level 5 already teaches <strong>dynamic tool selection</strong> by the LLM without orchestration or MCP.</li>
+  <li>No curriculum or code change; no dependency on 3.14 beta or MCP.</li>
+</ul>
+
+<h3>Option B: Add a Future Level (e.g. Level 6) on Sub-Agents</h3>
+
+<ul>
+  <li><strong>Topic:</strong> "Orchestration and sub-agents" (ReAct first; A2A as optional/advanced).</li>
+  <li><strong>Scope:</strong> One ReAct sub-agent (e.g. "transfer assistant") with:
+    <ul>
+      <li><code>sub_agents/transfer_assistant/config.yml</code></li>
+      <li>At least one MCP server (e.g. a small server exposing <code>check_balance</code> / <code>process_transfer</code> or a generic tool server), plus optional custom Python tools</li>
+      <li>A flow that uses <code>- call: transfer_assistant</code> (and optionally <code>exit_if</code> for task-specific behaviour)</li>
+    </ul>
+  </li>
+  <li><strong>Prerequisites:</strong> Rasa 3.14+, MCP server setup, understanding of <code>call</code> step and exit conditions.</li>
+  <li><strong>Benefit:</strong> Clear progression: Level 5 = tools in one agent; Level 6 = delegating a task to another agent.</li>
+</ul>
+
+<h3>Option C: Minimal "Sub-agent flavour" Inside Level 5 (Not recommended)</h3>
+
+<ul>
+  <li>Try to squeeze a ReAct sub-agent into Level 5 without a full "Level 6" story. Con: Level 5 would mix two different paradigms (tool calling vs orchestration) and require MCP and 3.14 beta, which complicates the course and support.</li>
+</ul>
+
+<hr>
+
+<h2>6. Level 5 vs Level 6: Concept Comparison</h2>
+
+<h3>6.1 Concepts Covered in Level 5 (Current)</h3>
+
+<table>
+  <thead>
+    <tr><th>Module</th><th>Concept</th><th>What the student learns</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>0</td><td>Recap Level 4</td><td>Level 4 = multiple slots, transfer flow, action_process_transfer; Level 5 builds on it.</td></tr>
+    <tr><td>1</td><td>Introduction to Tools</td><td>Tools = functions the LLM can call dynamically; tools vs actions (explicit vs dynamic).</td></tr>
+    <tr><td>2</td><td>Tools vs. Actions</td><td>When to use tools (flexible, LLM-driven) vs actions (predictable, flow-driven).</td></tr>
+    <tr><td>3</td><td>Creating Tool Functions</td><td>Python functions in <code>tools/</code>, docstrings, typing, return dicts; <code>__all__</code> for discovery.</td></tr>
+    <tr><td>4</td><td>Registering Tools</td><td><code>endpoints.yml</code> → <code>tools:</code> and <code>tools_module: "tools"</code>.</td></tr>
+    <tr><td>5</td><td>Using Tools in Conversations</td><td>Flows that use tools: collect slots + action that runs in a context where the LLM can call tools.</td></tr>
+    <tr><td>6</td><td>Training and Testing</td><td>Same as earlier levels; train, inspect, test tool-calling flows.</td></tr>
+    <tr><td>7–8</td><td>Putting It Together / Assessment</td><td>Full picture: one agent, one LLM, tools in the same process; when to use tools vs actions.</td></tr>
+  </tbody>
+</table>
+
+<p><strong>Level 5 mental model:</strong> One agent. One conversation. The LLM decides <em>which</em> tools to call and <em>when</em>, but everything runs in the same agent and flow.</p>
+
+<h3>6.2 What Level 6 Would Need to Cover (Sub-Agents)</h3>
+
+<table>
+  <thead>
+    <tr><th>Topic</th><th>Concept</th><th>What the student would need to learn</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>Orchestration</strong></td><td>Main agent as orchestrator</td><td>The Rasa bot can <em>delegate</em> a whole task to another "agent" that runs until it's done, then control returns.</td></tr>
+    <tr><td><strong>Autonomous steps</strong></td><td><code>call</code> step</td><td>Flow step <code>- call: agent_name</code> (and optional <code>exit_if</code>) invokes a sub-agent; flow is paused until the sub-agent completes.</td></tr>
+    <tr><td><strong>Sub-agent types</strong></td><td>ReAct vs External (A2A)</td><td>ReAct = built-in agent with tools (MCP + optional Python). A2A = external service; different stack/team.</td></tr>
+    <tr><td><strong>Sub-agent layout</strong></td><td><code>sub_agents/</code></td><td>Each sub-agent has its own directory and <code>config.yml</code> (name, protocol, description, configuration).</td></tr>
+    <tr><td><strong>MCP (ReAct)</strong></td><td>Model Context Protocol</td><td>ReAct sub-agents <em>require</em> at least one MCP server. What MCP is, why it's used, how to configure it in <code>endpoints.yml</code> and in the sub-agent's <code>connections.mcp_servers</code>.</td></tr>
+    <tr><td><strong>ReAct behaviour</strong></td><td>General-purpose vs task-specific</td><td>General-purpose: open-ended, completes by calling <code>task_completed</code>. Task-specific: fills slots, completes when <code>exit_if</code> conditions are met; gets <code>set_slot_&lt;name&gt;</code> tools.</td></tr>
+    <tr><td><strong>Context and handback</strong></td><td>What the sub-agent sees and returns</td><td>Orchestrator passes context (message, history, slots); sub-agent can update slots and send messages; state is integrated when it finishes.</td></tr>
+    <tr><td><strong>When to use sub-agents</strong></td><td>vs tools in main agent</td><td>Sub-agents for "hand off this whole task"; tools for "main agent chooses which operations to run in this flow."</td></tr>
+    <tr><td><strong>(Optional) A2A</strong></td><td>External sub-agents</td><td>Agent card, auth, when to use external vs ReAct; can be brief or advanced.</td></tr>
+  </tbody>
+</table>
+
+<p><strong>Level 6 mental model:</strong> Orchestrator + sub-agents. The main flow <em>calls</em> an agent that runs its own loop (ReAct or A2A) and then returns control.</p>
+
+<h3>6.3 Side-by-Side Comparison</h3>
+
+<table>
+  <thead>
+    <tr><th>Dimension</th><th>Level 5 (current)</th><th>Level 6 (sub-agents)</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>Main idea</strong></td><td>LLM dynamically selects and calls tools in the same agent.</td><td>Main agent delegates a task to another agent that runs until done.</td></tr>
+    <tr><td><strong>Architecture</strong></td><td>Single agent; tools in <code>tools/</code>; <code>endpoints.yml</code> <code>tools_module</code>.</td><td>Orchestrator + sub-agents; <code>sub_agents/&lt;name&gt;/config.yml</code>; ReAct needs MCP.</td></tr>
+    <tr><td><strong>Flow step</strong></td><td><code>action: action_*</code> (and optionally collect before); tools are used <em>inside</em> the agent.</td><td><code>call: agent_name</code> (autonomous step); sub-agent runs independently.</td></tr>
+    <tr><td><strong>Who calls tools</strong></td><td>Main agent's LLM.</td><td>Sub-agent's ReAct loop (or external A2A agent).</td></tr>
+    <tr><td><strong>Completion</strong></td><td>After the action (and any tool calls) the flow continues to the next step.</td><td>Sub-agent signals completion (<code>task_completed</code> or <code>exit_if</code>); then flow continues.</td></tr>
+    <tr><td><strong>Config surface</strong></td><td><code>endpoints.yml</code> (tools), <code>tools/*.py</code>.</td><td><code>sub_agents/&lt;name&gt;/config.yml</code>, MCP in <code>endpoints.yml</code>, optional prompt template and custom module.</td></tr>
+    <tr><td><strong>New infra</strong></td><td>None beyond Rasa + tools module.</td><td>MCP server(s) required for ReAct.</td></tr>
+    <tr><td><strong>Prerequisites</strong></td><td>Levels 1–4 (responses, actions, slots, multi-slot flows).</td><td>Level 5 (tools, flows, slots); Rasa 3.14+; MCP concept and setup.</td></tr>
+  </tbody>
+</table>
+
+<h3>6.4 Is It Strategically Reasonable to Grow from Level 5 to Level 6?</h3>
+
+<p><strong>Yes, with clear boundaries.</strong> Reasons:</p>
+
+<ol>
+  <li><strong>Natural progression</strong><br>Level 5 = "one agent, dynamic tool use." Level 6 = "same bot, but some tasks are delegated to another agent." The step from "LLM chooses tools" to "LLM (orchestrator) chooses when to hand off to an agent that uses tools" is a single, understandable extension.</li>
+  <li><strong>Conceptual clarity</strong><br>Keeping sub-agents in a separate level avoids overloading Level 5. Level 5 stays about tools and one-agent behaviour; Level 6 is explicitly about orchestration and the <code>call</code> step.</li>
+  <li><strong>Reuse of existing skills</strong><br>Students already have: flows, slots, actions, and tools (Level 5). Level 6 reuses flows and slots and adds: <code>call</code>, sub-agent config, MCP, and completion behaviour. No need to re-teach fundamentals.</li>
+  <li><strong>Manageable new load</strong><br>The main new pieces are: (a) orchestration and <code>call</code>, (b) <code>sub_agents/</code> and config, (c) MCP (what it is + one server), (d) ReAct general vs task-specific and exit behaviour. That's one level's worth of content, not two.</li>
+  <li><strong>Beta and dependencies</strong><br>Sub-agents are beta and require 3.14+ and MCP. Putting that in Level 6 makes the dependency explicit and keeps Level 5 stable and production-oriented.</li>
+  <li><strong>Optional depth</strong><br>Level 6 can focus on ReAct only; A2A can be a short "when to use external agents" note or an optional advanced section, so scope stays controllable.</li>
+</ol>
+
+<p><strong>Risks to watch:</strong></p>
+<ul>
+  <li>MCP and ReAct are newer; docs and tooling may change.</li>
+  <li>Lab environment must support Rasa 3.14+ and running (or mocking) an MCP server.</li>
+</ul>
+
+<p><strong>Conclusion:</strong> Growing from Level 5 to Level 6 to cover sub-agents is strategically reasonable: one clear step, separated concepts, builds on Level 5, and keeps Level 5 unchanged.</p>
+
+<hr>
+
+<h2>7. Summary Table</h2>
+
+<table>
+  <thead>
+    <tr><th>Question</th><th>Answer</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Can sub-agents be <strong>easily</strong> integrated into the current Level 5 bot?</td><td><strong>No.</strong> They need a different structure (sub_agents/, MCP or MCP+custom tools, <code>call</code> step) and teach a different concept (orchestration).</td></tr>
+    <tr><td>Is the <strong>concept</strong> compatible with Level 5?</td><td><strong>Partially.</strong> ReAct sub-agents are a natural "next step" after "one agent + tools," but they are a step up in complexity.</td></tr>
+    <tr><td>Best way to use sub-agents with this course?</td><td>Introduce them in a <strong>separate level</strong> (e.g. Level 6) focused on orchestration and ReAct (and optionally A2A), with MCP and 3.14+ clearly stated as requirements.</td></tr>
+    <tr><td>Should we change Level 5 now?</td><td><strong>No.</strong> Keep Level 5 as single-agent tool calling; plan sub-agents as a later, dedicated level or optional advanced module.</td></tr>
+    <tr><td>Is growing Level 5 → Level 6 for sub-agents <strong>strategically reasonable</strong>?</td><td><strong>Yes.</strong> Clear progression, separated concepts, builds on Level 5; keep Level 5 unchanged and treat beta/MCP as Level 6 prerequisites.</td></tr>
+  </tbody>
+</table>
+
+<hr>
+
+<h2>8. References (Official Rasa Docs)</h2>
+
+<ul>
+  <li><a href="https://rasa.com/docs/reference/config/agents/overview-agents/">Sub-agents overview</a></li>
+  <li><a href="https://rasa.com/docs/reference/config/agents/react-sub-agents/">ReAct Sub Agent</a></li>
+  <li><a href="https://rasa.com/docs/reference/config/agents/external-sub-agents/">External Sub Agent (A2A)</a></li>
+  <li><a href="https://rasa.com/docs/pro/build/integrating-external-agents">Integrating external agents via A2A</a></li>
+  <li><a href="https://rasa.com/docs/reference/primitives/flow-steps/">Flow steps – Autonomous steps / Call</a> (prescriptive vs autonomous, <code>call</code> step)</li>
+</ul>
+
+<hr>
+
+<p class="footer"><em>Document created for strategic discussion only. No code or Level 5 content has been changed.</em></p>
+
+</body>
+</html>
