@@ -1,0 +1,12 @@
+{
+  "id": "b86bd7ec-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+  "type": "section",
+  "title": "Unit 6: Training And Testing With Actions",
+  "order": [
+    "6-1-Training-with-Actions-c79c",
+    "6-2-Common-Training-Errors-with-Actions-9733",
+    "6-3-Testing-Your-Action-4ae9",
+    "6-4-Debugging-Actions-6978",
+    "Lab-6-1-7710"
+  ]
+}

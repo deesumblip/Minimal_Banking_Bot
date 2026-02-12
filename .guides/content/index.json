@@ -1,17 +1,18 @@
 {
-	"title": "Minimal_Banking_Bot",
-	"theme": "light",
-	"scripts": [],
-	"suppressPageNumbering": true,
-	"useSubmitButtons": true,
-	"useMarkAsComplete": true,
-	"hideMenu": false,
-	"allowGuideClose": false,
-	"collapsedOnStart": false,
-	"hideSectionsToggle": false,
-	"hideBackToDashboard": false,
-	"protectLayout": false,
-	"order": [
-		"Level-1-1-d3b4"
-	]
+  "title": "Minimal_Banking_Bot",
+  "theme": "light",
+  "scripts": [],
+  "suppressPageNumbering": true,
+  "useSubmitButtons": true,
+  "useMarkAsComplete": true,
+  "hideMenu": false,
+  "allowGuideClose": false,
+  "collapsedOnStart": false,
+  "hideSectionsToggle": false,
+  "hideBackToDashboard": false,
+  "protectLayout": false,
+  "order": [
+    "Level-1-1-d3b4",
+    "Chapter-1-2---Custom-Actions-30d6"
+  ]
 }
