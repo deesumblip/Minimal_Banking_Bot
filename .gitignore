@@ -1,6 +1,7 @@
 # secrets
 .env
 .guides/secrets/
+secure/rasa_env
 
 # python
 .venv/
