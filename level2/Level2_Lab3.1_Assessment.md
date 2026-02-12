@@ -142,14 +142,14 @@ else
 fi
 echo ""
 
-# Check 7: run() method exists and uses dispatcher.utter_message (1 point)
+# Check 7: run() method exists, uses dispatcher.utter_message, and returns [] (1 point)
 echo "Check 7: Verifying run() method and message sending..."
-if [ -f "actions/action_holiday_hours.py" ] && grep -q "def run" actions/action_holiday_hours.py 2>/dev/null && grep -q "dispatcher.utter_message" actions/action_holiday_hours.py 2>/dev/null; then
-    echo "✅ Check 7: PASSED - run() method exists and uses dispatcher.utter_message() (1 point)"
+if [ -f "actions/action_holiday_hours.py" ] && grep -q "def run" actions/action_holiday_hours.py 2>/dev/null && grep -q "dispatcher.utter_message" actions/action_holiday_hours.py 2>/dev/null && grep -q 'return \[\]' actions/action_holiday_hours.py 2>/dev/null; then
+    echo "✅ Check 7: PASSED - run() method exists, uses dispatcher.utter_message(), and returns [] (1 point)"
     score=$((score + 1))
 else
-    echo "❌ Check 7: FAILED - run() method missing or dispatcher.utter_message() not found (0 points)"
-    echo "Hint: run() must call dispatcher.utter_message() to send a message to the user"
+    echo "❌ Check 7: FAILED - run() must call dispatcher.utter_message() and return [] (0 points)"
+    echo "Hint: run() must call dispatcher.utter_message() to send a message and return [] at the end"
 fi
 echo ""
 

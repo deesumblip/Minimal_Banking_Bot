@@ -19,11 +19,10 @@
 - All configuration files (`config.yml`, `credentials.yml`, `endpoints.yml`)
 
 **What this level adds:**
-- `actions/` folder with `action_bank_hours.py`
-- `actions:` section in `domain/basics.yml`
-- New flow `data/basics/hours.yml` that uses the action
+- An **example** action and flow (`action_bank_hours`, `hours.yml`) so you can see how actions work.
+- In **Lab 3.1** you create **your own** action (`action_holiday_hours`). In **Labs 4.1 and 5.1** you register it in the domain and add a flow for it (`holiday_hours.yml`).
 
-**Your existing Level 1 banking bot continues to work** - this level adds custom Python code (actions) on top of it!
+**Your existing Level 1 banking bot continues to work** — this level adds custom Python code (actions) on top of it, and you build and wire in your own action.
 
 ## Quick Start
 
@@ -68,16 +67,17 @@
 
 ### Actions Folder (`actions/`)
 - `__init__.py` - Makes the folder a Python package
-- `action_bank_hours.py` - A simple custom action that returns bank hours
+- `action_bank_hours.py` - **Example** action (bank hours by day)
+- You create **action_holiday_hours.py** in Lab 3.1
 
 ### Domain (`domain/basics.yml`)
-- **Added `actions:` section** - Lists all custom actions
+- **Added `actions:` section** - Register both the example action and your action
 - All Level 1 responses remain unchanged
-- Actions must be registered here to be used
+- Actions must be registered here to be used (Lab 4.1)
 
-### New Flow (`data/basics/hours.yml`)
-- Uses `action_bank_hours` instead of `utter_*`
-- Demonstrates calling custom Python code
+### Flows that use actions
+- **hours.yml** - Example flow using `action_bank_hours`
+- You create **holiday_hours.yml** for your action in Lab 5.1
 - All Level 1 flows (greet, help, contact, goodbye) remain unchanged
 
 ## Key Concepts
@@ -94,9 +94,9 @@
 
 ## Exercises
 
-1. **Modify the action:** Edit `actions/action_bank_hours.py` to return different hours.
-2. **Add a new action:** Create `action_holiday_hours.py` that returns holiday hours.
-3. **Use the new action:** Add it to the domain and create a flow that uses it.
+1. **Modify your action:** Edit `actions/action_holiday_hours.py` to return different holiday messages or add simple logic (e.g. different message by month).
+2. **Add another action:** Create a new action (e.g. `action_faq`) and register it in the domain.
+3. **Add a flow for it:** Create a new flow file that uses your new action.
 
 ## Next Level
 

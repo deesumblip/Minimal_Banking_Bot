@@ -1,42 +1,12 @@
 # Module 5: Using Actions in Flows
 
-### 5.1 Actions vs. Responses in Flows
-
-In Level 1, flows used `utter_*` responses. In Level 2, flows can use `action_*` actions.
-
-#### Level 1 Flow (Response)
-
-```yaml
-flows:
-  greet:
-    name: say hello
-    description: Greet the user when they start a conversation.
-    steps:
-      - action: utter_greet  # ← Uses a response
-```
-
-#### Level 2 Flow (Action)
-
-```yaml
-flows:
-  hours:
-    name: bank hours
-    description: Tell the user when the bank is open.
-    steps:
-      - action: action_bank_hours  # ← Uses an action
-```
-
-**Key Difference**: 
-- `utter_*` = Predefined text (response)
-- `action_*` = Custom Python code (action)
-
-Both use `- action:` in the flow, but Rasa knows the difference based on the name.
-
----
-
 ### 5.2 Creating a Flow That Uses an Action
 
-Let's create the `hours.yml` flow that uses `action_bank_hours`.
+You need two flows that use actions: the **example** flow `hours.yml` (for `action_bank_hours`) and **your** flow `holiday_hours.yml` (for the action you created in Lab 3.1, `action_holiday_hours`).
+
+#### The example: hours.yml
+
+If your starter doesn’t already include it, create the `hours.yml` flow that uses `action_bank_hours` as follows.
 
 #### Step-by-Step Tutorial
 
@@ -101,22 +71,29 @@ Check:
 
 ---
 
-### 5.3 Mixing Responses and Actions
+#### Your flow: holiday_hours.yml
 
-You can use both responses and actions in the same flow:
+Create a second flow for the action you built in Lab 3.1.
+
+1. Create a new file: `data/basics/holiday_hours.yml`
+2. Add a flow that uses `action_holiday_hours`:
 
 ```yaml
 flows:
-  hours_and_contact:
-    name: hours and contact
-    description: Tell the user bank hours and provide contact information.
+  holiday_hours:
+    name: holiday hours
+    description: Tell the user when the bank is closed or has limited hours for holidays.
     steps:
-      - action: action_bank_hours      # ← Action (custom code)
-      - action: utter_contact          # ← Response (predefined text)
+      - action: action_holiday_hours
 ```
 
-**Execution order**:
-1. First: Action executes (returns dynamic hours)
-2. Second: Response sends (static contact info)
+- **`holiday_hours:`** – Flow identifier (used by Rasa).
+- **`name:`** – Short human-readable name (e.g. "holiday hours").
+- **`description:`** – Used by the LLM to match user questions (e.g. "What are your holiday hours?" or "Are you open on Christmas?"). Make it clear so the bot can trigger this flow.
+- **`steps:`** – One step: call your action.
+
+After this, you’ll have both the example flow (`hours`) and your own flow (`holiday_hours`) wired up. In Module 6 you’ll train and test both.
+
+**Optional:** The `utter_help` response in the domain lists what the bot can do. After adding the holiday hours flow, you can edit that response to include “Holiday hours” in the list so users know they can ask about it.
 
 ---

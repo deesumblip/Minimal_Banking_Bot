@@ -1,8 +1,39 @@
-# Lab 4.1: Registering Actions in the Domain - Assessment Setup
+# Lab 4.1: Registering Actions in the Domain
+
+## Guide Content (For Students)
+
+**Placement**: This lab follows Module 4: Registering Actions in the Domain.
+
+---
+
+### Your Task
+
+Add an `actions:` section to `domain/basics.yml` (if it isn’t already there) and register **both**:
+
+- **action_bank_hours** – the example action you studied in the modules  
+- **action_holiday_hours** – the action you created in Lab 3.1  
+
+Each action must appear as a list item under `actions:` (e.g. `- action_bank_hours`).
+
+---
+
+### Verification
+
+Before submitting, confirm:
+
+- The file `domain/basics.yml` has an `actions:` section  
+- Both `action_bank_hours` and `action_holiday_hours` are listed  
+- YAML is valid (correct indentation and dashes)  
+
+Run the assessment when you’re done.
+
+---
+
+## Assessment Setup (For Implementers)
 
 ## Overview
 
-This assessment verifies that students can register actions in the domain file with correct YAML syntax and matching action names.
+This assessment verifies that students can register actions in the domain file with correct YAML syntax, including both the example action and the action they created in Lab 3.1.
 
 ### Assessment Type
 
@@ -22,7 +53,7 @@ Save the grader script at:
 cd /home/codio/workspace/level2
 
 score=0
-max_score=10
+max_score=12
 
 echo "Running Lab 4.1 Assessment Checks..."
 echo ""
@@ -77,24 +108,40 @@ else
 fi
 echo ""
 
-# Check 4: Correct YAML syntax (indentation and dash) (2 points)
-echo "Check 4: Verifying YAML syntax..."
+# Check 4: action_holiday_hours is registered (2 points)
+echo "Check 4: Verifying action_holiday_hours is registered..."
+if [ -f "domain/basics.yml" ] && grep -q "action_holiday_hours" domain/basics.yml 2>/dev/null; then
+    if awk '/^actions:/,/^[a-z]/ {if (/action_holiday_hours/) found=1} END {exit !found}' domain/basics.yml 2>/dev/null; then
+        echo "✅ Check 4: PASSED - action_holiday_hours is registered under actions: (2 points)"
+        score=$((score + 2))
+    else
+        echo "⚠️  Check 4: PARTIAL - action_holiday_hours found but may not be under actions: section (1 point)"
+        score=$((score + 1))
+    fi
+else
+    echo "❌ Check 4: FAILED - action_holiday_hours not found in domain file (0 points)"
+    echo "Hint: Add '- action_holiday_hours' under the actions: section (the action you created in Lab 3.1)"
+fi
+echo ""
+
+# Check 5: Correct YAML syntax (indentation and dash) (2 points)
+echo "Check 5: Verifying YAML syntax..."
 if [ -f "domain/basics.yml" ] && (grep -q "^- action_bank_hours" domain/basics.yml 2>/dev/null || grep -q "^- action_bank_hours" domain/basics.yml 2>/dev/null); then
-    echo "✅ Check 4: PASSED - Correct YAML list syntax (dash format) (2 points)"
+    echo "✅ Check 5: PASSED - Correct YAML list syntax (dash format) (2 points)"
     score=$((score + 2))
 else
-    echo "⚠️  Check 4: PARTIAL - Action registered but may have syntax issues (1 point)"
+    echo "⚠️  Check 5: PARTIAL - Action registered but may have syntax issues (1 point)"
     score=$((score + 1))
 fi
 echo ""
 
-# Check 5: Domain file is valid YAML (2 points)
-echo "Check 5: Verifying domain file is valid YAML..."
+# Check 6: Domain file is valid YAML (2 points)
+echo "Check 6: Verifying domain file is valid YAML..."
 if [ -f "domain/basics.yml" ] && python3 -c "import yaml; yaml.safe_load(open('domain/basics.yml'))" 2>/dev/null; then
-    echo "✅ Check 5: PASSED - domain/basics.yml is valid YAML (2 points)"
+    echo "✅ Check 6: PASSED - domain/basics.yml is valid YAML (2 points)"
     score=$((score + 2))
 else
-    echo "❌ Check 5: FAILED - domain/basics.yml has YAML syntax errors or file missing (0 points)"
+    echo "❌ Check 6: FAILED - domain/basics.yml has YAML syntax errors or file missing (0 points)"
     echo "Hint: Check YAML syntax (indentation, colons, dashes)"
 fi
 echo ""
@@ -108,7 +155,7 @@ else
 fi
 echo "=========================================="
 echo ""
-echo "Summary: Check 0 (venv) | Check 1 (domain file) | Check 2 (actions:) | Check 3 (registered) | Check 4 (syntax) | Check 5 (valid YAML)"
+echo "Summary: Check 0 (venv) | Check 1 (domain) | Check 2 (actions:) | Check 3 (action_bank_hours) | Check 4 (action_holiday_hours) | Check 5 (syntax) | Check 6 (valid YAML)"
 echo "Score: $score/$max_score"
 if [ $score -lt $max_score ]; then
     exit 1
@@ -119,8 +166,8 @@ fi
 
 ### General Tab
 - **Name**: Lab 4.1: Registering Actions in the Domain
-- **Description**: Verify that students can register actions in the domain file
-- **Points**: `10`
+- **Description**: Verify that students can register actions in the domain file (both action_bank_hours and action_holiday_hours)
+- **Points**: `12`
 - **Language**: `Bash`
 
 ### Execution Tab
@@ -129,7 +176,7 @@ fi
 - **Working Directory**: `/home/codio/workspace/level2`
 
 ### Grading Tab
-- **Points**: `10`
+- **Points**: `12`
 - **Test Cases**: Single test case
 - **Expected Output**: Should contain "✅ PASS: Action registration verification complete!"
 - **Matching**: Contains (case-insensitive)
@@ -144,14 +191,14 @@ fi
 2. Click **Add Code Test** → **Standard Code Test**
 3. In the **General** tab:
    - Set Name: "Lab 4.1: Registering Actions in the Domain"
-   - Set Points: `10`
+   - Set Points: `12`
    - Set Language: `Bash`
 4. In the **Execution** tab:
    - Set COMMAND: `bash /home/codio/workspace/.guides/assessments/level2_graders/lab_4.1_grader.sh`
    - Set TIMEOUT: `60`
    - Set Working Directory: `/home/codio/workspace/level2`
 5. In the **Grading** tab:
-   - Set Points: `10`
+   - Set Points: `12`
    - Add test case with Expected Output containing "✅ PASS"
    - Set matching to "Contains"
 6. In the **Files** tab:

@@ -91,7 +91,7 @@ if [ -f "actions/action_bank_hours.py" ]; then
     score=$((score + 1))
 else
     echo "❌ Check 4: FAILED - action_bank_hours.py not found (0 points)"
-    echo "Hint: Ensure actions/action_bank_hours.py exists (complete Lab 3.1 first)"
+    echo "Hint: Ensure actions/action_bank_hours.py exists (provided in starter). Lab 3.1 adds your action_holiday_hours.py"
 fi
 echo ""
 

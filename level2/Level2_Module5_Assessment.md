@@ -1,8 +1,37 @@
-# Lab 5.1: Using Actions in Flows - Assessment Setup
+# Lab 5.1: Using Actions in Flows
+
+## Guide Content (For Students)
+
+**Placement**: This lab follows Module 5: Using Actions in Flows.
+
+---
+
+### Your Task
+
+1. **Example flow** – Ensure the `hours` flow exists in `data/basics/hours.yml` and uses `action_bank_hours` (your starter may already include this).
+2. **Your flow** – Create `data/basics/holiday_hours.yml` with a flow that uses **action_holiday_hours** (the action you created in Lab 3.1). The flow should have:
+   - A flow id (e.g. `holiday_hours`)
+   - `name:` and `description:` so the LLM can match questions about holiday hours
+   - `steps:` with `- action: action_holiday_hours`
+
+---
+
+### Verification
+
+Before submitting, confirm:
+
+- `hours.yml` has the `hours` flow and calls `action_bank_hours`
+- `holiday_hours.yml` exists, has a flow (e.g. `holiday_hours`), and calls `action_holiday_hours`
+
+Run the assessment when you're done.
+
+---
+
+## Assessment Setup (For Implementers)
 
 ## Overview
 
-This assessment verifies that students can create a flow file that uses an action, with correct YAML structure and action reference.
+This assessment verifies that students can create flow files that use actions: the example `hours.yml` (action_bank_hours) and their own `holiday_hours.yml` (action_holiday_hours), with correct YAML structure.
 
 ### Assessment Type
 
@@ -22,7 +51,7 @@ Save the grader script at:
 cd /home/codio/workspace/level2
 
 score=0
-max_score=10
+max_score=15
 
 echo "Running Lab 5.1 Assessment Checks..."
 echo ""
@@ -110,6 +139,44 @@ else
 fi
 echo ""
 
+# Check 7: holiday_hours.yml exists (2 points)
+echo "Check 7: Verifying holiday_hours.yml flow file exists..."
+if [ ! -f "data/basics/holiday_hours.yml" ]; then
+    echo "❌ Check 7: FAILED - data/basics/holiday_hours.yml not found (0 points)"
+    echo "Hint: Create holiday_hours.yml in the data/basics/ folder (flow for your action from Lab 3.1)"
+else
+    echo "✅ Check 7: PASSED - holiday_hours.yml file exists (2 points)"
+    score=$((score + 2))
+fi
+echo ""
+
+# Check 8: holiday_hours.yml has flows:, flow id holiday_hours, and uses action_holiday_hours (2 points)
+echo "Check 8: Verifying holiday_hours flow structure..."
+if [ -f "data/basics/holiday_hours.yml" ] && grep -q "^flows:" data/basics/holiday_hours.yml 2>/dev/null && grep -q "^  holiday_hours:" data/basics/holiday_hours.yml 2>/dev/null && grep -q "action_holiday_hours" data/basics/holiday_hours.yml 2>/dev/null; then
+    if grep -q "steps:" data/basics/holiday_hours.yml 2>/dev/null; then
+        echo "✅ Check 8: PASSED - holiday_hours.yml has flows, holiday_hours flow, and uses action_holiday_hours (2 points)"
+        score=$((score + 2))
+    else
+        echo "⚠️  Check 8: PARTIAL - flow found but steps: may be missing (1 point)"
+        score=$((score + 1))
+    fi
+else
+    echo "❌ Check 8: FAILED - holiday_hours.yml needs flows:, a flow named holiday_hours:, and - action: action_holiday_hours (0 points)"
+    echo "Hint: Add flows: then '  holiday_hours:' with name:, description:, steps: and - action: action_holiday_hours"
+fi
+echo ""
+
+# Check 9: holiday_hours flow has name and description (1 point)
+echo "Check 9: Verifying holiday_hours flow has name and description..."
+if [ -f "data/basics/holiday_hours.yml" ] && grep -q "name:" data/basics/holiday_hours.yml 2>/dev/null && grep -q "description:" data/basics/holiday_hours.yml 2>/dev/null; then
+    echo "✅ Check 9: PASSED - Flow has name and description (1 point)"
+    score=$((score + 1))
+else
+    echo "❌ Check 9: FAILED - Flow missing name or description (0 points)"
+    echo "Hint: Add name: and description: to your holiday_hours flow so the LLM can match user questions"
+fi
+echo ""
+
 # Final summary
 echo "=========================================="
 if [ $score -eq $max_score ]; then
@@ -119,7 +186,7 @@ else
 fi
 echo "=========================================="
 echo ""
-echo "Summary: Check 0 (venv) | Check 1 (hours.yml) | Check 2 (flows:) | Check 3 (hours) | Check 4 (name/description) | Check 5 (steps) | Check 6 (action_bank_hours)"
+echo "Summary: Check 0 (venv) | Check 1-6 (hours.yml) | Check 7-9 (holiday_hours.yml)"
 echo "Score: $score/$max_score"
 if [ $score -lt $max_score ]; then
     exit 1
@@ -130,8 +197,8 @@ fi
 
 ### General Tab
 - **Name**: Lab 5.1: Using Actions in Flows
-- **Description**: Verify that students can create a flow that uses an action
-- **Points**: `10`
+- **Description**: Verify that students can create flows that use actions (hours.yml and holiday_hours.yml)
+- **Points**: `15`
 - **Language**: `Bash`
 
 ### Execution Tab
@@ -140,7 +207,7 @@ fi
 - **Working Directory**: `/home/codio/workspace/level2`
 
 ### Grading Tab
-- **Points**: `10`
+- **Points**: `15`
 - **Test Cases**: Single test case
 - **Expected Output**: Should contain "✅ PASS: Flow creation verification complete!"
 - **Matching**: Contains (case-insensitive)
@@ -155,14 +222,14 @@ fi
 2. Click **Add Code Test** → **Standard Code Test**
 3. In the **General** tab:
    - Set Name: "Lab 5.1: Using Actions in Flows"
-   - Set Points: `10`
+   - Set Points: `15`
    - Set Language: `Bash`
 4. In the **Execution** tab:
    - Set COMMAND: `bash /home/codio/workspace/.guides/assessments/level2_graders/lab_5.1_grader.sh`
    - Set TIMEOUT: `60`
    - Set Working Directory: `/home/codio/workspace/level2`
 5. In the **Grading** tab:
-   - Set Points: `10`
+   - Set Points: `15`
    - Add test case with Expected Output containing "✅ PASS"
    - Set matching to "Contains"
 6. In the **Files** tab:
