@@ -66,16 +66,21 @@ def _slug_from_assessment_name(name: str, content: str) -> str:
 
 
 def _page_title_from_content(content: str, fallback: str) -> str:
-    """Prefer first ### (h3) heading (e.g. '### 0.1 Your Level 1 Banking Bot'); else ## or #."""
+    """Prefer first ### (h3) heading (e.g. '### 0.1 Your Level 1 Banking Bot'); else first ## or #."""
+    first_h3 = None
+    first_h2_or_h1 = None
     for line in content.splitlines():
         s = line.strip()
         if s.startswith("### "):
-            return s[4:].strip()
-        if s.startswith("## ") and not s.lower().startswith("## guide"):
-            return s[3:].strip()
-        if s.startswith("# "):
-            return s[2:].strip()
-    return fallback
+            if first_h3 is None:
+                first_h3 = s[4:].strip()
+        elif s.startswith("## ") and not s.lower().startswith("## guide"):
+            if first_h2_or_h1 is None:
+                first_h2_or_h1 = s[3:].strip()
+        elif s.startswith("# "):
+            if first_h2_or_h1 is None:
+                first_h2_or_h1 = s[2:].strip()
+    return first_h3 or first_h2_or_h1 or fallback
 
 
 def collect_level2_pages():
