@@ -66,13 +66,15 @@ def _slug_from_assessment_name(name: str, content: str) -> str:
 
 
 def _page_title_from_content(content: str, fallback: str) -> str:
-    """First # or ## heading, or fallback."""
+    """Prefer first ### (h3) heading (e.g. '### 0.1 Your Level 1 Banking Bot'); else ## or #."""
     for line in content.splitlines():
         s = line.strip()
-        if s.startswith("# "):
-            return s[2:].strip()
+        if s.startswith("### "):
+            return s[4:].strip()
         if s.startswith("## ") and not s.lower().startswith("## guide"):
             return s[3:].strip()
+        if s.startswith("# "):
+            return s[2:].strip()
     return fallback
 
 
