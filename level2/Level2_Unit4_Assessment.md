@@ -2,7 +2,7 @@
 
 ## Guide Content (For Students)
 
-**Placement**: This lab follows Module 4: Registering Actions in the Domain.
+**Placement**: This lab follows Unit 4: Registering Actions in the Domain.
 
 ---
 
@@ -10,7 +10,7 @@
 
 Add an `actions:` section to `domain/basics.yml` (if it isn’t already there) and register **both**:
 
-- **action_bank_hours** – the example action you studied in the modules  
+- **action_bank_hours** – the example action you studied in the units  
 - **action_holiday_hours** – the action you created in Lab 3.1  
 
 Each action must appear as a list item under `actions:` (e.g. `- action_bank_hours`).

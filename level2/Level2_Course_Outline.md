@@ -11,7 +11,7 @@
 
 ## Course Structure
 
-### Module 0: Recap - What You Built in Level 1
+### Unit 0: Recap - What You Built in Level 1
 **Type**: Content Page  
 **Assessment**: None
 
@@ -29,7 +29,7 @@
 
 ---
 
-### Module 1: Introduction to Actions
+### Unit 1: Introduction to Actions
 **Type**: Content Page  
 **Assessment**: None
 
@@ -50,7 +50,7 @@
 
 ---
 
-### Module 2: Understanding the Action Class
+### Unit 2: Understanding the Action Class
 **Type**: Content Page  
 **Assessment**: None
 
@@ -72,7 +72,7 @@
 
 ---
 
-### Module 3: Creating Your First Action
+### Unit 3: Creating Your First Action
 **Type**: Lab (with Assessment)  
 **Assessment**: Lab 3.1 - Creating Your First Action (10 points)
 
@@ -89,18 +89,19 @@
 
 **Key Concepts**: Creating action files, Python class structure, imports
 
-**Assessment Checks**:
+**Assessment Checks** (Lab 3.1 verifies student-created `action_holiday_hours.py`):
 - Virtual environment exists
 - Actions folder exists
 - `__init__.py` exists
-- `action_bank_hours.py` exists
+- `action_holiday_hours.py` exists (created by student)
 - Correct imports
-- Action class inherits from Action
-- `name()` method exists and returns correct value
+- Action class inherits from Action (`ActionHolidayHours`)
+- `name()` method exists and returns `"action_holiday_hours"`
+- `run()` uses `dispatcher.utter_message()` and returns `[]`
 
 ---
 
-### Module 4: Registering Actions in the Domain
+### Unit 4: Registering Actions in the Domain
 **Type**: Lab (with Assessment)  
 **Assessment**: Lab 4.1 - Registering Actions in the Domain (10 points)
 
@@ -129,7 +130,7 @@
 
 ---
 
-### Module 5: Using Actions in Flows
+### Unit 5: Using Actions in Flows
 **Type**: Lab (with Assessment)  
 **Assessment**: Lab 5.1 - Using Actions in Flows (10 points)
 
@@ -159,7 +160,7 @@
 
 ---
 
-### Module 6: Training and Testing with Actions
+### Unit 6: Training and Testing with Actions
 **Type**: Lab (with Assessment)  
 **Assessment**: Lab 6.1 - Training and Testing with Actions (10 points)
 
@@ -193,7 +194,7 @@
 
 ---
 
-### Module 7: Putting It All Together
+### Unit 7: Putting It All Together
 **Type**: Content Page  
 **Assessment**: None
 
@@ -213,7 +214,7 @@
 
 ---
 
-### Module 8: Assessment and Next Steps
+### Unit 8: Assessment and Next Steps
 **Type**: Content Page (Knowledge Check)  
 **Assessment**: None (knowledge check questions only)
 
@@ -263,12 +264,12 @@
 
 ## Assessment Summary
 
-| Module | Lab | Points | Type | Grader Script |
+| Unit | Lab | Points | Type | Grader Script |
 |--------|-----|--------|------|---------------|
-| 3 | Lab 3.1 | 10 | Standard Code Test | `lab_3.1_grader.sh` |
-| 4 | Lab 4.1 | 10 | Standard Code Test | `lab_4.1_grader.sh` |
-| 5 | Lab 5.1 | 10 | Standard Code Test | `lab_5.1_grader.sh` |
-| 6 | Lab 6.1 | 10 | Standard Code Test | `lab_6.1_grader.sh` |
+| Unit 3 | Lab 3.1 | 10 | Standard Code Test | `lab_3.1_grader.sh` |
+| Unit 4 | Lab 4.1 | 10 | Standard Code Test | `lab_4.1_grader.sh` |
+| Unit 5 | Lab 5.1 | 10 | Standard Code Test | `lab_5.1_grader.sh` |
+| Unit 6 | Lab 6.1 | 10 | Standard Code Test | `lab_6.1_grader.sh` |
 
 **Total Assessment Points**: 40 points
 
@@ -277,23 +278,20 @@
 ## File Organization
 
 ### Content Files (Copy/Paste into Codio)
-- `Level2_Module0_Content.md` - Module 0 content
-- `Level2_Module1_Content.md` - Module 1 content
-- `Level2_Module2_Content.md` - Module 2 content
-- `Level2_Module3_Content.md` - Module 3 content
-- `Level2_Module4_Content.md` - Module 4 content
-- `Level2_Module5_Content.md` - Module 5 content
-- `Level2_Module6_Content.md` - Module 6 content
-- `Level2_Module7_Content.md` - Module 7 content
-- `Level2_Module8_Content.md` - Module 8 content
+Content is split by subsection (one file per numbered subsection). Examples:
+- **Unit 0**: `Level2_Unit0_Content_0.1_*.md`, `Level2_Unit0_Content_0.2_*.md`
+- **Unit 1**: `Level2_Unit1_Content_1.1_*.md` … `1.3_*.md`
+- **Unit 2**: `Level2_Unit2_Content_2.1_*.md`, `2.2_*.md`
+- **Unit 3**: `Level2_Unit3_Content_3.1_Step-by-Step-Creating-an-Action.md`, `Level2_Unit3_Content_3.2_Understanding-Action-Execution.md`
+- **Units 4–8**: `Level2_UnitN_Content_N.M_*.md` (see level2 folder for full list)
 - `Level2_Troubleshooting_Content.md` - Troubleshooting guide
 - `Level2_AdditionalResources_Content.md` - Extension exercises
 
 ### Assessment Files (Implementation Instructions)
-- `Level2_Module3_Assessment.md` - Lab 3.1 setup
-- `Level2_Module4_Assessment.md` - Lab 4.1 setup
-- `Level2_Module5_Assessment.md` - Lab 5.1 setup
-- `Level2_Module6_Assessment.md` - Lab 6.1 setup
+- `Level2_Lab3.1_Assessment.md` - Lab 3.1 setup
+- `Level2_Unit4_Assessment.md` - Lab 4.1 setup
+- `Level2_Unit5_Assessment.md` - Lab 5.1 setup
+- `Level2_Unit6_Assessment.md` - Lab 6.1 setup
 
 ### Implementation Files
 - `Level2_Implementation_Overview.md` - Codio team guide
@@ -304,24 +302,28 @@
 ## Learning Path
 
 ```
-Module 0: Recap
+Unit 0: Recap
     ↓
-Module 1: Introduction to Actions (Conceptual)
+Unit 1: Introduction to Actions (Conceptual)
     ↓
-Module 2: Understanding the Action Class (Conceptual)
+Unit 2: Understanding the Action Class (Conceptual)
     ↓
-Module 3: Creating Your First Action (Hands-on Lab) ✓ Assessment
+[Optional: Lab 2.1 – Explore the actions/ folder (MC/FIB)]
     ↓
-Module 4: Registering Actions (Hands-on Lab) ✓ Assessment
+Unit 3: Creating Your First Action (Hands-on Lab) ✓ Lab 3.1 Assessment
     ↓
-Module 5: Using Actions in Flows (Hands-on Lab) ✓ Assessment
+Unit 4: Registering Actions (Hands-on Lab) ✓ Lab 4.1 Assessment
     ↓
-Module 6: Training and Testing (Hands-on Lab) ✓ Assessment
+Unit 5: Using Actions in Flows (Hands-on Lab) ✓ Lab 5.1 Assessment
     ↓
-Module 7: Putting It All Together (Integration)
+Unit 6: Training and Testing (Hands-on Lab) ✓ Lab 6.1 Assessment
     ↓
-Module 8: Assessment and Next Steps (Review)
+Unit 7: Putting It All Together (Integration)
+    ↓
+Unit 8: Assessment and Next Steps (Review)
 ```
+
+**Note:** Lab 2.1 (Exploring the Actions Folder) is optional and fits after Unit 2. It reinforces the action class structure with multiple-choice and fill-in-the-blank questions; the main sequence continues with Unit 3 and Lab 3.1.
 
 ---
 
@@ -344,19 +346,19 @@ By the end of Level 2, students should be able to:
 - **Environment**: Codio (Linux Ubuntu 22.04)
 - **Python**: 3.11
 - **Rasa**: Rasa Pro (latest stable)
-- **Port Forwarding**: Required for Module 6 (Rasa Inspector)
+- **Port Forwarding**: Required for Unit 6 (Rasa Inspector)
 - **Prerequisites**: Level 1 completed
 
 ---
 
 ## Estimated Time
 
-- **Module 0-2**: 30-45 minutes (conceptual content)
-- **Module 3**: 45-60 minutes (lab + assessment)
-- **Module 4**: 30-45 minutes (lab + assessment)
-- **Module 5**: 30-45 minutes (lab + assessment)
-- **Module 6**: 45-60 minutes (lab + assessment + testing)
-- **Module 7-8**: 30-45 minutes (integration + review)
+- **Unit 0-2**: 30-45 minutes (conceptual content)
+- **Unit 3**: 45-60 minutes (lab + assessment)
+- **Unit 4**: 30-45 minutes (lab + assessment)
+- **Unit 5**: 30-45 minutes (lab + assessment)
+- **Unit 6**: 45-60 minutes (lab + assessment + testing)
+- **Unit 7-8**: 30-45 minutes (integration + review)
 
 **Total Estimated Time**: 4-5 hours
 

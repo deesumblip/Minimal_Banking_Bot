@@ -1,4 +1,4 @@
-# Module 6: Training and Testing with Actions
+# Unit 6: Training and Testing with Actions
 
 ### 6.2 Common Training Errors with Actions
 

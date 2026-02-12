@@ -1,4 +1,4 @@
-# Module 4: Registering Actions in the Domain
+# Unit 4: Registering Actions in the Domain
 
 ### 4.2 The Actions Section
 

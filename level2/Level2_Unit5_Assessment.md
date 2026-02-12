@@ -2,7 +2,7 @@
 
 ## Guide Content (For Students)
 
-**Placement**: This lab follows Module 5: Using Actions in Flows.
+**Placement**: This lab follows Unit 5: Using Actions in Flows.
 
 ---
 

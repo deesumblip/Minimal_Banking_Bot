@@ -6,7 +6,7 @@
 
 ---
 
-## 1. Module 4 (Registering Actions) + Lab 4.1
+## 1. Unit 4 (Registering Actions) + Lab 4.1
 
 **Content changes:**
 - **4.1 / 4.2 / 4.3:** Keep the explanation and step-by-step for the `actions:` section. Add one clear line: *"Register both the example action (`action_bank_hours`) and the action you created in Lab 3.1 (`action_holiday_hours`)."*
@@ -21,7 +21,7 @@
 
 ---
 
-## 2. Module 5 (Using Actions in Flows) + Lab 5.1
+## 2. Unit 5 (Using Actions in Flows) + Lab 5.1
 
 **Content changes:**
 - **5.1:** Keep the comparison of responses vs actions; keep `hours` / `action_bank_hours` as the example.
@@ -37,7 +37,7 @@
 
 ---
 
-## 3. Module 6 (Training and Testing)
+## 3. Unit 6 (Training and Testing)
 
 **Content changes:**
 - **6.1:** No structural change; training still loads all actions and flows.
@@ -48,7 +48,7 @@ No grader change for Lab 6.1 (still "model exists, training succeeded"); the lab
 
 ---
 
-## 4. Module 7 (Putting It All Together)
+## 4. Unit 7 (Putting It All Together)
 
 **Content changes:**
 - **7.1 Walkthrough:** Add a third turn: user asks about holiday hours → `holiday_hours` flow → `action_holiday_hours` runs. Keep the existing turns (greet, hours, contact).
@@ -57,7 +57,7 @@ No grader change for Lab 6.1 (still "model exists, training succeeded"); the lab
 
 ---
 
-## 5. Module 8 (Assessment and Next Steps)
+## 5. Unit 8 (Assessment and Next Steps)
 
 **Content changes:**
 - **8.2 What You've Learned:** Add a bullet: *"Can register your own action and create a flow that uses it."*
@@ -86,13 +86,13 @@ No grader change for Lab 6.1 (still "model exists, training succeeded"); the lab
 
 | Item | Change |
 |------|--------|
-| **Module 4 content** | Say "register both action_bank_hours and action_holiday_hours"; 4.4 show both in list. |
+| **Unit 4 content** | Say "register both action_bank_hours and action_holiday_hours"; 4.4 show both in list. |
 | **Lab 4.1** | Grader: require `action_holiday_hours` in domain; student instructions: register both actions. |
-| **Module 5 content** | 5.2: add "Your flow: holiday_hours.yml" using action_holiday_hours. |
+| **Unit 5 content** | 5.2: add "Your flow: holiday_hours.yml" using action_holiday_hours. |
 | **Lab 5.1** | Grader: require holiday_hours.yml + structure + action_holiday_hours; student instructions: create hours.yml (if needed) and holiday_hours.yml. |
-| **Module 6** | 6.3: add "test both regular and holiday hours." |
-| **Module 7** | 7.1: add holiday-hours turn; 7.2: list both actions and both flows. |
-| **Module 8** | 8.2 + 8.5: add bullets/checklist for "your action registered" and "your flow." |
+| **Unit 6** | 6.3: add "test both regular and holiday hours." |
+| **Unit 7** | 7.1: add holiday-hours turn; 7.2: list both actions and both flows. |
+| **Unit 8** | 8.2 + 8.5: add bullets/checklist for "your action registered" and "your flow." |
 | **README** | Clarify example vs. your action; align exercises. |
 
 ---

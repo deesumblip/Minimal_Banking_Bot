@@ -1,4 +1,4 @@
-# Module 2: Understanding the Action Class
+# Unit 2: Understanding the Action Class
 
 ### 2.1 The Action Class Deep Dive
 

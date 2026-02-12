@@ -1,4 +1,4 @@
-# Module 0: Recap - What You Built in Level 1
+# Unit 0: Recap - What You Built in Level 1
 
 ### 0.1 Your Level 1 Banking Bot
 

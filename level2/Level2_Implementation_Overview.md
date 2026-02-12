@@ -12,17 +12,17 @@ This document provides implementation guidance for **Level 2: Simple Actions** o
 
 ### Content Integration Strategy
 
-- The full content from the implementation guide is split into separate module files:
-  - `Level2_Module0_Content.md` through `Level2_Module8_Content.md` - Student-facing content
+- The full content from the implementation guide is split into separate unit files:
+  - `Level2_Unit0_Content.md` through `Level2_Unit8_Content.md` - Student-facing content
   - `Level2_Troubleshooting_Content.md` - Troubleshooting guide
   - `Level2_AdditionalResources_Content.md` - Extension exercises and resources
-- Each module's content can be copy/pasted directly into Codio Guide Editor content pages
+- Each unit's content can be copy/pasted directly into Codio Guide Editor content pages
 - Exercises should be implemented as **auto-graded labs** wherever possible
 - Assessment setup instructions are provided in separate assessment files:
-  - `Level2_Module3_Assessment.md` - Lab 3.1: Creating Your First Action
-  - `Level2_Module4_Assessment.md` - Lab 4.1: Registering Actions in the Domain
-  - `Level2_Module5_Assessment.md` - Lab 5.1: Using Actions in Flows
-  - `Level2_Module6_Assessment.md` - Lab 6.1: Training and Testing with Actions
+  - `Level2_Lab3.1_Assessment.md` - Lab 3.1: Creating Your First Action
+  - `Level2_Unit4_Assessment.md` - Lab 4.1: Registering Actions in the Domain
+  - `Level2_Unit5_Assessment.md` - Lab 5.1: Using Actions in Flows
+  - `Level2_Unit6_Assessment.md` - Lab 6.1: Training and Testing with Actions
 
 ---
 
@@ -70,9 +70,9 @@ project/
 
 **Port Configuration**:
 - Rasa Inspector: 5005 (default)
-- **Port Forwarding**: Required for Module 6 (Testing with Rasa Inspector)
+- **Port Forwarding**: Required for Unit 6 (Testing with Rasa Inspector)
   - Students need to access Inspector via browser
-  - See Module 6 content for detailed port forwarding instructions
+  - See Unit 6 content for detailed port forwarding instructions
 
 ---
 
@@ -118,9 +118,9 @@ project/
 
 ## Terminal Configuration
 
-### Module 6: Rasa Inspector Setup
+### Unit 6: Rasa Inspector Setup
 
-For Module 6 (Testing with Actions), configure the terminal so students can "jump right in":
+For Unit 6 (Testing with Actions), configure the terminal so students can "jump right in":
 
 **Terminal Tab Configuration**:
 - **Initial Command**: 
@@ -139,7 +139,7 @@ For Module 6 (Testing with Actions), configure the terminal so students can "jum
   - **Preview** menu → **Ports**
   - Bottom panel tabs → **Ports**
 - Direct URL format: `https://your-project-5005.codio.io`
-- See `Level2_Module6_Content.md` for detailed student instructions
+- See `Level2_Unit6_Content.md` for detailed student instructions
 
 ---
 
@@ -150,9 +150,9 @@ For Module 6 (Testing with Actions), configure the terminal so students can "jum
 - [ ] Auto-grader messages are specific and helpful
 - [ ] At least one "happy-path" conversation is validated for this level's new capability
 - [ ] Virtual environment setup is consistent across all labs
-- [ ] Port forwarding is configured and accessible for Module 6
+- [ ] Port forwarding is configured and accessible for Unit 6
 - [ ] All grader scripts are executable and use correct paths
-- [ ] Terminal is pre-configured for Module 6 (cd + venv activation)
+- [ ] Terminal is pre-configured for Unit 6 (cd + venv activation)
 - [ ] Level 1 content remains intact (Level 2 builds on Level 1)
 
 ---
@@ -160,23 +160,23 @@ For Module 6 (Testing with Actions), configure the terminal so students can "jum
 ## File Organization
 
 ### Content Files (Copy/Paste into Codio Guide Editor)
-- `Level2_Module0_Content.md` - Recap of Level 1
-- `Level2_Module1_Content.md` - Introduction to Actions
-- `Level2_Module2_Content.md` - Understanding the Action Class
-- `Level2_Module3_Content.md` - Creating Your First Action
-- `Level2_Module4_Content.md` - Registering Actions in the Domain
-- `Level2_Module5_Content.md` - Using Actions in Flows
-- `Level2_Module6_Content.md` - Training and Testing with Actions
-- `Level2_Module7_Content.md` - Putting It All Together
-- `Level2_Module8_Content.md` - Assessment and Next Steps
+- `Level2_Unit0_Content.md` - Recap of Level 1
+- `Level2_Unit1_Content.md` - Introduction to Actions
+- `Level2_Unit2_Content.md` - Understanding the Action Class
+- `Level2_Unit3_Content_3.1_*.md`, `Level2_Unit3_Content_3.2_*.md` - Creating Your First Action (Unit 3)
+- `Level2_Unit4_Content.md` - Registering Actions in the Domain
+- `Level2_Unit5_Content.md` - Using Actions in Flows
+- `Level2_Unit6_Content.md` - Training and Testing with Actions
+- `Level2_Unit7_Content.md` - Putting It All Together
+- `Level2_Unit8_Content.md` - Assessment and Next Steps
 - `Level2_Troubleshooting_Content.md` - Troubleshooting Guide
 - `Level2_AdditionalResources_Content.md` - Extension Exercises
 
 ### Assessment Files (Implementation Instructions)
-- `Level2_Module3_Assessment.md` - Lab 3.1 setup instructions
-- `Level2_Module4_Assessment.md` - Lab 4.1 setup instructions
-- `Level2_Module5_Assessment.md` - Lab 5.1 setup instructions
-- `Level2_Module6_Assessment.md` - Lab 6.1 setup instructions
+- `Level2_Lab3.1_Assessment.md` - Lab 3.1 setup instructions
+- `Level2_Unit4_Assessment.md` - Lab 4.1 setup instructions
+- `Level2_Unit5_Assessment.md` - Lab 5.1 setup instructions
+- `Level2_Unit6_Assessment.md` - Lab 6.1 setup instructions
 
 ### Implementation Files
 - `Level2_Implementation_Overview.md` - This file (for Codio team)
@@ -189,7 +189,7 @@ For Module 6 (Testing with Actions), configure the terminal so students can "jum
 - Level 1 must be completed first (all Level 1 files remain)
 - Rasa Pro installed and licensed
 - Virtual environment with Rasa Pro
-- Port forwarding capability (for Module 6 testing)
+- Port forwarding capability (for Unit 6 testing)
 
 **Not Required**:
 - SSH access (port forwarding handles Inspector access)
@@ -201,7 +201,7 @@ For Module 6 (Testing with Actions), configure the terminal so students can "jum
 
 1. Review all content files and ensure they're ready for Codio Guide Editor
 2. Set up assessments using the provided grader scripts
-3. Configure terminal settings for Module 6
+3. Configure terminal settings for Unit 6
 4. Test port forwarding for Rasa Inspector access
 5. Verify all grader scripts work correctly
 6. Test end-to-end student workflow

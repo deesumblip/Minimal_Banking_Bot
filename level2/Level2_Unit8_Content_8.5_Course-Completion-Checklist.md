@@ -1,4 +1,4 @@
-# Module 8: Assessment and Next Steps
+# Unit 8: Assessment and Next Steps
 
 ### 8.5 Course Completion Checklist
 

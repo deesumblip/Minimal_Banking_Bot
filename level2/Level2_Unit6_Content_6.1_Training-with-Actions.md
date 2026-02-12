@@ -1,4 +1,4 @@
-# Module 6: Training and Testing with Actions
+# Unit 6: Training and Testing with Actions
 
 ### 6.1 Training with Actions
 
@@ -27,16 +27,16 @@ python -m rasa train
 When you run `rasa train`, Rasa:
 
 1. **Reads all flows** from `data/` folder
-   - Finds `hours.yml` with `action_bank_hours`
+   - Finds `hours.yml` with `action_bank_hours` and `holiday_hours.yml` with `action_holiday_hours`
    - Processes all Level 1 flows (unchanged)
 
 2. **Reads the domain** from `domain/` folder
    - Loads all responses (from Level 1)
-   - Loads all actions (new in Level 2)
+   - Loads all actions (new in Level 2: action_bank_hours, action_holiday_hours)
    - Verifies registered actions exist
 
 3. **Validates actions**:
-   - Checks that `action_bank_hours` exists in `actions/` folder
+   - Checks that each registered action (e.g. `action_bank_hours`, `action_holiday_hours`) exists in the `actions/` folder
    - Verifies the `name()` method returns the registered name
    - Ensures the action class is properly structured
 

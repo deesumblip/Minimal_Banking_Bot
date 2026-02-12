@@ -1,4 +1,4 @@
-# Module 7: Putting It All Together
+# Unit 7: Putting It All Together
 
 ### 7.2 Your Level 2 Banking Bot: Summary
 

@@ -2,7 +2,7 @@
 
 ## Guide Content (For Students)
 
-**Placement**: This lab follows Module 3: Creating Your First Action.
+**Placement**: This lab follows Unit 3: Creating Your First Action.
 
 ---
 

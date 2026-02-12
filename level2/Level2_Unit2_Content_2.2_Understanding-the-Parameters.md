@@ -1,4 +1,4 @@
-# Module 2: Understanding the Action Class
+# Unit 2: Understanding the Action Class
 
 ### 2.2 Understanding the Parameters
 
@@ -42,5 +42,7 @@ responses = domain.get("responses", {})
 ```
 
 For Level 2, you typically don't need to access the domain directly.
+
+**Next**: In Unit 3 you'll use this structure to create your own action, and in Lab 3.1 you'll build `action_holiday_hours.py`.
 
 ---

@@ -1,4 +1,4 @@
-# Module 7: Putting It All Together
+# Unit 7: Putting It All Together
 
 ### 7.1 Complete Bot Walkthrough
 

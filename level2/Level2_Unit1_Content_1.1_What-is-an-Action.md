@@ -1,4 +1,4 @@
-# Module 1: Introduction to Actions
+# Unit 1: Introduction to Actions
 
 ### 1.1 What is an Action?
 

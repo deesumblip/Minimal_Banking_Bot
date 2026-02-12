@@ -1,4 +1,4 @@
-# Module 5: Using Actions in Flows
+# Unit 5: Using Actions in Flows
 
 ### 5.2 Creating a Flow That Uses an Action
 
@@ -92,7 +92,7 @@ flows:
 - **`description:`** – Used by the LLM to match user questions (e.g. "What are your holiday hours?" or "Are you open on Christmas?"). Make it clear so the bot can trigger this flow.
 - **`steps:`** – One step: call your action.
 
-After this, you’ll have both the example flow (`hours`) and your own flow (`holiday_hours`) wired up. In Module 6 you’ll train and test both.
+After this, you’ll have both the example flow (`hours`) and your own flow (`holiday_hours`) wired up. In Unit 6 you’ll train and test both.
 
 **Optional:** The `utter_help` response in the domain lists what the bot can do. After adding the holiday hours flow, you can edit that response to include “Holiday hours” in the list so users know they can ask about it.
 

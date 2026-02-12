@@ -1,4 +1,4 @@
-# Module 5: Using Actions in Flows
+# Unit 5: Using Actions in Flows
 
 ### 5.1 Actions vs. Responses in Flows
 

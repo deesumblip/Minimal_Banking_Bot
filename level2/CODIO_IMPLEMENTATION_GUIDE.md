@@ -28,7 +28,7 @@
 
 ---
 
-## Module 0: Recap - What You Built in Level 1
+## Unit 0: Recap - What You Built in Level 1
 
 ### 0.1 Your Level 1 Banking Bot
 
@@ -97,7 +97,7 @@ Level 2 introduces **Actions** - custom Python code that your bot can execute. T
 
 ---
 
-## Module 1: Introduction to Actions
+## Unit 1: Introduction to Actions
 
 ### 1.1 What is an Action?
 
@@ -200,7 +200,7 @@ class ActionBankHours(Action):
 
 ---
 
-## Module 2: Understanding the Action Class
+## Unit 2: Understanding the Action Class
 
 ### 2.1 The Action Class Deep Dive
 
@@ -364,7 +364,7 @@ For Level 2, you typically don't need to access the domain directly.
 
 ---
 
-## Module 3: Creating Your First Action
+## Unit 3: Creating Your First Action
 
 ### 3.1 Step-by-Step: Creating an Action
 
@@ -453,7 +453,7 @@ When Rasa executes your action:
 
 ---
 
-## Module 4: Registering Actions in the Domain
+## Unit 4: Registering Actions in the Domain
 
 ### 4.1 Why Register Actions?
 
@@ -580,7 +580,7 @@ Each action gets its own line with a dash.
 
 ---
 
-## Module 5: Using Actions in Flows
+## Unit 5: Using Actions in Flows
 
 ### 5.1 Actions vs. Responses in Flows
 
@@ -703,7 +703,7 @@ flows:
 
 ---
 
-## Module 6: Training and Testing with Actions
+## Unit 6: Training and Testing with Actions
 
 ### 6.1 Training with Actions
 
@@ -848,7 +848,7 @@ When testing in Inspector, check the debug panel:
 
 ---
 
-## Module 7: Putting It All Together
+## Unit 7: Putting It All Together
 
 ### 7.1 Complete Bot Walkthrough
 
@@ -961,7 +961,7 @@ But you have a solid foundation with custom code capabilities!
 
 ---
 
-## Module 8: Assessment and Next Steps
+## Unit 8: Assessment and Next Steps
 
 ### 8.1 Knowledge Check
 
