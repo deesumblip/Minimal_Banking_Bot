@@ -65,22 +65,25 @@ def _slug_from_assessment_name(name: str, content: str) -> str:
     return name.replace(" ", "-")[:40]
 
 
-def _page_title_from_content(content: str, fallback: str) -> str:
-    """Prefer first ### (h3) heading (e.g. '### 0.1 Your Level 1 Banking Bot'); else first ## or #."""
+def _page_title_from_content(content: str, fallback: str, prefer_h1: bool = False) -> str:
+    """Prefer first ### (h3) for content pages (e.g. '### 0.1 Your Level 1 Banking Bot'); for Lab/Assessment use first # (e.g. 'Lab 4.1: ...')."""
+    first_h1 = None
     first_h3 = None
-    first_h2_or_h1 = None
+    first_h2 = None
     for line in content.splitlines():
         s = line.strip()
-        if s.startswith("### "):
+        if s.startswith("# ") and not s.startswith("## "):
+            if first_h1 is None:
+                first_h1 = s[2:].strip()
+        elif s.startswith("### "):
             if first_h3 is None:
                 first_h3 = s[4:].strip()
         elif s.startswith("## ") and not s.lower().startswith("## guide"):
-            if first_h2_or_h1 is None:
-                first_h2_or_h1 = s[3:].strip()
-        elif s.startswith("# "):
-            if first_h2_or_h1 is None:
-                first_h2_or_h1 = s[2:].strip()
-    return first_h3 or first_h2_or_h1 or fallback
+            if first_h2 is None:
+                first_h2 = s[3:].strip()
+    if prefer_h1 and first_h1:
+        return first_h1
+    return first_h3 or first_h2 or first_h1 or fallback
 
 
 def collect_level2_pages():
@@ -92,7 +95,9 @@ def collect_level2_pages():
         if not name.startswith("Level2_"):
             continue
         content = path.read_text(encoding="utf-8")
-        title = _page_title_from_content(content, name)
+        # Lab/Assessment pages: use first # heading (e.g. "Lab 4.1: ...") so title is clearly a Lab
+        is_assessment = "Assessment" in name or re.search(r"Level2_Lab[\d.]+_Assessment", name, re.I)
+        title = _page_title_from_content(content, name, prefer_h1=is_assessment)
 
         # Content page: Level2_Unit4_Content_4.4_Multiple-Actions.md
         m = re.match(r"Level2_Unit(\d+)_Content_([\d.]+)_(.+)\.md$", name, re.IGNORECASE)
