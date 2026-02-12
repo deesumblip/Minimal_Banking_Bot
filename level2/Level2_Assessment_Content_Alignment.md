@@ -58,7 +58,7 @@
 
 | Lab | Alignment | Notes |
 |-----|-----------|--------|
-| 3.1 | Full | Grader includes Check 7: run() and dispatcher.utter_message() (11 points total) |
+| 3.1 | Full | Grader includes Check 7: run() and dispatcher.utter_message(); Check 4b: datetime for date-based logic (12 points total) |
 | 4.1 | Full | — |
 | 5.1 | Full | — |
 | 6.1 | Full | Content training command fixed to cd level2 |

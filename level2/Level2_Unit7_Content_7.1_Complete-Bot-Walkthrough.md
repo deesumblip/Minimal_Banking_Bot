@@ -40,9 +40,9 @@ Bot: [Dynamic message—e.g., "Today is Saturday—we're open 10am-2pm." or full
    Flow: holiday_hours
    Step: action_holiday_hours (Level 2 - the action you created in Lab 3.1!)
    ↓
-   Action runs and sends message
+   Action runs (checks if today is a holiday via datetime), sends message
    ↓
-Bot: [Your holiday hours message]
+Bot: [Dynamic message—e.g. "We're closed today for Christmas." or the general holiday schedule]
 
 [User types: "How can I contact you?"]
 

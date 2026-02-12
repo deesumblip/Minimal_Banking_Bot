@@ -12,7 +12,7 @@
 
 #### Skills You've Developed
 
-- ✅ Can create custom Python actions (you built `action_holiday_hours`)
+- ✅ Can create custom Python actions with date-based logic (you built `action_holiday_hours` to show "closed today" vs general holiday schedule)
 - ✅ Can register actions in the domain file (including your own action)
 - ✅ Can create flows that use actions and call them from flows
 - ✅ Can understand the difference between responses and actions

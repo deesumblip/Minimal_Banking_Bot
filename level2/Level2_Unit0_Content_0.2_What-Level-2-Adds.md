@@ -17,7 +17,7 @@ Level 2 introduces **Actions** - custom Python code that your bot can execute. T
 - `actions/` folder, `actions/__init__.py`, `actions/action_bank_hours.py` - Example action (bank hours by day)
 - `data/basics/hours.yml` - Example flow that uses that action
 
-**What you'll build**: In **Unit 3 / Lab 3.1** you'll create your own action (**action_holiday_hours**). In **Labs 4.1 and 5.1** you'll register it in the domain and add a flow for it.
+**What you'll build**: In **Unit 3 / Lab 3.1** you'll create your own action (**action_holiday_hours**) that uses the current date—if today is a holiday it says we're closed today, otherwise it returns the general holiday schedule. In **Labs 4.1 and 5.1** you'll register it in the domain and add a flow for it.
 
 **Modified Files** (as you complete the labs):
 - `domain/basics.yml` - You'll add an `actions:` section (or add to it) and list both the example action and your action

@@ -8,28 +8,52 @@
 
 ### Your Task
 
-You've learned how actions are structured and how they work. Now create a **new** action that serves a different purpose: `action_holiday_hours`.
-
-This action should return the bank's holiday schedule—when the bank is closed for holidays, or limited hours on holidays. Use your own message content; the structure must follow the pattern you've already seen.
+You've learned how actions are structured and how they work. Now create a **new** action: `action_holiday_hours`, which returns the bank's holiday schedule **based on today's date**. If today is a holiday, the action should say we're closed today; otherwise it should return the general holiday schedule. That way the response depends on the current date—so it has to be an action, not a single `utter_*` response. Follow the steps below.
 
 ---
 
-### What to Build
+### Step-by-Step Instructions
 
-1. **Create** `actions/action_holiday_hours.py`
-2. **Structure**: Same pattern as the action you've studied—imports, class inheriting from `Action`, `name()` method, `run()` method that uses `dispatcher.utter_message()`
-3. **Content**: Return a message about holiday hours. The exact text is up to you.
+**Step 1 – Create the file**  
+- In the `actions/` folder, create a new file named `action_holiday_hours.py`.
+
+**Step 2 – Add the imports**  
+At the top of the file, add:
+- `from datetime import datetime` (so you can use the current date)
+- `from rasa_sdk import Action, Tracker`
+- `from rasa_sdk.executor import CollectingDispatcher`  
+You can also add `from typing import Any, Dict, List, Text` for type hints.
+
+**Step 3 – Define the class**  
+- Create a class named `ActionHolidayHours` that inherits from `Action`  
+  (same pattern as `ActionBankHours`, but with the new name).
+
+**Step 4 – Implement `name()`**  
+- Add a method `name(self)` that returns the string `"action_holiday_hours"`  
+  (this must match the filename, without `.py`).
+
+**Step 5 – Implement `run()` with date-based logic**  
+- Add the `run()` method with parameters: `dispatcher`, `tracker`, and `domain`.  
+- Get today's date, e.g. `now = datetime.now()` and use `now.month` and `now.day` to check if today is a holiday.  
+- **If today is a holiday** (e.g. New Year's Day Jan 1, Independence Day July 4, or Christmas Dec 25—you can use these or your own list): set a message like *"We're closed today for [holiday name]."*  
+- **Otherwise**: set a message with the general holiday schedule, e.g. *"We're closed on New Year's Day, Independence Day, and Christmas. On other holidays we may have limited hours—please call ahead."*  
+- Call `dispatcher.utter_message(text=message)` **once** with whichever message you chose.  
+- At the end of `run()`, return `[]` (an empty list).
+
+**Step 6 – Save and verify**  
+- Save the file and run the assessment below.
 
 ---
 
-### Verification
+### Quick Checklist (what the grader checks)
 
 Before submitting, confirm:
 
-- The file is in the `actions/` folder
-- The class name matches the action purpose
-- `name()` returns the correct string
-- `run()` sends a message to the user and returns `[]`
+- [ ] File is in the `actions/` folder and named `action_holiday_hours.py`
+- [ ] You import `datetime` and use it (e.g. `datetime.now()`) to choose the message
+- [ ] Class is `ActionHolidayHours(Action)`
+- [ ] `name()` returns `"action_holiday_hours"`
+- [ ] `run()` calls `dispatcher.utter_message()` and returns `[]`
 
 Run the assessment when you're done.
 
@@ -39,7 +63,7 @@ Run the assessment when you're done.
 
 ### Overview
 
-This assessment verifies that students can create a custom action file (`action_holiday_hours.py`) with the correct structure, imports, and methods.
+This assessment verifies that students can create a custom action file (`action_holiday_hours.py`) with the correct structure, imports, methods, and date-based logic (so the message depends on whether today is a holiday).
 
 ### Assessment Type
 
@@ -59,7 +83,7 @@ Save the grader script at:
 cd /home/codio/workspace/level2
 
 score=0
-max_score=11
+max_score=12
 
 echo "Running Lab 3.1 Assessment Checks..."
 echo ""
@@ -120,6 +144,17 @@ else
 fi
 echo ""
 
+# Check 4b: Action uses datetime for date-based logic (1 point)
+echo "Check 4b: Verifying date-based logic (datetime)..."
+if [ -f "actions/action_holiday_hours.py" ] && grep -q "datetime" actions/action_holiday_hours.py 2>/dev/null; then
+    echo "✅ Check 4b: PASSED - datetime used for date-based message (1 point)"
+    score=$((score + 1))
+else
+    echo "❌ Check 4b: FAILED - Action should use datetime to check if today is a holiday (0 points)"
+    echo "Hint: Import datetime and use datetime.now() with .month and .day to choose your message"
+fi
+echo ""
+
 # Check 5: Action class inherits from Action (1 point)
 echo "Check 5: Verifying Action class structure..."
 if [ -f "actions/action_holiday_hours.py" ] && grep -q "class ActionHolidayHours(Action)" actions/action_holiday_hours.py 2>/dev/null; then
@@ -162,7 +197,7 @@ else
 fi
 echo "=========================================="
 echo ""
-echo "Summary: Check 0 (venv) | Check 1 (actions/) | Check 2 (__init__.py) | Check 3 (action file) | Check 4 (imports) | Check 5 (class) | Check 6 (name()) | Check 7 (run())"
+echo "Summary: Check 0 (venv) | Check 1 (actions/) | Check 2 (__init__.py) | Check 3 (action file) | Check 4 (imports) | Check 4b (datetime) | Check 5 (class) | Check 6 (name()) | Check 7 (run())"
 echo "Score: $score/$max_score"
 if [ $score -lt $max_score ]; then
     exit 1
@@ -173,8 +208,8 @@ fi
 
 ### General Tab
 - **Name**: Lab 3.1: Create Your Own Action
-- **Description**: Verify that students can create action_holiday_hours.py with correct structure
-- **Points**: `11`
+- **Description**: Verify that students can create action_holiday_hours.py with correct structure and date-based logic
+- **Points**: `12`
 - **Language**: `Bash`
 
 ### Execution Tab
@@ -183,7 +218,7 @@ fi
 - **Working Directory**: `/home/codio/workspace/level2`
 
 ### Grading Tab
-- **Points**: `11`
+- **Points**: `12`
 - **Test Cases**: Single test case
 - **Expected Output**: Should contain "✅ PASS: Action creation verification complete!"
 - **Matching**: Contains (case-insensitive)
@@ -199,14 +234,14 @@ fi
 3. Click **Add Code Test** → **Standard Code Test**
 4. In the **General** tab:
    - Set Name: "Lab 3.1: Create Your Own Action"
-   - Set Points: `11`
+   - Set Points: `12`
    - Set Language: `Bash`
 5. In the **Execution** tab:
    - Set COMMAND: `bash /home/codio/workspace/.guides/assessments/level2_graders/lab_3.1_grader.sh`
    - Set TIMEOUT: `60`
    - Set Working Directory: `/home/codio/workspace/level2`
 6. In the **Grading** tab:
-   - Set Points: `11`
+   - Set Points: `12`
    - Add test case with Expected Output containing "✅ PASS"
    - Set matching to "Contains"
 7. In the **Files** tab:

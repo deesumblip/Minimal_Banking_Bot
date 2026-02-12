@@ -74,7 +74,7 @@
 
 ### Unit 3: Creating Your First Action
 **Type**: Lab (with Assessment)  
-**Assessment**: Lab 3.1 - Creating Your First Action (10 points)
+**Assessment**: Lab 3.1 - Creating Your First Action (12 points)
 
 **Sections**:
 - 3.1 Step-by-Step: Creating an Action
@@ -89,15 +89,16 @@
 
 **Key Concepts**: Creating action files, Python class structure, imports
 
-**Assessment Checks** (Lab 3.1 verifies student-created `action_holiday_hours.py`):
+**Assessment Checks** (Lab 3.1 verifies student-created `action_holiday_hours.py` with date-based logic):
 - Virtual environment exists
 - Actions folder exists
 - `__init__.py` exists
 - `action_holiday_hours.py` exists (created by student)
-- Correct imports
+- Correct imports (including `datetime` for date-based logic)
 - Action class inherits from Action (`ActionHolidayHours`)
 - `name()` method exists and returns `"action_holiday_hours"`
 - `run()` uses `dispatcher.utter_message()` and returns `[]`
+- Uses `datetime` to choose message (e.g. "closed today" on a holiday vs general schedule)
 
 ---
 
@@ -266,12 +267,12 @@
 
 | Unit | Lab | Points | Type | Grader Script |
 |--------|-----|--------|------|---------------|
-| Unit 3 | Lab 3.1 | 10 | Standard Code Test | `lab_3.1_grader.sh` |
+| Unit 3 | Lab 3.1 | 12 | Standard Code Test | `lab_3.1_grader.sh` |
 | Unit 4 | Lab 4.1 | 10 | Standard Code Test | `lab_4.1_grader.sh` |
 | Unit 5 | Lab 5.1 | 10 | Standard Code Test | `lab_5.1_grader.sh` |
 | Unit 6 | Lab 6.1 | 10 | Standard Code Test | `lab_6.1_grader.sh` |
 
-**Total Assessment Points**: 40 points
+**Total Assessment Points**: 42 points
 
 ---
 
