@@ -87,8 +87,8 @@ def _page_title_from_content(content: str, fallback: str, prefer_h1: bool = Fals
 
 
 def collect_level2_pages():
-    """Collect (unit_number, sort_key, source_path, slug, title) for each page."""
-    pages_by_unit = {}  # unit -> list of (sort_key, path, slug, title)
+    """Collect (unit_number, sort_key, source_path, slug, title, strip_title_h1) for each page."""
+    pages_by_unit = {}  # unit -> list of (sort_key, path, slug, title, strip_title_h1)
 
     for path in sorted(LEVEL2_DIR.glob("*.md")):
         name = path.name
@@ -98,6 +98,8 @@ def collect_level2_pages():
         # Lab/Assessment pages: use first # heading (e.g. "Lab 4.1: ...") so title is clearly a Lab
         is_assessment = "Assessment" in name or re.search(r"Level2_Lab[\d.]+_Assessment", name, re.I)
         title = _page_title_from_content(content, name, prefer_h1=is_assessment)
+        # Strip that heading from the body when syncing so the panel title is not duplicated in the page
+        strip_title_h1 = is_assessment  # Labs: strip first #; content: strip first ###
 
         # Content page: Level2_Unit4_Content_4.4_Multiple-Actions.md
         m = re.match(r"Level2_Unit(\d+)_Content_([\d.]+)_(.+)\.md$", name, re.IGNORECASE)
@@ -107,7 +109,7 @@ def collect_level2_pages():
             slug_base = _slug_from_content_name(name)
             short_id = _short_id(str(path))
             slug = f"{slug_base}-{short_id}"
-            pages_by_unit.setdefault(unit, []).append((sort_key, path, slug, title))
+            pages_by_unit.setdefault(unit, []).append((sort_key, path, slug, title, strip_title_h1))
             continue
 
         # Unit assessment: Level2_Unit4_Assessment.md
@@ -118,7 +120,7 @@ def collect_level2_pages():
             slug_base = _slug_from_assessment_name(name, content)
             short_id = _short_id(str(path))
             slug = f"{slug_base}-{short_id}"
-            pages_by_unit.setdefault(unit, []).append((sort_key, path, slug, title))
+            pages_by_unit.setdefault(unit, []).append((sort_key, path, slug, title, strip_title_h1))
             continue
 
         # Lab assessment: Level2_Lab3.1_Assessment.md
@@ -129,18 +131,37 @@ def collect_level2_pages():
             slug_base = _slug_from_assessment_name(name, content)
             short_id = _short_id(str(path))
             slug = f"{slug_base}-{short_id}"
-            pages_by_unit.setdefault(unit, []).append((sort_key, path, slug, title))
+            pages_by_unit.setdefault(unit, []).append((sort_key, path, slug, title, strip_title_h1))
             continue
 
     return pages_by_unit
 
 
-def write_codio_page(unit_dir: Path, slug: str, title: str, md_path: Path) -> None:
-    """Write one page: slug.md (always from local) and slug.json (merge to preserve Codio assessments)."""
+def _strip_title_from_body(content: str, strip_h1: bool) -> str:
+    """Remove the first heading from body so the page title is not duplicated in the rendered markdown.
+    strip_h1=True: remove first line if it's a single # heading (Labs). False: remove first ### (content)."""
+    lines = content.splitlines()
+    if not lines:
+        return content
+    first = lines[0].strip()
+    if strip_h1 and first.startswith("# ") and not first.startswith("## "):
+        rest = lines[1:]
+    elif not strip_h1 and first.startswith("### "):
+        rest = lines[1:]
+    else:
+        return content
+    while rest and not rest[0].strip():
+        rest.pop(0)
+    return "\n".join(rest) + ("\n" if rest else "")
+
+
+def write_codio_page(unit_dir: Path, slug: str, title: str, md_path: Path, strip_title_h1: bool = False) -> None:
+    """Write one page: slug.md (body without title heading) and slug.json (merge to preserve Codio assessments)."""
     unit_dir.mkdir(parents=True, exist_ok=True)
-    # Always sync markdown content from local
     md_content = md_path.read_text(encoding="utf-8")
-    (unit_dir / f"{slug}.md").write_text(md_content, encoding="utf-8")
+    # Remove the title heading from the body so it only appears in the panel, not duplicated in the page
+    body_content = _strip_title_from_body(md_content, strip_h1=strip_title_h1)
+    (unit_dir / f"{slug}.md").write_text(body_content, encoding="utf-8")
 
     json_path = unit_dir / f"{slug}.json"
     if json_path.exists():
@@ -195,8 +216,8 @@ def sync():
         entries = pages_by_unit[unit]
         entries.sort(key=lambda x: x[0])
         page_order = []
-        for (_sort_key, md_path, slug, title) in entries:
-            write_codio_page(unit_dir, slug, title, md_path)
+        for (_sort_key, md_path, slug, title, strip_title_h1) in entries:
+            write_codio_page(unit_dir, slug, title, md_path, strip_title_h1=strip_title_h1)
             page_order.append(slug)
 
         title_clean = unit_title.replace("--", " ").replace("-", " ").title()

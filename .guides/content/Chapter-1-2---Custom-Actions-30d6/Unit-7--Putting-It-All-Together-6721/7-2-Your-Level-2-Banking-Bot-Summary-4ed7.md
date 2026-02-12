@@ -1,7 +1,3 @@
-# Unit 7: Putting It All Together
-
-### 7.2 Your Level 2 Banking Bot: Summary
-
 Congratulations! You've extended your Level 1 banking bot with custom Python code.
 
 #### Your Complete Bot Structure

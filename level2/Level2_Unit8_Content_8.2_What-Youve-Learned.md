@@ -1,5 +1,3 @@
-# Unit 8: Assessment and Next Steps
-
 ### 8.2 What You've Learned
 
 #### Key Concepts

@@ -1,5 +1,3 @@
-# Unit 2: Understanding the Action Class
-
 ### 2.1 The Action Class Deep Dive
 
 Let's examine the actual `action_bank_hours.py` file to understand how actions work.

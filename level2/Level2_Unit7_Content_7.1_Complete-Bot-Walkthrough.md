@@ -1,5 +1,3 @@
-# Unit 7: Putting It All Together
-
 ### 7.1 Complete Bot Walkthrough
 
 Let's trace through a complete conversation showing how Level 1 and Level 2 work together.

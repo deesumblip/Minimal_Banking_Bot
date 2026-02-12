@@ -1,7 +1,3 @@
-# Unit 7: Putting It All Together
-
-### 7.3 Best Practices
-
 #### Organizing Actions
 
 1. **One action per file**: Makes it easier to find and modify actions

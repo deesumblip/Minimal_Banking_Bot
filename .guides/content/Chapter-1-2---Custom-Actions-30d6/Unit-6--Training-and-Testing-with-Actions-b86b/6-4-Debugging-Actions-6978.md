@@ -1,7 +1,3 @@
-# Unit 6: Training and Testing with Actions
-
-### 6.4 Debugging Actions
-
 #### Check Debug Output
 
 When testing in Inspector, check the debug panel:

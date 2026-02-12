@@ -1,5 +1,3 @@
-# Unit 6: Training and Testing with Actions
-
 ### 6.3 Testing Your Action
 
 This section is where you **review and use the Rasa Inspector GUI**: train your bot, start Inspector, open it in your browser, and try the questions below to confirm that your flows and actions behave as expected.

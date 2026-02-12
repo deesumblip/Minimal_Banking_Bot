@@ -1,5 +1,3 @@
-# Unit 1: Introduction to Actions
-
 ### 1.2 How Actions Work
 
 When a flow calls an action, here's what happens:

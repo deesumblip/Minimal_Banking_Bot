@@ -1,5 +1,3 @@
-# Unit 5: Using Actions in Flows
-
 ### 5.1 Actions vs. Responses in Flows
 
 In Level 1, flows used `utter_*` responses. In Level 2, flows can use `action_*` actions.

@@ -1,5 +1,3 @@
-# Unit 8: Assessment and Next Steps
-
 ### 8.4 What's Next: Level 3 Preview
 
 ⚠️ **Important: Building on Your Existing Banking Bot**

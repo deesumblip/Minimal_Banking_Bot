@@ -1,7 +1,3 @@
-# Unit 1: Introduction to Actions
-
-### 1.3 The Action Class Structure
-
 Every action is a Python class that inherits from `Action`. Here's the basic structure:
 
 ```python

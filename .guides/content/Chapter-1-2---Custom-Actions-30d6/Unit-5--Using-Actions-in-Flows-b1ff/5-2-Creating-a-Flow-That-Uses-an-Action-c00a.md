@@ -1,7 +1,3 @@
-# Unit 5: Using Actions in Flows
-
-### 5.2 Creating a Flow That Uses an Action
-
 You need two flows that use actions: the **example** flow `hours.yml` (for `action_bank_hours`) and **your** flow `holiday_hours.yml` (for the action you created in Lab 3.1, `action_holiday_hours`).
 
 #### The example: hours.yml

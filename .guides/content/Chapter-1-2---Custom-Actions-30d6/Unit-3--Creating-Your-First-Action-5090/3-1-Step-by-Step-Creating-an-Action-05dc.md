@@ -1,7 +1,3 @@
-# Unit 3: Creating Your First Action
-
-### 3.1 Step-by-Step: Creating an Action
-
 You've seen `action_bank_hours.py`—it uses `datetime` and conditional logic to return different messages based on the current day. That's why it's an action, not a simple `utter_*` response. In **Lab 3.1** you'll create your own action, **action_holiday_hours**, that also uses the current date: if today is a holiday (e.g. New Year's Day, Christmas), it says "We're closed today"; otherwise it returns the general holiday schedule. Same structure as `action_bank_hours`, but for holidays. Later (Labs 4.1 and 5.1) you'll register it and add a flow for it.
 
 **What you learned from `action_bank_hours`**:

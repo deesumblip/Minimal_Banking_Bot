@@ -1,5 +1,3 @@
-# Unit 2: Understanding the Action Class
-
 ### 2.2 Understanding the Parameters
 
 #### Dispatcher

@@ -1,5 +1,3 @@
-# Unit 8: Assessment and Next Steps
-
 ### 8.3 Limitations of Level 2
 
 Level 2 bots have clear limitations:

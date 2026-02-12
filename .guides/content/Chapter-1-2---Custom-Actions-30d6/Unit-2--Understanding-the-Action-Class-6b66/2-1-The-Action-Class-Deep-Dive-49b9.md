@@ -1,7 +1,3 @@
-# Unit 2: Understanding the Action Class
-
-### 2.1 The Action Class Deep Dive
-
 Let's examine the actual `action_bank_hours.py` file to understand how actions work.
 
 **Why an action (not an utter)?** This action returns a *different* message depending on the current day—Saturday, Sunday, or weekday. That requires Python logic and `datetime`. A simple `utter_*` response can't change based on when the user asks, so we need an action.

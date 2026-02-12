@@ -1,5 +1,3 @@
-# Unit 0: Recap - What You Built in Level 1
-
 ### 0.2 What Level 2 Adds
 
 Level 2 introduces **Actions** - custom Python code that your bot can execute. This enables:

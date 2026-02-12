@@ -1,5 +1,3 @@
-# Unit 3: Creating Your First Action
-
 ### 3.2 Understanding Action Execution
 
 When Rasa executes your action:

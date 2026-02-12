@@ -1,5 +1,3 @@
-# Unit 5: Using Actions in Flows
-
 ### 5.3 Mixing Responses and Actions
 
 You can use both responses and actions in the same flow:

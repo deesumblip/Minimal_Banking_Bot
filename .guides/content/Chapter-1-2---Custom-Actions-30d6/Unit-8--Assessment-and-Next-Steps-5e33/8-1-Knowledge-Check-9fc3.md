@@ -1,7 +1,3 @@
-# Unit 8: Assessment and Next Steps
-
-### 8.1 Knowledge Check
-
 Test your understanding with these questions:
 
 #### Question 1: What is an Action?

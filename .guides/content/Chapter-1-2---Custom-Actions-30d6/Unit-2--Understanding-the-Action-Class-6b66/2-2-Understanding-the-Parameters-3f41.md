@@ -1,7 +1,3 @@
-# Unit 2: Understanding the Action Class
-
-### 2.2 Understanding the Parameters
-
 #### Dispatcher
 
 The `dispatcher` is your way to communicate with the user:

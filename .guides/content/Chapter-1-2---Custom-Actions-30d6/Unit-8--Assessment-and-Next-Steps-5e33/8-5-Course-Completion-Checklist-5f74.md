@@ -1,7 +1,3 @@
-# Unit 8: Assessment and Next Steps
-
-### 8.5 Course Completion Checklist
-
 Before moving to Level 3, ensure you can:
 
 - [ ] Explain what an action is and how it differs from a response

@@ -1,5 +1,3 @@
-# Unit 6: Training and Testing with Actions
-
 ### 6.1 Training with Actions
 
 Training with actions is the same as Level 1, but Rasa now also processes your action files.

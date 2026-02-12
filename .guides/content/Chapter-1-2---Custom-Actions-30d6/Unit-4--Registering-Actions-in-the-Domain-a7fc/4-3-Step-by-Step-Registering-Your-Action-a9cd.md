@@ -1,7 +1,3 @@
-# Unit 4: Registering Actions in the Domain
-
-### 4.3 Step-by-Step: Registering Your Action
-
 **Step 1: Open the Domain File**
 
 1. Navigate to `domain/basics.yml`

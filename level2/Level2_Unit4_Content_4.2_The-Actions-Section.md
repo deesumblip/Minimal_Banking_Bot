@@ -1,5 +1,3 @@
-# Unit 4: Registering Actions in the Domain
-
 ### 4.2 The Actions Section
 
 In Level 1, your domain file only had a `responses:` section. Level 2 adds an `actions:` section.

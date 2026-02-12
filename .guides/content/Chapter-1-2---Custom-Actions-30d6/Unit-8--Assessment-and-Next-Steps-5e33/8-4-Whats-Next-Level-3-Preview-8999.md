@@ -1,7 +1,3 @@
-# Unit 8: Assessment and Next Steps
-
-### 8.4 What's Next: Level 3 Preview
-
 ⚠️ **Important: Building on Your Existing Banking Bot**
 
 When you move to Level 3, you will **continue working on the same banking bot** you've built throughout Levels 1 and 2. Level 3 doesn't start from scratch - it builds on what you've already created:
