@@ -332,13 +332,13 @@ Unit 8: Assessment and Next Steps (Review)
 
 By the end of Level 2, students should be able to:
 
-1. ✅ Explain what an action is and how it differs from a response
-2. ✅ Create a new action in Python with correct structure
-3. ✅ Register an action in the domain file
-4. ✅ Create a flow that uses an action
-5. ✅ Understand how actions are executed
-6. ✅ Debug when actions don't work
-7. ✅ Understand that Level 2 builds on Level 1 (all Level 1 content remains)
+1.  Explain what an action is and how it differs from a response
+2.  Create a new action in Python with correct structure
+3.  Register an action in the domain file
+4.  Create a flow that uses an action
+5.  Understand how actions are executed
+6.  Debug when actions don't work
+7.  Understand that Level 2 builds on Level 1 (all Level 1 content remains)
 
 ---
 

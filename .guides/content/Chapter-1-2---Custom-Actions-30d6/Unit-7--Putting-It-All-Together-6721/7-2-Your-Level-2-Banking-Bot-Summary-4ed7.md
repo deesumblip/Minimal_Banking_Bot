@@ -3,17 +3,17 @@ Congratulations! You've extended your Level 1 banking bot with custom Python cod
 #### Your Complete Bot Structure
 
 **Domain (`domain/basics.yml`)**:
-- ✅ All Level 1 responses (`utter_greet`, `utter_help`, `utter_contact`, `utter_goodbye`)
-- ✅ New `actions:` section with `action_bank_hours` (and `action_holiday_hours` after Lab 4.1)
+- All Level 1 responses (`utter_greet`, `utter_help`, `utter_contact`, `utter_goodbye`)
+- New `actions:` section with `action_bank_hours` (and `action_holiday_hours` after Lab 4.1)
 
 **Flows (`data/basics/`)**:
-- ✅ All Level 1 flows (`greet`, `help`, `contact`, `goodbye`)
-- ✅ Example flow (`hours`) that uses `action_bank_hours`
-- ✅ Your flow (`holiday_hours`) that uses `action_holiday_hours` (the action you created in Lab 3.1)
+- All Level 1 flows (`greet`, `help`, `contact`, `goodbye`)
+- Example flow (`hours`) that uses `action_bank_hours`
+- Your flow (`holiday_hours`) that uses `action_holiday_hours` (the action you created in Lab 3.1)
 
 **Actions (`actions/`)**:
-- ✅ `action_bank_hours.py` - Example: returns bank hours dynamically
-- ✅ `action_holiday_hours.py` - Yours: returns holiday hours based on today's date—"closed today" on a holiday, otherwise the general schedule (you created this in Lab 3.1)
+- `action_bank_hours.py` - Example: returns bank hours dynamically
+- `action_holiday_hours.py` - Yours: returns holiday hours based on today's date—"closed today" on a holiday, otherwise the general schedule (you created this in Lab 3.1)
 
 **System Patterns**: Unchanged from Level 1
 
@@ -22,11 +22,11 @@ Congratulations! You've extended your Level 1 banking bot with custom Python cod
 #### What Your Bot Can Do Now
 
 Your Level 2 banking bot can:
-- ✅ Everything Level 1 could do (greet, help, contact)
-- ✅ Execute custom Python code (actions) — both the example and the one you built
-- ✅ Return dynamic responses based on code execution
-- ✅ Process data and perform calculations
-- ✅ Answer questions about regular hours and holiday hours (your action)
+- Everything Level 1 could do (greet, help, contact)
+- Execute custom Python code (actions) — both the example and the one you built
+- Return dynamic responses based on code execution
+- Process data and perform calculations
+- Answer questions about regular hours and holiday hours (your action)
 
 #### What's Still Missing (Coming in Future Levels)
 

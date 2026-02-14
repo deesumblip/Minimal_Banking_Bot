@@ -19,7 +19,7 @@ An **action** is custom Python code that your bot can execute. Actions allow you
 
 #### When to Use Actions
 
-✅ **Use actions when you need**:
+ **Use actions when you need**:
 - Dynamic responses (e.g., "We're open today until 5pm" - changes based on current day)
 - Calculations (e.g., calculating interest, fees)
 - Data processing (e.g., formatting dates, validating input)

@@ -19,10 +19,10 @@ Level 2 bots have clear limitations:
 #### When Level 2 is Sufficient
 
 Level 2 is perfect for:
-- ✅ Dynamic responses based on calculations
-- ✅ Data processing and formatting
-- ✅ Simple integrations (APIs, databases)
-- ✅ Conditional logic that doesn't need memory
+- Dynamic responses based on calculations
+- Data processing and formatting
+- Simple integrations (APIs, databases)
+- Conditional logic that doesn't need memory
 
 #### When You Need More
 

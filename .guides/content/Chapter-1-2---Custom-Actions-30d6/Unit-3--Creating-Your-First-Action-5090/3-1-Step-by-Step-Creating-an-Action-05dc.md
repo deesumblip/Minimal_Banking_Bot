@@ -52,12 +52,12 @@ class ActionBankHours(Action):
 
 **When creating your action (Lab 3.1), verify**:
 
-✅ **Imports**: Include `datetime` (you'll need it to check if today is a holiday); include Rasa SDK imports  
-✅ **Class name**: Descriptive, starts with `Action` (e.g., `ActionHolidayHours`)  
-✅ **`name()` method**: Returns the action name (matches filename)  
-✅ **`run()` method**: Has correct parameters (`dispatcher`, `tracker`, `domain`)  
-✅ **Message sending**: Uses `dispatcher.utter_message()`  
-✅ **Return value**: Returns `[]` (empty list)
+ **Imports**: Include `datetime` (you'll need it to check if today is a holiday); include Rasa SDK imports  
+ **Class name**: Descriptive, starts with `Action` (e.g., `ActionHolidayHours`)  
+ **`name()` method**: Returns the action name (matches filename)  
+ **`run()` method**: Has correct parameters (`dispatcher`, `tracker`, `domain`)  
+ **Message sending**: Uses `dispatcher.utter_message()`  
+ **Return value**: Returns `[]` (empty list)
 
 **Common mistakes to avoid**:
 - ❌ Forgetting to inherit from `Action`

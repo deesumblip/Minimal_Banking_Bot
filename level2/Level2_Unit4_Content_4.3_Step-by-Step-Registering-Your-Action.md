@@ -52,10 +52,10 @@ actions:                # ← NEW: Add this section (or add to existing)
 **Step 3: Verify Registration**
 
 Check:
-- ✅ `actions:` section exists
-- ✅ Action name matches `name()` return value exactly
-- ✅ Proper YAML syntax (indentation, dashes)
-- ✅ No typos in action name
+- `actions:` section exists
+- Action name matches `name()` return value exactly
+- Proper YAML syntax (indentation, dashes)
+- No typos in action name
 
 **Common mistakes**:
 - ❌ Wrong action name (e.g., `action_bank_hour` instead of `action_bank_hours`)

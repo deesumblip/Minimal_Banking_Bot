@@ -62,10 +62,10 @@ flows:
 **Step 4: Verify the Flow**
 
 Check:
-- ✅ File is in `data/basics/` folder
-- ✅ Flow has `name:`, `description:`, and `steps:`
-- ✅ Action name matches registered action exactly
-- ✅ YAML syntax is correct
+- File is in `data/basics/` folder
+- Flow has `name:`, `description:`, and `steps:`
+- Action name matches registered action exactly
+- YAML syntax is correct
 
 ---
 

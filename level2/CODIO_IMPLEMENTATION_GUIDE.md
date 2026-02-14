@@ -37,23 +37,23 @@ Before we add actions, let's recap what you've already built in Level 1. **All o
 #### What You Have from Level 1
 
 **Domain File (`domain/basics.yml`)**:
-- ✅ `utter_greet` - Greets users as a banking assistant
-- ✅ `utter_help` - Lists banking services (balance, transfers, hours, contact)
-- ✅ `utter_contact` - Provides bank contact information
+- `utter_greet` - Greets users as a banking assistant
+- `utter_help` - Lists banking services (balance, transfers, hours, contact)
+- `utter_contact` - Provides bank contact information
 
 **Flows (`data/basics/`)**:
-- ✅ `greet.yml` - Greets users when they start a conversation
-- ✅ `help.yml` - Explains what the bot can help with
-- ✅ `contact.yml` - Provides contact information for the bank
+- `greet.yml` - Greets users when they start a conversation
+- `help.yml` - Explains what the bot can help with
+- `contact.yml` - Provides contact information for the bank
 
 **System Patterns (`data/system/patterns/patterns.yml`)**:
-- ✅ `pattern_session_start` - Automatically greets users when conversation begins
-- ✅ `pattern_completed` - Handles flow completion
+- `pattern_session_start` - Automatically greets users when conversation begins
+- `pattern_completed` - Handles flow completion
 
 **Configuration Files**:
-- ✅ `config.yml` - Bot configuration (pipeline, policies)
-- ✅ `credentials.yml` - Connection settings
-- ✅ `endpoints.yml` - Action endpoints and LLM configuration
+- `config.yml` - Bot configuration (pipeline, policies)
+- `credentials.yml` - Connection settings
+- `endpoints.yml` - Action endpoints and LLM configuration
 
 #### What Level 1 Couldn't Do
 
@@ -72,10 +72,10 @@ Your Level 1 bot was limited to **static responses** - predefined text that neve
 
 Level 2 introduces **Actions** - custom Python code that your bot can execute. This enables:
 
-- ✅ Dynamic responses based on calculations
-- ✅ Data processing and logic
-- ✅ Integration with external systems
-- ✅ Custom business logic
+- Dynamic responses based on calculations
+- Data processing and logic
+- Integration with external systems
+- Custom business logic
 
 **Your existing Level 1 bot continues to work** - Level 2 adds actions on top of it!
 
@@ -120,7 +120,7 @@ An **action** is custom Python code that your bot can execute. Actions allow you
 
 #### When to Use Actions
 
-✅ **Use actions when you need**:
+ **Use actions when you need**:
 - Dynamic responses (e.g., "We're open today until 5pm" - changes based on current day)
 - Calculations (e.g., calculating interest, fees)
 - Data processing (e.g., formatting dates, validating input)
@@ -422,12 +422,12 @@ class ActionBankHours(Action):
 
 **When creating your action (Lab 3.1), verify**:
 
-✅ **Imports**: Include `datetime` if you use the current date/time; include Rasa SDK imports
-✅ **Class name**: Descriptive, starts with `Action` (e.g., `ActionHolidayHours`)
-✅ **`name()` method**: Returns the action name (matches filename)
-✅ **`run()` method**: Has correct parameters (`dispatcher`, `tracker`, `domain`)
-✅ **Message sending**: Uses `dispatcher.utter_message()`
-✅ **Return value**: Returns `[]` (empty list)
+ **Imports**: Include `datetime` if you use the current date/time; include Rasa SDK imports
+ **Class name**: Descriptive, starts with `Action` (e.g., `ActionHolidayHours`)
+ **`name()` method**: Returns the action name (matches filename)
+ **`run()` method**: Has correct parameters (`dispatcher`, `tracker`, `domain`)
+ **Message sending**: Uses `dispatcher.utter_message()`
+ **Return value**: Returns `[]` (empty list)
 
 **Common mistakes to avoid**:
 - ❌ Forgetting to inherit from `Action`
@@ -552,10 +552,10 @@ actions:                # ← NEW: Add this section
 **Step 3: Verify Registration**
 
 Check:
-- ✅ `actions:` section exists
-- ✅ Action name matches `name()` return value exactly
-- ✅ Proper YAML syntax (indentation, dashes)
-- ✅ No typos in action name
+- `actions:` section exists
+- Action name matches `name()` return value exactly
+- Proper YAML syntax (indentation, dashes)
+- No typos in action name
 
 **Common mistakes**:
 - ❌ Wrong action name (e.g., `action_bank_hour` instead of `action_bank_hours`)
@@ -676,10 +676,10 @@ flows:
 **Step 4: Verify the Flow**
 
 Check:
-- ✅ File is in `data/basics/` folder
-- ✅ Flow has `name:`, `description:`, and `steps:`
-- ✅ Action name matches registered action exactly
-- ✅ YAML syntax is correct
+- File is in `data/basics/` folder
+- Flow has `name:`, `description:`, and `steps:`
+- Action name matches registered action exactly
+- YAML syntax is correct
 
 ---
 
@@ -904,15 +904,15 @@ Congratulations! You've extended your Level 1 banking bot with custom Python cod
 #### Your Complete Bot Structure
 
 **Domain (`domain/basics.yml`)**:
-- ✅ All Level 1 responses (`utter_greet`, `utter_help`, `utter_contact`)
-- ✅ New `actions:` section with `action_bank_hours`
+- All Level 1 responses (`utter_greet`, `utter_help`, `utter_contact`)
+- New `actions:` section with `action_bank_hours`
 
 **Flows (`data/basics/`)**:
-- ✅ All Level 1 flows (`greet`, `help`, `contact`)
-- ✅ New flow (`hours`) that uses an action
+- All Level 1 flows (`greet`, `help`, `contact`)
+- New flow (`hours`) that uses an action
 
 **Actions (`actions/`)**:
-- ✅ `action_bank_hours.py` - Returns bank hours dynamically
+- `action_bank_hours.py` - Returns bank hours dynamically
 
 **System Patterns**: Unchanged from Level 1
 
@@ -921,10 +921,10 @@ Congratulations! You've extended your Level 1 banking bot with custom Python cod
 #### What Your Bot Can Do Now
 
 Your Level 2 banking bot can:
-- ✅ Everything Level 1 could do (greet, help, contact)
-- ✅ Execute custom Python code (actions)
-- ✅ Return dynamic responses based on code execution
-- ✅ Process data and perform calculations
+- Everything Level 1 could do (greet, help, contact)
+- Execute custom Python code (actions)
+- Return dynamic responses based on code execution
+- Process data and perform calculations
 
 #### What's Still Missing (Coming in Future Levels)
 
@@ -954,7 +954,7 @@ But you have a solid foundation with custom code capabilities!
 
 #### Action Naming Conventions
 
-- ✅ **Good**: `action_bank_hours`, `action_check_balance`, `action_process_transfer`
+- **Good**: `action_bank_hours`, `action_check_balance`, `action_process_transfer`
 - ❌ **Bad**: `action1`, `hours`, `do_stuff`
 
 **Convention**: `action_` + descriptive_name (lowercase, underscores)
@@ -1044,12 +1044,12 @@ d) They're the same thing
 
 #### Skills You've Developed
 
-- ✅ Can create custom Python actions
-- ✅ Can register actions in the domain file
-- ✅ Can call actions from flows
-- ✅ Can understand the difference between responses and actions
-- ✅ Can debug action-related issues
-- ✅ Can extend your Level 1 bot with custom code
+- Can create custom Python actions
+- Can register actions in the domain file
+- Can call actions from flows
+- Can understand the difference between responses and actions
+- Can debug action-related issues
+- Can extend your Level 1 bot with custom code
 
 ---
 
@@ -1074,10 +1074,10 @@ Level 2 bots have clear limitations:
 #### When Level 2 is Sufficient
 
 Level 2 is perfect for:
-- ✅ Dynamic responses based on calculations
-- ✅ Data processing and formatting
-- ✅ Simple integrations (APIs, databases)
-- ✅ Conditional logic that doesn't need memory
+- Dynamic responses based on calculations
+- Data processing and formatting
+- Simple integrations (APIs, databases)
+- Conditional logic that doesn't need memory
 
 #### When You Need More
 

@@ -13,7 +13,7 @@
 
 #### Action Naming Conventions
 
-- ✅ **Good**: `action_bank_hours`, `action_check_balance`, `action_process_transfer`
+- **Good**: `action_bank_hours`, `action_check_balance`, `action_process_transfer`
 - ❌ **Bad**: `action1`, `hours`, `do_stuff`
 
 **Convention**: `action_` + descriptive_name (lowercase, underscores)
