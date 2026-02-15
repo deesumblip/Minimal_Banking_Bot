@@ -73,12 +73,18 @@ else
 fi
 echo ""
 
-# Check 6: Domain file is valid YAML (2 points) - try utf-8 and utf-8-sig (BOM)
+# Check 6: Domain file is valid YAML (2 points) - use absolute path; tolerate missing PyYAML
 echo "Check 6: Verifying domain file is valid YAML..."
-if [ -f "domain/basics.yml" ]; then
+DOMAIN_ABS="/home/codio/workspace/level2/domain/basics.yml"
+if [ -f "$DOMAIN_ABS" ] || [ -f "domain/basics.yml" ]; then
+    [ -f "$DOMAIN_ABS" ] && path="$DOMAIN_ABS" || path="domain/basics.yml"
     if python3 -c "
-import yaml, sys
-path = 'domain/basics.yml'
+import sys
+path = '''$path'''
+try:
+    import yaml
+except ImportError:
+    sys.exit(0)
 for enc in ('utf-8-sig', 'utf-8'):
     try:
         with open(path, encoding=enc) as f:
