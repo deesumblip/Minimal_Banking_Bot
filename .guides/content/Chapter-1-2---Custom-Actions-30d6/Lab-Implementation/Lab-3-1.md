@@ -78,112 +78,80 @@ Save the grader script at:
 
 ## Grader Script
 
+The grader only checks what is explicitly instructed in the student lab: file location/name, imports, datetime, class, name(), and run().
+
 ```bash
 #!/bin/bash
 cd /home/codio/workspace/level2
 
 score=0
-max_score=12
+max_score=8
 
 echo "Running Lab 3.1 Assessment Checks..."
 echo ""
 
-# Check 0: Virtual environment exists and is activated (2 points)
-echo "Check 0: Verifying virtual environment..."
-if [ ! -d ".venv" ]; then
-    echo "❌ Check 0: FAILED - Virtual environment (.venv) not found (0 points)"
-    echo "Hint: Create virtual environment with 'python3.11 -m venv .venv'"
-else
-    source .venv/bin/activate 2>/dev/null || true
-    echo " Check 0: PASSED - Virtual environment found and activated (2 points)"
-    score=$((score + 2))
-fi
-echo ""
-
-# Check 1: Actions folder exists (1 point)
-echo "Check 1: Verifying actions folder exists..."
-if [ ! -d "actions" ]; then
-    echo "❌ Check 1: FAILED - actions/ folder not found (0 points)"
-    echo "Hint: Create the actions folder with 'mkdir -p actions'"
-else
-    echo " Check 1: PASSED - actions/ folder exists (1 point)"
-    score=$((score + 1))
-fi
-echo ""
-
-# Check 2: __init__.py exists in actions folder (1 point)
-echo "Check 2: Verifying __init__.py exists..."
-if [ ! -f "actions/__init__.py" ]; then
-    echo "❌ Check 2: FAILED - actions/__init__.py not found (0 points)"
-    echo "Hint: Create __init__.py in the actions folder (can be empty)"
-else
-    echo " Check 2: PASSED - actions/__init__.py exists (1 point)"
-    score=$((score + 1))
-fi
-echo ""
-
-# Check 3: action_holiday_hours.py file exists (2 points)
-echo "Check 3: Verifying action_holiday_hours.py exists..."
+# Check 1: action_holiday_hours.py file exists (2 points) - Step 1: create file in actions/
+echo "Check 1: Verifying action_holiday_hours.py exists..."
 if [ ! -f "actions/action_holiday_hours.py" ]; then
-    echo "❌ Check 3: FAILED - actions/action_holiday_hours.py not found (0 points)"
+    echo "❌ Check 1: FAILED - actions/action_holiday_hours.py not found (0 points)"
     echo "Hint: Create the action file in the actions/ folder"
 else
-    echo " Check 3: PASSED - action_holiday_hours.py file exists (2 points)"
+    echo " Check 1: PASSED - action_holiday_hours.py file exists (2 points)"
     score=$((score + 2))
 fi
 echo ""
 
-# Check 4: Action file has correct imports (2 points)
-echo "Check 4: Verifying action file imports..."
+# Check 2: Action file has correct imports (2 points) - Step 2
+echo "Check 2: Verifying action file imports..."
 if [ -f "actions/action_holiday_hours.py" ] && grep -q "from rasa_sdk import Action" actions/action_holiday_hours.py 2>/dev/null && grep -q "from rasa_sdk.executor import CollectingDispatcher" actions/action_holiday_hours.py 2>/dev/null; then
-    echo " Check 4: PASSED - Correct imports found (2 points)"
+    echo " Check 2: PASSED - Correct imports found (2 points)"
     score=$((score + 2))
 else
-    echo "❌ Check 4: FAILED - Missing required imports (0 points)"
+    echo "❌ Check 2: FAILED - Missing required imports (0 points)"
     echo "Hint: Import Action from rasa_sdk and CollectingDispatcher from rasa_sdk.executor"
 fi
 echo ""
 
-# Check 4b: Action uses datetime for date-based logic (1 point)
-echo "Check 4b: Verifying date-based logic (datetime)..."
+# Check 3: Action uses datetime for date-based logic (1 point) - Step 2
+echo "Check 3: Verifying date-based logic (datetime)..."
 if [ -f "actions/action_holiday_hours.py" ] && grep -q "datetime" actions/action_holiday_hours.py 2>/dev/null; then
-    echo " Check 4b: PASSED - datetime used for date-based message (1 point)"
+    echo " Check 3: PASSED - datetime used for date-based message (1 point)"
     score=$((score + 1))
 else
-    echo "❌ Check 4b: FAILED - Action should use datetime to check if today is a holiday (0 points)"
+    echo "❌ Check 3: FAILED - Action should use datetime to check if today is a holiday (0 points)"
     echo "Hint: Import datetime and use datetime.now() with .month and .day to choose your message"
 fi
 echo ""
 
-# Check 5: Action class inherits from Action (1 point)
-echo "Check 5: Verifying Action class structure..."
+# Check 4: Action class inherits from Action (1 point) - Step 3
+echo "Check 4: Verifying Action class structure..."
 if [ -f "actions/action_holiday_hours.py" ] && grep -q "class ActionHolidayHours(Action)" actions/action_holiday_hours.py 2>/dev/null; then
-    echo " Check 5: PASSED - ActionHolidayHours class inherits from Action (1 point)"
+    echo " Check 4: PASSED - ActionHolidayHours class inherits from Action (1 point)"
     score=$((score + 1))
 else
-    echo "❌ Check 5: FAILED - ActionHolidayHours class not found or doesn't inherit from Action (0 points)"
+    echo "❌ Check 4: FAILED - ActionHolidayHours class not found or doesn't inherit from Action (0 points)"
     echo "Hint: Class should be 'class ActionHolidayHours(Action):'"
 fi
 echo ""
 
-# Check 6: name() method exists and returns correct value (1 point)
-echo "Check 6: Verifying name() method..."
+# Check 5: name() method exists and returns correct value (1 point) - Step 4
+echo "Check 5: Verifying name() method..."
 if [ -f "actions/action_holiday_hours.py" ] && grep -q "def name" actions/action_holiday_hours.py 2>/dev/null && grep -q "return \"action_holiday_hours\"" actions/action_holiday_hours.py 2>/dev/null; then
-    echo " Check 6: PASSED - name() method exists and returns 'action_holiday_hours' (1 point)"
+    echo " Check 5: PASSED - name() method exists and returns 'action_holiday_hours' (1 point)"
     score=$((score + 1))
 else
-    echo "❌ Check 6: FAILED - name() method missing or incorrect return value (0 points)"
+    echo "❌ Check 5: FAILED - name() method missing or incorrect return value (0 points)"
     echo "Hint: name() method should return 'action_holiday_hours'"
 fi
 echo ""
 
-# Check 7: run() method exists, uses dispatcher.utter_message, and returns [] (1 point)
-echo "Check 7: Verifying run() method and message sending..."
+# Check 6: run() method exists, uses dispatcher.utter_message, and returns [] (1 point) - Step 5
+echo "Check 6: Verifying run() method and message sending..."
 if [ -f "actions/action_holiday_hours.py" ] && grep -q "def run" actions/action_holiday_hours.py 2>/dev/null && grep -q "dispatcher.utter_message" actions/action_holiday_hours.py 2>/dev/null && grep -q 'return \[\]' actions/action_holiday_hours.py 2>/dev/null; then
-    echo " Check 7: PASSED - run() method exists, uses dispatcher.utter_message(), and returns [] (1 point)"
+    echo " Check 6: PASSED - run() method exists, uses dispatcher.utter_message(), and returns [] (1 point)"
     score=$((score + 1))
 else
-    echo "❌ Check 7: FAILED - run() must call dispatcher.utter_message() and return [] (0 points)"
+    echo "❌ Check 6: FAILED - run() must call dispatcher.utter_message() and return [] (0 points)"
     echo "Hint: run() must call dispatcher.utter_message() to send a message and return [] at the end"
 fi
 echo ""
@@ -197,7 +165,7 @@ else
 fi
 echo "=========================================="
 echo ""
-echo "Summary: Check 0 (venv) | Check 1 (actions/) | Check 2 (__init__.py) | Check 3 (action file) | Check 4 (imports) | Check 4b (datetime) | Check 5 (class) | Check 6 (name()) | Check 7 (run())"
+echo "Summary: Check 1 (action file) | Check 2 (imports) | Check 3 (datetime) | Check 4 (class) | Check 5 (name()) | Check 6 (run())"
 echo "Score: $score/$max_score"
 if [ $score -lt $max_score ]; then
     exit 1
@@ -242,12 +210,12 @@ class ActionHolidayHours(Action):
 
 2. **Add Code Test** – Add Code Test → **Standard Code Test**. Configure each tab as follows.
 
-   **General** – Name: *Lab 3.1: Create Your Own Action*. Description: *Verify that students can create action_holiday_hours.py with correct structure and date-based logic*. Points: `12`. Language: `Bash`.
+   **General** – Name: *Lab 3.1: Create Your Own Action*. Description: *Verify that students can create action_holiday_hours.py with correct structure and date-based logic*. Points: `8`. Language: `Bash`.
 
    **Execution** – COMMAND: `bash /home/codio/workspace/.guides/assessments/level2_graders/lab_3.1_grader.sh`. TIMEOUT: `60` seconds. Working Directory: `/home/codio/workspace/level2`.
 
    **Grading**
-   - **Points**: `12` – Total points for this assessment.
+   - **Points**: `8` – Total points for this assessment.
    - **Allow partial points**: `OFF` – Single run; the script reports one pass/fail outcome, so partial credit is not used.
    - **Use maximum score**: `OFF` – No cap; the student can earn the full point value.
    - **Case insensitive**: `ON` – Output comparison ignores letter case so minor casing differences do not fail the test.
@@ -260,7 +228,7 @@ class ActionHolidayHours(Action):
    - **Show expected answer**: `ALWAYS` – Students can see the required output phrase after submission.
    - **Show rationale to student**: `NEVER` (or as desired) – Controls whether the instructor rationale is shown to the student.
    - **Defined number of attempts**: `OFF` – No limit on submission attempts (or set a limit if desired).
-   - **Rationale** (optional): e.g. *The grader checks that `actions/action_holiday_hours.py` exists, has the correct imports (including `datetime`), class `ActionHolidayHours(Action)`, `name()` returning `'action_holiday_hours'`, and `run()` calling `dispatcher.utter_message()` and returning `[]`.*
+   - **Rationale** (optional): e.g. *The grader checks only what the lab instructs: action file in actions/, correct imports (including datetime), class ActionHolidayHours(Action), name() returning 'action_holiday_hours', and run() calling dispatcher.utter_message() and returning [].*
 
    **Files** – Create the grader script at `.guides/assessments/level2_graders/lab_3.1_grader.sh`. In the Codio workspace terminal (from the workspace root), make it executable: `chmod +x .guides/assessments/level2_graders/lab_3.1_grader.sh`.
 
