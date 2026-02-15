@@ -1,3 +1,5 @@
+# Lab 6.1: Training and Testing with Actions
+
 ## Guide Content (For Students)
 
 **Placement**: This lab follows Unit 6: Training and Testing with Actions.

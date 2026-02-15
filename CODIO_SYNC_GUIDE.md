@@ -65,7 +65,7 @@ This gives you full control but is slower when you change many sections. The scr
 ## Making “one page = one section or lab”
 
 - **Sections:** Each `Level2_Unit<N>_Content_<X>.<Y>_<Name>.md` is intended to become **one** Codio page (e.g. “4.4 Multiple Actions”).
-- **Labs:** Each assessment file (e.g. `Level2_Unit4_Assessment.md`) is intended to become **one** Codio page (e.g. “Lab 4.1”).
+- **Labs:** Each `Level2_Lab*_Content.md` file is synced to **one** student-facing Codio lab page; each `Level2_Lab*_Assessment_Setup.md` is synced to `Lab-Implementation/` (instructor-only) (e.g. “Lab 4.1”).
 
 The sync script maps these files into the Unit folders and sets the page order in each unit’s `index.json` so that the Codio order matches the course outline. No need to manually split or merge unless you want a different page structure.
 

@@ -1,3 +1,5 @@
+# Lab 4.1: Registering Actions in the Domain
+
 ## Guide Content (For Students)
 
 **Placement**: This lab follows Unit 4: Registering Actions in the Domain.

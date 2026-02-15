@@ -289,10 +289,10 @@ Content is split by subsection (one file per numbered subsection). Examples:
 - `Level2_AdditionalResources_Content.md` - Extension exercises
 
 ### Assessment Files (Implementation Instructions)
-- `Level2_Lab3.1_Assessment.md` - Lab 3.1 setup
-- `Level2_Unit4_Assessment.md` - Lab 4.1 setup
-- `Level2_Unit5_Assessment.md` - Lab 5.1 setup
-- `Level2_Unit6_Assessment.md` - Lab 6.1 setup
+- `Level2_Lab3.1_Content.md` / `Level2_Lab3.1_Assessment_Setup.md` - Lab 3.1 (student page + implementer doc)
+- `Level2_Lab4.1_Content.md` / `Level2_Lab4.1_Assessment_Setup.md` - Lab 4.1
+- `Level2_Lab5.1_Content.md` / `Level2_Lab5.1_Assessment_Setup.md` - Lab 5.1
+- `Level2_Lab6.1_Content.md` / `Level2_Lab6.1_Assessment_Setup.md` - Lab 6.1
 
 ### Implementation Files
 - `Level2_Implementation_Overview.md` - Codio team guide

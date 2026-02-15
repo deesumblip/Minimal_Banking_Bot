@@ -1,0 +1,154 @@
+# Lab 6.1: Training and Testing with Actions - Assessment Setup
+
+## Overview
+
+This assessment verifies that students can successfully train their bot with actions and that the training completes without errors.
+
+### Assessment Type
+
+**Standard Code Test** (Bash script)
+
+## Grader Script Location
+
+Save the grader script at:
+```
+.guides/assessments/level2_graders/lab_6.1_grader.sh
+```
+
+## Grader Script
+
+```bash
+#!/bin/bash
+cd /home/codio/workspace/level2
+
+score=0
+max_score=10
+
+echo "Running Lab 6.1 Assessment Checks..."
+echo ""
+
+# Check 0: Virtual environment exists and is activated (2 points)
+echo "Check 0: Verifying virtual environment..."
+if [ ! -d ".venv" ]; then
+    echo "❌ Check 0: FAILED - Virtual environment (.venv) not found (0 points)"
+    echo "Hint: Create virtual environment with 'python3.11 -m venv .venv'"
+else
+    source .venv/bin/activate 2>/dev/null || true
+    echo " Check 0: PASSED - Virtual environment found and activated (2 points)"
+    score=$((score + 2))
+fi
+echo ""
+
+# Check 1: Model file exists (2 points)
+echo "Check 1: Verifying model file exists..."
+if [ -d "models" ] && [ -n "$(ls -A models/*.tar.gz 2>/dev/null)" ]; then
+    echo " Check 1: PASSED - Model file created (2 points)"
+    score=$((score + 2))
+else
+    echo "❌ Check 1: FAILED - No model file found in models/ directory (0 points)"
+    echo "Hint: Run 'python -m rasa train' (with venv activated) to create the model"
+fi
+echo ""
+
+# Check 2: Training completed successfully (check for recent model) (3 points)
+echo "Check 2: Verifying model is recent..."
+model_file=$(ls -t models/*.tar.gz 2>/dev/null | head -1)
+if [ -z "$model_file" ]; then
+    echo "❌ Check 2: FAILED - No model files found (0 points)"
+    echo "Hint: Run 'python -m rasa train' and wait for it to finish"
+elif [ -f "$model_file" ]; then
+    model_age=$(( $(date +%s) - $(stat -c %Y "$model_file") ))
+    if [ $model_age -lt 600 ]; then
+        echo " Check 2: PASSED - Model file is recent (training completed within 10 minutes) (3 points)"
+        score=$((score + 3))
+    else
+        echo "⚠️  WARNING: Model file is old. Re-run training to ensure it's current."
+        echo "⚠️  Check 2: PARTIAL - Model exists but is older than 10 minutes (0 points)"
+    fi
+fi
+echo ""
+
+# Check 3: No obvious errors (check for common error patterns in logs if available) (2 points)
+echo "Check 3: Checking for errors in logs..."
+if [ -f "logs/logs.out" ]; then
+    if grep -qi "error\|exception\|failed" logs/logs.out 2>/dev/null; then
+        echo "⚠️  WARNING: Possible errors found in logs. Review logs/logs.out"
+        echo "⚠️  Check 3: PARTIAL - Logs found but may contain errors (0 points)"
+    else
+        echo " Check 3: PASSED - No obvious errors in logs (2 points)"
+        score=$((score + 2))
+    fi
+else
+    echo " Check 3: PASSED - No log file found (training may not have logged) (2 points)"
+    score=$((score + 2))
+fi
+echo ""
+
+# Check 4: Action file exists and is valid (1 point)
+echo "Check 4: Verifying action file exists..."
+if [ -f "actions/action_bank_hours.py" ]; then
+    echo " Check 4: PASSED - action_bank_hours.py exists (1 point)"
+    score=$((score + 1))
+else
+    echo "❌ Check 4: FAILED - action_bank_hours.py not found (0 points)"
+    echo "Hint: Ensure actions/action_bank_hours.py exists (provided in starter). Lab 3.1 adds your action_holiday_hours.py"
+fi
+echo ""
+
+# Final summary
+echo "=========================================="
+if [ $score -eq $max_score ]; then
+    echo " PASS: Training verification complete! Score: $score/$max_score"
+else
+    echo "❌ FAIL: Score $score/$max_score - Review the failed checks above and try again."
+fi
+echo "=========================================="
+echo ""
+echo "Summary: Check 0 (venv) | Check 1 (model exists) | Check 2 (model recent) | Check 3 (no errors) | Check 4 (action file)"
+echo "Score: $score/$max_score"
+if [ $score -lt $max_score ]; then
+    exit 1
+fi
+```
+
+### Example student deliverable (for grading reference)
+
+Students do not produce a new script file; they run training so that a model is produced. The grader checks for a model in `models/` and that it was created recently. Example command the student runs (with venv activated):
+
+```bash
+python -m rasa train
+```
+
+A successful run produces a `.tar.gz` model under `models/`; the grader expects at least one model file and that it was created within the last 10 minutes.
+
+## Assessment Setup and Configuration
+
+1. **Navigate** to the Lab 6.1 section in the Codio Guide Editor.
+
+2. **Add Code Test** – Add Code Test → **Standard Code Test**. Configure each tab as follows.
+
+   **General** – Name: *Lab 6.1: Training and Testing with Actions*. Description: *Verify that students can successfully train their bot with actions*. Points: `10`. Language: `Bash`.
+
+   **Execution** – COMMAND: `bash /home/codio/workspace/.guides/assessments/level2_graders/lab_6.1_grader.sh`. TIMEOUT: `60` seconds. Working Directory: `/home/codio/workspace/level2`.
+
+   **Grading**
+   - **Points**: `10` – Total points for this assessment.
+   - **Allow partial points**: `OFF` – Single run; the script reports one pass/fail outcome, so partial credit is not used.
+   - **Use maximum score**: `OFF` – No cap; the student can earn the full point value.
+   - **Case insensitive**: `ON` – Output comparison ignores letter case so minor casing differences do not fail the test.
+   - **Ignore white spaces**: `ON` – Extra spaces or newlines in the script output do not cause a failure.
+   - **Substring match**: `ON` – Pass if the expected string appears anywhere in the output (full output need not match exactly).
+   - **Test case** (one case):
+     - **INPUT – Arguments**: leave empty – No command-line arguments are passed to the script.
+     - **INPUT – STDIN**: leave empty – No stdin is fed to the script.
+     - **Expected output**: ` PASS: Training verification complete!` (include the leading space) – The test passes when the script’s stdout contains this string (i.e. when all checks pass).
+   - **Show expected answer**: `ALWAYS` – Students can see the required output phrase after submission.
+   - **Show rationale to student**: `NEVER` (or as desired) – Controls whether the instructor rationale is shown to the student.
+   - **Defined number of attempts**: `OFF` – No limit on submission attempts (or set a limit if desired).
+   - **Rationale** (optional): e.g. *The grader checks that training runs and the model is produced with the registered actions.*
+
+   **Files** – Create the grader script at `.guides/assessments/level2_graders/lab_6.1_grader.sh`. In the Codio workspace terminal (from the workspace root), make it executable: `chmod +x .guides/assessments/level2_graders/lab_6.1_grader.sh`.
+
+3. **Save & Test** the assessment. Enable **Learning Analytics** if desired.
+
+---

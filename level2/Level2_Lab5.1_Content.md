@@ -1,3 +1,5 @@
+# Lab 5.1: Using Actions in Flows
+
 ## Guide Content (For Students)
 
 **Placement**: This lab follows Unit 5: Using Actions in Flows.

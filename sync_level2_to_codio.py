@@ -19,6 +19,8 @@ GUIDES_CONTENT = REPO_ROOT / ".guides" / "content"
 
 # Level 2 lives inside this existing Codio chapter (do not create a new chapter)
 LEVEL2_CHAPTER_FOLDER = "Chapter-1-2---Custom-Actions-30d6"
+# Stable slug ids for lab content pages (so we overwrite same Codio page and preserve assessment JSON)
+LAB_CONTENT_SLUG_IDS = {"3.1": "04c0", "4.1": "3406", "5.1": "e512", "6.1": "7710"}
 UNIT_TITLES = {
     0: "Recap--What-You-Built-in-Level-1",
     1: "Introduction-to-Actions",
@@ -47,7 +49,7 @@ def _slug_from_content_name(name: str) -> str:
 
 
 def _slug_from_assessment_name(name: str, content: str) -> str:
-    """From Level2_Unit4_Assessment.md or Level2_Lab3.1_Assessment.md -> Lab-4-1 or Lab-3-1."""
+    """From Level2_Lab*_Content.md -> Lab-4-1 or Lab-3-1 (student page). Assessment_Setup -> Lab-Implementation/."""
     if "Lab" in name:
         m = re.match(r"Level2_Lab([\d.]+)_Assessment\.md$", name, re.IGNORECASE)
         if m:
@@ -112,26 +114,23 @@ def collect_level2_pages():
             pages_by_unit.setdefault(unit, []).append((sort_key, path, slug, title, strip_title_h1))
             continue
 
-        # Unit assessment: Level2_Unit4_Assessment.md
-        m = re.match(r"Level2_Unit(\d+)_Assessment\.md$", name, re.IGNORECASE)
+        # Lab student content (synced to main lab pages): Level2_Lab3.1_Content.md, Level2_Lab4.1_Content.md, etc.
+        # Use stable slugs so we overwrite the same Codio pages and preserve assessment JSON.
+        m = re.match(r"Level2_Lab([\d.]+)_Content\.md$", name, re.IGNORECASE)
         if m:
-            unit = int(m.group(1))
+            lab_num = m.group(1)
+            unit = int(float(lab_num))
             sort_key = (999, 0)  # after all content
-            slug_base = _slug_from_assessment_name(name, content)
-            short_id = _short_id(str(path))
-            slug = f"{slug_base}-{short_id}"
+            slug_base = f"Lab-{lab_num.replace('.', '-')}"
+            stable_id = LAB_CONTENT_SLUG_IDS.get(lab_num, _short_id(str(path)))
+            slug = f"{slug_base}-{stable_id}"
+            title = _page_title_from_content(content, name, prefer_h1=True)
+            strip_title_h1 = True
             pages_by_unit.setdefault(unit, []).append((sort_key, path, slug, title, strip_title_h1))
             continue
 
-        # Lab assessment: Level2_Lab3.1_Assessment.md
-        m = re.match(r"Level2_Lab([\d.]+)_Assessment\.md$", name, re.IGNORECASE)
-        if m:
-            unit = int(float(m.group(1)))
-            sort_key = (999, 0)
-            slug_base = _slug_from_assessment_name(name, content)
-            short_id = _short_id(str(path))
-            slug = f"{slug_base}-{short_id}"
-            pages_by_unit.setdefault(unit, []).append((sort_key, path, slug, title, strip_title_h1))
+        # Skip Assessment_Setup and old Assessment files (they are synced to Lab-Implementation or no longer used)
+        if "Assessment_Setup" in name or re.match(r"Level2_Lab[\d.]+_Assessment\.md$", name, re.I) or re.match(r"Level2_Unit\d+_Assessment\.md$", name, re.I):
             continue
 
     return pages_by_unit
@@ -245,6 +244,17 @@ def sync():
     chapter_index_path.write_text(
         json.dumps(chapter_index, indent=2), encoding="utf-8"
     )
+
+    # Sync Lab Assessment_Setup files to Lab-Implementation (instructor-only; separate from student pages)
+    lab_impl_dir = chapter_dir / "Lab-Implementation"
+    lab_impl_dir.mkdir(parents=True, exist_ok=True)
+    for path in sorted(LEVEL2_DIR.glob("Level2_Lab*_Assessment_Setup.md")):
+        name = path.name
+        m = re.match(r"Level2_Lab([\d.]+)_Assessment_Setup\.md$", name, re.IGNORECASE)
+        if m:
+            lab_num = m.group(1).replace(".", "-")
+            out_name = f"Lab-{lab_num}.md"
+            (lab_impl_dir / out_name).write_text(path.read_text(encoding="utf-8"), encoding="utf-8")
 
     # Update root content index to include Level 2 if missing
     root_index_path = GUIDES_CONTENT / "index.json"

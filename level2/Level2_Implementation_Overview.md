@@ -18,11 +18,11 @@ This document provides implementation guidance for **Level 2: Simple Actions** o
   - `Level2_AdditionalResources_Content.md` - Extension exercises and resources
 - Each unit's content can be copy/pasted directly into Codio Guide Editor content pages
 - Exercises should be implemented as **auto-graded labs** wherever possible
-- Assessment setup instructions are provided in separate assessment files:
-  - `Level2_Lab3.1_Assessment.md` - Lab 3.1: Creating Your First Action
-  - `Level2_Unit4_Assessment.md` - Lab 4.1: Registering Actions in the Domain
-  - `Level2_Unit5_Assessment.md` - Lab 5.1: Using Actions in Flows
-  - `Level2_Unit6_Assessment.md` - Lab 6.1: Training and Testing with Actions
+- Student-facing lab content is in `Level2_Lab*_Content.md`; full setup (grader, config) is in `Level2_Lab*_Assessment_Setup.md` (synced to Codio Lab-Implementation folder):
+  - `Level2_Lab3.1_Content.md` / `Level2_Lab3.1_Assessment_Setup.md` - Lab 3.1: Creating Your Own Action
+  - `Level2_Lab4.1_Content.md` / `Level2_Lab4.1_Assessment_Setup.md` - Lab 4.1: Registering Actions in the Domain
+  - `Level2_Lab5.1_Content.md` / `Level2_Lab5.1_Assessment_Setup.md` - Lab 5.1: Using Actions in Flows
+  - `Level2_Lab6.1_Content.md` / `Level2_Lab6.1_Assessment_Setup.md` - Lab 6.1: Training and Testing with Actions
 
 ---
 
@@ -173,10 +173,10 @@ For Unit 6 (Testing with Actions), configure the terminal so students can "jump 
 - `Level2_AdditionalResources_Content.md` - Extension Exercises
 
 ### Assessment Files (Implementation Instructions)
-- `Level2_Lab3.1_Assessment.md` - Lab 3.1 setup instructions
-- `Level2_Unit4_Assessment.md` - Lab 4.1 setup instructions
-- `Level2_Unit5_Assessment.md` - Lab 5.1 setup instructions
-- `Level2_Unit6_Assessment.md` - Lab 6.1 setup instructions
+- `Level2_Lab3.1_Assessment_Setup.md` - Lab 3.1 setup (student content in `Level2_Lab3.1_Content.md`)
+- `Level2_Lab4.1_Assessment_Setup.md` - Lab 4.1 setup (student content in `Level2_Lab4.1_Content.md`)
+- `Level2_Lab5.1_Assessment_Setup.md` - Lab 5.1 setup (student content in `Level2_Lab5.1_Content.md`)
+- `Level2_Lab6.1_Assessment_Setup.md` - Lab 6.1 setup (student content in `Level2_Lab6.1_Content.md`)
 
 ### Implementation Files
 - `Level2_Implementation_Overview.md` - This file (for Codio team)

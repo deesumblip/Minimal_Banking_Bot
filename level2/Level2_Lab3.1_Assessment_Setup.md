@@ -256,7 +256,7 @@ class ActionHolidayHours(Action):
    - **Test case** (one case):
      - **INPUT – Arguments**: leave empty – No command-line arguments are passed to the script.
      - **INPUT – STDIN**: leave empty – No stdin is fed to the script.
-     - **Expected output**: ` PASS: Action creation verification complete!` (include the leading space) – The test passes when the script’s stdout contains this string (i.e. when all checks pass).
+     - **Expected output**: ` PASS: Action creation verification complete!` (include the leading space) – The test passes when the script's stdout contains this string (i.e. when all checks pass).
    - **Show expected answer**: `ALWAYS` – Students can see the required output phrase after submission.
    - **Show rationale to student**: `NEVER` (or as desired) – Controls whether the instructor rationale is shown to the student.
    - **Defined number of attempts**: `OFF` – No limit on submission attempts (or set a limit if desired).
