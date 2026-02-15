@@ -62,8 +62,9 @@ fi
 echo ""
 
 # Check 5: Correct YAML syntax / list format (2 points) - verification: "correct indentation and dashes"
+# Accept both "  - action_bank_hours" (indented under actions:) and "- action_bank_hours" (no indent)
 echo "Check 5: Verifying YAML list syntax (dashes)..."
-if [ -f "domain/basics.yml" ] && (grep -q "^- action_bank_hours" domain/basics.yml 2>/dev/null && grep -q "^- action_holiday_hours" domain/basics.yml 2>/dev/null); then
+if [ -f "domain/basics.yml" ] && (grep -qE "^\s*-\s+action_bank_hours" domain/basics.yml 2>/dev/null && grep -qE "^\s*-\s+action_holiday_hours" domain/basics.yml 2>/dev/null); then
     echo " Check 5: PASSED - Correct YAML list syntax (dash format) (2 points)"
     score=$((score + 2))
 else
