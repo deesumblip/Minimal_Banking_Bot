@@ -13,22 +13,16 @@ responses:              # ← From Level 1 (unchanged)
   # ... other responses
 
 actions:                # ← NEW in Level 2
-  - action_bank_hours   # ← Register your actions here
+  - action_bank_hours   # ← Example action
+  - action_holiday_hours   # ← Your action from Lab 3.1
 ```
 
-#### How to Register an Action
+#### What You'll Do in Lab 4.1
 
-1. **Open `domain/basics.yml`**
-2. **Add `actions:` section** (if it doesn't exist), and list **both** the example action and the action you created in Lab 3.1:
-   ```yaml
-   actions:
-     - action_bank_hours
-     - action_holiday_hours
-   ```
+In **Lab 4.1** you will open `domain/basics.yml`, add an `actions:` section (if needed), and list **both** the example action and the action you created in Lab 3.1. The lab gives step-by-step instructions for the file edits.
 
-3. **The action name must match**:
-   - The return value of `name()` method: `"action_bank_hours"`
-   - The class name (without `Action` prefix): `ActionBankHours` → `action_bank_hours`
-   - Convention: lowercase with underscores
+**Naming rule** (for when you do the lab): the action name in the domain must match exactly:
+- The return value of the `name()` method (e.g. `"action_bank_hours"`)
+- Convention: lowercase with underscores
 
 ---

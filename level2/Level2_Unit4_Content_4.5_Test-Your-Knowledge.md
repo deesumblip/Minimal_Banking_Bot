@@ -1,3 +1,3 @@
 ### 4.5 Test Your Knowledge
 
-Let's do a quick review of what you've learnt so far!
+Check your understanding of registering actions with the questions below.
