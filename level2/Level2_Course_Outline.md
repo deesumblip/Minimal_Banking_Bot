@@ -110,7 +110,6 @@
 - 4.1 Why Register Actions?
 - Lab 4.1: Registering Actions in the Domain
 - Lab 4.2: Multiple Actions (recap + optional Inspector)
-- 4.3 Test Your Knowledge
 
 **Key Concepts**: Domain registration, YAML syntax, action naming
 
