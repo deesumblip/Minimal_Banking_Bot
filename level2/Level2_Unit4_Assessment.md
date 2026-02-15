@@ -168,49 +168,20 @@ if [ $score -lt $max_score ]; then
 fi
 ```
 
-## Assessment Configuration
+## Assessment Setup and Configuration
 
-### General Tab
-- **Name**: Lab 4.1: Registering Actions in the Domain
-- **Description**: Verify that students can register actions in the domain file (both action_bank_hours and action_holiday_hours)
-- **Points**: `12`
-- **Language**: `Bash`
+1. **Navigate** to the Lab 4.1 section in the Codio Guide Editor.
 
-### Execution Tab
-- **COMMAND**: `bash /home/codio/workspace/.guides/assessments/level2_graders/lab_4.1_grader.sh`
-- **TIMEOUT**: `60` seconds
-- **Working Directory**: `/home/codio/workspace/level2`
+2. **Add Code Test** – Add Code Test → **Standard Code Test**. Configure each tab as follows.
 
-### Grading Tab
-- **Points**: `12`
-- **Test Cases**: Single test case
-- **Expected Output**: Should contain " PASS: Action registration verification complete!"
-- **Matching**: Contains (case-insensitive)
+   **General** – Name: *Lab 4.1: Registering Actions in the Domain*. Description: *Verify that students can register actions in the domain file (both action_bank_hours and action_holiday_hours)*. Points: `12`. Language: `Bash`.
 
-### Files Tab
-- **Grader Script**: `.guides/assessments/level2_graders/lab_4.1_grader.sh`
-- Make sure the script is executable: `chmod +x .guides/assessments/level2_graders/lab_4.1_grader.sh`
+   **Execution** – COMMAND: `bash /home/codio/workspace/.guides/assessments/level2_graders/lab_4.1_grader.sh`. TIMEOUT: `60` seconds. Working Directory: `/home/codio/workspace/level2`.
 
-## Setup Instructions
+   **Grading** – Points: `12`. Allow partial points: `OFF`. Use maximum score: `OFF`. Case insensitive: `ON`. Ignore white spaces: `ON`. Substring match: `ON`. One test case: **INPUT – Arguments** and **INPUT – STDIN** empty; **Expected output**: ` PASS: Action registration verification complete!` (include the leading space). Show expected answer: `ALWAYS`. Show rationale to student: `NEVER` (or as desired). Defined number of attempts: `OFF`. **Rationale** (optional): e.g. *The grader checks that `domain/basics.yml` has an `actions:` section listing both `action_bank_hours` and `action_holiday_hours` with valid YAML.*
 
-1. Navigate to the Lab 4.1 section in Codio Guide Editor
-2. Click **Add Code Test** → **Standard Code Test**
-3. In the **General** tab:
-   - Set Name: "Lab 4.1: Registering Actions in the Domain"
-   - Set Points: `12`
-   - Set Language: `Bash`
-4. In the **Execution** tab:
-   - Set COMMAND: `bash /home/codio/workspace/.guides/assessments/level2_graders/lab_4.1_grader.sh`
-   - Set TIMEOUT: `60`
-   - Set Working Directory: `/home/codio/workspace/level2`
-5. In the **Grading** tab:
-   - Set Points: `12`
-   - Add test case with Expected Output containing " PASS"
-   - Set matching to "Contains"
-6. In the **Files** tab:
-   - Create the grader script at the specified path
-   - Make it executable
-7. **Save & Test** the assessment
-8. Enable **Learning Analytics** if desired
+   **Files** – Create the grader script at `.guides/assessments/level2_graders/lab_4.1_grader.sh` and make it executable: `chmod +x .guides/assessments/level2_graders/lab_4.1_grader.sh`.
+
+3. **Save & Test** the assessment. Enable **Learning Analytics** if desired.
 
 ---
