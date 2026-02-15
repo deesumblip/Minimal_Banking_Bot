@@ -204,6 +204,38 @@ if [ $score -lt $max_score ]; then
 fi
 ```
 
+### Example student deliverable (for grading reference)
+
+Students should produce a file at `actions/action_holiday_hours.py`. The following is a minimal example that satisfies the grader (exact wording of messages may vary):
+
+```python
+from datetime import datetime
+
+from rasa_sdk import Action, Tracker
+from rasa_sdk.executor import CollectingDispatcher
+
+
+class ActionHolidayHours(Action):
+    def name(self):
+        return "action_holiday_hours"
+
+    def run(self, dispatcher, tracker, domain):
+        now = datetime.now()
+        if (now.month == 1 and now.day == 1):
+            message = "We're closed today for New Year's Day."
+        elif (now.month == 7 and now.day == 4):
+            message = "We're closed today for Independence Day."
+        elif (now.month == 12 and now.day == 25):
+            message = "We're closed today for Christmas."
+        else:
+            message = (
+                "We're closed on New Year's Day, Independence Day, and Christmas. "
+                "On other holidays we may have limited hours—please call ahead."
+            )
+        dispatcher.utter_message(text=message)
+        return []
+```
+
 ## Assessment Setup and Configuration
 
 1. **Create the page** – New Codio Guide page **Lab 3.1: Create Your Own Action** (standalone: folder tree, guide editor, terminal). Add the **Guide Content** section above as the page content.
@@ -214,7 +246,21 @@ fi
 
    **Execution** – COMMAND: `bash /home/codio/workspace/.guides/assessments/level2_graders/lab_3.1_grader.sh`. TIMEOUT: `60` seconds. Working Directory: `/home/codio/workspace/level2`.
 
-   **Grading** – Points: `12`. Allow partial points: `OFF`. Use maximum score: `OFF`. Case insensitive: `ON`. Ignore white spaces: `ON`. Substring match: `ON`. One test case: **INPUT – Arguments** and **INPUT – STDIN** empty; **Expected output**: ` PASS: Action creation verification complete!` (include the leading space). Show expected answer: `ALWAYS`. Show rationale to student: `NEVER` (or as desired). Defined number of attempts: `OFF`. **Rationale** (optional): e.g. *The grader checks that `actions/action_holiday_hours.py` exists, has the correct imports (including `datetime`), class `ActionHolidayHours(Action)`, `name()` returning `'action_holiday_hours'`, and `run()` calling `dispatcher.utter_message()` and returning `[]`.*
+   **Grading**
+   - **Points**: `12` – Total points for this assessment.
+   - **Allow partial points**: `OFF` – Single run; the script reports one pass/fail outcome, so partial credit is not used.
+   - **Use maximum score**: `OFF` – No cap; the student can earn the full point value.
+   - **Case insensitive**: `ON` – Output comparison ignores letter case so minor casing differences do not fail the test.
+   - **Ignore white spaces**: `ON` – Extra spaces or newlines in the script output do not cause a failure.
+   - **Substring match**: `ON` – Pass if the expected string appears anywhere in the output (full output need not match exactly).
+   - **Test case** (one case):
+     - **INPUT – Arguments**: leave empty – No command-line arguments are passed to the script.
+     - **INPUT – STDIN**: leave empty – No stdin is fed to the script.
+     - **Expected output**: ` PASS: Action creation verification complete!` (include the leading space) – The test passes when the script’s stdout contains this string (i.e. when all checks pass).
+   - **Show expected answer**: `ALWAYS` – Students can see the required output phrase after submission.
+   - **Show rationale to student**: `NEVER` (or as desired) – Controls whether the instructor rationale is shown to the student.
+   - **Defined number of attempts**: `OFF` – No limit on submission attempts (or set a limit if desired).
+   - **Rationale** (optional): e.g. *The grader checks that `actions/action_holiday_hours.py` exists, has the correct imports (including `datetime`), class `ActionHolidayHours(Action)`, `name()` returning `'action_holiday_hours'`, and `run()` calling `dispatcher.utter_message()` and returning `[]`.*
 
    **Files** – Create the grader script at `.guides/assessments/level2_graders/lab_3.1_grader.sh` and make it executable: `chmod +x .guides/assessments/level2_graders/lab_3.1_grader.sh`.
 
