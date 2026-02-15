@@ -54,29 +54,19 @@ Save the grader script at:
 
 ## Grader Script
 
+The grader checks only what the lab instructs: domain file exists, `actions:` section, both `action_bank_hours` and `action_holiday_hours` registered, correct YAML list syntax, and valid YAML. No check for virtual environment.
+
 ```bash
 #!/bin/bash
 cd /home/codio/workspace/level2
 
 score=0
-max_score=12
+max_score=11
 
 echo "Running Lab 4.1 Assessment Checks..."
 echo ""
 
-# Check 0: Virtual environment exists and is activated (1 point)
-echo "Check 0: Verifying virtual environment..."
-if [ ! -d ".venv" ]; then
-    echo "❌ Check 0: FAILED - Virtual environment (.venv) not found (0 points)"
-    echo "Hint: Create virtual environment with 'python3.11 -m venv .venv'"
-else
-    source .venv/bin/activate 2>/dev/null || true
-    echo " Check 0: PASSED - Virtual environment found and activated (1 point)"
-    score=$((score + 1))
-fi
-echo ""
-
-# Check 1: domain/basics.yml exists (1 point)
+# Check 1: domain/basics.yml exists (1 point) - file they are instructed to edit
 echo "Check 1: Verifying domain file exists..."
 if [ ! -f "domain/basics.yml" ]; then
     echo "❌ Check 1: FAILED - domain/basics.yml not found (0 points)"
@@ -87,7 +77,7 @@ else
 fi
 echo ""
 
-# Check 2: actions: section exists (2 points)
+# Check 2: actions: section exists (2 points) - explicit in instructions
 echo "Check 2: Verifying actions: section exists..."
 if [ -f "domain/basics.yml" ] && grep -q "^actions:" domain/basics.yml 2>/dev/null; then
     echo " Check 2: PASSED - actions: section found (2 points)"
@@ -98,7 +88,7 @@ else
 fi
 echo ""
 
-# Check 3: action_bank_hours is registered (2 points)
+# Check 3: action_bank_hours is registered (2 points) - explicit
 echo "Check 3: Verifying action_bank_hours is registered..."
 if [ -f "domain/basics.yml" ] && grep -q "action_bank_hours" domain/basics.yml 2>/dev/null; then
     if awk '/^actions:/,/^[a-z]/ {if (/action_bank_hours/) found=1} END {exit !found}' domain/basics.yml 2>/dev/null; then
@@ -114,7 +104,7 @@ else
 fi
 echo ""
 
-# Check 4: action_holiday_hours is registered (2 points)
+# Check 4: action_holiday_hours is registered (2 points) - explicit
 echo "Check 4: Verifying action_holiday_hours is registered..."
 if [ -f "domain/basics.yml" ] && grep -q "action_holiday_hours" domain/basics.yml 2>/dev/null; then
     if awk '/^actions:/,/^[a-z]/ {if (/action_holiday_hours/) found=1} END {exit !found}' domain/basics.yml 2>/dev/null; then
@@ -130,9 +120,9 @@ else
 fi
 echo ""
 
-# Check 5: Correct YAML syntax (indentation and dash) (2 points)
-echo "Check 5: Verifying YAML syntax..."
-if [ -f "domain/basics.yml" ] && (grep -q "^- action_bank_hours" domain/basics.yml 2>/dev/null || grep -q "^- action_bank_hours" domain/basics.yml 2>/dev/null); then
+# Check 5: Correct YAML syntax / list format (2 points) - verification: "correct indentation and dashes"
+echo "Check 5: Verifying YAML list syntax (dashes)..."
+if [ -f "domain/basics.yml" ] && (grep -q "^- action_bank_hours" domain/basics.yml 2>/dev/null && grep -q "^- action_holiday_hours" domain/basics.yml 2>/dev/null); then
     echo " Check 5: PASSED - Correct YAML list syntax (dash format) (2 points)"
     score=$((score + 2))
 else
@@ -141,7 +131,7 @@ else
 fi
 echo ""
 
-# Check 6: Domain file is valid YAML (2 points)
+# Check 6: Domain file is valid YAML (2 points) - verification: "YAML is valid"
 echo "Check 6: Verifying domain file is valid YAML..."
 if [ -f "domain/basics.yml" ] && python3 -c "import yaml; yaml.safe_load(open('domain/basics.yml'))" 2>/dev/null; then
     echo " Check 6: PASSED - domain/basics.yml is valid YAML (2 points)"
@@ -161,7 +151,7 @@ else
 fi
 echo "=========================================="
 echo ""
-echo "Summary: Check 0 (venv) | Check 1 (domain) | Check 2 (actions:) | Check 3 (action_bank_hours) | Check 4 (action_holiday_hours) | Check 5 (syntax) | Check 6 (valid YAML)"
+echo "Summary: Check 1 (domain file) | Check 2 (actions:) | Check 3 (action_bank_hours) | Check 4 (action_holiday_hours) | Check 5 (syntax) | Check 6 (valid YAML)"
 echo "Score: $score/$max_score"
 if [ $score -lt $max_score ]; then
     exit 1
@@ -184,12 +174,12 @@ actions:
 
 2. **Add Code Test** – Add Code Test → **Standard Code Test**. Configure each tab as follows.
 
-   **General** – Name: *Lab 4.1: Registering Actions in the Domain*. Description: *Verify that students can register actions in the domain file (both action_bank_hours and action_holiday_hours)*. Points: `12`. Language: `Bash`.
+   **General** – Name: *Lab 4.1: Registering Actions in the Domain*. Description: *Verify that students can register actions in the domain file (both action_bank_hours and action_holiday_hours)*. Points: `11`. Language: `Bash`.
 
    **Execution** – COMMAND: `bash /home/codio/workspace/.guides/assessments/level2_graders/lab_4.1_grader.sh`. TIMEOUT: `60` seconds. Working Directory: `/home/codio/workspace/level2`.
 
    **Grading**
-   - **Points**: `12` – Total points for this assessment.
+   - **Points**: `11` – Total points for this assessment.
    - **Allow partial points**: `OFF` – Single run; the script reports one pass/fail outcome, so partial credit is not used.
    - **Use maximum score**: `OFF` – No cap; the student can earn the full point value.
    - **Case insensitive**: `ON` – Output comparison ignores letter case so minor casing differences do not fail the test.

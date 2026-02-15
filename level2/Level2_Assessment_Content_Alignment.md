@@ -20,10 +20,10 @@
 | Content step (Unit 4) | Assessment check | Aligned? |
 |-------------------------|------------------|----------|
 | Step 1: Open domain/basics.yml | Check 1: domain/basics.yml exists |  |
-| Step 2: Add actions: section, - action_bank_hours | Check 2: actions: section; Check 3: action_bank_hours registered |  |
-| Step 3: Proper YAML (indentation, dashes) | Check 4: YAML syntax; Check 5: valid YAML |  |
+| Step 2: Add actions: section, both actions | Check 2: actions: section; Check 3: action_bank_hours; Check 4: action_holiday_hours |  |
+| Step 3: Proper YAML (indentation, dashes) | Check 5: YAML list syntax; Check 6: valid YAML |  |
 
-**Verdict**: Fully aligned.
+No venv check. **Verdict**: Fully aligned (11 points).
 
 ---
 
@@ -31,11 +31,10 @@
 
 | Content step (Unit 5) | Assessment check | Aligned? |
 |-------------------------|------------------|----------|
-| Step 1: Go to data/basics/ | Implicit (file path check) |  |
-| Step 2: Create hours.yml with flows:, hours:, name, description, steps, action_bank_hours | Check 1: hours.yml exists; Check 2: flows:; Check 3: hours flow; Check 4: name & description; Check 5: steps:; Check 6: action_bank_hours in steps |  |
-| Step 4: Verify structure | Covered by checks above |  |
+| Ensure hours flow in hours.yml, uses action_bank_hours | Check 1: hours.yml exists; Check 2: hours flow; Check 3: action_bank_hours in steps |  |
+| Create holiday_hours.yml with flow id, name, description, steps, action_holiday_hours | Check 4: holiday_hours.yml exists; Check 5: flows:, holiday_hours:, steps:, action_holiday_hours; Check 6: name & description (holiday_hours only) |  |
 
-**Verdict**: Fully aligned.
+No venv check; name/description required only for holiday_hours flow. **Verdict**: Fully aligned (12 points).
 
 ---
 
@@ -43,14 +42,9 @@
 
 | Content step (Unit 6) | Assessment check | Aligned? |
 |-------------------------|------------------|----------|
-| Run training (venv active, rasa train) | Check 0: .venv exists; Check 1: model file exists; Check 2: model recent |  |
-| Model in models/ | Check 1: models/*.tar.gz |  |
-| No critical errors | Check 3: logs |  |
-| Action file present | Check 4: action_bank_hours.py exists |  |
+| Run training (rasa train); verification: model exists, training completed without errors | Check 1: model file exists in models/; Check 2: no errors in logs |  |
 
-**Fix applied**: Unit 6 content now says **"cd level2"** for Codio (was "cd level1").
-
-**Verdict**: Fully aligned.
+No venv, model recency, or action file checks. **Verdict**: Fully aligned (4 points).
 
 ---
 
@@ -58,7 +52,7 @@
 
 | Lab | Alignment | Notes |
 |-----|-----------|--------|
-| 3.1 | Full | Grader includes only what the lab instructs: action file, imports, datetime, class, name(), run() (8 points total) |
-| 4.1 | Full | — |
-| 5.1 | Full | — |
-| 6.1 | Full | Content training command fixed to cd level2 |
+| 3.1 | Full | Grader includes only what the lab instructs: action file, imports, datetime, class, name(), run() (8 pts) |
+| 4.1 | Full | Domain actions section, both actions, valid YAML; no venv (11 pts) |
+| 5.1 | Full | hours.yml + holiday_hours.yml flows and actions; name/description only for holiday_hours; no venv (12 pts) |
+| 6.1 | Full | Model exists, no errors in logs; no venv, recency, or action file (4 pts) |
