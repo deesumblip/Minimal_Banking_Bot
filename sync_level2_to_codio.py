@@ -20,7 +20,7 @@ GUIDES_CONTENT = REPO_ROOT / ".guides" / "content"
 # Level 2 lives inside this existing Codio chapter (do not create a new chapter)
 LEVEL2_CHAPTER_FOLDER = "Chapter-1-2---Custom-Actions-30d6"
 # Stable slug ids for lab content pages (so we overwrite same Codio page and preserve assessment JSON)
-LAB_CONTENT_SLUG_IDS = {"3.1": "04c0", "4.1": "3406", "5.1": "e512", "6.1": "7710"}
+LAB_CONTENT_SLUG_IDS = {"3.1": "04c0", "4.1": "3406", "4.2": "2289", "5.1": "e512", "6.1": "7710"}
 UNIT_TITLES = {
     0: "Recap--What-You-Built-in-Level-1",
     1: "Introduction-to-Actions",
@@ -120,7 +120,7 @@ def collect_level2_pages():
         if m:
             lab_num = m.group(1)
             unit = int(float(lab_num))
-            sort_key = (999, 0)  # after all content
+            sort_key = (float(lab_num), 0.5)  # interleave after same-number content (e.g. 4.1, Lab 4.1, Lab 4.2, 4.3)
             slug_base = f"Lab-{lab_num.replace('.', '-')}"
             stable_id = LAB_CONTENT_SLUG_IDS.get(lab_num, _short_id(str(path)))
             slug = f"{slug_base}-{stable_id}"

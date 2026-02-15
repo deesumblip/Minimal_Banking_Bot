@@ -104,12 +104,12 @@
 
 ### Unit 4: Registering Actions in the Domain
 **Type**: Lab (with Assessment)  
-**Assessment**: Lab 4.1 - Registering Actions in the Domain (11 points)
+**Assessments**: Lab 4.1 – Registering Actions in the Domain (11 points). Lab 4.2 – Multiple Actions (11 points; same verification as 4.1, optional Inspector ungraded).
 
 **Sections**:
 - 4.1 Why Register Actions?
 - Lab 4.1: Registering Actions in the Domain
-- 4.2 Multiple Actions (recap + optional Inspector)
+- Lab 4.2: Multiple Actions (recap + optional Inspector)
 - 4.3 Test Your Knowledge
 
 **Key Concepts**: Domain registration, YAML syntax, action naming
@@ -262,10 +262,11 @@
 |--------|-----|--------|------|---------------|
 | Unit 3 | Lab 3.1 | 8 | Standard Code Test | `lab_3.1_grader.sh` |
 | Unit 4 | Lab 4.1 | 11 | Standard Code Test | `lab_4.1_grader.sh` |
+| Unit 4 | Lab 4.2 | 11 | Standard Code Test | `lab_4.2_grader.sh` (invokes 4.1) |
 | Unit 5 | Lab 5.1 | 12 | Standard Code Test | `lab_5.1_grader.sh` |
 | Unit 6 | Lab 6.1 | 4 | Standard Code Test | `lab_6.1_grader.sh` |
 
-**Total Assessment Points**: 35 points
+**Total Assessment Points**: 46 points
 
 ---
 
@@ -283,7 +284,8 @@ Content is split by subsection (one file per numbered subsection). Examples:
 
 ### Assessment Files (Implementation Instructions)
 - `Level2_Lab3.1_Content.md` / `Level2_Lab3.1_Assessment_Setup.md` - Lab 3.1 (student page + implementer doc)
-- `Level2_Lab4.1_Content.md` / `Level2_Lab4.1_Assessment_Setup.md` - Lab 4.1
+- `Level2_Lab4.1_Content.md` / `Level2_Lab4.1_Assessment_Setup.md` – Lab 4.1
+- `Level2_Lab4.2_Content.md` / `Level2_Lab4.2_Assessment_Setup.md` – Lab 4.2
 - `Level2_Lab5.1_Content.md` / `Level2_Lab5.1_Assessment_Setup.md` - Lab 5.1
 - `Level2_Lab6.1_Content.md` / `Level2_Lab6.1_Assessment_Setup.md` - Lab 6.1
 
@@ -306,7 +308,7 @@ Unit 2: Understanding the Action Class (Conceptual)
     ↓
 Unit 3: Creating Your First Action (Hands-on Lab) ✓ Lab 3.1 Assessment
     ↓
-Unit 4: Registering Actions (Hands-on Lab) ✓ Lab 4.1 Assessment
+Unit 4: Registering Actions (Hands-on Labs) ✓ Lab 4.1 & 4.2 Assessments
     ↓
 Unit 5: Using Actions in Flows (Hands-on Lab) ✓ Lab 5.1 Assessment
     ↓

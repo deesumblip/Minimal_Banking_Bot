@@ -1,4 +1,4 @@
-### 4.2 Multiple Actions
+# Lab 4.2: Multiple Actions
 
 You've now registered both actions in the domain: **action_bank_hours** (the example) and **action_holiday_hours** (the one you created in Lab 3.1). With both registered, Rasa can invoke them—in Unit 5 you'll connect them to flows. When you add more actions later, list each on its own line under `actions:` with a dash.
 
