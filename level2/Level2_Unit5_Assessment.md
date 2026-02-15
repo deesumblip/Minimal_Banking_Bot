@@ -249,7 +249,7 @@ flows:
    - **Defined number of attempts**: `OFF` – No limit on submission attempts (or set a limit if desired).
    - **Rationale** (optional): e.g. *The grader checks that `data/basics/hours.yml` and `data/basics/holiday_hours.yml` exist and define flows that use the correct actions.*
 
-   **Files** – Create the grader script at `.guides/assessments/level2_graders/lab_5.1_grader.sh` and make it executable: `chmod +x .guides/assessments/level2_graders/lab_5.1_grader.sh`.
+   **Files** – Create the grader script at `.guides/assessments/level2_graders/lab_5.1_grader.sh`. In the Codio workspace terminal (from the workspace root), make it executable: `chmod +x .guides/assessments/level2_graders/lab_5.1_grader.sh`.
 
 3. **Save & Test** the assessment. Enable **Learning Analytics** if desired.
 

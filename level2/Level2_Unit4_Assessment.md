@@ -204,7 +204,7 @@ actions:
    - **Defined number of attempts**: `OFF` – No limit on submission attempts (or set a limit if desired).
    - **Rationale** (optional): e.g. *The grader checks that `domain/basics.yml` has an `actions:` section listing both `action_bank_hours` and `action_holiday_hours` with valid YAML.*
 
-   **Files** – Create the grader script at `.guides/assessments/level2_graders/lab_4.1_grader.sh` and make it executable: `chmod +x .guides/assessments/level2_graders/lab_4.1_grader.sh`.
+   **Files** – Create the grader script at `.guides/assessments/level2_graders/lab_4.1_grader.sh`. In the Codio workspace terminal (from the workspace root), make it executable: `chmod +x .guides/assessments/level2_graders/lab_4.1_grader.sh`.
 
 3. **Save & Test** the assessment. Enable **Learning Analytics** if desired.
 
