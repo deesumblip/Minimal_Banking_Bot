@@ -4,8 +4,8 @@ You created **action_holiday_hours** in Lab 3.1. For Rasa to use it (and the exa
 
 **File location**: `domain/basics.yml`
 
-**Analogy**: Registering an action is like adding a phone number to your contacts: you have to tell Rasa "this action exists and here's its name."
+**Analogy**: Registering an action is like adding a phone number to your contacts: you have to tell Rasa "this action exists and here's its name." Once they're in the domain, Rasa can call your action when a flow or story needs it.
 
-In this unit you'll see what to add to the domain, then do it in **Lab 4.1**.
+This unit is short: you'll see what to add, then do it in **Lab 4.1**.
 
 ---

@@ -2,6 +2,17 @@
 
 You'll edit `domain/basics.yml` so Rasa knows about your actions. Without this step, Rasa won't use them even though the Python files exist.
 
+#### Domain structure (Level 2)
+
+Your domain has `responses:` (from Level 1) and now an `actions:` section. The actions list is a YAML list—each action on its own line with a dash. The name must match exactly what the action's `name()` method returns (e.g. `"action_bank_hours"`), and use lowercase with underscores.
+
+```yaml
+# In domain/basics.yml, top level (same indentation as responses:)
+actions:
+  - action_bank_hours
+  - action_holiday_hours
+```
+
 ### Your Task
 
 Add an `actions:` section to `domain/basics.yml` (if it isn't already there) and register **both**:
@@ -53,8 +64,4 @@ Important:
 
 Run the assessment when you're done.
 
----
-
-#### Review in Inspector (optional)
-
-After the assessment, train and open the Rasa Inspector GUI (see Unit 6.3). In the chat, try **"What are your hours?"** (should work if the `hours` flow exists) and **"What are your holiday hours?"** (likely not yet—you'll add that flow in Unit 5).
+Optional: after the assessment, see Unit 6.3 to try the bot in the Inspector.

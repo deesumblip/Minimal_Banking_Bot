@@ -108,16 +108,10 @@
 
 **Sections**:
 - 4.1 Why Register Actions?
-  - Explanation of registration requirement
-- 4.2 The Actions Section
-  - Domain structure in Level 2
-  - How to register an action
-- 4.3 Step-by-Step: Registering Your Action
-  - Step 1: Open the Domain File
-  - Step 2: Add the Actions Section
-  - Step 3: Verify Registration
-- 4.4 Multiple Actions
-  - How to register multiple actions
+- 4.2 The Actions Section (bridge to lab)
+- Lab 4.1: Registering Actions in the Domain
+- 4.3 Multiple Actions (recap + optional Inspector)
+- 4.4 Test Your Knowledge
 
 **Key Concepts**: Domain registration, YAML syntax, action naming
 
