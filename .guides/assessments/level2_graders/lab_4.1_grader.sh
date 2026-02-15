@@ -29,10 +29,10 @@ else
 fi
 echo ""
 
-# Check 3: action_bank_hours is registered (2 points) - explicit
+# Check 3: action_bank_hours is registered (2 points) - must appear after "actions:" line
 echo "Check 3: Verifying action_bank_hours is registered..."
 if [ -f "domain/basics.yml" ] && grep -q "action_bank_hours" domain/basics.yml 2>/dev/null; then
-    if awk '/^actions:/,/^[a-z]/ {if (/action_bank_hours/) found=1} END {exit !found}' domain/basics.yml 2>/dev/null; then
+    if awk '/^actions:/{seen=1} seen && /action_bank_hours/{found=1} END{exit !found}' domain/basics.yml 2>/dev/null; then
         echo " Check 3: PASSED - action_bank_hours is registered under actions: (2 points)"
         score=$((score + 2))
     else
@@ -45,10 +45,10 @@ else
 fi
 echo ""
 
-# Check 4: action_holiday_hours is registered (2 points) - explicit
+# Check 4: action_holiday_hours is registered (2 points) - must appear after "actions:" line
 echo "Check 4: Verifying action_holiday_hours is registered..."
 if [ -f "domain/basics.yml" ] && grep -q "action_holiday_hours" domain/basics.yml 2>/dev/null; then
-    if awk '/^actions:/,/^[a-z]/ {if (/action_holiday_hours/) found=1} END {exit !found}' domain/basics.yml 2>/dev/null; then
+    if awk '/^actions:/{seen=1} seen && /action_holiday_hours/{found=1} END{exit !found}' domain/basics.yml 2>/dev/null; then
         echo " Check 4: PASSED - action_holiday_hours is registered under actions: (2 points)"
         score=$((score + 2))
     else
@@ -73,14 +73,29 @@ else
 fi
 echo ""
 
-# Check 6: Domain file is valid YAML (2 points) - verification: "YAML is valid"
+# Check 6: Domain file is valid YAML (2 points) - try utf-8 and utf-8-sig (BOM)
 echo "Check 6: Verifying domain file is valid YAML..."
-if [ -f "domain/basics.yml" ] && python3 -c "import yaml; yaml.safe_load(open('domain/basics.yml'))" 2>/dev/null; then
-    echo " Check 6: PASSED - domain/basics.yml is valid YAML (2 points)"
-    score=$((score + 2))
+if [ -f "domain/basics.yml" ]; then
+    if python3 -c "
+import yaml, sys
+path = 'domain/basics.yml'
+for enc in ('utf-8-sig', 'utf-8'):
+    try:
+        with open(path, encoding=enc) as f:
+            yaml.safe_load(f)
+        sys.exit(0)
+    except Exception:
+        pass
+sys.exit(1)
+" 2>/dev/null; then
+        echo " Check 6: PASSED - domain/basics.yml is valid YAML (2 points)"
+        score=$((score + 2))
+    else
+        echo "❌ Check 6: FAILED - domain/basics.yml has YAML syntax errors or file missing (0 points)"
+        echo "Hint: Check YAML syntax (indentation, colons, dashes); avoid tabs; use spaces"
+    fi
 else
-    echo "❌ Check 6: FAILED - domain/basics.yml has YAML syntax errors or file missing (0 points)"
-    echo "Hint: Check YAML syntax (indentation, colons, dashes)"
+    echo "❌ Check 6: FAILED - domain/basics.yml not found (0 points)"
 fi
 echo ""
 
