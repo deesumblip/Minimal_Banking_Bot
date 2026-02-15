@@ -1,64 +1,12 @@
-**Step 1: Open the Domain File**
-
-1. Navigate to `domain/basics.yml`
-2. Open it in your editor
-
-**What you should see**: Your Level 1 responses (`utter_greet`, `utter_help`, `utter_contact`). If the starter already has an `actions:` section with `action_bank_hours`, add `action_holiday_hours` to the same list (the action you created in Lab 3.1).
+You've now registered both actions in the domain: **action_bank_hours** (the example) and **action_holiday_hours** (the one you created in Lab 3.1). With both registered, Rasa can invoke them—in Unit 5 you'll connect them to flows. When you add more actions later, list each on its own line under `actions:` with a dash.
 
 ---
 
-**Step 2: Add the Actions Section**
+#### Review in Inspector (optional)
 
-1. Find the end of the `responses:` section
-2. Add a blank line
-3. Add the `actions:` section:
+After you run the Lab 4.1 assessment, you can see how registration affects the bot. Train (`python -m rasa train`), then start and open the Rasa Inspector GUI (see Unit 6.3 for how). In the Inspector chat, try:
 
-```yaml
-responses:
-  utter_greet:
-    - text: "Hi! I'm a banking assistant. How can I help you today?"
-      metadata:
-        rephrase: True
-
-  utter_help:
-    - text: |
-        I can help you with:
-        - Checking your balance
-        - Transferring money
-        - Bank hours
-        - Contact information
-      metadata:
-        rephrase: True
-
-  utter_contact:
-    - text: "You can reach us at support@bank.com or call 1-800-BANK-123."
-      metadata:
-        rephrase: True
-
-actions:                # ← NEW: Add this section (or add to existing)
-  - action_bank_hours   # ← Example action
-  - action_holiday_hours   # ← Your action from Lab 3.1
-```
-
-⚠️ **Important**:
-- `actions:` is at the same indentation level as `responses:`
-- The dash (`-`) indicates a list item
-- Action name must match exactly what `name()` returns
-
----
-
-**Step 3: Verify Registration**
-
-Check:
-- `actions:` section exists
-- Action name matches `name()` return value exactly
-- Proper YAML syntax (indentation, dashes)
-- No typos in action name
-
-**Common mistakes**:
-- ❌ Wrong action name (e.g., `action_bank_hour` instead of `action_bank_hours`)
-- ❌ Missing dash before action name
-- ❌ Wrong indentation
-- ❌ Action name doesn't match `name()` method return value
+- **"What are your hours?"** — If the `hours` flow exists, the bot should use `action_bank_hours` and reply with bank hours.
+- **"What are your holiday hours?"** — The bot likely won't handle this yet, because there's no flow that uses your action. You'll add that flow in Unit 5.
 
 ---
