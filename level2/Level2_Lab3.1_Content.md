@@ -1,11 +1,5 @@
 # Lab 3.1: Create Your Own Action
 
-## Guide Content (For Students)
-
-**Placement**: This lab follows Unit 3: Creating Your First Action.
-
----
-
 ### Your Task
 
 You've learned how actions are structured and how they work. Now create a **new** action: `action_holiday_hours`, which returns the bank's holiday schedule **based on today's date**. If today is a holiday, the action should say we're closed today; otherwise it should return the general holiday schedule. That way the response depends on the current date—so it has to be an action, not a single `utter_*` response. Follow the steps below.
@@ -45,7 +39,7 @@ You can also add `from typing import Any, Dict, List, Text` for type hints.
 
 ---
 
-### Quick Checklist (what the grader checks)
+### Quick Checklist
 
 Before submitting, confirm:
 

@@ -1,11 +1,5 @@
 # Lab 6.1: Training and Testing with Actions
 
-## Guide Content (For Students)
-
-**Placement**: This lab follows Unit 6: Training and Testing with Actions.
-
----
-
 ### Your Task
 
 Train your bot so that it includes your actions and flows. With your virtual environment activated, run:

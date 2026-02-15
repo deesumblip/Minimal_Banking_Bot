@@ -1,11 +1,5 @@
 # Lab 5.1: Using Actions in Flows
 
-## Guide Content (For Students)
-
-**Placement**: This lab follows Unit 5: Using Actions in Flows.
-
----
-
 ### Your Task
 
 1. **Example flow** – Ensure the `hours` flow exists in `data/basics/hours.yml` and uses `action_bank_hours` (your starter may already include this).
