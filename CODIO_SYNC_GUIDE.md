@@ -73,12 +73,12 @@ The sync script maps these files into the Unit folders and sets the page order i
 
 ## Level 1 content
 
-Level 1 is already under `.guides/content/Level-1-1-d3b4/`. If you later add a similar script for Level 1 (e.g. `sync_level1_to_codio.py`), it would:
+Level 1 (Just Responses) uses **Chapter-1-1---Just-Responses-d3b4** as the single source of truth. It lives at `.guides/content/Chapter-1-1---Just-Responses-d3b4/`. The old chapter **Level-1-1-d3b4** has been moved to **level1/old_duplicates/Level-1-1-d3b4**.
 
-- Read from `level1/` (or the Level 1 source files you use).
-- Write into the same `Level-1-1-*` structure so each section/lab stays one page.
+- **On Codio:** The full chapter (Units 0–6) already exists. Keep using it there.
+- **In the repo:** To make the repo the ground truth, copy the chapter from Codio into `.guides/content/Chapter-1-1---Just-Responses-d3b4/` and push. See **level1/MIGRATION_LEVEL1_CHAPTER.md** for step-by-step instructions.
 
-For now, Level 1 can be updated by editing the markdown files under `.guides/content/Level-1-1-d3b4/` directly, or by restoring a Level 1 sync script if you had one.
+After that, edit Level 1 by changing the markdown and JSON under `.guides/content/Chapter-1-1---Just-Responses-d3b4/`, then commit, push, and re-import in Codio.
 
 ---
 
