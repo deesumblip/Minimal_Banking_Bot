@@ -2,7 +2,7 @@
 
 ## Overview
 
-Lab 4.2 reinforces that both actions are registered and adds optional Inspector exploration. The **testable instruction** is that registration is complete (same as Lab 4.1). The optional "Review in Inspector" steps are not graded. This assessment reuses the Lab 4.1 verification so students who completed Lab 4.1 will pass Lab 4.2; it gives a second checkpoint if you want one.
+Lab 4.2 reinforces that both actions are registered and adds optional Inspector exploration. The lab instructs students to navigate to the **`level2`** folder in the terminal (the one containing `config.yml`, `domain/`, `data/`, and `actions/`) before training; the assessment verifies the same deliverable in that context. The **testable instruction** is that registration is complete (same as Lab 4.1). The optional "Review in Inspector" steps are not graded. This assessment reuses the Lab 4.1 verification so students who completed Lab 4.1 will pass Lab 4.2; it gives a second checkpoint if you want one.
 
 ### Assessment Type
 
@@ -17,14 +17,14 @@ Save the grader script at:
 
 ## Grader Script
 
-The Lab 4.2 grader invokes the Lab 4.1 grader. It verifies the same deliverable: `domain/basics.yml` has an `actions:` section with both `action_bank_hours` and `action_holiday_hours` and valid YAML. Optional Inspector steps are not checked.
+The Lab 4.2 grader invokes the Lab 4.1 grader from the **`level2`** directory, matching the lab instructions. It verifies the same deliverable: `domain/basics.yml` (in `level2`) has an `actions:` section with both `action_bank_hours` and `action_holiday_hours` and valid YAML. Optional Inspector steps are not checked.
 
 ```bash
 #!/bin/bash
 # Lab 4.2 verifies the same deliverable as Lab 4.1: both actions registered in the domain.
-# Lab 4.2 is recap + optional Inspector; the only testable instruction is that registration is complete.
-cd /home/codio/workspace
-exec bash .guides/assessments/level2_graders/lab_4.1_grader.sh
+# Lab instructs students to work in the level2 folder; grader runs from level2 to match.
+cd /home/codio/workspace/level2
+exec bash /home/codio/workspace/.guides/assessments/level2_graders/lab_4.1_grader.sh
 ```
 
 ## Assessment Setup and Configuration
@@ -35,7 +35,7 @@ exec bash .guides/assessments/level2_graders/lab_4.1_grader.sh
 
    **General** – Name: *Lab 4.2: Multiple Actions*. Description: *Verify that both actions are registered in the domain (same verification as Lab 4.1); optional Inspector steps are ungraded*. Points: `11`. Language: `Bash`.
 
-   **Execution** – COMMAND: `bash /home/codio/workspace/.guides/assessments/level2_graders/lab_4.2_grader.sh`. TIMEOUT: `60` seconds. Working Directory: `/home/codio/workspace/level2` (or leave default; the 4.1 script changes to level2).
+   **Execution** – COMMAND: `bash /home/codio/workspace/.guides/assessments/level2_graders/lab_4.2_grader.sh`. TIMEOUT: `60` seconds. Working Directory: **`/home/codio/workspace/level2`** (required—matches the lab instruction that students work in the `level2` folder).
 
    **Grading**
    - **Points**: `11` – Same as Lab 4.1 (verification is identical).
