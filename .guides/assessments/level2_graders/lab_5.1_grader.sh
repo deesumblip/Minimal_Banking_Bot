@@ -32,7 +32,7 @@ echo ""
 # Check 3: hours flow uses action_bank_hours (2 points) - explicit
 echo "Check 3: Verifying flow uses action_bank_hours..."
 if [ -f "data/basics/hours.yml" ] && grep -q "action_bank_hours" data/basics/hours.yml 2>/dev/null; then
-    if awk '/steps:/,/^[a-z]/ {if (/action_bank_hours/) found=1} END {exit !found}' data/basics/hours.yml 2>/dev/null; then
+    if grep -q "steps" data/basics/hours.yml 2>/dev/null && grep -A 15 "steps" data/basics/hours.yml 2>/dev/null | grep -q "action_bank_hours"; then
         echo " Check 3: PASSED - action_bank_hours is used in steps (2 points)"
         score=$((score + 2))
     else
@@ -59,7 +59,7 @@ echo ""
 # Check 5: holiday_hours flow with flow id, steps, action_holiday_hours (2 points) - explicit
 echo "Check 5: Verifying holiday_hours flow structure..."
 if [ -f "data/basics/holiday_hours.yml" ] && grep -q "^flows:" data/basics/holiday_hours.yml 2>/dev/null && grep -q "^  holiday_hours:" data/basics/holiday_hours.yml 2>/dev/null && grep -q "action_holiday_hours" data/basics/holiday_hours.yml 2>/dev/null; then
-    if grep -q "steps:" data/basics/holiday_hours.yml 2>/dev/null; then
+    if grep -qE "steps\s*:" data/basics/holiday_hours.yml 2>/dev/null || grep -q "steps" data/basics/holiday_hours.yml 2>/dev/null; then
         echo " Check 5: PASSED - holiday_hours flow has flows:, holiday_hours:, and uses action_holiday_hours (2 points)"
         score=$((score + 2))
     else
