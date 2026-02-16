@@ -4,6 +4,8 @@
 
 **Placement**: This lab follows Unit 5: Using Actions in Flows.
 
+**Where to work:** Students do this lab from the **level2** folder (go to main project folder first, then `cd level2`). All file paths are relative to `level2`.
+
 ---
 
 ### Your Task
@@ -27,7 +29,7 @@ Run the assessment when you're done.
 
 #### Review in Inspector
 
-Train your bot, then open the Rasa Inspector GUI (see Unit 6.3). Use the questions from Unit 5.2 (hours, holiday hours, hello) and check that the bot's replies and the triggered flow/action match. If a question doesn't trigger the right flow, check the flow's `description` and that you re-trained after adding or changing flows.
+Follow the steps in **Lab 4.2** (go to main folder → activate the virtual environment → `cd level2` → train → start Inspector and open the GUI) to see if your bot is working. Then use the questions from Unit 5.2 (hours, holiday hours, hello) and check that the bot's replies and the triggered flow/action match. If a question doesn't trigger the right flow, check the flow's `description` and that you re-trained after adding or changing flows.
 
 ---
 
@@ -35,7 +37,7 @@ Train your bot, then open the Rasa Inspector GUI (see Unit 6.3). Use the questio
 
 ## Overview
 
-This assessment verifies that students can create flow files that use actions: the example `hours.yml` (action_bank_hours) and their own `holiday_hours.yml` (action_holiday_hours), with correct YAML structure.
+This assessment verifies that students can create flow files that use actions: the example `hours.yml` (action_bank_hours) and their own `holiday_hours.yml` (action_holiday_hours), with correct YAML structure. The lab instructs students to work from the **level2** folder (main project folder, then `cd level2`). The grader runs from `level2` and checks files under that directory. Optional Inspector review directs students to Lab 4.2 for train/Inspector steps.
 
 ### Assessment Type
 

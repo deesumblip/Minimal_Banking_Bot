@@ -1,5 +1,9 @@
 # Lab 5.1: Using Actions in Flows
 
+**Where to work:** Do this lab from the **level2** folder. Go to the main project folder (one level above `level2`) first, then run `cd level2`. All file paths below are relative to `level2`.
+
+---
+
 ### Your Task
 
 1. **Example flow** – Ensure the `hours` flow exists in `data/basics/hours.yml` and uses `action_bank_hours` (your starter may already include this).
@@ -21,4 +25,4 @@ Run the assessment when you're done.
 
 #### Review in Inspector
 
-Train your bot, then open the Rasa Inspector GUI (see Unit 6.3). Use the questions from Unit 5.2 (hours, holiday hours, hello) and check that the bot's replies and the triggered flow/action match. If a question doesn't trigger the right flow, check the flow's `description` and that you re-trained after adding or changing flows.
+Follow the steps in **Lab 4.2** (go to main folder → activate the virtual environment → `cd level2` → train → start Inspector and open the GUI) to see if your bot is working. Then use the questions from Unit 5.2 (hours, holiday hours, hello) and check that the bot's replies and the triggered flow/action match. If a question doesn't trigger the right flow, check the flow's `description` and that you re-trained after adding or changing flows.
