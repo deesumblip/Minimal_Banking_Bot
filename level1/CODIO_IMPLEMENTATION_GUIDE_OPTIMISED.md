@@ -17,6 +17,8 @@
 **Date**: January 2025  
 **Version**: Optimized (includes verified Codio feature optimizations)
 
+**Split content (Level 2 style)**: Student-facing content and lab instructions are also available as separate markdown files in this folder, aligned with Level 2 naming. Use **Level1_Course_Outline.md** for structure, **Level1_Implementation_Overview.md** for Codio team guidance, **Level1_UnitN_Content_*.md** for unit sections, **Level1_LabX.Y_Content.md** for lab instructions, and **Level1_LabX.Y_Assessment_Setup.md** for assessment setup. This single guide remains the full reference; the split files are for copy-paste into Codio and for consistency with Level 2.
+
 ---
 
 ### 📊 Implementation at a Glance (Path A)
@@ -7293,12 +7295,11 @@ If you're **not** using Codio, follow these steps:
 
 ### 6.3 Using Rasa Inspector
 
-**Inspector** is Rasa's built-in testing interface. It provides a web-based chat interface where you can test your bot. You start it from the **terminal**, then open it in your **browser** using a URL Codio provides.
+**Inspector** is Rasa's built-in testing interface. It lets you chat with your bot in a web page so you can see how it responds. You start it from the **terminal**, then open the chat in your **browser** (or in Codio's Rasa Inspect tab).
 
-#### Step 1: Open a terminal and get ready
+#### Step 1: Activate the virtual environment
 
-1. **Open a terminal** in Codio: click **Tools** → **Terminal** (or use the keyboard shortcut, e.g. **Shift+Alt+T**). If your instructor set up a predefined terminal tab, open that tab—it may already be in the right folder with the virtual environment active.
-2. **Make sure you're in the right folder** with the venv active (same as Lab 6.1):
+1. **In the terminal, make sure you're in the right folder** with the venv active (same as Lab 6.1):
    - You should be in the `level1` folder (run `pwd`; you should see a path ending in `level1`).
    - Your prompt should start with `(.venv)`. If not, run:
      ```bash
@@ -7311,62 +7312,92 @@ If you're **not** using Codio, follow these steps:
 From the `level1` folder (with venv active), run:
 
 ```bash
-python -m rasa inspect --debug --log-file logs/logs.out
+python -m rasa inspect --debug
 ```
 
-**What you'll see**: The terminal will show something like:
+**What you'll see**: The terminal will show a lot of output, including something like:
 ```
 Starting Rasa server on http://0.0.0.0:5005
 ...
 ```
-**Leave this terminal open.** Inspector is now running as a server; closing the terminal will stop it.
+**Leave this terminal open.** Inspector is running as a server; if you close the terminal, it will stop.
 
-#### Step 3: Open Inspector in your browser
+#### Step 3: Open the chat in Codio
 
-Inspector is a **web page**. Codio exposes it via a URL. To find that URL, open the **Ports** view using one of these methods (Codio’s layout can vary):
+In Codio, go to the top menu bar and click the **Rasa Inspect** tab. The chat interface should open.
 
-- **Top menu**: **Tools** → **Ports**
-- **Preview**: Click the **Preview** button or menu (often in the top bar or right side), then look for **Ports** or **Configure** to see port URLs
-- **Bottom panel**: Look for tabs at the **bottom** of the window (e.g. Terminal, Output, **Ports**, Problems)—click **Ports** if you see it
-- **View menu**: **View** → **Ports** (or **View** → **Appearance** / **Panels** and enable a panel that shows ports)
+Try a few questions, for example:
+- "How do I contact support?"
+- "What can you do?"
+- "Hi!"
 
-Once you have the Ports list open:
+At this stage the bot only uses simple responses, so the answers will be straightforward.
 
-1. Find the row for **port 5005** (description may say "Rasa Inspector" or be blank).
-2. Click the **URL** for port 5005 (e.g. `https://xxx-5005.codio.io`) or use the **Open** / **Open in browser** link next to it.
-3. The Inspector chat interface will open in a new browser tab. You should see a chat window where you can type messages to your bot.
+#### Inspector interface: what you see (beginner guide)
 
-**If you don't see port 5005**: Start the Inspector command in the terminal first (Step 2). The port appears in the Ports list only after the server is running.
+When Inspector opens, you'll see several areas. You don't need to understand every part to use it—here's what matters at Level 1.
 
-**Can't find the Ports options in the UI?** In some Codio setups the Ports panel isn't visible. You can still open Inspector by URL:
-1. **Get your project URL**: Look at the address bar when you're in Codio—it often looks like `https://word1-word2.codio.io` (two words, then `.codio.io`).
-2. **Try the Inspector URL**: Change it to use port 5005: `https://word1-word2-5005.codio.io` (insert `-5005` before `.codio.io`). Example: if your project is `https://happy-tree.codio.io`, try `https://happy-tree-5005.codio.io`.
-3. **Start Inspector first**: Run the `python -m rasa inspect ...` command in the terminal and wait until the server has started, then open that URL in a new browser tab.
-4. **If it doesn't work**: Ask your instructor for the exact Inspector URL or where to find Ports in your course; they may need to enable port forwarding for 5005 or add the URL to the guide.
+1. **Chat area (main part)**
+   - This is where you type and where the bot's replies appear.
+   - Use it like a normal chat: type a message, press Enter, and see what the bot says.
+   - Your conversation history stays visible so you can scroll back.
 
-#### Inspector Interface Overview
+2. **Flow / diagram area**
+   - This shows which **flow** the bot is following right now (e.g. "greet", "help", "contact").
+   - Think of it as "which conversation path the bot chose." When you type "Hi!", you should see something like the greet flow; when you ask for help, the help flow.
+   - If the wrong flow appears for what you said, you can use this to notice and then improve your flow descriptions later.
 
-The Inspector interface has several sections:
+3. **Debug / technical details**
+   - This area shows more technical information: which flow was triggered, what the bot "thought" your message meant, and so on.
+   - You can ignore it at first. When something doesn't work as expected, this is where you can look to see why the wrong flow might have run.
 
-1. **Chat Window** (center)
-   - Where you type messages
-   - Where bot responses appear
-   - Shows conversation history
+4. **Slots**
+   - Slots are for "remembering" information in a conversation. **In Level 1 we don't use them**, so this will be empty. You can ignore it until later levels.
 
-2. **Flow Visualization** (right side, if enabled)
-   - Shows which flow is currently active
-   - Shows flow steps
-   - Visual representation of conversation state
+**In short**: Use the **chat** to talk to your bot. Use the **flow** and **debug** areas to see which flow ran and to fix things when the bot doesn't do what you want.
 
-3. **Debug Information** (bottom or side panel)
-   - Shows which flow was triggered
-   - Shows NLU predictions
-   - Shows policy decisions
-   - Very useful for debugging
+#### Launching Rasa Inspector locally
 
-4. **Slot Values** (if applicable)
-   - Shows current slot values
-   - For Level 1, this will be empty (no slots)
+If you're **not** using Codio and want to run Inspector on your own computer, follow the steps for your operating system. You'll need: the `level1` project folder, a virtual environment with Rasa Pro installed, and a `.env` file in `level1` with `RASA_LICENSE` and `OPENAI_API_KEY` set (see Unit 0 and Lab 0.1).
+
+**1. Go to your project folder**
+
+- Open a terminal (or PowerShell on Windows).
+- Navigate into the `level1` folder (the one that contains `config.yml`, `domain/`, and `data/`).
+- Example: `cd C:\Users\You\Minimal_Banking_Bot\level1` or `cd ~/Minimal_Banking_Bot/level1`.
+
+**2. Activate the virtual environment and start Inspector**
+
+- **Windows (PowerShell)**  
+  ```powershell
+  .venv\Scripts\Activate.ps1
+  python -m rasa inspect --debug
+  ```
+- **Windows (Command Prompt)**  
+  ```cmd
+  .venv\Scripts\activate.bat
+  python -m rasa inspect --debug
+  ```
+- **macOS / Linux**  
+  ```bash
+  source .venv/bin/activate
+  python -m rasa inspect --debug
+  ```
+
+Leave this terminal window open. When you see something like `Starting Rasa server on http://0.0.0.0:5005`, Inspector is running.
+
+**3. Open Inspector in your browser**
+
+- Open a web browser (Chrome, Firefox, Edge, etc.).
+- Go to: **http://localhost:5005**  
+  If that shows a status page or doesn't open the chat, try: **http://localhost:5005/webhooks/socketio/inspect.html**
+- You should see the Inspector chat interface. Type a message and press Enter to talk to your bot.
+
+**Troubleshooting (local)**
+
+- **"No module named 'rasa'"** – Activate the virtual environment again and make sure Rasa is installed (`pip install rasa-pro`).
+- **"RASA_LICENSE" or "OPENAI_API_KEY" not set** – Create or edit `.env` in the `level1` folder with both variables (no quotes around the values). Restart the terminal and run `rasa inspect` again from `level1`.
+- **"Address already in use" or port 5005 in use** – Another program is using port 5005. Close other Rasa or Python processes, or use a different port: `python -m rasa inspect --debug --port 5006` and then open **http://localhost:5006** (or …/inspect.html on 5006) in your browser.
 
 ---
 

@@ -1726,27 +1726,30 @@ Starting Rasa server on http://0.0.0.0:5005
 
 #### Inspector Interface Overview
 
-The Inspector interface has several sections:
+Inspector opens in your browser with four main panes. Layout may vary (e.g. Chat on the left, debug panes on the right or below). Use them to see which flow and step run for each message and to debug when the bot doesn’t behave as expected.
 
-1. **Chat Window** (center)
-   - Where you type messages
-   - Where bot responses appear
-   - Shows conversation history
+1. **Chat Widget** (main chat area)
+   - **Purpose:** Talk to your assistant and see its replies.
+   - Type messages in the input box and send; the bot’s responses appear in the thread.
+   - Full conversation history is shown in order.
+   - The other panes update in real time as you send messages, so you can see which flow and step were chosen for each turn.
 
-2. **Flow Visualization** (right side, if enabled)
-   - Shows which flow is currently active
-   - Shows flow steps
-   - Visual representation of conversation state
+2. **Flow View** (flow diagram)
+   - **Purpose:** See the currently active flow and which step the bot is on.
+   - Shows the active flow as a flowchart and highlights the latest step.
+   - You can click rows in the Stack View (see below) to jump to flows that were active at earlier points in the conversation.
+   - **Restart conversation:** A button at the bottom (or in the pane) clears the conversation and starts a new one—useful for testing from a clean state.
 
-3. **Debug Information** (bottom or side panel)
-   - Shows which flow was triggered
-   - Shows NLU predictions
-   - Shows policy decisions
-   - Very useful for debugging
+3. **Stack View** (flow stack)
+   - **Purpose:** See which flows are active and in what order (bottom-up, chronological).
+   - Lists activated flows and their latest steps. The **topmost** row is the currently active flow step the bot is trying to complete; flows below it are paused until the one above finishes.
+   - Each row typically shows: **Step ID** (matches your flow YAML), **Flow** (flow name from your flows), and **ID** (unique frame id).
+   - Helps you confirm that the right flow ran for a given user message (e.g. “help” vs “contact”).
 
-4. **Slot Values** (if applicable)
-   - Shows current slot values
-   - For Level 1, this will be empty (no slots)
+4. **Slots, End-2-End Test, and Tracker State** (data and debug)
+   - **Slots:** Shows current slot values (conversation memory). **For Level 1 this is empty**—Level 1 has no slots. In later levels you’ll see collected values here.
+   - **End-2-End Test:** Renders the current chat in Rasa’s end-to-end test format so you can copy it into a test file and turn the conversation into an automated test case.
+   - **Tracker State:** Detailed event log: user messages, the command (flow/step) the model predicted, slots set, any repair patterns, and actions executed. Use this to debug when the wrong flow runs or an action doesn’t fire.
 
 ---
 
