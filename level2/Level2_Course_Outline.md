@@ -261,11 +261,11 @@
 |--------|-----|--------|------|---------------|
 | Unit 3 | Lab 3.1 | 8 | Standard Code Test | `lab_3.1_grader.sh` |
 | Unit 4 | Lab 4.1 | 11 | Standard Code Test | `lab_4.1_grader.sh` |
-| Unit 4 | Lab 4.2 | 11 | Standard Code Test | `lab_4.2_grader.sh` (invokes 4.1) |
+| Unit 4 | Lab 4.2 | — | No assessment | Covered by Lab 4.1 |
 | Unit 5 | Lab 5.1 | 12 | Standard Code Test | `lab_5.1_grader.sh` |
 | Unit 6 | Lab 6.1 | 4 | Standard Code Test | `lab_6.1_grader.sh` |
 
-**Total Assessment Points**: 46 points
+**Total Assessment Points**: 35 points
 
 ---
 
