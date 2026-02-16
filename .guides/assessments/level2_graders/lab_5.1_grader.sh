@@ -73,14 +73,8 @@ else
 fi
 echo ""
 
-# Compute total: incremental sum to avoid Codio bash arithmetic quirk with single $((c1+c2+...+c6))
-score=0
-score=$((score + c1))
-score=$((score + c2))
-score=$((score + c3))
-score=$((score + c4))
-score=$((score + c5))
-score=$((score + c6))
+# Compute total with expr (avoids Codio bash $(( )) arithmetic quirk that gave 10 instead of 12)
+score=$(expr $c1 + $c2 + $c3 + $c4 + $c5 + $c6)
 
 # Final summary
 echo "=========================================="
