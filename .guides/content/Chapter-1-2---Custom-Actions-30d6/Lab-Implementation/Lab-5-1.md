@@ -4,7 +4,7 @@
 
 **Placement**: This lab follows Unit 5: Using Actions in Flows.
 
-**Where to work:** Students do this lab from the **level2** folder (go to main project folder first, then `cd level2`). All file paths are relative to `level2`.
+**Where to work:** Students do this lab from the **level2** folder. All file paths are relative to `level2`. In Codio, the terminal opens in the workspace (`~/workspace`); they run `cd level2`. Locally, they open the terminal in the main project folder (contains `level1`, `level2`, `.guides`), then run `cd level2`.
 
 ---
 

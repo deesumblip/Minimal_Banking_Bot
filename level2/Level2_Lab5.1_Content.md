@@ -1,6 +1,9 @@
 # Lab 5.1: Using Actions in Flows
 
-**Where to work:** Do this lab from the **level2** folder. Go to the main project folder (one level above `level2`) first, then run `cd level2`. All file paths below are relative to `level2`.
+**Where to work:** Do this lab from the **level2** folder. All file paths below are relative to `level2`.
+
+- **In Codio:** The terminal opens in the workspace (`~/workspace`), which is the main project folder. Run `cd level2` and you're in the right place.
+- **Running locally:** Open your terminal in the main project folder (the one that contains `level1`, `level2`, and `.guides`), then run `cd level2`.
 
 ---
 
