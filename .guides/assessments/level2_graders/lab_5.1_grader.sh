@@ -73,10 +73,14 @@ else
 fi
 echo ""
 
-# Compute total once at the end (avoids any cumulative variable issues)
-score=$((c1 + c2 + c3 + c4 + c5 + c6))
-# Debug: remove or comment out after diagnosing 10/12 on Codio
-echo "DEBUG: c1=$c1 c2=$c2 c3=$c3 c4=$c4 c5=$c5 c6=$c6 => score=$score" >&2
+# Compute total: incremental sum to avoid Codio bash arithmetic quirk with single $((c1+c2+...+c6))
+score=0
+score=$((score + c1))
+score=$((score + c2))
+score=$((score + c3))
+score=$((score + c4))
+score=$((score + c5))
+score=$((score + c6))
 
 # Final summary
 echo "=========================================="
