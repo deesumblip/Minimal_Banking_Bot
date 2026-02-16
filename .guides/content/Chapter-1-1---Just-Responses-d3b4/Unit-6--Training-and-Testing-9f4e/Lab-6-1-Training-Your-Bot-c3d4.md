@@ -12,6 +12,21 @@
 
 ## Part 2: Running locally
 
-Same steps as above, but: use your OS terminal; on Windows use `.venv\Scripts\Activate.ps1` or `activate.bat`. Create a `.env` in the same folder as `config.yml` with `RASA_LICENSE=...` and `OPENAI_API_KEY=...` (no quotes). Run `python -m rasa train` from that folder.
+Follow the same logic as Part 1, but use your own terminal and OS-specific commands.
+
+1. **Open a terminal** (PowerShell, Command Prompt, or Terminal.app / your Linux terminal).
+2. **Go to the `level1` folder** (the one that contains `config.yml`, `domain/`, and `data/`).  
+   Example: `cd C:\Users\You\Minimal_Banking_Bot\level1` or `cd ~/Minimal_Banking_Bot/level1`.
+3. **Activate the virtual environment**:
+   - **Windows (PowerShell)**: `.venv\Scripts\Activate.ps1`
+   - **Windows (Command Prompt)**: `.venv\Scripts\activate.bat`
+   - **macOS / Linux**: `source .venv/bin/activate`  
+   Your prompt should show `(.venv)`.
+4. **Create a `.env` file** in the `level1` folder (same folder as `config.yml`) with:
+   - `RASA_LICENSE=your-license-key`
+   - `OPENAI_API_KEY=your-openai-key`  
+   No quotes around the values. See Lab 0.1 or your instructor if you need these.
+5. **Train**: With venv active and from the `level1` folder, run: `python -m rasa train`. Wait for "Successfully saved model".
+6. **Verify**: A new `.tar.gz` file appears in `level1/models/`.
 
 **Success criteria**: Training completes with no errors; a new model file appears in `models/`. Run the assessment when done.
