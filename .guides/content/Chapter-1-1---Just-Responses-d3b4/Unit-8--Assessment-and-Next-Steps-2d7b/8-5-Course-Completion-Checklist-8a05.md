@@ -1,5 +1,3 @@
-### 8.5 Course Completion Checklist
-
 Before moving to Level 2, ensure you can:
 
 - [ ] Explain what a response is and where it's defined

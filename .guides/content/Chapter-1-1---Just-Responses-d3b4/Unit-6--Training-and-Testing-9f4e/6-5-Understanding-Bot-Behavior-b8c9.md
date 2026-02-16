@@ -1,5 +1,3 @@
-### 6.5 Understanding Bot Behavior
-
 #### How the Bot Decides What to Do
 
 1. User sends a message (e.g. "hello").

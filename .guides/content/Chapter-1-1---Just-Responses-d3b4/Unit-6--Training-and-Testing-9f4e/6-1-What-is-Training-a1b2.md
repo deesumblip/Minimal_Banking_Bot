@@ -1,5 +1,3 @@
-### 6.1 What is Training?
-
 **Training** is the process of building your bot's "brain" - converting your flows, domain, and configuration into a runnable model.
 
 #### What Happens During Training

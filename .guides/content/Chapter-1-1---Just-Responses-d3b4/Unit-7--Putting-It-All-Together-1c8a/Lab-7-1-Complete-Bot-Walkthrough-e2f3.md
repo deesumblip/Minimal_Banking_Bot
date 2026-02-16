@@ -1,5 +1,3 @@
-# Lab 7.1: Complete Bot Walkthrough
-
 **Objective**: Understand how all pieces work together in a complete conversation.
 
 #### Steps

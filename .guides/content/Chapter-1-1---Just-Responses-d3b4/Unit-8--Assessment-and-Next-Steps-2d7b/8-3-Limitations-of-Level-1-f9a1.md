@@ -1,5 +1,3 @@
-### 8.3 Limitations of Level 1
-
 **Level 1 cannot**: Remember information; perform calculations; access databases; make API calls; give dynamic responses (e.g. current time).
 
 **Level 1 is sufficient for**: Static information bots (FAQs, contact info), simple help systems, information-only assistants.

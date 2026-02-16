@@ -1,5 +1,3 @@
-# Lab 6.2: Using Rasa Inspector
-
 **Objective**: Start Inspector and test a simple conversation.
 
 #### Steps

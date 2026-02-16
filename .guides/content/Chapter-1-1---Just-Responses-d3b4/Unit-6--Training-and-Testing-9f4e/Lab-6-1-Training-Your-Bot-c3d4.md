@@ -1,5 +1,3 @@
-# Lab 6.1: Training Your Bot
-
 **Objective**: Train your bot and verify it works.
 
 ## Part 1: In Codio

@@ -1,5 +1,3 @@
-### 6.4 Testing Your Bot
-
 #### Basic Testing Workflow
 
 1. **Start Inspector** (see 6.3).

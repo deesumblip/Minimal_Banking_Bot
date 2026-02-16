@@ -1,5 +1,3 @@
-### 7.2 Your Level 1 Banking Bot: Summary
-
 **Domain**: `utter_greet`, `utter_help`, `utter_contact` (and `utter_goodbye` if added).  
 **Flows**: `greet`, `help`, `contact` (and `goodbye`, `hours`, `balance` if added).  
 **System patterns**: `pattern_session_start`, `pattern_completed`.

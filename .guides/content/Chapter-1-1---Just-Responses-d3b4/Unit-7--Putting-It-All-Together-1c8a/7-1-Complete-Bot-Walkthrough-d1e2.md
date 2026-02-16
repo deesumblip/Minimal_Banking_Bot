@@ -1,5 +1,3 @@
-### 7.1 Complete Bot Walkthrough
-
 A complete conversation ties together system patterns, flows, and domain:
 
 - **User opens chat** → `pattern_session_start` runs → `utter_greet` → bot greets.

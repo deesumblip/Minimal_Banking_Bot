@@ -1,5 +1,3 @@
-### 6.3 Using Rasa Inspector
-
 **Inspector** is Rasa's built-in testing interface. It lets you chat with your bot in a web page so you can see how it responds. You start it from the **terminal**, then open the chat in your **browser** (or in Codio's Rasa Inspect tab).
 
 #### Step 1: Activate the virtual environment

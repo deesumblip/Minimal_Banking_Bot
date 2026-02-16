@@ -1,5 +1,3 @@
-# Lab 6.3: Testing Your Bot
-
 **Objective**: Test your bot thoroughly with multiple variations.
 
 #### Task

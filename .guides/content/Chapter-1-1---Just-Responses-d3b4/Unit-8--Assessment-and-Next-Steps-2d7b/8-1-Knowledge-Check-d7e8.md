@@ -1,5 +1,3 @@
-### 8.1 Knowledge Check
-
 **Q1: What is a Flow?**  
 a) A predefined bot message  b) A conversation script with steps  c) A Python function  d) A configuration file  
 **Answer**: b) A conversation script with steps.
