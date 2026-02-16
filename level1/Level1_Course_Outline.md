@@ -169,7 +169,7 @@
 - `Level1_Lab7.1_Content.md`, `Level1_Lab7.2_Content.md`, `Level1_Lab7.3_Content.md`
 
 ### Assessment Setup (for implementers)
-- `Level1_Lab0.1_Assessment_Setup.md`, `Level1_Lab6.1_Assessment_Setup.md`, etc. (one per graded lab)
+- `Level1_Lab0.1_Assessment_Setup.md`, `Level1_Lab6.1_Assessment_Setup.md`, `Level1_Lab7.2_Assessment_Setup.md`, `Level1_Lab7.3_Assessment_Setup.md` (one per graded lab that involves file manipulation)
 
 ### Implementation Files
 - `Level1_Implementation_Overview.md` – Codio team guide

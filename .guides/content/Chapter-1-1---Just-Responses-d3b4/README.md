@@ -2,7 +2,5 @@
 
 This folder is the **single source of truth** for Level 1 (Just Responses) in both Codio and the main repo.
 
-- **On Codio:** This chapter already exists with full content (Units 0–6). Keep using it there.
-- **In this repo:** Populate this folder by copying the chapter from Codio (see migration steps below). After that, edits here sync to Codio via Git import.
-
-**If this folder is empty or only has this README:** follow the steps in `level1/MIGRATION_LEVEL1_CHAPTER.md` to copy the full chapter from Codio into this path, then commit and push so the repo has the ground truth for future clones.
+- **On Codio:** This chapter has content for Units 0–5. This repo adds **Unit 6, Unit 7, and Unit 8** (Training and Testing, Putting It All Together, Assessment and Next Steps). Push from this repo to sync; nothing before Unit 6 is changed here.
+- **In this repo:** `index.json` lists all units (0–8). Units 0–5 exist only on Codio; this folder contains **Unit-6--Training-and-Testing-9f4e**, **Unit-7--Putting-It-All-Together-1c8a**, and **Unit-8--Assessment-and-Next-Steps-2d7b** with full content. Edits here sync to Codio via Git import.

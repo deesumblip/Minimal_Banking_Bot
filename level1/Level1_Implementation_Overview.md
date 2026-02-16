@@ -38,7 +38,9 @@ This document provides implementation guidance for **Level 1: Just Responses** o
 ### Assessment Setup (Implementers)
 - `Level1_Lab0.1_Assessment_Setup.md` – Lab 0.1 grader and config
 - `Level1_Lab6.1_Assessment_Setup.md` – Lab 6.1 (training) grader and config
-- (Add others per course design: e.g. Lab 2.1, 2.2, 2.3, 3.1–3.4, 4.1, 4.2, 5.1, 6.2, 6.3, 7.1–7.3)
+- `Level1_Lab7.2_Assessment_Setup.md` – Lab 7.2 (Build Your Own Feature) – file manipulation: new response + flow
+- `Level1_Lab7.3_Assessment_Setup.md` – Lab 7.3 (Best Practices Application) – file manipulation: flow description + response variation
+- (Add others per course design: e.g. Lab 2.1, 2.2, 2.3, 3.1–3.4, 4.1, 4.2, 5.1, 6.2, 6.3, 7.1)
 
 ---
 
