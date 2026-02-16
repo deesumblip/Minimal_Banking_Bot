@@ -75,6 +75,8 @@ echo ""
 
 # Compute total once at the end (avoids any cumulative variable issues)
 score=$((c1 + c2 + c3 + c4 + c5 + c6))
+# Debug: remove or comment out after diagnosing 10/12 on Codio
+echo "DEBUG: c1=$c1 c2=$c2 c3=$c3 c4=$c4 c5=$c5 c6=$c6 => score=$score" >&2
 
 # Final summary
 echo "=========================================="
