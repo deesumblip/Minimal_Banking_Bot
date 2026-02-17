@@ -1,26 +1,6 @@
 ### 6.1 Training with Actions
 
-Training with actions is the same as Level 1, but Rasa now also processes your action files.
-
-#### Training Command
-
-**In Codio**:
-```bash
-cd level2
-source .venv/bin/activate
-python -m rasa train
-```
-
-**Running locally**:
-```powershell
-# Make sure environment variables are loaded
-. .\load_env.ps1
-
-# Train the bot
-python -m rasa train
-```
-
-#### What Happens During Training
+Training with actions is the same as Level 1, but Rasa now also processes your action files. You already trained your bot in **Lab 4.2** (go to main folder → activate virtual environment → `cd level2` → `python -m rasa train`). Here's what happens during that training process:
 
 When you run `rasa train`, Rasa:
 
@@ -42,6 +22,6 @@ When you run `rasa train`, Rasa:
    - Saves everything to `models/` folder
    - Includes action registration information
 
-After training, you can test the bot in the **Rasa Inspector GUI** using the questions in section 6.3.
+After training, you can test the bot in the **Rasa Inspector GUI** using the questions in section 6.3. If you need a reminder of the training command or Inspector setup, see **Lab 4.2**.
 
 ---
