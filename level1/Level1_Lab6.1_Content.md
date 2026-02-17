@@ -12,6 +12,8 @@
 
 **Common errors**: YAML syntax → use 2 spaces, colons, dashes. Response not found → add response in domain or fix flow typo. No module 'rasa' → activate venv, install rasa-pro. RASA_LICENSE/OPENAI_API_KEY not set → check Lab 0.1 step 5 or ask instructor.
 
+Run the assessment when done.
+
 ## Part 2: Running locally
 
 Follow the same logic as Part 1, but use your own terminal and OS-specific commands.
@@ -32,4 +34,4 @@ Follow the same logic as Part 1, but use your own terminal and OS-specific comma
 6. **Train**: With venv active and from the `level1` folder, run: `python -m rasa train`. Wait for "Successfully saved model".
 7. **Verify**: A new `.tar.gz` file appears in `level1/models/`.
 
-**Success criteria**: Training completes with no errors; a new model file appears in `models/`. Run the assessment when done.
+**Success criteria**: Training completes with no errors; a new model file appears in `models/`.
