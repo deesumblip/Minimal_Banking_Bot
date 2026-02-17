@@ -9,6 +9,7 @@
     h1 { font-size: 1.75rem; border-bottom: 1px solid #ccc; padding-bottom: 0.5rem; }
     h2 { font-size: 1.35rem; margin-top: 2rem; color: #333; }
     h3 { font-size: 1.15rem; margin-top: 1.25rem; color: #444; }
+    h4 { font-size: 1.05rem; margin-top: 1rem; color: #555; }
     p { margin: 0.75rem 0; }
     ul { margin: 0.75rem 0; padding-left: 1.5rem; }
     li { margin: 0.35rem 0; }
@@ -25,6 +26,8 @@
     a:hover { text-decoration: underline; }
     strong { font-weight: 600; }
     .purpose { margin: 1rem 0; padding: 0.75rem; background: #f8f9fa; border-left: 4px solid #0066cc; }
+    .executive-summary { margin: 1.5rem 0; padding: 1rem; background: #f0f7ff; border-left: 4px solid #0066cc; border-radius: 4px; }
+    .executive-summary h3 { margin-top: 0; }
     .footer { margin-top: 2rem; font-size: 0.9em; color: #666; }
   </style>
 </head>
@@ -36,11 +39,60 @@
 
 <hr>
 
-<h2>Level 1: Just Responses</h2>
+<h2>📊 Quick Reference: Course Progression</h2>
+
+<table>
+  <thead>
+    <tr><th>Level</th><th>Core Concept</th><th>Key Capability Added</th><th>Status</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>1</strong></td><td><strong>Responses</strong></td><td>Predefined messages, simple flows, project structure</td><td>✅ Active</td></tr>
+    <tr><td><strong>2</strong></td><td><strong>Actions</strong></td><td>Custom Python code, action class, domain registration</td><td>✅ Active</td></tr>
+    <tr><td><strong>3</strong></td><td><strong>Slots</strong></td><td>Conversation memory, collect steps, ask responses</td><td>✅ Active</td></tr>
+    <tr><td><strong>4</strong></td><td><strong>Multiple Slots</strong></td><td>Multi-slot collection per flow, complex conversations</td><td>✅ Active</td></tr>
+    <tr><td><strong>5</strong></td><td><strong>Tool Calling</strong></td><td>LLM-driven tool selection, dynamic function calls</td><td>✅ Active</td></tr>
+    <tr><td><strong>6</strong></td><td><strong>Sub-Agents</strong></td><td>Orchestration, <code>call</code> step, ReAct/MCP, A2A</td><td>🚧 Planned</td></tr>
+  </tbody>
+</table>
+
+<hr>
+
+<div class="executive-summary">
+<h3>🎯 Executive Summary</h3>
+
+<p><strong>Course Structure:</strong> 6 progressive levels teaching Rasa Pro capabilities from basic responses to advanced orchestration.</p>
+
+<p><strong>Teaching Approach:</strong> Each level introduces one core concept, builds on previous levels, and adds concrete artifacts (domain files, flows, actions, tools).</p>
+
+<p><strong>Progression:</strong> Simple → Complex</p>
+<ul>
+  <li><strong>Levels 1–2:</strong> Static responses and explicit actions</li>
+  <li><strong>Levels 3–4:</strong> Memory (slots) and multi-step conversations</li>
+  <li><strong>Levels 5–6:</strong> Dynamic LLM-driven behavior (tools, sub-agents)</li>
+</ul>
+
+<p><strong>Key Technical Concepts Covered:</strong></p>
+<ul>
+  <li>Domain definition (responses, actions, slots)</li>
+  <li>Flow-based conversation design</li>
+  <li>Custom Python actions</li>
+  <li>Slot collection and validation</li>
+  <li>LLM tool calling</li>
+  <li>Agent orchestration (planned)</li>
+</ul>
+</div>
+
+<hr>
+
+<h2>📚 Detailed Level Breakdown</h2>
+
+<h3>Level 1: Just Responses</h3>
 
 <p><strong>Goal:</strong> Build the simplest possible bot that only uses predefined responses (no memory, no custom code).</p>
 
-<h3>Topics Covered</h3>
+<p><strong>Core Concept:</strong> Static, predefined responses triggered by flows.</p>
+
+<h4>Topics Covered</h4>
 
 <table>
   <thead>
@@ -55,7 +107,7 @@
   </tbody>
 </table>
 
-<h3>Key Artifacts</h3>
+<h4>Key Artifacts</h4>
 <ul>
   <li><strong>Domain:</strong> <code>responses:</code> only (<code>utter_greet</code>, <code>utter_help</code>, <code>utter_contact</code>)</li>
   <li><strong>Flows:</strong> <code>greet.yml</code>, <code>help.yml</code>, <code>contact.yml</code> (each uses one or more <code>utter_*</code>)</li>
@@ -66,11 +118,13 @@
 
 <hr>
 
-<h2>Level 2: Simple Actions</h2>
+<h3>Level 2: Simple Actions</h3>
 
 <p><strong>Goal:</strong> Add custom Python code to the bot by creating and using actions.</p>
 
-<h3>Topics Covered</h3>
+<p><strong>Core Concept:</strong> Custom Python code executed by the bot (vs. predefined text responses).</p>
+
+<h4>Topics Covered</h4>
 
 <table>
   <thead>
@@ -86,7 +140,7 @@
   </tbody>
 </table>
 
-<h3>Key Artifacts</h3>
+<h4>Key Artifacts</h4>
 <ul>
   <li><strong>New:</strong> <code>actions/</code> folder, <code>actions/__init__.py</code>, <code>actions/action_bank_hours.py</code></li>
   <li><strong>Domain:</strong> <code>actions:</code> section with <code>action_bank_hours</code></li>
@@ -98,11 +152,13 @@
 
 <hr>
 
-<h2>Level 3: Slot Collection</h2>
+<h3>Level 3: Slot Collection</h3>
 
 <p><strong>Goal:</strong> Give the bot memory by collecting and using information from the user (slots).</p>
 
-<h3>Topics Covered</h3>
+<p><strong>Core Concept:</strong> Conversation memory that persists user-provided data across turns.</p>
+
+<h4>Topics Covered</h4>
 
 <table>
   <thead>
@@ -117,7 +173,7 @@
   </tbody>
 </table>
 
-<h3>Key Artifacts</h3>
+<h4>Key Artifacts</h4>
 <ul>
   <li><strong>Domain:</strong> <code>slots:</code> (e.g. <code>account</code>), <code>utter_ask_account</code></li>
   <li><strong>New action:</strong> <code>action_check_balance_simple</code> (reads <code>account</code> slot)</li>
@@ -129,11 +185,13 @@
 
 <hr>
 
-<h2>Level 4: Multiple Slots</h2>
+<h3>Level 4: Multiple Slots</h3>
 
 <p><strong>Goal:</strong> Collect multiple pieces of information in one flow before performing an action.</p>
 
-<h3>Topics Covered</h3>
+<p><strong>Core Concept:</strong> Multi-step slot collection within a single flow for complex use cases.</p>
+
+<h4>Topics Covered</h4>
 
 <table>
   <thead>
@@ -144,11 +202,11 @@
     <tr><td><strong>Multiple collect steps</strong></td><td>Ordering several <code>collect:</code> steps in a single flow so the bot gathers amount, recipient, and source account in sequence.</td></tr>
     <tr><td><strong>Multiple ask responses</strong></td><td><code>utter_ask_amount</code>, <code>utter_ask_recipient</code>, <code>utter_ask_account_from</code> (or custom ask actions).</td></tr>
     <tr><td><strong>Actions that use multiple slots</strong></td><td>Reading and validating several slots in one action (e.g. <code>action_process_transfer</code> using <code>amount</code>, <code>recipient</code>, <code>account_from</code>).</td></tr>
-    <tr><td><strong>Complex multi-step conversations</strong></td><td>Flows that don’t proceed until all required slots are filled; validation and re-prompting.</td></tr>
+    <tr><td><strong>Complex multi-step conversations</strong></td><td>Flows that don't proceed until all required slots are filled; validation and re-prompting.</td></tr>
   </tbody>
 </table>
 
-<h3>Key Artifacts</h3>
+<h4>Key Artifacts</h4>
 <ul>
   <li><strong>Domain:</strong> Additional slots (<code>amount</code>, <code>recipient</code>, <code>account_from</code>) and ask responses</li>
   <li><strong>New action:</strong> <code>action_process_transfer</code> (reads and uses multiple slots)</li>
@@ -160,11 +218,13 @@
 
 <hr>
 
-<h2>Level 5: Tool Calling</h2>
+<h3>Level 5: Tool Calling</h3>
 
 <p><strong>Goal:</strong> Let the LLM dynamically choose which functions to call based on conversation context.</p>
 
-<h3>Topics Covered</h3>
+<p><strong>Core Concept:</strong> LLM-driven function selection at runtime (vs. explicit action calls in flows).</p>
+
+<h4>Topics Covered</h4>
 
 <table>
   <thead>
@@ -175,12 +235,12 @@
     <tr><td><strong>Creating tool functions</strong></td><td>Python functions in <code>tools/</code> (e.g. <code>banking_tools.py</code>) with docstrings, typing, and return dicts; <code>__all__</code> for discovery.</td></tr>
     <tr><td><strong>Registering tools</strong></td><td><code>endpoints.yml</code>: <code>tools:</code> section and <code>tools_module: "tools"</code>.</td></tr>
     <tr><td><strong>Using tools in conversations</strong></td><td>Flows that collect slots and then run an action in a context where the LLM can call tools (e.g. <code>action_process_transfer_with_tools</code>).</td></tr>
-    <tr><td><strong>Dynamic tool selection</strong></td><td>The main agent’s LLM decides which tools to call and when; no explicit tool steps in the flow.</td></tr>
+    <tr><td><strong>Dynamic tool selection</strong></td><td>The main agent's LLM decides which tools to call and when; no explicit tool steps in the flow.</td></tr>
     <tr><td><strong>Training and testing with tools</strong></td><td>Same train/inspect workflow; verifying tool-calling behaviour.</td></tr>
   </tbody>
 </table>
 
-<h3>Key Artifacts</h3>
+<h4>Key Artifacts</h4>
 <ul>
   <li><strong>New:</strong> <code>tools/</code> folder, <code>tools/banking_tools.py</code> (e.g. <code>check_balance</code>, <code>process_transfer</code>, <code>get_account_info</code>)</li>
   <li><strong>endpoints.yml:</strong> <code>tools:</code> and <code>tools_module: "tools"</code></li>
@@ -193,18 +253,20 @@
 
 <hr>
 
-<h2>Level 6: Orchestration and Sub-Agents (Planned)</h2>
+<h3>Level 6: Orchestration and Sub-Agents (Planned)</h3>
 
 <p><strong>Goal (proposed):</strong> Delegate whole tasks to a sub-agent that runs until it completes, then return control to the main flow.</p>
 
-<h3>Topics That Would Be Covered</h3>
+<p><strong>Core Concept:</strong> Multi-agent orchestration with autonomous sub-agents handling complete tasks.</p>
+
+<h4>Topics That Would Be Covered</h4>
 
 <table>
   <thead>
     <tr><th>Topic</th><th>What you would learn</th></tr>
   </thead>
   <tbody>
-    <tr><td><strong>Orchestration</strong></td><td>Main agent as orchestrator; delegating a task to another “agent” that runs until done.</td></tr>
+    <tr><td><strong>Orchestration</strong></td><td>Main agent as orchestrator; delegating a task to another "agent" that runs until done.</td></tr>
     <tr><td><strong>Autonomous steps</strong></td><td>Flow step <code>- call: agent_name</code> (and optional <code>exit_if</code>); flow paused until sub-agent completes.</td></tr>
     <tr><td><strong>Sub-agent types</strong></td><td>ReAct (built-in, MCP + optional Python tools) vs External (A2A protocol).</td></tr>
     <tr><td><strong>Sub-agent layout</strong></td><td><code>sub_agents/&lt;name&gt;/config.yml</code> (name, protocol, description, configuration).</td></tr>
@@ -218,22 +280,6 @@
 <p><strong>Prerequisites (proposed):</strong> Level 1–5 (especially tools, flows, slots); Rasa 3.14+; MCP concept and at least one MCP server.</p>
 
 <hr>
-
-<h2>Summary: Progression Across Levels</h2>
-
-<table>
-  <thead>
-    <tr><th>Level</th><th>Core concept</th><th>Adds</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>1</td><td>Responses</td><td>Predefined messages, simple flows, project structure</td></tr>
-    <tr><td>2</td><td>Actions</td><td>Custom Python code, action class, domain registration, flows that call actions</td></tr>
-    <tr><td>3</td><td>Slots</td><td>Conversation memory, collect steps, ask responses, reading slots in actions</td></tr>
-    <tr><td>4</td><td>Multiple slots</td><td>Several slots and collect steps per flow, actions that use multiple slots</td></tr>
-    <tr><td>5</td><td>Tool calling</td><td>Tools module, LLM-driven tool selection, tools vs actions</td></tr>
-    <tr><td>6 (planned)</td><td>Sub-agents</td><td>Orchestration, <code>call</code> step, ReAct/MCP, optional A2A</td></tr>
-  </tbody>
-</table>
 
 <p class="footer">This guide summarizes topics for the Minimal Banking Bot course. Content may be updated as levels are revised.</p>
 

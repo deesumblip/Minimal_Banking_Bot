@@ -4,10 +4,10 @@
 
 1. **In the terminal, make sure you're in the right folder** with the venv active (same as Lab 6.1):
    - You should be in the `level1` folder (run `pwd`; you should see a path ending in `level1`).
-   - Your prompt should start with `(.venv)`. If not, run:
+   - Your prompt should start with `(.venv)`. If not, from the **main project folder (root)** run:
      ```bash
-     cd level1
      source .venv/bin/activate
+     cd level1
      ```
 
 #### Step 2: Start Inspector in the terminal

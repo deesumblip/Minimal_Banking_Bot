@@ -4,11 +4,49 @@
 
 ---
 
-## Level 1: Just Responses
+## 📊 Quick Reference: Course Progression
+
+| Level | Core Concept | Key Capability Added | Status |
+|-------|--------------|---------------------|--------|
+| **1** | **Responses** | Predefined messages, simple flows, project structure | ✅ Active |
+| **2** | **Actions** | Custom Python code, action class, domain registration | ✅ Active |
+| **3** | **Slots** | Conversation memory, collect steps, ask responses | ✅ Active |
+| **4** | **Multiple Slots** | Multi-slot collection per flow, complex conversations | ✅ Active |
+| **5** | **Tool Calling** | LLM-driven tool selection, dynamic function calls | ✅ Active |
+| **6** | **Sub-Agents** | Orchestration, `call` step, ReAct/MCP, A2A | 🚧 Planned |
+
+---
+
+## 🎯 Executive Summary
+
+**Course Structure:** 6 progressive levels teaching Rasa Pro capabilities from basic responses to advanced orchestration.
+
+**Teaching Approach:** Each level introduces one core concept, builds on previous levels, and adds concrete artifacts (domain files, flows, actions, tools).
+
+**Progression:** Simple → Complex
+- **Levels 1–2:** Static responses and explicit actions
+- **Levels 3–4:** Memory (slots) and multi-step conversations
+- **Levels 5–6:** Dynamic LLM-driven behavior (tools, sub-agents)
+
+**Key Technical Concepts Covered:**
+- Domain definition (responses, actions, slots)
+- Flow-based conversation design
+- Custom Python actions
+- Slot collection and validation
+- LLM tool calling
+- Agent orchestration (planned)
+
+---
+
+## 📚 Detailed Level Breakdown
+
+### Level 1: Just Responses
 
 **Goal:** Build the simplest possible bot that only uses predefined responses (no memory, no custom code).
 
-### Topics Covered
+**Core Concept:** Static, predefined responses triggered by flows.
+
+#### Topics Covered
 
 | Topic | What you learn |
 |-------|----------------|
@@ -18,23 +56,25 @@
 | **Project structure** | Where domain, flows, config, credentials, and endpoints live. |
 | **Training and running** | Virtual environment, Rasa Pro install, `rasa train`, and Rasa Inspector for testing. |
 
-### Key Artifacts
+#### Key Artifacts
 
 - **Domain:** `responses:` only (`utter_greet`, `utter_help`, `utter_contact`)
 - **Flows:** `greet.yml`, `help.yml`, `contact.yml` (each uses one or more `utter_*`)
 - **No:** slots, actions, or custom code
 
-### Prerequisites
+#### Prerequisites
 
 - None (first level)
 
 ---
 
-## Level 2: Simple Actions
+### Level 2: Simple Actions
 
 **Goal:** Add custom Python code to the bot by creating and using actions.
 
-### Topics Covered
+**Core Concept:** Custom Python code executed by the bot (vs. predefined text responses).
+
+#### Topics Covered
 
 | Topic | What you learn |
 |-------|----------------|
@@ -45,24 +85,26 @@
 | **Using actions in flows** | Defining a flow whose step is `- action: action_bank_hours` (or another action). |
 | **Training and testing with actions** | Same train/inspect workflow; common errors (action not found, import error, name mismatch). |
 
-### Key Artifacts
+#### Key Artifacts
 
 - **New:** `actions/` folder, `actions/__init__.py`, `actions/action_bank_hours.py`
 - **Domain:** `actions:` section with `action_bank_hours`
 - **Flows:** `hours.yml` that calls `action_bank_hours`
 - **Unchanged:** All Level 1 responses and flows
 
-### Prerequisites
+#### Prerequisites
 
 - Level 1 (responses, flows, project structure)
 
 ---
 
-## Level 3: Slot Collection
+### Level 3: Slot Collection
 
 **Goal:** Give the bot memory by collecting and using information from the user (slots).
 
-### Topics Covered
+**Core Concept:** Conversation memory that persists user-provided data across turns.
+
+#### Topics Covered
 
 | Topic | What you learn |
 |-------|----------------|
@@ -72,25 +114,27 @@
 | **Reading slots in actions** | Using `tracker.get_slot("slot_name")` inside an action to use collected information. |
 | **Placeholder handling** | Detecting when the LLM extracted a placeholder instead of a real value and re-prompting the user. |
 
-### Key Artifacts
+#### Key Artifacts
 
 - **Domain:** `slots:` (e.g. `account`), `utter_ask_account`
 - **New action:** `action_check_balance_simple` (reads `account` slot)
 - **New flow:** `check_balance.yml` with `collect: account` then action
 - **Unchanged:** All Level 1–2 responses, flows, and actions
 
-### Prerequisites
+#### Prerequisites
 
 - Level 1 (responses, flows)
 - Level 2 (actions, domain registration, flows that use actions)
 
 ---
 
-## Level 4: Multiple Slots
+### Level 4: Multiple Slots
 
 **Goal:** Collect multiple pieces of information in one flow before performing an action.
 
-### Topics Covered
+**Core Concept:** Multi-step slot collection within a single flow for complex use cases.
+
+#### Topics Covered
 
 | Topic | What you learn |
 |-------|----------------|
@@ -98,26 +142,28 @@
 | **Multiple collect steps** | Ordering several `collect:` steps in a single flow so the bot gathers amount, recipient, and source account in sequence. |
 | **Multiple ask responses** | `utter_ask_amount`, `utter_ask_recipient`, `utter_ask_account_from` (or custom ask actions). |
 | **Actions that use multiple slots** | Reading and validating several slots in one action (e.g. `action_process_transfer` using `amount`, `recipient`, `account_from`). |
-| **Complex multi-step conversations** | Flows that don’t proceed until all required slots are filled; validation and re-prompting. |
+| **Complex multi-step conversations** | Flows that don't proceed until all required slots are filled; validation and re-prompting. |
 
-### Key Artifacts
+#### Key Artifacts
 
 - **Domain:** Additional slots (`amount`, `recipient`, `account_from`) and ask responses
 - **New action:** `action_process_transfer` (reads and uses multiple slots)
 - **New flow:** `transfer_money.yml` with multiple `collect:` steps then action
 - **Unchanged:** All Level 1–3 content
 
-### Prerequisites
+#### Prerequisites
 
 - Level 1–3 (responses, flows, actions, single-slot collection)
 
 ---
 
-## Level 5: Tool Calling
+### Level 5: Tool Calling
 
 **Goal:** Let the LLM dynamically choose which functions to call based on conversation context.
 
-### Topics Covered
+**Core Concept:** LLM-driven function selection at runtime (vs. explicit action calls in flows).
+
+#### Topics Covered
 
 | Topic | What you learn |
 |-------|----------------|
@@ -125,10 +171,10 @@
 | **Creating tool functions** | Python functions in `tools/` (e.g. `banking_tools.py`) with docstrings, typing, and return dicts; `__all__` for discovery. |
 | **Registering tools** | `endpoints.yml`: `tools:` section and `tools_module: "tools"`. |
 | **Using tools in conversations** | Flows that collect slots and then run an action in a context where the LLM can call tools (e.g. `action_process_transfer_with_tools`). |
-| **Dynamic tool selection** | The main agent’s LLM decides which tools to call and when; no explicit tool steps in the flow. |
+| **Dynamic tool selection** | The main agent's LLM decides which tools to call and when; no explicit tool steps in the flow. |
 | **Training and testing with tools** | Same train/inspect workflow; verifying tool-calling behaviour. |
 
-### Key Artifacts
+#### Key Artifacts
 
 - **New:** `tools/` folder, `tools/banking_tools.py` (e.g. `check_balance`, `process_transfer`, `get_account_info`)
 - **endpoints.yml:** `tools:` and `tools_module: "tools"`
@@ -136,21 +182,23 @@
 - **New flow:** `transfer_money_tools.yml` (collect + action that uses tools)
 - **Unchanged:** All Level 1–4 responses, flows, actions, and slots
 
-### Prerequisites
+#### Prerequisites
 
 - Level 1–4 (responses, flows, actions, single and multiple slot collection)
 
 ---
 
-## Level 6: Orchestration and Sub-Agents (Planned)
+### Level 6: Orchestration and Sub-Agents (Planned)
 
 **Goal (proposed):** Delegate whole tasks to a sub-agent that runs until it completes, then return control to the main flow.
 
-### Topics That Would Be Covered
+**Core Concept:** Multi-agent orchestration with autonomous sub-agents handling complete tasks.
+
+#### Topics That Would Be Covered
 
 | Topic | What you would learn |
 |-------|------------------------|
-| **Orchestration** | Main agent as orchestrator; delegating a task to another “agent” that runs until done. |
+| **Orchestration** | Main agent as orchestrator; delegating a task to another "agent" that runs until done. |
 | **Autonomous steps** | Flow step `- call: agent_name` (and optional `exit_if`); flow paused until sub-agent completes. |
 | **Sub-agent types** | ReAct (built-in, MCP + optional Python tools) vs External (A2A protocol). |
 | **Sub-agent layout** | `sub_agents/<name>/config.yml` (name, protocol, description, configuration). |
@@ -159,24 +207,11 @@
 | **Context and handback** | What the orchestrator passes in; what the sub-agent can return (slots, messages); state integration. |
 | **When to use sub-agents** | Delegating a whole task vs using tools in the main agent. |
 
-### Prerequisites (proposed)
+#### Prerequisites (proposed)
 
 - Level 1–5 (especially tools, flows, slots)
 - Rasa 3.14+
 - MCP concept and at least one MCP server
-
----
-
-## Summary: Progression Across Levels
-
-| Level | Core concept | Adds |
-|-------|--------------|------|
-| 1 | Responses | Predefined messages, simple flows, project structure |
-| 2 | Actions | Custom Python code, action class, domain registration, flows that call actions |
-| 3 | Slots | Conversation memory, collect steps, ask responses, reading slots in actions |
-| 4 | Multiple slots | Several slots and collect steps per flow, actions that use multiple slots |
-| 5 | Tool calling | Tools module, LLM-driven tool selection, tools vs actions |
-| 6 (planned) | Sub-agents | Orchestration, `call` step, ReAct/MCP, optional A2A |
 
 ---
 

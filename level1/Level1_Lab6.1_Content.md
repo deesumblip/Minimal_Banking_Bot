@@ -4,9 +4,9 @@
 
 ## Part 1: In Codio
 
-1. **Virtual environment**: In the terminal window (it opens at `~/workspace`; your prompt may show `~/workspace$`), go to the main project folder (the one that contains `level1`, `level2`, and `.guides`). Run `ls -la .venv`. If it exists: `source .venv/bin/activate`. If not: `python3.11 -m venv .venv` then `source .venv/bin/activate`. Prompt should show `(.venv)`.
+1. **Virtual environment**: The terminal window opens in `~/workspace`. Run `ls -la .venv`. If the virtual environment exists, enter `source .venv/bin/activate`. If not: `python3.11 -m venv .venv` then `source .venv/bin/activate`. The prompt should now show `(.venv)`.
 2. **Navigate to level1**: Go to the `level1` folder: `cd level1`. Confirm with `pwd` (path should end in `level1`).
-3. **Rasa**: Run `python -m rasa --version`. If error, install: `python -m pip install --no-cache-dir rasa-pro`.
+3. **Rasa**: Run `python -m rasa --version`. If you see an error, install: `python -m pip install --no-cache-dir rasa-pro`.
 4. **Train**: From `level1` with venv active: `python -m rasa train`. Wait for "Successfully saved model" (1–3 minutes).
 5. **Verify**: Terminal shows "Successfully saved model to 'models/...'". In the file tree, `level1/models/` should contain a new `.tar.gz` file.
 
