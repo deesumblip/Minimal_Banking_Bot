@@ -4,19 +4,18 @@
 
 **Placement**: This lab follows Unit 6: Training and Testing.
 
----
+**Structure**: Part 1 (In Codio) and Part 2 (Running locally). Both follow the same order: **activate the virtual environment in the main project folder (root)** first, then **navigate to `level1`**, then train. Students use the terminal window (no separate "Open Tools → Terminal" step). **"Run the assessment when done"** appears at the end of Part 1 only; Part 2 ends with success criteria only.
 
-### Your Task
+### Your Task (summary)
 
 Activate the virtual environment in the main project folder (root), navigate to `level1`, then train your bot by running:
 
 ```bash
+cd level1
 python -m rasa train
 ```
 
 Wait for training to finish. A model file (`.tar.gz`) will be created in the `models/` folder.
-
----
 
 ### Verification
 
@@ -25,7 +24,7 @@ Before submitting, confirm:
 - Training completed without errors
 - A model file exists under `models/`
 
-Run the assessment when you're done.
+Run the assessment when you're done (Part 1 path).
 
 ---
 
@@ -40,6 +39,8 @@ After the assessment, open Rasa Inspector (see Unit 6.3). Try "hello", "help", a
 ## Overview
 
 This assessment verifies that students can successfully train their Level 1 bot and that training completes without errors (model file created, no critical errors in logs).
+
+**Lab workflow (for implementers)**: The student-facing lab instructs students to (1) use the terminal window, (2) go to the main project folder and activate the venv there, (3) then `cd level1`, (4) then run `python -m rasa train`. The line "Run the assessment when done" appears at the end of Part 1 (Codio) only, not in Part 2 (Running locally). The grader runs from `level1` and checks for model file and logs only; it does not depend on where the venv was activated.
 
 ### Assessment Type
 
