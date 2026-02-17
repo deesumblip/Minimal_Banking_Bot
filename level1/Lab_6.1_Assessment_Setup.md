@@ -14,9 +14,13 @@
 1. Click the **+** button at the bottom of the Lab 6.1 subsection.
 2. Select **Code Test** from the assessment types.
 
-### Step 3: Paste the Grader Script
+### Step 3: Use the Grader Script
 
-In the code editor box, paste this grader script:
+**Option A (recommended after pull):** Configure the Code Test to run the script from the repo:  
+COMMAND: `bash /home/codio/workspace/.guides/assessments/level1_graders/lab_6.1_grader.sh`  
+Working Directory: `/home/codio/workspace`. Then run `chmod +x .guides/assessments/level1_graders/lab_6.1_grader.sh` in the terminal once. The script uses `max_score=12` and checks venv in workspace root, then level1 models.
+
+**Option B:** In the code editor box, paste this grader script (same logic; ensure `max_score=12`):
 
 ```bash
 #!/bin/bash
