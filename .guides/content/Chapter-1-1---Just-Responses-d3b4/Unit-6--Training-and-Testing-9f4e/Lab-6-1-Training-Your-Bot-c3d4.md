@@ -2,8 +2,8 @@
 
 ## Part 1: In Codio
 
-1. **Terminal**: Open **Tools** → **Terminal**. Go to the `level1` folder: `cd level1`. Confirm with `pwd` (path should end in `level1`).
-2. **Virtual environment**: Run `ls -la .venv`. If it exists: `source .venv/bin/activate`. If not: `python3.11 -m venv .venv` then `source .venv/bin/activate`. Prompt should show `(.venv)`.
+1. **Virtual environment**: In the terminal window, go to the main project folder (the one that contains `level1`, `level2`, and `.guides`). Run `ls -la .venv`. If it exists: `source .venv/bin/activate`. If not: `python3.11 -m venv .venv` then `source .venv/bin/activate`. Prompt should show `(.venv)`.
+2. **Navigate to level1**: Go to the `level1` folder: `cd level1`. Confirm with `pwd` (path should end in `level1`).
 3. **Rasa**: Run `python -m rasa --version`. If error, install: `python -m pip install --no-cache-dir rasa-pro`.
 4. **Train**: From `level1` with venv active: `python -m rasa train`. Wait for "Successfully saved model" (1–3 minutes).
 5. **Verify**: Terminal shows "Successfully saved model to 'models/...'". In the file tree, `level1/models/` should contain a new `.tar.gz` file.
@@ -15,18 +15,19 @@
 Follow the same logic as Part 1, but use your own terminal and OS-specific commands.
 
 1. **Open a terminal** (PowerShell, Command Prompt, or Terminal.app / your Linux terminal).
-2. **Go to the `level1` folder** (the one that contains `config.yml`, `domain/`, and `data/`).  
-   Example: `cd C:\Users\You\Minimal_Banking_Bot\level1` or `cd ~/Minimal_Banking_Bot/level1`.
-3. **Activate the virtual environment**:
+2. **Go to the main project folder** (the one that contains `level1`, `level2`, and `.guides`).  
+   Example: `cd C:\Users\You\Minimal_Banking_Bot` or `cd ~/Minimal_Banking_Bot`.
+3. **Activate the virtual environment** (the `.venv` folder is in the main project folder):
    - **Windows (PowerShell)**: `.venv\Scripts\Activate.ps1`
    - **Windows (Command Prompt)**: `.venv\Scripts\activate.bat`
    - **macOS / Linux**: `source .venv/bin/activate`  
    Your prompt should show `(.venv)`.
-4. **Create a `.env` file** in the `level1` folder (same folder as `config.yml`) with:
+4. **Navigate to level1**: Go to the `level1` folder: `cd level1` (the one that contains `config.yml`, `domain/`, and `data/`).
+5. **Create a `.env` file** in the `level1` folder (same folder as `config.yml`) with:
    - `RASA_LICENSE=your-license-key`
    - `OPENAI_API_KEY=your-openai-key`  
    No quotes around the values. See Lab 0.1 or your instructor if you need these.
-5. **Train**: With venv active and from the `level1` folder, run: `python -m rasa train`. Wait for "Successfully saved model".
-6. **Verify**: A new `.tar.gz` file appears in `level1/models/`.
+6. **Train**: With venv active and from the `level1` folder, run: `python -m rasa train`. Wait for "Successfully saved model".
+7. **Verify**: A new `.tar.gz` file appears in `level1/models/`.
 
 **Success criteria**: Training completes with no errors; a new model file appears in `models/`. Run the assessment when done.

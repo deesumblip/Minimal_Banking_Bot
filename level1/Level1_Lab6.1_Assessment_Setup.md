@@ -8,7 +8,7 @@
 
 ### Your Task
 
-Train your bot from the `level1` folder (with virtual environment activated) by running:
+Activate the virtual environment in the main project folder (root), navigate to `level1`, then train your bot by running:
 
 ```bash
 python -m rasa train
@@ -65,9 +65,10 @@ Structure the script like the Level 2 Lab 6.1 grader but use paths for `level1` 
 
 ### Example student deliverable
 
-Students run (from `level1` with venv active):
+Students activate the virtual environment in the main project folder (root), then navigate to `level1`, then run:
 
 ```bash
+cd level1
 python -m rasa train
 ```
 
