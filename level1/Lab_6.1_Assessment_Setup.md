@@ -24,7 +24,7 @@ set -e
 cd /home/codio/workspace/level1
 
 score=0
-max_score=10
+max_score=12
 
 echo "Running Lab 6.1 Assessment Checks..."
 echo ""
