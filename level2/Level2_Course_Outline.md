@@ -132,12 +132,8 @@
   - Level 1 flow (response) example
   - Level 2 flow (action) example
   - Key differences
-- 5.2 Creating a Flow That Uses an Action
-  - Step 1: Navigate to Data Folder
-  - Step 2: Create the Hours Flow
-  - Step 3: Understanding the Flow
-  - Step 4: Verify the Flow
-- 5.3 Mixing Responses and Actions
+- Lab 5.1 — create flows (hours.yml, holiday_hours.yml); see lab for full steps
+- 5.2 Mixing Responses and Actions
   - Using both in the same flow
 
 **Key Concepts**: Flow creation, action references in flows, mixing responses and actions

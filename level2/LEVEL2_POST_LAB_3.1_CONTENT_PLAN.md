@@ -25,8 +25,8 @@
 
 **Content changes:**
 - **5.1:** Keep the comparison of responses vs actions; keep `hours` / `action_bank_hours` as the example.
-- **5.2:** Split into (a) *"The example: hours.yml"* (uses `action_bank_hours`) and (b) *"Your flow: holiday_hours.yml"* — create `data/basics/holiday_hours.yml` that uses `action_holiday_hours`, with a clear description so the LLM can match user questions about holiday hours.
-- **5.3:** Optional: show mixing responses and actions; can still use `action_bank_hours` and `utter_contact` as the example.
+- **Lab 5.1:** Create both flows — (a) *"The example: hours.yml"* (uses `action_bank_hours`) and (b) *"Your flow: holiday_hours.yml"* (`action_holiday_hours`), with clear descriptions so the LLM can match user questions. Full steps in the lab.
+- **5.2:** Mixing responses and actions; use `action_bank_hours` and `utter_contact` as the example.
 
 **Lab 5.1 grader:**
 - Keep checks for `hours.yml` and `action_bank_hours` (so the example flow stays).
@@ -88,7 +88,7 @@ No grader change for Lab 6.1 (still "model exists, training succeeded"); the lab
 |------|--------|
 | **Unit 4 content** | Say "register both action_bank_hours and action_holiday_hours"; 4.4 show both in list. |
 | **Lab 4.1** | Grader: require `action_holiday_hours` in domain; student instructions: register both actions. |
-| **Unit 5 content** | 5.2: add "Your flow: holiday_hours.yml" using action_holiday_hours. |
+| **Unit 5 content** | Lab 5.1: add "Your flow: holiday_hours.yml" using action_holiday_hours. |
 | **Lab 5.1** | Grader: require holiday_hours.yml + structure + action_holiday_hours; student instructions: create hours.yml (if needed) and holiday_hours.yml. |
 | **Unit 6** | 6.3: add "test both regular and holiday hours." |
 | **Unit 7** | 7.1: add holiday-hours turn; 7.2: list both actions and both flows. |

@@ -29,7 +29,7 @@ Run the assessment when you're done.
 
 #### Review in Inspector
 
-Follow the steps in **Lab 4.2** (go to main folder → activate the virtual environment → `cd level2` → train → start Inspector and open the GUI) to see if your bot is working. Then use the questions from Unit 5.2 (hours, holiday hours, hello) and check that the bot's replies and the triggered flow/action match. If a question doesn't trigger the right flow, check the flow's `description` and that you re-trained after adding or changing flows.
+Follow the steps in **Lab 4.2** (go to main folder → activate the virtual environment → `cd level2` → train → start Inspector and open the GUI) to see if your bot is working. Then use the questions from Unit 5 (hours, holiday hours, hello) and check that the bot's replies and the triggered flow/action match. If a question doesn't trigger the right flow, check the flow's `description` and that you re-trained after adding or changing flows.
 
 ---
 

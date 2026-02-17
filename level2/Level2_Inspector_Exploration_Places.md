@@ -30,7 +30,7 @@ Students train, open Inspector, and try:
 
 **Learning:** They see that their YAML and flow changes **directly** change what the bot does in the UI. Good “sneak peek” before Unit 6 formalizes training and testing.
 
-**Suggested placement:** Optional short “Preview in Inspector” at the **end of Unit 5** (e.g. end of 5.2): “Train and open Inspector; try both questions and see both flows trigger. Unit 6 will cover training and testing step by step.”
+**Suggested placement:** Optional short “Preview in Inspector” at the **end of Unit 5** (e.g. end of 5.2 Mixing Responses and Actions): “Train and open Inspector; try both questions and see both flows trigger. Unit 6 will cover training and testing step by step.”
 
 ---
 

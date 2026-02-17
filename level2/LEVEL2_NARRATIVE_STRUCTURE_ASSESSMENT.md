@@ -28,7 +28,7 @@ Assessment of the **Level2_*** content and lab files read in sequence from start
 - **1.3** → "In Unit 2 you'll see the full action_bank_hours…"
 - **3.1** → Names action_holiday_hours, Lab 3.1, and "Later (Labs 4.1 and 5.1) you'll register it and add a flow"; "Next: Lab 3.1 … then Unit 4 / Lab 4.1 … Unit 5 / Lab 5.1."
 - **4.2, 4.3, 4.4** → "the action you created in Lab 3.1", "action_holiday_hours."
-- **5.2** → "the action you created in Lab 3.1", "your flow holiday_hours.yml"; "In Unit 6 you'll train and test both."
+- **Lab 5.1** → "the action you created in Lab 3.1", "your flow holiday_hours.yml"; "In Unit 6 you'll train and test both."
 - **7.1, 7.2** → "the action you created in Lab 3.1", "your flow (holiday_hours)."
 - **8.2, 8.5** → "you built action_holiday_hours", "Lab 3.1", "holiday_hours.yml."
 
@@ -49,7 +49,7 @@ Assessment of the **Level2_*** content and lab files read in sequence from start
 ## 3. Consistency of Terminology and Voice
 
 - **"You" / "your":** Used consistently (your action, your flow, you created, you'll register).
-- **"Example" vs "yours":** Clear in 0.2, 3.1, 4.4, 5.2, 7.2 (action_bank_hours / hours = example; action_holiday_hours / holiday_hours = yours).
+- **"Example" vs "yours":** Clear in 0.2, 3.1, 4.4, Lab 5.1, 7.2 (action_bank_hours / hours = example; action_holiday_hours / holiday_hours = yours).
 - **Lab and unit names:** "Lab 3.1," "Unit 4," "Lab 4.1," etc. used consistently.
 - **File/action names:** action_holiday_hours, holiday_hours.yml, action_bank_hours, hours.yml used consistently.
 
@@ -71,7 +71,7 @@ Assessment of the **Level2_*** content and lab files read in sequence from start
 
 ## 5. Redundancy and Pacing
 
-- **Repetition of "action you created in Lab 3.1" / "action_holiday_hours":** Used in 4.2, 4.3, 4.4, 5.2, 7.1, 7.2, 8.2, 8.5. This reinforces the thread without feeling heavy.
+- **Repetition of "action you created in Lab 3.1" / "action_holiday_hours":** Used in 4.2, 4.3, 4.4, Lab 5.1, 7.1, 7.2, 8.2, 8.5. This reinforces the thread without feeling heavy.
 - **Recap of structure (imports, name(), run(), return []):** In Unit 1.3, 2.1, 3.1. Appropriate for learning; 3.1 is the one that ties it to "your" action.
 - **Training/testing:** Unit 6.1 and 6.3 describe training and testing; 7.1 shows a full conversation. No unnecessary duplication.
 

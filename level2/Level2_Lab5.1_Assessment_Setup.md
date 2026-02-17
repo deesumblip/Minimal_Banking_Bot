@@ -6,30 +6,7 @@
 
 **Where to work:** Students do this lab from the **level2** folder. All file paths are relative to `level2`. In Codio, the terminal opens in the workspace (`~/workspace`); they run `cd level2`. Locally, they open the terminal in the main project folder (contains `level1`, `level2`, `.guides`), then run `cd level2`.
 
----
-
-### Your Task
-
-1. **Example flow** – Ensure the `hours` flow exists in `data/basics/hours.yml` and uses `action_bank_hours` (your starter may already include this).
-2. **Your flow** – Create `data/basics/holiday_hours.yml` with a flow that uses **action_holiday_hours** (the action you created in Lab 3.1). The flow should have:
-   - A flow id (e.g. `holiday_hours`)
-   - `name:` and `description:` so the LLM can match questions about holiday hours
-   - `steps:` with `- action: action_holiday_hours`
-
----
-
-### Verification
-
-Before submitting, confirm:
-
-- `hours.yml` has the `hours` flow and calls `action_bank_hours`
-- `holiday_hours.yml` exists, has a flow (e.g. `holiday_hours`), and calls `action_holiday_hours`
-
-Run the assessment when you're done.
-
-#### Review in Inspector
-
-Follow the steps in **Lab 4.2** (go to main folder → activate the virtual environment → `cd level2` → train → start Inspector and open the GUI) to see if your bot is working. Then use the questions from Unit 5.2 (hours, holiday hours, hello) and check that the bot's replies and the triggered flow/action match. If a question doesn't trigger the right flow, check the flow's `description` and that you re-trained after adding or changing flows.
+**Full instructions:** See **Level2_Lab5.1_Content.md** (and Codio Lab 5.1 guide) for the complete step-by-step: (1) go to `data/basics/`, (2) create/ensure `hours.yml` with the `hours` flow and `action_bank_hours`, (3) create `holiday_hours.yml` with the `holiday_hours` flow and `action_holiday_hours`, (4) verify both files, then run the assessment. Optional: Review in Inspector (Lab 4.2 steps; example questions: hours, holiday hours, hello).
 
 ---
 
