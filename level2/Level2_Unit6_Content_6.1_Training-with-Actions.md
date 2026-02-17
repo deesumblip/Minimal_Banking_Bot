@@ -1,6 +1,6 @@
 ### 6.1 Training with Actions
 
-Training with actions is the same as Level 1, but Rasa now also processes your action files. You already trained your bot in **Lab 4.2** (go to main folder → activate virtual environment → `cd level2` → `python -m rasa train`). Here's what happens during that training process:
+Training with actions is the same as Level 1, but Rasa now also processes your action files. You already trained your bot in **Lab 4.2** (go to main folder → activate virtual environment *in the root folder* → `cd level2` → `python -m rasa train`). Here's what happens during that training process:
 
 When you run `rasa train`, Rasa:
 
