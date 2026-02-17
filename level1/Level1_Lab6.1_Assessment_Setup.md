@@ -55,14 +55,15 @@ Save the grader script at:
 
 ## Grader Script
 
-The grader should run from `/home/codio/workspace/level1` and check:
+The grader runs from **workspace root** (`/home/codio/workspace`): it activates the venv there, then `cd`s to `level1` for all other checks. It performs 5 checks (12 points total):
 
-1. **Model file exists** (e.g. 2 points) – at least one `.tar.gz` file in `models/`
-2. **No critical errors** (e.g. 2 points) – optional: check `logs/logs.out` for "error"/"exception"/"failed"; if no log file, pass this check
+1. **Check 0 – Virtual environment** (2 pts): `.venv` exists in workspace root and is activated.
+2. **Check 1 – Model file exists** (2 pts): at least one `.tar.gz` in `level1/models/`.
+3. **Check 2 – Model recent** (3 pts): newest model is under 10 minutes old.
+4. **Check 3 – Logs** (3 pts): if `logs/logs.out` exists, no "error"/"exception"/"failed"; if no log file, pass.
+5. **Check 4 – Training completed** (2 pts): implied by passing above.
 
-**Total suggested points**: 4
-
-Structure the script like the Level 2 Lab 6.1 grader but use paths for `level1` (e.g. `cd /home/codio/workspace/level1`, check `models/*.tar.gz`, `logs/logs.out`). Output clear PASS/FAIL messages and hints.
+**Total: 12 points.** The script prints a line containing exactly `PASS` on full success and `FAIL` on failure so Codio’s Code Test can match expected output `PASS`. Output clear per-check messages and hints.
 
 ### Example student deliverable
 

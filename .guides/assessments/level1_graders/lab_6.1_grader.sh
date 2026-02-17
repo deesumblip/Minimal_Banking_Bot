@@ -94,3 +94,4 @@ echo "Score: $score/$max_score"
 if [ $score -lt $max_score ]; then
     exit 1
 fi
+
