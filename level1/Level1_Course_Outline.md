@@ -123,7 +123,7 @@
 
 ### Unit 7: Putting It All Together
 **Type**: Content + Labs  
-**Assessments**: Lab 7.1, 7.2, 7.3 (as configured)
+**Assessments**: Lab 7.1, 7.2 (as configured)
 
 **Sections**:
 - 7.1 Complete Bot Walkthrough
@@ -131,7 +131,6 @@
 - 7.2 Your Level 1 Banking Bot: Summary
 - 7.3 Best Practices
 - Lab 7.2: Build Your Own Feature (Project)
-- Lab 7.3: Best Practices Application
 
 **Key Concepts**: Integration, summary, best practices
 
@@ -165,10 +164,10 @@
 - `Level1_Lab4.1_Content.md`, `Level1_Lab4.2_Content.md`
 - `Level1_Lab5.1_Content.md`
 - `Level1_Lab6.1_Content.md`, `Level1_Lab6.2_Content.md`, `Level1_Lab6.3_Content.md`
-- `Level1_Lab7.1_Content.md`, `Level1_Lab7.2_Content.md`, `Level1_Lab7.3_Content.md`
+- `Level1_Lab7.1_Content.md`, `Level1_Lab7.2_Content.md`
 
 ### Assessment Setup (for implementers)
-- `Level1_Lab0.1_Assessment_Setup.md`, `Level1_Lab6.1_Assessment_Setup.md`, `Level1_Lab7.2_Assessment_Setup.md`, `Level1_Lab7.3_Assessment_Setup.md` (one per graded lab that involves file manipulation)
+- `Level1_Lab0.1_Assessment_Setup.md`, `Level1_Lab6.1_Assessment_Setup.md`, `Level1_Lab7.2_Assessment_Setup.md` (one per graded lab that involves file manipulation)
 
 ### Implementation Files
 - `Level1_Implementation_Overview.md` – Codio team guide
@@ -194,7 +193,7 @@ Unit 5: Configuration Files ✓ Lab 5.1
     ↓
 Unit 6: Training and Testing ✓ Lab 6.1, 6.2, 6.3
     ↓
-Unit 7: Putting It All Together ✓ Labs 7.1–7.3
+Unit 7: Putting It All Together ✓ Labs 7.1, 7.2
     ↓
 Unit 8: Assessment and Next Steps
 ```

@@ -1642,7 +1642,7 @@ This section provides a complete, transparent workflow for Path A (Optimized Pat
 **Step 10: Add Guide Content - Units 6-7** (1 hour)
 
 - [ ] **Unit 6**: Add main content + Labs 6.1, 6.2, 6.3 content
-- [ ] **Unit 7**: Add main content + Labs 7.1, 7.2, 7.3 content
+- [ ] **Unit 7**: Add main content + Labs 7.1, 7.2 content (Lab 7.3 removed)
 - [ ] **Verify**: Preview each unit
 
 **⏱️ Time**: 1 hour
@@ -2545,7 +2545,7 @@ Each lab has a **Step 0.5** section in the "For Codio Team" implementation notes
 | 6 | 6.3 | Unit 6 Implementation Notes → Lab 6.3 → Step 0.5 | 5-10 min |
 | 7 | 7.1 | Unit 7 Implementation Notes → Lab 7.1 → Step 0.5 | 5-10 min |
 | 7 | 7.2 | Unit 7 Implementation Notes → Lab 7.2 → Step 0.5 | 5-10 min |
-| 7 | 7.3 | Unit 7 Implementation Notes → Lab 7.3 → Step 0.5 | 5-10 min |
+| 7 | 7.3 | Unit 7 — 7.3 Best Practices (content only; Lab 7.3 removed) | — |
 
 **Total Labs**: 17 labs  
 **Total Estimated Time for All Lab Content**: 1.5-2.5 hours  
@@ -8666,7 +8666,7 @@ Review your bot and apply best practices:
 
 **Before creating assessments**, add the student-facing content to Codio's Guide Editor:
 - **Add Main Unit Content**: Copy content from `## For Students` (line 6606) to before `### Lab 7.1` (line 6696). See "Adding Guide Content to Codio" section above.
-- **Add Lab Content**: Use Step 0.5 sections for Labs 7.1, 7.2, 7.3 (see below).
+- **Add Lab Content**: Use Step 0.5 sections for Labs 7.1, 7.2 (see below). Lab 7.3 has been removed from the course.
 - **⏱️ Estimated Time**: 30-40 minutes (main content + 3 labs)
 
 ### Lab 7.1: Complete Bot Walkthrough
@@ -8957,9 +8957,11 @@ Create a new feature for your banking bot:
 - [ ] Virtual Coach available for project help
 - [ ] Assessment tested
 
-### Lab 7.3: Best Practices Application
+### Lab 7.3: Best Practices Application — REMOVED
 
-**Type**: Auto-Graded Exercise
+**Note:** Lab 7.3 has been removed from Level 1. Do not add it to Codio. The section below is retained for reference only.
+
+**Type**: Auto-Graded Exercise (lab removed; skip)
 
 **Content Structure**:
 - Brief instructions (preserved from TUTORIAL.md)
@@ -10057,7 +10059,7 @@ Each unit should have appropriate context:
 | 6 | 6.3 | Unit 6 → Lab 6.3 → Step 0.5 | After "📋 Copy This Markdown for Lab 6.3" |
 | 7 | 7.1 | Unit 7 → Lab 7.1 → Step 0.5 | After "📋 Copy This Markdown for Lab 7.1" |
 | 7 | 7.2 | Unit 7 → Lab 7.2 → Step 0.5 | After "📋 Copy This Markdown for Lab 7.2" |
-| 7 | 7.3 | Unit 7 → Lab 7.3 → Step 0.5 | After "📋 Copy This Markdown for Lab 7.3" |
+| 7 | 7.3 | Unit 7 — 7.3 Best Practices content only (Lab 7.3 removed) | — |
 
 **How to copy**: Go to lab's Step 0.5 → Copy from `⬇️ START COPYING HERE` to `⬆️ STOP COPYING HERE` → Paste after main unit content.
 
