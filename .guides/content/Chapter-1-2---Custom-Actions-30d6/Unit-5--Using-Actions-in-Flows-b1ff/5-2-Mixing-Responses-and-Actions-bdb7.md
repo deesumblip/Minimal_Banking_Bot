@@ -1,3 +1,5 @@
+### 5.2 Mixing Responses and Actions
+
 You can use both responses and actions in the same flow:
 
 ```yaml
