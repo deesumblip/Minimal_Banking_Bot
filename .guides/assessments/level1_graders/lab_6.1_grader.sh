@@ -82,8 +82,10 @@ echo ""
 echo "=========================================="
 if [ $score -eq $max_score ]; then
     echo "✅ PASS: Training verification complete! Score: $score/$max_score"
+    echo "PASS"
 else
     echo "❌ FAIL: Score $score/$max_score - Review the failed checks above and try again."
+    echo "FAIL"
 fi
 echo "=========================================="
 echo ""

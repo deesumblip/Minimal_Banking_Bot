@@ -85,7 +85,7 @@ Success = a new `.tar.gz` in `models/` and no errors in the terminal (and option
 
    **Execution** – COMMAND: `bash /home/codio/workspace/.guides/assessments/level1_graders/lab_6.1_grader.sh`. TIMEOUT: `60` seconds. Working Directory: `/home/codio/workspace` (grader script will cd to level1 for model checks; venv is checked in workspace root).
 
-   **Grading** – Points: 12 (when using repo grader). Allow partial points: OFF. Case insensitive: ON. Ignore white spaces: ON. Match script output to expected "PASS" or similar success message.
+   **Grading** – Points: 12 (when using repo grader). Allow partial points: OFF. Case insensitive: ON. Ignore white spaces: ON. **Expected output**: set to `PASS` so Codio matches the line the script prints on success. (The script prints a line containing exactly "PASS" when all checks pass; if Codio uses "contains" matching, the line "✅ PASS: ..." also matches.)
 
 3. **Grader script in repo** – The script is at `.guides/assessments/level1_graders/lab_6.1_grader.sh`. After pulling from GitHub, make it executable in Codio: `chmod +x /home/codio/workspace/.guides/assessments/level1_graders/lab_6.1_grader.sh`. The script checks venv in workspace root, then runs model/log checks from `level1`; max_score=12.
 
