@@ -44,26 +44,28 @@ This assessment verifies that students can successfully train their Level 3 bot 
 
 ### Assessment Type
 
-**Standard Code Test** (Bash script)
+**Standard Code Test** (Python script)
 
 ## Grader Script Location
 
 Save the grader script at:
 ```
-.guides/assessments/level3_graders/lab_6.1_grader.sh
+.guides/assessments/level3_graders/lab_6.1_grader.py
 ```
 
 ## Grader Script
 
-The grader runs from **workspace root** (`/home/codio/workspace`): it activates the venv there, then `cd`s to `level3` for all other checks. It should perform checks analogous to the Level 1 Lab 6.1 grader:
+The grader runs from **workspace root** (`/home/codio/workspace`): it verifies the venv exists, then checks `level3` for model and log files. It performs the following checks:
 
-1. **Check 0 – Virtual environment** (2 pts): `.venv` exists in workspace root and is activated.
+1. **Check 0 – Virtual environment** (2 pts): `.venv` exists in workspace root and Python is available.
 2. **Check 1 – Model file exists** (2 pts): at least one `.tar.gz` in `level3/models/`.
-3. **Check 2 – Model recent** (3 pts): newest model is under 10 minutes old.
-4. **Check 3 – Logs** (3 pts): if `level3/logs/logs.out` exists, no "error"/"exception"/"failed"; if no log file, pass.
+3. **Check 2 – Model recent** (3 pts): newest model is under 10 minutes old (uses file modification time).
+4. **Check 3 – Logs** (3 pts): if `level3/logs/logs.out` exists, checks for "error"/"exception"/"failed" (case-insensitive); if no log file, passes.
 5. **Check 4 – Training completed** (2 pts): implied by passing above.
 
 **Total: 12 points.** The script must print a line containing `PASS` and `Successfully passed!` on full success so Codio's expected-output match works. On failure print `FAIL` and exit 1.
+
+**Why Python?** Python provides better file timestamp handling, more robust log parsing, and clearer error messages than Bash for these checks.
 
 ### Example student deliverable
 
@@ -82,12 +84,12 @@ Success = a new `.tar.gz` in `level3/models/` and no errors in the terminal.
 
 2. **Add Code Test** – Add Code Test → **Standard Code Test**. Configure:
 
-   **General** – Name: *Lab 6.1: Training and Testing with Slots*. Description: *Verify that the student successfully trained the Level 3 bot*. Points: `12`. Language: `Bash`.
+   **General** – Name: *Lab 6.1: Training and Testing with Slots*. Description: *Verify that the student successfully trained the Level 3 bot*. Points: `12`. Language: `Python`.
 
-   **Execution** – COMMAND: `bash /home/codio/workspace/.guides/assessments/level3_graders/lab_6.1_grader.sh`. TIMEOUT: `60` seconds. Working Directory: `/home/codio/workspace`.
+   **Execution** – COMMAND: `python3 /home/codio/workspace/.guides/assessments/level3_graders/lab_6.1_grader.py`. TIMEOUT: `60` seconds. Working Directory: `/home/codio/workspace`.
 
    **Grading** – Points: 12. Allow partial points: OFF. **Expected output**: `PASS` or `Successfully passed!`.
 
-3. **Grader script in repo** – After pulling from GitHub, make it executable: `chmod +x /home/codio/workspace/.guides/assessments/level3_graders/lab_6.1_grader.sh`.
+3. **Grader script in repo** – After pulling from GitHub, make it executable: `chmod +x /home/codio/workspace/.guides/assessments/level3_graders/lab_6.1_grader.py`.
 
 4. **Test** – Run the assessment in Codio after a student has run `rasa train` in `level3`; confirm it passes. Run in a workspace where no model exists in `level3`; confirm it fails with a clear hint.

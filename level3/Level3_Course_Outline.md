@@ -179,9 +179,9 @@
 
 | Unit | Lab | Points | Type | Grader Script |
 |------|-----|--------|------|---------------|
-| Unit 3 | Lab 3.1 | 6–8 | Standard Code Test | `lab_3.1_grader.sh` |
-| Unit 4 | Lab 4.1 | 6–8 | Standard Code Test | `lab_4.1_grader.sh` |
-| Unit 6 | Lab 6.1 | 12 | Standard Code Test | `lab_6.1_grader.sh` |
+| Unit 3 | Lab 3.1 | 8 | LLM Rubric (recommended) or Standard Code Test | `lab_3.1_solution_reference.md` / `lab_3.1_grader.sh` |
+| Unit 4 | Lab 4.1 | 8 | LLM Rubric (recommended) or Standard Code Test | `lab_4.1_solution_reference.md` / `lab_4.1_grader.sh` |
+| Unit 6 | Lab 6.1 | 12 | Standard Code Test (Python) | `lab_6.1_grader.py` |
 
 **Total Assessment Points**: ~24–28 (adjust per course design)
 
