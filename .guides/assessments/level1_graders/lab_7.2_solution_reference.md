@@ -45,7 +45,7 @@ flows:
 
 ## Rubric summary for autograde
 
-- **New response in domain:** Present, valid YAML, not one of greet/help/contact/goodbye.
-- **New flow file:** Present in `data/basics/`, valid YAML, has name, description, steps.
+- **New response in domain:** Present, valid YAML, not one of greet/help/contact/goodbye. Do not award points for pre-existing responses (utter_greet, utter_help, utter_contact, utter_goodbye).
+- **New flow file:** A file in `data/basics/` that was added for this lab—not one of the originals (greet.yml, help.yml, contact.yml, goodbye.yml). Valid YAML, has name, description, steps. Do not award points for pre-existing flow files.
 - **Flow uses new response:** At least one step references the new response name.
 - **Best practices:** Descriptive flow description; rephrase metadata where appropriate.
