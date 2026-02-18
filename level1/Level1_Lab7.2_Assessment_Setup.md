@@ -60,7 +60,7 @@ Use these **exact options** and **copy-paste rubric text** when configuring the 
 | Option | Set to |
 |--------|--------|
 | **Total Points** | **20** |
-| **Instructor Provided Solution File** | `level1/.guides/lab_7.2_solution_reference.md` (or `/home/codio/workspace/level1/.guides/lab_7.2_solution_reference.md` if Codio requires absolute path) |
+| **Instructor Provided Solution File** | `.guides/assessments/level1_graders/lab_7.2_solution_reference.md` (or `/home/codio/workspace/.guides/assessments/level1_graders/lab_7.2_solution_reference.md` if Codio requires absolute path) |
 | **Defined Number of Attempts** | **Off** (leave toggle off) |
 | **Show Rationale to Student** | **After [1] attempts** (select that radio, leave the number as 1) |
 
