@@ -1,0 +1,3 @@
+# 8.2 What's Next: Level 4 Preview
+
+Level 4 adds **multiple slots** in one flow: the bot collects several pieces of information (e.g. amount, recipient, source account) before running an action (e.g. transfer). You'll define multiple slots, multiple `collect:` steps, and actions that read and validate several slots. Level 3's single-slot pattern extends naturally to multiple slots.

@@ -43,16 +43,66 @@ This assessment verifies that the student added a complete new feature: one new 
 
 2. **Add LLM Rubric Assessment** – Add assessment → **LLM Rubric** / **Autograde**.
 
-3. **Configure**:
-   - **Instructions**: Ask the student to create a new response in `domain/basics.yml`, a new flow in `data/basics/` that uses it, and to follow best practices (descriptive flow description, rephrase metadata). The feature must differ from greet, help, contact, goodbye.
-   - **Rubric/Requirements**: Require (1) new response in `domain/basics.yml` with valid structure and naming; (2) new flow file in `data/basics/` with valid YAML, `flows:`, name, description, steps; (3) flow steps reference the new response; (4) best practices (descriptive description, rephrase where appropriate). Award full points when all are met; allow partial credit for incomplete work.
-   - **Files to check**: `/home/codio/workspace/level1/domain/basics.yml`, `/home/codio/workspace/level1/data/basics/*.yml`
-   - **Points**: e.g. 14
-   - **Timeout**: 90 seconds
+3. **Configure** (see detailed **Grading** tab below).
 
 4. **Code Playback** (optional): Enable for `domain/basics.yml` and `data/basics/*.yml` for instructor review.
 
 5. **Test**: Run with a complete feature (pass), with only a new response (fail with feedback), with only a new flow (fail with feedback).
+
+---
+
+#### LLM Rubric Autograde – Grading tab (exact settings and copy-paste rubric)
+
+**Grading flexibility:** Students may implement any valid new feature (e.g. bank hours, branch locations, FAQ, feedback). Accept any new response name (e.g. `utter_hours`, `utter_locations`, `utter_faq`) and any new flow file in `data/basics/` that meets the rubric criteria. Do not require a specific topic or filename—only correct structure and that the flow uses the student’s chosen new response.
+
+Use these **exact options** and **copy-paste rubric text** when configuring the assessment.
+
+| Option | Set to |
+|--------|--------|
+| **Total Points** | **20** |
+| **Instructor Provided Solution File** | `level1/.guides/lab_7.2_solution_reference.md` (or `/home/codio/workspace/level1/.guides/lab_7.2_solution_reference.md` if Codio requires absolute path) |
+| **Defined Number of Attempts** | **Off** (leave toggle off) |
+| **Show Rationale to Student** | **After [1] attempts** (select that radio, leave the number as 1) |
+
+---
+
+**Add Rubric** – Click **ADD RUBRIC** and add the following four criteria. For each criterion, paste the text below into the rubric description field and set the points as indicated. Enable **partial credit** for the assessment.
+
+**Rubric 1** — Points: **5**  
+Copy and paste this into the criterion description:
+
+```
+The student added at least one new response (e.g. utter_*) in domain/basics.yml. The response has valid structure: under responses: a key like utter_hours with at least one "- text:" message, and optionally "metadata: rephrase: True". The new response must NOT be one of the original set (utter_greet, utter_help, utter_contact, utter_goodbye). Award full points if a valid new response exists; partial credit if structure is wrong or it's a duplicate of an original; zero if no new response.
+```
+
+**Rubric 2** — Points: **5**  
+Copy and paste this into the criterion description:
+
+```
+A new .yml flow file exists in data/basics/ (e.g. hours.yml or similar). The file has valid YAML with a top-level "flows:" key, and at least one flow that has "name", "description", and "steps". Award full points if a new flow file exists with correct structure; partial if file exists but structure is wrong; zero if no new flow file.
+```
+
+**Rubric 3** — Points: **5**  
+Copy and paste this into the criterion description:
+
+```
+The new flow's steps reference the new response. That is, at least one step uses "respond: <new_response_name>" or equivalent where <new_response_name> matches the new response added in domain/basics.yml (e.g. utter_hours). Award full points if the flow clearly uses the new response; zero if the flow does not reference it or references only original responses.
+```
+
+**Rubric 4** — Points: **5**  
+Copy and paste this into the criterion description:
+
+```
+Best practices: The flow has a clear, descriptive "description" (not empty or trivial). The new response in domain uses "metadata: rephrase: True" where appropriate for user-facing text. Award full points if both are present; partial if one is missing; zero if neither.
+```
+
+---
+
+**Files tab**  
+Configure the assessment so the LLM can read these paths (exact paths to set, if Codio asks for file paths):
+
+- `/home/codio/workspace/level1/domain/basics.yml`
+- `/home/codio/workspace/level1/data/basics/` (or list each `.yml` in that folder, e.g. `help.yml`, `hours.yml`, etc., depending on Codio's UI)
 
 ### Option B: Standard Code Test (Bash)
 

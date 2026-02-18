@@ -1,0 +1,223 @@
+# Level 3: Slot Collection - Course Outline
+
+## Course Overview
+
+**Title**: Level 3: Slot Collection  
+**Description**: A Complete Guide to Adding Memory (Slots) to Your Banking Bot  
+**Prerequisites**: Level 1 and Level 2 must be completed  
+**Learning Objective**: Students learn to define slots, collect slot values in flows, and read slots in actions so the bot can remember and use user-provided information.
+
+---
+
+## Course Structure
+
+### Unit 0: Recap - What You Built in Level 2
+**Type**: Content Page  
+**Assessment**: None
+
+**Sections**:
+- 0.1 Your Level 2 Banking Bot
+  - What you have from Level 2 (domain, flows, actions)
+  - What Level 2 couldn't do (no memory)
+- 0.2 What Level 3 Adds
+  - Introduction to slots (conversation memory)
+  - New in domain: `slots:`, `utter_ask_account`
+  - New action: `action_check_balance_simple`
+  - New flow: `check_balance.yml`
+
+**Key Concepts**: Recap, building on Level 2, slots as memory
+
+---
+
+### Unit 1: Introduction to Slots
+**Type**: Content Page  
+**Assessment**: None
+
+**Sections**:
+- 1.1 What is a Slot?
+  - Slots = bot memory
+  - Example: account number with vs without slots
+- 1.2 How Slots Work
+  - Define in domain, collect in flow, read in action
+- 1.3 Slot Collection
+  - If slot empty → bot asks; if has value → flow continues
+
+**Key Concepts**: Slots, memory, collect step
+
+---
+
+### Unit 2: Understanding Slot Types
+**Type**: Content Page  
+**Assessment**: None
+
+**Sections**:
+- 2.1 Slot Types
+  - Text slots (used in Level 3)
+  - Other types (advanced)
+- 2.2 Slot Naming
+  - Good vs bad slot names, conventions
+
+**Key Concepts**: Slot types, naming
+
+---
+
+### Unit 3: Defining Slots in the Domain
+**Type**: Lab (with Assessment)  
+**Assessment**: Lab 3.1 - Defining a Slot in the Domain (suggested points: 6–8)
+
+**Sections**:
+- 3.1 The Slots Section
+  - Domain structure with `slots:`
+- 3.2 Step-by-Step: Defining a Slot
+  - Add `slots:` and `account` slot
+  - Add `utter_ask_account` response
+
+**Key Concepts**: Domain slots section, utter_ask_* naming
+
+**Assessment Checks** (Lab 3.1):
+- Virtual environment (from project root)
+- `domain/basics.yml` has `slots:` section
+- `account` slot defined (type: text)
+- `utter_ask_account` response exists
+
+---
+
+### Unit 4: Collecting Slots in Flows
+**Type**: Lab (with Assessment)  
+**Assessment**: Lab 4.1 - Creating a Flow with Slot Collection (suggested points: 6–8)
+
+**Sections**:
+- 4.1 The Collect Step
+  - `collect: slot_name` and `description:`
+- 4.2 Creating a Flow with Slot Collection
+  - Step-by-step: `check_balance.yml`
+- 4.3 How Collection Works
+  - Flow: ask if empty, store, then action
+
+**Key Concepts**: collect step, flow with collect
+
+**Assessment Checks** (Lab 4.1):
+- `data/basics/check_balance.yml` exists
+- Flow has `collect: account` and `action: action_check_balance_simple`
+
+---
+
+### Unit 5: Reading Slots in Actions
+**Type**: Content + optional Lab  
+**Assessment**: None (action file provided in level3; optional Lab 5.1 to verify)
+
+**Sections**:
+- 5.1 Accessing Slots in Actions
+  - `tracker.get_slot("slot_name")`
+- 5.2 Understanding the Tracker
+  - Tracker holds conversation state
+- 5.3 Creating an Action That Uses Slots
+  - Walkthrough of `action_check_balance_simple.py`
+- 5.4 Handling Missing Slots
+  - Check for None, placeholder handling
+
+**Key Concepts**: Tracker, get_slot, placeholder handling
+
+---
+
+### Unit 6: Training and Testing with Slots
+**Type**: Lab (with Assessment)  
+**Assessment**: Lab 6.1 - Training and Testing with Slots (suggested points: 12, same pattern as L1/L2)
+
+**Sections**:
+- 6.1 Training with Slots
+  - Command: from project root, activate venv, `cd level3`, `python -m rasa train`
+- 6.2 Testing Slot Collection
+  - Start Inspector (Codio: Rasa Inspect tab; local: browser)
+  - Test "Check my balance" → ask for account → respond
+- 6.3 Understanding Slot State
+  - Slot persists in conversation
+- 6.4 Common Issues with Slots
+  - Placeholder values, missing slot
+
+**Key Concepts**: Training, testing, Inspector, slot state
+
+**Assessment Checks** (Lab 6.1):
+- Venv in project root, activated; `cd level3`
+- Model file exists in `level3/models/`
+- Model recent, no critical errors in logs
+
+---
+
+### Unit 7: Putting It All Together
+**Type**: Content Page  
+**Assessment**: None
+
+**Sections**:
+- 7.1 Complete Bot Walkthrough
+  - Full conversation example (Level 1 + 2 + 3)
+- 7.2 Your Level 3 Banking Bot: Summary
+  - What the bot can do now
+- 7.3 Best Practices
+  - Slot naming, checking for None, ask responses
+
+**Key Concepts**: Integration, summary, best practices
+
+---
+
+### Unit 8: Assessment and Next Steps
+**Type**: Content Page  
+**Assessment**: None
+
+**Sections**:
+- 8.1 Knowledge Check
+- 8.2 What You've Learned
+- 8.3 Limitations of Level 3
+- 8.4 What's Next: Level 4 Preview
+- 8.5 Course Completion Checklist
+
+**Key Concepts**: Review, Level 4 preview
+
+---
+
+## Assessment Summary
+
+| Unit | Lab | Points | Type | Grader Script |
+|------|-----|--------|------|---------------|
+| Unit 3 | Lab 3.1 | 6–8 | Standard Code Test | `lab_3.1_grader.sh` |
+| Unit 4 | Lab 4.1 | 6–8 | Standard Code Test | `lab_4.1_grader.sh` |
+| Unit 6 | Lab 6.1 | 12 | Standard Code Test | `lab_6.1_grader.sh` |
+
+**Total Assessment Points**: ~24–28 (adjust per course design)
+
+**Conventions** (same as L1/L2):
+- Grader runs from **workspace root**; activates venv, then `cd level3`.
+- Script prints `PASS` / `Successfully passed!` on full score.
+- Codio Working Directory: `/home/codio/workspace`.
+
+---
+
+## File Organization
+
+### Content Files (source of truth in level3/)
+- `Level3_Unit0_Content_0.1_*.md`, `Level3_Unit0_Content_0.2_*.md`
+- `Level3_Unit1_Content_1.1_*.md` … `1.3_*.md`
+- `Level3_Unit2_Content_2.1_*.md`, `2.2_*.md`
+- `Level3_Unit3_Content_3.1_*.md`, `3.2_*.md`
+- … (Units 4–8 same pattern)
+- Copy into Codio Guide Editor or `.guides/content` when ready.
+
+### Lab Content + Assessment Setup
+- `Level3_Lab3.1_Content.md` / `Level3_Lab3.1_Assessment_Setup.md`
+- `Level3_Lab4.1_Content.md` / `Level3_Lab4.1_Assessment_Setup.md`
+- `Level3_Lab6.1_Content.md` / `Level3_Lab6.1_Assessment_Setup.md`
+
+### Implementation
+- `Level3_Implementation_Overview.md` – Codio team
+- `Level3_Course_Outline.md` – This file
+- `LEVEL3_DEVELOPMENT_PLAN.md` – Development plan
+
+---
+
+## Technical Requirements
+
+- **Environment**: Same as L1/L2 (Codio or local)
+- **Virtual environment**: **One .venv in project root** (created in Lab 0.1). Activate from root, then `cd level3`.
+- **Rasa**: Rasa Pro (latest stable)
+- **Inspector on Codio**: Use **Rasa Inspect** tab (no Ports / port 5005).
+- **Prerequisites**: Level 1 and Level 2 completed.

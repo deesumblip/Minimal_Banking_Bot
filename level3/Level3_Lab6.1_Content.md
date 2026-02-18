@@ -1,0 +1,34 @@
+# Lab 6.1: Training and Testing with Slots
+
+**Objective**: Train your Level 3 bot (with slots) and verify it works.
+
+## Part 1: In Codio
+
+1. **Virtual environment**: In the terminal (it opens at `~/workspace`), run `source .venv/bin/activate`. The prompt should show `(.venv)`.
+2. **Navigate to level3**: Run `cd level3`. Confirm with `pwd` (path should end in `level3`).
+3. **Rasa**: Run `python -m rasa --version`. If you see an error, ensure venv is activated and Rasa Pro is installed (from Lab 0.1).
+4. **Train**: From `level3` with venv active: `python -m rasa train`. Wait for "Successfully saved model" (1–3 minutes).
+5. **Verify**: Terminal shows "Successfully saved model to 'models/...'". In the file tree, `level3/models/` should contain a new `.tar.gz` file.
+
+**Common errors**: Slot/utter_ask missing → check domain and flow. No module 'rasa' → activate venv from project root. RASA_LICENSE/OPENAI_API_KEY not set → check Lab 0.1 or ask instructor.
+
+Run the assessment when done.
+
+## Part 2: Running locally
+
+Follow the same logic as Part 1, but use your own terminal and OS-specific commands.
+
+1. **Open a terminal** (PowerShell, Command Prompt, or Terminal.app / your Linux terminal).
+2. **Go to the main project folder** (the one that contains `level1`, `level2`, `level3`, and `.guides`).  
+   Example: `cd C:\Users\You\Minimal_Banking_Bot` or `cd ~/Minimal_Banking_Bot`.
+3. **Activate the virtual environment** (the `.venv` folder is in the main project folder):
+   - **Windows (PowerShell)**: `.venv\Scripts\Activate.ps1`
+   - **Windows (Command Prompt)**: `.venv\Scripts\activate.bat`
+   - **macOS / Linux**: `source .venv/bin/activate`  
+   Your prompt should show `(.venv)`.
+4. **Navigate to level3**: Go to the `level3` folder: `cd level3` (the one that contains `config.yml`, `domain/`, and `data/`).
+5. **Ensure `.env` exists** in the `level3` folder with `RASA_LICENSE` and `OPENAI_API_KEY` (see Lab 0.1 or your instructor if you need these).
+6. **Train**: With venv active and from the `level3` folder, run: `python -m rasa train`. Wait for "Successfully saved model".
+7. **Verify**: A new `.tar.gz` file appears in `level3/models/`.
+
+**Success criteria**: Training completes with no errors; a new model file appears in `models/`.

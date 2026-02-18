@@ -1,4 +1,4 @@
-# 🟠 Level 3: Slot Collection
+# Level 3: Slot Collection
 
 **Goal:** Learn how to collect and use information from the user (slots = conversation memory).
 
@@ -11,7 +11,7 @@
 
 ## Building on Level 2
 
-⚠️ **Important**: This level builds on your Level 2 banking bot. You don't start from scratch!
+**Important:** This level builds on your Level 2 banking bot. You don't start from scratch. You use the **same virtual environment** created in Level 1 (in the **project root**). There is no new `.venv` inside `level3/`.
 
 **What stays the same:**
 - All responses from Level 2 (`utter_greet`, `utter_help`, `utter_contact`)
@@ -24,92 +24,68 @@
 - New action `action_check_balance_simple`
 - New flow `data/basics/check_balance.yml`
 
-**Your existing Level 2 banking bot continues to work** - this level adds memory (slots) so the bot can remember information!
+Your existing Level 2 banking bot continues to work—Level 3 adds memory (slots) so the bot can remember information.
+
+---
 
 ## Quick Start
 
-**Note**: If you're continuing from Level 2, you already have your virtual environment and Rasa Pro installed. You can skip steps 1-3 and go directly to step 4 (Train and run).
+**Setup:** Use the virtual environment in the **project root** (the folder that contains `level1`, `level2`, `level3`, and `.guides`). Activate it from there, then go into `level3`.
 
-1. **Create and activate a virtual environment:**
-   ```powershell
-   py -3.11 -m venv .venv
-   .\.venv\Scripts\Activate.ps1
-   python -m pip install --upgrade pip
-   ```
+### In Codio
 
-2. **Install Rasa Pro:**
-   ```powershell
-   python -m pip install --no-cache-dir rasa-pro
-   ```
+1. Open a terminal (it opens at `~/workspace`, i.e. project root).
+2. Activate the virtual environment: `source .venv/bin/activate`. Your prompt should show `(.venv)`.
+3. Go to Level 3: `cd level3`.
+4. Train: `python -m rasa train`. Wait for "Successfully saved model".
+5. Start Inspector: `python -m rasa inspect --debug --log-file logs/logs.out`. Leave the terminal open.
+6. Open the chat: In the top menu bar, click the **Rasa Inspect** tab. (Do not use Tools → Ports or port 5005.)
 
-3. **Create `.env` file:**
-   ```text
-   RASA_LICENSE=your-rasa-pro-license
-   OPENAI_API_KEY=your-openai-api-key
-   ```
+### Running locally
 
-4. **Train and run:**
-   ```powershell
-   . .\load_env.ps1
-   python -m rasa train
-   python -m rasa inspect --debug --log-file logs/logs.out
-   ```
+- **Windows (PowerShell):** From project root, run `.venv\Scripts\Activate.ps1`, then `cd level3`. Then `python -m rasa train` and `python -m rasa inspect --debug`. Open **http://localhost:5005** (or …/inspect.html) in your browser.
+- **Windows (Command Prompt):** From project root, run `.venv\Scripts\activate.bat`, then `cd level3`. Same train and inspect commands; open http://localhost:5005 in the browser.
+- **macOS / Linux:** From project root, run `source .venv/bin/activate`, then `cd level3`. Same train and inspect commands; open http://localhost:5005 in the browser.
 
-   Or use the helper script:
-   ```powershell
-   powershell -ExecutionPolicy Bypass -File .\run_inspector.ps1
-   ```
+Use your actual project path (e.g. `C:\Users\You\Minimal_Banking_Bot` or `~/Minimal_Banking_Bot`). Ensure `.env` exists in the `level3` folder with `RASA_LICENSE` and `OPENAI_API_KEY` (see Lab 0.1 / Unit 0 if needed).
 
-5. **Open Inspector:**
-   - `http://localhost:5005/webhooks/socketio/inspect.html`
+---
 
 ## What's New in This Level
 
 **Additions to your Level 2 banking bot:**
 
 ### Slots (`domain/basics.yml`)
-- **Added `slots:` section** - Defines what the bot remembers
+- **Added `slots:` section** – Defines what the bot remembers
 - `account` slot stores the user's account number
-- All Level 2 responses remain unchanged
-- All Level 2 actions remain unchanged
+- All Level 2 responses and actions remain unchanged
 
 ### New Action (`actions/action_check_balance_simple.py`)
 - Reads the `account` slot from the tracker
-- Handles placeholder values (if LLM extracts "account number" instead of actual number)
-- Re-prompts user if needed
-- All Level 2 actions (`action_bank_hours`) remain unchanged
+- Handles placeholder values (if the LLM extracts "account number" instead of a real number)
+- Re-prompts the user if needed
 
 ### New Flow (`data/basics/check_balance.yml`)
 - Uses `collect: account` to ask for and store the account number
 - Then calls `action_check_balance_simple` to use that information
-- All Level 2 flows (greet, help, contact, hours) remain unchanged
 
 ### New Response (`utter_ask_account`)
 - Used by the `collect:` step to ask for the account number
-- All Level 2 responses remain unchanged
 
 ## Key Concepts
 
-**Slots:**
-- The bot's memory
-- Store information the user provides
-- Defined in `domain/basics.yml` under `slots:`
+**Slots:** The bot's memory. They store information the user provides and are defined in `domain/basics.yml` under `slots:`.
 
-**Collect Step:**
-- `collect: account` in a flow means "get this slot value before continuing"
-- If the slot is empty, the bot will ask for it (using `utter_ask_*`)
-- If the slot has a value, the flow continues
+**Collect step:** `collect: account` in a flow means "get this slot value before continuing." If the slot is empty, the bot asks (using `utter_ask_*`); if it has a value, the flow continues.
 
-**Reading Slots in Actions:**
-- Use `tracker.get_slot("slot_name")` to read slot values
-- Always check for `None` or placeholder values
+**Reading slots in actions:** Use `tracker.get_slot("slot_name")` to read slot values. Always check for `None` or placeholder values.
 
 ## Exercises
 
 1. **Add a new slot:** Create a `name` slot and a flow that collects it.
 2. **Modify the action:** Change `action_check_balance_simple.py` to return different balances based on the account number.
-3. **Add validation:** Check if the account number is a valid format (e.g., 4 digits).
+3. **Add validation:** Check if the account number is a valid format (e.g. 4 digits).
 
 ## Next Level
 
-Once you're comfortable with single slots, move to **Level 4** to learn about multiple slots!
+Once you're comfortable with single slots, move to **Level 4** to learn about multiple slots.
