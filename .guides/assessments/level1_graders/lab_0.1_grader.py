@@ -70,6 +70,35 @@ venv_scripts = str(VENV_DIR / "Scripts")
 env = os.environ.copy()
 env["PATH"] = os.pathsep.join([venv_bin, venv_scripts, env.get("PATH", "")])
 
+# Method 0: Direct filesystem check - look for rasa package in site-packages
+if not rasa_found:
+    # Try common site-packages locations
+    site_packages_locations = [
+        VENV_DIR / "lib" / "python3.11" / "site-packages",
+        VENV_DIR / "lib" / "python3.10" / "site-packages",
+        VENV_DIR / "lib" / "python3.9" / "site-packages",
+        VENV_DIR / "lib" / "site-packages",
+    ]
+    for site_pkg in site_packages_locations:
+        rasa_pkg = site_pkg / "rasa"
+        if rasa_pkg.exists() and rasa_pkg.is_dir():
+            init_file = rasa_pkg / "__init__.py"
+            if init_file.exists():
+                # Try to read version from __init__.py or check for version file
+                try:
+                    with open(init_file, 'r') as f:
+                        content = f.read(500)  # Read first 500 chars
+                        if "__version__" in content:
+                            version_info = "Rasa Pro (package found)"
+                        else:
+                            version_info = "Rasa Pro (installed)"
+                    rasa_found = True
+                    break
+                except Exception:
+                    version_info = "Rasa Pro (package found)"
+                    rasa_found = True
+                    break
+
 # Method 1: Check if rasa-pro is installed via pip list
 if not rasa_found:
     try:
