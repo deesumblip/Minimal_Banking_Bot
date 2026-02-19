@@ -59,4 +59,21 @@ Use clear PASS/FAIL messages and hints. Suggested total points: 4–6 (adjust pe
 
 3. The grader script `.guides/assessments/level1_graders/lab_0.1_grader.py` runs from workspace root, checks for `.venv` there, verifies Rasa Pro via the venv Python, and optionally checks `level1/domain/` and `level1/data/`.
 
-4. **Test** – Run after a student completes Lab 0.1 (venv in root + Rasa install); confirm pass. Run in a fresh workspace without venv; confirm fail with hint.
+4. **Grading tab – partial points (Option 1: multiple test cases)**  
+   Configure Codio so students get partial credit per step:
+   - **Points:** 6 (total).
+   - **Allow Partial Points:** ON.
+   - **Substring Match:** ON (so expected strings can appear anywhere in the script output).
+   - **Case Insensitive:** ON, **Ignore White Spaces:** ON (recommended).
+
+   **Test cases** (use “ADD ITEM TO CHECK” to add three items):
+
+   | # | EXPECTED OUTPUT (substring) | Points (if using per-item points) |
+   |---|------------------------------|------------------------------------|
+   | 1 | `Step 1: PASSED`             | 2 |
+   | 2 | `Step 2: PASSED`             | 3 |
+   | 3 | `Step 3: PASSED`             | 1 |
+
+   If Codio assigns points per test case, set **2** points for test case 1, **3** for test case 2, and **1** for test case 3 (total 6). Otherwise ensure the assessment total is 6 and partial credit is applied when only some of these substrings appear.
+
+5. **Test** – Run after a student completes Lab 0.1 (venv in root + Rasa install); confirm full pass (6/6). Run with venv but no Rasa; confirm partial pass (e.g. 2/6). Run in a fresh workspace without venv; confirm fail with hint.
