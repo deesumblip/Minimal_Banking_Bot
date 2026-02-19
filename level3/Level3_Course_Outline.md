@@ -68,9 +68,8 @@
 **Sections**:
 - 3.1 The Slots Section
   - Domain structure with `slots:`
-- 3.2 Step-by-Step: Defining a Slot
-  - Add `slots:` and `account` slot
-  - Add `utter_ask_account` response
+- Lab 3.1: Defining a Slot in the Domain
+  - Step-by-step instructions: Add `slots:` and `account` slot, add `utter_ask_account` response
 
 **Key Concepts**: Domain slots section, utter_ask_* naming
 
@@ -188,7 +187,7 @@
 - `Level3_Unit0_Content_0.1_*.md`, `Level3_Unit0_Content_0.2_*.md`
 - `Level3_Unit1_Content_1.1_*.md` … `1.3_*.md`
 - `Level3_Unit2_Content_2.1_*.md`, `2.2_*.md`
-- `Level3_Unit3_Content_3.1_*.md`, `3.2_*.md`
+- `Level3_Unit3_Content_3.1_*.md`
 - … (Units 4–8 same pattern)
 - Copy into Codio Guide Editor or `.guides/content` when ready.
 
