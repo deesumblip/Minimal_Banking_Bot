@@ -6,12 +6,14 @@
 
 ---
 
-> **📌 One virtual environment for the whole course**  
-> We create a **single** `.venv` in the **main project folder (root)** and use it for **all levels** (Level 1, Level 2, and beyond). You will **not** create a new virtual environment for each level—you’ll activate this same one whenever you work in any level folder. That keeps the setup simple and consistent.
+> **📌 Create the virtual environment from the root folder first**  
+> The terminal opens at the **project root** (the folder that contains `level1`, `level2`, and `.guides`). Create the virtual environment **there**; only **then** go into `level1` for the rest of this lab. One `.venv` in the root is used for **all levels** —do not create a separate venv inside `level1` or any other level folder. You will **not** create a new venv per level—you’ll activate this same one whenever you work in any level folder. That keeps the setup simple and consistent.
 
 ---
 
-**Before you start**: Open a terminal in Codio. The terminal opens at the project root (e.g. `~/workspace`—the folder that contains `level1`, `level2`, and `.guides`). **Stay in this root folder** for Steps 1–3. Do not `cd` into `level1` yet.
+**Before you start**: Open a terminal in Codio. The terminal opens at the **project root** (e.g. `~/workspace`). **Do not run `cd level1` yet.** Stay in the root folder for Steps 1–3 (create venv, install Rasa, verify). You will go into `level1` only in Step 4.
+
+**Order of operations:** 1. Root → create venv & activate → 2. Root → install Rasa Pro → 3. Root → verify (`rasa --version`) → 4. **Then** `cd level1` and check project structure & env vars.
 
 #### Steps
 
