@@ -23,3 +23,5 @@ Rasa:
 5. Creates model with slot information
 
 Wait for "Successfully saved model". A new `.tar.gz` file will appear in `level3/models/`.
+
+**Do the training in Lab 6.1: Training and Testing with Slots** (Part 1 or Part 2), then run the assessment when done.

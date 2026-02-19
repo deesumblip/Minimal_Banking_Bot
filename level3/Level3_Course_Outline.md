@@ -103,41 +103,34 @@
 ---
 
 ### Unit 5: Reading Slots in Actions
-**Type**: Content + optional Lab  
-**Assessment**: None (action file provided in level3; optional Lab 5.1 to verify)
+**Type**: Content + Lab (no assessment)  
+**Assessment**: None. Lab 5.1 – Exploring Actions with Slots (ungraded).
 
 **Sections**:
 - 5.1 Accessing Slots in Actions
   - `tracker.get_slot("slot_name")`
-- 5.2 Understanding the Tracker
-  - Tracker holds conversation state
-- 5.3 Creating an Action That Uses Slots
-  - Walkthrough of `action_check_balance_simple.py`
-- 5.4 Handling Missing Slots
-  - Check for None, placeholder handling
+- 5.2 Placeholder Handling
+  - Check for None, placeholders; re-prompt with utter_ask_account
+
+**Lab 5.1**: Explore `action_check_balance_simple.py` (provided); see how it reads the slot and handles placeholders. No graded assessment.
 
 **Key Concepts**: Tracker, get_slot, placeholder handling
 
 ---
 
 ### Unit 6: Training and Testing with Slots
-**Type**: Lab (with Assessment)  
-**Assessment**: Lab 6.1 - Training and Testing with Slots (suggested points: 12, same pattern as L1/L2)
+**Type**: Labs (6.1 graded; 6.2 ungraded)  
+**Assessment**: Lab 6.1 – Training and Testing with Slots (12 points). Lab 6.2 – Testing Slot Collection (no assessment).
 
 **Sections**:
-- 6.1 Training with Slots
-  - Command: from project root, activate venv, `cd level3`, `python -m rasa train`
-- 6.2 Testing Slot Collection
-  - Start Inspector (Codio: Rasa Inspect tab; local: browser)
-  - Test "Check my balance" → ask for account → respond
+- 6.1 Training with Slots → **Lab 6.1** (graded)
+- 6.2 Testing Slot Collection → **Lab 6.2** (hands-on steps; no assessment)
 - 6.3 Understanding Slot State
-  - Slot persists in conversation
 - 6.4 Common Issues with Slots
-  - Placeholder values, missing slot
 
 **Key Concepts**: Training, testing, Inspector, slot state
 
-**Assessment Checks** (Lab 6.1):
+**Assessment Checks** (Lab 6.1 only):
 - Venv in project root, activated; `cd level3`
 - Model file exists in `level3/models/`
 - Model recent, no critical errors in logs
@@ -145,16 +138,13 @@
 ---
 
 ### Unit 7: Putting It All Together
-**Type**: Content Page  
-**Assessment**: None
+**Type**: Content + Lab (no assessment)  
+**Assessment**: None. Lab 7.1 – Complete Bot Walkthrough (ungraded).
 
 **Sections**:
-- 7.1 Complete Bot Walkthrough
-  - Full conversation example (Level 1 + 2 + 3)
+- 7.1 Complete Bot Walkthrough → **Lab 7.1** (guided demo; no assessment)
 - 7.2 Your Level 3 Banking Bot: Summary
-  - What the bot can do now
 - 7.3 Best Practices
-  - Slot naming, checking for None, ask responses
 
 **Key Concepts**: Integration, summary, best practices
 
@@ -203,9 +193,12 @@
 - Copy into Codio Guide Editor or `.guides/content` when ready.
 
 ### Lab Content + Assessment Setup
-- `Level3_Lab3.1_Content.md` / `Level3_Lab3.1_Assessment_Setup.md`
-- `Level3_Lab4.1_Content.md` / `Level3_Lab4.1_Assessment_Setup.md`
-- `Level3_Lab6.1_Content.md` / `Level3_Lab6.1_Assessment_Setup.md`
+- `Level3_Lab3.1_Content.md` / `Level3_Lab3.1_Assessment_Setup.md` (graded)
+- `Level3_Lab4.1_Content.md` / `Level3_Lab4.1_Assessment_Setup.md` (graded)
+- `Level3_Lab5.1_Content.md` / `Level3_Lab5.1_Assessment_Setup.md` (ungraded, exploration)
+- `Level3_Lab6.1_Content.md` / `Level3_Lab6.1_Assessment_Setup.md` (graded)
+- `Level3_Lab6.2_Content.md` / `Level3_Lab6.2_Assessment_Setup.md` (ungraded, testing)
+- `Level3_Lab7.1_Content.md` / `Level3_Lab7.1_Assessment_Setup.md` (ungraded, walkthrough)
 
 ### Implementation
 - `Level3_Implementation_Overview.md` – Codio team

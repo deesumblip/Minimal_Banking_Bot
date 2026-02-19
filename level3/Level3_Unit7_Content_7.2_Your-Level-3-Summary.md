@@ -5,6 +5,4 @@
 - Remember user-provided information (slots)
 - Ask for missing information and use it in actions (e.g. check balance for an account)
 
-**Key additions:** `slots:` and `utter_ask_account` in domain; `check_balance.yml` flow with `collect: account`; `action_check_balance_simple` that reads the slot and handles placeholders.
-
-**Best practices:** Use descriptive slot names; always check for `None` or placeholders in actions; name ask responses `utter_ask_<slot_name>`.
+**Key additions:** `slots:` and `utter_ask_account` in domain; `check_balance.yml` flow with `collect: account`; `action_check_balance_simple` that reads the slot and handles placeholders. See **7.3 Best Practices** for slot naming and action tips.

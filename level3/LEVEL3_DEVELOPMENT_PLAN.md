@@ -104,14 +104,24 @@
 
 ## Checklist (Quick Reference)
 
-- [ ] **Level3_Course_Outline.md** – Units and labs listed; assessments marked.  
-- [ ] **Level3_Implementation_Overview.md** – Venv root, Codio vs local, Inspector tab, assessment locations.  
-- [ ] **level3/README.md** – Quick Start uses venv from root, `cd level3`, Rasa Inspect tab only.  
-- [ ] **Level3_Unit*_Content*.md** – Extracted from CODIO_IMPLEMENTATION_GUIDE; Codio/local and venv order fixed.  
-- [ ] **Level3_Lab*_Content.md** – Part 1 (Codio) / Part 2 (local by OS); no Ports.  
-- [ ] **Level3_Lab*_Assessment_Setup.md** – For each graded lab; grader path, root WD, PASS/expected output.  
-- [ ] **.guides/assessments/level3_graders/*.sh** – Run from root, venv + `cd level3`, print PASS/FAIL.  
-- [ ] **.guides/content** – Level 3 chapter added only after content and assessments are stable.
+- [x] **Level3_Course_Outline.md** – Units and labs listed; assessments marked.  
+- [x] **Level3_Implementation_Overview.md** – Venv root, Codio vs local, Inspector tab, assessment locations.  
+- [x] **level3/README.md** – Quick Start uses venv from root, `cd level3`, Rasa Inspect tab only.  
+- [x] **Level3_Unit*_Content*.md** – Units 0–8; Codio/local and venv order fixed; 7.3 Best Practices, 8.1 Knowledge Check added.  
+- [x] **Level3_Lab*_Content.md** – Labs 3.1, 4.1, 5.1, 6.1, 6.2, 7.1; Part 1 (Codio) / Part 2 (local); no Ports.  
+- [x] **Level3_Lab*_Assessment_Setup.md** – All six labs; graded labs have LLM Rubric (3.1, 4.1) or Python grader (6.1); ungraded (5.1, 6.2, 7.1) documented.  
+- [ ] **.guides/assessments/level3_graders/** – Lab 6.1: `lab_6.1_grader.py` done. Lab 3.1/4.1: solution references done; **optional** `lab_3.1_grader.sh`, `lab_4.1_grader.sh` if offering Option B (Bash).  
+- [ ] **.guides/content** – Level 3 chapter (e.g. Chapter-1-3---Slot-Collection) **not yet added**; do when publishing Level 3 on Codio.
+
+---
+
+## What's Left to Do
+
+| Phase | Item | Status |
+|-------|------|--------|
+| **Phase 3** | Bash graders for Lab 3.1 and 4.1 (Option B) | Optional: create `lab_3.1_grader.sh`, `lab_4.1_grader.sh` if implementers want Standard Code Test instead of LLM Rubric. |
+| **Phase 4** | Level 3 chapter in `.guides/content` | Not started. Add when ready to publish Level 3 on Codio (paste from `level3/Level3_*`). |
+| **Phase 4** | Codio implementation guide | Optional: shorten `CODIO_IMPLEMENTATION_GUIDE.md` to implementer-only or add Level 3 section to shared doc. |
 
 ---
 

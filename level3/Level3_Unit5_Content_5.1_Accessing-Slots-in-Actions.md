@@ -13,3 +13,5 @@ def run(self, dispatcher, tracker, domain):
 ```
 
 Slots can be `None` if not set yet. Always check before using.
+
+**Lab 5.1: Exploring Actions with Slots** lets you explore the real action file (`action_check_balance_simple.py`) to see how it reads the slot and handles placeholders.

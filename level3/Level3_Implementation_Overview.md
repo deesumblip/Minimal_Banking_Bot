@@ -31,20 +31,26 @@ This document provides implementation guidance for **Level 3: Slot Collection** 
 - `Level3_Unit2_Content_2.1_*.md`, `2.2_*.md`
 - `Level3_Unit3_Content_3.1_*.md`, `3.2_*.md`
 - `Level3_Unit4_Content_4.1_*.md` … `4.3_*.md`
-- `Level3_Unit5_Content_5.1_*.md` … `5.4_*.md`
+- `Level3_Unit5_Content_5.1_*.md`, `5.2_*.md`
 - `Level3_Unit6_Content_6.1_*.md` … `6.4_*.md`
 - `Level3_Unit7_Content_7.1_*.md` … `7.3_*.md`
 - `Level3_Unit8_Content_8.1_*.md` … `8.5_*.md`
 
 ### Lab Content (Student-facing)
-- `Level3_Lab3.1_Content.md` – Defining a slot in the domain
-- `Level3_Lab4.1_Content.md` – Creating a flow with slot collection
-- `Level3_Lab6.1_Content.md` – Training and testing with slots
+- `Level3_Lab3.1_Content.md` – Defining a slot in the domain (graded)
+- `Level3_Lab4.1_Content.md` – Creating a flow with slot collection (graded)
+- `Level3_Lab5.1_Content.md` – Exploring actions with slots (ungraded)
+- `Level3_Lab6.1_Content.md` – Training and testing with slots (graded)
+- `Level3_Lab6.2_Content.md` – Testing slot collection in Inspector (ungraded)
+- `Level3_Lab7.1_Content.md` – Complete bot walkthrough (ungraded)
 
 ### Assessment Setup (Implementers)
-- `Level3_Lab3.1_Assessment_Setup.md` – Lab 3.1 grader and Codio config
-- `Level3_Lab4.1_Assessment_Setup.md` – Lab 4.1 grader and config
-- `Level3_Lab6.1_Assessment_Setup.md` – Lab 6.1 grader and config
+- `Level3_Lab3.1_Assessment_Setup.md` – Lab 3.1 (LLM Rubric or Bash)
+- `Level3_Lab4.1_Assessment_Setup.md` – Lab 4.1 (LLM Rubric or Bash)
+- `Level3_Lab5.1_Assessment_Setup.md` – No assessment
+- `Level3_Lab6.1_Assessment_Setup.md` – Lab 6.1 Python grader
+- `Level3_Lab6.2_Assessment_Setup.md` – No assessment
+- `Level3_Lab7.1_Assessment_Setup.md` – No assessment
 
 ---
 
@@ -76,11 +82,11 @@ level3/
 ```
 
 ### Grader Scripts
-- Store in `.guides/assessments/level3_graders/` (e.g. `lab_3.1_grader.sh`, `lab_4.1_grader.sh`, `lab_6.1_grader.sh`)
+- Store in `.guides/assessments/level3_graders/`
+- **Lab 3.1 & 4.1**: Option A = LLM Rubric (use `lab_3.1_solution_reference.md`, `lab_4.1_solution_reference.md`). Option B = Standard Code Test: `lab_3.1_grader.sh`, `lab_4.1_grader.sh` (create if offering Bash option).
+- **Lab 6.1**: `lab_6.1_grader.py` (Python); COMMAND: `python3 .../lab_6.1_grader.py`
 - **Working Directory**: `/home/codio/workspace` (project root)
-- Script: activate venv in workspace root, then `cd level3`, then run checks
 - **Success output**: Script must print a line containing `PASS` or `Successfully passed!` so Codio's expected-output match works.
-- COMMAND: `bash /home/codio/workspace/.guides/assessments/level3_graders/lab_X.X_grader.sh`
 
 ---
 
