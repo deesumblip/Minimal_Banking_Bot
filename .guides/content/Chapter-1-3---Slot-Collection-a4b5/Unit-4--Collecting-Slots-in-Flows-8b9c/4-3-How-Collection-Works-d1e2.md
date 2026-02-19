@@ -1,5 +1,3 @@
-# 4.3 How Collection Works
-
 - Flow starts → Step 1: `collect: account`
 - Does `account` slot have a value?
   - **No** → Bot asks: "What is your account number?" → User provides → Bot stores value in slot → Flow continues to Step 2

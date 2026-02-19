@@ -1,5 +1,3 @@
-# Lab 4.1: Creating a Flow with Slot Collection
-
 **Objective**: Create the `check_balance.yml` flow that collects the `account` slot and then runs `action_check_balance_simple`.
 
 ## Part 1: In Codio

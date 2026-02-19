@@ -1,5 +1,3 @@
-# 5.2 Placeholder Handling
-
 Sometimes the LLM extracts generic text like "account number" instead of the actual number. In `action_check_balance_simple.py` we:
 
 1. Read the slot: `account = tracker.get_slot("account") or "<missing>"`

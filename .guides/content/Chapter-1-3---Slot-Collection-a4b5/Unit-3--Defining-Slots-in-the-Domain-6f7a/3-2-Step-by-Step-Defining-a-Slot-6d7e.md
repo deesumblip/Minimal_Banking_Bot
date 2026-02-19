@@ -1,5 +1,3 @@
-# 3.2 Step-by-Step: Defining a Slot
-
 You will do this in **Lab 3.1: Defining a Slot in the Domain**. The steps below are the detailed walkthrough for that lab.
 
 **Step 1:** Open `domain/basics.yml` (in the `level3` folder). You should see your Level 2 content (responses and actions).

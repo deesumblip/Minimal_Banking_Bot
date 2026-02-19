@@ -1,5 +1,3 @@
-# Lab 6.1: Training and Testing with Slots
-
 **Objective**: Train your Level 3 bot (with slots) and verify it works.
 
 ## Part 1: In Codio

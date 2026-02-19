@@ -1,5 +1,3 @@
-# Lab 3.1: Defining a Slot in the Domain
-
 **Objective**: Add the `account` slot and `utter_ask_account` response to your Level 3 domain so the bot can collect and remember an account number.
 
 ## Part 1: In Codio

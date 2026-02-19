@@ -1,5 +1,3 @@
-# 4.1 The Collect Step
-
 The `collect:` step in a flow tells Rasa: "Get this slot value before continuing."
 
 ## Collect Step Structure

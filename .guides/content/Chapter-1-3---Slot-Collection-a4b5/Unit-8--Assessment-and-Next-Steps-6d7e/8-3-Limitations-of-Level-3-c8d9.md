@@ -1,5 +1,3 @@
-# 8.3 Limitations of Level 3
-
 ## What Level 3 Cannot Do
 
 1. **Collect Multiple Slots Efficiently**: Can only collect one slot at a time easily

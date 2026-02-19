@@ -1,5 +1,3 @@
-# 1.2 How Slots Work
-
 Slots work in three steps:
 
 1. **Define the slot** in `domain/basics.yml`:

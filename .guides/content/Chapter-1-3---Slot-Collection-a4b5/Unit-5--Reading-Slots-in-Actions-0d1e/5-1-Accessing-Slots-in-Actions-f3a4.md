@@ -1,5 +1,3 @@
-# 5.1 Accessing Slots in Actions
-
 To use slot values in your actions, read them from the `tracker` parameter:
 
 ```python

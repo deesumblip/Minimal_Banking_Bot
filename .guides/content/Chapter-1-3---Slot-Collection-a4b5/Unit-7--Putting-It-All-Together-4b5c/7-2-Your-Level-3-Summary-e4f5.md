@@ -1,5 +1,3 @@
-# 7.2 Your Level 3 Banking Bot: Summary
-
 **What your bot can do now:**
 - All Level 1 and Level 2 capabilities (responses, flows, actions)
 - Remember user-provided information (slots)

@@ -1,5 +1,3 @@
-# 4.2 Creating a Flow with Slot Collection
-
 You will do this in **Lab 4.1: Creating a Flow with Slot Collection**. The steps below are the detailed walkthrough for that lab.
 
 Create the `check_balance.yml` flow that collects the account number.

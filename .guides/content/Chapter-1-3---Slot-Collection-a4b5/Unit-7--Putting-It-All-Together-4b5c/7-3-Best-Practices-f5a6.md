@@ -1,5 +1,3 @@
-# 7.3 Best Practices
-
 **Slot naming**
 - Use descriptive, lowercase names (e.g. `account`, `user_name`, `transfer_amount`).
 - Avoid vague names like `a`, `slot1`, or `data`.

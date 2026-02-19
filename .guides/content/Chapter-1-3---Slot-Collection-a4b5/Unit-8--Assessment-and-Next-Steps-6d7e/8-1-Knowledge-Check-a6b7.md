@@ -1,5 +1,3 @@
-# 8.1 Knowledge Check
-
 Answer the following to check your understanding of Level 3 (slots).
 
 ---

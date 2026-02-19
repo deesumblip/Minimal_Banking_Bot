@@ -1,5 +1,3 @@
-# 3.1 The Slots Section
-
 Slots are defined in the domain file, just like responses and actions.
 
 ## Domain Structure in Level 3

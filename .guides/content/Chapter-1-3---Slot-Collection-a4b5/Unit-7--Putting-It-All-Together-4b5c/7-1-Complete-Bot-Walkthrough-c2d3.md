@@ -1,5 +1,3 @@
-# 7.1 Complete Bot Walkthrough
-
 A full conversation ties together Level 1 (responses), Level 2 (actions), and Level 3 (slot memory).
 
 **Do the walkthrough in Lab 7.1: Complete Bot Walkthrough.** You will:

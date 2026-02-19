@@ -1,5 +1,3 @@
-# 0.2 What Level 3 Adds
-
 Level 3 introduces **Slots**—the bot's memory. This enables:
 
 - Remembering information from the conversation

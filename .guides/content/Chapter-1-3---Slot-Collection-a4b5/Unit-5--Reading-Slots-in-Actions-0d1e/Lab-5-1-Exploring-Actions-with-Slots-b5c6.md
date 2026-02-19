@@ -1,5 +1,3 @@
-# Lab 5.1: Exploring Actions with Slots
-
 **Objective**: See how the provided action uses the `account` slot and handles placeholders.
 
 **Note**: The action file `action_check_balance_simple.py` is already in `level3/actions/`. You are not writing code; you are exploring how it works.
