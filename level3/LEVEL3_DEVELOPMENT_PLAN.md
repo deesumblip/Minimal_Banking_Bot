@@ -95,8 +95,8 @@
    - Add `index.json` and any page `.json` files so the guide tree matches the outline.
 
 10. **Codio implementation guide for Level 3**  
-    - Either: shorten `level3/CODIO_IMPLEMENTATION_GUIDE.md` to an **implementer-only** guide (no student copy-paste), referencing the new `Level3_*` content files and the assessment setup docs.  
-    - Or: add a “Level 3” section to a shared Codio implementation doc that already describes L1/L2, and keep Level 3 content in `level3/` only.
+    - **Done.** Shortened `level3/CODIO_IMPLEMENTATION_GUIDE.md` to implementer-only; references `Level3_*` content and assessment setup docs.  
+    - **Done.** Added Level 3 section to `.guides/CODIO_IMPLEMENTATION_OVERVIEW.md` (shared entry point for L1/L2/L3).
 
 **Outcome:** Codio has a Level 3 guide that matches the repo and uses the same conventions as L1/L2.
 
@@ -111,7 +111,8 @@
 - [x] **Level3_Lab*_Content.md** – Labs 3.1, 4.1, 5.1, 6.1, 6.2, 7.1; Part 1 (Codio) / Part 2 (local); no Ports.  
 - [x] **Level3_Lab*_Assessment_Setup.md** – All six labs; graded labs have LLM Rubric (3.1, 4.1) or Python grader (6.1); ungraded (5.1, 6.2, 7.1) documented.  
 - [ ] **.guides/assessments/level3_graders/** – Lab 6.1: `lab_6.1_grader.py` done. Lab 3.1/4.1: solution references done; **optional** `lab_3.1_grader.sh`, `lab_4.1_grader.sh` if offering Option B (Bash).  
-- [ ] **.guides/content** – Level 3 chapter (e.g. Chapter-1-3---Slot-Collection) **not yet added**; do when publishing Level 3 on Codio.
+- [x] **.guides/content** – Level 3 chapter (Chapter-1-3---Slot-Collection-a4b5) added; Units 0–8 with content and labs pasted from level3.
+- [x] **level3/CODIO_IMPLEMENTATION_GUIDE.md** – Shortened to implementer-only; **.guides/CODIO_IMPLEMENTATION_OVERVIEW.md** – Level 3 section added (shared L1/L2/L3 entry point).
 
 ---
 
@@ -120,8 +121,8 @@
 | Phase | Item | Status |
 |-------|------|--------|
 | **Phase 3** | Bash graders for Lab 3.1 and 4.1 (Option B) | Optional: create `lab_3.1_grader.sh`, `lab_4.1_grader.sh` if implementers want Standard Code Test instead of LLM Rubric. |
-| **Phase 4** | Level 3 chapter in `.guides/content` | Not started. Add when ready to publish Level 3 on Codio (paste from `level3/Level3_*`). |
-| **Phase 4** | Codio implementation guide | Optional: shorten `CODIO_IMPLEMENTATION_GUIDE.md` to implementer-only or add Level 3 section to shared doc. |
+| **Phase 4** | Level 3 chapter in `.guides/content` | **Done.** Chapter-1-3---Slot-Collection-a4b5 with Units 0–8, all content/lab pages pasted from level3. |
+| **Phase 4** | Codio implementation guide | **Done.** `CODIO_IMPLEMENTATION_GUIDE.md` shortened to implementer-only; Level 3 added to `.guides/CODIO_IMPLEMENTATION_OVERVIEW.md`. |
 
 ---
 
