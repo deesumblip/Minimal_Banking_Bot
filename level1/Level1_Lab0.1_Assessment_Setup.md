@@ -32,13 +32,13 @@ This assessment verifies that students have created a virtual environment in the
 
 ### Assessment Type
 
-**Standard Code Test** (Bash script)
+**Standard Code Test** (Python script)
 
 ## Grader Script Location
 
 Save the grader script at:
 ```
-.guides/assessments/level1_graders/lab_0.1_grader.sh
+.guides/assessments/level1_graders/lab_0.1_grader.py
 ```
 
 ## Grader Script
@@ -55,8 +55,8 @@ Use clear PASS/FAIL messages and hints. Suggested total points: 4–6 (adjust pe
 
 1. **Navigate** to the Lab 0.1 section in the Codio Guide Editor.
 
-2. **Add Code Test** – Standard Code Test. COMMAND: `bash /home/codio/workspace/.guides/assessments/level1_graders/lab_0.1_grader.sh`. Working Directory: **`/home/codio/workspace`** (project root, where `.venv` lives). Timeout: 60 seconds.
+2. **Add Code Test** – Standard Code Test. COMMAND: `python3 /home/codio/workspace/.guides/assessments/level1_graders/lab_0.1_grader.py` (or `python` if that is the default). Working Directory: **`/home/codio/workspace`** (project root, where `.venv` lives). Timeout: 60 seconds.
 
-3. **Create** `.guides/assessments/level1_graders/lab_0.1_grader.sh` and make it executable. The script should `cd` to workspace root, check for `.venv` there, activate it, then run `rasa --version`.
+3. The grader script `.guides/assessments/level1_graders/lab_0.1_grader.py` runs from workspace root, checks for `.venv` there, verifies Rasa Pro via the venv Python, and optionally checks `level1/domain/` and `level1/data/`.
 
 4. **Test** – Run after a student completes Lab 0.1 (venv in root + Rasa install); confirm pass. Run in a fresh workspace without venv; confirm fail with hint.
