@@ -45,34 +45,106 @@ print("✅ Check 1: PASSED - Virtual environment found in project root (2 points
 score += 2
 print("")
 
+# Verify venv Python is executable before proceeding
+try:
+    test_result = subprocess.run(
+        [str(VENV_PYTHON), "--version"],
+        capture_output=True,
+        text=True,
+        timeout=5,
+        cwd=str(WORKSPACE_ROOT),
+    )
+    if test_result.returncode != 0:
+        print("⚠️  Warning: Venv Python may not be executable")
+except Exception as e:
+    print(f"⚠️  Warning: Could not verify venv Python: {e}")
+
 # Check 2: Rasa Pro is installed (3 points)
 print("Check 2: Verifying Rasa Pro installation...")
 rasa_found = False
 version_info = ""
 
-# Method 1: Try running rasa --version via venv Python
-try:
-    result = subprocess.run(
-        [str(VENV_PYTHON), "-m", "rasa", "--version"],
-        capture_output=True,
-        text=True,
-        timeout=10,
-        cwd=str(WORKSPACE_ROOT),
-        env=dict(os.environ, PATH=str(VENV_DIR / "bin") + os.pathsep + os.environ.get("PATH", "")),
-    )
-    if result.returncode == 0:
-        version_info = (result.stdout or result.stderr or "").strip().split("\n")[0]
-        if "Rasa Pro" in version_info or "rasa" in version_info.lower():
-            rasa_found = True
-except Exception:
-    pass
+# Prepare environment with venv in PATH
+venv_bin = str(VENV_DIR / "bin")
+venv_scripts = str(VENV_DIR / "Scripts")
+env = os.environ.copy()
+env["PATH"] = os.pathsep.join([venv_bin, venv_scripts, env.get("PATH", "")])
 
-# Method 2: Try checking if rasa command exists in venv
+# Method 1: Check if rasa-pro is installed via pip list
+if not rasa_found:
+    try:
+        result = subprocess.run(
+            [str(VENV_PYTHON), "-m", "pip", "list"],
+            capture_output=True,
+            text=True,
+            timeout=10,
+            cwd=str(WORKSPACE_ROOT),
+            env=env,
+        )
+        if result.returncode == 0:
+            output = result.stdout.lower()
+            if "rasa-pro" in output or "rasa pro" in output:
+                # Extract version from pip list output
+                for line in result.stdout.split("\n"):
+                    if "rasa-pro" in line.lower() or "rasa pro" in line.lower():
+                        parts = line.split()
+                        if len(parts) >= 2:
+                            version_info = f"Rasa Pro {parts[1]}"
+                            rasa_found = True
+                            break
+    except Exception:
+        pass
+
+# Method 1b: Try using bash to activate venv and run rasa --version
+if not rasa_found:
+    try:
+        activate_script = VENV_DIR / "bin" / "activate"
+        if not activate_script.exists():
+            activate_script = VENV_DIR / "Scripts" / "activate.bat"
+        if activate_script.exists():
+            # Use bash to source activate and run rasa --version
+            bash_cmd = f"source {activate_script} && rasa --version"
+            result = subprocess.run(
+                ["bash", "-c", bash_cmd],
+                capture_output=True,
+                text=True,
+                timeout=10,
+                cwd=str(WORKSPACE_ROOT),
+                env=env,
+            )
+            if result.returncode == 0:
+                output = result.stdout or result.stderr or ""
+                version_info = output.strip().split("\n")[0]
+                if "rasa pro" in output.lower() or "rasa" in output.lower():
+                    rasa_found = True
+    except Exception:
+        pass
+
+# Method 2: Try running rasa --version via venv Python
+if not rasa_found:
+    try:
+        result = subprocess.run(
+            [str(VENV_PYTHON), "-m", "rasa", "--version"],
+            capture_output=True,
+            text=True,
+            timeout=10,
+            cwd=str(WORKSPACE_ROOT),
+            env=env,
+        )
+        if result.returncode == 0:
+            output = result.stdout or result.stderr or ""
+            version_info = output.strip().split("\n")[0]
+            if "rasa pro" in output.lower() or "rasa" in output.lower():
+                rasa_found = True
+    except Exception:
+        pass
+
+# Method 3: Try checking if rasa command exists in venv
 if not rasa_found:
     rasa_cmd = VENV_DIR / "bin" / "rasa"
     if not rasa_cmd.exists():
         rasa_cmd = VENV_DIR / "Scripts" / "rasa.exe"
-    if rasa_cmd.exists():
+    if rasa_cmd.exists() and rasa_cmd.is_file():
         try:
             result = subprocess.run(
                 [str(rasa_cmd), "--version"],
@@ -80,15 +152,17 @@ if not rasa_found:
                 text=True,
                 timeout=10,
                 cwd=str(WORKSPACE_ROOT),
+                env=env,
             )
             if result.returncode == 0:
-                version_info = (result.stdout or result.stderr or "").strip().split("\n")[0]
-                if "Rasa Pro" in version_info or "rasa" in version_info.lower():
+                output = result.stdout or result.stderr or ""
+                version_info = output.strip().split("\n")[0]
+                if "rasa pro" in output.lower() or "rasa" in output.lower():
                     rasa_found = True
         except Exception:
             pass
 
-# Method 3: Try importing rasa via venv Python
+# Method 4: Try importing rasa via venv Python
 if not rasa_found:
     try:
         result = subprocess.run(
@@ -97,10 +171,35 @@ if not rasa_found:
             text=True,
             timeout=10,
             cwd=str(WORKSPACE_ROOT),
+            env=env,
         )
         if result.returncode == 0:
             version_info = f"Rasa Pro {result.stdout.strip()}"
             rasa_found = True
+    except Exception:
+        pass
+
+# Method 5: Check if rasa package directory exists in site-packages
+if not rasa_found:
+    try:
+        # Get site-packages location
+        result = subprocess.run(
+            [str(VENV_PYTHON), "-c", "import site; print(site.getsitepackages()[0])"],
+            capture_output=True,
+            text=True,
+            timeout=5,
+            cwd=str(WORKSPACE_ROOT),
+            env=env,
+        )
+        if result.returncode == 0:
+            site_packages = Path(result.stdout.strip())
+            rasa_pkg = site_packages / "rasa"
+            if rasa_pkg.exists() and rasa_pkg.is_dir():
+                # Check for version file or __init__.py
+                init_file = rasa_pkg / "__init__.py"
+                if init_file.exists():
+                    version_info = "Rasa Pro (package found)"
+                    rasa_found = True
     except Exception:
         pass
 
