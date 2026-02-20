@@ -38,3 +38,38 @@ Use the same steps as Part 1. From project root, activate venv, then `cd level3`
 ---
 
 **No assessment** for this lab; it is completion-based. Use the debug panel in Inspector to see slot values if you want to explore further.
+
+---
+
+## Check Your Knowledge
+
+**1. When you first say "Check my balance" (slot empty), what should the bot do?**
+
+a) Reply with a balance immediately  
+b) Ask for your account number (e.g. "What is your account number?")  
+c) Say "What are your hours?"  
+d) Return an error  
+
+**2. After you give "1234" as your account number, you say "What's my balance?" again. What should happen?**
+
+a) The bot asks for your account number again  
+b) The bot remembers 1234 and replies with the balance without asking  
+c) The bot says "Hello"  
+d) Nothing; the bot ignores the message  
+
+**3. How do you verify that Level 2 flows still work?**
+
+a) Say "Check my balance" and provide an account number  
+b) Say "What are your hours?" and get a response about bank hours  
+c) Restart Inspector  
+d) Check the debug panel only  
+
+---
+
+### Answer Key
+
+| Q | Answer | Brief explanation |
+|---|--------|-------------------|
+| 1 | **b** | When the slot is empty, the `collect:` step prompts the user via `utter_ask_account`. |
+| 2 | **b** | Slot persistence means the bot remembers the account across turns and does not re-ask. |
+| 3 | **b** | "What are your hours?" triggers the Level 2 `hours` flow; if it works, Level 2 is intact. |
