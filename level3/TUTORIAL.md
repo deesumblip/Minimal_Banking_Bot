@@ -27,15 +27,15 @@ Before we add slots (memory), let's recap what you've already built in Level 2. 
 #### What You Have from Level 2
 
 **Domain File (`domain/basics.yml`)**:
-- ✅ All Level 1 responses (`utter_greet`, `utter_help`, `utter_contact`)
-- ✅ `actions:` section with `action_bank_hours` registered
+- All Level 1 responses (`utter_greet`, `utter_help`, `utter_contact`)
+- `actions:` section with `action_bank_hours` registered
 
 **Flows (`data/basics/`)**:
-- ✅ All Level 1 flows (`greet`, `help`, `contact`)
-- ✅ New Level 2 flow (`hours`) that uses `action_bank_hours`
+- All Level 1 flows (`greet`, `help`, `contact`)
+- New Level 2 flow (`hours`) that uses `action_bank_hours`
 
 **Actions (`actions/`)**:
-- ✅ `action_bank_hours.py` - Returns bank hours dynamically
+- `action_bank_hours.py` - Returns bank hours dynamically
 
 **System Patterns**: Unchanged from Level 1
 
@@ -60,10 +60,10 @@ Your Level 2 bot could execute custom Python code, but it couldn't:
 
 Level 3 introduces **Slots** - the bot's memory. This enables:
 
-- ✅ Remembering information from the conversation
-- ✅ Storing user-provided data (like account numbers)
-- ✅ Asking for missing information
-- ✅ Using stored information in actions
+- Remembering information from the conversation
+- Storing user-provided data (like account numbers)
+- Asking for missing information
+- Using stored information in actions
 
 **Your existing Level 2 bot continues to work** - Level 3 adds memory on top of it!
 
@@ -211,9 +211,9 @@ For Level 3, we only use `text` slots. Other types exist (like `bool`, `float`, 
 ### 2.2 Slot Naming
 
 **Good slot names**:
-- ✅ `account` - Clear and descriptive
-- ✅ `user_name` - Descriptive
-- ✅ `transfer_amount` - Clear purpose
+- `account` - Clear and descriptive
+- `user_name` - Descriptive
+- `transfer_amount` - Clear purpose
 
 **Bad slot names**:
 - ❌ `a` - Too vague
@@ -314,11 +314,11 @@ responses:
 **Step 4: Verify Your Domain**
 
 Check:
-- ✅ `slots:` section exists with `account` slot
-- ✅ `utter_ask_account` response exists
-- ✅ All Level 2 responses remain
-- ✅ All Level 2 actions remain
-- ✅ YAML syntax is correct
+- `slots:` section exists with `account` slot
+- `utter_ask_account` response exists
+- All Level 2 responses remain
+- All Level 2 actions remain
+- YAML syntax is correct
 
 ---
 
@@ -416,11 +416,11 @@ flows:
 **Step 4: Verify the Flow**
 
 Check:
-- ✅ File is in `data/basics/` folder
-- ✅ Flow has `name:`, `description:`, and `steps:`
-- ✅ `collect: account` step exists
-- ✅ Action name matches registered action
-- ✅ YAML syntax is correct
+- File is in `data/basics/` folder
+- Flow has `name:`, `description:`, and `steps:`
+- `collect: account` step exists
+- Action name matches registered action
+- YAML syntax is correct
 
 ---
 
@@ -581,7 +581,7 @@ class ActionCheckBalanceSimple(Action):
 Always check if a slot has a value before using it:
 
 ```python
-# ✅ GOOD: Check for None
+# GOOD: Check for None
 account = tracker.get_slot("account")
 if account:
     # Use the account
@@ -771,28 +771,28 @@ Congratulations! You've extended your Level 2 banking bot with memory capabiliti
 #### Your Complete Bot Structure
 
 **Domain (`domain/basics.yml`)**:
-- ✅ All Level 1 & 2 responses
-- ✅ New `utter_ask_account` response
-- ✅ `slots:` section with `account` slot
-- ✅ All Level 2 actions
-- ✅ New `action_check_balance_simple` action
+- All Level 1 & 2 responses
+- New `utter_ask_account` response
+- `slots:` section with `account` slot
+- All Level 2 actions
+- New `action_check_balance_simple` action
 
 **Flows (`data/basics/`)**:
-- ✅ All Level 1 & 2 flows
-- ✅ New `check_balance` flow with slot collection
+- All Level 1 & 2 flows
+- New `check_balance` flow with slot collection
 
 **Actions (`actions/`)**:
-- ✅ All Level 2 actions
-- ✅ New `action_check_balance_simple` that uses slots
+- All Level 2 actions
+- New `action_check_balance_simple` that uses slots
 
 #### What Your Bot Can Do Now
 
 Your Level 3 banking bot can:
-- ✅ Everything Level 1 & 2 could do
-- ✅ Remember information from the conversation (slots)
-- ✅ Ask for missing information
-- ✅ Use remembered information in actions
-- ✅ Have multi-turn conversations with context
+- Everything Level 1 & 2 could do
+- Remember information from the conversation (slots)
+- Ask for missing information
+- Use remembered information in actions
+- Have multi-turn conversations with context
 
 #### What's Still Missing (Coming in Future Levels)
 
@@ -893,11 +893,11 @@ d) `utter_get_account`
 
 #### Skills You've Developed
 
-- ✅ Can define slots in the domain file
-- ✅ Can collect slots in flows
-- ✅ Can read slots in actions
-- ✅ Can handle missing or placeholder slot values
-- ✅ Can create multi-turn conversations with memory
+- Can define slots in the domain file
+- Can collect slots in flows
+- Can read slots in actions
+- Can handle missing or placeholder slot values
+- Can create multi-turn conversations with memory
 
 ---
 
@@ -916,9 +916,9 @@ d) `utter_get_account`
 #### When Level 3 is Sufficient
 
 Level 3 is perfect for:
-- ✅ Single piece of information (account number, name)
-- ✅ Simple multi-turn conversations
-- ✅ Remembering one key piece of data
+- Single piece of information (account number, name)
+- Simple multi-turn conversations
+- Remembering one key piece of data
 
 #### When You Need More
 
@@ -985,14 +985,14 @@ Move to Level 4 when you need:
 
 Before moving to Level 4, ensure you can:
 
-- [ ] Explain what a slot is and how it differs from a response or action
-- [ ] Define a slot in the domain file
-- [ ] Create a flow that collects a slot
-- [ ] Read a slot value in an action
-- [ ] Handle missing or placeholder slot values
-- [ ] Understand that Level 3 builds on Level 2 (all Level 2 content remains)
+- Explain what a slot is and how it differs from a response or action
+- Define a slot in the domain file
+- Create a flow that collects a slot
+- Read a slot value in an action
+- Handle missing or placeholder slot values
+- Understand that Level 3 builds on Level 2 (all Level 2 content remains)
 
-If you can check all these boxes, you're ready for Level 4!
+If you can do all of the above, you're ready for Level 4!
 
 ---
 

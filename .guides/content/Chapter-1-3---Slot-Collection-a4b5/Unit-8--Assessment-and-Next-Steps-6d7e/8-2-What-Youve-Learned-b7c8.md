@@ -7,8 +7,8 @@
 
 ## Skills You've Developed
 
-- ✅ Can define slots in the domain file
-- ✅ Can collect slots in flows
-- ✅ Can read slots in actions
-- ✅ Can handle missing or placeholder slot values
-- ✅ Can create multi-turn conversations with memory
+- Can define slots in the domain file
+- Can collect slots in flows
+- Can read slots in actions
+- Can handle missing or placeholder slot values
+- Can create multi-turn conversations with memory

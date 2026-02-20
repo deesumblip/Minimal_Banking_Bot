@@ -13,9 +13,9 @@
 ## When Level 3 is Sufficient
 
 Level 3 is perfect for:
-- ✅ Single piece of information (account number, name)
-- ✅ Simple multi-turn conversations
-- ✅ Remembering one key piece of data
+- Single piece of information (account number, name)
+- Simple multi-turn conversations
+- Remembering one key piece of data
 
 ## When You Need More
 

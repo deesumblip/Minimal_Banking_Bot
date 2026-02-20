@@ -56,6 +56,8 @@
   - Other types (advanced)
 - 2.2 Slot Naming
   - Good vs bad slot names, conventions
+- 2.3 Test Your Knowledge
+  - 3 multiple choice questions (Units 0–2: slots, collect step, slot types and naming)
 
 **Key Concepts**: Slot types, naming
 

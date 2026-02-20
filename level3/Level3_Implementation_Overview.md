@@ -28,7 +28,7 @@ This document provides implementation guidance for **Level 3: Slot Collection** 
 ### Content Files (Copy into Codio)
 - `Level3_Unit0_Content_0.1_*.md`, `Level3_Unit0_Content_0.2_*.md`
 - `Level3_Unit1_Content_1.1_*.md` … `1.3_*.md`
-- `Level3_Unit2_Content_2.1_*.md`, `2.2_*.md`
+- `Level3_Unit2_Content_2.1_*.md`, `2.2_*.md`, `2.3_Test-Your-Knowledge.md`
 - `Level3_Unit3_Content_3.1_*.md`
 - `Level3_Unit4_Content_4.1_*.md` … `4.3_*.md`
 - `Level3_Unit5_Content_5.1_*.md`, `5.2_*.md`
