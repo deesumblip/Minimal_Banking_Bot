@@ -188,7 +188,7 @@
 ### Content Files (source of truth in level3/)
 - `Level3_Unit0_Content_0.1_*.md`, `Level3_Unit0_Content_0.2_*.md`
 - `Level3_Unit1_Content_1.1_*.md` … `1.3_*.md`
-- `Level3_Unit2_Content_2.1_*.md`, `2.2_*.md`
+- `Level3_Unit2_Content_2.1_*.md`, `2.2_*.md`, `2.3_Test-Your-Knowledge.md`
 - `Level3_Unit3_Content_3.1_*.md`
 - … (Units 4–8 same pattern)
 - Copy into Codio Guide Editor or `.guides/content` when ready.
