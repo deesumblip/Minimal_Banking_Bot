@@ -1,13 +1,17 @@
-Level 3 introduces **slots**, the bot's memory. This enables remembering information from the conversation, storing user-provided data such as account numbers, asking for missing information, and using stored information in actions.
+Level 3 adds **slots**: the bot's memory. With slots, your bot will be able to remember what the user said, store it, and use it later.
 
-Your existing Level 2 bot continues to work. Level 3 adds memory on top of it.
+Your Level 2 bot will still work. You will just add memory on top.
 
-## What's New in Level 3
+## What You'll Add
 
-**What you'll add in Lab 3.1.** In the domain you will add the `slots:` section with the `account` slot, the new response `utter_ask_account` for asking for the account number, and you will register the new action `action_check_balance_simple` in the `actions:` list. The action file is already in `level3/actions/`; you only add it to the domain.
+**In Lab 3.1** you will update the domain:
 
-**What you'll create in Lab 4.1.** You will create the flow file `data/basics/check_balance.yml`. That flow will collect the account number and then run `action_check_balance_simple`.
+- Add a `slots:` section with the `account` slot
+- Add the response `utter_ask_account` so the bot can ask for the account number
+- Add `action_check_balance_simple` to the `actions:` list (the Python file is already in the project)
 
-**Provided file.** The file `actions/action_check_balance_simple.py` is already in the project. You will register it in the domain in Lab 3.1 and explore how it works in Lab 5.1.
+**In Lab 4.1** you will create the flow file `data/basics/check_balance.yml`. That flow will collect the account number, then run `action_check_balance_simple`.
 
-**Unchanged.** All Level 2 responses, flows, and actions remain. You are building Level 3 by adding these pieces to your Level 2 bot.
+**Already provided.** The file `action_check_balance_simple.py` is in `level3/actions/`. You will register it in the domain; you won't write it. You'll explore how it works in Lab 5.1.
+
+**Unchanged.** All your Level 2 responses, flows, and actions will stay as they are. You will build Level 3 by adding these pieces.
