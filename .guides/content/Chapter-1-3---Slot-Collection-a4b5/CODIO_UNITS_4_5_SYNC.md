@@ -1,4 +1,17 @@
-# Units 4 and 5 Not Showing in Codio
+# Units 4 and 5: Sync and Duplicate Issues in Codio
+
+## Duplicate units (e.g. two Unit 5s)
+
+If you see **two Unit 5s** in the Chapter 1.3 guide—e.g. `Unit-5--Collecting-Slots-in-Flows-8b9c` and **`Unit-5--Reading-Slots-in-Actions-0d1e`**—the extra one is a **Codio leftover** from an older structure. The repo has only one Unit 4 and one Unit 5:
+
+- **Unit 4:** `Unit-4--Reading-Slots-in-Actions-0d1e`
+- **Unit 5:** `Unit-5--Collecting-Slots-in-Flows-8b9c`
+
+**Fix:** Re-import the project from Git (see below). That replaces the guide with the current repo and removes the duplicate. If you cannot re-import, in Codio’s Guide Editor remove or delete the duplicate section **Unit-5--Reading-Slots-in-Actions-0d1e** from the table of contents (it’s the wrong one; keep **Unit-5--Collecting-Slots-in-Flows-8b9c**).
+
+---
+
+## Units 4 and 5 not showing
 
 If **Unit 4** (Reading Slots in Actions) and **Unit 5** (Collecting Slots in Flows) do not appear in the Chapter 1.3 guide in Codio after pulling from Git, the guide structure in Codio is likely still using an older snapshot.
 
