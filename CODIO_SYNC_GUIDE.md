@@ -42,7 +42,7 @@ python sync_level2_to_codio.py
 After running the script:
 
 - Commit and push the changes under `.guides/content/`.
-- In Codio, **re-import the project from Git** (or use Codio’s content import if you use it), so the updated `.guides/content/` is what Codio uses.
+- In Codio, **re-import the project from Git** (or use Codio’s content import if you use it), so the updated `.guides/content/` is what Codio uses. **Without re-import, the Guide tab may keep showing an older table of contents** (e.g. new units like Chapter 1.3 Units 4 and 5 won't appear even after a pull). See `.guides/content/Chapter-1-3---Slot-Collection-a4b5/CODIO_UNITS_4_5_SYNC.md` if those units don't show.
 
 **When to run:** Whenever you change one or more sections or labs in `level2/` and want those changes reflected in Codio.
 
