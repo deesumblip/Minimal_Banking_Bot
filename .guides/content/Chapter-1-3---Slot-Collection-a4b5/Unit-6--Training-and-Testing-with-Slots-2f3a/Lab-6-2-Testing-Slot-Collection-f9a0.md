@@ -1,3 +1,5 @@
+# Lab 6.2: Testing Slot Collection
+
 Your goal is to test your Level 3 bot in Inspector so you see slot collection and persistence in action.
 
 **Prerequisite.** Complete Lab 6.1 (training). A model file must exist in `level3/models/`.

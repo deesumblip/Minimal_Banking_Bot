@@ -1,3 +1,5 @@
+# 6.4 Common Issues with Slots
+
 ## Issue. Slot Not Collected
 
 **Symptoms.** The bot doesn't ask for the slot value.

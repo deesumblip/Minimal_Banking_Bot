@@ -1,3 +1,5 @@
+# Lab 5.1: Creating a Flow with Slot Collection
+
 You have already defined the slot and ask response in the domain (Lab 3.1) and **written** the action (Lab 4.1). Now create the flow that ties them together: the `check_balance.yml` flow that collects the `account` slot and then runs `action_check_balance_simple`.
 
 ## Part 1: In Codio
