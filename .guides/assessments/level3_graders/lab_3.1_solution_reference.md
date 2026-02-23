@@ -27,7 +27,7 @@ responses:
         rephrase: True
 ```
 
-4. **action_check_balance_simple in actions** – Under `actions:`, add `action_check_balance_simple` to the list so Rasa can use the provided action. Example (Level 2 actions plus the new one):
+4. **action_check_balance_simple in actions** – Under `actions:`, add `action_check_balance_simple` to the list so Rasa can use the action (the student creates the .py file in Lab 4.1). Example (Level 2 actions plus the new one):
 
 ```yaml
 actions:

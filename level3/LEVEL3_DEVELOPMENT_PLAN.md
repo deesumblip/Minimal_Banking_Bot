@@ -110,7 +110,7 @@
 - [x] **Level3_Unit*_Content*.md** – Units 0–8; Codio/local and venv order fixed; 7.3 Best Practices, 8.1 Knowledge Check added.  
 - [x] **Level3_Lab*_Content.md** – Labs 3.1, 4.1, 5.1, 6.1, 6.2, 7.1; Part 1 (Codio) / Part 2 (local); no Ports.  
 - [x] **Level3_Lab*_Assessment_Setup.md** – All six labs; graded labs have LLM Rubric (3.1, 4.1) or Python grader (6.1); ungraded (5.1, 6.2, 7.1) documented.  
-- [ ] **.guides/assessments/level3_graders/** – Lab 6.1: `lab_6.1_grader.py` done. Lab 3.1/4.1: solution references done; **optional** `lab_3.1_grader.sh`, `lab_4.1_grader.sh` if offering Option B (Bash).  
+- [ ] **.guides/assessments/level3_graders/** – Lab 6.1: `lab_6.1_grader.py` done. Lab 3.1/5.1: solution references done; **optional** `lab_3.1_grader.sh`, `lab_5.1_grader.sh` if offering Option B (Bash).  
 - [x] **.guides/content** – Level 3 chapter (Chapter-1-3---Slot-Collection-a4b5) added; Units 0–8 with content and labs pasted from level3.
 - [x] **level3/CODIO_IMPLEMENTATION_GUIDE.md** – Shortened to implementer-only; **.guides/CODIO_IMPLEMENTATION_OVERVIEW.md** – Level 3 section added (shared L1/L2/L3 entry point).
 
@@ -120,7 +120,7 @@
 
 | Phase | Item | Status |
 |-------|------|--------|
-| **Phase 3** | Bash graders for Lab 3.1 and 4.1 (Option B) | Optional: create `lab_3.1_grader.sh`, `lab_4.1_grader.sh` if implementers want Standard Code Test instead of LLM Rubric. |
+| **Phase 3** | Bash graders for Lab 3.1 and 5.1 (Option B) | Optional: create `lab_3.1_grader.sh`, `lab_5.1_grader.sh` if implementers want Standard Code Test instead of LLM Rubric. |
 | **Phase 4** | Level 3 chapter in `.guides/content` | **Done.** Chapter-1-3---Slot-Collection-a4b5 with Units 0–8, all content/lab pages pasted from level3. |
 | **Phase 4** | Codio implementation guide | **Done.** `CODIO_IMPLEMENTATION_GUIDE.md` shortened to implementer-only; Level 3 added to `.guides/CODIO_IMPLEMENTATION_OVERVIEW.md`. |
 

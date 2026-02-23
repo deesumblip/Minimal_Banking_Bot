@@ -1,4 +1,4 @@
-﻿# Minimal Banking Bot - Rasa Pro + CALM Learning Course
+# Minimal Banking Bot - Rasa Pro + CALM Learning Course
 
 A progressive, hands-on course for learning Rasa Pro + CALM from absolute beginner to advanced tool calling.
 
@@ -114,7 +114,7 @@ Each level is a **complete, runnable bot** that you can train and test independe
 - How to handle placeholder values
 
 **Files:**
-- `actions/action_check_balance_simple.py` - Action that reads slots
+- `actions/action_check_balance_simple.py` - You write this in Lab 4.1 (reads slots and handles placeholders)
 - `domain/basics.yml` - Adds `slots:` section
 - `data/basics/check_balance.yml` - Flow with slot collection
 

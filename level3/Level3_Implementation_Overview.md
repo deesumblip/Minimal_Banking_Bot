@@ -7,7 +7,7 @@ This document provides implementation guidance for **Level 3: Slot Collection** 
 **Key goals**:
 - Use the **same conventions** as Level 1 and Level 2 (venv in project root, Codio vs local, Rasa Inspect tab)
 - Preserve student tutorial content in separate `Level3_Unit*` and `Level3_Lab*` files
-- Support auto-grading for key labs (e.g. Lab 3.1, Lab 4.1, Lab 6.1) via grader scripts
+- Support auto-grading for key labs (e.g. Lab 3.1, Lab 5.1, Lab 6.1) via grader scripts
 - Single source of truth: content lives in `level3/*.md`; Codio `.guides` content is copied from there
 
 ### Virtual Environment (Critical)
@@ -30,24 +30,24 @@ This document provides implementation guidance for **Level 3: Slot Collection** 
 - `Level3_Unit1_Content_1.1_*.md` … `1.3_*.md`
 - `Level3_Unit2_Content_2.1_*.md`, `2.2_*.md`, `2.3_Test-Your-Knowledge.md`
 - `Level3_Unit3_Content_3.1_*.md`
-- `Level3_Unit4_Content_4.1_*.md` … `4.3_*.md`
-- `Level3_Unit5_Content_5.1_*.md`, `5.2_*.md`
+- `Level3_Unit4_Content_4.1_*.md`, `4.2_*.md`
+- `Level3_Unit5_Content_5.1_*.md` … `5.3_*.md`
 - `Level3_Unit6_Content_6.1_*.md` … `6.4_*.md`
 - `Level3_Unit7_Content_7.1_*.md` … `7.3_*.md`
 - `Level3_Unit8_Content_8.1_*.md` … `8.5_*.md`
 
 ### Lab Content (Student-facing)
 - `Level3_Lab3.1_Content.md` – Defining a slot in the domain (graded)
-- `Level3_Lab4.1_Content.md` – Creating a flow with slot collection (graded)
-- `Level3_Lab5.1_Content.md` – Exploring actions with slots (ungraded)
+- `Level3_Lab4.1_Content.md` – Exploring actions with slots (ungraded)
+- `Level3_Lab5.1_Content.md` – Creating a flow with slot collection (graded)
 - `Level3_Lab6.1_Content.md` – Training and testing with slots (graded)
 - `Level3_Lab6.2_Content.md` – Testing slot collection in Inspector (ungraded)
 - `Level3_Lab7.1_Content.md` – Complete bot walkthrough (ungraded)
 
 ### Assessment Setup (Implementers)
 - `Level3_Lab3.1_Assessment_Setup.md` – Lab 3.1 (LLM Rubric or Bash)
-- `Level3_Lab4.1_Assessment_Setup.md` – Lab 4.1 (LLM Rubric or Bash)
-- `Level3_Lab5.1_Assessment_Setup.md` – No assessment
+- `Level3_Lab4.1_Assessment_Setup.md` – No assessment
+- `Level3_Lab5.1_Assessment_Setup.md` – Lab 5.1 (LLM Rubric or Bash)
 - `Level3_Lab6.1_Assessment_Setup.md` – Lab 6.1 Python grader
 - `Level3_Lab6.2_Assessment_Setup.md` – No assessment
 - `Level3_Lab7.1_Assessment_Setup.md` – No assessment
@@ -83,7 +83,7 @@ level3/
 
 ### Grader Scripts
 - Store in `.guides/assessments/level3_graders/`
-- **Lab 3.1 & 4.1**: Option A = LLM Rubric (use `lab_3.1_solution_reference.md`, `lab_4.1_solution_reference.md`). Option B = Standard Code Test: `lab_3.1_grader.sh`, `lab_4.1_grader.sh` (create if offering Bash option).
+- **Lab 3.1 & 5.1**: Option A = LLM Rubric (use `lab_3.1_solution_reference.md`, `lab_5.1_solution_reference.md`). Option B = Standard Code Test: `lab_3.1_grader.sh`, `lab_5.1_grader.sh` (create if offering Bash option).
 - **Lab 6.1**: `lab_6.1_grader.py` (Python); COMMAND: `python3 .../lab_6.1_grader.py`
 - **Working Directory**: `/home/codio/workspace` (project root)
 - **Success output**: Script must print a line containing `PASS` or `Successfully passed!` so Codio's expected-output match works.

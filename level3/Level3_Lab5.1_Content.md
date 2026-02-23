@@ -1,54 +1,37 @@
-# Lab 5.1: Exploring Actions with Slots
+# Lab 5.1: Creating a Flow with Slot Collection
 
-Your goal is to see how the provided action uses the `account` slot and handles placeholders.
+You have already defined the slot and ask response in the domain (Lab 3.1) and **written** the action (Lab 4.1). Now create the flow that ties them together: the `check_balance.yml` flow that collects the `account` slot and then runs `action_check_balance_simple`.
 
-The action file `action_check_balance_simple.py` is already in `level3/actions/`. You are not writing code. You are exploring how it works.
+## Part 1: In Codio
 
----
+1. **Terminal.** From the project root, run `source .venv/bin/activate`, then `cd level3`.
 
-## Steps
+2. **Create** the file `data/basics/check_balance.yml` in the `level3` folder.
 
-1. **Open** `level3/actions/action_check_balance_simple.py` in your editor.
+3. **Add** the following flow:
 
-2. **Find** where it reads the slot, such as `account = tracker.get_slot("account")` or similar code.
+```yaml
+flows:
+  check_balance:
+    name: check a balance (demo)
+    description: |
+      Demonstrates a flow with slot collection.
+      The bot will ask for an account number if not provided,
+      then call the action to check the balance.
+    steps:
+      - collect: account
+        description: "account number"
+      - action: action_check_balance_simple
+```
 
-3. **Find** where it checks for placeholders like "account number" or "<missing>" and re-prompts with `utter_ask_account` when the value is not real.
+4. **Verify.** The file is in `data/basics/`, and the flow has `name`, `description`, and `steps` with a first step `collect: account` and a second step `action: action_check_balance_simple`.
 
-4. **Optional.** After Lab 6.1, train and run Inspector. Trigger the check_balance flow and watch the action use the slot and re-ask when the LLM extracts a placeholder.
+Run the assessment when done.
 
-You're done when you understand how the action reads the slot and handles missing or placeholder values. This lab has no graded assessment.
+## Part 2: Running locally
 
----
+1. From the project root, activate the venv, then `cd level3`.
+2. Create `level3/data/basics/check_balance.yml` with the flow structure above.
+3. Verify as in Part 1.
 
-## Check Your Knowledge
-
-**1. How does the action read the account slot?**
-
-a) `account = domain.get_slot("account")`  
-b) `account = tracker.get_slot("account")`  
-c) `account = dispatcher.get_slot("account")`  
-d) `account = flow.collect("account")`  
-
-**2. When the slot contains "account number" or "<missing>", what does the action do?**
-
-a) Uses it as the account number and shows a balance  
-b) Re-prompts with `utter_ask_account` and does not show a balance  
-c) Returns an error and crashes  
-d) Ignores it and continues to the next step  
-
-**3. What is the purpose of the `placeholder_values` list?**
-
-a) To store valid account numbers for testing  
-b) To detect values that are not real account numbers so the bot can re-ask  
-c) To define the slot type in the domain  
-d) To set default values when the slot is empty  
-
----
-
-### Answer Key
-
-| Q | Answer | Brief explanation |
-|---|--------|-------------------|
-| 1 | **b** | The action uses `tracker.get_slot("account")` to read the slot from conversation memory. |
-| 2 | **b** | Placeholder values trigger a re-prompt with `utter_ask_account`; the action returns without showing a balance. |
-| 3 | **b** | `placeholder_values` lists strings that the LLM might incorrectly extract instead of a real account number; the action checks for these to re-ask. |
+You're done when `data/basics/check_balance.yml` exists with a flow that has `collect: account` and `action: action_check_balance_simple`.

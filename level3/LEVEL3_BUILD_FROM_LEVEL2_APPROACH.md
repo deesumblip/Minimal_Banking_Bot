@@ -13,7 +13,7 @@ Students should **start from their Level 2 bot as the baseline** and build Level
 **Change:** Make the **level3/** starter a **true copy of the Level 2 end state**:
 
 - **level3/domain/basics.yml** — Match Level 2: same responses (include `utter_goodbye`), same actions list (`action_bank_hours`, `action_holiday_hours`). **Do not** pre-add `slots:`, `utter_ask_account`, or `action_check_balance_simple`. The student adds those in the labs.
-- **level3/data/basics/** — Same flow files as Level 2: `greet.yml`, `help.yml`, `contact.yml`, `hours.yml`, `holiday_hours.yml`. **Do not** ship `check_balance.yml`; the student creates it in Lab 4.1.
+- **level3/data/basics/** — Same flow files as Level 2: `greet.yml`, `help.yml`, `contact.yml`, `hours.yml`, `holiday_hours.yml`. **Do not** ship `check_balance.yml`; the student creates it in Lab 5.1.
 - **level3/actions/** — Same as Level 2: `action_bank_hours.py`, `action_holiday_hours.py` (and `__init__.py`). **Add** `action_check_balance_simple.py` as a **provided file** (student does not write it, but they **do** register it in the domain in Lab 3.1).
 - **level3/config.yml** — Can stay as-is (e.g. `assistant_id: level3-bot`). Student does not edit it.
 
@@ -51,7 +51,7 @@ So the student performs all “domain and wiring” changes for the new action; 
 
 ---
 
-## 4. Lab 4.1: Student creates the flow (unchanged)
+## 4. Lab 5.1: Student creates the flow (unchanged)
 
 No change to the lab idea: student **creates** `data/basics/check_balance.yml` with the `check_balance` flow (`collect: account`, then `action_check_balance_simple`). They are building the only new flow.
 
@@ -62,7 +62,7 @@ No change to the lab idea: student **creates** `data/basics/check_balance.yml` w
 - **0.1** — Keep “what you built in Level 2.” Optionally add: “Level 3 is that same bot in the **level3** folder; you’ll add memory (slots) and a new flow.”
 - **0.2** — Under “What’s new in Level 3,” state clearly:
   - “You’ll **add** in Lab 3.1: `slots:` and `utter_ask_account`, and you’ll **register** the new action `action_check_balance_simple` (the file is provided).”
-  - “You’ll **create** in Lab 4.1: `data/basics/check_balance.yml`.”
+  - “You’ll **create** in Lab 5.1: `data/basics/check_balance.yml`.”
   - “Everything else is your Level 2 bot.”
 
 ---
@@ -74,7 +74,7 @@ No change to the lab idea: student **creates** `data/basics/check_balance.yml` w
 | Level 3 starter = copy of Level 2 | Provided (repo) | level3/ |
 | Add `slots:`, `utter_ask_account`, register `action_check_balance_simple` | **Student** | Lab 3.1 |
 | Use provided `action_check_balance_simple.py` | Provided (repo) | level3/actions/ |
-| Create `check_balance.yml` | **Student** | Lab 4.1 |
+| Create `check_balance.yml` | **Student** | Lab 5.1 |
 
 No other project files are changed for them; they only add what the labs specify.
 
@@ -83,9 +83,9 @@ No other project files are changed for them; they only add what the labs specify
 ## 7. Repo / file changes checklist
 
 - [ ] **level3/domain/basics.yml** — Replace with Level 2 domain (include `utter_goodbye`, `action_bank_hours`, `action_holiday_hours`). Remove any pre-added `slots:`, `utter_ask_account`, and `action_check_balance_simple` from `actions:`.
-- [ ] **level3/data/basics/** — Ensure same flows as Level 2 (include `holiday_hours.yml`). Remove `check_balance.yml` from repo (student creates it in Lab 4.1).
+- [ ] **level3/data/basics/** — Ensure same flows as Level 2 (include `holiday_hours.yml`). Remove `check_balance.yml` from repo (student creates it in Lab 5.1).
 - [ ] **level3/actions/** — Ensure `action_bank_hours.py` and `action_holiday_hours.py` exist (copy from Level 2 if needed). Keep `action_check_balance_simple.py` as provided.
-- [ ] **Unit 0** — Add or expand “Level 3 setup” so it’s explicit: Level 3 = Level 2 (in level3/) + what you add in Labs 3.1 and 4.1.
+- [ ] **Unit 0** — Add or expand “Level 3 setup” so it’s explicit: Level 3 = Level 2 (in level3/) + what you add in Labs 3.1, 4.1, and 5.1.
 - [ ] **Lab 3.1** — Add step: “Add `action_check_balance_simple` to the `actions:` list in the domain. The file is already in `level3/actions/`.”
 - [ ] **Lab 3.1 assessment** — Require `action_check_balance_simple` in `actions:` (and slots + utter_ask_account).
 - [ ] **0.2 “What’s new”** — Say student **adds** slots and ask response and **registers** the new action (file provided); student **creates** check_balance flow.

@@ -1,8 +1,6 @@
-# 4.2 How Collection Works
+# 5.2 How Collection Works
 
-You've seen the syntax. Here's what actually happens when the flow runs.
-
-**When the flow runs**
+As in Unit 1.3, when the flow runs:
 
 1. Flow starts at Step 1, `collect: account`.
 2. Rasa checks whether the `account` slot already has a value.

@@ -17,7 +17,7 @@ The **level3** folder is set up as a copy of your Level 2 bot. You add the follo
 
 **What stays the same:** All Level 2 responses, flows, and actions remain.
 
-**What you add:** In Lab 3.1 you add the `slots:` section (with `account` slot), the `utter_ask_account` response, and you register the new action `action_check_balance_simple` in the domain (the action file is provided). In Lab 4.1 you create the flow `data/basics/check_balance.yml`. Your existing Level 2 banking bot continues to work; Level 3 adds memory (slots) so the bot can remember information.
+**What you add:** In Lab 3.1 you add the `slots:` section (with `account` slot), the `utter_ask_account` response, and you register the new action `action_check_balance_simple` in the domain (the action file is provided). In Lab 4.1 you explore how that action uses the slot. In Lab 5.1 you create the flow `data/basics/check_balance.yml`. Your existing Level 2 banking bot continues to work; Level 3 adds memory (slots) so the bot can remember information.
 
 ---
 

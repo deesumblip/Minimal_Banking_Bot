@@ -5,7 +5,7 @@
 **Title**: Level 3: Slot Collection  
 **Description**: A Complete Guide to Adding Memory (Slots) to Your Banking Bot  
 **Prerequisites**: Level 1 and Level 2 must be completed  
-**Learning Objective**: Students learn to define slots, collect slot values in flows, and read slots in actions so the bot can remember and use user-provided information.
+**Learning Objective**: Students learn to define slots, read slots in actions, and collect slot values in flows so the bot can remember and use user-provided information. Labs are ordered so that implementation is chronological: domain (Lab 3.1) → action (Lab 4.1) → flow (Lab 5.1).
 
 ---
 
@@ -83,41 +83,45 @@
 
 ---
 
-### Unit 4: Collecting Slots in Flows
-**Type**: Lab (with Assessment)  
-**Assessment**: Lab 4.1 - Creating a Flow with Slot Collection (suggested points: 6–8)
+### Unit 4: Reading Slots in Actions
+**Type**: Content + Lab (no assessment)  
+**Assessment**: None. Lab 4.1 – Exploring Actions with Slots (ungraded).
+
+**Placement**: This unit comes **before** Unit 5 so students understand how the action uses the slot before they create the flow that runs it.
 
 **Sections**:
-- 4.1 The Collect Step
+- 4.1 Accessing Slots in Actions
+  - `tracker.get_slot("slot_name")`
+- 4.2 Placeholder Handling
+  - Check for None, placeholders; re-prompt with utter_ask_account
+
+**Lab 4.1**: Explore `action_check_balance_simple.py` (provided); see how it reads the slot and handles placeholders. No graded assessment.
+
+**Key Concepts**: Tracker, get_slot, placeholder handling
+
+---
+
+### Unit 5: Collecting Slots in Flows
+**Type**: Lab (with Assessment)  
+**Assessment**: Lab 5.1 - Creating a Flow with Slot Collection (suggested points: 6–8)
+
+**Placement**: This unit comes **after** Unit 4 so students create the flow after exploring the action.
+
+**Sections**:
+- 5.1 The Collect Step
   - `collect:` syntax and `description:`; Rasa asks when slot is empty
-- 4.2 How Collection Works
+- 5.2 How Collection Works
   - Runtime: ask if empty, store, then action; key point (only asks when empty)
-- 4.3 Creating the Flow
-  - What you'll build (collect + action); pointer to Lab 4.1 for steps
-- Lab 4.1: Creating a Flow with Slot Collection
+- 5.3 Creating the Flow
+  - What you'll build (collect + action); pointer to Lab 5.1 for steps
+- Lab 5.1: Creating a Flow with Slot Collection
   - Single place for full step-by-step and YAML
 
 **Key Concepts**: collect step, flow with collect
 
-**Assessment Checks** (Lab 4.1):
+**Assessment Checks** (Lab 5.1):
 - `data/basics/check_balance.yml` exists
 - Flow has `collect: account` and `action: action_check_balance_simple`
-
----
-
-### Unit 5: Reading Slots in Actions
-**Type**: Content + Lab (no assessment)  
-**Assessment**: None. Lab 5.1 – Exploring Actions with Slots (ungraded).
-
-**Sections**:
-- 5.1 Accessing Slots in Actions
-  - `tracker.get_slot("slot_name")`
-- 5.2 Placeholder Handling
-  - Check for None, placeholders; re-prompt with utter_ask_account
-
-**Lab 5.1**: Explore `action_check_balance_simple.py` (provided); see how it reads the slot and handles placeholders. No graded assessment.
-
-**Key Concepts**: Tracker, get_slot, placeholder handling
 
 ---
 
@@ -173,7 +177,7 @@
 | Unit | Lab | Points | Type | Grader Script |
 |------|-----|--------|------|---------------|
 | Unit 3 | Lab 3.1 | 8 | LLM Rubric (recommended) or Standard Code Test | `lab_3.1_solution_reference.md` / `lab_3.1_grader.sh` |
-| Unit 4 | Lab 4.1 | 8 | LLM Rubric (recommended) or Standard Code Test | `lab_4.1_solution_reference.md` / `lab_4.1_grader.sh` |
+| Unit 5 | Lab 5.1 | 8 | LLM Rubric (recommended) or Standard Code Test | `lab_5.1_solution_reference.md` / `lab_5.1_grader.sh` |
 | Unit 6 | Lab 6.1 | 12 | Standard Code Test (Python) | `lab_6.1_grader.py` |
 
 **Total Assessment Points**: ~24–28 (adjust per course design)
@@ -197,8 +201,8 @@
 
 ### Lab Content + Assessment Setup
 - `Level3_Lab3.1_Content.md` / `Level3_Lab3.1_Assessment_Setup.md` (graded)
-- `Level3_Lab4.1_Content.md` / `Level3_Lab4.1_Assessment_Setup.md` (graded)
-- `Level3_Lab5.1_Content.md` / `Level3_Lab5.1_Assessment_Setup.md` (ungraded, exploration)
+- `Level3_Lab4.1_Content.md` / `Level3_Lab4.1_Assessment_Setup.md` (ungraded, exploration)
+- `Level3_Lab5.1_Content.md` / `Level3_Lab5.1_Assessment_Setup.md` (graded)
 - `Level3_Lab6.1_Content.md` / `Level3_Lab6.1_Assessment_Setup.md` (graded)
 - `Level3_Lab6.2_Content.md` / `Level3_Lab6.2_Assessment_Setup.md` (ungraded, testing)
 - `Level3_Lab7.1_Content.md` / `Level3_Lab7.1_Assessment_Setup.md` (ungraded, walkthrough)

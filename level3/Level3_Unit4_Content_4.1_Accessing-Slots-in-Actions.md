@@ -1,4 +1,4 @@
-# 5.1 Accessing Slots in Actions
+# 4.1 Accessing Slots in Actions
 
 To use slot values in your actions, you read them from the `tracker` parameter.
 
@@ -14,4 +14,4 @@ def run(self, dispatcher, tracker, domain):
 
 Slots can be `None` if not set yet, so always check before using them.
 
-In **Lab 5.1** you'll explore the real action file (`action_check_balance_simple.py`) to see how it reads the slot and handles placeholders.
+In **Lab 4.1** you'll **write** this action in `action_check_balance_simple.py`. In the next unit you will create the flow that collects the slot and runs this action.

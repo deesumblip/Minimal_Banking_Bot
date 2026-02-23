@@ -1,5 +1,3 @@
-# 5.2 Placeholder Handling
-
 You've seen how to read a slot. Sometimes the LLM extracts generic text like "account number" instead of the actual number. In `action_check_balance_simple.py` the code does the following.
 
 1. Read the slot with `account = tracker.get_slot("account") or "<missing>"`.
@@ -9,4 +7,4 @@ You've seen how to read a slot. Sometimes the LLM extracts generic text like "ac
 
 Always validate slot values before using them in logic or messages.
 
-In **Lab 5.1** you'll open `action_check_balance_simple.py` and see this in the code. That lab has no graded assessment.
+In **Lab 4.1** you'll **write** `action_check_balance_simple.py` with this logic. That lab has no graded assessment. In the next unit you will create the flow that collects the slot and runs this action.

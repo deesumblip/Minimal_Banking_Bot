@@ -3,7 +3,7 @@
 - Add the `account` slot and `utter_ask_account` response to your Level 3 domain
 - Register the new action `action_check_balance_simple` so the bot can collect and remember an account number
 
-The action file is already in `level3/actions/`; you will add it to the domain here.
+You will add the action **name** to the domain here; you will **create the action file** in Lab 4.1.
 
 ## Step-by-Step Instructions
 
@@ -40,7 +40,7 @@ responses:
 **Step 4.** Register the new action.
 
 - Add `action_check_balance_simple` to the `actions:` list in the domain
-- The file `actions/action_check_balance_simple.py` is already in the project; you are only adding its name so Rasa can use it
+- You will create the file `action_check_balance_simple.py` in Lab 4.1; here you only add its name so Rasa can use it
 - Under `actions:` add a line so the list includes both your Level 2 actions and the new one
 
 Example:

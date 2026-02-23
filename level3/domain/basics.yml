@@ -2,7 +2,7 @@
 #
 # This folder is a copy of your Level 2 bot. In Lab 3.1 you will add:
 # - slots: section (with account) and utter_ask_account response
-# - action_check_balance_simple to the actions list (the .py file is already in level3/actions/)
+# - action_check_balance_simple to the actions list (you will create the .py file in Lab 4.1)
 
 version: "3.1"
 

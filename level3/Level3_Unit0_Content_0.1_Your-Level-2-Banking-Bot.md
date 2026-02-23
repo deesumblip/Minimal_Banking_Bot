@@ -7,7 +7,7 @@ Before we add slots—the bot's memory—here is a quick recap of what you built
 The **level3** folder is set up as a copy of your Level 2 bot. In this chapter you will:
 
 - Add slots and an ask response in the domain
-- Register the new action (the action file is already in the project)
+- Register the new action name in the domain (you will create the action file in Lab 4.1)
 - Create the check_balance flow
 
 Everything else is your Level 2 content.
@@ -32,7 +32,7 @@ Everything else is your Level 2 content.
 
 - `action_bank_hours.py`
 - If you built it in Level 2: `action_holiday_hours.py`
-- **Provided for Level 3:** `action_check_balance_simple.py` — you will register it in the domain in Lab 3.1
+- **Level 3:** In Lab 3.1 you register **action_check_balance_simple** in the domain; in Lab 4.1 you will **write** the file `action_check_balance_simple.py`.
 
 ### System and config
 
