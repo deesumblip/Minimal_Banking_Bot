@@ -1,5 +1,3 @@
-# 2.1 Slot Types
-
 Slots can have different types. For Level 3, we use the simplest type: `text`.
 
 ## Text Slots

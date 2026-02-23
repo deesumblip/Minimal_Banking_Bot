@@ -1,5 +1,3 @@
-# Lab 4.1: Writing the Action That Uses the Slot
-
 Your goal is to **create** the action file that reads the `account` slot and handles placeholder values. The domain already lists `action_check_balance_simple` from Lab 3.1; here you write the Python file so the action exists.
 
 ---

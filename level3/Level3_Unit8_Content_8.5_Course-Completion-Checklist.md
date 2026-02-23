@@ -1,5 +1,3 @@
-# 8.5 Course Completion Checklist
-
 Before moving to Level 4, ensure you can:
 
 - Explain what a slot is and how it differs from a response or action

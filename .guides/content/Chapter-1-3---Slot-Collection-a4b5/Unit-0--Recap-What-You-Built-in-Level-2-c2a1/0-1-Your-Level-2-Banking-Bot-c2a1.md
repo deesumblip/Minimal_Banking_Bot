@@ -1,5 +1,3 @@
-# 0.1 Your Level 2 Banking Bot
-
 Before we add slots—the bot's memory—here is a quick recap of what you built in Level 2. All of this remains unchanged. Level 3 builds on top of it.
 
 ## Level 3 Setup

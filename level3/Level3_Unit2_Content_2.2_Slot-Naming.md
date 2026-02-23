@@ -1,5 +1,3 @@
-# 2.2 Slot Naming
-
 **Good slot names**:
 - `account` — Clear and descriptive
 - `user_name` — Descriptive

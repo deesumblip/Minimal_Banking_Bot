@@ -1,5 +1,3 @@
-# 8.2 What You've Learned
-
 ## Key Concepts
 
 1. **Slots.** Memory variables that store conversation information.

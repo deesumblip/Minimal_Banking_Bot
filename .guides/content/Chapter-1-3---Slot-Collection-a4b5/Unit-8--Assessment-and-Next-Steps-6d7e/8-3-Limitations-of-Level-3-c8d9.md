@@ -1,5 +1,3 @@
-# 8.3 Limitations of Level 3
-
 ## What Level 3 Cannot Do
 
 1. **Collect Multiple Slots Efficiently.** You can only collect one slot at a time easily. For example "Transfer money" needs amount, recipient, and account. Level 4 adds multiple slot collection.

@@ -1,5 +1,3 @@
-# Lab 7.1: Complete Bot Walkthrough
-
 Your goal is to see how all pieces (Level 1, 2, and 3) work together in one conversation.
 
 ---

@@ -1,5 +1,3 @@
-# 6.1 Training with Slots
-
 Training with slots is similar to Level 2. Rasa now also processes slot definitions.
 
 ## Training Command

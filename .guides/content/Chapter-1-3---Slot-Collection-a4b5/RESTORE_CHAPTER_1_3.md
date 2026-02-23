@@ -11,7 +11,9 @@ If you've deleted Chapter 1.3 from the guide or the workspace, sync it back from
   git fetch origin
   git checkout origin/main -- .guides/content/Chapter-1-3---Slot-Collection-a4b5
   ```
-  That restores the entire `Chapter-1-3---Slot-Collection-a4b5` folder (and all units/pages) from the current `main` branch without touching the rest of the project.
+  That restores the entire `Chapter-1-3---Slot-Collection-a4b5` folder (and all **9 unit subfolders** and their `.json`/`.md` files) from the current `main` branch without touching the rest of the project.
+
+- **If the chapter folder exists but has no unit folders inside:** the same `git checkout` command above will populate it from the repo. After running it, you should see `Unit-0--...` through `Unit-8--...` under `Chapter-1-3---Slot-Collection-a4b5`.
 
 - Or do a full refresh from Git:
   ```bash

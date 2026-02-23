@@ -1,5 +1,3 @@
-# 5.2 How Collection Works
-
 As in Unit 1.3, when the flow runs:
 
 1. Flow starts at Step 1, `collect: account`.
