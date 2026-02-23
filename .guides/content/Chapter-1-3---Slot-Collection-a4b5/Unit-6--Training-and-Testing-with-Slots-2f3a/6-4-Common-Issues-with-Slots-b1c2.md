@@ -1,27 +1,15 @@
-## Issue: Slot Not Collected
+## Issue. Slot Not Collected
 
-**Symptoms**: Bot doesn't ask for slot value
+**Symptoms.** The bot doesn't ask for the slot value.
 
-**Possible causes**:
-1. Slot not defined in domain
-2. `collect:` step missing or incorrect
-3. `utter_ask_*` response missing
+**Possible causes.** The slot is not defined in the domain. The `collect:` step is missing or incorrect. The `utter_ask_*` response is missing.
 
-**Solutions**:
-1. Check `slots:` section in domain
-2. Verify `collect: account` step exists in flow
-3. Ensure `utter_ask_account` response exists
+**Solutions.** Check the `slots:` section in the domain. Verify the flow has a `collect: account` step. Ensure the `utter_ask_account` response exists.
 
-## Issue: Slot Always None in Action
+## Issue. Slot Always None in Action
 
-**Symptoms**: Action reads slot but gets `None`
+**Symptoms.** The action reads the slot but gets `None`.
 
-**Possible causes**:
-1. Slot not collected before action runs
-2. User didn't provide value
-3. Slot name mismatch
+**Possible causes.** The slot was not collected before the action runs. The user didn't provide a value. There is a slot name mismatch.
 
-**Solutions**:
-1. Ensure `collect:` step comes before action in flow
-2. Check user actually provided a value
-3. Verify slot name matches exactly (case-sensitive)
+**Solutions.** Ensure the `collect:` step comes before the action in the flow. Check that the user actually provided a value. Verify the slot name matches exactly (case-sensitive).

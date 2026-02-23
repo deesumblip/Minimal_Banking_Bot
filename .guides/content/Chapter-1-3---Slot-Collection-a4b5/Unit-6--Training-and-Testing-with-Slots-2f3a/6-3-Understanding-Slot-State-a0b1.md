@@ -1,6 +1,3 @@
-In Inspector, you can see slot values in the debug panel:
-- **Before collection**: `account: null`
-- **After user provides**: `account: "1234"`
-- **In action**: Action can read `account: "1234"`
+In Inspector you can see slot values in the debug panel. Before collection you might see `account: null`. After the user provides a value you'll see `account: "1234"`. The action can read that same value when it runs.
 
-**Key point**: Slots persist throughout the conversation until the session ends.
+Slots persist throughout the conversation until the session ends.
