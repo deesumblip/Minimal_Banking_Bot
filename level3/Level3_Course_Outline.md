@@ -89,11 +89,13 @@
 
 **Sections**:
 - 4.1 The Collect Step
-  - `collect: slot_name` and `description:`
-- 4.2 Creating a Flow with Slot Collection
-  - Step-by-step: `check_balance.yml`
-- 4.3 How Collection Works
-  - Flow: ask if empty, store, then action
+  - `collect:` syntax and `description:`; Rasa asks when slot is empty
+- 4.2 How Collection Works
+  - Runtime: ask if empty, store, then action; key point (only asks when empty)
+- 4.3 Creating the Flow
+  - What you'll build (collect + action); pointer to Lab 4.1 for steps
+- Lab 4.1: Creating a Flow with Slot Collection
+  - Single place for full step-by-step and YAML
 
 **Key Concepts**: collect step, flow with collect
 

@@ -1,9 +1,5 @@
-# 4.3 How Collection Works
+# 4.3 Creating the Flow
 
-- Flow starts → Step 1: `collect: account`
-- Does `account` slot have a value?
-  - **No** → Bot asks: "What is your account number?" → User provides → Bot stores value in slot → Flow continues to Step 2
-  - **Yes** → Skip asking; use existing value → Flow continues to Step 2
-- Step 2: `action_check_balance_simple` runs and reads the slot.
+Now that you've seen how collection works, you'll learn how to build it. In **Lab 4.1** you'll create the `check_balance` flow. That flow will do two things. It will collect the `account` slot so the bot asks for it when it's missing. Then it will run the action `action_check_balance_simple`, which reads the slot and returns a balance.
 
-**Key point**: The bot only asks if the slot is empty. If it already has a value, it uses that value immediately.
+You already defined the `account` slot and `utter_ask_account` in Lab 3.1. The action is provided in the project. In Lab 4.1 you'll add the flow file and follow the steps.

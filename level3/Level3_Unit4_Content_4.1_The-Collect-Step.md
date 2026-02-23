@@ -1,8 +1,8 @@
 # 4.1 The Collect Step
 
-The `collect:` step in a flow tells Rasa: "Get this slot value before continuing."
+A flow can ask for information before running an action. You'll set this up with a **collect step**. This step tells Rasa to get this slot value before continuing. If the slot is empty, Rasa asks the user, using the `utter_ask_*` response you defined in the domain. Once the slot has a value, the flow continues.
 
-## Collect Step Structure
+## Syntax
 
 ```yaml
 steps:
@@ -10,5 +10,5 @@ steps:
     description: "account number"
 ```
 
-- **`collect: account`** — Which slot to collect
-- **`description:`** — Helps the LLM understand what to extract (optional but recommended)
+- **`collect: account`**. The slot to collect.
+- **`description:`**. Helps the LLM understand what to extract. Optional, but recommended.
