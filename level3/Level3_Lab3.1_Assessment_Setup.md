@@ -2,9 +2,9 @@
 
 ## Guide Content (For Students)
 
-**Placement**: This lab follows Unit 3: Defining Slots in the Domain.
+**Placement.** This lab follows Unit 3: Defining Slots in the Domain.
 
-**Task**: Add `slots:` with `account` (type: text) and `utter_ask_account` response to `domain/basics.yml` in the `level3` folder. Run the assessment when done.
+**Task.** In `domain/basics.yml` in the `level3` folder, add the `slots:` section with `account` (type text), the `utter_ask_account` response, and register `action_check_balance_simple` in the `actions:` list. Run the assessment when done.
 
 ---
 
@@ -12,7 +12,7 @@
 
 ### Overview
 
-This assessment verifies that the student has added the `slots:` section with an `account` slot and the `utter_ask_account` response to `level3/domain/basics.yml`.
+This assessment verifies that the student has added the `slots:` section with an `account` slot, the `utter_ask_account` response, and `action_check_balance_simple` in the `actions:` list in `level3/domain/basics.yml`.
 
 ### Assessment Type
 
@@ -24,11 +24,11 @@ This assessment verifies that the student has added the `slots:` section with an
 
 1. **Navigate** to the Lab 3.1 section in the Codio Guide Editor (Level 3).
 
-2. **Add LLM Rubric Assessment** – Add assessment → **LLM Rubric** / **Autograde**.
+2. **Add LLM Rubric Assessment.** Add assessment, then **LLM Rubric** / **Autograde**.
 
 3. **Configure** (see **Grading** tab below).
 
-4. **Test**: Run with a complete domain (pass), with slots missing (fail with feedback), with utter_ask_account missing (fail with feedback).
+4. **Test.** Run with a complete domain (slots, utter_ask_account, action_check_balance_simple in actions) for pass; with any of these missing for fail with feedback.
 
 ---
 
@@ -36,14 +36,14 @@ This assessment verifies that the student has added the `slots:` section with an
 
 | Option | Set to |
 |--------|--------|
-| **Total Points** | **8** |
+| **Total Points** | **10** |
 | **Instructor Provided Solution File** | `.guides/assessments/level3_graders/lab_3.1_solution_reference.md` (or `/home/codio/workspace/.guides/assessments/level3_graders/lab_3.1_solution_reference.md` if Codio requires absolute path) |
 | **Defined Number of Attempts** | **Off** (leave toggle off) |
 | **Show Rationale to Student** | **After [1] attempts** (select that radio, leave the number as 1) |
 
 ---
 
-**Add Rubric** – Click **ADD RUBRIC** and add the following four criteria. For each criterion, paste the text below into the rubric description field and set the points as indicated. Enable **partial credit** for the assessment.
+**Add Rubric** – Click **ADD RUBRIC** and add the following five criteria. For each criterion, paste the text below into the criterion description field and set the points as indicated. Enable **partial credit** for the assessment.
 
 **Rubric 1** — Points: **2**  
 Copy and paste this into the criterion description:
@@ -70,6 +70,13 @@ Under "responses:" the student added "utter_ask_account" with at least one messa
 Copy and paste this into the criterion description:
 
 ```
+Under "actions:" the student added "action_check_balance_simple" to the list (e.g. "- action_check_balance_simple"). Award full points if action_check_balance_simple appears in the actions section; zero if missing.
+```
+
+**Rubric 5** — Points: **2**  
+Copy and paste this into the criterion description:
+
+```
 The domain file is valid YAML and existing Level 2 content (other responses, actions) is preserved. No required sections were removed. Award full points if file is valid and structure is intact; partial if minor issues; zero if file is invalid or critical content was deleted.
 ```
 
@@ -84,14 +91,15 @@ Configure the assessment so the LLM can read:
 
 ### Option B: Standard Code Test (Bash script)
 
-**Grader script location**:
+**Grader script location:**
+
 ```
 .guides/assessments/level3_graders/lab_3.1_grader.sh
 ```
 
-**Grader script** – Run from **workspace root**: activate venv, then `cd level3`. Check: `domain/basics.yml` exists; file contains `slots:` section; `account` slot present (type: text); `utter_ask_account` present under responses. Print `PASS` / `Successfully passed!` on full score; `FAIL` and exit 1 on failure. Suggested points: 6–8 total.
+**Grader script.** Run from workspace root: activate venv, then `cd level3`. Check that `domain/basics.yml` exists; that it contains a `slots:` section; that the `account` slot is present (type text); that `utter_ask_account` is present under responses; and that `action_check_balance_simple` is present under the `actions:` section. Print `PASS` / `Successfully passed!` on full score; print `FAIL` and exit 1 on failure. Suggested total points: 8–10.
 
-**Codio configuration** – Add Code Test → Standard Code Test.
+**Codio configuration.** Add Code Test, then Standard Code Test.
 
 - COMMAND: `bash /home/codio/workspace/.guides/assessments/level3_graders/lab_3.1_grader.sh`
 - Working Directory: `/home/codio/workspace`

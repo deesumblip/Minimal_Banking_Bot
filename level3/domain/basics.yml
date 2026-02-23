@@ -1,9 +1,8 @@
 ## Level 3: Responses + Actions + Slots
 #
-# This domain adds slots (memory) to Level 2.
-# - Responses (predefined bot messages)
-# - Actions (custom Python code)
-# - Slots (conversation memory). In Lab 3.1 you add a slots: section and the utter_ask_account response.
+# This folder is a copy of your Level 2 bot. In Lab 3.1 you will add:
+# - slots: section (with account) and utter_ask_account response
+# - action_check_balance_simple to the actions list (the .py file is already in level3/actions/)
 
 version: "3.1"
 
@@ -28,6 +27,10 @@ responses:
       metadata:
         rephrase: True
 
+  utter_goodbye:
+    - text: "Goodbye! Have a great day!"
+      metadata:
+        rephrase: True
+
 actions:
   - action_bank_hours
-  - action_check_balance_simple

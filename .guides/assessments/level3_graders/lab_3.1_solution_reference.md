@@ -27,6 +27,16 @@ responses:
         rephrase: True
 ```
 
+4. **action_check_balance_simple in actions** – Under `actions:`, add `action_check_balance_simple` to the list so Rasa can use the provided action. Example (Level 2 actions plus the new one):
+
+```yaml
+actions:
+  - action_bank_hours
+  - action_check_balance_simple
+```
+
+If the student's domain already lists other actions (e.g. action_holiday_hours), those should remain; the list must include `action_check_balance_simple`.
+
 ---
 
 ## Rubric summary for autograde
@@ -34,4 +44,5 @@ responses:
 - **slots: section:** Present in domain/basics.yml with valid YAML.
 - **account slot:** Present under slots with type text (or equivalent).
 - **utter_ask_account:** Present under responses with at least one message.
+- **action_check_balance_simple:** Present under the actions: list.
 - **Valid YAML / structure:** File is valid; existing Level 2 content (responses, actions) is preserved.
