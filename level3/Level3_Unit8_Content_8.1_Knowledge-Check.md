@@ -21,7 +21,7 @@ d) In the actions Python files
 **3. What does a `collect:` step in a flow do?**
 
 a) Sends the slot value to an action  
-b) Tells Rasa to get the slot value from the user (asking with `utter_ask_*` if needed) before continuing  
+b) Tells Rasa to get the slot value from the user, asking with the `utter_ask_*` response when the slot is empty, before continuing  
 c) Deletes the slot value  
 d) Reads the slot value from the tracker  
 
@@ -49,4 +49,4 @@ d) `slot_<slot_name>_prompt`
 | 2 | **c** | Slots are defined in the domain file under the top-level `slots:` section. |
 | 3 | **b** | The `collect:` step tells Rasa to get the slot value; if empty, the bot asks (using the `utter_ask_*` response) and stores the answer. |
 | 4 | **b** | In an action, you read a slot from the `tracker`: `tracker.get_slot("slot_name")`. |
-| 5 | **b** | The convention is `utter_ask_<slot_name>` (e.g. `utter_ask_account` for the `account` slot). |
+| 5 | **b** | The convention is `utter_ask_<slot_name>`; for the `account` slot you use `utter_ask_account`. |

@@ -10,9 +10,9 @@ The action file `action_check_balance_simple.py` is already in `level3/actions/`
 
 1. **Open** `level3/actions/action_check_balance_simple.py` in your editor.
 
-2. **Find** where it reads the slot (for example `account = tracker.get_slot("account")` or similar).
+2. **Find** where it reads the slot, such as `account = tracker.get_slot("account")` or similar code.
 
-3. **Find** where it checks for placeholders (for example "account number" or "<missing>") and re-prompts with `utter_ask_account` when the value is not real.
+3. **Find** where it checks for placeholders like "account number" or "<missing>" and re-prompts with `utter_ask_account` when the value is not real.
 
 4. **Optional.** After Lab 6.1, train and run Inspector. Trigger the check_balance flow and watch the action use the slot and re-ask when the LLM extracts a placeholder.
 
@@ -39,7 +39,7 @@ d) Ignores it and continues to the next step
 **3. What is the purpose of the `placeholder_values` list?**
 
 a) To store valid account numbers for testing  
-b) To detect values that are not real account numbers (so the bot can re-ask)  
+b) To detect values that are not real account numbers so the bot can re-ask  
 c) To define the slot type in the domain  
 d) To set default values when the slot is empty  
 

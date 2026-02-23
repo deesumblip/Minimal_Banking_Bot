@@ -42,7 +42,7 @@ actions:
   - action_check_balance_simple
 ```
 
-(If your domain already lists `action_holiday_hours`, keep it and add `action_check_balance_simple` as well.)
+If your domain already lists `action_holiday_hours`, keep it and add `action_check_balance_simple` as well.
 
 **Step 5.** Verify. The domain has a `slots:` section with `account`, an `utter_ask_account` response, and `action_check_balance_simple` in the `actions:` list. All Level 2 content remains and the YAML is valid.
 

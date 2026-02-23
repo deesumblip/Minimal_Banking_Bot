@@ -6,7 +6,7 @@
 
 ## When Level 3 is Sufficient
 
-Level 3 is a good fit for a single piece of information (account number, name), simple multi-turn conversations, and remembering one key piece of data.
+Level 3 is a good fit for a single piece of information such as account number or name, simple multi-turn conversations, and remembering one key piece of data.
 
 ## When You Need More
 

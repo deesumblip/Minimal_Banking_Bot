@@ -15,7 +15,7 @@ responses:                # From Level 1 & 2 (unchanged) plus one new response
   utter_greet:
     - text: "Hi! I'm a banking assistant..."
   # ... other responses
-  utter_ask_account:      # You add this in Lab 3.1 (used when collecting account slot)
+  utter_ask_account:      # You add this in Lab 3.1; Rasa uses it when collecting the account slot
     - text: "What is your account number?"
 
 actions:                  # From Level 2 (unchanged); you add action_check_balance_simple in Lab 3.1

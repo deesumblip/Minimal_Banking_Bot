@@ -6,7 +6,7 @@ Your existing Level 2 bot continues to work. Level 3 adds memory on top of it.
 
 ## What's New in Level 3
 
-**What you'll add in Lab 3.1.** In the domain you will add the `slots:` section with the `account` slot, the new response `utter_ask_account` (used when asking for the account number), and you will register the new action `action_check_balance_simple` in the `actions:` list. The action file is already in `level3/actions/`; you only add it to the domain.
+**What you'll add in Lab 3.1.** In the domain you will add the `slots:` section with the `account` slot, the new response `utter_ask_account` for asking for the account number, and you will register the new action `action_check_balance_simple` in the `actions:` list. The action file is already in `level3/actions/`; you only add it to the domain.
 
 **What you'll create in Lab 4.1.** You will create the flow file `data/basics/check_balance.yml`. That flow will collect the account number and then run `action_check_balance_simple`.
 

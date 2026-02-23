@@ -4,7 +4,7 @@
 
 When you move to Level 4, you will continue working on the same banking bot you've built throughout Levels 1, 2, and 3. Level 4 doesn't start from scratch. It builds on what you've already created.
 
-Your existing responses (all Level 1–3 responses) stay. Your existing flows (all Level 1–3 flows) stay. Your existing actions (all Level 2–3 actions) stay. Your existing slots (`account`) stay. Level 4 adds more slots, more ask responses, actions that use multiple slots, and flows that collect multiple slots.
+Your existing responses (all Level 1–3 responses) stay. Your existing flows (all Level 1–3 flows) stay. Your existing actions (all Level 2–3 actions) stay. Your existing account slot stays. Level 4 adds more slots, more ask responses, actions that use multiple slots, and flows that collect multiple slots.
 
 You don't start a new bot. You extend your existing Level 3 banking bot with multiple slot collection.
 

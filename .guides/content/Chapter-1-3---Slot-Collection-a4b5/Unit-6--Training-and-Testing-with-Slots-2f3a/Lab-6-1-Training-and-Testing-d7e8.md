@@ -20,7 +20,7 @@ Follow the same logic as Part 1, but use your own terminal and OS-specific comma
 2. **Go to the main project folder** (the one that contains `level1`, `level2`, `level3`, and `.guides`). For example `cd C:\Users\You\Minimal_Banking_Bot` or `cd ~/Minimal_Banking_Bot`.
 3. **Activate the virtual environment.** The `.venv` folder is in the main project folder. On Windows (PowerShell) use `.venv\Scripts\Activate.ps1`. On Windows (Command Prompt) use `.venv\Scripts\activate.bat`. On macOS or Linux use `source .venv/bin/activate`. Your prompt should show `(.venv)`.
 4. **Navigate to level3.** Go to the `level3` folder with `cd level3` (the one that contains `config.yml`, `domain/`, and `data/`).
-5. **Ensure `.env` exists** in the `level3` folder with `RASA_LICENSE` and `OPENAI_API_KEY` (see Lab 0.1 or your instructor if you need these).
+5. **Ensure `.env` exists** in the `level3` folder with `RASA_LICENSE` and `OPENAI_API_KEY`. See Lab 0.1 or your instructor if you need these.
 6. **Train.** With venv active and from the `level3` folder, run `python -m rasa train`. Wait for "Successfully saved model".
 7. **Verify.** A new `.tar.gz` file appears in `level3/models/`.
 

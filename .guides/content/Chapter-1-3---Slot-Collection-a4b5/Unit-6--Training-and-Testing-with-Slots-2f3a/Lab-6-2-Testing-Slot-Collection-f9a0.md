@@ -31,7 +31,7 @@ You can use the debug panel in Inspector to see slot values if you want to explo
 **1. When you first say "Check my balance" (slot empty), what should the bot do?**
 
 a) Reply with a balance immediately  
-b) Ask for your account number (e.g. "What is your account number?")  
+b) Ask for your account number, such as "What is your account number?"  
 c) Say "What are your hours?"  
 d) Return an error  
 

@@ -20,4 +20,4 @@ slots:
 
 ## Other Slot Types (Advanced)
 
-For Level 3 we only use `text` slots. Other types exist (e.g. `bool`, `float`, `list`) but are covered in advanced tutorials.
+For Level 3 we only use `text` slots. Other types such as `bool`, `float`, and `list` exist but are covered in advanced tutorials.
