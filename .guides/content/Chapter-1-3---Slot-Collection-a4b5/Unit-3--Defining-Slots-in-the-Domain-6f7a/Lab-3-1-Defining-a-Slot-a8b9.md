@@ -1,3 +1,5 @@
+# Lab 3.1: Defining a Slot in the Domain
+
 **Objective.** In this lab you will:
 
 - Add the `account` slot and `utter_ask_account` response to your Level 3 domain

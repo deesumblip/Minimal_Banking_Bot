@@ -1,3 +1,5 @@
+# 1.3 Slot Collection
+
 When a flow has a `collect:` step:
 
 - **If slot is empty**: Bot asks for it (using `utter_ask_*` response)

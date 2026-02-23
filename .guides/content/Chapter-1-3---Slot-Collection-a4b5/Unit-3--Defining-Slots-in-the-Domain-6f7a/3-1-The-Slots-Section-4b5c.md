@@ -1,3 +1,5 @@
+# 3.1 The Slots Section
+
 Slots are defined in the domain file, just like responses and actions. This is the **define** step you saw in Unit 1.2: you add the slot and the ask response so that flows and actions can use them.
 
 ## Domain Structure in Level 3

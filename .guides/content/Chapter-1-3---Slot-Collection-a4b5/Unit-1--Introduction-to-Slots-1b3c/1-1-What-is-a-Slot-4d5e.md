@@ -1,3 +1,5 @@
+# 1.1 What is a Slot?
+
 A **slot** is a memory variable that stores information from the conversation. Slots allow your bot to remember what users tell it and use that information later.
 
 ## Slots = Bot Memory

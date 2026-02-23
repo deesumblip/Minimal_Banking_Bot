@@ -1,3 +1,5 @@
+# 0.2 What Level 3 Adds
+
 Level 3 adds **slots**: the bot's memory. With slots, your bot will be able to remember what the user said, store it, and use it later.
 
 Your Level 2 bot will still work. You will just add memory on top.
