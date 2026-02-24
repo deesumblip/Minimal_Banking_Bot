@@ -34,3 +34,12 @@
 - One `.venv` in **project root** (created in Level 1 Lab 0.1). For Level 2/3, activate from root then `cd level2` or `cd level3`.
 - Codio: **Rasa Inspect** tab for Inspector (no Tools → Ports / port 5005 for students).
 - Graders: run from workspace root; scripts activate venv and `cd` to the level folder; print `PASS` / `Successfully passed!` on success.
+
+---
+
+## LLM rubric grader: expected delay
+
+**LLM-based auto-rubric** assessments in Codio call an external LLM to evaluate student work. Runs often take **30–90+ seconds** (sometimes longer under load). This is expected; Codio does not document a specific timeout for this assessment type.
+
+- **For students**: Tell them to wait after clicking "Check" / "Submit"; the spinner may stay for a minute or more.
+- **For instructors**: If you need faster feedback for a given lab, consider a **script-based grader** (e.g. shell or Python) that checks files/rubric criteria; those typically complete in seconds. Use LLM rubric when you want qualitative feedback or complex criteria that are hard to express in a script.

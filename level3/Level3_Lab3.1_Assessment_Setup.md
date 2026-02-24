@@ -89,18 +89,29 @@ Configure the assessment so the LLM can read:
 
 ---
 
-### Option B: Standard Code Test (Bash script)
+### Option B: Standard Code Test (Python script)
 
-**Grader script location:**
+Use a Python grader for faster feedback than the LLM rubric. The script parses `level3/domain/basics.yml` and checks: file exists and is valid YAML; `slots:` section present; `account` slot with `type: text`; `utter_ask_account` under `responses:` with at least one text message; `action_check_balance_simple` in the `actions:` list. Total: 10 points. On full score it prints `PASS` and `Successfully passed!` and exits 0; otherwise prints `FAIL` and exits 1.
+
+**Grader script location (in repo):**
 
 ```
-.guides/assessments/level3_graders/lab_3.1_grader.sh
+.guides/assessments/level3_graders/lab_3.1_grader.py
 ```
 
-**Grader script.** Run from workspace root: activate venv, then `cd level3`. Check that `domain/basics.yml` exists; that it contains a `slots:` section; that the `account` slot is present (type text); that `utter_ask_account` is present under responses; and that `action_check_balance_simple` is present under the `actions:` section. Print `PASS` / `Successfully passed!` on full score; print `FAIL` and exit 1 on failure. Suggested total points: 8–10.
+**Codio configuration (Standard Code Test):**
 
-**Codio configuration.** Add Code Test, then Standard Code Test.
+1. **Assessment** – Add assessment, then **Code Test** → **Standard Code Test**.
+2. **Execution**:
+   - **COMMAND:**  
+     `python3 /home/codio/workspace/.guides/assessments/level3_graders/lab_3.1_grader.py`  
+     If Codio runs without the project venv activated and PyYAML is missing, use:  
+     `source /home/codio/workspace/.venv/bin/activate && python3 /home/codio/workspace/.guides/assessments/level3_graders/lab_3.1_grader.py`
+   - **Working Directory:** `/home/codio/workspace`
+   - **Timeout:** `60` seconds
+3. **Grading** (or equivalent tab):
+   - **Expected output / Match:** `PASS` or `Successfully passed!` (Codio may allow either; the script prints both on success).
+   - **Points:** 10 (or match your course scale).
+4. **Rationale (optional):** e.g. *The grader checks that `level3/domain/basics.yml` exists, is valid YAML, and contains the slots section with account (type text), utter_ask_account under responses, and action_check_balance_simple in the actions list.*
 
-- COMMAND: `bash /home/codio/workspace/.guides/assessments/level3_graders/lab_3.1_grader.sh`
-- Working Directory: `/home/codio/workspace`
-- Expected output: `PASS` or `Successfully passed!`
+**Files.** The script lives in the repo at `.guides/assessments/level3_graders/lab_3.1_grader.py`. Do not upload or paste it into the assessment; the Execution command runs this file from the workspace so `git pull` keeps the grader in sync. The script requires Python 3 and PyYAML (available in the project `.venv`); if students run in a minimal environment, ensure the project venv is activated before the command (see COMMAND above).
