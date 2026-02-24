@@ -1,60 +1,83 @@
-Your goal is to **create** the action file that reads the `account` slot and handles placeholder values. The domain already lists `action_check_balance_simple` from Lab 3.1; here you write the Python file so the action exists.
+Your goal is to **complete** the action file that reads the `account` slot and handles placeholder values. The domain already lists `action_check_balance_simple` from Lab 3.1; here you fill in the blanks so the Python file is correct.
 
 ---
 
-## Steps
+## Fill-in-the-blanks exercise
 
-1. **Create** the file `level3/actions/action_check_balance_simple.py` in your project (if a file with this name exists from an older version, replace it or follow the steps below so the content matches).
+1. **Create** the file `level3/actions/action_check_balance_simple.py` in your project.
 
-2. **Add imports** at the top:
-   - From `typing`: `Any`, `Dict`, `List`, `Text`
-   - From `rasa_sdk`: `Action`, `Tracker`, `CollectingDispatcher`
+2. **Copy the script below** into that file. The script has **eleven blanks** marked `(1)` through `(11)`.
 
-3. **Define the class** `ActionCheckBalanceSimple(Action)` with:
-   - **`name(self)`** – return the string `"action_check_balance_simple"`.
-   - **`run(self, dispatcher, tracker, domain)`** – implement:
-     - Read the slot: `account = tracker.get_slot("account") or "<missing>"`.
-     - Define a list of placeholder values, e.g. `["account number", "user_account_number", "<missing>"]`.
-     - If `account` (lowercased) is in that list: call `dispatcher.utter_message(response="utter_ask_account")` and `return []`.
-     - Otherwise: call `dispatcher.utter_message(text=f"(Demo) Balance for account {account} is $123.45.")` and `return []`.
+3. **Replace each blank** with the correct code from the **Key** at the bottom of this section. Each blank is a single expression or value (one line). The blanks reinforce concepts from Level 1 (domain, responses), Level 2 (actions, `run`/`name`, dispatcher), and Level 3 (slots, placeholders).
 
-4. **Verify** the file is in `level3/actions/` and that your domain (from Lab 3.1) already lists `action_check_balance_simple` in the `actions:` section.
-
-5. **Optional.** After Lab 6.1, train and run Inspector. Trigger the check_balance flow and watch the action use the slot and re-ask when the LLM extracts a placeholder.
-
-You're done when the action file exists, reads the slot, handles placeholders by re-prompting with `utter_ask_account`, and otherwise shows the demo balance message. This lab has no graded assessment.
+4. **Save** the file, then **run the assessment**. The grader checks that the file exists, has the right structure, reads the slot, handles placeholders, and sends the balance message.
 
 ---
 
-## Check Your Knowledge
+### Script (copy this into `level3/actions/action_check_balance_simple.py` and fill in the blanks)
 
-**1. How does the action read the account slot?**
+```python
+from typing import (5)
 
-a) `account = domain.get_slot("account")`  
-b) `account = tracker.get_slot("account")`  
-c) `account = dispatcher.get_slot("account")`  
-d) `account = flow.collect("account")`  
+from rasa_sdk import Action, Tracker
+from rasa_sdk.executor import CollectingDispatcher
 
-**2. When the slot contains "account number" or "<missing>", what does the action do?**
 
-a) Uses it as the account number and shows a balance  
-b) Re-prompts with `utter_ask_account` and does not show a balance  
-c) Returns an error and crashes  
-d) Ignores it and continues to the next step  
+class ActionCheckBalanceSimple((6)):
+    """A custom action that reads a slot and returns a balance.
 
-**3. What is the purpose of the `placeholder_values` list?**
+    - Reads the 'account' slot from conversation memory
+    - Re-prompts if the slot contains a placeholder (e.g. "account number", "<missing>")
+    - Otherwise sends a demo balance message
+    """
 
-a) To store valid account numbers for testing  
-b) To detect values that are not real account numbers so the bot can re-ask  
-c) To define the slot type in the domain  
-d) To set default values when the slot is empty  
+    def name(self) -> Text:
+        return (7)
+
+    def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> (8):
+        # Read the '(11)' slot from conversation memory (or "<missing>" if empty)
+        account = (1)
+
+        # Values that are not real account numbers—we re-ask if the slot has one of these
+        placeholder_values = ["account number", "user_account_number", (9)]
+
+        # If the slot is a placeholder, re-prompt and return
+        if (2):
+            dispatcher.utter_message(response=(3))
+            return (10)
+
+        # Otherwise send the demo balance message
+        dispatcher.utter_message(text=(4))
+        return (10)
+```
 
 ---
 
-### Answer Key
+### Key (what to put in each blank)
 
-| Q | Answer | Brief explanation |
-|---|--------|-------------------|
-| 1 | **b** | The action uses `tracker.get_slot("account")` to read the slot from conversation memory. |
-| 2 | **b** | Placeholder values trigger a re-prompt with `utter_ask_account`; the action returns without showing a balance. |
-| 3 | **b** | `placeholder_values` lists strings that the LLM might incorrectly extract instead of a real account number; the action checks for these to re-ask. |
+| Blank | Replace with | Concept (Level) |
+|-------|------------------|------------------|
+| **(1)** | `tracker.get_slot("account") or "<missing>"` | Reading a slot; default when empty (L3) |
+| **(2)** | `account.lower() in [p.lower() for p in placeholder_values]` | Placeholder check (L3) |
+| **(3)** | `"utter_ask_account"` | Response name from domain (L1/L3) |
+| **(4)** | `f"(Demo) Balance for account {account} is $123.45."` | Sending a message (L2) |
+| **(5)** | `Any, Dict, List, Text` | Typing imports for action signatures (L2) |
+| **(6)** | `Action` | Base class for custom actions (L2) |
+| **(7)** | `"action_check_balance_simple"` | Action name; must match domain `actions:` (L2) |
+| **(8)** | `List[Dict[Text, Any]]` | Return type of `run()` — list of events (L2) |
+| **(9)** | `"<missing>"` | Placeholder value when slot is empty (L3) |
+| **(10)** | `[]` | `run()` must return a list (empty = no extra events) (L2) |
+| **(11)** | `"account"` | Slot name; must match domain `slots:` and flow (L3) |
+
+---
+
+### After you finish
+
+- **Verify** your domain (from Lab 3.1) lists `action_check_balance_simple` in the `actions:` section.
+- **Run the assessment** when you're done.
+- **Optional.** After Lab 6.1, train and run Inspector. Trigger the check_balance flow and watch the action use the slot and re-ask when the LLM extracts a placeholder.
