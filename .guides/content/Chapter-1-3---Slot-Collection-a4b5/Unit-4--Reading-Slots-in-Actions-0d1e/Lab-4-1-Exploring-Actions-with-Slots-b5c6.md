@@ -8,7 +8,7 @@ Your goal is to **complete** the action file that reads the `account` slot and h
 
 2. **Copy the script below** into that file. The script has **eleven blanks** marked `(1)` through `(11)` **in order** as you read from top to bottom.
 
-3. **Replace each blank** with the correct code from the **Key** at the bottom of this section. Each blank is a single expression or value (one line). The blanks reinforce concepts from Level 1 (domain, responses), Level 2 (actions, `run`/`name`, dispatcher), and Level 3 (slots, placeholders).
+3. **Replace each blank** with the correct code. Each blank is a single expression or value (one line). The blanks reinforce concepts from Level 1 (domain, responses), Level 2 (actions, `run`/`name`, dispatcher), and Level 3 (slots, placeholders).
 
 4. **Save** the file, then **run the assessment**. The grader checks that the file exists, has the right structure, reads the slot, handles placeholders, and sends the balance message.
 
@@ -18,7 +18,7 @@ Your goal is to **complete** the action file that reads the `account` slot and h
 
 Copy this into level3/actions/action_check_balance_simple.py and fill in the blanks.
 
-**What goes in each blank (use the Key below to confirm):**
+**What goes in each blank:**
 
 - **(1)** — The typing names needed for action signatures: `Any`, `Dict`, `List`, and `Text`.
 - **(2)** — The base class that every custom action must inherit from (from `rasa_sdk`).
@@ -71,24 +71,6 @@ class ActionCheckBalanceSimple((2)):
         dispatcher.utter_message(text=(11))
         return (10)
 ```
-
----
-
-### Key (what to put in each blank)
-
-| Blank | Replace with | Concept (Level) |
-|-------|------------------|------------------|
-| **(1)** | `Any, Dict, List, Text` | Typing imports for action signatures (L2) |
-| **(2)** | `Action` | Base class for custom actions (L2) |
-| **(3)** | `"action_check_balance_simple"` | Action name; must match domain `actions:` (L2) |
-| **(4)** | `List[Dict[Text, Any]]` | Return type of `run()` — list of events (L2) |
-| **(5)** | `"account"` | Slot name; must match domain `slots:` and flow (L3) |
-| **(6)** | `tracker.get_slot("account") or "<missing>"` | Reading a slot; default when empty (L3) |
-| **(7)** | `"<missing>"` | Placeholder value when slot is empty (L3) |
-| **(8)** | `account.lower() in [p.lower() for p in placeholder_values]` | Placeholder check (L3) |
-| **(9)** | `"utter_ask_account"` | Response name from domain (L1/L3) |
-| **(10)** | `[]` | `run()` must return a list (empty = no extra events) (L2) |
-| **(11)** | `f"(Demo) Balance for account {account} is $123.45."` | Sending a message (L2) |
 
 ---
 

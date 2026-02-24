@@ -68,3 +68,19 @@ Use a Python grader for faster feedback. The script checks `level3/actions/actio
 ## Reference for rubric / grading
 
 - **Solution reference:** `.guides/assessments/level3_graders/lab_4.1_solution_reference.md` (full reference code and rubric summary).
+
+### Fill-in-the-blanks key (implementers only)
+
+| Blank | Replace with | Concept (Level) |
+|-------|------------------|------------------|
+| **(1)** | `Any, Dict, List, Text` | Typing imports for action signatures (L2) |
+| **(2)** | `Action` | Base class for custom actions (L2) |
+| **(3)** | `"action_check_balance_simple"` | Action name; must match domain `actions:` (L2) |
+| **(4)** | `List[Dict[Text, Any]]` | Return type of `run()` — list of events (L2) |
+| **(5)** | `"account"` | Slot name; must match domain `slots:` and flow (L3) |
+| **(6)** | `tracker.get_slot("account") or "<missing>"` | Reading a slot; default when empty (L3) |
+| **(7)** | `"<missing>"` | Placeholder value when slot is empty (L3) |
+| **(8)** | `account.lower() in [p.lower() for p in placeholder_values]` | Placeholder check (L3) |
+| **(9)** | `"utter_ask_account"` | Response name from domain (L1/L3) |
+| **(10)** | `[]` | `run()` must return a list (empty = no extra events) (L2) |
+| **(11)** | `f"(Demo) Balance for account {account} is $123.45."` | Sending a message (L2) |
