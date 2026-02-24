@@ -12,13 +12,17 @@
 
 ### Overview
 
-Lab 6.2 is **ungraded** (completion-based). Students run Inspector and test the bot; there is no Codio assessment to configure.
+Lab 6.2 is **ungraded** (completion-based). Students run Inspector and test slot collection, persistence, and Level 1/2 flows. There is no graded deliverable.
+
+### Assessment Type
+
+**None.** No Code Test or LLM Rubric.
 
 ### Codio Configuration
 
-- **No Code Test or LLM Rubric** for this lab.
-- Optionally add a **short reflection** or **checkbox** in the Guide (e.g. "I tested slot collection and persistence") if you want to track completion. That is Guide content only, not an autograder.
+- **No assessment** – Do not add a Standard Code Test or LLM Rubric for this lab.
+- **Optional** – Add a short reflection or checkbox in the Guide (e.g. “I tested slot collection and persistence”) if you want to track completion. That is Guide content only, not an autograder.
 
 ### Placement in Guide
 
-Place Lab 6.2 content after Unit 6.2 (Testing Slot Collection) so the unit introduces the idea and the lab is the hands-on steps. The unit content can be shortened to an intro that says "Do the steps in Lab 6.2."
+Place Lab 6.2 content after Unit 6.2 (Testing Slot Collection) so the unit introduces the idea and the lab is the hands-on steps. The unit content can be shortened to an intro that says “Do the steps in Lab 6.2.”

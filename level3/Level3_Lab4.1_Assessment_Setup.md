@@ -12,9 +12,13 @@
 
 ### Overview
 
-Lab 4.1 is **ungraded** (exploration). The action file is provided; students read and optionally test. No Codio assessment to configure.
+Lab 4.1 is **ungraded** (exploration). Students read and explore `action_check_balance_simple.py` (and optionally test in Inspector after Lab 6.1). The action file is provided in the repo; no deliverable is graded.
+
+### Assessment Type
+
+**None.** No Code Test or LLM Rubric.
 
 ### Codio Configuration
 
-- **No Code Test or LLM Rubric** for this lab.
-- Optional completion checkbox in the Guide only, if desired.
+- **No assessment** – Do not add a Standard Code Test or LLM Rubric for this lab.
+- **Optional** – Add a completion checkbox or short reflection in the Guide (e.g. “I explored the action and placeholder handling”) if you want to track completion. That is Guide content only, not an autograder.

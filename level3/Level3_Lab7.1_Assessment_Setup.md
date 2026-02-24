@@ -12,12 +12,16 @@
 
 ### Overview
 
-Lab 7.1 is **ungraded** (guided demonstration). Students follow the walkthrough to observe how the bot behaves. No Codio assessment to configure.
+Lab 7.1 is **ungraded** (guided demonstration). Students run a full conversation in Inspector using slot collection, persistence, and Level 2 flows. There is no graded deliverable.
+
+### Assessment Type
+
+**None.** No Code Test or LLM Rubric.
 
 ### Codio Configuration
 
-- **No Code Test or LLM Rubric** for this lab.
-- Optionally add a completion checkbox in the Guide if you track completion. No autograder.
+- **No assessment** – Do not add a Standard Code Test or LLM Rubric for this lab.
+- **Optional** – Add a completion checkbox in the Guide if you track completion. No autograder.
 
 ### Placement in Guide
 

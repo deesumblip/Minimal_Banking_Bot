@@ -84,15 +84,27 @@ Configure the assessment so the LLM can read:
 
 ### Option B: Standard Code Test (Bash script)
 
-**Grader script location**:
+Use a Bash grader for faster feedback. The script runs from workspace root, changes to `level3`, and checks: `data/basics/check_balance.yml` exists; file has valid YAML with a flow containing `collect: account` and `action: action_check_balance_simple`. On full score it prints `PASS` and `Successfully passed!`; otherwise `FAIL` and exit 1. Suggested total: 8 points.
+
+**Grader script location (in repo):**
+
 ```
 .guides/assessments/level3_graders/lab_5.1_grader.sh
 ```
 
-**Grader script** – Run from **workspace root**: activate venv, then `cd level3`. Check: `data/basics/check_balance.yml` exists; file contains a flow with `collect: account` (or equivalent) and `action: action_check_balance_simple`. Print `PASS` / `Successfully passed!` on full score; `FAIL` and exit 1 on failure. Suggested points: 6–8.
+**Codio configuration (Standard Code Test):**
 
-**Codio configuration** – Add Code Test → Standard Code Test.
-
-- COMMAND: `bash /home/codio/workspace/.guides/assessments/level3_graders/lab_5.1_grader.sh`
-- Working Directory: `/home/codio/workspace`
-- Expected output: `PASS` or `Successfully passed!`
+1. **Assessment** – Add assessment, then **Code Test** → **Standard Code Test**.
+2. **Execution**:
+   - **COMMAND:** `bash /home/codio/workspace/.guides/assessments/level3_graders/lab_5.1_grader.sh`
+   - **PRE-EXEC COMMAND:** Leave **empty** (script uses bash and does not require the venv).
+   - **Working Directory:** `/home/codio/workspace`
+   - **Timeout:** `60` seconds
+3. **Grading** tab:
+   - **Points:** Set to **8** (or match your course scale). Enable **Allow partial points** if the script supports it.
+   - **Add item to check / Test case:** Add one test case. Leave **INPUT - ARGUMENTS** and **INPUT - STDIN** empty. In **EXPECTED OUTPUT**, enter: `PASS` (or the exact success phrase the script prints, e.g. `Successfully passed!`).
+   - **SHOW RATIONALE TO STUDENT:** Recommended: **AFTER [1] ATTEMPTS** (or **ALWAYS**). Set the number to 1 if using "AFTER … ATTEMPTS".
+   - **RATIONALE** (text box): Paste or type what the grader checks. Example:
+     > The grader checks that `level3/data/basics/check_balance.yml` exists, has valid YAML with a flow that includes **collect: account** and **action: action_check_balance_simple**. Review the script output to see which check failed.
+   - **SHOW EXPECTED ANSWER:** Optional; **When grades are released** or **Always** if you want students to see the expected output.
+4. **Files.** The script lives in the repo at `.guides/assessments/level3_graders/lab_5.1_grader.sh`. Do not upload it; run it from the workspace so `git pull` keeps the grader in sync. From workspace root: `chmod +x .guides/assessments/level3_graders/lab_5.1_grader.sh` if needed.

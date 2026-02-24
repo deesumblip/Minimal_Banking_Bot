@@ -78,18 +78,23 @@ python -m rasa train
 
 Success = a new `.tar.gz` in `level3/models/` and no errors in the terminal.
 
-## Assessment Setup and Configuration
+## Codio configuration (Standard Code Test)
 
-1. **Navigate** to the Lab 6.1 section in the Codio Guide Editor (Level 3).
-
-2. **Add Code Test** – Add Code Test → **Standard Code Test**. Configure:
-
-   **General** – Name: *Lab 6.1: Training and Testing with Slots*. Description: *Verify that the student successfully trained the Level 3 bot*. Points: `12`. Language: `Python`.
-
-   **Execution** – COMMAND: `python3 /home/codio/workspace/.guides/assessments/level3_graders/lab_6.1_grader.py`. TIMEOUT: `60` seconds. Working Directory: `/home/codio/workspace`.
-
-   **Grading** – Points: 12. Allow partial points: OFF. **Expected output**: `PASS` or `Successfully passed!`.
-
-3. **Grader script in repo** – After pulling from GitHub, make it executable: `chmod +x /home/codio/workspace/.guides/assessments/level3_graders/lab_6.1_grader.py`.
-
-4. **Test** – Run the assessment in Codio after a student has run `rasa train` in `level3`; confirm it passes. Run in a workspace where no model exists in `level3`; confirm it fails with a clear hint.
+1. **Assessment** – Add assessment, then **Code Test** → **Standard Code Test**.
+2. **Execution**:
+   - **COMMAND (recommended):** Use the project venv’s Python so dependencies are available:  
+     `/home/codio/workspace/.venv/bin/python3 /home/codio/workspace/.guides/assessments/level3_graders/lab_6.1_grader.py`  
+     **Alternative:** If your Codio image already has the required modules for `python3`, you can use:  
+     `python3 /home/codio/workspace/.guides/assessments/level3_graders/lab_6.1_grader.py`
+   - **PRE-EXEC COMMAND:** Leave **empty** when using the venv Python path in COMMAND above.
+   - **Working Directory:** `/home/codio/workspace`
+   - **Timeout:** `60` seconds
+3. **Grading** tab:
+   - **Points:** Set to **12** (or match your course scale). The script reports partial checks; you can enable **Allow partial points** if Codio supports it for this test type.
+   - **Add item to check / Test case:** Add one test case. Leave **INPUT - ARGUMENTS** and **INPUT - STDIN** empty. In **EXPECTED OUTPUT**, enter: `PASS` (the script prints this on success; you may also match `Successfully passed!` if Codio allows).
+   - **SHOW RATIONALE TO STUDENT:** Recommended: **AFTER [1] ATTEMPTS** (or **ALWAYS**). Set the number to 1 if using "AFTER … ATTEMPTS".
+   - **RATIONALE** (text box): Example:
+     > The grader verifies the virtual environment in project root, that a model file (`.tar.gz`) exists in `level3/models/`, that the model is recent, and that logs do not show critical errors. Ensure you ran `python -m rasa train` from the `level3` folder with the venv activated.
+   - **SHOW EXPECTED ANSWER:** Optional; **When grades are released** or **Always** so students see that the expected output is `PASS`.
+4. **Files.** The script lives in the repo at `.guides/assessments/level3_graders/lab_6.1_grader.py`. Do not upload it; the Execution command runs it from the workspace so `git pull` keeps the grader in sync. No need to chmod (Python); use the venv’s Python in COMMAND if the environment does not provide dependencies globally.
+5. **Test** – Run the assessment after a student has run `rasa train` in `level3` (pass); run in a workspace with no model in `level3` (fail with clear hint).
