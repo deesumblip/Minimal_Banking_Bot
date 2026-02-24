@@ -16,6 +16,20 @@ Your goal is to **complete** the action file that reads the `account` slot and h
 
 ### Script (copy this into `level3/actions/action_check_balance_simple.py` and fill in the blanks)
 
+**What goes in each blank (use the Key below to confirm):**
+
+- **(1)** — Expression that reads the `account` slot from the tracker and uses a default string when the slot is empty.
+- **(2)** — Condition: true when `account` (case-insensitive) is one of the placeholder values.
+- **(3)** — The response name from the domain that asks the user for their account (must match a key under `responses:`).
+- **(4)** — The text to send for the balance message; include the `account` variable so the user sees their account.
+- **(5)** — The typing names needed for action signatures: `Any`, `Dict`, `List`, and `Text`.
+- **(6)** — The base class that every custom action must inherit from (from `rasa_sdk`).
+- **(7)** — The action name string that must match the name used in the domain `actions:` list and in flows.
+- **(8)** — The return type of `run()`: a list of dictionaries (events).
+- **(9)** — The placeholder string used when the slot is empty; also add it to the `placeholder_values` list.
+- **(10)** — The value that `run()` must return in both branches (an empty list of events).
+- **(11)** — The slot name that matches the domain `slots:` and the flow that collects it.
+
 ```python
 from typing import (5)
 
