@@ -69,6 +69,64 @@ Use a Python grader for faster feedback. The script checks `level3/actions/actio
 
 - **Solution reference:** `.guides/assessments/level3_graders/lab_4.1_solution_reference.md` (full reference code and rubric summary).
 
+### Script template (implementers only)
+
+Copy this into level3/actions/action_check_balance_simple.py; students fill in the blanks (1)–(11).
+
+**What goes in each blank:**
+
+- **(1)** — The typing names needed for action signatures: `Any`, `Dict`, `List`, and `Text`.
+- **(2)** — The base class that every custom action must inherit from (from `rasa_sdk`).
+- **(3)** — The action name string that must match the name used in the domain `actions:` list and in flows.
+- **(4)** — The return type of `run()`: a list of dictionaries (events).
+- **(5)** — The slot name that matches the domain `slots:` and the flow that collects it.
+- **(6)** — Expression that reads the `account` slot from the tracker and uses a default string when the slot is empty.
+- **(7)** — The placeholder string used when the slot is empty; also add it to the `placeholder_values` list.
+- **(8)** — Condition: true when `account` (case-insensitive) is one of the placeholder values.
+- **(9)** — The response name from the domain that asks the user for their account (must match a key under `responses:`).
+- **(10)** — The value that `run()` must return in both branches (an empty list of events).
+- **(11)** — The text to send for the balance message; include the `account` variable so the user sees their account.
+
+```python
+from typing import (1)
+
+from rasa_sdk import Action, Tracker
+from rasa_sdk.executor import CollectingDispatcher
+
+
+class ActionCheckBalanceSimple((2)):
+    """A custom action that reads a slot and returns a balance.
+
+    - Reads the 'account' slot from conversation memory
+    - Re-prompts if the slot contains a placeholder (e.g. "account number", "<missing>")
+    - Otherwise sends a demo balance message
+    """
+
+    def name(self) -> Text:
+        return (3)
+
+    def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> (4):
+        # Read the '(5)' slot from conversation memory (or "<missing>" if empty)
+        account = (6)
+
+        # Values that are not real account numbers—we re-ask if the slot has one of these
+        placeholder_values = ["account number", "user_account_number", (7)]
+
+        # If the slot is a placeholder, re-prompt and return
+        if (8):
+            dispatcher.utter_message(response=(9))
+            return (10)
+
+        # Otherwise send the demo balance message
+        dispatcher.utter_message(text=(11))
+        return (10)
+```
+
 ### Fill-in-the-blanks key (implementers only)
 
 | Blank | Replace with | Concept (Level) |
