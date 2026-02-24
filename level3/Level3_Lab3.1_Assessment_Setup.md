@@ -103,15 +103,20 @@ Use a Python grader for faster feedback than the LLM rubric. The script parses `
 
 1. **Assessment** – Add assessment, then **Code Test** → **Standard Code Test**.
 2. **Execution**:
-   - **COMMAND:**  
-     `python3 /home/codio/workspace/.guides/assessments/level3_graders/lab_3.1_grader.py`  
-     If Codio runs without the project venv activated and PyYAML is missing, use:  
-     `source /home/codio/workspace/.venv/bin/activate && python3 /home/codio/workspace/.guides/assessments/level3_graders/lab_3.1_grader.py`
+   - **COMMAND (recommended):** Use the project venv’s Python so PyYAML is available without relying on pre-exec or shell activation:  
+     `/home/codio/workspace/.venv/bin/python3 /home/codio/workspace/.guides/assessments/level3_graders/lab_3.1_grader.py`  
+     Leave **Pre-Exec** empty when using this.  
+     **Alternative:** If your Codio image already has PyYAML for `python3`, you can use:  
+     `python3 /home/codio/workspace/.guides/assessments/level3_graders/lab_3.1_grader.py`
+   - **PRE-EXEC COMMAND:** Leave **empty** when using the venv Python path in COMMAND above. Codio often runs pre-exec and COMMAND in separate shells, so activating the venv in pre-exec may not make PyYAML available to the grader. Using the venv’s interpreter path in COMMAND avoids that.
    - **Working Directory:** `/home/codio/workspace`
    - **Timeout:** `60` seconds
-3. **Grading** (or equivalent tab):
-   - **Expected output / Match:** `PASS` or `Successfully passed!` (Codio may allow either; the script prints both on success).
-   - **Points:** 10 (or match your course scale).
-4. **Rationale (optional):** e.g. *The grader checks that `level3/domain/basics.yml` exists, is valid YAML, and contains the slots section with account (type text), utter_ask_account under responses, and action_check_balance_simple in the actions list.*
+3. **Grading** tab:
+   - **Points:** Set to **10** (or match your course scale). Enable **Allow partial points** if you want partial credit for partial checks.
+   - **Add item to check / Test case:** Add one test case. Leave **INPUT - ARGUMENTS** and **INPUT - STDIN** empty. In **EXPECTED OUTPUT**, enter: `PASS` (the script prints this on success). You can optionally also match `Successfully passed!` if Codio allows multiple expected strings; one match is enough.
+   - **SHOW RATIONALE TO STUDENT:** Choose when students see the explanation. Recommended: **AFTER [1] ATTEMPTS** so they see the rationale after their first run (or **ALWAYS** if you want it visible immediately). Set the number in the box to 1 if using "AFTER … ATTEMPTS".
+   - **RATIONALE** (the text box below): Paste or type a short explanation so students know what was checked. Example:
+     > The grader checks that `level3/domain/basics.yml` exists, is valid YAML, and contains: a **slots:** section, an **account** slot with **type: text**, the **utter_ask_account** response under **responses:** with at least one message, and **action_check_balance_simple** in the **actions:** list. Review the script output for which check failed and fix that part of the domain file.
+   - **SHOW EXPECTED ANSWER:** Optional; set to **When grades are released** or **Always** if you want students to see that the expected output is `PASS`.
 
-**Files.** The script lives in the repo at `.guides/assessments/level3_graders/lab_3.1_grader.py`. Do not upload or paste it into the assessment; the Execution command runs this file from the workspace so `git pull` keeps the grader in sync. The script requires Python 3 and PyYAML (available in the project `.venv`); if students run in a minimal environment, ensure the project venv is activated before the command (see COMMAND above).
+**Files.** The script lives in the repo at `.guides/assessments/level3_graders/lab_3.1_grader.py`. Do not upload or paste it into the assessment; the Execution command runs this file from the workspace so `git pull` keeps the grader in sync. The script requires Python 3 and PyYAML. Use the venv’s Python in COMMAND (e.g. `/home/codio/workspace/.venv/bin/python3 …`) so the grader runs with PyYAML without depending on pre-exec or shell activation.
