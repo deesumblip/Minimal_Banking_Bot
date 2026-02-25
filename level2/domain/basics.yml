@@ -1,9 +1,7 @@
 ## Level 2: Responses + Actions
 #
-# This domain adds custom actions to Level 1.
-# - Responses (predefined bot messages)
-# - Actions (custom Python code)
-# - Still no slots (memory)
+# This folder starts as your Level 1 bot (responses only). In Level 2 you will add
+# custom actions (e.g. action_bank_hours) and register them here.
 
 version: "3.1"
 
@@ -32,8 +30,3 @@ responses:
     - text: "Goodbye! Have a great day!"
       metadata:
         rephrase: True
-
-actions:
-  # List all custom actions here
-  # The name must match the class name in actions/*.py
-  - action_bank_hours
