@@ -6,7 +6,7 @@ Your goal is to test your Level 3 bot in Inspector so you see slot collection an
 
 ## Part 1: In Codio
 
-1. **Start Inspector** (if not already running). In the terminal, from `level3` with venv active, run `python -m rasa inspect --debug --log-file logs/logs.out`. Leave the terminal open. Open the **Rasa Inspect** tab in the top menu bar (do not use Tools → Ports or port 5005).
+1. **Start Inspector.** In the terminal, from `level3` with venv active, run `python -m rasa inspect --debug`. Leave the terminal open. When you see "Starting Worker" in the terminal, open the **Rasa Inspect** tab in the top menu bar (do not use Tools → Ports or port 5005).
 
 2. **Test slot collection.** Type "Check my balance". The bot should ask "What is your account number?" Type "1234". The bot should respond with the balance for account 1234.
 
@@ -20,7 +20,7 @@ You're done when slot collection asks for the account when needed, the slot pers
 
 ## Part 2: Running locally
 
-Use the same steps as Part 1. From the project root, activate the venv, then `cd level3`. Run `python -m rasa inspect --debug --log-file logs/logs.out`, then open **http://localhost:5005** (or …/inspect.html) in your browser. Test as above.
+Use the same steps as Part 1. From the project root, activate the venv, then `cd level3`. Run `python -m rasa inspect --debug`, then open **http://localhost:5005** (or …/inspect.html) in your browser. Test as above.
 
 You can use the debug panel in Inspector to see slot values if you want to explore further.
 
