@@ -25,38 +25,3 @@ Follow the same logic as Part 1, but use your own terminal and OS-specific comma
 7. **Verify.** A new `.tar.gz` file appears in `level3/models/`.
 
 You're done when training completes with no errors and a new model file appears in `models/`.
-
----
-
-## Check Your Knowledge
-
-**1. From which folder should you run `python -m rasa train`?**
-
-a) Project root (the folder with `level1`, `level2`, `level3`)  
-b) `level3` (the folder with `config.yml`, `domain/`, `data/`)  
-c) `level3/models`  
-d) `level3/data`  
-
-**2. How do you confirm that training succeeded?**
-
-a) The terminal shows "Successfully saved model to 'models/...'"  
-b) A new `.tar.gz` file appears in `level3/models/`  
-c) Both a and b  
-d) The Rasa Inspect tab opens automatically  
-
-**3. If you get "No module 'rasa'", what is the most likely fix?**
-
-a) Run `pip install rasa-pro`  
-b) Activate the virtual environment from the project root, then `cd level3`  
-c) Check that `config.yml` exists  
-d) Reboot Codio  
-
----
-
-### Answer Key
-
-| Q | Answer | Brief explanation |
-|---|--------|-------------------|
-| 1 | **b** | You must run `rasa train` from the `level3` folder where `config.yml` and the domain/data live. |
-| 2 | **c** | Both the terminal message and the new model file in `models/` confirm success. |
-| 3 | **b** | Rasa is installed in the venv; activate it from the project root, then navigate to `level3`. |
