@@ -16,7 +16,7 @@ This assessment verifies that the student has created `level3/data/basics/check_
 
 ### Assessment Type
 
-**LLM Rubric Autograde** (recommended) or **Standard Code Test** (Bash script).
+**LLM Rubric Autograde** (recommended) or **Standard Code Test** (Python script).
 
 ---
 
@@ -82,29 +82,33 @@ Configure the assessment so the LLM can read:
 
 ---
 
-### Option B: Standard Code Test (Bash script)
+### Option B: Standard Code Test (Python script)
 
-Use a Bash grader for faster feedback. The script runs from workspace root, changes to `level3`, and checks: `data/basics/check_balance.yml` exists; file has valid YAML with a flow containing `collect: account` and `action: action_check_balance_simple`. On full score it prints `PASS` and `Successfully passed!`; otherwise `FAIL` and exit 1. Suggested total: 8 points.
+Use a Python grader for faster feedback. The script checks `level3/data/basics/check_balance.yml` for: file exists; valid YAML with a top-level `flows:` section; at least one flow with `name` and `steps`; at least one step with `collect: account`; at least one step with `action: action_check_balance_simple`. Total: 8 points. On full score it prints `PASS` and `Successfully passed!`; otherwise `FAIL` and exit 1.
 
 **Grader script location (in repo):**
 
 ```
-.guides/assessments/level3_graders/lab_5.1_grader.sh
+.guides/assessments/level3_graders/lab_5.1_grader.py
 ```
 
 **Codio configuration (Standard Code Test):**
 
 1. **Assessment** – Add assessment, then **Code Test** → **Standard Code Test**.
 2. **Execution**:
-   - **COMMAND:** `bash /home/codio/workspace/.guides/assessments/level3_graders/lab_5.1_grader.sh`
-   - **PRE-EXEC COMMAND:** Leave **empty** (script uses bash and does not require the venv).
+   - **COMMAND (recommended):** Use the project venv’s Python so PyYAML is available:  
+     `/home/codio/workspace/.venv/bin/python3 /home/codio/workspace/.guides/assessments/level3_graders/lab_5.1_grader.py`  
+     Leave **Pre-Exec** empty when using this.  
+     **Alternative:** If your Codio image has PyYAML for `python3`:  
+     `python3 /home/codio/workspace/.guides/assessments/level3_graders/lab_5.1_grader.py`
+   - **PRE-EXEC COMMAND:** Leave **empty** when using the venv Python path in COMMAND. Using the venv’s interpreter in COMMAND ensures PyYAML is available without relying on pre-exec or shell activation.
    - **Working Directory:** `/home/codio/workspace`
    - **Timeout:** `60` seconds
 3. **Grading** tab:
-   - **Points:** Set to **8** (or match your course scale). Enable **Allow partial points** if the script supports it.
-   - **Add item to check / Test case:** Add one test case. Leave **INPUT - ARGUMENTS** and **INPUT - STDIN** empty. In **EXPECTED OUTPUT**, enter: `PASS` (or the exact success phrase the script prints, e.g. `Successfully passed!`).
-   - **SHOW RATIONALE TO STUDENT:** Recommended: **AFTER [1] ATTEMPTS** (or **ALWAYS**). Set the number to 1 if using "AFTER … ATTEMPTS".
-   - **RATIONALE** (text box): Paste or type what the grader checks. Example:
-     > The grader checks that `level3/data/basics/check_balance.yml` exists, has valid YAML with a flow that includes **collect: account** and **action: action_check_balance_simple**. Review the script output to see which check failed.
-   - **SHOW EXPECTED ANSWER:** Optional; **When grades are released** or **Always** if you want students to see the expected output.
-4. **Files.** The script lives in the repo at `.guides/assessments/level3_graders/lab_5.1_grader.sh`. Do not upload it; run it from the workspace so `git pull` keeps the grader in sync. From workspace root: `chmod +x .guides/assessments/level3_graders/lab_5.1_grader.sh` if needed.
+   - **Points:** Set to **8** (or match your course scale). Enable **Allow partial points** if you want partial credit for partial checks.
+   - **Add item to check / Test case:** One test case. Leave **INPUT - ARGUMENTS** and **INPUT - STDIN** empty. **EXPECTED OUTPUT:** `PASS`. **Enable substring match** so Codio passes when `PASS` appears in the output (the script prints detailed check lines before `PASS`).
+   - **SHOW RATIONALE TO STUDENT:** Recommended **AFTER [1] ATTEMPTS** (or **ALWAYS**). Set the number to 1 if using "AFTER … ATTEMPTS".
+   - **RATIONALE** (text box): Example:
+     > The grader checks that `level3/data/basics/check_balance.yml` exists, has valid YAML with a **flows:** section, at least one flow with **name** and **steps**, a step with **collect: account**, and a step with **action: action_check_balance_simple**. Review the script output to see which check failed.
+   - **SHOW EXPECTED ANSWER:** Optional; **When grades are released** or **Always**.
+4. **Files.** The script lives in the repo at `.guides/assessments/level3_graders/lab_5.1_grader.py`. Do not upload it; run it from the workspace so `git pull` keeps the grader in sync. The script requires Python 3 and PyYAML; use the venv’s Python in COMMAND for consistency.

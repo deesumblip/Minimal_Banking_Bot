@@ -56,7 +56,7 @@ Use a Python grader for faster feedback. The script checks `level3/actions/actio
    - **Timeout:** `60` seconds
 3. **Grading** tab:
    - **Points:** Set to **10**. Enable **Allow partial points** if you want partial credit for partial checks.
-   - **Add item to check / Test case:** One test case. Leave **INPUT - ARGUMENTS** and **INPUT - STDIN** empty. **EXPECTED OUTPUT:** `PASS`.
+   - **Add item to check / Test case:** One test case. Leave **INPUT - ARGUMENTS** and **INPUT - STDIN** empty. **EXPECTED OUTPUT:** `PASS`. **Enable substring match** so Codio passes when `PASS` appears in the output (the script prints detailed check lines before `PASS`).
    - **SHOW RATIONALE TO STUDENT:** Recommended **AFTER [1] ATTEMPTS** (or **ALWAYS**). Set the number to 1 if using "AFTER … ATTEMPTS".
    - **RATIONALE** (text box): Example:
      > The grader checks that `level3/actions/action_check_balance_simple.py` exists and contains: correct imports, class **ActionCheckBalanceSimple(Action)**, **name()** returning **"action_check_balance_simple"**, **run()** reading the account slot, a placeholder check, re-prompt with **utter_ask_account** when the slot is a placeholder, and a balance message otherwise. Follow the lab steps and review the script output for which check failed.
