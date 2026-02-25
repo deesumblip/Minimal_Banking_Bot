@@ -1,20 +1,11 @@
-Training with slots is similar to Level 2. Rasa now also processes slot definitions.
+Training with slots is similar to Level 2: you run `rasa train` from the `level3` folder so Rasa builds a model. The difference is what Rasa includes in that model.
 
-## Training Command
+## What Rasa does when you train (Level 3)
 
-From the **project root**, activate the virtual environment, then go to `level3` and run:
+Rasa reads your **slot definitions** from `domain/basics.yml` and checks that slot types and structure are valid. It processes your **flows** and any steps that use `collect:` so it knows which slots to fill and in what order. It also checks that each collected slot has a matching **response** (e.g. `utter_ask_account` for the `account` slot). When everything is consistent, it produces a model that knows about your slots, flows, and actions—so at runtime the bot can collect slot values and call your custom action with the right data.
 
-```bash
-cd level3
-python -m rasa train
-```
+So training with slots is still "run training from level3"; the extra step is that the model now encodes slot collection and how it ties to your domain and flows.
 
-On Codio the terminal opens at `~/workspace`. Run `source .venv/bin/activate` then `cd level3` before the command above.
+## What's coming up
 
-## What Happens During Training
-
-Rasa reads slot definitions from `domain/basics.yml`, validates slot types and structure, processes flows with `collect:` steps, ensures `utter_ask_*` responses exist for collected slots, and creates a model with slot information.
-
-Wait for "Successfully saved model". A new `.tar.gz` file will appear in `level3/models/`.
-
-You'll do the training in **Lab 6.1** (Part 1 or Part 2), then run the assessment when done.
+In **Lab 6.1** you'll run the training (with step-by-step instructions for Codio and for running locally), verify the model was saved, and run the assessment. After that, **6.2** and the rest of the unit cover testing slot collection and understanding slot state so you can debug and improve the bot.
