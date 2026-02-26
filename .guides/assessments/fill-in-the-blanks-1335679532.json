@@ -1,0 +1,62 @@
+{
+	"type": "fill-in-the-blanks",
+	"taskId": "fill-in-the-blanks-1335679532",
+	"source": {
+		"name": "Understanding Rasa Actions Folder Structure",
+		"showName": true,
+		"instructions": "**Fill in the blanks to complete the statements about the Rasa actions folder structure.**",
+		"showValues": true,
+		"text": "* The <<<actions>>> folder contains all custom action files for a Rasa project\n* The file <<<__init__.py>>> is required to make the folder a Python package so Rasa can find your actions\n* In a custom action file like `action_bank_hours.py`, each action must define a <<<name()>>> method that returns a unique identifier\n* The <<<run()>>> method contains the actual functionality that executes when the action is triggered",
+		"distractors": "execute()\nidentifier()\nhandlers\nmodules",
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Fill in the Blanks"
+				}
+			],
+			"files": [],
+			"opened": [
+				{
+					"type": "terminal",
+					"panelNumber": 0,
+					"content": ""
+				}
+			]
+		},
+		"bloomsObjectiveLevel": "",
+		"learningObjectives": "",
+		"guidance": "The correct answers reflect the standard Rasa actions folder structure:\n\n* The 'actions' folder is where all custom action files are stored in a Rasa project\n* The '__init__.py' file is necessary to make the folder a Python package that Rasa can recognize and import\n* Every custom action class must implement a 'name()' method that returns a unique string identifier\n* The 'run()' method contains the code that executes when the action is triggered by the conversation",
+		"showGuidanceAfterResponseOption": {
+			"type": "Attempts",
+			"passedFrom": 1
+		},
+		"maxAttemptsCount": 1,
+		"showExpectedAnswerOption": {
+			"type": "Always"
+		},
+		"points": 20,
+		"arePartialPointsAllowed": false,
+		"useMaximumScore": false,
+		"tokens": {
+			"blank": [
+				"actions",
+				"__init__.py",
+				"name()",
+				"run()"
+			],
+			"text": [
+				"* The ",
+				0,
+				" folder contains all custom action files for a Rasa project\n* The file ",
+				0,
+				" is required to make the folder a Python package so Rasa can find your actions\n* In a custom action file like `action_bank_hours.py`, each action must define a ",
+				0,
+				" method that returns a unique identifier\n* The ",
+				0,
+				" method contains the actual functionality that executes when the action is triggered"
+			],
+			"regexPositions": []
+		}
+	}
+}

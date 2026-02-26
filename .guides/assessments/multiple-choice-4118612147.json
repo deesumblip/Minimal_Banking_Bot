@@ -1,0 +1,64 @@
+{
+	"type": "multiple-choice",
+	"taskId": "multiple-choice-4118612147",
+	"source": {
+		"name": "8.1 purpose of flow descriptions",
+		"showName": false,
+		"instructions": "**What is the purpose of flow descriptions?**",
+		"multipleResponse": false,
+		"isRandomized": false,
+		"answers": [
+			{
+				"_id": "af39c28b-9957-2024-7e8c-fbd6a3b418c9",
+				"correct": false,
+				"answer": "Comments for developers"
+			},
+			{
+				"_id": "3682753e-77bd-a250-f8b6-40d9f5288105",
+				"correct": true,
+				"answer": "The LLM uses them to match user messages to flows"
+			},
+			{
+				"_id": "04e26715-283c-1279-2768-4df44623e6b2",
+				"correct": false,
+				"answer": "Required for YAML"
+			},
+			{
+				"_id": "ebac3b9f-4099-7b5a-5777-dac1ea591753",
+				"correct": false,
+				"answer": "Displayed to users"
+			}
+		],
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Multiple Choice"
+				}
+			],
+			"files": [],
+			"opened": [
+				{
+					"type": "terminal",
+					"panelNumber": 1,
+					"content": ""
+				}
+			]
+		},
+		"bloomsObjectiveLevel": "2",
+		"learningObjectives": "SWBAT identify the purpose of flow descriptions",
+		"guidance": "The correct answer is that the LLM uses flow descriptions to match user messages to flows. Flow descriptions serve as guidance for the language model to understand which flow should be triggered based on user input, making them a crucial component for proper flow routing rather than just documentation or user-facing content.",
+		"showGuidanceAfterResponseOption": {
+			"type": "Attempts",
+			"passedFrom": 1
+		},
+		"maxAttemptsCount": 1,
+		"showExpectedAnswerOption": {
+			"type": "Always"
+		},
+		"points": 20,
+		"incorrectPoints": 0,
+		"arePartialPointsAllowed": false,
+		"useMaximumScore": false
+	}
+}

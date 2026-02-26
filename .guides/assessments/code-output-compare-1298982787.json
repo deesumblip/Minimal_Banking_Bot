@@ -1,0 +1,58 @@
+{
+	"type": "code-output-compare",
+	"taskId": "code-output-compare-1298982787",
+	"source": {
+		"name": "Lab 3.1: Create Your Own Action",
+		"showName": true,
+		"instructions": "After you've completed the steps above, run the assessment here to see if you've completed it correctly!",
+		"command": "bash /home/codio/workspace/.guides/assessments/level2_graders/lab_3.1_grader.sh",
+		"preExecuteCommand": "cd /home/codio/workspace/level2",
+		"options": {
+			"timeout": 60,
+			"ignoreCase": true,
+			"ignoreWhitespaces": true,
+			"ignoreNewline": true,
+			"matchSubstring": false
+		},
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Standard Code Test"
+				}
+			],
+			"files": [
+				".guides/assessments/level2_graders/lab_3.1_grader.sh"
+			],
+			"opened": [
+				{
+					"type": "terminal",
+					"panelNumber": 1,
+					"content": ""
+				}
+			]
+		},
+		"bloomsObjectiveLevel": "",
+		"learningObjectives": "",
+		"guidance": "",
+		"showGuidanceAfterResponseOption": {
+			"type": "Never"
+		},
+		"maxAttemptsCount": 0,
+		"points": 12,
+		"showExpectedAnswerOption": {
+			"type": "Always"
+		},
+		"arePartialPointsAllowed": true,
+		"useMaximumScore": false,
+		"sequence": [
+			{
+				"arguments": "",
+				"input": "",
+				"output": "",
+				"showFeedback": false,
+				"feedback": ""
+			}
+		]
+	}
+}

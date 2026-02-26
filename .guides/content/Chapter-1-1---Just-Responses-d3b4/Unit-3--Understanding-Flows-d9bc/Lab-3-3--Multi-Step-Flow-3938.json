@@ -1,0 +1,19 @@
+{
+	"id": "3938a3e7-f257-a8e5-a260-98b2e0a7125a",
+	"title": "Lab 3.3: Multi-Step Flow",
+	"files": [
+		{
+			"path": "#tabs",
+			"action": "close"
+		}
+	],
+	"layout": "2-panels-tree-guides-left",
+	"path": [
+		"level1"
+	],
+	"type": "page",
+	"contentType": "markdown",
+	"teacherOnly": false,
+	"closeTerminalSession": true,
+	"learningObjectives": ""
+}

@@ -1,0 +1,37 @@
+{
+	"type": "llm-based-auto-rubric",
+	"taskId": "llm-based-auto-rubric-1348023599",
+	"source": {
+		"name": "Create New Flows",
+		"showName": true,
+		"instructions": "Create 2 new flow files in the data/basics/ folder:\n1. hours.yml - A flow that provides bank hours\n2. balance.yml - A flow that explains how to check account balance\n\nYou can use greet.yml or goodbye.yml as templates for the structure.\n\nEach flow must have:\n- Proper flow structure (flows: section, flow name, name:, description:, steps:)\n- A clear, specific description (at least 20 characters, action-oriented)\n- At least one step with an action\n- Correct YAML syntax and indentation (2 spaces)\n- Unique descriptions (different from each other and from other flows)",
+		"metadata": {
+			"tags": [],
+			"files": [],
+			"opened": []
+		},
+		"bloomsObjectiveLevel": "",
+		"learningObjectives": "",
+		"guidance": "",
+		"showGuidanceAfterResponseOption": {
+			"type": "Always"
+		},
+		"maxAttemptsCount": 0,
+		"points": 8,
+		"arePartialPointsAllowed": true,
+		"rubrics": [
+			{
+				"id": "1",
+				"title": "Assessing the New Flows",
+				"description": "Requirements Checklist (all must be met):\n\n**Reference**: Use data/basics/greet.yml or data/basics/goodbye.yml as templates for structure and formatting.\n\n1. File Location and Existence:\n   - File data/basics/hours.yml exists in /home/codio/workspace/level1/\n   - File data/basics/balance.yml exists in /home/codio/workspace/level1/\n   - Both files are valid YAML (no syntax errors, parses correctly)\n   - Both files are in correct location (data/basics/, not data/ root)\n\n2. Flow Structure (hours.yml):\n   - File contains a flows: section (top level, no indentation)\n   - Flow named \"hours\" exists under flows: section\n   - Flow is properly indented (hours: is 2 spaces from left margin)\n   - Flow has a \"name\" field (e.g., name: bank hours)\n   - Flow has a \"description\" field (non-empty, descriptive text)\n   - Flow has a \"steps\" field (list of actions)\n   - All fields are properly indented (4 spaces from left margin, under hours:)\n\n3. Flow Structure (balance.yml):\n   - File contains a flows: section (top level, no indentation)\n   - Flow named \"balance\" exists under flows: section\n   - Flow is properly indented (balance: is 2 spaces from left margin)\n   - Flow has a \"name\" field (e.g., name: balance help)\n   - Flow has a \"description\" field (non-empty, descriptive text)\n   - Flow has a \"steps\" field (list of actions)\n   - All fields are properly indented (4 spaces from left margin, under balance:)\n\n4. Steps Sections:\n   - hours.yml steps: section contains at least one action\n   - balance.yml steps: section contains at least one action\n   - Each action format is correct: \"- action: utter_X\"\n   - Actions are properly indented (6 spaces from left margin, under steps:)\n   - Actions reference existing responses in domain/basics.yml (or student may need to create them)\n\n5. Description Quality (CRITICAL - This is the main learning objective):\n   - hours.yml description is non-empty and at least 20 characters long\n   - balance.yml description is non-empty and at least 20 characters long\n   - hours.yml description is specific (explains what the flow does, not vague like \"help user\")\n   - balance.yml description is specific (explains what the flow does, not vague like \"help user\")\n   - hours.yml description is action-oriented (uses verbs like \"tell\", \"explain\", \"provide\")\n   - balance.yml description is action-oriented (uses verbs like \"tell\", \"explain\", \"provide\")\n   - hours.yml description includes context (when/why the flow triggers, what it accomplishes)\n   - balance.yml description includes context (when/why the flow triggers, what it accomplishes)\n   - Descriptions help LLM understand each flow's purpose (clear enough for matching)\n   - Descriptions avoid being too vague (not just \"help\" or \"information\")\n   - Descriptions avoid being too specific about exact user phrases (focus on what, not how user asks)\n\n6. Description Uniqueness:\n   - hours.yml description is unique (different from balance.yml description)\n   - balance.yml description is unique (different from hours.yml description)\n   - Both descriptions are different from other existing flow descriptions (greet.yml, goodbye.yml, etc.)\n   - Each description is tailored to its flow's specific purpose\n\n7. YAML Syntax and Indentation:\n   - Uses exactly 2 spaces for indentation (not tabs, not 4 spaces)\n   - flows: is at left margin (0 spaces)\n   - Flow names (hours:, balance:) are indented 2 spaces\n   - name:/description:/steps: are indented 4 spaces\n   - - action: items are indented 6 spaces\n   - No tabs used anywhere\n   - Overall indentation pattern matches template files (greet.yml, goodbye.yml)\n\nGrading: Award full points (8) if all requirements are met, especially description quality and uniqueness. Descriptions must be specific, action-oriented, and helpful for LLM matching. Deduct points for missing files, missing descriptions, vague descriptions (like \"help user\"), duplicate descriptions, incorrect structure, or syntax errors.",
+				"points": 8
+			}
+		],
+		"solutions": [
+			{
+				"path": "level1/data/basics/greet.yml",
+				"content": "flows:\n  greet:\n    name: say hello\n    description: Greet the user when they start a conversation.\n    steps:\n      - action: utter_greet\n      - action: utter_help"
+			}
+		]
+	}
+}

@@ -1,0 +1,59 @@
+{
+	"type": "code-output-compare",
+	"taskId": "code-output-compare-1597644299",
+	"source": {
+		"name": "Lab 4.2: Multiple Actions",
+		"showName": true,
+		"instructions": "Verify that both actions are registered in the domain (same verification as Lab 4.1); optional Inspector steps are ungraded.",
+		"command": "bash /home/codio/workspace/.guides/assessments/level2_graders/lab_4.2_grader.sh",
+		"preExecuteCommand": "",
+		"options": {
+			"timeout": 60,
+			"ignoreCase": true,
+			"ignoreWhitespaces": true,
+			"ignoreNewline": true,
+			"matchSubstring": true
+		},
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Standard Code Test"
+				}
+			],
+			"files": [
+				".guides/assessments/level2_graders/lab_4.1_grader.sh",
+				".guides/assessments/level2_graders/lab_4.2_grader.sh"
+			],
+			"opened": [
+				{
+					"type": "terminal",
+					"panelNumber": 1,
+					"content": ""
+				}
+			]
+		},
+		"bloomsObjectiveLevel": "",
+		"learningObjectives": "",
+		"guidance": "Lab 4.2 assessment reuses Lab 4.1 verification (both actions registered). Optional Inspector review is not graded.",
+		"showGuidanceAfterResponseOption": {
+			"type": "Never"
+		},
+		"maxAttemptsCount": 0,
+		"points": 11,
+		"showExpectedAnswerOption": {
+			"type": "Always"
+		},
+		"arePartialPointsAllowed": true,
+		"useMaximumScore": false,
+		"sequence": [
+			{
+				"arguments": "",
+				"input": "",
+				"output": "PASS: Action registration verification complete!",
+				"showFeedback": false,
+				"feedback": ""
+			}
+		]
+	}
+}

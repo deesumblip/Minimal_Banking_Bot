@@ -1,0 +1,58 @@
+{
+	"type": "multiple-choice",
+	"taskId": "multiple-choice-1336213773",
+	"source": {
+		"name": "Session Start Pattern Modification",
+		"showName": true,
+		"instructions": "**A chatbot needs to be updated to provide contact information after greeting users. What is the correct YAML code to modify the `pattern_session_start` to accomplish this?**",
+		"multipleResponse": false,
+		"isRandomized": true,
+		"answers": [
+			{
+				"_id": "2b295ffb-9fae-708a-1f0e-a5bc8c8f2306",
+				"correct": true,
+				"answer": "```yaml-hide-clipboard\npattern_session_start:\n  description: Start the conversation with a greeting\n  name: pattern session start\n  nlu_trigger:\n    - intent: session_start\n  steps:\n    - action: utter_greet\n    - action: utter_contact\n```"
+			},
+			{
+				"_id": "e1feb324-1364-b811-51e4-902f46686c19",
+				"correct": false,
+				"answer": "```yaml-hide-clipboard\npattern_session_start:\n  description: Start the conversation with a greeting\n  name: pattern session start\n  nlu_trigger:\n    - intent: session_start\n  steps:\n    - action: utter_greet, utter_contact\n```"
+			},
+			{
+				"_id": "03006076-683f-1749-2860-448b2b7bf884",
+				"correct": false,
+				"answer": "```yaml-hide-clipboard\npattern_session_start:\n  description: Start the conversation with a greeting\n  name: pattern session start\n  nlu_trigger:\n    - intent: session_start\n  actions:\n    - utter_greet\n    - utter_contact\n```"
+			},
+			{
+				"_id": "4767e7d0-7431-cfac-f75a-7e72044b50f0",
+				"correct": false,
+				"answer": "```yaml-hide-clipboard\npattern_session_start:\n  description: Start the conversation with a greeting\n  name: pattern session start\n  nlu_trigger:\n    - intent: session_start\n  step:\n    action: utter_greet\n  step:\n    action: utter_contact\n```"
+			}
+		],
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Multiple Choice"
+				}
+			],
+			"files": [],
+			"opened": []
+		},
+		"bloomsObjectiveLevel": "3",
+		"learningObjectives": "SWBAT modify patterns to include multiple actions in sequence",
+		"guidance": "The correct answer shows the proper YAML structure for a pattern with multiple steps. Each step is listed under the `steps` key with its own `action:` prefix. The incorrect options contain syntax errors such as using commas between actions (which is invalid), using `actions` instead of `steps` (wrong key name), or incorrectly structuring multiple steps with repeated `step` keys (which would override each other).",
+		"showGuidanceAfterResponseOption": {
+			"type": "Attempts",
+			"passedFrom": 1
+		},
+		"maxAttemptsCount": 1,
+		"showExpectedAnswerOption": {
+			"type": "Always"
+		},
+		"points": 20,
+		"incorrectPoints": 0,
+		"arePartialPointsAllowed": false,
+		"useMaximumScore": false
+	}
+}

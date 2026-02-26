@@ -1,0 +1,58 @@
+{
+	"type": "multiple-choice",
+	"taskId": "multiple-choice-2127773159",
+	"source": {
+		"name": "1.4 Test Your Knowledge - Rasa Actions",
+		"showName": false,
+		"instructions": "**What happens when a user message triggers a flow that includes an action in Rasa?**",
+		"multipleResponse": false,
+		"isRandomized": false,
+		"answers": [
+			{
+				"_id": "7b248de8-39e7-9a63-9c63-6c0b0a0839a5",
+				"correct": false,
+				"answer": "Rasa executes the action's run() method directly from the flow file"
+			},
+			{
+				"_id": "9047fdb5-b50e-afb3-151f-7e1dd67b5f04",
+				"correct": true,
+				"answer": "Rasa finds the action class in the actions/ folder, executes its run() method, and the action uses the dispatcher to respond"
+			},
+			{
+				"_id": "aa206732-cc34-8345-a08c-13097c6cad76",
+				"correct": false,
+				"answer": "The flow automatically sends a predefined response without executing any Python code"
+			},
+			{
+				"_id": "729fa260-6a41-529a-7590-abd4ae37ad0c",
+				"correct": false,
+				"answer": "Rasa converts the action into a template and looks for a matching response in domain.yml"
+			}
+		],
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Multiple Choice"
+				}
+			],
+			"files": [],
+			"opened": []
+		},
+		"bloomsObjectiveLevel": "3",
+		"learningObjectives": "SWBAT describe the execution flow when Rasa calls an action",
+		"guidance": "When a flow includes an action step, Rasa looks for the corresponding Python class in the actions/ folder. It then executes that action's run() method, where you can write custom logic in Python. The action can use the dispatcher.utter_message() method to send dynamic responses back to the user. This is different from template responses which are predefined in domain.yml. The action execution happens outside the flow file - the flow just specifies which action to call.",
+		"showGuidanceAfterResponseOption": {
+			"type": "Attempts",
+			"passedFrom": 1
+		},
+		"maxAttemptsCount": 1,
+		"showExpectedAnswerOption": {
+			"type": "Always"
+		},
+		"points": 20,
+		"incorrectPoints": 0,
+		"arePartialPointsAllowed": false,
+		"useMaximumScore": false
+	}
+}

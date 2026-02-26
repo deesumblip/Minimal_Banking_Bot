@@ -1,0 +1,64 @@
+{
+	"type": "multiple-choice",
+	"taskId": "multiple-choice-1467966759",
+	"source": {
+		"name": "Lab 7.1 conversation flows location",
+		"showName": false,
+		"instructions": "**Where do user-facing conversation flows (e.g. greet, help, contact) live in the Level 1 project?**",
+		"multipleResponse": false,
+		"isRandomized": false,
+		"answers": [
+			{
+				"_id": "7286a46f-60b3-7755-0034-f44402314e32",
+				"correct": false,
+				"answer": "level1/domain/"
+			},
+			{
+				"_id": "156bfa36-fb2d-6ae4-897c-c9fce1955b07",
+				"correct": true,
+				"answer": "level1/data/basics/"
+			},
+			{
+				"_id": "99c33e89-cb34-2feb-ab73-3ccb8da54cd4",
+				"correct": false,
+				"answer": "level1/data/system/patterns/"
+			},
+			{
+				"_id": "4468e4cc-2f1d-1a64-04b2-d6a55755fb24",
+				"correct": false,
+				"answer": "level1/models/"
+			}
+		],
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Multiple Choice"
+				}
+			],
+			"files": [],
+			"opened": [
+				{
+					"type": "terminal",
+					"panelNumber": 1,
+					"content": ""
+				}
+			]
+		},
+		"bloomsObjectiveLevel": "1",
+		"learningObjectives": "SWBAT identify where user-facing conversation flows are located in the Level 1 project structure",
+		"guidance": "The correct answer is level1/data/basics/. User-facing flows are stored in the data/basics/ directory (e.g. greet.yml, help.yml, contact.yml, goodbye.yml). The other directories serve different purposes: data/system/patterns/ contains system patterns, domain/ holds responses, and models/ contains generated files.",
+		"showGuidanceAfterResponseOption": {
+			"type": "Attempts",
+			"passedFrom": 1
+		},
+		"maxAttemptsCount": 1,
+		"showExpectedAnswerOption": {
+			"type": "Always"
+		},
+		"points": 20,
+		"incorrectPoints": 0,
+		"arePartialPointsAllowed": false,
+		"useMaximumScore": false
+	}
+}

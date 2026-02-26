@@ -1,0 +1,19 @@
+{
+	"id": "dd5b86cb-9bc5-dc10-3c39-39cc03669055",
+	"title": "4.1 What are System Patterns?",
+	"files": [
+		{
+			"path": "#tabs",
+			"action": "close"
+		}
+	],
+	"layout": "1-panel-tree",
+	"path": [
+		"level1"
+	],
+	"type": "page",
+	"contentType": "markdown",
+	"teacherOnly": false,
+	"closeTerminalSession": true,
+	"learningObjectives": ""
+}

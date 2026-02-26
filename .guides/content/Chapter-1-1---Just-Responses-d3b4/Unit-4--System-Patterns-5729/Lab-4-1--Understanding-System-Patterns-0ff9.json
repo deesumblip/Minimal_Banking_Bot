@@ -1,0 +1,24 @@
+{
+	"id": "0ff96b69-eeba-00bb-fa96-10457caeef7c",
+	"title": "Lab 4.1: Understanding System Patterns",
+	"files": [
+		{
+			"path": "#tabs",
+			"action": "close"
+		},
+		{
+			"path": "",
+			"panel": 1,
+			"action": "open"
+		}
+	],
+	"layout": "2-panels-tree-guides-left",
+	"path": [
+		"level1"
+	],
+	"type": "page",
+	"contentType": "markdown",
+	"teacherOnly": false,
+	"closeTerminalSession": true,
+	"learningObjectives": ""
+}

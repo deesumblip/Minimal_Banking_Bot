@@ -1,0 +1,24 @@
+{
+	"id": "af70279e-5814-eaf6-f732-578c005dc6c2",
+	"title": "3.2 Flow Structure Deep Dive",
+	"files": [
+		{
+			"path": "#tabs",
+			"action": "close"
+		},
+		{
+			"path": "level1/data/basics/greet.yml",
+			"panel": 1,
+			"action": "open"
+		}
+	],
+	"layout": "2-panels-tree-guides-left",
+	"path": [
+		"level1"
+	],
+	"type": "page",
+	"contentType": "markdown",
+	"teacherOnly": false,
+	"closeTerminalSession": true,
+	"learningObjectives": ""
+}

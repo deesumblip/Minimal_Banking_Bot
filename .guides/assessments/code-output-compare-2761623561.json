@@ -1,0 +1,52 @@
+{
+	"type": "code-output-compare",
+	"taskId": "code-output-compare-2761623561",
+	"source": {
+		"name": "Lab 3.1: Create Your Own Action",
+		"showName": true,
+		"instructions": "Verify that you can create action_holiday_hours.py with correct structure and date-based logic.",
+		"command": "bash /home/codio/workspace/.guides/assessments/level2_graders/lab_3.1_grader.sh",
+		"preExecuteCommand": "cd /home/codio/workspace/level2",
+		"options": {
+			"timeout": 30,
+			"ignoreCase": true,
+			"ignoreWhitespaces": true,
+			"ignoreNewline": true,
+			"matchSubstring": true
+		},
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Standard Code Test"
+				}
+			],
+			"files": [
+				".guides/assessments/level2_graders/lab_3.1_grader.sh"
+			],
+			"opened": []
+		},
+		"bloomsObjectiveLevel": "",
+		"learningObjectives": "",
+		"guidance": "The grader checks only what the lab instructs: action file in actions/, correct imports (including datetime), class ActionHolidayHours(Action), name() returning 'action_holiday_hours’, and run() calling dispatcher.utter_message() and returning [].",
+		"showGuidanceAfterResponseOption": {
+			"type": "Never"
+		},
+		"maxAttemptsCount": 0,
+		"points": 8,
+		"showExpectedAnswerOption": {
+			"type": "Always"
+		},
+		"arePartialPointsAllowed": true,
+		"useMaximumScore": false,
+		"sequence": [
+			{
+				"arguments": "",
+				"input": "",
+				"output": "PASS: Action creation verification complete!",
+				"showFeedback": false,
+				"feedback": ""
+			}
+		]
+	}
+}

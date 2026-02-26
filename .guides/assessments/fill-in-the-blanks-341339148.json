@@ -1,0 +1,53 @@
+{
+	"type": "fill-in-the-blanks",
+	"taskId": "fill-in-the-blanks-341339148",
+	"source": {
+		"name": "Lab 2.1 Exploring the Actions Folder - Rasa Actions Module Usage",
+		"showName": false,
+		"instructions": "**Fill in the blank to complete the statement about the Rasa custom action code.**",
+		"showValues": true,
+		"text": "The action uses the <<<datetime>>> module to check the current day of the week.",
+		"distractors": "time\ndate\ncalendar",
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Fill in the Blanks"
+				}
+			],
+			"files": [],
+			"opened": [
+				{
+					"type": "terminal",
+					"panelNumber": 1,
+					"content": ""
+				}
+			]
+		},
+		"bloomsObjectiveLevel": "",
+		"learningObjectives": "",
+		"guidance": "In the action_bank_hours.py file, the datetime module is imported and used to determine the current day of the week with statements like datetime.datetime.now().weekday() to implement the logic for bank hours.",
+		"showGuidanceAfterResponseOption": {
+			"type": "Attempts",
+			"passedFrom": 1
+		},
+		"maxAttemptsCount": 1,
+		"showExpectedAnswerOption": {
+			"type": "Always"
+		},
+		"points": 20,
+		"arePartialPointsAllowed": false,
+		"useMaximumScore": false,
+		"tokens": {
+			"blank": [
+				"datetime"
+			],
+			"text": [
+				"The action uses the ",
+				0,
+				" module to check the current day of the week."
+			],
+			"regexPositions": []
+		}
+	}
+}

@@ -1,0 +1,64 @@
+{
+	"type": "multiple-choice",
+	"taskId": "multiple-choice-2166712724",
+	"source": {
+		"name": "8.1 rephrase functionality",
+		"showName": false,
+		"instructions": "**What does `rephrase: true` do?**",
+		"multipleResponse": false,
+		"isRandomized": true,
+		"answers": [
+			{
+				"_id": "ff8faf74-a016-dbc4-4c5e-9eb4c205e29b",
+				"correct": false,
+				"answer": "Makes the bot remember"
+			},
+			{
+				"_id": "9ea7bc3b-26d7-3d9e-2f0c-f451c354069a",
+				"correct": true,
+				"answer": "Allows the LLM to vary the wording of responses"
+			},
+			{
+				"_id": "3af6965f-614c-0e00-533e-b38c4d5ee7d2",
+				"correct": false,
+				"answer": "Forces exact text"
+			},
+			{
+				"_id": "5c0b6af2-3725-17b0-0ac9-06dab467bcf9",
+				"correct": false,
+				"answer": "Enables custom code"
+			}
+		],
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Multiple Choice"
+				}
+			],
+			"files": [],
+			"opened": [
+				{
+					"type": "terminal",
+					"panelNumber": 1,
+					"content": ""
+				}
+			]
+		},
+		"bloomsObjectiveLevel": "2",
+		"learningObjectives": "SWBAT identify the purpose of the rephrase parameter in bot configuration",
+		"guidance": "The correct answer is \"Allows the LLM to vary the wording of responses.\" The `rephrase: true` parameter enables the LLM to dynamically adjust the wording of responses while maintaining the same meaning, providing more natural and varied interactions. The other options are incorrect: it doesn't affect memory functions, doesn't force exact text reproduction, and doesn't enable custom code functionality.",
+		"showGuidanceAfterResponseOption": {
+			"type": "Attempts",
+			"passedFrom": 1
+		},
+		"maxAttemptsCount": 1,
+		"showExpectedAnswerOption": {
+			"type": "Always"
+		},
+		"points": 20,
+		"incorrectPoints": 0,
+		"arePartialPointsAllowed": false,
+		"useMaximumScore": false
+	}
+}

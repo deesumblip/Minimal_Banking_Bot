@@ -1,0 +1,24 @@
+{
+	"id": "d01d719a-c5b2-b4db-8afb-f5865ac22bf6",
+	"title": "4.5 Test Your Knowledge",
+	"files": [
+		{
+			"path": "#tabs",
+			"action": "close"
+		},
+		{
+			"path": "",
+			"panel": 1,
+			"action": "open"
+		}
+	],
+	"layout": "2-panels-tree-guides-left",
+	"path": [
+		"level1"
+	],
+	"type": "page",
+	"contentType": "markdown",
+	"teacherOnly": false,
+	"closeTerminalSession": true,
+	"learningObjectives": ""
+}

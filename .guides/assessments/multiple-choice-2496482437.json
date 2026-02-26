@@ -1,0 +1,58 @@
+{
+	"type": "multiple-choice",
+	"taskId": "multiple-choice-2496482437",
+	"source": {
+		"name": "Config File Purpose",
+		"showName": true,
+		"instructions": "**What is the primary purpose of the `config.yml` file in a Rasa bot project?**",
+		"multipleResponse": false,
+		"isRandomized": true,
+		"answers": [
+			{
+				"_id": "145b283b-8a8e-3f90-8542-32cc44e8a13e",
+				"correct": false,
+				"answer": "To define the user utterances the bot can understand"
+			},
+			{
+				"_id": "c785e095-062e-162c-ba2c-a8a6872198ae",
+				"correct": false,
+				"answer": "To store the conversation flows and bot responses"
+			},
+			{
+				"_id": "acc83b18-0e70-8579-646d-43cf799fa608",
+				"correct": false,
+				"answer": "To configure deployment settings for production"
+			},
+			{
+				"_id": "d141e240-f166-e54c-774d-93a3dd2c7c60",
+				"correct": true,
+				"answer": "To define how to build the bot, including the NLU pipeline and policies"
+			}
+		],
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Multiple Choice"
+				}
+			],
+			"files": [],
+			"opened": []
+		},
+		"bloomsObjectiveLevel": "3",
+		"learningObjectives": "SWBAT identify the purpose and components of the config.yml file in Rasa",
+		"guidance": "The `config.yml` file tells Rasa how to build the bot. As explained in the topic, it's like a blueprint that defines the bot's architecture. It contains settings for the recipe, language, assistant ID, the NLU pipeline (how the bot understands messages), and policies (how the bot decides what to do next). The other options refer to different files: user utterances and intents would be in training data files, conversation flows are in flows.yml, and deployment settings would be in separate configuration files.",
+		"showGuidanceAfterResponseOption": {
+			"type": "Attempts",
+			"passedFrom": 1
+		},
+		"maxAttemptsCount": 1,
+		"showExpectedAnswerOption": {
+			"type": "Always"
+		},
+		"points": 20,
+		"incorrectPoints": 0,
+		"arePartialPointsAllowed": false,
+		"useMaximumScore": false
+	}
+}

@@ -1,0 +1,83 @@
+{
+	"type": "fill-in-the-blanks",
+	"taskId": "fill-in-the-blanks-1423795845",
+	"source": {
+		"name": "Chapter 1.3 - Lab 4.1: Writing the Action That Uses the Slot",
+		"showName": false,
+		"instructions": "",
+		"showValues": true,
+		"text": "**Fill in the blanks below** to complete the custom action that reads a slot and handles placeholder values.\n\n```python\nfrom typing import <<<Any, Dict, List, Text>>>\n\nfrom rasa_sdk import Action, Tracker\nfrom rasa_sdk.executor import CollectingDispatcher\n\n\nclass ActionCheckBalanceSimple(<<<Action>>>):\n    \"\"\"A custom action that reads a slot and returns a balance.\n\n    - Reads the 'account' slot from conversation memory\n    - Re-prompts if the slot contains a placeholder (e.g. \"account number\", \"<missing>\")\n    - Otherwise sends a demo balance message\n    \"\"\"\n\n    def name(self) -> Text:\n        return <<<\"action_check_balance_simple\">>>\n\n    def run(\n        self,\n        dispatcher: CollectingDispatcher,\n        tracker: Tracker,\n        domain: Dict[Text, Any],\n    ) -> <<<List[Dict[Text, Any]]>>>:\n        # Read the 'account' slot from conversation memory (or \"<missing>\" if empty)\n        account = <<<tracker.get_slot(\"account\") or \"<missing>\">>>\n\n        # Values that are not real account numbers—we re-ask if the slot has one of these\n        placeholder_values = [\"account number\", \"user_account_number\", <<<\"<missing>\">>>]\n\n        # If the slot is a placeholder, re-prompt and return\n        if <<<account.lower() in placeholder_values>>>:\n            dispatcher.utter_message(response=<<<\"utter_ask_account\">>>)\n            return <<<[]>>>\n\n        # Otherwise send the demo balance message\n        dispatcher.utter_message(text=<<<f\"(Demo) Balance for account {account} is $123.45.\">>>)\n        return <<<[]>>>\n```",
+		"distractors": "Text, Any\nRasaAction\n\"check_balance\"\nDict[Text, Any]\ntracker.slots[\"account\"]\n\"missing\"\naccount in placeholder_values\n\"ask_account\"\n{}\nf\"Balance for {account} is $123.45\"",
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Fill in the Blanks"
+				}
+			],
+			"files": [],
+			"opened": [
+				{
+					"type": "terminal",
+					"panelNumber": 1,
+					"content": ""
+				}
+			]
+		},
+		"bloomsObjectiveLevel": "",
+		"learningObjectives": "",
+		"guidance": "The correct answers are:\n\n* **Any, Dict, List, Text** - Required type imports from typing module\n* **Action** - The base class for custom actions in Rasa SDK\n* **\"action_check_balance_simple\"** - The exact action name that matches the domain configuration\n* **List[Dict[Text, Any]]** - The return type for the run method in custom actions\n* **tracker.get_slot(\"account\") or \"<missing>\"** - Proper way to read a slot value with fallback\n* **\"<missing>\"** - The placeholder value to check for missing account information\n* **account.lower() in placeholder_values** - Condition to check if the slot contains a placeholder (case-insensitive)\n* **\"utter_ask_account\"** - The response name to re-prompt for account information\n* **[]** - Empty list returned by custom actions when no events are generated\n* **f\"(Demo) Balance for account {account} is $123.45.\"** - Formatted string for the demo balance message",
+		"showGuidanceAfterResponseOption": {
+			"type": "Attempts",
+			"passedFrom": 1
+		},
+		"maxAttemptsCount": 1,
+		"showExpectedAnswerOption": {
+			"type": "Always"
+		},
+		"points": 20,
+		"arePartialPointsAllowed": false,
+		"useMaximumScore": false,
+		"tokens": {
+			"blank": [
+				"Any, Dict, List, Text",
+				"Action",
+				"\"action_check_balance_simple\"",
+				"List[Dict[Text, Any]]",
+				"tracker.get_slot(\"account\") or \"<missing>\"",
+				"\"<missing>\"",
+				"account.lower() in placeholder_values",
+				"\"utter_ask_account\"",
+				"[]",
+				"f\"(Demo) Balance for account {account} is $123.45.\"",
+				"[]"
+			],
+			"text": [
+				"**Fill in the blanks below** to complete the custom action that reads a slot and handles placeholder values.\n\n```python\nfrom typing import ",
+				0,
+				"\n\nfrom rasa_sdk import Action, Tracker\nfrom rasa_sdk.executor import CollectingDispatcher\n\n\nclass ActionCheckBalanceSimple(",
+				0,
+				"):\n    \"\"\"A custom action that reads a slot and returns a balance.\n\n    - Reads the 'account' slot from conversation memory\n    - Re-prompts if the slot contains a placeholder (e.g. \"account number\", \"<missing>\")\n    - Otherwise sends a demo balance message\n    \"\"\"\n\n    def name(self) -> Text:\n        return ",
+				0,
+				"\n\n    def run(\n        self,\n        dispatcher: CollectingDispatcher,\n        tracker: Tracker,\n        domain: Dict[Text, Any],\n    ) -> ",
+				0,
+				":\n        # Read the 'account' slot from conversation memory (or \"<missing>\" if empty)\n        account = ",
+				0,
+				"\n\n        # Values that are not real account numbers—we re-ask if the slot has one of these\n        placeholder_values = [\"account number\", \"user_account_number\", ",
+				0,
+				"]\n\n        # If the slot is a placeholder, re-prompt and return\n        if ",
+				0,
+				":\n            dispatcher.utter_message(response=",
+				0,
+				")\n            return ",
+				0,
+				"\n\n        # Otherwise send the demo balance message\n        dispatcher.utter_message(text=",
+				0,
+				")\n        return ",
+				0,
+				"\n```"
+			],
+			"regexPositions": []
+		}
+	}
+}

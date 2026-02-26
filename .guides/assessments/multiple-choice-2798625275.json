@@ -1,0 +1,64 @@
+{
+	"type": "multiple-choice",
+	"taskId": "multiple-choice-2798625275",
+	"source": {
+		"name": "Chapter 1.2 Unit 8.1 - utter vs action difference",
+		"showName": false,
+		"instructions": "**What's the difference between `utter_*` and `action_*`?**",
+		"multipleResponse": false,
+		"isRandomized": false,
+		"answers": [
+			{
+				"_id": "a1e5e008-1c47-abce-75c0-6e7ed9ac4b24",
+				"correct": false,
+				"answer": "There's no difference"
+			},
+			{
+				"_id": "cb5ef1f3-5008-fe8b-fc9e-f63fc261d1fc",
+				"correct": true,
+				"answer": "`utter_*` are responses (static text), `action_*` are actions (custom code)"
+			},
+			{
+				"_id": "e0341dcf-ff69-bf41-9676-dbf605dcd15a",
+				"correct": false,
+				"answer": "`utter_*` are actions, `action_*` are responses"
+			},
+			{
+				"_id": "dbc477fe-9f27-7f4f-9f1c-791aece06588",
+				"correct": false,
+				"answer": "They're the same thing"
+			}
+		],
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Multiple Choice"
+				}
+			],
+			"files": [],
+			"opened": [
+				{
+					"type": "terminal",
+					"panelNumber": 1,
+					"content": ""
+				}
+			]
+		},
+		"bloomsObjectiveLevel": "2",
+		"learningObjectives": "SWBAT distinguish between utter_* responses and action_* actions in chatbot frameworks",
+		"guidance": "`utter_*` responses are predefined text messages in the domain file. `action_*` actions are custom Python code that can execute any logic. Both can be called from flows using `- action:`, but they work differently.",
+		"showGuidanceAfterResponseOption": {
+			"type": "Attempts",
+			"passedFrom": 1
+		},
+		"maxAttemptsCount": 1,
+		"showExpectedAnswerOption": {
+			"type": "Always"
+		},
+		"points": 20,
+		"incorrectPoints": 0,
+		"arePartialPointsAllowed": false,
+		"useMaximumScore": false
+	}
+}

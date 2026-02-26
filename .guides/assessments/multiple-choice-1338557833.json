@@ -1,0 +1,64 @@
+{
+	"type": "multiple-choice",
+	"taskId": "multiple-choice-1338557833",
+	"source": {
+		"name": "Chapter 1.3 - 2.3 Test Your Knowledge: slot type and naming",
+		"showName": false,
+		"instructions": "**In Level 3, which slot type do we use in the domain, and which of these is a good slot name?**",
+		"multipleResponse": false,
+		"isRandomized": true,
+		"answers": [
+			{
+				"_id": "27d502f6-2802-bb71-4088-680ad2e4d17f",
+				"correct": true,
+				"answer": "Type: `text`, good name: `account`"
+			},
+			{
+				"_id": "d75a2a96-0607-0566-bda6-8c2b313356af",
+				"correct": false,
+				"answer": "Type: `bool`, good name: `slot1`"
+			},
+			{
+				"_id": "965db118-2837-b02e-3ab1-36a662ce448b",
+				"correct": false,
+				"answer": "Type: `list`, good name: `a`"
+			},
+			{
+				"_id": "37a2db3f-4575-d911-4fad-8ef3171af483",
+				"correct": false,
+				"answer": "Type: `text`, good name: `data`"
+			}
+		],
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Multiple Choice"
+				}
+			],
+			"files": [],
+			"opened": [
+				{
+					"type": "terminal",
+					"panelNumber": 1,
+					"content": ""
+				}
+			]
+		},
+		"bloomsObjectiveLevel": "2",
+		"learningObjectives": "SWBAT identify the correct slot type and good naming practices for Level 3",
+		"guidance": "The correct answer is: Type: `text`, good name: `account`. In Level 3, we use `text` slots in the domain. Good slot names should be descriptive and lowercase, such as `account`. We should avoid vague names like `a`, `slot1`, or `data` as they don't clearly indicate what information the slot contains.",
+		"showGuidanceAfterResponseOption": {
+			"type": "Attempts",
+			"passedFrom": 1
+		},
+		"maxAttemptsCount": 1,
+		"showExpectedAnswerOption": {
+			"type": "Always"
+		},
+		"points": 20,
+		"incorrectPoints": 0,
+		"arePartialPointsAllowed": false,
+		"useMaximumScore": false
+	}
+}

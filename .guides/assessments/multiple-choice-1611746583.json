@@ -1,0 +1,64 @@
+{
+	"type": "multiple-choice",
+	"taskId": "multiple-choice-1611746583",
+	"source": {
+		"name": "1.4 action workflow understanding",
+		"showName": false,
+		"instructions": "**When a user message triggers a flow that calls an action in Rasa, what is the correct sequence of events?**",
+		"multipleResponse": false,
+		"isRandomized": false,
+		"answers": [
+			{
+				"_id": "0cf3f519-3185-09ad-56ff-333f30fb9bf4",
+				"correct": true,
+				"answer": "User message → Flow triggered → Action identified → Run method executed → Dispatcher sends response → Bot responds"
+			},
+			{
+				"_id": "8bad40fe-17c8-f91c-309b-14f315d39104",
+				"correct": false,
+				"answer": "User message → Action identified → Flow triggered → Run method executed → Bot responds → Dispatcher sends response"
+			},
+			{
+				"_id": "407b10f5-1a83-a680-283a-5d031b15d728",
+				"correct": false,
+				"answer": "Flow triggered → User message → Action identified → Dispatcher sends response → Run method executed → Bot responds"
+			},
+			{
+				"_id": "6e1bf4ac-ce03-b342-9d63-3de16906bebd",
+				"correct": false,
+				"answer": "User message → Flow triggered → Dispatcher sends response → Action identified → Run method executed → Bot responds"
+			}
+		],
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Multiple Choice"
+				}
+			],
+			"files": [],
+			"opened": [
+				{
+					"type": "terminal",
+					"panelNumber": 1,
+					"content": ""
+				}
+			]
+		},
+		"bloomsObjectiveLevel": "2",
+		"learningObjectives": "SWBAT understand the flow of execution when a Rasa action is called",
+		"guidance": "The correct sequence is: User message → Flow triggered → Action identified → Run method executed → Dispatcher sends response → Bot responds.\n\nThis matches the flow described in the content where:\n1. The user sends a message\n2. The appropriate flow is triggered\n3. Rasa identifies the action to be executed\n4. The action's run() method is executed\n5. The action uses the dispatcher to send a message\n6. The bot responds to the user with the dynamic message\n\nThe other options have the steps in an incorrect order, which would not result in proper action execution.",
+		"showGuidanceAfterResponseOption": {
+			"type": "Attempts",
+			"passedFrom": 1
+		},
+		"maxAttemptsCount": 1,
+		"showExpectedAnswerOption": {
+			"type": "Always"
+		},
+		"points": 20,
+		"incorrectPoints": 0,
+		"arePartialPointsAllowed": false,
+		"useMaximumScore": false
+	}
+}

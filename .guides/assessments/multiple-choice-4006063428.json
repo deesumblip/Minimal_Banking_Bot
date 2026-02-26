@@ -1,0 +1,58 @@
+{
+	"type": "multiple-choice",
+	"taskId": "multiple-choice-4006063428",
+	"source": {
+		"name": "LLM Model Identification",
+		"showName": true,
+		"instructions": "**What LLM model is being used in the configuration?**",
+		"multipleResponse": false,
+		"isRandomized": true,
+		"answers": [
+			{
+				"_id": "123a6c93-8747-71a1-3683-ef27429c9685",
+				"correct": false,
+				"answer": "GPT-3.5-turbo"
+			},
+			{
+				"_id": "f747af3c-676d-1b48-14cf-1bc2eb6232b8",
+				"correct": false,
+				"answer": "GPT-4"
+			},
+			{
+				"_id": "f84749b9-c1e5-b25c-f198-5867a6eec468",
+				"correct": true,
+				"answer": "GPT-4o-mini"
+			},
+			{
+				"_id": "66b92118-38b5-3cff-0748-c39ddef19795",
+				"correct": false,
+				"answer": "Claude-3"
+			}
+		],
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Multiple Choice"
+				}
+			],
+			"files": [],
+			"opened": []
+		},
+		"bloomsObjectiveLevel": "1",
+		"learningObjectives": "SWBAT identify the LLM model being used in the configuration file",
+		"guidance": "The configuration file specifies `model: gpt-4o-mini-2024-07-18`, indicating that GPT-4o-mini is the LLM model being used.",
+		"showGuidanceAfterResponseOption": {
+			"type": "Attempts",
+			"passedFrom": 1
+		},
+		"maxAttemptsCount": 1,
+		"showExpectedAnswerOption": {
+			"type": "Always"
+		},
+		"points": 20,
+		"incorrectPoints": 0,
+		"arePartialPointsAllowed": false,
+		"useMaximumScore": false
+	}
+}

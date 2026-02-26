@@ -1,0 +1,49 @@
+{
+	"type": "fill-in-the-blanks",
+	"taskId": "fill-in-the-blanks-2031878107",
+	"source": {
+		"name": "Rasa Action Class Structure",
+		"showName": true,
+		"instructions": "**Fill in the blanks to complete the Rasa SDK Action class structure.**",
+		"showValues": true,
+		"text": "```python\nfrom rasa_sdk import Action, Tracker\nfrom rasa_sdk.executor import CollectingDispatcher\n\nclass ActionGreetUser(Action):\n    def <<<name>>>() -> Text:\n        return \"action_greet_user\"\n    \n    def <<<run>>>(self, dispatcher, tracker, domain):\n        dispatcher.utter_message(\"Hello! How can I help you today?\")\n        return []\n```",
+		"distractors": "execute\nprocess\nSdk\nTrackerStore\ninteract",
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Fill in the Blanks"
+				}
+			],
+			"files": [],
+			"opened": []
+		},
+		"bloomsObjectiveLevel": "",
+		"learningObjectives": "",
+		"guidance": "The correct answers are:\n1. `name` - Every Action class must implement this method which returns the action identifier\n2. `run` - This method contains the custom logic for the action and is called when the action is executed",
+		"showGuidanceAfterResponseOption": {
+			"type": "Always"
+		},
+		"maxAttemptsCount": 0,
+		"showExpectedAnswerOption": {
+			"type": "Always"
+		},
+		"points": 20,
+		"arePartialPointsAllowed": false,
+		"useMaximumScore": false,
+		"tokens": {
+			"blank": [
+				"name",
+				"run"
+			],
+			"text": [
+				"```python\nfrom rasa_sdk import Action, Tracker\nfrom rasa_sdk.executor import CollectingDispatcher\n\nclass ActionGreetUser(Action):\n    def ",
+				0,
+				"() -> Text:\n        return \"action_greet_user\"\n    \n    def ",
+				0,
+				"(self, dispatcher, tracker, domain):\n        dispatcher.utter_message(\"Hello! How can I help you today?\")\n        return []\n```"
+			],
+			"regexPositions": []
+		}
+	}
+}

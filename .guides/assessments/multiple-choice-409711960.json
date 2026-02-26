@@ -1,0 +1,63 @@
+{
+	"type": "multiple-choice",
+	"taskId": "multiple-choice-409711960",
+	"source": {
+		"name": "What is an Action?",
+		"showName": true,
+		"instructions": "**Which of the following scenarios would be appropriate for using a custom action rather than a simple response? Select all that apply.**",
+		"multipleResponse": true,
+		"isRandomized": false,
+		"answers": [
+			{
+				"_id": "9149d840-4e18-9ffb-ea01-c8da91150dbf",
+				"correct": true,
+				"answer": "Providing today's weather forecast by calling an external weather API"
+			},
+			{
+				"_id": "3fab035a-2a77-dcb5-a701-0ba7864182dc",
+				"correct": true,
+				"answer": "Calculating a user's loan eligibility based on their input data"
+			},
+			{
+				"_id": "0ca68b52-9850-7713-d7e3-e8c2b3dba5d4",
+				"correct": false,
+				"answer": "Greeting a user with a static welcome message"
+			},
+			{
+				"_id": "5b8e505c-952a-9230-fcb5-8e92d6cfcfeb",
+				"correct": true,
+				"answer": "Retrieving a customer's account balance from a database"
+			},
+			{
+				"_id": "c1fd8f9d-61db-280b-6aa5-24dd551070d1",
+				"correct": false,
+				"answer": "Displaying the same fixed business hours to every user"
+			}
+		],
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Multiple Choice"
+				}
+			],
+			"files": [],
+			"opened": []
+		},
+		"bloomsObjectiveLevel": "3",
+		"learningObjectives": "SWBAT distinguish between when to use actions vs. responses in a conversational AI system",
+		"guidance": "Custom actions are appropriate when dynamic processing or external data is required. The correct answers involve: calling an external API (weather forecast), performing calculations (loan eligibility), and retrieving data from a database (account balance). The incorrect answers involve static content that never changes (welcome message, fixed business hours), which should be handled by simple responses (`utter_*`) rather than custom actions.",
+		"showGuidanceAfterResponseOption": {
+			"type": "Attempts",
+			"passedFrom": 1
+		},
+		"maxAttemptsCount": 1,
+		"showExpectedAnswerOption": {
+			"type": "Always"
+		},
+		"points": 20,
+		"incorrectPoints": 0,
+		"arePartialPointsAllowed": false,
+		"useMaximumScore": false
+	}
+}

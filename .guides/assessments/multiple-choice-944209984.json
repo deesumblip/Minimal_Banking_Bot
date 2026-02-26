@@ -1,0 +1,64 @@
+{
+	"type": "multiple-choice",
+	"taskId": "multiple-choice-944209984",
+	"source": {
+		"name": "2.3 Test Your Knowledge - Rasa Custom Actions",
+		"showName": true,
+		"instructions": "**In a Rasa custom action, which of the following correctly sends a message to the user?**",
+		"multipleResponse": false,
+		"isRandomized": false,
+		"answers": [
+			{
+				"_id": "dfab115b-6c6f-b33a-377d-49dc035f996c",
+				"correct": true,
+				"answer": "```python-hide-clipboard\ndispatcher.utter_message(text=\"Hello, how can I help you?\")\n```"
+			},
+			{
+				"_id": "2e0775fb-b3c3-fa2c-2918-0c279255503b",
+				"correct": false,
+				"answer": "```python-hide-clipboard\ntracker.send_message(text=\"Hello, how can I help you?\")\n```"
+			},
+			{
+				"_id": "11f73d5e-f3b7-582d-3dab-4272d07a1dfc",
+				"correct": false,
+				"answer": "```python-hide-clipboard\ndomain.utter_message(text=\"Hello, how can I help you?\")\n```"
+			},
+			{
+				"_id": "a2e1a6ee-bd18-da45-374d-d888efa3e9da",
+				"correct": false,
+				"answer": "```python-hide-clipboard\nself.send_message(text=\"Hello, how can I help you?\")\n```"
+			}
+		],
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Multiple Choice"
+				}
+			],
+			"files": [],
+			"opened": [
+				{
+					"type": "terminal",
+					"panelNumber": 1,
+					"content": ""
+				}
+			]
+		},
+		"bloomsObjectiveLevel": "3",
+		"learningObjectives": "SWBAT identify the correct way to send messages in Rasa custom actions",
+		"guidance": "The correct answer is `dispatcher.utter_message(text=\"Hello, how can I help you?\")`. The `dispatcher` parameter in a Rasa custom action is specifically responsible for sending messages to the user. The `tracker` is for accessing conversation state and slot values, while the `domain` contains configuration information. The method `utter_message()` belongs to the dispatcher object, not to the other components.",
+		"showGuidanceAfterResponseOption": {
+			"type": "Attempts",
+			"passedFrom": 1
+		},
+		"maxAttemptsCount": 1,
+		"showExpectedAnswerOption": {
+			"type": "Always"
+		},
+		"points": 20,
+		"incorrectPoints": 0,
+		"arePartialPointsAllowed": false,
+		"useMaximumScore": false
+	}
+}

@@ -1,0 +1,59 @@
+{
+	"type": "code-output-compare",
+	"taskId": "code-output-compare-1029038275",
+	"source": {
+		"name": "Lab 6.1: Training and Testing with Slots",
+		"showName": true,
+		"instructions": "Run the assessment.",
+		"command": "/home/codio/workspace/.venv/bin/python3 /home/codio/workspace/.guides/assessments/level3_graders/lab_6.1_grader.py",
+		"preExecuteCommand": "",
+		"options": {
+			"timeout": 60,
+			"ignoreCase": true,
+			"ignoreWhitespaces": true,
+			"ignoreNewline": true,
+			"matchSubstring": true
+		},
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Standard Code Test"
+				}
+			],
+			"files": [
+				".guides/assessments/level3_graders/lab_6.1_grader.py"
+			],
+			"opened": [
+				{
+					"type": "terminal",
+					"panelNumber": 1,
+					"content": ""
+				}
+			]
+		},
+		"bloomsObjectiveLevel": "",
+		"learningObjectives": "",
+		"guidance": "The grader verifies the virtual environment in project root, that a model file (.tar.gz) exists in level3/models/, that the model is recent, and that logs do not show critical errors. Ensure you ran python -m rasa train from the level3 folder with the venv activated.",
+		"showGuidanceAfterResponseOption": {
+			"type": "Attempts",
+			"passedFrom": 1
+		},
+		"maxAttemptsCount": 0,
+		"points": 12,
+		"showExpectedAnswerOption": {
+			"type": "WhenGradesReleased"
+		},
+		"arePartialPointsAllowed": true,
+		"useMaximumScore": false,
+		"sequence": [
+			{
+				"arguments": "",
+				"input": "",
+				"output": "PASS",
+				"showFeedback": false,
+				"feedback": ""
+			}
+		]
+	}
+}

@@ -1,0 +1,19 @@
+{
+	"id": "7cbd1013-6b36-7062-5b08-2262db6a06cf",
+	"title": "4.4 Modifying System Patterns",
+	"files": [
+		{
+			"path": "#tabs",
+			"action": "close"
+		}
+	],
+	"layout": "1-panel-tree",
+	"path": [
+		"level1"
+	],
+	"type": "page",
+	"contentType": "markdown",
+	"teacherOnly": false,
+	"closeTerminalSession": true,
+	"learningObjectives": ""
+}

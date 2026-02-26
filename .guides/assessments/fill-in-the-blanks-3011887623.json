@@ -1,0 +1,62 @@
+{
+	"type": "fill-in-the-blanks",
+	"taskId": "fill-in-the-blanks-3011887623",
+	"source": {
+		"name": "Unit 1.2 8.1 rasa_actions_location",
+		"showName": false,
+		"instructions": "**Fill in the blanks below about where Rasa actions are defined and registered.**",
+		"showValues": true,
+		"text": "* Actions are Python classes defined in <<<.py>>> files in the <<<actions/>>> folder.\n* Actions must also be registered in <<<domain/basics.yml>>> under <<<actions:>>>, but the actual code is in Python files.",
+		"distractors": "config.yml\nresponses:\ndata/basics/\n.yml",
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Fill in the Blanks"
+				}
+			],
+			"files": [],
+			"opened": [
+				{
+					"type": "terminal",
+					"panelNumber": 1,
+					"content": ""
+				}
+			]
+		},
+		"bloomsObjectiveLevel": "",
+		"learningObjectives": "",
+		"guidance": "The correct answers are:\n\n* Actions are Python classes defined in **.py** files in the **actions/** folder.\n* Actions must also be registered in **domain/basics.yml** under **actions:**, but the actual code is in Python files.\n\nActions require both the Python implementation in the actions folder and registration in the domain file to work properly in Rasa.",
+		"showGuidanceAfterResponseOption": {
+			"type": "Attempts",
+			"passedFrom": 1
+		},
+		"maxAttemptsCount": 1,
+		"showExpectedAnswerOption": {
+			"type": "Always"
+		},
+		"points": 20,
+		"arePartialPointsAllowed": false,
+		"useMaximumScore": false,
+		"tokens": {
+			"blank": [
+				".py",
+				"actions/",
+				"domain/basics.yml",
+				"actions:"
+			],
+			"text": [
+				"* Actions are Python classes defined in ",
+				0,
+				" files in the ",
+				0,
+				" folder.\n* Actions must also be registered in ",
+				0,
+				" under ",
+				0,
+				", but the actual code is in Python files."
+			],
+			"regexPositions": []
+		}
+	}
+}

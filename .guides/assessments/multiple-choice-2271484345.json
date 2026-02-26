@@ -1,0 +1,64 @@
+{
+	"type": "multiple-choice",
+	"taskId": "multiple-choice-2271484345",
+	"source": {
+		"name": "Lab 2.1:  Exploring the Actions Folder - purpose of init file",
+		"showName": false,
+		"instructions": "**Why does the `actions/` folder contain an `__init__.py` file?**",
+		"multipleResponse": false,
+		"isRandomized": false,
+		"answers": [
+			{
+				"_id": "4dca3e14-81d5-6967-e487-779047a469e3",
+				"correct": false,
+				"answer": "To define the action logic"
+			},
+			{
+				"_id": "6c2b12cf-2645-cda9-3561-837ed5a679c3",
+				"correct": false,
+				"answer": "To store the action name"
+			},
+			{
+				"_id": "59002437-a00a-9686-bb9e-bb47d2586b57",
+				"correct": true,
+				"answer": "To make the folder a Python package so Rasa can find your actions"
+			},
+			{
+				"_id": "e787ca1b-fc88-5c18-7c5d-53403e547719",
+				"correct": false,
+				"answer": "To configure the domain"
+			}
+		],
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Multiple Choice"
+				}
+			],
+			"files": [],
+			"opened": [
+				{
+					"type": "terminal",
+					"panelNumber": 1,
+					"content": ""
+				}
+			]
+		},
+		"bloomsObjectiveLevel": "3",
+		"learningObjectives": "SWBAT identify the purpose of __init__.py in the actions folder of a Rasa project",
+		"guidance": "The `__init__.py` file makes the folder a Python package, enabling Rasa to discover and import the custom actions defined within that folder. It doesn't contain the actual action logic (which is in separate action files), action names (which are defined in each action class's name() method), or domain configuration (which is in the domain.yml file).",
+		"showGuidanceAfterResponseOption": {
+			"type": "Attempts",
+			"passedFrom": 1
+		},
+		"maxAttemptsCount": 1,
+		"showExpectedAnswerOption": {
+			"type": "Always"
+		},
+		"points": 20,
+		"incorrectPoints": 0,
+		"arePartialPointsAllowed": false,
+		"useMaximumScore": false
+	}
+}

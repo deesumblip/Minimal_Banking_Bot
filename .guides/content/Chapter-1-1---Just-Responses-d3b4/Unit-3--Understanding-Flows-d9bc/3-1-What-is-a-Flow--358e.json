@@ -1,0 +1,19 @@
+{
+	"id": "358e5bf7-0743-369a-8740-a7bf6779177d",
+	"title": "3.1 What is a Flow?",
+	"files": [
+		{
+			"path": "#tabs",
+			"action": "close"
+		}
+	],
+	"layout": "2-panels-tree-guides-left",
+	"path": [
+		"level1"
+	],
+	"type": "page",
+	"contentType": "markdown",
+	"teacherOnly": false,
+	"closeTerminalSession": true,
+	"learningObjectives": ""
+}

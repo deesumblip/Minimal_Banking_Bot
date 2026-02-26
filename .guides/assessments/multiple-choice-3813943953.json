@@ -1,0 +1,69 @@
+{
+	"type": "multiple-choice",
+	"taskId": "multiple-choice-3813943953",
+	"source": {
+		"name": "Rasa Action Components",
+		"showName": true,
+		"instructions": "**Which of the following statements about Rasa custom actions are correct? Select all that apply.**",
+		"multipleResponse": true,
+		"isRandomized": true,
+		"answers": [
+			{
+				"_id": "aa41fcdb-6cd4-e444-5c21-d6d0c62ce32d",
+				"correct": true,
+				"answer": "The `name()` method must return a string that matches what's registered in the domain file"
+			},
+			{
+				"_id": "718fc081-d8c9-c24b-5b4f-025869d290ad",
+				"correct": true,
+				"answer": "Custom actions must inherit from the `Action` class"
+			},
+			{
+				"_id": "96987c5d-ee8f-450f-a5c5-6dc3fee8471e",
+				"correct": true,
+				"answer": "The `run()` method is where messages are sent to the user via the `dispatcher`"
+			},
+			{
+				"_id": "eba73d63-808f-43f6-6d5b-8d718d2deee6",
+				"correct": true,
+				"answer": "Custom actions are needed when the response depends on dynamic data or external systems"
+			},
+			{
+				"_id": "564c1a7c-3636-7e03-e518-5875267041df",
+				"correct": false,
+				"answer": "The action class name must match the action identifier in the domain file"
+			}
+		],
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Multiple Choice"
+				}
+			],
+			"files": [],
+			"opened": [
+				{
+					"type": "terminal",
+					"panelNumber": 1,
+					"content": ""
+				}
+			]
+		},
+		"bloomsObjectiveLevel": "3",
+		"learningObjectives": "SWBAT identify the key requirements for implementing a custom action in Rasa",
+		"guidance": "The correct answers are:\n\n1. The `name()` method must return a string that matches what's registered in the domain file - This is essential for Rasa to map the action identifier to the correct class.\n\n2. Custom actions must inherit from the `Action` class - This is required as it provides the structure and methods needed for all actions.\n\n3. The `run()` method is where messages are sent to the user via the `dispatcher` - This method contains the logic of the action and uses the dispatcher to communicate with the user.\n\n4. Custom actions are needed when the response depends on dynamic data or external systems - As shown in the example using datetime to provide different responses based on the current day.\n\nThe incorrect option is: The action class name must match the action identifier in the domain file - The class name can be anything descriptive (though conventionally starts with 'Action'), but it's the string returned by the `name()` method that must match what's in the domain file, not the class name itself.",
+		"showGuidanceAfterResponseOption": {
+			"type": "Attempts",
+			"passedFrom": 1
+		},
+		"maxAttemptsCount": 1,
+		"showExpectedAnswerOption": {
+			"type": "Always"
+		},
+		"points": 20,
+		"incorrectPoints": 0,
+		"arePartialPointsAllowed": false,
+		"useMaximumScore": false
+	}
+}

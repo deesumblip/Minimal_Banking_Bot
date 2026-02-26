@@ -1,0 +1,62 @@
+{
+	"type": "fill-in-the-blanks",
+	"taskId": "fill-in-the-blanks-2495309682",
+	"source": {
+		"name": "Chapter 1.2 Unit 8.1 sending-messages-from-actions",
+		"showName": false,
+		"instructions": "**Fill in the blanks to complete the correct method for sending a message from an action.**",
+		"showValues": true,
+		"text": "To send a message from an action, you use the <<<dispatcher>>> parameter in the `run()` method. The correct syntax is:\n\n`<<<dispatcher>>>.<<<utter_message>>>(<<<text>>>=\"Hello, user!\")`",
+		"distractors": "print\nsend_message\nreturn\nmessage\ncontent\ndata",
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Fill in the Blanks"
+				}
+			],
+			"files": [],
+			"opened": [
+				{
+					"type": "terminal",
+					"panelNumber": 1,
+					"content": ""
+				}
+			]
+		},
+		"bloomsObjectiveLevel": "",
+		"learningObjectives": "",
+		"guidance": "The correct answer is `dispatcher.utter_message(text=\"Hello, user!\")`. The `dispatcher` parameter in the `run()` method is specifically designed to send messages to the user. The method `utter_message()` is called on the dispatcher object, and the `text` parameter is used to specify the message content. Other options like `print()`, `return`, or `send_message()` are not the correct way to send messages from actions in this framework.",
+		"showGuidanceAfterResponseOption": {
+			"type": "Attempts",
+			"passedFrom": 1
+		},
+		"maxAttemptsCount": 1,
+		"showExpectedAnswerOption": {
+			"type": "Always"
+		},
+		"points": 20,
+		"arePartialPointsAllowed": false,
+		"useMaximumScore": false,
+		"tokens": {
+			"blank": [
+				"dispatcher",
+				"dispatcher",
+				"utter_message",
+				"text"
+			],
+			"text": [
+				"To send a message from an action, you use the ",
+				0,
+				" parameter in the `run()` method. The correct syntax is:\n\n`",
+				0,
+				".",
+				0,
+				"(",
+				0,
+				"=\"Hello, user!\")`"
+			],
+			"regexPositions": []
+		}
+	}
+}

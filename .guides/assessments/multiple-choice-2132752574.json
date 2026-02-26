@@ -1,0 +1,64 @@
+{
+	"type": "multiple-choice",
+	"taskId": "multiple-choice-2132752574",
+	"source": {
+		"name": "Chapter 1.3 2.3 Test Your Knowledge",
+		"showName": false,
+		"instructions": "**What is a slot?**",
+		"multipleResponse": false,
+		"isRandomized": false,
+		"answers": [
+			{
+				"_id": "4b65f0ef-fc5c-1961-5d32-d5276d35758e",
+				"correct": false,
+				"answer": "A flow step that asks the user for information"
+			},
+			{
+				"_id": "8a7cc6ac-4a96-58d6-6212-f402975684e0",
+				"correct": true,
+				"answer": "A memory variable that stores information from the conversation"
+			},
+			{
+				"_id": "483a4355-5cb5-7878-4145-551105a6ed94",
+				"correct": false,
+				"answer": "A type of response the bot can say"
+			},
+			{
+				"_id": "14c5cb10-2958-5abc-81fc-f040a89a712e",
+				"correct": false,
+				"answer": "A Python function that runs during the conversation"
+			}
+		],
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Multiple Choice"
+				}
+			],
+			"files": [],
+			"opened": [
+				{
+					"type": "terminal",
+					"panelNumber": 1,
+					"content": ""
+				}
+			]
+		},
+		"bloomsObjectiveLevel": "2",
+		"learningObjectives": "SWBAT define what a slot is in chatbot development",
+		"guidance": "The correct answer is:\n\n* A memory variable that stores information from the conversation\n\nA slot is the bot's memory: it stores information from the conversation. Flow steps are actions the bot takes, responses are what the bot says to users, and Python functions are code that executes, but slots specifically serve as memory storage for conversational data.",
+		"showGuidanceAfterResponseOption": {
+			"type": "Attempts",
+			"passedFrom": 1
+		},
+		"maxAttemptsCount": 1,
+		"showExpectedAnswerOption": {
+			"type": "Always"
+		},
+		"points": 20,
+		"incorrectPoints": 0,
+		"arePartialPointsAllowed": false,
+		"useMaximumScore": false
+	}
+}

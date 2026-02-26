@@ -1,0 +1,69 @@
+{
+	"type": "multiple-choice",
+	"taskId": "multiple-choice-3019735315",
+	"source": {
+		"name": "2.3 Test Your Knowledge - Custom Actions in Rasa",
+		"showName": false,
+		"instructions": "**Why does the bank hours functionality need to be implemented as a custom action rather than a simple utterance in Rasa?**",
+		"multipleResponse": true,
+		"isRandomized": false,
+		"answers": [
+			{
+				"_id": "3f0996f8-e4b2-3dc2-07bf-2cedd8b939cd",
+				"correct": true,
+				"answer": "The response needs to dynamically change based on the current day of the week."
+			},
+			{
+				"_id": "63480173-ae5e-d456-61ef-f05942c77f95",
+				"correct": true,
+				"answer": "Custom actions are required whenever datetime functionality is needed."
+			},
+			{
+				"_id": "d57f7ab8-6ba3-daf3-b9e6-4f47ee8cb633",
+				"correct": true,
+				"answer": "Simple utterances cannot handle any kind of conditional logic."
+			},
+			{
+				"_id": "eb63755f-fe1c-a882-6670-967d58ee684d",
+				"correct": false,
+				"answer": "The response needs to be stored in a database."
+			},
+			{
+				"_id": "248a45b5-06b5-8c70-b536-7db074ca49dc",
+				"correct": false,
+				"answer": "All responses in Rasa must be implemented as custom actions."
+			}
+		],
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Multiple Choice"
+				}
+			],
+			"files": [],
+			"opened": [
+				{
+					"type": "terminal",
+					"panelNumber": 1,
+					"content": ""
+				}
+			]
+		},
+		"bloomsObjectiveLevel": "4",
+		"learningObjectives": "SWBAT identify when to use custom actions instead of utterances in a Rasa chatbot",
+		"guidance": "Custom actions are necessary in this case because:\n\n1. The response changes dynamically based on the current day of the week (using datetime), which requires Python logic that can't be handled by a simple utterance.\n2. Simple utterances in Rasa are static responses that don't change based on external factors like time.\n3. When conditional logic is needed to determine what message to send to the user, custom actions are required.\n\nCustom actions are not required for all responses in Rasa - simple, static responses can use utterances. Additionally, there's no requirement to store responses in a database for this functionality.",
+		"showGuidanceAfterResponseOption": {
+			"type": "Attempts",
+			"passedFrom": 1
+		},
+		"maxAttemptsCount": 1,
+		"showExpectedAnswerOption": {
+			"type": "Always"
+		},
+		"points": 20,
+		"incorrectPoints": 0,
+		"arePartialPointsAllowed": false,
+		"useMaximumScore": false
+	}
+}

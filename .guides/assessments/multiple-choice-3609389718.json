@@ -1,0 +1,63 @@
+{
+	"type": "multiple-choice",
+	"taskId": "multiple-choice-3609389718",
+	"source": {
+		"name": "1.1 What is an Action - rasa actions vs responses",
+		"showName": false,
+		"instructions": "**For which of the following scenarios would you use a custom action rather than a simple response in a Rasa chatbot? Select all that apply.**",
+		"multipleResponse": true,
+		"isRandomized": false,
+		"answers": [
+			{
+				"_id": "0d76366a-d2f7-4efb-eb2d-a97905d8b635",
+				"correct": false,
+				"answer": "Greeting the user with \"Hello! How can I help you today?\""
+			},
+			{
+				"_id": "a867f33e-2a0e-3276-a398-6bb10f56f72b",
+				"correct": true,
+				"answer": "Telling the user whether the bank is currently open based on the time of their request"
+			},
+			{
+				"_id": "f816a10d-8e91-9487-ada1-e2f892bfa9d3",
+				"correct": true,
+				"answer": "Calculating the monthly payment amount for a loan based on user-provided details"
+			},
+			{
+				"_id": "90d6df44-d0ea-0297-a1e8-82f648f0eef1",
+				"correct": false,
+				"answer": "Providing the company's fixed physical address"
+			},
+			{
+				"_id": "ccdc9ac8-34e9-fc43-146e-59c5f689b913",
+				"correct": true,
+				"answer": "Retrieving a user's current account balance from a database"
+			}
+		],
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Multiple Choice"
+				}
+			],
+			"files": [],
+			"opened": []
+		},
+		"bloomsObjectiveLevel": "3",
+		"learningObjectives": "SWBAT distinguish between when to use actions versus responses in Rasa chatbots",
+		"guidance": "Custom actions should be used when you need dynamic, programmatic functionality that goes beyond static text. The correct answers are:\n\n- Telling the user whether the bank is currently open based on the time of their request (requires checking current time and applying logic)\n- Calculating the monthly payment amount for a loan based on user-provided details (requires performing calculations)\n- Retrieving a user's current account balance from a database (requires external system integration)\n\nThe incorrect options should use simple responses because they involve static text that doesn't change based on conditions or require any processing:\n- Greeting the user with \"Hello! How can I help you today?\"\n- Providing the company's fixed physical address",
+		"showGuidanceAfterResponseOption": {
+			"type": "Attempts",
+			"passedFrom": 1
+		},
+		"maxAttemptsCount": 1,
+		"showExpectedAnswerOption": {
+			"type": "Always"
+		},
+		"points": 20,
+		"incorrectPoints": 0,
+		"arePartialPointsAllowed": false,
+		"useMaximumScore": false
+	}
+}

@@ -1,0 +1,69 @@
+{
+	"type": "multiple-choice",
+	"taskId": "multiple-choice-1235412103",
+	"source": {
+		"name": "3.2 Understanding Action Execution - rasa action execution",
+		"showName": true,
+		"instructions": "**Which elements must you implement when creating a custom action in Rasa?**",
+		"multipleResponse": true,
+		"isRandomized": false,
+		"answers": [
+			{
+				"_id": "577f4a89-4d83-c947-2a74-fa3a6f1cf499",
+				"correct": true,
+				"answer": "A class that inherits from `Action`"
+			},
+			{
+				"_id": "7516e0e1-98cc-def3-7068-49cc8d1982c7",
+				"correct": true,
+				"answer": "A `name()` method that returns a string matching the action name"
+			},
+			{
+				"_id": "a3d6200d-af32-9bdd-066f-bd7893a35bfb",
+				"correct": true,
+				"answer": "A `run()` method containing your custom logic"
+			},
+			{
+				"_id": "12e17e83-d84c-56d2-d3b4-3af431a55de3",
+				"correct": false,
+				"answer": "Code to instantiate the action class"
+			},
+			{
+				"_id": "1b9a6590-ec13-06a2-b66c-327a489ee34a",
+				"correct": false,
+				"answer": "The infrastructure for receiving and sending messages"
+			}
+		],
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Multiple Choice"
+				}
+			],
+			"files": [],
+			"opened": [
+				{
+					"type": "terminal",
+					"panelNumber": 1,
+					"content": ""
+				}
+			]
+		},
+		"bloomsObjectiveLevel": "3",
+		"learningObjectives": "SWBAT identify the key components of a Rasa custom action",
+		"guidance": "When creating a custom action in Rasa, you must implement:\n\n1. A class that inherits from `Action`\n2. A `name()` method that returns a string matching the action name in your domain file\n3. A `run()` method containing your custom logic\n\nYou do NOT need to implement the code to instantiate your action class or the infrastructure for receiving and sending messages - Rasa handles this infrastructure for you automatically. Your job is to define the logic that should execute when the action is triggered.",
+		"showGuidanceAfterResponseOption": {
+			"type": "Attempts",
+			"passedFrom": 1
+		},
+		"maxAttemptsCount": 1,
+		"showExpectedAnswerOption": {
+			"type": "Always"
+		},
+		"points": 20,
+		"incorrectPoints": 0,
+		"arePartialPointsAllowed": false,
+		"useMaximumScore": false
+	}
+}

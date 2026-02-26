@@ -1,0 +1,64 @@
+{
+	"type": "multiple-choice",
+	"taskId": "multiple-choice-596103225",
+	"source": {
+		"name": "3.1 Step-by-Step: Creating an Action - Custom Rasa Action Structure",
+		"showName": false,
+		"instructions": "**Which of the following code snippets correctly implements the basic structure of the `action_holiday_hours.py` file?**",
+		"multipleResponse": false,
+		"isRandomized": false,
+		"answers": [
+			{
+				"_id": "8f8d0b7b-7dd7-e423-ce8e-0b159e19ed66",
+				"correct": true,
+				"answer": "```python-hide-clipboard-hide-clipboard\nfrom datetime import datetime\nfrom typing import Any, Dict, List, Text\n\nfrom rasa_sdk import Action, Tracker\nfrom rasa_sdk.executor import CollectingDispatcher\n\n\nclass ActionHolidayHours(Action):\n    \"\"\"A custom action that returns holiday hours information.\"\"\"\n\n    def name(self) -> Text:\n        return \"action_holiday_hours\"\n\n    def run(\n        self,\n        dispatcher: CollectingDispatcher,\n        tracker: Tracker,\n        domain: Dict[Text, Any],\n    ) -> List[Dict[Text, Any]]:\n        # Logic for checking holidays\n        # ...\n\n        dispatcher.utter_message(text=message)\n        return []\n```"
+			},
+			{
+				"_id": "cb56c368-4367-8eef-e264-a4b8d268f63d",
+				"correct": false,
+				"answer": "```python-hide-clipboard-hide-clipboard\nclass ActionHolidayHours:\n    \"\"\"A custom action that returns holiday hours information.\"\"\"\n\n    def name():\n        return \"action_holiday_hours\"\n\n    def run(self, dispatcher, tracker, domain):\n        # Logic for checking holidays\n        # ...\n\n        dispatcher.utter_message(text=message)\n```"
+			},
+			{
+				"_id": "e2518b7d-0b89-3568-442e-d6bd6d015f8b",
+				"correct": false,
+				"answer": "```python-hide-clipboard-hide-clipboard\nfrom datetime import datetime\nfrom rasa_sdk import Action\n\nclass ActionHolidayHours(Action):\n    \"\"\"A custom action that returns holiday hours information.\"\"\"\n\n    def names(self):\n        return \"action_holiday_hours\"\n\n    def runs(self, dispatcher, tracker, domain):\n        # Logic for checking holidays\n        # ...\n        \n        dispatcher.utter_message(text=message)\n        return []\n```"
+			},
+			{
+				"_id": "5b7307b1-b307-e17f-471c-645b116f0031",
+				"correct": false,
+				"answer": "```python-hide-clipboard-hide-clipboard\nfrom datetime import datetime\nfrom typing import Any, Dict, List, Text\nfrom rasa_sdk import Action, Tracker\nfrom rasa_sdk.executor import CollectingDispatcher\n\ndef action_holiday_hours(dispatcher, tracker, domain):\n    # Logic for checking holidays\n    # ...\n    \n    dispatcher.utter_message(text=message)\n    return []\n```"
+			}
+		],
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Multiple Choice"
+				}
+			],
+			"files": [],
+			"opened": [
+				{
+					"type": "terminal",
+					"panelNumber": 1,
+					"content": ""
+				}
+			]
+		},
+		"bloomsObjectiveLevel": "3",
+		"learningObjectives": "SWBAT identify the correct structure and components of a custom Rasa action",
+		"guidance": "The correct answer is the first option because it:\n1. Includes all necessary imports (`datetime`, typing imports, and Rasa SDK imports)\n2. Creates a class that inherits from `Action`\n3. Has a proper `name()` method that returns the action identifier string\n4. Has a `run()` method with the correct parameters and type hints\n5. Uses `dispatcher.utter_message()` to send messages\n6. Returns an empty list `[]` as required\n\nThe second option has multiple issues: it doesn't inherit from `Action`, lacks necessary imports, the `name()` method is missing the `self` parameter, and it doesn't return anything from `run()`.\n\nThe third option has method name typos (`names` instead of `name` and `runs` instead of `run`) and is missing required typing imports.\n\nThe fourth option incorrectly implements the action as a function rather than a class, which wouldn't work in the Rasa framework that requires actions to be classes inheriting from `Action`.",
+		"showGuidanceAfterResponseOption": {
+			"type": "Attempts",
+			"passedFrom": 1
+		},
+		"maxAttemptsCount": 1,
+		"showExpectedAnswerOption": {
+			"type": "Always"
+		},
+		"points": 20,
+		"incorrectPoints": 0,
+		"arePartialPointsAllowed": false,
+		"useMaximumScore": false
+	}
+}

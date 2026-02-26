@@ -1,0 +1,74 @@
+{
+	"type": "multiple-choice",
+	"taskId": "multiple-choice-3927719488",
+	"source": {
+		"name": "Chapter 1.2 - 7.1 rasa conversation flow",
+		"showName": false,
+		"instructions": "**Based on the conversation example, which of the following statements are true about how Rasa processes user messages? Select all that apply.**",
+		"multipleResponse": true,
+		"isRandomized": true,
+		"answers": [
+			{
+				"_id": "8a264b4f-509f-4a35-1e75-2c3f30fa61b2",
+				"correct": true,
+				"answer": "The LLM understands user intent for all messages after the initial greeting"
+			},
+			{
+				"_id": "4b201bf3-ddaf-40d3-93a8-4e85dab39d64",
+				"correct": true,
+				"answer": "Level 1 responses use static messages defined in the domain file"
+			},
+			{
+				"_id": "d1ea1a27-6953-10e2-1588-875476344b2f",
+				"correct": true,
+				"answer": "Level 2 actions can execute custom Python code to generate dynamic responses"
+			},
+			{
+				"_id": "f414c5a1-ba66-d618-1a5e-632fd44054ca",
+				"correct": false,
+				"answer": "The pattern_session_start flow only triggers when users explicitly ask for help"
+			},
+			{
+				"_id": "bf3ccd69-edef-10af-2c73-79e8e777cc49",
+				"correct": true,
+				"answer": "FlowPolicy is responsible for matching user intents to appropriate flows"
+			},
+			{
+				"_id": "90894d2d-2f34-793e-8bf2-7c2385f2d0bb",
+				"correct": false,
+				"answer": "All flows must use custom actions to generate responses"
+			}
+		],
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Multiple Choice"
+				}
+			],
+			"files": [],
+			"opened": [
+				{
+					"type": "terminal",
+					"panelNumber": 1,
+					"content": ""
+				}
+			]
+		},
+		"bloomsObjectiveLevel": "3",
+		"learningObjectives": "SWBAT identify which components are involved in processing different types of user requests in a Rasa conversation",
+		"guidance": "The correct answers are:\n\n* The LLM understands user intent for all messages after the initial greeting - The conversation shows the LLM interpreting \"What are your hours?\", \"What are your holiday hours?\", and \"How can I contact you?\"\n* Level 1 responses use static messages defined in the domain file - The contact flow uses utter_contact which provides a static response\n* Level 2 actions can execute custom Python code to generate dynamic responses - Both action_bank_hours and action_holiday_hours execute Python code to check dates and generate contextual messages\n* FlowPolicy is responsible for matching user intents to appropriate flows - The example shows FlowPolicy matching intents to hours, holiday_hours, and contact flows\n\nThe incorrect options are:\n* pattern_session_start triggers automatically when a new session starts, not when users ask for help\n* Not all flows require custom actions - the contact flow uses a simple utter response (Level 1)",
+		"showGuidanceAfterResponseOption": {
+			"type": "Attempts",
+			"passedFrom": 1
+		},
+		"maxAttemptsCount": 1,
+		"showExpectedAnswerOption": {
+			"type": "Always"
+		},
+		"points": 20,
+		"incorrectPoints": 0,
+		"arePartialPointsAllowed": false,
+		"useMaximumScore": false
+	}
+}

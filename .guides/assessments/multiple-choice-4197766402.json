@@ -1,0 +1,64 @@
+{
+	"type": "multiple-choice",
+	"taskId": "multiple-choice-4197766402",
+	"source": {
+		"name": "what is a slot",
+		"showName": false,
+		"instructions": "**What is a slot?**",
+		"multipleResponse": false,
+		"isRandomized": true,
+		"answers": [
+			{
+				"_id": "37e05563-9751-af6b-0f00-db8585f5f357",
+				"correct": false,
+				"answer": "A flow step that asks the user for information"
+			},
+			{
+				"_id": "b3bb18c1-a2d9-c11b-7d45-f66762f38fca",
+				"correct": false,
+				"answer": "A type of response the bot can say"
+			},
+			{
+				"_id": "9ed457e0-6f2f-461e-1bda-b1aa4f4e1e57",
+				"correct": false,
+				"answer": "A Python function that runs during the conversation"
+			},
+			{
+				"_id": "6ab69997-3c26-8c2d-fcf1-742f147f3a64",
+				"correct": true,
+				"answer": "A memory variable that stores information from the conversation"
+			}
+		],
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Multiple Choice"
+				}
+			],
+			"files": [],
+			"opened": [
+				{
+					"type": "terminal",
+					"panelNumber": 1,
+					"content": ""
+				}
+			]
+		},
+		"bloomsObjectiveLevel": "1",
+		"learningObjectives": "SWBAT define what a slot is in conversational AI",
+		"guidance": "A slot is the bot's memory: it stores information from the conversation. The other options describe different components of a conversational AI system but are not slots. A flow step is part of the conversation flow structure, a response is an output message, and Python functions handle logic but are not slots themselves.",
+		"showGuidanceAfterResponseOption": {
+			"type": "Attempts",
+			"passedFrom": 1
+		},
+		"maxAttemptsCount": 1,
+		"showExpectedAnswerOption": {
+			"type": "Always"
+		},
+		"points": 20,
+		"incorrectPoints": 0,
+		"arePartialPointsAllowed": false,
+		"useMaximumScore": false
+	}
+}

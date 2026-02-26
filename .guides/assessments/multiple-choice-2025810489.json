@@ -1,0 +1,64 @@
+{
+	"type": "multiple-choice",
+	"taskId": "multiple-choice-2025810489",
+	"source": {
+		"name": "8.1 pattern_session_start trigger",
+		"showName": false,
+		"instructions": "**What triggers pattern_session_start?**",
+		"multipleResponse": false,
+		"isRandomized": true,
+		"answers": [
+			{
+				"_id": "982752c0-26a7-a236-ba0b-4f619832b07a",
+				"correct": false,
+				"answer": "User says \"hello\""
+			},
+			{
+				"_id": "b68677fd-6b8d-a89c-3951-79df0145f338",
+				"correct": false,
+				"answer": "A flow completes"
+			},
+			{
+				"_id": "8b23c7ec-c1e8-cd1f-02cd-45c7c6d19d74",
+				"correct": true,
+				"answer": "A new conversation begins"
+			},
+			{
+				"_id": "63df5d5a-0928-cd16-3ed8-877278892f1c",
+				"correct": false,
+				"answer": "User asks for help"
+			}
+		],
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Multiple Choice"
+				}
+			],
+			"files": [],
+			"opened": [
+				{
+					"type": "terminal",
+					"panelNumber": 1,
+					"content": ""
+				}
+			]
+		},
+		"bloomsObjectiveLevel": "2",
+		"learningObjectives": "SWBAT identify what triggers the pattern_session_start event",
+		"guidance": "The correct answer is 'A new conversation begins'. The pattern_session_start is triggered automatically when a new conversation session is initiated, not by specific user inputs or flow completions.",
+		"showGuidanceAfterResponseOption": {
+			"type": "Attempts",
+			"passedFrom": 1
+		},
+		"maxAttemptsCount": 1,
+		"showExpectedAnswerOption": {
+			"type": "Always"
+		},
+		"points": 20,
+		"incorrectPoints": 0,
+		"arePartialPointsAllowed": false,
+		"useMaximumScore": false
+	}
+}

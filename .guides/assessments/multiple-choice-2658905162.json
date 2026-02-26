@@ -1,0 +1,64 @@
+{
+	"type": "multiple-choice",
+	"taskId": "multiple-choice-2658905162",
+	"source": {
+		"name": "8.1 what is a flow",
+		"showName": false,
+		"instructions": "**What is a Flow?**",
+		"multipleResponse": false,
+		"isRandomized": false,
+		"answers": [
+			{
+				"_id": "083039c0-46f0-928d-59c1-c79a3681fcbd",
+				"correct": false,
+				"answer": "A predefined bot message"
+			},
+			{
+				"_id": "99ba0e84-4daf-15a0-7d05-be2121135116",
+				"correct": false,
+				"answer": "A Python function"
+			},
+			{
+				"_id": "3e7d9e29-88f3-94ab-301e-5f5cbb84f54f",
+				"correct": false,
+				"answer": "A configuration file"
+			},
+			{
+				"_id": "8d7933ee-aae8-2d30-a87a-6f9b5e588376",
+				"correct": true,
+				"answer": "A conversation script with steps"
+			}
+		],
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Multiple Choice"
+				}
+			],
+			"files": [],
+			"opened": [
+				{
+					"type": "terminal",
+					"panelNumber": 1,
+					"content": ""
+				}
+			]
+		},
+		"bloomsObjectiveLevel": "1",
+		"learningObjectives": "SWBAT define what a Flow is in conversational AI systems",
+		"guidance": "The correct answer is 'A conversation script with steps'. A Flow is a structured sequence of conversational steps that defines how a bot should interact with users in specific scenarios. It's not just a single predefined message, nor is it a Python function or configuration file, but rather a complete script that guides the conversation flow.",
+		"showGuidanceAfterResponseOption": {
+			"type": "Attempts",
+			"passedFrom": 1
+		},
+		"maxAttemptsCount": 1,
+		"showExpectedAnswerOption": {
+			"type": "Always"
+		},
+		"points": 20,
+		"incorrectPoints": 0,
+		"arePartialPointsAllowed": false,
+		"useMaximumScore": false
+	}
+}

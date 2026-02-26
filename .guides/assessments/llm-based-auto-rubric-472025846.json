@@ -1,0 +1,37 @@
+{
+	"type": "llm-based-auto-rubric",
+	"taskId": "llm-based-auto-rubric-472025846",
+	"source": {
+		"name": "Modify System Patterns",
+		"showName": true,
+		"instructions": "Modify the pattern_session_start flow in data/system/patterns/patterns.yml to add a second step that provides contact information.\n\nThe pattern should:\n- Keep the existing utter_greet step\n- Add a new step: - action: utter_contact\n- Maintain proper YAML syntax and indentation",
+		"metadata": {
+			"tags": [],
+			"files": [],
+			"opened": []
+		},
+		"bloomsObjectiveLevel": "",
+		"learningObjectives": "",
+		"guidance": "",
+		"showGuidanceAfterResponseOption": {
+			"type": "Always"
+		},
+		"maxAttemptsCount": 0,
+		"points": 6,
+		"arePartialPointsAllowed": true,
+		"rubrics": [
+			{
+				"id": "1",
+				"title": "Checking System Patterns",
+				"description": "Requirements Checklist (all must be met):\n\n1. File Location and Existence:\n   - File data/system/patterns/patterns.yml exists in /home/codio/workspace/level1/\n   - File is valid YAML (no syntax errors, parses correctly)\n\n2. Pattern Structure:\n   - pattern_session_start exists under patterns: section (or flows: section, depending on file structure)\n   - Pattern has a steps: section\n   - Steps section is a list (contains action items)\n\n3. Required Steps:\n   - Steps section contains at least one action: utter_greet\n   - Steps section contains action: utter_contact\n   - Both actions are properly formatted: \"- action: utter_X\"\n   - Actions are properly indented (6 spaces from left margin, under steps:)\n\n4. Response References:\n   - All action references (utter_greet, utter_contact) should exist in domain/basics.yml\n   - Action names start with \"utter_\"\n\n5. YAML Syntax and Indentation:\n   - Uses exactly 2 spaces for indentation (not tabs, not 4 spaces)\n   - Proper indentation throughout file\n   - No tabs used\n\nGrading: Award full points (6) if all requirements are met. Deduct points for each missing requirement.",
+				"points": 6
+			}
+		],
+		"solutions": [
+			{
+				"path": "level1/data/system/patterns/patterns.yml",
+				"content": "flows:\n  pattern_completed:\n    description: A flow has been completed and there is nothing else to be done\n    steps:\n      - noop: true\n        next: END\n\n  pattern_session_start:\n    description: Start the conversation with a greeting\n    name: pattern session start\n    nlu_trigger:\n      - intent: session_start\n    steps:\n      - action: utter_greet\n"
+			}
+		]
+	}
+}

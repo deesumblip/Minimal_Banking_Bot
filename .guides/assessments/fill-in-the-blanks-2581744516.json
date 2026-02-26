@@ -1,0 +1,65 @@
+{
+	"type": "fill-in-the-blanks",
+	"taskId": "fill-in-the-blanks-2581744516",
+	"source": {
+		"name": "Chapter 1.3 Unit 4.2 - Creating a Flow with Slot Collection",
+		"showName": false,
+		"instructions": "**Fill in the blanks to complete the YAML flow configuration below.**",
+		"showValues": true,
+		"text": "```yaml\n<<<flows>>>:\n  book_appointment:\n    <<<name>>>: book an appointment (demo)\n    description: |\n      Demonstrates a flow with slot collection.\n      The bot will ask for a date if not provided,\n      then call the action to book the appointment.\n    <<<steps>>>:\n      - <<<collect>>>: date\n        description: \"appointment date\"\n      - <<<action>>>: action_book_appointment_simple\n```",
+		"distractors": "intents\nresponses\nrules\nslots\nentities\nforms",
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Fill in the Blanks"
+				}
+			],
+			"files": [],
+			"opened": [
+				{
+					"type": "terminal",
+					"panelNumber": 1,
+					"content": ""
+				}
+			]
+		},
+		"bloomsObjectiveLevel": "",
+		"learningObjectives": "",
+		"guidance": "The correct answers are:\n\n* **flows** - The top-level key that contains all flow definitions\n* **name** - The display name for the flow\n* **steps** - The sequence of actions the flow will execute\n* **collect** - The step type that collects a slot value from the user\n* **action** - The step type that executes a custom action\n\nThis YAML structure defines a flow that first collects a date slot from the user, then executes an action to book an appointment using that collected information.",
+		"showGuidanceAfterResponseOption": {
+			"type": "Attempts",
+			"passedFrom": 1
+		},
+		"maxAttemptsCount": 1,
+		"showExpectedAnswerOption": {
+			"type": "Always"
+		},
+		"points": 20,
+		"arePartialPointsAllowed": false,
+		"useMaximumScore": false,
+		"tokens": {
+			"blank": [
+				"flows",
+				"name",
+				"steps",
+				"collect",
+				"action"
+			],
+			"text": [
+				"```yaml\n",
+				0,
+				":\n  book_appointment:\n    ",
+				0,
+				": book an appointment (demo)\n    description: |\n      Demonstrates a flow with slot collection.\n      The bot will ask for a date if not provided,\n      then call the action to book the appointment.\n    ",
+				0,
+				":\n      - ",
+				0,
+				": date\n        description: \"appointment date\"\n      - ",
+				0,
+				": action_book_appointment_simple\n```"
+			],
+			"regexPositions": []
+		}
+	}
+}

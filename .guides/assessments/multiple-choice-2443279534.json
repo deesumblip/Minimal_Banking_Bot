@@ -1,0 +1,64 @@
+{
+	"type": "multiple-choice",
+	"taskId": "multiple-choice-2443279534",
+	"source": {
+		"name": "Lab 7.1 bot response location",
+		"showName": false,
+		"instructions": "**Where do you add or edit the exact text the bot can say (e.g. \"Hello! How can I help?\")?**",
+		"multipleResponse": false,
+		"isRandomized": false,
+		"answers": [
+			{
+				"_id": "2e29b0e2-ff21-7b28-602c-26c48d8b75ff",
+				"correct": false,
+				"answer": "level1/data/basics/*.yml"
+			},
+			{
+				"_id": "130b5627-3b71-723c-7378-0bf4d7b65fc8",
+				"correct": true,
+				"answer": "level1/domain/basics.yml"
+			},
+			{
+				"_id": "85d0c9d9-e76e-5641-c102-5dee4249531e",
+				"correct": false,
+				"answer": "level1/config.yml"
+			},
+			{
+				"_id": "1b333ef2-f408-d6db-786d-d7de2877db69",
+				"correct": false,
+				"answer": "level1/data/system/patterns/patterns.yml"
+			}
+		],
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Multiple Choice"
+				}
+			],
+			"files": [],
+			"opened": [
+				{
+					"type": "terminal",
+					"panelNumber": 1,
+					"content": ""
+				}
+			]
+		},
+		"bloomsObjectiveLevel": "2",
+		"learningObjectives": "SWBAT identify where bot response text is defined in the system architecture",
+		"guidance": "The correct answer is level1/domain/basics.yml. Responses (the actual messages) are defined in the domain; flows in data/basics/ reference those responses. The domain file contains the exact text that the bot will say to users, while other files handle flow logic, configuration, and pattern matching.",
+		"showGuidanceAfterResponseOption": {
+			"type": "Attempts",
+			"passedFrom": 1
+		},
+		"maxAttemptsCount": 1,
+		"showExpectedAnswerOption": {
+			"type": "Always"
+		},
+		"points": 20,
+		"incorrectPoints": 0,
+		"arePartialPointsAllowed": false,
+		"useMaximumScore": false
+	}
+}

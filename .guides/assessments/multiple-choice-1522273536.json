@@ -1,0 +1,64 @@
+{
+	"type": "multiple-choice",
+	"taskId": "multiple-choice-1522273536",
+	"source": {
+		"name": "Lab 2.1 - Exploring the Actions Folder - Required parameters for run()",
+		"showName": false,
+		"instructions": "**Which parameters does the `run()` method receive? (Select the most accurate list)**",
+		"multipleResponse": false,
+		"isRandomized": false,
+		"answers": [
+			{
+				"_id": "c914ab82-3c4a-20be-15d1-177f250a6cab",
+				"correct": false,
+				"answer": "`self` only"
+			},
+			{
+				"_id": "73397cee-4fd7-b3be-ebca-2044b2e4b288",
+				"correct": false,
+				"answer": "`self` and `domain`"
+			},
+			{
+				"_id": "59787250-183f-2100-5b51-db4a0e488b12",
+				"correct": true,
+				"answer": "`self`, `dispatcher`, `tracker`, and `domain`"
+			},
+			{
+				"_id": "9ebb9ff8-47fa-0fb6-9a83-9c75a659b1b7",
+				"correct": false,
+				"answer": "`self` and `dispatcher` only"
+			}
+		],
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Multiple Choice"
+				}
+			],
+			"files": [],
+			"opened": [
+				{
+					"type": "terminal",
+					"panelNumber": 1,
+					"content": ""
+				}
+			]
+		},
+		"bloomsObjectiveLevel": "1",
+		"learningObjectives": "SWBAT identify the required parameters for the run() method in Rasa custom actions",
+		"guidance": "The `run()` method in a Rasa custom action requires four parameters: `self`, `dispatcher`, `tracker`, and `domain`. The `dispatcher` is used to send messages back to the user, the `tracker` contains the conversation history, and the `domain` contains information about the bot's configuration.",
+		"showGuidanceAfterResponseOption": {
+			"type": "Attempts",
+			"passedFrom": 1
+		},
+		"maxAttemptsCount": 1,
+		"showExpectedAnswerOption": {
+			"type": "Always"
+		},
+		"points": 20,
+		"incorrectPoints": 0,
+		"arePartialPointsAllowed": false,
+		"useMaximumScore": false
+	}
+}

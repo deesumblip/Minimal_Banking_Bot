@@ -1,0 +1,65 @@
+{
+	"type": "fill-in-the-blanks",
+	"taskId": "fill-in-the-blanks-1525609887",
+	"source": {
+		"name": "Chapter 1.3 - 8.1 Knowledge Check: rasa-slots-implementation",
+		"showName": false,
+		"instructions": "**Fill in the blanks to complete the Rasa slot implementation code below.**",
+		"showValues": true,
+		"text": "```yaml\n# Domain file configuration\nslots:\n  <<<account>>>:\n    type: text\n    mappings:\n    - type: from_entity\n      entity: account_number\n\nresponses:\n  <<<utter_ask_account>>>:\n  - text: \"What is your account number?\"\n\nflows:\n  transfer_money:\n    steps:\n    - <<<collect>>>: account\n    - action: validate_account\n```\n\n```python\n# Action code\nclass ValidateAccount(Action):\n    def run(self, dispatcher, <<<tracker>>>, domain):\n        account_value = <<<tracker.get_slot>>>(\"account\")\n        return []\n```",
+		"distractors": "entity\nfrom_text\nutter_response_account\nrequest\nslot_tracker\nget_entity",
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Fill in the Blanks"
+				}
+			],
+			"files": [],
+			"opened": [
+				{
+					"type": "terminal",
+					"panelNumber": 1,
+					"content": ""
+				}
+			]
+		},
+		"bloomsObjectiveLevel": "",
+		"learningObjectives": "",
+		"guidance": "The correct answers are:\n\n* **account** - The slot name that stores the account information\n* **utter_ask_account** - The naming convention for responses when asking for slot values follows `utter_ask_<slot_name>`\n* **collect** - The step that tells Rasa to collect the slot value from the user\n* **tracker** - The parameter that provides access to conversation state and slots in actions\n* **tracker.get_slot** - The method used to retrieve a slot value from the tracker in custom actions",
+		"showGuidanceAfterResponseOption": {
+			"type": "Attempts",
+			"passedFrom": 1
+		},
+		"maxAttemptsCount": 1,
+		"showExpectedAnswerOption": {
+			"type": "Always"
+		},
+		"points": 5,
+		"arePartialPointsAllowed": false,
+		"useMaximumScore": false,
+		"tokens": {
+			"blank": [
+				"account",
+				"utter_ask_account",
+				"collect",
+				"tracker",
+				"tracker.get_slot"
+			],
+			"text": [
+				"```yaml\n# Domain file configuration\nslots:\n  ",
+				0,
+				":\n    type: text\n    mappings:\n    - type: from_entity\n      entity: account_number\n\nresponses:\n  ",
+				0,
+				":\n  - text: \"What is your account number?\"\n\nflows:\n  transfer_money:\n    steps:\n    - ",
+				0,
+				": account\n    - action: validate_account\n```\n\n```python\n# Action code\nclass ValidateAccount(Action):\n    def run(self, dispatcher, ",
+				0,
+				", domain):\n        account_value = ",
+				0,
+				"(\"account\")\n        return []\n```"
+			],
+			"regexPositions": []
+		}
+	}
+}

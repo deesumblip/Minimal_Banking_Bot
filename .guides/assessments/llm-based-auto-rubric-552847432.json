@@ -1,0 +1,68 @@
+{
+	"type": "llm-based-auto-rubric",
+	"taskId": "llm-based-auto-rubric-552847432",
+	"source": {
+		"name": "Lab 7.2 Build Your Own Feature",
+		"showName": true,
+		"instructions": "Create your own feature and then run this assessment.",
+		"metadata": {
+			"tags": [],
+			"files": [
+				".guides/assessments/level1_graders/lab_7.2_solution_reference.md",
+				"level1/data/basics/contact.yml",
+				"level1/data/basics/greet.yml",
+				"level1/data/basics/help.yml",
+				"level1/domain/basics.yml"
+			],
+			"opened": [
+				{
+					"type": "terminal",
+					"panelNumber": 1,
+					"content": ""
+				}
+			]
+		},
+		"bloomsObjectiveLevel": "",
+		"learningObjectives": "",
+		"guidance": "",
+		"showGuidanceAfterResponseOption": {
+			"type": "Attempts",
+			"passedFrom": 1
+		},
+		"maxAttemptsCount": 0,
+		"points": 20,
+		"arePartialPointsAllowed": true,
+		"rubrics": [
+			{
+				"id": "1",
+				"title": "1",
+				"description": "The student added at least one new response (e.g. utter_*) in domain/basics.yml. The response has valid structure: under responses: a key like utter_hours with at least one \"- text:\" message, and optionally \"metadata: rephrase: True\". The new response must NOT be one of the original set (utter_greet, utter_help, utter_contact, utter_goodbye). Do not award points for pre-existing responses—only for a response added for this lab. Award full points if a valid new response exists; partial credit if structure is wrong or it's a duplicate of an original; zero if no new response.",
+				"points": 5
+			},
+			{
+				"id": "2",
+				"title": "2",
+				"description": "A new .yml flow file exists in data/basics/ that was added for this lab (e.g. hours.yml, locations.yml, faq.yml). The flow file must NOT be one of the originals: greet.yml, help.yml, contact.yml, goodbye.yml. Do not award points for pre-existing flow files. The file has valid YAML with a top-level \"flows:\" key, and at least one flow that has \"name\", \"description\", and \"steps\". Award full points if a new flow file (not one of the four originals) exists with correct structure; partial if file exists but structure is wrong; zero if no new flow file or only original files exist.",
+				"points": 5
+			},
+			{
+				"id": "3",
+				"title": "3",
+				"description": "The new flow's steps reference the new response. That is, at least one step uses \"respond: <new_response_name>\" or equivalent where <new_response_name> matches the new response added in domain/basics.yml (e.g. utter_hours). Award full points if the flow clearly uses the new response; zero if the flow does not reference it or references only original responses.",
+				"points": 5
+			},
+			{
+				"id": "4",
+				"title": "4",
+				"description": "Best practices: The flow has a clear, descriptive \"description\" (not empty or trivial). The new response in domain uses \"metadata: rephrase: True\" where appropriate for user-facing text. Award full points if both are present; partial if one is missing; zero if neither.",
+				"points": 5
+			}
+		],
+		"solutions": [
+			{
+				"path": ".guides/assessments/level1_graders/lab_7.2_solution_reference.md",
+				"content": "# Lab 7.2 – Reference solution for LLM Rubric Autograde\n\nUse this file as the **Instructor Provided Solution File** in Codio's LLM Rubric Autograde so the LLM has a model answer to compare against student submissions.\n\n**Grading flexibility:** The example below uses \"hours\" only as one valid solution. Accept any student submission that adds a different but valid feature (e.g. branch locations, FAQ, feedback)—any new `utter_*` response and any new flow file in `data/basics/` that meets the rubric structure and links the flow to that response.\n\n---\n\n## 1. New response in domain/basics.yml\n\nOne new response, following the same pattern as existing responses (e.g. utter_greet, utter_help). Example (students may use a different topic, e.g. utter_locations, utter_faq):\n\n```yaml\nresponses:\n  # ... existing responses (utter_greet, utter_help, utter_contact) ...\n  utter_hours:\n    - text: \"We're open Monday–Friday 9am–5pm and Saturday 10am–2pm.\"\n      metadata:\n        rephrase: True\n```\n\n- Valid structure: response name (e.g. `utter_hours`), `- text:` with at least one message, optional `metadata: rephrase: True`.\n- Must be distinct from the original set (greet, help, contact, goodbye).\n\n---\n\n## 2. New flow in data/basics/\n\nOne new flow file (e.g. `hours.yml`, `locations.yml`, `faq.yml`—filename may vary) that uses the new response. Example:\n\n```yaml\nflows:\n  hours:\n    name: bank hours\n    description: \"User asks for branch or bank opening hours, or when we are open.\"\n    steps:\n      - respond: utter_hours\n```\n\n- Valid structure: `flows:`, one flow with `name`, `description`, and `steps`.\n- At least one step must reference the new response (e.g. `respond: utter_hours`).\n- Description should be clear and descriptive so the LLM can match user questions to this flow.\n\n---\n\n## Rubric summary for autograde\n\n- **New response in domain:** Present, valid YAML, not one of greet/help/contact/goodbye. Do not award points for pre-existing responses (utter_greet, utter_help, utter_contact, utter_goodbye).\n- **New flow file:** A file in `data/basics/` that was added for this lab—not one of the originals (greet.yml, help.yml, contact.yml, goodbye.yml). Valid YAML, has name, description, steps. Do not award points for pre-existing flow files.\n- **Flow uses new response:** At least one step references the new response name.\n- **Best practices:** Descriptive flow description; rephrase metadata where appropriate.\n"
+			}
+		]
+	}
+}

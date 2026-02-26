@@ -1,0 +1,58 @@
+{
+	"type": "code-output-compare",
+	"taskId": "code-output-compare-389374509",
+	"source": {
+		"name": "Lab 5.1: Using Actions in Flows.",
+		"showName": true,
+		"instructions": "Verify that you can create flows that use actions (hours.yml and holiday_hours.yml)",
+		"command": "bash /home/codio/workspace/.guides/assessments/level2_graders/lab_5.1_grader.sh",
+		"preExecuteCommand": "",
+		"options": {
+			"timeout": 60,
+			"ignoreCase": true,
+			"ignoreWhitespaces": true,
+			"ignoreNewline": true,
+			"matchSubstring": true
+		},
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Standard Code Test"
+				}
+			],
+			"files": [
+				".guides/assessments/level2_graders/lab_5.1_grader.sh"
+			],
+			"opened": [
+				{
+					"type": "terminal",
+					"panelNumber": 1,
+					"content": ""
+				}
+			]
+		},
+		"bloomsObjectiveLevel": "",
+		"learningObjectives": "",
+		"guidance": "The grader checks that data/basics/hours.yml and data/basics/holiday_hours.yml exist and define flows that use the correct actions.",
+		"showGuidanceAfterResponseOption": {
+			"type": "Never"
+		},
+		"maxAttemptsCount": 0,
+		"points": 12,
+		"showExpectedAnswerOption": {
+			"type": "Always"
+		},
+		"arePartialPointsAllowed": true,
+		"useMaximumScore": false,
+		"sequence": [
+			{
+				"arguments": "",
+				"input": "",
+				"output": "PASS: Flow creation verification complete!",
+				"showFeedback": false,
+				"feedback": ""
+			}
+		]
+	}
+}

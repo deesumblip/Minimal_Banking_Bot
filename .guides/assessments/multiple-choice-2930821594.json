@@ -1,0 +1,58 @@
+{
+	"type": "multiple-choice",
+	"taskId": "multiple-choice-2930821594",
+	"source": {
+		"name": "LLM Temperature Setting",
+		"showName": true,
+		"instructions": "**What does `temperature: 0.3` mean for the LLM?**",
+		"multipleResponse": false,
+		"isRandomized": false,
+		"answers": [
+			{
+				"_id": "ab006f0e-3465-243f-4555-c9d9ce7e7bd8",
+				"correct": true,
+				"answer": "The LLM will be somewhat creative but mostly consistent (0.3 is relatively low, meaning less randomness)"
+			},
+			{
+				"_id": "71896350-a59a-0348-40cd-579af368cfc9",
+				"correct": false,
+				"answer": "The LLM will be highly creative and produce very diverse outputs each time"
+			},
+			{
+				"_id": "a8a40cdd-74cb-85f1-18b3-c1c591fed1f5",
+				"correct": false,
+				"answer": "The LLM will produce exactly the same output for the same input every time"
+			},
+			{
+				"_id": "82573acc-9269-49c1-48ca-11da99c9bf2b",
+				"correct": false,
+				"answer": "The LLM will operate at a lower processing speed to save energy"
+			}
+		],
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Multiple Choice"
+				}
+			],
+			"files": [],
+			"opened": []
+		},
+		"bloomsObjectiveLevel": "2",
+		"learningObjectives": "SWBAT understand the effect of temperature settings in LLM configurations",
+		"guidance": "Temperature is a parameter that controls randomness in LLM outputs. A lower temperature like 0.3 means the model will be more focused on high-probability (safe) outputs, resulting in responses that are more consistent and predictable, though still with some creativity. Higher temperatures (closer to 1.0 or above) increase randomness and creativity, while very low temperatures (close to 0) make outputs highly deterministic.",
+		"showGuidanceAfterResponseOption": {
+			"type": "Attempts",
+			"passedFrom": 1
+		},
+		"maxAttemptsCount": 1,
+		"showExpectedAnswerOption": {
+			"type": "Always"
+		},
+		"points": 20,
+		"incorrectPoints": 0,
+		"arePartialPointsAllowed": false,
+		"useMaximumScore": false
+	}
+}

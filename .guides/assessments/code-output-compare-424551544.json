@@ -1,0 +1,58 @@
+{
+	"type": "code-output-compare",
+	"taskId": "code-output-compare-424551544",
+	"source": {
+		"name": "Training Verification",
+		"showName": true,
+		"instructions": "Run this assessment to verify your work.",
+		"command": "bash /home/codio/workspace/.guides/assessments/level1_graders/lab_6.1_grader.sh",
+		"preExecuteCommand": "",
+		"options": {
+			"timeout": 30,
+			"ignoreCase": true,
+			"ignoreWhitespaces": true,
+			"ignoreNewline": true,
+			"matchSubstring": true
+		},
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Standard Code Test"
+				}
+			],
+			"files": [
+				".guides/assessments/level1_graders/lab_6.1_grader.sh"
+			],
+			"opened": [
+				{
+					"type": "terminal",
+					"panelNumber": 1,
+					"content": ""
+				}
+			]
+		},
+		"bloomsObjectiveLevel": "",
+		"learningObjectives": "",
+		"guidance": "",
+		"showGuidanceAfterResponseOption": {
+			"type": "Never"
+		},
+		"maxAttemptsCount": 0,
+		"points": 10,
+		"showExpectedAnswerOption": {
+			"type": "Always"
+		},
+		"arePartialPointsAllowed": true,
+		"useMaximumScore": false,
+		"sequence": [
+			{
+				"arguments": "",
+				"input": "",
+				"output": "✅ PASS: Training verification complete",
+				"showFeedback": false,
+				"feedback": ""
+			}
+		]
+	}
+}

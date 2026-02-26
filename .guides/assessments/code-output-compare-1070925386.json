@@ -1,0 +1,58 @@
+{
+	"type": "code-output-compare",
+	"taskId": "code-output-compare-1070925386",
+	"source": {
+		"name": "Lab 6.1: Training and Testing with Actions.",
+		"showName": true,
+		"instructions": "Verify that you can successfully train your bot with actions.",
+		"command": "bash /home/codio/workspace/.guides/assessments/level2_graders/lab_6.1_grader.sh",
+		"preExecuteCommand": "",
+		"options": {
+			"timeout": 60,
+			"ignoreCase": true,
+			"ignoreWhitespaces": true,
+			"ignoreNewline": true,
+			"matchSubstring": true
+		},
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Standard Code Test"
+				}
+			],
+			"files": [
+				".guides/assessments/level2_graders/lab_6.1_grader.sh"
+			],
+			"opened": [
+				{
+					"type": "terminal",
+					"panelNumber": 1,
+					"content": ""
+				}
+			]
+		},
+		"bloomsObjectiveLevel": "",
+		"learningObjectives": "",
+		"guidance": "The grader checks that a model file exists under models/ and that training completed without errors (per lab verification).",
+		"showGuidanceAfterResponseOption": {
+			"type": "Never"
+		},
+		"maxAttemptsCount": 0,
+		"points": 4,
+		"showExpectedAnswerOption": {
+			"type": "Always"
+		},
+		"arePartialPointsAllowed": true,
+		"useMaximumScore": false,
+		"sequence": [
+			{
+				"arguments": "",
+				"input": "",
+				"output": "PASS: Training verification complete!",
+				"showFeedback": false,
+				"feedback": ""
+			}
+		]
+	}
+}

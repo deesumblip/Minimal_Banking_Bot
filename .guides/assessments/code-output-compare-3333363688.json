@@ -1,0 +1,72 @@
+{
+	"type": "code-output-compare",
+	"taskId": "code-output-compare-3333363688",
+	"source": {
+		"name": "Lab 0.1 Virtual Environment and Rasa Pro Install",
+		"showName": true,
+		"instructions": "Run the assessment!",
+		"command": "python3 /home/codio/workspace/.guides/assessments/level1_graders/lab_0.1_grader.py",
+		"preExecuteCommand": "",
+		"options": {
+			"timeout": 60,
+			"ignoreCase": true,
+			"ignoreWhitespaces": true,
+			"ignoreNewline": true,
+			"matchSubstring": true
+		},
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Standard Code Test"
+				}
+			],
+			"files": [
+				".guides/assessments/level1_graders/lab_0.1_grader.py"
+			],
+			"opened": [
+				{
+					"type": "terminal",
+					"panelNumber": 1,
+					"content": ""
+				}
+			]
+		},
+		"bloomsObjectiveLevel": "",
+		"learningObjectives": "",
+		"guidance": "",
+		"showGuidanceAfterResponseOption": {
+			"type": "Never"
+		},
+		"maxAttemptsCount": 0,
+		"points": 6,
+		"showExpectedAnswerOption": {
+			"type": "Always"
+		},
+		"arePartialPointsAllowed": true,
+		"useMaximumScore": false,
+		"sequence": [
+			{
+				"arguments": "",
+				"input": "",
+				"output": "Step 1: PASSED",
+				"showFeedback": false,
+				"feedback": ""
+			},
+			{
+				"arguments": "",
+				"input": "",
+				"output": "Step 2: PASSED",
+				"showFeedback": false,
+				"feedback": ""
+			},
+			{
+				"arguments": "",
+				"input": "",
+				"output": "Step 3: PASSED",
+				"showFeedback": false,
+				"feedback": ""
+			}
+		]
+	}
+}

@@ -1,0 +1,59 @@
+{
+	"type": "fill-in-the-blanks",
+	"taskId": "fill-in-the-blanks-1433273216",
+	"source": {
+		"name": "2.2 Understanding the Parameters - Understanding Rasa Components",
+		"showName": false,
+		"instructions": "**Fill in the blanks with the correct component name based on its function.**",
+		"showValues": true,
+		"text": "* To send messages to the user, you would use the <<<dispatcher>>> component.\n* To access conversation history and retrieve slot values, you would use the <<<tracker>>> component.\n* To access your bot's configuration including responses, you would use the <<<domain>>> component.",
+		"distractors": "router\nhistory\nconfig\ninterpreter\nendpoint",
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Fill in the Blanks"
+				}
+			],
+			"files": [],
+			"opened": [
+				{
+					"type": "terminal",
+					"panelNumber": 1,
+					"content": ""
+				}
+			]
+		},
+		"bloomsObjectiveLevel": "",
+		"learningObjectives": "",
+		"guidance": "* The **dispatcher** is the component used to communicate with the user through methods like `utter_message()`\n* The **tracker** stores conversation information including history (events) and slot values\n* The **domain** contains the bot's configuration including response templates",
+		"showGuidanceAfterResponseOption": {
+			"type": "Attempts",
+			"passedFrom": 1
+		},
+		"maxAttemptsCount": 1,
+		"showExpectedAnswerOption": {
+			"type": "Always"
+		},
+		"points": 20,
+		"arePartialPointsAllowed": false,
+		"useMaximumScore": false,
+		"tokens": {
+			"blank": [
+				"dispatcher",
+				"tracker",
+				"domain"
+			],
+			"text": [
+				"* To send messages to the user, you would use the ",
+				0,
+				" component.\n* To access conversation history and retrieve slot values, you would use the ",
+				0,
+				" component.\n* To access your bot's configuration including responses, you would use the ",
+				0,
+				" component."
+			],
+			"regexPositions": []
+		}
+	}
+}

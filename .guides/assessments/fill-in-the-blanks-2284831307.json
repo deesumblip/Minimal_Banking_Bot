@@ -1,0 +1,62 @@
+{
+	"type": "fill-in-the-blanks",
+	"taskId": "fill-in-the-blanks-2284831307",
+	"source": {
+		"name": "Rasa Custom Actions",
+		"showName": true,
+		"instructions": "**Fill in the blanks to complete the Rasa custom action code.**",
+		"showValues": true,
+		"text": "```python\nfrom rasa_sdk import <<<Action>>>, Tracker\nfrom rasa_sdk.executor import CollectingDispatcher\n\nclass ActionBankHours(Action):\n    def <<<name>>>() -> Text:\n        return \"action_bank_hours\"\n    \n    def <<<run>>>(self, dispatcher, tracker, domain):\n        # Custom code for handling bank hours logic\n        dispatcher.<<<utter_message>>>\"Our bank is open 9-5 on weekdays.\")\n        return []\n```",
+		"distractors": "execute\nprocess\ndispatch_message\nmessage\nresponse\nfunction",
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Fill in the Blanks"
+				}
+			],
+			"files": [],
+			"opened": [
+				{
+					"type": "terminal",
+					"panelNumber": 1,
+					"content": ""
+				}
+			]
+		},
+		"bloomsObjectiveLevel": "",
+		"learningObjectives": "",
+		"guidance": "The correct answers are:\n\n1. `Action` - This is the class imported from rasa_sdk that custom actions inherit from\n2. `name` - This required method returns the action identifier string that must match what's defined in the domain\n3. `run` - This required method contains the custom logic for the action\n4. `utter_message` - This is the dispatcher method used to send a response back to the user",
+		"showGuidanceAfterResponseOption": {
+			"type": "Attempts",
+			"passedFrom": 1
+		},
+		"maxAttemptsCount": 1,
+		"showExpectedAnswerOption": {
+			"type": "Always"
+		},
+		"points": 20,
+		"arePartialPointsAllowed": false,
+		"useMaximumScore": false,
+		"tokens": {
+			"blank": [
+				"Action",
+				"name",
+				"run",
+				"utter_message"
+			],
+			"text": [
+				"```python\nfrom rasa_sdk import ",
+				0,
+				", Tracker\nfrom rasa_sdk.executor import CollectingDispatcher\n\nclass ActionBankHours(Action):\n    def ",
+				0,
+				"() -> Text:\n        return \"action_bank_hours\"\n    \n    def ",
+				0,
+				"(self, dispatcher, tracker, domain):\n        # Custom code for handling bank hours logic\n        dispatcher.",
+				0,
+				"\"Our bank is open 9-5 on weekdays.\")\n        return []\n```"
+			],
+			"regexPositions": []
+		}
+	}
+}

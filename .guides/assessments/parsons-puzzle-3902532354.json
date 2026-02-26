@@ -1,0 +1,32 @@
+{
+	"type": "parsons-puzzle",
+	"taskId": "parsons-puzzle-3902532354",
+	"source": {
+		"name": "Using the Dispatcher in a Custom Action",
+		"showName": true,
+		"instructions": "Not all the blocks will be used and they are to indent when necessary, drag the correct blocks into the box below.\nRearrange the code blocks to create a custom action that sends a greeting message followed by a help message. The action should be named `ActionGreetAndHelp` and inherit from the `Action` class. **Remember to indent** properly!",
+		"initial": "class ActionGreetAndHelp(Action):\n    def name(self) -&gt; Text:\n        return &quot;action_greet_and_help&quot;\n    def run(self, dispatcher, tracker, domain):\n        dispatcher.utter_message(text=&quot;Hello! I&#039;m your assistant.&quot;)\n        dispatcher.utter_message(response=&quot;utter_help&quot;)\n        return []\nclass ActionGreetAndHelp(Action):  #distractor\n        dispatcher.utter_response(text=&quot;utter_help&quot;)  #distractor\n        return {}  #distractor",
+		"options": "{\"sortableId\":\"sortable\",\"max_wrong_lines\":10,\"exec_limit\":2500,\"can_indent\":true,\"x_indent\":50,\"lang\":\"en\",\"show_feedback\":true,\"python3\":true,\"trashId\":\"sortableTrash\"}",
+		"grader": "1",
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Parsons Puzzle"
+				}
+			],
+			"files": [],
+			"opened": []
+		},
+		"bloomsObjectiveLevel": "3",
+		"learningObjectives": "SWBAT implement a custom action that uses the dispatcher to communicate with users",
+		"guidance": "The correct implementation of a custom action requires:\n1. A class that inherits from `Action`\n2. A `name()` method that returns the action's name as a string\n3. A `run()` method that takes `dispatcher`, `tracker`, and `domain` as parameters\n\nFor sending messages, the dispatcher provides two methods we need:\n- `utter_message(text=\"...\")` to send a text message directly\n- `utter_message(response=\"...\")` to use a response template from the domain\n\nFinally, action's `run()` method must return an empty list `[]` to indicate no events are returned.",
+		"showGuidanceAfterResponseOption": {
+			"type": "Attempts",
+			"passedFrom": 2
+		},
+		"maxAttemptsCount": 0,
+		"points": 20,
+		"useMaximumScore": false
+	}
+}

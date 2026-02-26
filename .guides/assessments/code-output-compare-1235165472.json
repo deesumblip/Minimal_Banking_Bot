@@ -1,0 +1,58 @@
+{
+	"type": "code-output-compare",
+	"taskId": "code-output-compare-1235165472",
+	"source": {
+		"name": "Lab 5.1: Creating a Flow with Slot Collection",
+		"showName": true,
+		"instructions": "Run the assessment.",
+		"command": "/home/codio/workspace/.venv/bin/python3 /home/codio/workspace/.guides/assessments/level3_graders/lab_5.1_grader.py",
+		"preExecuteCommand": "",
+		"options": {
+			"timeout": 60,
+			"ignoreCase": true,
+			"ignoreWhitespaces": true,
+			"ignoreNewline": true,
+			"matchSubstring": true
+		},
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Standard Code Test"
+				}
+			],
+			"files": [
+				".guides/assessments/level3_graders/lab_5.1_grader.py"
+			],
+			"opened": [
+				{
+					"type": "terminal",
+					"panelNumber": 1,
+					"content": ""
+				}
+			]
+		},
+		"bloomsObjectiveLevel": "",
+		"learningObjectives": "",
+		"guidance": "The grader checks that level3/data/basics/check_balance.yml exists, has valid YAML with a flows: section, at least one flow with name and steps, a step with collect: account, and a step with action: action_check_balance_simple. Review the script output to see which check failed.",
+		"showGuidanceAfterResponseOption": {
+			"type": "WhenGradesReleased"
+		},
+		"maxAttemptsCount": 0,
+		"points": 8,
+		"showExpectedAnswerOption": {
+			"type": "Always"
+		},
+		"arePartialPointsAllowed": true,
+		"useMaximumScore": false,
+		"sequence": [
+			{
+				"arguments": "",
+				"input": "",
+				"output": "PASS",
+				"showFeedback": false,
+				"feedback": ""
+			}
+		]
+	}
+}

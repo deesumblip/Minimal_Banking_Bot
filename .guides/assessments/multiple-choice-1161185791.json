@@ -1,0 +1,64 @@
+{
+	"type": "multiple-choice",
+	"taskId": "multiple-choice-1161185791",
+	"source": {
+		"name": "Lab 2.1: Exploring the actions  folder - custom action reasoning",
+		"showName": false,
+		"instructions": "**Why is `action_bank_hours` implemented as a custom action rather than a simple `utter_*` response in the domain?**",
+		"multipleResponse": false,
+		"isRandomized": false,
+		"answers": [
+			{
+				"_id": "d6ed7912-a870-2c2a-1cf8-f2f3eaee2e5d",
+				"correct": false,
+				"answer": "Actions are faster than responses"
+			},
+			{
+				"_id": "13b0cb62-2c2f-ecb2-b38e-e76531794e61",
+				"correct": false,
+				"answer": "Responses can't send messages to users"
+			},
+			{
+				"_id": "5497a5a3-5b99-b904-4030-f5dd842a22f4",
+				"correct": true,
+				"answer": "The message changes based on the current day (Saturday, Sunday, weekday)—that requires Python logic and `datetime`"
+			},
+			{
+				"_id": "27143872-e2a8-be53-efdb-67cf55bc9b8a",
+				"correct": false,
+				"answer": "Actions are required for all bank-related messages"
+			}
+		],
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Multiple Choice"
+				}
+			],
+			"files": [],
+			"opened": [
+				{
+					"type": "terminal",
+					"panelNumber": 1,
+					"content": ""
+				}
+			]
+		},
+		"bloomsObjectiveLevel": "4",
+		"learningObjectives": "SWBAT explain why dynamic content requires a custom action instead of a simple response",
+		"guidance": "Custom actions are needed when the response requires dynamic content or conditional logic. In this case, the `action_bank_hours` needs to check what day of the week it is using the `datetime` module and then respond with different bank hours depending on whether it's a weekday, Saturday, or Sunday. A simple `utter_*` response can only provide static text and doesn't have access to Python logic or the ability to determine the current date/time.",
+		"showGuidanceAfterResponseOption": {
+			"type": "Attempts",
+			"passedFrom": 1
+		},
+		"maxAttemptsCount": 1,
+		"showExpectedAnswerOption": {
+			"type": "Always"
+		},
+		"points": 20,
+		"incorrectPoints": 0,
+		"arePartialPointsAllowed": false,
+		"useMaximumScore": false
+	}
+}

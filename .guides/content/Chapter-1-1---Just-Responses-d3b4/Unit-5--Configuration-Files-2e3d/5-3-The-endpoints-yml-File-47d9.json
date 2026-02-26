@@ -1,0 +1,19 @@
+{
+	"id": "47d975f7-0a4e-891a-039b-01b239de46c0",
+	"title": "5.3 The endpoints.yml File",
+	"files": [
+		{
+			"path": "#tabs",
+			"action": "close"
+		}
+	],
+	"layout": "2-panels-tree-guides-left",
+	"path": [
+		"level1"
+	],
+	"type": "page",
+	"contentType": "markdown",
+	"teacherOnly": false,
+	"closeTerminalSession": true,
+	"learningObjectives": ""
+}

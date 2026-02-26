@@ -1,0 +1,12 @@
+{
+	"id": "fdd0f875-7629-692b-3df1-146e8f1e6e79",
+	"type": "section",
+	"title": "Unit 2: Understanding the Domain File",
+	"order": [
+		"2-1-What-is-a-Domain--1094",
+		"2-2-Understanding-Responses-b68b",
+		"Lab-2-1--YAML-Syntax-for-Responses-2906",
+		"Lab-2-2--Creating-Your-First-Response-a598",
+		"Lab-2-3--Add-Response-Variations-a630"
+	]
+}

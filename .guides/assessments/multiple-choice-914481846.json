@@ -1,0 +1,64 @@
+{
+	"type": "multiple-choice",
+	"taskId": "multiple-choice-914481846",
+	"source": {
+		"name": "8.1 what is an action",
+		"showName": false,
+		"instructions": "**What is an Action?**",
+		"multipleResponse": false,
+		"isRandomized": true,
+		"answers": [
+			{
+				"_id": "6a8c9e88-c7ca-e6ec-a95b-8dc7465595bd",
+				"correct": true,
+				"answer": "Custom Python code the bot can execute"
+			},
+			{
+				"_id": "be203ed4-8aa3-34d3-ddc5-77043c3502fc",
+				"correct": false,
+				"answer": "A predefined bot message"
+			},
+			{
+				"_id": "6a844ed6-3466-d65f-c7cf-80a44b3b5947",
+				"correct": false,
+				"answer": "A conversation script"
+			},
+			{
+				"_id": "b2ee9c93-3039-67c4-dd3e-15942c1acf40",
+				"correct": false,
+				"answer": "A configuration file"
+			}
+		],
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Multiple Choice"
+				}
+			],
+			"files": [],
+			"opened": [
+				{
+					"type": "terminal",
+					"panelNumber": 1,
+					"content": ""
+				}
+			]
+		},
+		"bloomsObjectiveLevel": "2",
+		"learningObjectives": "SWBAT define what an Action is in Rasa",
+		"guidance": "The correct answer is: Custom Python code the bot can execute. Actions are Python classes that execute custom code. They allow the bot to do more than just send static text - they can perform calculations, access databases, and execute any Python logic. The other options are incorrect: predefined bot messages are responses (utter_*), conversation scripts are flows, and configuration files are separate YAML files used for bot setup.",
+		"showGuidanceAfterResponseOption": {
+			"type": "Attempts",
+			"passedFrom": 1
+		},
+		"maxAttemptsCount": 1,
+		"showExpectedAnswerOption": {
+			"type": "Always"
+		},
+		"points": 20,
+		"incorrectPoints": 0,
+		"arePartialPointsAllowed": false,
+		"useMaximumScore": false
+	}
+}
