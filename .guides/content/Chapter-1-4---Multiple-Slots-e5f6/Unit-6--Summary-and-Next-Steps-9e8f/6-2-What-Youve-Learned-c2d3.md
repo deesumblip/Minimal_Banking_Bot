@@ -14,6 +14,6 @@ In this chapter you:
 
 - **Multiple slots** let the bot remember several values in one conversation and use them together in one action.
 - The **order of `collect:` steps** in the flow is the order in which the bot asks for values.
-- **Naming** stays consistent: slot names and `utter_ask_<slot_name>` in the domain must match the flow and the action’s `get_slot(...)` calls.
+- **Naming** stays consistent: slot names and `utter_ask_<slot_name>` in the domain must match the flow and the action's `get_slot(...)` calls.
 
 Your Level 4 bot is a single assistant that supports greet, help, contact, goodbye, hours, check_balance, and transfer_money flows.

@@ -9,7 +9,7 @@
 
 ---
 
-## Course Structure
+## Course Structure (7 units: 0–6)
 
 ### Unit 0: Recap - What You Built in Level 3
 **Type**: Content Page  
@@ -30,65 +30,55 @@
 **Sections**:
 - 1.1 Multiple Slots — `Level4_Unit1_Content_1.1_Multiple-Slots.md`
 - 1.2 Order of Collection — `Level4_Unit1_Content_1.2_Order-of-Collection.md`
+- 1.3 Slot Naming — `Level4_Unit1_Content_1.3_Slot-Naming-Multiple.md`
 
-**Key Concepts**: Multiple slots in one flow, order of collect steps
-
----
-
-### Unit 2: Slot Naming (Multiple)
-**Type**: Content Page  
-**Assessment**: None
-
-**Sections**:
-- 2.1 Slot Naming Multiple — `Level4_Unit2_Content_2.1_Slot-Naming-Multiple.md`
-
-**Key Concepts**: utter_ask_<slot_name>, slot names match domain, flow, and action
+**Key Concepts**: Multiple slots in one flow, order of collect steps, utter_ask_<slot_name>, slot names match domain, flow, and action
 
 ---
 
-### Unit 3: Adding Slots and Responses
+### Unit 2: Adding Slots and Responses
 **Type**: Content + Lab (with Assessment)  
 **Assessment**: Lab 4.1 - Adding Multiple Slots in the Domain
 
 **Sections**:
-- 3.1 Adding Slots and Responses — `Level4_Unit3_Content_3.1_Adding-Slots-and-Responses.md`
+- 2.1 Adding Slots and Responses — `Level4_Unit2_Content_2.1_Adding-Slots-and-Responses.md`
 - Lab 4.1: Adding Multiple Slots in the Domain — `Level4_Lab4.1_Content.md` / `Level4_Lab4.1_Assessment_Setup.md`
 
 **Key Concepts**: Domain slots amount, recipient, account_from; utter_ask_*; action_process_transfer in actions
 
 ---
 
-### Unit 4: Reading Multiple Slots in Actions
+### Unit 3: Reading Multiple Slots in Actions
 **Type**: Content + Lab (with Assessment)  
 **Assessment**: Lab 4.2 - Writing the Action That Uses Multiple Slots
 
 **Sections**:
-- 4.1 Reading Multiple Slots — `Level4_Unit4_Content_4.1_Reading-Multiple-Slots.md`
+- 3.1 Reading Multiple Slots — `Level4_Unit3_Content_3.1_Reading-Multiple-Slots.md`
 - Lab 4.2: Writing the Action — `Level4_Lab4.2_Content.md` / `Level4_Lab4.2_Assessment_Setup.md`
 
 **Key Concepts**: tracker.get_slot for amount, recipient, account_from; confirmation message
 
 ---
 
-### Unit 5: Flows with Multiple Collect Steps
+### Unit 4: Flows with Multiple Collect Steps
 **Type**: Content + Lab (with Assessment)  
 **Assessment**: Lab 4.3 - Creating the Transfer Flow
 
 **Sections**:
-- 5.1 Multiple Collect Steps — `Level4_Unit5_Content_5.1_Multiple-Collect-Steps.md`
+- 4.1 Multiple Collect Steps — `Level4_Unit4_Content_4.1_Multiple-Collect-Steps.md`
 - Lab 4.3: Creating the Transfer Flow — `Level4_Lab4.3_Content.md` / `Level4_Lab4.3_Assessment_Setup.md`
 
 **Key Concepts**: transfer_money.yml, collect amount/recipient/account_from, action_process_transfer
 
 ---
 
-### Unit 6: Training and Testing
+### Unit 5: Training and Testing
 **Type**: Content + Labs (with Assessments)  
 **Assessment**: Lab 4.4 (training), Lab 4.5 (completion check)
 
 **Sections**:
-- 6.1 Training Level 4 — `Level4_Unit6_Content_6.1_Training-Level-4.md`
-- 6.2 Testing Transfer — `Level4_Unit6_Content_6.2_Testing-Transfer.md`
+- 5.1 Training Level 4 — `Level4_Unit5_Content_5.1_Training-Level-4.md`
+- 5.2 Testing Transfer — `Level4_Unit5_Content_5.2_Testing-Transfer.md`
 - Lab 4.4: Training — `Level4_Lab4.4_Content.md` / `Level4_Lab4.4_Assessment_Setup.md`
 - Lab 4.5: Testing / Completion Check — `Level4_Lab4.5_Content.md` / `Level4_Lab4.5_Assessment_Setup.md`
 
@@ -96,26 +86,16 @@
 
 ---
 
-### Unit 7: Putting It All Together
+### Unit 6: Summary and Next Steps
 **Type**: Content Page  
 **Assessment**: None
 
 **Sections**:
-- 7.1 Complete Bot Walkthrough — `Level4_Unit7_Content_7.1_Complete-Bot-Walkthrough.md`
+- 6.1 Complete Bot Walkthrough — `Level4_Unit6_Content_6.1_Complete-Bot-Walkthrough.md`
+- 6.2 What You've Learned — `Level4_Unit6_Content_6.2_What-Youve-Learned.md`
+- 6.3 What's Next — `Level4_Unit6_Content_6.3_Whats-Next.md`
 
-**Key Concepts**: Summary of all flows (greet, help, contact, goodbye, hours, check_balance, transfer_money)
-
----
-
-### Unit 8: Summary and Next Steps
-**Type**: Content Page  
-**Assessment**: None
-
-**Sections**:
-- 8.1 What You've Learned — `Level4_Unit8_Content_8.1_What-Youve-Learned.md`
-- 8.2 What's Next — `Level4_Unit8_Content_8.2_Whats-Next.md`
-
-**Key Concepts**: Level 4 summary, possible next steps (forms, NLU, channels)
+**Key Concepts**: Summary of all flows (greet, help, contact, goodbye, hours, check_balance, transfer_money); Level 4 summary; possible next steps (forms, NLU, channels)
 
 ---
 
@@ -137,7 +117,7 @@
 
 All source files live in **level4/** so you can push to GitHub and sync the same paths to Codio (e.g. copy into `.guides/content/` or paste into Codio Guide Editor for the Level 4 chapter).
 
-### Unit Content (one file per section)
+### Unit Content (one file per section) — 7 units (0–6)
 
 | Unit | File |
 |------|------|
@@ -145,15 +125,15 @@ All source files live in **level4/** so you can push to GitHub and sync the same
 | 0.2 | Level4_Unit0_Content_0.2_What-Level-4-Adds.md |
 | 1.1 | Level4_Unit1_Content_1.1_Multiple-Slots.md |
 | 1.2 | Level4_Unit1_Content_1.2_Order-of-Collection.md |
-| 2.1 | Level4_Unit2_Content_2.1_Slot-Naming-Multiple.md |
-| 3.1 | Level4_Unit3_Content_3.1_Adding-Slots-and-Responses.md |
-| 4.1 | Level4_Unit4_Content_4.1_Reading-Multiple-Slots.md |
-| 5.1 | Level4_Unit5_Content_5.1_Multiple-Collect-Steps.md |
-| 6.1 | Level4_Unit6_Content_6.1_Training-Level-4.md |
-| 6.2 | Level4_Unit6_Content_6.2_Testing-Transfer.md |
-| 7.1 | Level4_Unit7_Content_7.1_Complete-Bot-Walkthrough.md |
-| 8.1 | Level4_Unit8_Content_8.1_What-Youve-Learned.md |
-| 8.2 | Level4_Unit8_Content_8.2_Whats-Next.md |
+| 1.3 | Level4_Unit1_Content_1.3_Slot-Naming-Multiple.md |
+| 2.1 | Level4_Unit2_Content_2.1_Adding-Slots-and-Responses.md |
+| 3.1 | Level4_Unit3_Content_3.1_Reading-Multiple-Slots.md |
+| 4.1 | Level4_Unit4_Content_4.1_Multiple-Collect-Steps.md |
+| 5.1 | Level4_Unit5_Content_5.1_Training-Level-4.md |
+| 5.2 | Level4_Unit5_Content_5.2_Testing-Transfer.md |
+| 6.1 | Level4_Unit6_Content_6.1_Complete-Bot-Walkthrough.md |
+| 6.2 | Level4_Unit6_Content_6.2_What-Youve-Learned.md |
+| 6.3 | Level4_Unit6_Content_6.3_Whats-Next.md |
 
 ### Lab Content + Assessment Setup
 

@@ -5,7 +5,7 @@ This folder mirrors the Level 4 content from `level4/` (unit content and lab con
 ## Structure
 
 - **Chapter:** Chapter-1-4---Multiple-Slots-e5f6
-- **Units:** Unit 0 (Recap Level 3) through Unit 8 (Summary and Next Steps)
+- **Units:** Unit 0 (Recap Level 3) through Unit 6 (Summary and Next Steps) — 7 units total. Unit 1 has three pages (1.1–1.3); Unit 6 has three pages (6.1–6.3).
 - **Labs:** Lab 4.1 (domain), Lab 4.2 (action), Lab 4.3 (flow), Lab 4.4 (training), Lab 4.5 (completion check)
 
 Each unit has an `index.json` (section title and order of pages) and each page has a `.md` (content) and `.json` (page metadata: title, type page, contentType markdown).

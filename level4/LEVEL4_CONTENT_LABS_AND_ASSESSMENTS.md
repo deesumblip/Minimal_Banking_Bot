@@ -10,12 +10,12 @@ This document describes how to create **Level 4** content, labs, and assessment 
 |--------|---------------------|
 | **Starter** = Level 2 end state | **Starter** = Level 3 end state (level4 = level3 after Labs 3.1, 4.1, 5.1) |
 | Unit 0: Your Level 2 bot / What Level 3 adds | Unit 0: Your Level 3 bot / What Level 4 adds |
-| Unit 1–2: Slots intro, types, naming | Unit 1–2: Multiple slots intro, ordering, naming |
-| Unit 3 + **Lab 3.1** (domain: account, utter_ask_account, register action) | Unit 3 + **Lab 4.1** (domain: amount, recipient, account_from + utter_ask_* + register action_process_transfer) |
-| Unit 4 + **Lab 4.1** (action file: action_check_balance_simple) | Unit 4 + **Lab 4.2** (action file: action_process_transfer) |
-| Unit 5 + **Lab 5.1** (flow: check_balance.yml, collect account + action) | Unit 5 + **Lab 4.3** (flow: transfer_money.yml, collect amount/recipient/account_from + action) |
-| Unit 6 + Lab 6.1 (train) + Lab 6.2 (test Inspector) | Unit 6 + Lab 4.4 (train) + Lab 4.5 (test transfer in Inspector) |
-| Unit 7–8: Walkthrough, summary, Level 4 preview | Unit 7–8: Walkthrough, summary, “What’s next” (e.g. forms or NLU) |
+| Unit 1: Slots intro, types, naming | Unit 1: Multiple slots intro, ordering, slot naming (1.1, 1.2, 1.3) |
+| Unit 2 + **Lab 3.1** (domain: account, utter_ask_account, register action) | Unit 2 + **Lab 4.1** (domain: amount, recipient, account_from + utter_ask_* + register action_process_transfer) |
+| Unit 3 + **Lab 4.1** (action file: action_check_balance_simple) | Unit 3 + **Lab 4.2** (action file: action_process_transfer) |
+| Unit 4 + **Lab 5.1** (flow: check_balance.yml, collect account + action) | Unit 4 + **Lab 4.3** (flow: transfer_money.yml, collect amount/recipient/account_from + action) |
+| Unit 5 + Lab 6.1 (train) + Lab 6.2 (test Inspector) | Unit 5 + Lab 4.4 (train) + Lab 4.5 (test transfer in Inspector) |
+| Unit 6: Walkthrough, summary, Level 4 preview | Unit 6: Complete walkthrough, What you've learned, What's next (6.1, 6.2, 6.3) |
 
 **Lab numbering:** Level 3 uses Labs 3.1, 4.1, 5.1, 6.1, 6.2, 7.1. For Level 4 you can use **Lab 4.1 (domain), 4.2 (action), 4.3 (flow), 4.4 (train), 4.5 (test)** so the “4.x” sequence is self-contained. Alternatively keep a global lab index (e.g. Lab 8.1, 8.2, …) if your course numbers across levels; the structure below uses 4.1–4.5 for clarity.
 
@@ -28,12 +28,12 @@ Create **Level4_Course_Outline.md** in `level4/` with:
 - **Prerequisites:** Level 1, 2, and 3 completed.
 - **Learning objective:** Add multiple slots, multiple ask responses, one new action, and one flow that collects several slots then runs the action.
 - **Unit 0:** Recap Level 3 (domain with account slot, check_balance flow, action_check_balance_simple). What Level 4 adds: slots `amount`, `recipient`, `account_from`; utter_ask_amount, utter_ask_recipient, utter_ask_account_from; action_process_transfer; transfer_money flow.
-- **Units 1–2:** Concept content only (what are multiple slots, why order matters, naming).
-- **Unit 3:** Domain — add three slots, three ask responses, register action_process_transfer → **Lab 4.1** (graded).
-- **Unit 4:** Reading multiple slots in actions → **Lab 4.2** (create action_process_transfer.py) (graded).
-- **Unit 5:** Flows with multiple collect steps → **Lab 4.3** (create transfer_money.yml) (graded).
-- **Unit 6:** Training and testing → **Lab 4.4** (train from level4), **Lab 4.5** (test transfer in Inspector) (4.4 graded like 6.1; 4.5 optional/ungraded).
-- **Units 7–8:** Complete bot walkthrough, summary, what’s next.
+- **Unit 1:** Concept content only (what are multiple slots, why order matters, slot naming — 1.1, 1.2, 1.3).
+- **Unit 2:** Domain — add three slots, three ask responses, register action_process_transfer → **Lab 4.1** (graded).
+- **Unit 3:** Reading multiple slots in actions → **Lab 4.2** (create action_process_transfer.py) (graded).
+- **Unit 4:** Flows with multiple collect steps → **Lab 4.3** (create transfer_money.yml) (graded).
+- **Unit 5:** Training and testing → **Lab 4.4** (train from level4), **Lab 4.5** (test transfer in Inspector) (4.4 graded like 6.1; 4.5 optional/ungraded).
+- **Unit 6:** Complete bot walkthrough, summary, what’s next.
 
 **Assessment summary table:** Lab 4.1 (domain), 4.2 (action), 4.3 (flow), 4.4 (train); points and types as in Level 3 (LLM Rubric or Standard Code Test with Python grader; substring match for PASS).
 
@@ -49,16 +49,17 @@ Create one markdown file per section, same naming pattern as Level 3. Paths unde
 | `Level4_Unit0_Content_0.2_What-Level-4-Adds.md` | Level 4 adds: three slots (amount, recipient, account_from), three utter_ask_* responses, action_process_transfer, transfer_money flow. Order: domain (Lab 4.1) → action (Lab 4.2) → flow (Lab 4.3) → train/test (4.4, 4.5). |
 | `Level4_Unit1_Content_1.1_Multiple-Slots.md` | Multiple slots = bot remembers several values in one conversation (e.g. amount, recipient, account_from for a transfer). |
 | `Level4_Unit1_Content_1.2_Order-of-Collection.md` | Order of `collect:` steps in the flow determines the order the bot asks; keep order consistent with the action’s expectations. |
-| `Level4_Unit2_Content_2.1_Slot-Naming-Multiple.md` | Naming: utter_ask_<slot_name>; slot names used in action must match domain and flow. |
-| `Level4_Unit3_Content_3.1_Adding-Slots-and-Responses.md` | Domain: add slots amount, recipient, account_from (type text); add utter_ask_amount, utter_ask_recipient, utter_ask_account_from; add action_process_transfer to actions. Pointer to Lab 4.1. |
-| `Level4_Unit4_Content_4.1_Reading-Multiple-Slots.md` | In an action, use tracker.get_slot("amount"), get_slot("recipient"), get_slot("account_from"); validate or re-prompt as needed. Pointer to Lab 4.2. |
-| `Level4_Unit5_Content_5.1_Multiple-Collect-Steps.md` | Flow steps: multiple `collect:` steps (e.g. amount, then recipient, then account_from), then `action: action_process_transfer`. Pointer to Lab 4.3. |
-| `Level4_Unit6_Content_6.1_Training-Level-4.md` | Train from level4 (same as Level 3: venv, cd level4, rasa train). Lab 4.4. |
-| `Level4_Unit6_Content_6.2_Testing-Transfer.md` | Run Inspector, trigger transfer flow, provide amount/recipient/account_from; Lab 4.5. |
-| `Level4_Unit7_Content_7.1_Complete-Bot-Walkthrough.md` | Guided walkthrough of Level 4 bot (optional). |
-| `Level4_Unit8_Content_8.1_What-Youve-Learned.md` | Summary: multiple slots, multiple collect steps, one action using all slots. |
+| `Level4_Unit1_Content_1.3_Slot-Naming-Multiple.md` | Naming: utter_ask_<slot_name>; slot names used in action must match domain and flow. |
+| `Level4_Unit2_Content_2.1_Adding-Slots-and-Responses.md` | Domain: add slots amount, recipient, account_from (type text); add utter_ask_amount, utter_ask_recipient, utter_ask_account_from; add action_process_transfer to actions. Pointer to Lab 4.1. |
+| `Level4_Unit3_Content_3.1_Reading-Multiple-Slots.md` | In an action, use tracker.get_slot("amount"), get_slot("recipient"), get_slot("account_from"); validate or re-prompt as needed. Pointer to Lab 4.2. |
+| `Level4_Unit4_Content_4.1_Multiple-Collect-Steps.md` | Flow steps: multiple `collect:` steps (e.g. amount, then recipient, then account_from), then `action: action_process_transfer`. Pointer to Lab 4.3. |
+| `Level4_Unit5_Content_5.1_Training-Level-4.md` | Train from level4 (same as Level 3: venv, cd level4, rasa train). Lab 4.4. |
+| `Level4_Unit5_Content_5.2_Testing-Transfer.md` | Run Inspector, trigger transfer flow, provide amount/recipient/account_from; Lab 4.5. |
+| `Level4_Unit6_Content_6.1_Complete-Bot-Walkthrough.md` | Guided walkthrough of Level 4 bot (optional). |
+| `Level4_Unit6_Content_6.2_What-Youve-Learned.md` | Summary: multiple slots, multiple collect steps, one action using all slots. |
+| `Level4_Unit6_Content_6.3_Whats-Next.md` | What's next: forms, NLU, channels. |
 
-You can add or remove units (e.g. 2.2 Test Your Knowledge, 6.3 Common Issues) to match Level 3 density.
+You can add or remove sections within units (e.g. 2.2 Test Your Knowledge, 5.3 Common Issues) to match Level 3 density.
 
 ---
 
@@ -116,7 +117,7 @@ For each graded lab, create an **Assessment_Setup** markdown file for implemente
 
 ### Level4_Lab4.1_Assessment_Setup.md
 
-- **Guide content:** Placement after Unit 3. Task: In level4/domain/basics.yml add slots amount, recipient, account_from; add utter_ask_amount, utter_ask_recipient, utter_ask_account_from; add action_process_transfer to actions. Run assessment when done.
+- **Guide content:** Placement after Unit 2. Task: In level4/domain/basics.yml add slots amount, recipient, account_from; add utter_ask_amount, utter_ask_recipient, utter_ask_account_from; add action_process_transfer to actions. Run assessment when done.
 - **Overview:** Verifies domain has the three slots, the three ask responses, and action_process_transfer in actions.
 - **Option A:** LLM Rubric; solution file `.guides/assessments/level4_graders/lab_4.1_solution_reference.md`; rubric criteria: slots section with amount, recipient, account_from; utter_ask_amount, utter_ask_recipient, utter_ask_account_from present with text; action_process_transfer in actions; valid YAML and Level 3 content preserved.
 - **Option B:** Standard Code Test; COMMAND: venv Python running `.guides/assessments/level4_graders/lab_4.1_grader.py`; Working Directory `/home/codio/workspace`; EXPECTED OUTPUT `PASS` with **substring match**; rationale text for students.
@@ -182,7 +183,7 @@ For each graded lab, add a **solution reference** markdown file used as the Inst
 | Category | Files to create |
 |----------|------------------|
 | **Outline** | level4/Level4_Course_Outline.md |
-| **Unit content** | Level4_Unit0_Content_0.1_*.md, 0.2_*.md; Unit1 (1.1, 1.2); Unit2 (2.1); Unit3 (3.1); Unit4 (4.1); Unit5 (5.1); Unit6 (6.1, 6.2); Unit7 (7.1); Unit8 (8.1). |
+| **Unit content** | Level4_Unit0_Content_0.1_*.md, 0.2_*.md; Unit1 (1.1, 1.2, 1.3); Unit2 (2.1); Unit3 (3.1); Unit4 (4.1); Unit5 (5.1, 5.2); Unit6 (6.1, 6.2, 6.3). |
 | **Lab content** | Level4_Lab4.1_Content.md, Level4_Lab4.2_Content.md, Level4_Lab4.3_Content.md, Level4_Lab4.4_Content.md, Level4_Lab4.5_Content.md |
 | **Assessment setup** | Level4_Lab4.1_Assessment_Setup.md, Level4_Lab4.2_Assessment_Setup.md, Level4_Lab4.3_Assessment_Setup.md, Level4_Lab4.4_Assessment_Setup.md |
 | **Graders** | .guides/assessments/level4_graders/lab_4.1_grader.py, lab_4.2_grader.py, lab_4.3_grader.py, lab_4.4_grader.py |
