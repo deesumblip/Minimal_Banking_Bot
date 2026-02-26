@@ -1,28 +1,14 @@
-## Level 4: Multiple Slots
+## Level 4: Multiple Slots (starts as your Level 3 bot)
 #
-# This domain demonstrates collecting and using multiple slots.
-# - Responses (predefined bot messages)
-# - Actions (custom Python code)
-# - Multiple slots (conversation memory for complex tasks)
+# This folder is a copy of your Level 3 bot. In Lab 4.1 you will add:
+# - slots: amount, recipient, account_from and utter_ask_amount, utter_ask_recipient, utter_ask_account_from
+# - action_process_transfer to the actions list (you will create the .py file in Lab 4.2)
 
 version: "3.1"
 
 slots:
   account:
     type: text
-    # Account number for balance checks
-  
-  amount:
-    type: text
-    # Transfer amount
-  
-  recipient:
-    type: text
-    # Recipient name or account for transfers
-  
-  account_from:
-    type: text
-    # Source account for transfers
 
 responses:
   utter_greet:
@@ -45,27 +31,16 @@ responses:
       metadata:
         rephrase: True
 
+  utter_goodbye:
+    - text: "Goodbye! Have a great day!"
+      metadata:
+        rephrase: True
+
   utter_ask_account:
     - text: "What is your account number?"
-      metadata:
-        rephrase: True
-
-  utter_ask_amount:
-    - text: "How much would you like to transfer?"
-      metadata:
-        rephrase: True
-
-  utter_ask_recipient:
-    - text: "Who would you like to transfer money to?"
-      metadata:
-        rephrase: True
-
-  utter_ask_account_from:
-    - text: "Which account would you like to transfer from?"
       metadata:
         rephrase: True
 
 actions:
   - action_bank_hours
   - action_check_balance_simple
-  - action_process_transfer
