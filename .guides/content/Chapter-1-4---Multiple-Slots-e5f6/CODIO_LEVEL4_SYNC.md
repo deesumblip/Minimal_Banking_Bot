@@ -10,6 +10,8 @@ This folder mirrors the Level 4 content from `level4/` (unit content and lab con
 
 Each unit has an `index.json` (section title and order of pages) and each page has a `.md` (content) and `.json` (page metadata: title, type page, contentType markdown).
 
+**IDs must be unique across the whole guide.** Chapter 1.4 section and page ids use an `e5f6` suffix so they do not collide with Chapter 1.3 (which shares similar unit names and previously caused the TOC to merge or show wrong content). Do not reuse section or page ids from Chapter 1.3 when adding or editing Chapter 1.4 content.
+
 ## Root index
 
 The main guide index at `.guides/content/index.json` includes `Chapter-1-4---Multiple-Slots-e5f6` in its `order` array so this chapter appears after Chapter 1.3 when the project is loaded or re-imported from Git in Codio.
