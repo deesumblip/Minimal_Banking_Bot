@@ -11,6 +11,6 @@ The flow will:
 
 Each `collect:` step can optionally include a `description:` for the slot (e.g. for documentation or tools). The important part is that the three collect steps appear in order, followed by the action step.
 
-## Lab 4.3
+## Lab 4.1
 
-In **Lab 4.3** you will create the file `level4/data/basics/transfer_money.yml` with this flow. When you are done, run the assessment for Lab 4.3.
+In **Lab 4.1** you will create the file `level4/data/basics/transfer_money.yml` with this flow. When you are done, run the assessment for Lab 4.1.

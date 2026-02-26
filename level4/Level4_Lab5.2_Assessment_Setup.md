@@ -1,8 +1,8 @@
-# Lab 4.5: Testing the Transfer Flow - Completion Check - Assessment Setup
+# Lab 5.2: Testing the Transfer Flow - Completion Check - Assessment Setup
 
 ## Guide Content (For Students)
 
-**Placement.** This lab follows Unit 6: Training and Testing (Level 4), after Lab 4.4.
+**Placement.** This lab follows Unit 6: Training and Testing (Level 4), after Lab 5.1.
 
 **Task.** Start your Level 4 bot (e.g. `rasa run` or use the Rasa Inspect tab), open Rasa Inspector, and run through the transfer flow: trigger the transfer intent, provide amount, recipient, and source account when asked, and confirm you see the transfer confirmation from `action_process_transfer`. The completion check verifies that your Level 4 bot has all required pieces in place so the transfer flow can run (domain, action file, flow file, and a trained model).
 
@@ -23,7 +23,7 @@ This is a **completion check** (not a full run of the bot in Inspector). The gra
 ### Grader Script Location
 
 ```
-.guides/assessments/level4_graders/lab_4.5_grader.py
+.guides/assessments/level4_graders/lab_5.2_grader.py
 ```
 
 ### Grader Script
@@ -41,7 +41,7 @@ The grader runs from **workspace root** (`/home/codio/workspace`). It performs t
 
 1. **Assessment** – Add assessment, then **Code Test** → **Standard Code Test**.
 2. **Execution**:
-   - **COMMAND (recommended):** `/home/codio/workspace/.venv/bin/python3 /home/codio/workspace/.guides/assessments/level4_graders/lab_4.5_grader.py`
+   - **COMMAND (recommended):** `/home/codio/workspace/.venv/bin/python3 /home/codio/workspace/.guides/assessments/level4_graders/lab_5.2_grader.py`
    - **PRE-EXEC COMMAND:** Leave **empty**.
    - **Working Directory:** `/home/codio/workspace`
    - **Timeout:** `60` seconds
@@ -50,10 +50,10 @@ The grader runs from **workspace root** (`/home/codio/workspace`). It performs t
    - **Test case:** One test case. **EXPECTED OUTPUT:** `PASS`. **Enable substring match**.
    - **SHOW RATIONALE TO STUDENT:** **AFTER [1] ATTEMPTS** (or **ALWAYS**).
    - **RATIONALE:** The completion check verifies that your Level 4 bot has: the domain updated with transfer slots and ask responses and action_process_transfer, the action file that reads the three slots, the transfer_money flow file, and a trained model. If any check fails, complete the corresponding lab (4.1–4.4) and re-run training if needed, then run this assessment again.
-4. **Files.** Script at `.guides/assessments/level4_graders/lab_4.5_grader.py`; run from workspace.
+4. **Files.** Script at `.guides/assessments/level4_graders/lab_5.2_grader.py`; run from workspace.
 
 ---
 
 ## Reference for rubric / grading
 
-- **Solution reference:** `.guides/assessments/level4_graders/lab_4.5_solution_reference.md` (describes what “completion” means for each check).
+- **Solution reference:** `.guides/assessments/level4_graders/lab_5.2_solution_reference.md` (describes what “completion” means for each check).

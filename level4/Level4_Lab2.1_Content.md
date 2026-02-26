@@ -2,7 +2,7 @@
 
 - Add the slots `amount`, `recipient`, and `account_from` to your Level 4 domain
 - Add the ask responses `utter_ask_amount`, `utter_ask_recipient`, and `utter_ask_account_from`
-- Register the new action `action_process_transfer` so the bot can collect and use all three values (you will create the .py file in Lab 4.2)
+- Register the new action `action_process_transfer` so the bot can collect and use all three values (you will create the .py file in Lab 3.1)
 
 ## Step-by-Step Instructions
 
@@ -52,7 +52,7 @@ actions:
   - action_process_transfer
 ```
 
-You will create the file `action_process_transfer.py` in Lab 4.2; here you only add its name.
+You will create the file `action_process_transfer.py` in Lab 3.1; here you only add its name.
 
 **Step 5.** Verify. Your domain should have:
 

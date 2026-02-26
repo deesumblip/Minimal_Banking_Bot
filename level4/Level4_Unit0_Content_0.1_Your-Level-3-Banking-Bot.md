@@ -4,9 +4,9 @@ Before we add multiple slots for the transfer flow, here is a quick recap of wha
 
 The **level4** folder is set up as a copy of your Level 3 bot. In this chapter you will:
 
-- Add three new slots and three ask responses in the domain (Lab 4.1)
+- Add three new slots and three ask responses in the domain (Lab 2.1)
 - Register and create the new action `action_process_transfer` (Labs 4.1 and 4.2)
-- Create the transfer_money flow that collects all three slots (Lab 4.3)
+- Create the transfer_money flow that collects all three slots (Lab 4.1)
 - Train and test (Labs 4.4 and 4.5)
 
 Everything else is your Level 3 content.

@@ -5,7 +5,7 @@
 **Title**: Level 4: Multiple Slots  
 **Description**: Adding a Transfer Flow with Multiple Slot Collection  
 **Prerequisites**: Level 1, Level 2, and Level 3 must be completed  
-**Learning Objective**: Students learn to add multiple slots, multiple ask responses, one new action that uses all slots, and one flow that collects several slots then runs the action. Labs are ordered: domain (Lab 4.1) → action (Lab 4.2) → flow (Lab 4.3) → train (Lab 4.4) → completion check (Lab 4.5).
+**Learning Objective**: Students learn to add multiple slots, multiple ask responses, one new action that uses all slots, and one flow that collects several slots then runs the action. Labs are ordered: domain (Lab 2.1) → action (Lab 3.1) → flow (Lab 4.1) → train (Lab 5.1) → completion check (Lab 5.2).
 
 ---
 
@@ -38,11 +38,11 @@
 
 ### Unit 2: Adding Slots and Responses
 **Type**: Content + Lab (with Assessment)  
-**Assessment**: Lab 4.1 - Adding Multiple Slots in the Domain
+**Assessment**: Lab 2.1 - Adding Multiple Slots in the Domain
 
 **Sections**:
 - 2.1 Adding Slots and Responses — `Level4_Unit2_Content_2.1_Adding-Slots-and-Responses.md`
-- Lab 4.1: Adding Multiple Slots in the Domain — `Level4_Lab4.1_Content.md` / `Level4_Lab4.1_Assessment_Setup.md`
+- Lab 2.1: Adding Multiple Slots in the Domain — `Level4_Lab2.1_Content.md` / `Level4_Lab2.1_Assessment_Setup.md`
 
 **Key Concepts**: Domain slots amount, recipient, account_from; utter_ask_*; action_process_transfer in actions
 
@@ -50,11 +50,11 @@
 
 ### Unit 3: Reading Multiple Slots in Actions
 **Type**: Content + Lab (with Assessment)  
-**Assessment**: Lab 4.2 - Writing the Action That Uses Multiple Slots
+**Assessment**: Lab 3.1 - Writing the Action That Uses Multiple Slots
 
 **Sections**:
 - 3.1 Reading Multiple Slots — `Level4_Unit3_Content_3.1_Reading-Multiple-Slots.md`
-- Lab 4.2: Writing the Action — `Level4_Lab4.2_Content.md` / `Level4_Lab4.2_Assessment_Setup.md`
+- Lab 3.1: Writing the Action — `Level4_Lab3.1_Content.md` / `Level4_Lab3.1_Assessment_Setup.md`
 
 **Key Concepts**: tracker.get_slot for amount, recipient, account_from; confirmation message
 
@@ -62,11 +62,11 @@
 
 ### Unit 4: Flows with Multiple Collect Steps
 **Type**: Content + Lab (with Assessment)  
-**Assessment**: Lab 4.3 - Creating the Transfer Flow
+**Assessment**: Lab 4.1 - Creating the Transfer Flow
 
 **Sections**:
 - 4.1 Multiple Collect Steps — `Level4_Unit4_Content_4.1_Multiple-Collect-Steps.md`
-- Lab 4.3: Creating the Transfer Flow — `Level4_Lab4.3_Content.md` / `Level4_Lab4.3_Assessment_Setup.md`
+- Lab 4.1: Creating the Transfer Flow — `Level4_Lab4.1_Content.md` / `Level4_Lab4.1_Assessment_Setup.md`
 
 **Key Concepts**: transfer_money.yml, collect amount/recipient/account_from, action_process_transfer
 
@@ -74,13 +74,13 @@
 
 ### Unit 5: Training and Testing
 **Type**: Content + Labs (with Assessments)  
-**Assessment**: Lab 4.4 (training), Lab 4.5 (completion check)
+**Assessment**: Lab 5.1 (training), Lab 5.2 (completion check)
 
 **Sections**:
 - 5.1 Training Level 4 — `Level4_Unit5_Content_5.1_Training-Level-4.md`
 - 5.2 Testing Transfer — `Level4_Unit5_Content_5.2_Testing-Transfer.md`
-- Lab 4.4: Training — `Level4_Lab4.4_Content.md` / `Level4_Lab4.4_Assessment_Setup.md`
-- Lab 4.5: Testing / Completion Check — `Level4_Lab4.5_Content.md` / `Level4_Lab4.5_Assessment_Setup.md`
+- Lab 5.1: Training — `Level4_Lab5.1_Content.md` / `Level4_Lab5.1_Assessment_Setup.md`
+- Lab 5.2: Testing / Completion Check — `Level4_Lab5.2_Content.md` / `Level4_Lab5.2_Assessment_Setup.md`
 
 **Key Concepts**: Train from level4, model in level4/models/, completion check (domain + action + flow + model)
 
@@ -103,11 +103,11 @@
 
 | Lab   | Points | Type                    | Grader Script / Solution Ref                    |
 |-------|--------|-------------------------|-------------------------------------------------|
-| 4.1   | 10     | LLM Rubric or Code Test | lab_4.1_grader.py / lab_4.1_solution_reference.md |
-| 4.2   | 10     | LLM Rubric or Code Test | lab_4.2_grader.py / lab_4.2_solution_reference.md |
-| 4.3   | 8      | LLM Rubric or Code Test | lab_4.3_grader.py / lab_4.3_solution_reference.md |
-| 4.4   | 12     | Code Test               | lab_4.4_grader.py / lab_4.4_solution_reference.md |
-| 4.5   | 10     | Code Test (completion)  | lab_4.5_grader.py / lab_4.5_solution_reference.md |
+| 2.1   | 10     | LLM Rubric or Code Test | lab_2.1_grader.py / lab_2.1_solution_reference.md |
+| 3.1   | 10     | LLM Rubric or Code Test | lab_3.1_grader.py / lab_3.1_solution_reference.md |
+| 4.1   | 8      | LLM Rubric or Code Test | lab_4.1_grader.py / lab_4.1_solution_reference.md |
+| 5.1   | 12     | Code Test               | lab_5.1_grader.py / lab_5.1_solution_reference.md |
+| 5.2   | 10     | Code Test (completion)  | lab_5.2_grader.py / lab_5.2_solution_reference.md |
 
 **Total assessment points**: 50. All graders are Python scripts in `.guides/assessments/level4_graders/`. Codio: use **substring match** for expected output `PASS`, Working Directory `/home/codio/workspace`, venv Python in COMMAND.
 
@@ -139,16 +139,16 @@ All source files live in **level4/** so you can push to GitHub and sync the same
 
 | Lab   | Content File              | Assessment Setup File                 |
 |-------|---------------------------|---------------------------------------|
+| 2.1   | Level4_Lab2.1_Content.md  | Level4_Lab2.1_Assessment_Setup.md     |
+| 3.1   | Level4_Lab3.1_Content.md  | Level4_Lab3.1_Assessment_Setup.md     |
 | 4.1   | Level4_Lab4.1_Content.md  | Level4_Lab4.1_Assessment_Setup.md     |
-| 4.2   | Level4_Lab4.2_Content.md  | Level4_Lab4.2_Assessment_Setup.md     |
-| 4.3   | Level4_Lab4.3_Content.md  | Level4_Lab4.3_Assessment_Setup.md     |
-| 4.4   | Level4_Lab4.4_Content.md  | Level4_Lab4.4_Assessment_Setup.md     |
-| 4.5   | Level4_Lab4.5_Content.md  | Level4_Lab4.5_Assessment_Setup.md     |
+| 5.1   | Level4_Lab5.1_Content.md  | Level4_Lab5.1_Assessment_Setup.md     |
+| 5.2   | Level4_Lab5.2_Content.md  | Level4_Lab5.2_Assessment_Setup.md     |
 
 ### Graders and Solution References (in repo, not student-facing)
 
-- `.guides/assessments/level4_graders/lab_4.1_grader.py` … `lab_4.5_grader.py`
-- `.guides/assessments/level4_graders/lab_4.1_solution_reference.md` … `lab_4.5_solution_reference.md`
+- `.guides/assessments/level4_graders/lab_2.1_grader.py`, `lab_3.1_grader.py`, `lab_4.1_grader.py`, `lab_5.1_grader.py`, `lab_5.2_grader.py`
+- `.guides/assessments/level4_graders/lab_2.1_solution_reference.md` … `lab_5.2_solution_reference.md`
 
 ---
 

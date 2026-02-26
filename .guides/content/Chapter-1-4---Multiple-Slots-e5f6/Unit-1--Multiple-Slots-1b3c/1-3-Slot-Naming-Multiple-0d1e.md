@@ -15,4 +15,4 @@ The same naming conventions you used in Level 3 apply when you add multiple slot
 - For the slot `recipient` → `utter_ask_recipient`
 - For the slot `account_from` → `utter_ask_account_from`
 
-Rasa uses these responses when the corresponding slot is empty during the flow. In Lab 4.1 you will add the three slots and the three ask responses to the domain.
+Rasa uses these responses when the corresponding slot is empty during the flow. In Lab 2.1 you will add the three slots and the three ask responses to the domain.

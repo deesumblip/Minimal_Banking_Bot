@@ -27,13 +27,13 @@ Students should **start from their Level 3 bot as the baseline** and build Level
 
 - **Same flow files as Level 3:**  
   `greet.yml`, `help.yml`, `contact.yml`, `goodbye.yml`, `hours.yml`, `check_balance.yml`.  
-- **Do not** ship `transfer_money.yml`; the student creates it in a Level 4 lab (e.g. Lab 4.3 or equivalent).
+- **Do not** ship `transfer_money.yml`; the student creates it in a Level 4 lab (e.g. Lab 4.1 or equivalent).
 
 ### 1.3 level4/actions/
 
 - **Same as Level 3:**  
   `action_bank_hours.py`, `action_check_balance_simple.py`, `__init__.py`.  
-- **Do not** ship `action_process_transfer.py`; the student creates it in a Level 4 lab (e.g. Lab 4.2).
+- **Do not** ship `action_process_transfer.py`; the student creates it in a Level 4 lab (e.g. Lab 3.1).
 
 ### 1.4 level4/config.yml (and credentials, endpoints)
 
@@ -67,30 +67,30 @@ Following the Level 3 pattern, students **add** domain content and **create** ne
 | What | Who | Where (lab) |
 |------|-----|-------------|
 | Level 4 starter = copy of Level 3 | Provided (repo) | level4/ |
-| Add slots: `amount`, `recipient`, `account_from` | **Student** | Lab 4.1 (domain) |
-| Add responses: `utter_ask_amount`, `utter_ask_recipient`, `utter_ask_account_from` | **Student** | Lab 4.1 (domain) |
-| Register `action_process_transfer` in domain | **Student** | Lab 4.1 (domain) |
-| Create `action_process_transfer.py` | **Student** | Lab 4.2 (actions) |
-| Create `transfer_money.yml` (flow with multiple collect steps + action) | **Student** | Lab 4.3 (data/basics) |
-| Train and test | **Student** | Lab 4.4 / Unit 6 equivalent |
+| Add slots: `amount`, `recipient`, `account_from` | **Student** | Lab 2.1 (domain) |
+| Add responses: `utter_ask_amount`, `utter_ask_recipient`, `utter_ask_account_from` | **Student** | Lab 2.1 (domain) |
+| Register `action_process_transfer` in domain | **Student** | Lab 2.1 (domain) |
+| Create `action_process_transfer.py` | **Student** | Lab 3.1 (actions) |
+| Create `transfer_money.yml` (flow with multiple collect steps + action) | **Student** | Lab 4.1 (data/basics) |
+| Train and test | **Student** | Lab 5.1 / Lab 5.2 |
 
-- **Lab 4.1 (domain):** Add the three new slots, the three new utter_ask_* responses, and `action_process_transfer` to the `actions:` list. Note that the action **file** is created in Lab 4.2.  
-- **Lab 4.2 (action):** Create `actions/action_process_transfer.py` that reads `amount`, `recipient`, and `account_from` from the tracker and sends a confirmation (and optionally validates or re-prompts).  
-- **Lab 4.3 (flow):** Create `data/basics/transfer_money.yml` with a flow that has multiple `collect:` steps (e.g. amount, recipient, account_from) in order, then `action: action_process_transfer`.  
-- **Lab 4.4 (or integrated into a “Training and testing” unit):** Train from level4, run Inspector, test the transfer flow.
+- **Lab 2.1 (domain):** Add the three new slots, the three new utter_ask_* responses, and `action_process_transfer` to the `actions:` list. Note that the action **file** is created in Lab 3.1.  
+- **Lab 3.1 (action):** Create `actions/action_process_transfer.py` that reads `amount`, `recipient`, and `account_from` from the tracker and sends a confirmation (and optionally validates or re-prompts).  
+- **Lab 4.1 (flow):** Create `data/basics/transfer_money.yml` with a flow that has multiple `collect:` steps (e.g. amount, recipient, account_from) in order, then `action: action_process_transfer`.  
+- **Lab 5.1 (or integrated into a “Training and testing” unit):** Train from level4, run Inspector, test the transfer flow.
 
-Numbering (4.1 vs 4.2 vs 4.3) can be adjusted to match your course; the important part is the **order**: domain first, then action file, then flow, then train/test.
+Numbering (2.1 vs 3.1 vs 4.1) can be adjusted to match your course; the important part is the **order**: domain first, then action file, then flow, then train/test.
 
 ---
 
 ## 4. Assessments (mirror Level 3)
 
-- **Lab 4.1:** Grader or rubric checks: domain has slots `amount`, `recipient`, `account_from`; has `utter_ask_amount`, `utter_ask_recipient`, `utter_ask_account_from`; has `action_process_transfer` in `actions:`.  
-- **Lab 4.2:** Grader checks: `action_process_transfer.py` exists; has required structure (Action subclass, `name()` returning `"action_process_transfer"`, `run()` reading the three slots).  
-- **Lab 4.3:** Grader checks: `transfer_money.yml` exists; valid YAML; flow has multiple `collect:` steps and `action: action_process_transfer`.  
+- **Lab 2.1:** Grader or rubric checks: domain has slots `amount`, `recipient`, `account_from`; has `utter_ask_amount`, `utter_ask_recipient`, `utter_ask_account_from`; has `action_process_transfer` in `actions:`.  
+- **Lab 3.1:** Grader checks: `action_process_transfer.py` exists; has required structure (Action subclass, `name()` returning `"action_process_transfer"`, `run()` reading the three slots).  
+- **Lab 4.1:** Grader checks: `transfer_money.yml` exists; valid YAML; flow has multiple `collect:` steps and `action: action_process_transfer`.  
 - **Training/test lab:** Optional completion or automated check (e.g. model exists, or transfer flow runs in Inspector).
 
-Use **Python graders** (like Level 3) for Labs 4.1–4.3: scripts that parse YAML and check structure, with **substring match** for “PASS” in Codio if the script prints detailed output before “PASS”.
+Use **Python graders** (like Level 3) for Labs 2.1–4.1: scripts that parse YAML and check structure, with **substring match** for “PASS” in Codio if the script prints detailed output before “PASS”.
 
 ---
 
@@ -110,7 +110,7 @@ Use **Python graders** (like Level 3) for Labs 4.1–4.3: scripts that parse YAM
 - [ ] **level4/actions/** — Same as Level 3: action_bank_hours.py, action_check_balance_simple.py, __init__.py. Remove **action_process_transfer.py** from the repo (student creates it in a lab).
 - [ ] **level4/config.yml** — Same as Level 3 except `assistant_id: level4-bot` (or your convention).
 - [ ] **Unit 0** — “Level 4 setup”: level4 folder = copy of your Level 3 bot; you will add multiple slots and the transfer flow in the labs.
-- [ ] **Labs 4.1–4.3 (or your numbering)** — Domain lab, action lab, flow lab; each with content + assessment setup + optional Python grader in `.guides/assessments/level4_graders/` (or equivalent).
+- [ ] **Labs 2.1–4.1 and 5.1–5.2 (or your numbering)** — Domain lab, action lab, flow lab; each with content + assessment setup + optional Python grader in `.guides/assessments/level4_graders/` (or equivalent).
 - [ ] **.guides** — New chapter or section for Level 4; index.json updated if needed; unit/lab pages and assessments linked.
 
 ---

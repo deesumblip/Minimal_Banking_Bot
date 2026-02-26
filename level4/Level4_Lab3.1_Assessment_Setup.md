@@ -1,10 +1,10 @@
-# Lab 4.2: Writing the Action That Uses Multiple Slots - Assessment Setup
+# Lab 3.1: Writing the Action That Uses Multiple Slots - Assessment Setup
 
 ## Guide Content (For Students)
 
 **Placement.** This lab follows Unit 4 (Reading Multiple Slots in Actions), Level 4.
 
-**Task.** Create `level4/actions/action_process_transfer.py`: a custom action that reads the `amount`, `recipient`, and `account_from` slots, treats placeholder values as invalid (and optionally re-prompts or sends a single message), and otherwise sends a demo transfer confirmation. The domain already lists `action_process_transfer` from Lab 4.1. First complete the script in the fill-in-the-blanks exercise below; then put the complete script in the file tree and run the assessment.
+**Task.** Create `level4/actions/action_process_transfer.py`: a custom action that reads the `amount`, `recipient`, and `account_from` slots, treats placeholder values as invalid (and optionally re-prompts or sends a single message), and otherwise sends a demo transfer confirmation. The domain already lists `action_process_transfer` from Lab 2.1. First complete the script in the fill-in-the-blanks exercise below; then put the complete script in the file tree and run the assessment.
 
 ---
 
@@ -22,11 +22,11 @@ This assessment verifies that the student has created `level4/actions/action_pro
 
 ### Option A: LLM Rubric Autograde (Recommended)
 
-1. **Navigate** to the Lab 4.2 section in the Codio Guide Editor (Level 4 chapter).
+1. **Navigate** to the Lab 3.1 section in the Codio Guide Editor (Level 4 chapter).
 
 2. **Add LLM Rubric Assessment** – Add assessment → **LLM Rubric** / **Autograde**.
 
-3. **Configure** – Use the **Instructor Provided Solution File**: `.guides/assessments/level4_graders/lab_4.2_solution_reference.md`. Define rubric criteria for: file location and name; imports; class and `name()`; `run()` reading all three slots; confirmation message (and optional placeholder handling); returning `[]`. Suggested total points: 10. **Show Rationale to Student:** After 1 attempt (or Always).
+3. **Configure** – Use the **Instructor Provided Solution File**: `.guides/assessments/level4_graders/lab_3.1_solution_reference.md`. Define rubric criteria for: file location and name; imports; class and `name()`; `run()` reading all three slots; confirmation message (and optional placeholder handling); returning `[]`. Suggested total points: 10. **Show Rationale to Student:** After 1 attempt (or Always).
 
 4. **Files tab** – Ensure the LLM can read: `/home/codio/workspace/level4/actions/action_process_transfer.py`
 
@@ -41,14 +41,14 @@ Use a Python grader for faster feedback. The script checks `level4/actions/actio
 **Grader script location (in repo):**
 
 ```
-.guides/assessments/level4_graders/lab_4.2_grader.py
+.guides/assessments/level4_graders/lab_3.1_grader.py
 ```
 
 **Codio configuration (Standard Code Test):**
 
 1. **Assessment** – Add assessment, then **Code Test** → **Standard Code Test**.
 2. **Execution**:
-   - **COMMAND (recommended):** `/home/codio/workspace/.venv/bin/python3 /home/codio/workspace/.guides/assessments/level4_graders/lab_4.2_grader.py`
+   - **COMMAND (recommended):** `/home/codio/workspace/.venv/bin/python3 /home/codio/workspace/.guides/assessments/level4_graders/lab_3.1_grader.py`
    - **PRE-EXEC COMMAND:** Leave **empty**.
    - **Working Directory:** `/home/codio/workspace`
    - **Timeout:** `60` seconds
@@ -57,13 +57,13 @@ Use a Python grader for faster feedback. The script checks `level4/actions/actio
    - **Test case:** One test case. **EXPECTED OUTPUT:** `PASS`. **Enable substring match**.
    - **SHOW RATIONALE TO STUDENT:** **AFTER [1] ATTEMPTS** (or **ALWAYS**).
    - **RATIONALE:** The grader checks that `level4/actions/action_process_transfer.py` exists and contains: correct imports, class **ActionProcessTransfer(Action)**, **name()** returning **"action_process_transfer"**, **run()** reading the **amount**, **recipient**, and **account_from** slots, and sending a confirmation message. Follow the lab steps and review the script output for which check failed.
-4. **Files.** Script at `.guides/assessments/level4_graders/lab_4.2_grader.py`; run from workspace.
+4. **Files.** Script at `.guides/assessments/level4_graders/lab_3.1_grader.py`; run from workspace.
 
 ---
 
 ## Reference for rubric / grading
 
-- **Solution reference:** `.guides/assessments/level4_graders/lab_4.2_solution_reference.md`
+- **Solution reference:** `.guides/assessments/level4_graders/lab_3.1_solution_reference.md`
 
 ### Script template (implementers only)
 

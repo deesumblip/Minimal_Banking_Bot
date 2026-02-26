@@ -1,4 +1,4 @@
-After training (Lab 4.4), you can test the transfer flow in Rasa Inspector.
+After training (Lab 5.1), you can test the transfer flow in Rasa Inspector.
 
 ## What to Do
 
@@ -8,4 +8,4 @@ After training (Lab 4.4), you can test the transfer flow in Rasa Inspector.
 4. **Answer the prompts** — The bot should ask for amount, then recipient, then source account. Provide values (e.g. 50, Alice, 1234).
 5. **Confirm** — You should see the confirmation message from `action_process_transfer` using the three values.
 
-You can also run the **Lab 4.5 completion check** to verify that your domain, action file, flow file, and model are all in place. That assessment does not run the bot; it only checks that the required files and structure exist so the transfer flow can run.
+You can also run the **Lab 5.2 completion check** to verify that your domain, action file, flow file, and model are all in place. That assessment does not run the bot; it only checks that the required files and structure exist so the transfer flow can run.

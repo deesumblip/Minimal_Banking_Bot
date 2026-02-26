@@ -6,7 +6,7 @@ Your goal is to run the **completion check** for Level 4 and, optionally, test t
 
 ## Part 1: Completion check (assessment)
 
-1. Run the **Lab 4.5 assessment**. The grader checks that:
+1. Run the **Lab 5.2 assessment**. The grader checks that:
    - The domain has the three transfer slots, three ask responses, and `action_process_transfer` in the actions list
    - `level4/actions/action_process_transfer.py` exists and reads the three slots
    - `level4/data/basics/transfer_money.yml` exists with the three collect steps and the action step

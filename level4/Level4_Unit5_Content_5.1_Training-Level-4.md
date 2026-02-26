@@ -9,6 +9,6 @@ Training your Level 4 bot works the same way as Level 3: use the virtual environ
 3. **Train:** `python -m rasa train`
 4. **Verify:** A new `.tar.gz` model file appears in `level4/models/`
 
-Rasa will read your domain (including the new slots and ask responses), your flows (including `transfer_money`), and your actions (including `action_process_transfer`). When training finishes without errors, you can run the assessment for **Lab 4.4** and then test the transfer flow in Inspector (Lab 4.5).
+Rasa will read your domain (including the new slots and ask responses), your flows (including `transfer_money`), and your actions (including `action_process_transfer`). When training finishes without errors, you can run the assessment for **Lab 5.1** and then test the transfer flow in Inspector (Lab 5.2).
 
 If you see errors about missing slots or responses, double-check your domain and flow files from Labs 4.1 and 4.3.

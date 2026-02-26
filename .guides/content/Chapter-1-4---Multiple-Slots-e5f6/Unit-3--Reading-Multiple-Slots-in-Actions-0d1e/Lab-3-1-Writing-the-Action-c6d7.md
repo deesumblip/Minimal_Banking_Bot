@@ -1,4 +1,4 @@
-Your goal is to **complete** the action file that reads the `amount`, `recipient`, and `account_from` slots and sends a transfer confirmation. The domain already lists `action_process_transfer` from Lab 4.1. First complete the script in the fill-in-the-blanks exercise below; then put the complete script in the file tree and run the assessment.
+Your goal is to **complete** the action file that reads the `amount`, `recipient`, and `account_from` slots and sends a transfer confirmation. The domain already lists `action_process_transfer` from Lab 2.1. First complete the script in the fill-in-the-blanks exercise below; then put the complete script in the file tree and run the assessment.
 
 ---
 
@@ -14,9 +14,9 @@ Your goal is to **complete** the action file that reads the `amount`, `recipient
 
 ### After you finish
 
-- **Verify** your domain (from Lab 4.1) lists `action_process_transfer` in the `actions:` section.
+- **Verify** your domain (from Lab 2.1) lists `action_process_transfer` in the `actions:` section.
 - **Run the assessment** when you're done.
-- **Optional.** After Lab 4.4, train and run Inspector. Trigger the transfer flow and provide amount, recipient, and source account; watch the action send the confirmation.
+- **Optional.** After Lab 5.1, train and run Inspector. Trigger the transfer flow and provide amount, recipient, and source account; watch the action send the confirmation.
 
 ---
 

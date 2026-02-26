@@ -1,4 +1,4 @@
-You have already defined the three slots and ask responses in the domain (Lab 4.1) and created the action (Lab 4.2). Now create the flow that ties them together: `transfer_money.yml` with three collect steps and then `action_process_transfer`.
+You have already defined the three slots and ask responses in the domain (Lab 2.1) and created the action (Lab 3.1). Now create the flow that ties them together: `transfer_money.yml` with three collect steps and then `action_process_transfer`.
 
 ## Part 1: In Codio
 

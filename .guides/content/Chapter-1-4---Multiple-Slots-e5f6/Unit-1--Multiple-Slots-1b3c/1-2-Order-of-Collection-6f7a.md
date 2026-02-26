@@ -16,4 +16,4 @@ Rasa uses the **order of steps** to decide which slot to ask for next when one i
 - Each collected slot needs a matching **response** in the domain: `utter_ask_<slot_name>` (e.g. `utter_ask_amount` for the `amount` slot).
 - The action runs only after all collected slots have values (or after the user has been asked for each one in order).
 
-In Lab 4.3 you will create the flow with the three collect steps in this order, then the action step.
+In Lab 4.1 you will create the flow with the three collect steps in this order, then the action step.

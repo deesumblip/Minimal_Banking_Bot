@@ -1,8 +1,8 @@
 ## Level 4: Multiple Slots (starts as your Level 3 bot)
 #
-# This folder is a copy of your Level 3 bot. In Lab 4.1 you will add:
+# This folder is a copy of your Level 3 bot. In Lab 2.1 you will add:
 # - slots: amount, recipient, account_from and utter_ask_amount, utter_ask_recipient, utter_ask_account_from
-# - action_process_transfer to the actions list (you will create the .py file in Lab 4.2)
+# - action_process_transfer to the actions list (you will create the .py file in Lab 3.1)
 
 version: "3.1"
 

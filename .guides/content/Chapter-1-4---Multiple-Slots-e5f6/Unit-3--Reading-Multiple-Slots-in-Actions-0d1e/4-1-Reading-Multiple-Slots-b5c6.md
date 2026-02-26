@@ -16,6 +16,6 @@ The flow will have collected these before the action runs (or the slots may be e
 - If any are missing or placeholder, send one message asking for real values and `return []`.
 - Otherwise, send a confirmation message that uses amount, account_from, and recipient (e.g. "Transfer of $X from account Y to Z processed.") and `return []`.
 
-## Lab 4.2
+## Lab 3.1
 
-In **Lab 4.2** you will create `level4/actions/action_process_transfer.py` with this logic. You can use the fill-in-the-blanks script in the lab to complete the action, then paste it into the file and run the assessment.
+In **Lab 3.1** you will create `level4/actions/action_process_transfer.py` with this logic. You can use the fill-in-the-blanks script in the lab to complete the action, then paste it into the file and run the assessment.

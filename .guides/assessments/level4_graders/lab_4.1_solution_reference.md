@@ -1,59 +1,46 @@
-# Lab 4.1 – Reference solution for LLM Rubric Autograde
+# Lab 4.3 – Reference solution for LLM Rubric Autograde
 
-Use this file as the **Instructor Provided Solution File** in Codio's LLM Rubric Autograde for Lab 4.1 (Adding Multiple Slots in the Domain).
+Use this file as the **Instructor Provided Solution File** in Codio's LLM Rubric Autograde for Lab 4.3 (Creating the Transfer Flow with Multiple Collect Steps).
 
 ---
 
-## Required changes in level4/domain/basics.yml
+## Required deliverable: level4/data/basics/transfer_money.yml
 
-1. **slots: section** – Must contain (in addition to any existing slots such as `account`) the three transfer slots: `amount`, `recipient`, `account_from`, each with `type: text` (or equivalent).
+The file must contain a flow that:
 
-2. **Ask responses** – Under `responses:`, add:
-   - `utter_ask_amount` with at least one text (e.g. "How much would you like to transfer?")
-   - `utter_ask_recipient` with at least one text (e.g. "Who would you like to transfer money to?")
-   - `utter_ask_account_from` with at least one text (e.g. "Which account would you like to transfer from?")
+1. **Flow structure** – Has a top-level `flows:` key and at least one flow (e.g. `transfer_money`) with `name`, `description`, and `steps`.
 
-3. **action_process_transfer in actions** – Under `actions:`, add `action_process_transfer` to the list. The student will create the .py file in Lab 4.2.
+2. **Collect steps** – At least three steps that collect the transfer slots, in order (e.g. amount, then recipient, then account_from):
+   - `collect: amount` (optional `description:`)
+   - `collect: recipient` (optional `description:`)
+   - `collect: account_from` (optional `description:`)
 
-Example (additions only):
+3. **Action step** – At least one step that calls the transfer action: `action: action_process_transfer`.
+
+Example:
 
 ```yaml
-slots:
-  account:
-    type: text
-  amount:
-    type: text
-  recipient:
-    type: text
-  account_from:
-    type: text
-
-responses:
-  # ... existing responses ...
-  utter_ask_amount:
-    - text: "How much would you like to transfer?"
-      metadata:
-        rephrase: True
-  utter_ask_recipient:
-    - text: "Who would you like to transfer money to?"
-      metadata:
-        rephrase: True
-  utter_ask_account_from:
-    - text: "Which account would you like to transfer from?"
-      metadata:
-        rephrase: True
-
-actions:
-  - action_bank_hours
-  - action_check_balance_simple
-  - action_process_transfer
+flows:
+  transfer_money:
+    name: transfer money
+    description: |
+      Demonstrates collecting multiple slots before executing an action.
+      The bot will collect amount, recipient, and source account, then process the transfer.
+    steps:
+      - collect: amount
+        description: "transfer amount"
+      - collect: recipient
+        description: "recipient name or account"
+      - collect: account_from
+        description: "source account number"
+      - action: action_process_transfer
 ```
 
 ---
 
 ## Rubric summary for autograde
 
-- **Slots:** amount, recipient, account_from present under slots: with valid type (e.g. text).
-- **Ask responses:** utter_ask_amount, utter_ask_recipient, utter_ask_account_from present under responses: with at least one message each.
-- **Actions:** action_process_transfer appears in the actions: list.
-- **Validity:** File is valid YAML and existing Level 3 content (e.g. account slot, utter_ask_account, other actions) is preserved.
+- **File location:** transfer_money.yml exists in level4/data/basics/.
+- **Flow structure:** Valid YAML with flows:, and a flow that has name, description, and steps.
+- **Collect steps:** At least one step each with collect: amount, collect: recipient, collect: account_from (order may vary but all three required).
+- **Action step:** At least one step with action: action_process_transfer.
