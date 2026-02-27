@@ -85,11 +85,12 @@ You must provide **your own** Rasa Pro license. Follow the section for **your** 
 
 ### On Codio
 
-**Option A – `.env` file (recommended)**
-
-1. In the **project root** (e.g. `~/workspace`), create a file named `.env` with one line (replace the placeholder with your real license):
+1. In the **project root** (e.g. `~/workspace`), create a file named `.env` from the terminal (replace the placeholder with your real license):
    ```bash
+   cd ~/workspace
+   cat > .env <<'EOF'
    RASA_LICENSE=rasaxxx-your-license-here
+   EOF
    ```
 2. Do **not** commit `.env` (it is in `.gitignore`).
 3. At the start of **each new terminal session**, from the project root run:
@@ -104,11 +105,11 @@ You must provide **your own** Rasa Pro license. Follow the section for **your** 
 
 ### On your local machine (Windows)
 
-1. Create a file named `.env` in the **project root** with one line:
+1. Create a file named `.env` in the **project root** (the folder that contains all levels). From PowerShell, run (replace the placeholder with your real license):
+   ```powershell
+   Set-Content -Path .env -Value "RASA_LICENSE=rasaxxx-your-license-here"
    ```
-   RASA_LICENSE=rasaxxx-your-license-here
-   ```
-   Replace the placeholder with your actual Rasa Pro license. Do **not** commit `.env`.
+   Do **not** commit `.env`.
 
 2. **Load the variable in the current PowerShell session:**
    ```powershell
@@ -121,11 +122,13 @@ You must provide **your own** Rasa Pro license. Follow the section for **your** 
 
 ### On your local machine (macOS / Linux)
 
-1. Create a file named `.env` in the **project root** with one line:
+1. Create a file named `.env` in the **project root** from your terminal (replace the placeholder with your real license):
    ```bash
+   cat > .env <<'EOF'
    RASA_LICENSE=rasaxxx-your-license-here
+   EOF
    ```
-   Replace with your actual license. Do **not** commit `.env`.
+   Do **not** commit `.env`.
 
 2. At the start of **each terminal session**, from the project root run:
    ```bash
