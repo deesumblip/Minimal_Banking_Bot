@@ -2,8 +2,8 @@
 	"type": "multiple-choice",
 	"taskId": "multiple-choice-351504070",
 	"source": {
-		"name": "Flow Descriptions",
-		"showName": true,
+		"name": "Chapter 1.1: Lab 3.1 - Flow Descriptions",
+		"showName": false,
 		"instructions": "**Which of these is the BEST flow description for a flow that provides bank hours?**",
 		"multipleResponse": false,
 		"isRandomized": false,

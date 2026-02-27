@@ -2,8 +2,8 @@
 	"type": "multiple-choice",
 	"taskId": "multiple-choice-359648370",
 	"source": {
-		"name": "Conversation Bot Definition",
-		"showName": true,
+		"name": "Chapter 1.1: 1.4 Test Your Knowledge - Conversation Bot Definition",
+		"showName": false,
 		"instructions": "**Which of the following best describes a conversational bot?**",
 		"multipleResponse": false,
 		"isRandomized": false,

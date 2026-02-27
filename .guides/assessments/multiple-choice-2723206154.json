@@ -2,7 +2,7 @@
 	"type": "multiple-choice",
 	"taskId": "multiple-choice-2723206154",
 	"source": {
-		"name": "Flow Structure",
+		"name": "Lab 3.1: Exploring Existing Flows",
 		"showName": true,
 		"instructions": "**Which of the following represents the correct structure for a basic flow file?**",
 		"multipleResponse": false,

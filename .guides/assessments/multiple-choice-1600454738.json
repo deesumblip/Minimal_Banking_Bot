@@ -2,8 +2,8 @@
 	"type": "multiple-choice",
 	"taskId": "multiple-choice-1600454738",
 	"source": {
-		"name": "Level 1 Bot Understanding",
-		"showName": true,
+		"name": "Chapter 1.1: 1.4 Test Your Knowledge - Level 1 Bot Understanding",
+		"showName": false,
 		"instructions": "**True or False: Level 1 bots can remember previous interactions in a conversation and use that context to perform complex multi-step tasks.**",
 		"multipleResponse": false,
 		"isRandomized": false,

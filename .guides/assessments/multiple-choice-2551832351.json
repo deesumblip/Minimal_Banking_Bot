@@ -2,8 +2,8 @@
 	"type": "multiple-choice",
 	"taskId": "multiple-choice-2551832351",
 	"source": {
-		"name": "Simplest Bot Review",
-		"showName": true,
+		"name": "Chapter 1.1: 1.4 Test Your Knowledge - Simplest Bot Review",
+		"showName": false,
 		"instructions": "**Which of the following statements about simple bots is correct?**",
 		"multipleResponse": false,
 		"isRandomized": false,

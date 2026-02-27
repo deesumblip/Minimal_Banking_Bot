@@ -2,7 +2,7 @@
 	"type": "multiple-choice",
 	"taskId": "multiple-choice-314249565",
 	"source": {
-		"name": "YAML Syntax for Responses",
+		"name": "Lab 2.1: YAML Syntax for Responses",
 		"showName": true,
 		"instructions": "**Which of the following is the correct YAML syntax for a response with multiple variations in the domain/basics.yml file?**",
 		"multipleResponse": false,
@@ -36,8 +36,16 @@
 					"value": "Multiple Choice"
 				}
 			],
-			"files": [],
-			"opened": []
+			"files": [
+				"domain/basics.yml"
+			],
+			"opened": [
+				{
+					"type": "file",
+					"panelNumber": 1,
+					"content": "domain/basics.yml"
+				}
+			]
 		},
 		"bloomsObjectiveLevel": "2",
 		"learningObjectives": "SWBAT identify the correct YAML syntax for chatbot responses",

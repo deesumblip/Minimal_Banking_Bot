@@ -2,8 +2,8 @@
 	"type": "multiple-choice",
 	"taskId": "multiple-choice-3124300279",
 	"source": {
-		"name": "effective flow descriptions",
-		"showName": true,
+		"name": "Chapter 1.1: Lab 3.1 - effective flow descriptions",
+		"showName": false,
 		"instructions": "**What makes a flow description effective for LLM matching? (Select all that apply)**",
 		"multipleResponse": true,
 		"isRandomized": false,

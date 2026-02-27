@@ -2,8 +2,8 @@
 	"type": "multiple-choice",
 	"taskId": "multiple-choice-2055505786",
 	"source": {
-		"name": "Understanding Rasa Responses",
-		"showName": true,
+		"name": "Chapter 1.1: 2.2 Understanding Responses",
+		"showName": false,
 		"instructions": "**Which of the following statements about Rasa responses are correct? Select all that apply.**",
 		"multipleResponse": true,
 		"isRandomized": false,

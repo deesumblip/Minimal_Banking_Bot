@@ -2,8 +2,8 @@
 	"type": "multiple-choice",
 	"taskId": "multiple-choice-1071475270",
 	"source": {
-		"name": "Flow Description Purpose",
-		"showName": true,
+		"name": "Chapter 1.1: Lab 3.1 - Exploring Existing Flows",
+		"showName": false,
 		"instructions": "**What is the primary purpose of the flow description field?**",
 		"multipleResponse": false,
 		"isRandomized": false,
