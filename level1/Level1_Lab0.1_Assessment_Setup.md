@@ -10,7 +10,7 @@
 
 1. Create a virtual environment in the **main project folder (root)** (the folder that contains `level1`, `level2`, and `.guides`): `python3.11 -m venv .venv` then `source .venv/bin/activate` (Linux/Mac) or `.venv\Scripts\Activate.ps1` (Windows PowerShell). This same `.venv` is used for all levels in the course.
 2. Install Rasa Pro: `pip install --no-cache-dir rasa-pro`.
-3. Verify: `rasa --version` shows version info; `level1` has `domain/`, `data/`, and config files; environment variables (e.g. RASA_LICENSE, OPENAI_API_KEY) are set as required by your environment.
+3. Verify: `rasa --version` shows version info; `level1` has `domain/`, `data/`, and config files; **RASA_LICENSE** is set (see lab for how to set it for Codio vs local).
 
 ---
 
@@ -19,6 +19,7 @@
 - Virtual environment exists (`.venv/` in **project root**)
 - `rasa --version` runs successfully (with venv activated)
 - Project structure present in `level1/` (`domain/`, `data/`, config files)
+- **RASA_LICENSE** is set (assessment checks that it is set, not its value)
 
 Run the assessment when you're done.
 
@@ -48,8 +49,9 @@ The grader should run from **workspace root** (`/home/codio/workspace`) and chec
 1. **Virtual environment exists** – `.venv` directory in **workspace root** (not inside `level1`).
 2. **Rasa is installed** – with venv activated from root, running `rasa --version` (or `python -m rasa --version`) succeeds.
 3. **Project structure** – `level1/domain/` and `level1/data/` exist (optional).
+4. **RASA_LICENSE is set** – environment variable is set (e.g. from `.env` or Codio env vars); grader checks presence only, never reads or prints the value.
 
-Use clear PASS/FAIL messages and hints. Suggested total points: 4–6 (adjust per course design).
+Use clear PASS/FAIL messages and hints. Suggested total points: 7 (Step 1: 2, Step 2: 3, Step 3: 1, Step 4: 1).
 
 ## Assessment Setup and Configuration
 
@@ -66,14 +68,15 @@ Use clear PASS/FAIL messages and hints. Suggested total points: 4–6 (adjust pe
    - **Substring Match:** ON (so expected strings can appear anywhere in the script output).
    - **Case Insensitive:** ON, **Ignore White Spaces:** ON (recommended).
 
-   **Test cases** (use “ADD ITEM TO CHECK” to add three items):
+   **Test cases** (use “ADD ITEM TO CHECK” to add four items):
 
    | # | EXPECTED OUTPUT (substring) | Points (if using per-item points) |
    |---|------------------------------|------------------------------------|
    | 1 | `Step 1: PASSED`             | 2 |
    | 2 | `Step 2: PASSED`             | 3 |
    | 3 | `Step 3: PASSED`             | 1 |
+   | 4 | `Step 4: PASSED`             | 1 |
 
-   If Codio assigns points per test case, set **2** points for test case 1, **3** for test case 2, and **1** for test case 3 (total 6). Otherwise ensure the assessment total is 6 and partial credit is applied when only some of these substrings appear.
+   If Codio assigns points per test case, set **2** for test case 1, **3** for test case 2, **1** for test case 3, **1** for test case 4 (total 7). Otherwise ensure the assessment total is 7 and partial credit is applied when only some of these substrings appear.
 
-5. **Test** – Run after a student completes Lab 0.1 (venv in root + Rasa install); confirm full pass (6/6). Run with venv but no Rasa; confirm partial pass (e.g. 2/6). Run in a fresh workspace without venv; confirm fail with hint.
+5. **Test** – Run after a student completes Lab 0.1 (venv in root + Rasa install + RASA_LICENSE set); confirm full pass (7/7). Run with venv but no Rasa; confirm partial pass (e.g. 2/7). Run in a fresh workspace without venv; confirm fail with hint.

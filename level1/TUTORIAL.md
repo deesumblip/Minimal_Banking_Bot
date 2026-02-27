@@ -90,13 +90,12 @@ python -m pip install --no-cache-dir rasa-pro
 Create a `.env` file in your project root with:
 
 ```text
-RASA_LICENSE=your-rasa-pro-license-here
-OPENAI_API_KEY=your-openai-api-key-here
+RASA_LICENSE=rasaxxx-your-license-here
 ```
 
 ⚠️ **Important**: 
 - Never commit `.env` files to version control (they contain secrets)
-- Replace the placeholder values with your actual license and API key
+- Replace the placeholder with your actual Rasa Pro license. This course uses only RASA_LICENSE (no OpenAI API key).
 
 #### Step 4: Load Environment Variables
 
@@ -293,10 +292,10 @@ Before starting the tutorial, verify everything works:
    # Should show version information (no errors)
    ```
 
-3. **✅ Environment Variables Set**
+3. **✅ RASA_LICENSE Set**
    ```powershell
-   # Check .env file exists and has both RASA_LICENSE and OPENAI_API_KEY
-   # Make sure values are not placeholders
+   # Check .env file exists in project root and has RASA_LICENSE (see Lab 0.1)
+   # Make sure value is not the placeholder
    ```
 
 4. **✅ Can Train a Bot**
@@ -1654,35 +1653,30 @@ Python can't find the Rasa library. This usually means Rasa isn't installed, or 
 ```
 Error: RASA_LICENSE environment variable not set
 ```
-or
-```
-Error: OPENAI_API_KEY not found
-```
 
 **What this means (plain language):**
-Rasa needs your license and API keys, but it can't find them.
+Rasa needs your Rasa Pro license, but it can't find it.
 
 **Why it happens:**
-- You haven't created a `.env` file
-- You haven't loaded the environment variables
+- You haven't created a `.env` file in the project root
+- You haven't loaded the environment variables (e.g. source .env)
 - The `.env` file has the wrong format
-- The environment variables have placeholder values
+- The value is still the placeholder
 
 **How to fix it:**
 
 1. **Check if `.env` file exists:**
-   - Should be in the root of your project folder
-   - Should contain: `RASA_LICENSE=...` and `OPENAI_API_KEY=...`
+   - Should be in the root of your project folder (folder containing level1, level2, .guides)
+   - Should contain: `RASA_LICENSE=...` (this course does not use OPENAI_API_KEY)
 
 2. **Verify the format:**
    ```text
    # ✅ CORRECT format:
    RASA_LICENSE=your-actual-license-here
-   OPENAI_API_KEY=sk-your-actual-api-key-here
    
    # ❌ WRONG format:
    RASA_LICENSE="your-actual-license-here"  # No quotes needed
-   RASA_LICENSE=your-rasa-pro-license  # Placeholder value
+   RASA_LICENSE=rasaxxx-your-license-here    # Placeholder value
    ```
 
 3. **Load the environment variables:**

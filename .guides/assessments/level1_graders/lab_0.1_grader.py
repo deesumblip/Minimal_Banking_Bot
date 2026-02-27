@@ -17,7 +17,7 @@ VENV_DIR = WORKSPACE_ROOT / ".venv"
 LEVEL1_DIR = WORKSPACE_ROOT / "level1"
 
 score = 0
-max_score = 6
+max_score = 7
 
 # Resolve venv Python (bin on Unix, Scripts on Windows) - use absolute paths
 if (VENV_DIR / "bin" / "python").exists():
@@ -256,11 +256,40 @@ else:
     score += 1
 print("")
 
+# Step 4: RASA_LICENSE is set (1 point) - check presence only, never print value
+print("Step 4: Verifying RASA_LICENSE is set...")
+rasa_license_ok = False
+env_val = os.environ.get("RASA_LICENSE", "").strip()
+if env_val and env_val.lower() not in ("rasaxxx-your-license-here", "your-license-here"):
+    rasa_license_ok = True
+if not rasa_license_ok:
+    # Fallback: .env in project root with non-placeholder RASA_LICENSE (grader may run in fresh process)
+    env_file = WORKSPACE_ROOT / ".env"
+    if env_file.is_file():
+        try:
+            with open(env_file, "r") as f:
+                for line in f:
+                    line = line.strip()
+                    if line.startswith("RASA_LICENSE="):
+                        val = line.split("=", 1)[-1].strip()
+                        if val and val.lower() not in ("rasaxxx-your-license-here", "your-license-here"):
+                            rasa_license_ok = True
+                        break
+        except Exception:
+            pass
+if rasa_license_ok:
+    print("✅ Step 4: PASSED - RASA_LICENSE is set (1 point)")
+    score += 1
+else:
+    print("❌ Step 4: FAILED - RASA_LICENSE is not set or still placeholder (0 points)")
+    print("Hint: Create .env in project root with RASA_LICENSE=your-actual-license, then source it (see Lab 0.1). On Codio you may use Environment Variables in project settings.")
+print("")
+
 # Final summary
 print("==========================================")
-if score >= 5:
+if score >= 7:
     print(f"✅ PASS: Lab 0.1 setup complete! Score: {score}/{max_score}")
-    print("Summary: Step 1 (venv in root) | Step 2 (Rasa Pro) | Step 3 (project structure)")
+    print("Summary: Step 1 (venv in root) | Step 2 (Rasa Pro) | Step 3 (project structure) | Step 4 (RASA_LICENSE)")
     print(f"Score: {score}/{max_score}")
     print("Successfully passed!")
     print("==========================================")
@@ -271,7 +300,7 @@ if score >= 5:
     sys.exit(0)
 else:
     print(f"❌ FAIL: Lab 0.1 setup incomplete. Score: {score}/{max_score}")
-    print("Summary: Step 1 (venv in root) | Step 2 (Rasa Pro) | Step 3 (project structure)")
+    print("Summary: Step 1 (venv in root) | Step 2 (Rasa Pro) | Step 3 (project structure) | Step 4 (RASA_LICENSE)")
     print(f"Score: {score}/{max_score}")
     print("Review the failed checks above and try again.")
     print("==========================================")

@@ -1,6 +1,6 @@
 # Codio: Setting Up startup.sh for This Project
 
-This document is for the **Codio implementer** (instructor or course author) who is configuring the Minimal_Banking_Bot project on Codio. It explains how to set up the startup script so that `RASA_LICENSE` and `OPENAI_API_KEY` are loaded in **every terminal** for students (and for you).
+This document is for the **Codio implementer** (instructor or course author) who is configuring the Minimal_Banking_Bot project on Codio. It explains how to set up the startup script so that **RASA_LICENSE** is loaded in **every terminal** for students (and for you). This course does not require an OpenAI API key.
 
 ---
 
@@ -8,7 +8,7 @@ This document is for the **Codio implementer** (instructor or course author) who
 
 - **File:** `.guides/startup.sh` (must be **directly** under `.guides/`, not inside `.guides/secure/`).
 - **When it runs:** Automatically when the Codio box starts (e.g. when a user opens the project or assignment).
-- **What it does:** If it finds an env file at `.guides/secure/rasa_env` or `secure/rasa_env`, it adds a single line to the user’s `~/.bashrc` so that **every new terminal** sources that file. That way `RASA_LICENSE` and `OPENAI_API_KEY` are set in all terminals without users having to run anything.
+- **What it does:** If it finds an env file at `.guides/secure/rasa_env` or `secure/rasa_env`, it adds a single line to the user’s `~/.bashrc` so that **every new terminal** sources that file. That way **RASA_LICENSE** is set in all terminals without users having to run anything.
 
 ---
 
@@ -26,7 +26,7 @@ Minimal_Banking_Bot/
 ```
 
 - **`.guides/startup.sh`** — Should already be in the repo. Codio runs this when the box starts.
-- **`.guides/secure/rasa_env`** — You create this in Codio and put your Rasa env vars in it. Do not commit real values to Git; this file is for the Codio workspace only (or use a template and fill in when setting up the course).
+- **`.guides/secure/rasa_env`** — You create this in Codio and put **RASA_LICENSE** in it. Do not commit real values to Git; this file is for the Codio workspace only (or use a template and fill in when setting up the course).
 
 ---
 
@@ -42,11 +42,10 @@ Minimal_Banking_Bot/
 
 - In the Codio file tree, under **`.guides`**, create a folder named **`secure`** if it does not exist.
 - Inside **`.guides/secure/`**, create a file named **`rasa_env`** (no extension).
-- Put the following in `rasa_env`, **with your real values** (no quotes unless a value contains spaces):
+- Put the following in `rasa_env`, **with your real Rasa Pro license** (no quotes unless the value contains spaces):
 
   ```bash
   export RASA_LICENSE=your-actual-rasa-pro-license
-  export OPENAI_API_KEY=your-actual-openai-api-key
   ```
 
 - Save the file.  
@@ -70,10 +69,9 @@ Minimal_Banking_Bot/
 - Open a **new** terminal (close any old one).
 - Run:
   ```bash
-  echo $RASA_LICENSE
-  echo $OPENAI_API_KEY
+  [ -n "$RASA_LICENSE" ] && echo "RASA_LICENSE is set" || echo "RASA_LICENSE is not set"
   ```
-- You should see the values (or at least non-empty output). If you see nothing, see **Troubleshooting** below.
+- You should see "RASA_LICENSE is set". If you see "not set", see **Troubleshooting** below. (Do not echo the actual value.)
 
 ---
 
@@ -81,7 +79,7 @@ Minimal_Banking_Bot/
 
 | Issue | What to do |
 |-------|------------|
-| Variables still empty after restart | 1) Confirm `.guides/secure/rasa_env` exists and contains the two `export` lines. 2) Open a **new** terminal (the script only affects new shells). 3) Check that the line was added: `grep "Codio Rasa env" ~/.bashrc` — you should see one line. |
+| Variables still empty after restart | 1) Confirm `.guides/secure/rasa_env` exists and contains `export RASA_LICENSE=...`. 2) Open a **new** terminal (the script only affects new shells). 3) Check that the line was added: `grep "Codio Rasa env" ~/.bashrc` — you should see one line. |
 | No `.guides/startup.sh` in project | Get it from the repo (path: `.guides/startup.sh`) and add it under `.guides/` in Codio. Do not put it inside `.guides/secure/`. |
 | Script not running at all | Run it once by hand, then open a new terminal: `bash /home/codio/workspace/.guides/startup.sh` |
 | Wrong path for env file | The script looks for (1) `/home/codio/workspace/.guides/secure/rasa_env`, then (2) `/home/codio/workspace/secure/rasa_env`. Use one of these two paths for your env file. |
@@ -91,8 +89,8 @@ Minimal_Banking_Bot/
 ## Summary checklist for implementer
 
 - [ ] `.guides/startup.sh` exists directly under `.guides/` (not inside `secure/`).
-- [ ] `.guides/secure/rasa_env` exists and contains `export RASA_LICENSE=...` and `export OPENAI_API_KEY=...` with real values.
+- [ ] `.guides/secure/rasa_env` exists and contains `export RASA_LICENSE=...` with your real Rasa Pro license.
 - [ ] Box has been restarted at least once after the above was in place.
-- [ ] In a **new** terminal, `echo $RASA_LICENSE` and `echo $OPENAI_API_KEY` show the values.
+- [ ] In a **new** terminal, run `[ -n "$RASA_LICENSE" ] && echo "RASA_LICENSE is set"` — you should see "RASA_LICENSE is set" (do not echo the actual value).
 
 After this, every new terminal in that project/assignment will have the Rasa env vars loaded automatically.

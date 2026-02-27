@@ -82,6 +82,64 @@ After that, edit Level 1 by changing the markdown and JSON under `.guides/conten
 
 ---
 
+## Pulling .guides/assessments from Codio to GitHub
+
+When you add or edit **grader scripts**, **solution references**, or **assessment configuration** in Codio and want that in the repo (e.g. so others get it via `git pull`), use one of these:
+
+### Option A: Git from Codio (recommended if Codio has Git push)
+
+1. **In Codio**, open a terminal and go to the workspace root:
+   ```bash
+   cd /home/codio/workspace
+   ```
+2. Check what changed:
+   ```bash
+   git status
+   ```
+   You should see changes under `.guides/assessments/` (e.g. new or modified `level*_graders/*.py`, `*_solution_reference.md`, or assessment `*.json` files).
+3. **Add, commit, and push** from Codio:
+   ```bash
+   git add .guides/assessments/
+   git commit -m "Sync .guides/assessments from Codio (graders / solution refs / assessment config)"
+   git push origin main
+   ```
+4. **On your local machine** (or anywhere else), pull the updates:
+   ```bash
+   git pull origin main
+   ```
+   Your local repo now has the same `.guides/assessments/` as Codio.
+
+**Note:** Codio must have the project linked to the same GitHub repo and have push access (e.g. SSH key or token). If the project was imported from Git but doesn't push back, use Option B.
+
+### Option B: Download from Codio, then add locally
+
+1. **In Codio**, locate the assessments folder. It is usually:
+   - `.guides/assessments/` in the workspace (same as in the repo).
+2. **Download** that folder to your computer:
+   - **File tree:** Right-click `.guides/assessments` (or the specific subfolder, e.g. `level4_graders`) → **Download** / **Export**, if available; or  
+   - **Terminal:** From the workspace root, create a zip and download it:
+     ```bash
+     cd /home/codio/workspace
+     zip -r assessments.zip .guides/assessments
+     ```
+     Then use Codio's file browser or download feature to get `assessments.zip`.
+3. **Locally**, open your cloned repo. Replace or merge the contents of `.guides/assessments/`:
+   - Unzip `assessments.zip` and copy `.guides/assessments/*` into your repo's `.guides/assessments/` (overwrite or merge as needed).
+4. **Commit and push** from your machine:
+   ```bash
+   git add .guides/assessments/
+   git commit -m "Sync .guides/assessments from Codio"
+   git push origin main
+   ```
+
+### What lives in .guides/assessments
+
+- **Grader scripts** (e.g. `level4_graders/lab_2.1_grader.py`) — run by Codio Code Test assessments; keep these in the repo so `git pull` in Codio keeps graders in sync.
+- **Solution references** (e.g. `lab_2.1_solution_reference.md`) — used by LLM Rubric assessments; same idea.
+- **Assessment config JSON** (e.g. `code-output-compare-*.json`, `llm-based-auto-rubric-*.json`) — if Codio writes these into `.guides/assessments/`, pulling them into the repo backs up or shares assessment settings.
+
+---
+
 ## Summary
 
 | Goal | Approach |
@@ -89,3 +147,4 @@ After that, edit Level 1 by changing the markdown and JSON under `.guides/conten
 | One page = one section or lab | Structure under `.guides/content/` so each unit has one `.md` (and `.json`) per section/lab; the sync script does this for Level 2. |
 | Sync after editing sections | Run `python sync_level2_to_codio.py`, then commit/push and re-import in Codio (or use Codio’s import). |
 | Populate Codio from this repo | Use the script to fill `.guides/content/`, then use Codio’s Git import or content import so Codio loads that structure. |
+| **Pull .guides/assessments from Codio to GitHub** | In Codio: commit and push `.guides/assessments/` (Option A), or download that folder and merge locally, then commit and push (Option B). |

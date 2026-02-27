@@ -8,7 +8,7 @@
 4. **Train**: From `level1` with venv active: `python -m rasa train`. Wait for "Successfully saved model" (1–3 minutes).
 5. **Verify**: Terminal shows "Successfully saved model to 'models/...'". In the file tree, `level1/models/` should contain a new `.tar.gz` file.
 
-**Common errors**: YAML syntax → use 2 spaces, colons, dashes. Response not found → add response in domain or fix flow typo. No module 'rasa' → activate venv, install rasa-pro. RASA_LICENSE/OPENAI_API_KEY not set → check Lab 0.1 step 5 or ask instructor.
+**Common errors**: YAML syntax → use 2 spaces, colons, dashes. Response not found → add response in domain or fix flow typo. No module 'rasa' → activate venv, install rasa-pro. RASA_LICENSE not set → check Lab 0.1 (set RASA_LICENSE) or ask instructor.
 
 Run the assessment when done.
 
@@ -25,10 +25,7 @@ Follow the same logic as Part 1, but use your own terminal and OS-specific comma
    - **macOS / Linux**: `source .venv/bin/activate`  
    Your prompt should show `(.venv)`.
 4. **Navigate to level1**: Go to the `level1` folder: `cd level1` (the one that contains `config.yml`, `domain/`, and `data/`).
-5. **Create a `.env` file** in the `level1` folder (same folder as `config.yml`) with:
-   - `RASA_LICENSE=your-license-key`
-   - `OPENAI_API_KEY=your-openai-key`  
-   No quotes around the values. See Lab 0.1 or your instructor if you need these.
+5. **Ensure RASA_LICENSE is set**: Create a `.env` file in the **project root** (folder containing `level1`) with `RASA_LICENSE=your-license-key` (no quotes), then source it from root before `cd level1`. Or see Lab 0.1 for Codio vs local (Windows/macOS/Linux).
 6. **Train**: With venv active and from the `level1` folder, run: `python -m rasa train`. Wait for "Successfully saved model".
 7. **Verify**: A new `.tar.gz` file appears in `level1/models/`.
 

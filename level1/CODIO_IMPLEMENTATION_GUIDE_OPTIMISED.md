@@ -354,9 +354,8 @@ Bot responds
    **Codio**: Credentials are pre-configured. To verify they're loaded, run:
    ```bash
    [ -n "$RASA_LICENSE" ] && echo "RASA_LICENSE is set" || echo "RASA_LICENSE is not set"
-   [ -n "$OPENAI_API_KEY" ] && echo "OPENAI_API_KEY is set" || echo "OPENAI_API_KEY is not set"
    ```
-   Both should report "is set". If not, ask your instructor.
+   It should report "RASA_LICENSE is set". If not, ask your instructor or see Lab 0.1 for setting RASA_LICENSE (Codio vs local).
    
    **Local setup**: The .env file should exist in your project root. Run **ls -la .env** to confirm. If it doesn't, create it using the instructions in section 0.1.
 
@@ -2751,8 +2750,7 @@ Each lab has a **Step 0.5** section in the "For Codio Team" implementation notes
    - **Expected Result**: New file appears in file tree, editor opens with empty file
    - **Paste this content** (select all, delete, then paste):
      ```text
-     RASA_LICENSE=YOUR_LICENSE_KEY_HERE
-     OPENAI_API_KEY=YOUR_OPENAI_KEY_HERE
+     RASA_LICENSE=rasaxxx-your-license-here
      ```
    - **Save**: Press `Ctrl+S` (or `Cmd+S` on Mac) OR click Save button
    - **Expected Result**: File shows as saved (no asterisk * next to filename)
@@ -2884,9 +2882,8 @@ Each lab has a **Step 0.5** section in the "For Codio Team" implementation notes
    **Codio**: Credentials are pre-configured. To verify they're loaded, run:
    ```bash
    [ -n "$RASA_LICENSE" ] && echo "RASA_LICENSE is set" || echo "RASA_LICENSE is not set"
-   [ -n "$OPENAI_API_KEY" ] && echo "OPENAI_API_KEY is set" || echo "OPENAI_API_KEY is not set"
    ```
-   Both should report "is set". If not, ask your instructor.
+   It should report "RASA_LICENSE is set". If not, ask your instructor or see Lab 0.1 for setting RASA_LICENSE (Codio vs local).
    
    **Local setup**: The .env file should exist in your project root. Run **ls -la .env** to confirm. If it doesn't, create it using the instructions in section 0.1.
 
@@ -3122,7 +3119,7 @@ You can add **additional Standard Code Tests** for other checks:
      4. Verify Python 3.11 is installed (run: python3.11 -V)
      5. Verify Rasa Pro installation (run: rasa --version, with venv activated)
      6. Create .env file from .env.template
-     7. Add your RASA_LICENSE and OPENAI_API_KEY to .env
+     7. Add your RASA_LICENSE to .env (see Lab 0.1)
      8. Verify project files exist (domain/, data/ folders)
      ```
    - Under **Error Augmentation**, add these mappings:
@@ -3165,7 +3162,7 @@ You can add **additional Standard Code Tests** for other checks:
   
 - [ ] **`.env.template` file created**
   - ✅ File exists in `level1/` folder
-  - ✅ Contains `RASA_LICENSE=` and `OPENAI_API_KEY=` lines
+  - ✅ Contains `RASA_LICENSE=` line (see Lab 0.1)
   
 - [ ] **Lab 0.1 Code Test assessment created**
   - ✅ Assessment appears in Guide editor (Unit 0 section)
@@ -7201,7 +7198,7 @@ When you run `rasa train`, Rasa:
 | **YAML syntax error** (e.g. "block mapping", line/column given) | Check that line: use **2 spaces** (not tabs, not 4 spaces), colons after keys, dashes before list items. Fix and save, then train again. |
 | **Response 'utter_xyz' not found** | The flow uses a response that isn't in `domain/basics.yml`. Add the response in the domain or fix the typo in the flow so the name matches exactly. |
 | **No module named 'rasa'** | Venv not active or Rasa not installed. Run `source .venv/bin/activate`, then `rasa --version`. If it fails, install Rasa Pro: `python -m pip install --no-cache-dir rasa-pro`. |
-| **RASA_LICENSE / OPENAI_API_KEY not set** | Credentials are pre-configured on Codio. Run the verification commands from Lab 0.1 step 5; if they report "is not set", ask your instructor. Otherwise run training from the `level1/` folder. |
+| **RASA_LICENSE not set** | Set RASA_LICENSE (see Lab 0.1). On Codio, credentials may be pre-configured; run the verification command from Lab 0.1; if "is not set", ask your instructor. Otherwise run training from the `level1/` folder. |
 
 **AI Coach**: Ask "How do I know training succeeded?" or "What should I see when training works?"
 
@@ -7244,9 +7241,8 @@ If you're **not** using Codio, follow these steps:
 - Rasa loads `.env` from the current directory. Create a `.env` file in the same folder as `config.yml` with:
   ```
   RASA_LICENSE=your-actual-license
-  OPENAI_API_KEY=sk-your-actual-key
   ```
-- **Important**: No quotes around values; no placeholder values. If you see "RASA_LICENSE not set" or "OPENAI_API_KEY not found", check that `.env` exists, has the right variable names, and you're running `rasa train` from that folder.
+- **Important**: No quotes around values; no placeholder values. If you see "RASA_LICENSE not set", check that `.env` exists in project root, has RASA_LICENSE, and you've sourced it (see Lab 0.1); run `rasa train` from the level folder.
 
 **5. Run the training command**
 - From the project folder (with venv active), run:
@@ -7279,7 +7275,7 @@ If you're **not** using Codio, follow these steps:
 | **YAML syntax error** (e.g. "block mapping", line/column given) | Check that line: use **2 spaces** (not tabs, not 4 spaces), colons after keys, dashes before list items. Fix and save, then train again. |
 | **Response 'utter_xyz' not found** | The flow uses a response that isn't in `domain/basics.yml`. Add the response in the domain or fix the typo in the flow so the name matches exactly. |
 | **No module named 'rasa'** | Venv not active or Rasa not installed. Activate the venv, then run `python -m pip install --no-cache-dir rasa-pro`. |
-| **RASA_LICENSE / OPENAI_API_KEY not set** | Create a `.env` file in the same folder as `config.yml` with `RASA_LICENSE=...` and `OPENAI_API_KEY=...` (no quotes, no placeholders). Make sure you're running `rasa train` from that folder. |
+| **RASA_LICENSE not set** | Create a `.env` file in the project root with `RASA_LICENSE=...` (no quotes, no placeholders), source it, then run `rasa train` from the level folder (see Lab 0.1). |
 
 **AI Coach**: Ask "Where do I put my Rasa license?" or "How do I set environment variables?"
 
@@ -7350,7 +7346,7 @@ When Inspector opens, you'll see several areas. You don't need to understand eve
 
 #### Launching Rasa Inspector locally
 
-If you're **not** using Codio and want to run Inspector on your own computer, follow the steps for your operating system. You'll need: the `level1` project folder, a virtual environment with Rasa Pro installed, and a `.env` file in `level1` with `RASA_LICENSE` and `OPENAI_API_KEY` set (see Unit 0 and Lab 0.1).
+If you're **not** using Codio and want to run Inspector on your own computer, follow the steps for your operating system. You'll need: the `level1` project folder, a virtual environment with Rasa Pro installed, and **RASA_LICENSE** set (e.g. via `.env` in project root—see Unit 0 and Lab 0.1).
 
 **1. Go to your project folder**
 
@@ -7388,7 +7384,7 @@ Leave this terminal window open. When you see something like `Starting Rasa serv
 **Troubleshooting (local)**
 
 - **"No module named 'rasa'"** – Activate the virtual environment again and make sure Rasa is installed (`pip install rasa-pro`).
-- **"RASA_LICENSE" or "OPENAI_API_KEY" not set** – Create or edit `.env` in the `level1` folder with both variables (no quotes around the values). Restart the terminal and run `rasa inspect` again from `level1`.
+- **"RASA_LICENSE" not set** – Create or edit `.env` in the project root with `RASA_LICENSE=...` (no quotes), source it, then run `rasa inspect` again (see Lab 0.1).
 - **"Address already in use" or port 5005 in use** – Another program is using port 5005. Close other Rasa or Python processes, or use a different port: `python -m rasa inspect --debug --port 5006` and then open **http://localhost:5006** (or …/inspect.html on 5006) in your browser.
 
 ---
@@ -7687,7 +7683,7 @@ Bot Response
 | **YAML syntax error** (e.g. "block mapping", line/column given) | Check that line: use **2 spaces** (not tabs, not 4 spaces), colons after keys, dashes before list items. Fix and save, then train again. |
 | **Response 'utter_xyz' not found** | The flow uses a response that isn't in `domain/basics.yml`. Add the response in the domain or fix the typo in the flow so the name matches exactly. |
 | **No module named 'rasa'** | Venv not active or Rasa not installed. Run `source .venv/bin/activate`, then `rasa --version`. If it fails, install Rasa Pro: `python -m pip install --no-cache-dir rasa-pro`. |
-| **RASA_LICENSE / OPENAI_API_KEY not set** | Credentials are pre-configured on Codio. Run the verification commands from Lab 0.1 step 5; if they report "is not set", ask your instructor. Otherwise run training from the `level1/` folder. |
+| **RASA_LICENSE not set** | Set RASA_LICENSE (see Lab 0.1). On Codio, credentials may be pre-configured; run the verification command from Lab 0.1; if "is not set", ask your instructor. Otherwise run training from the `level1/` folder. |
 
 **AI Coach**: Ask "How do I know training succeeded?" or "What should I see when training works?"
 
@@ -7730,9 +7726,8 @@ If you're **not** using Codio, follow these steps:
 - Rasa loads `.env` from the current directory. Create a `.env` file in the same folder as `config.yml` with:
   ```
   RASA_LICENSE=your-actual-license
-  OPENAI_API_KEY=sk-your-actual-key
   ```
-- **Important**: No quotes around values; no placeholder values. If you see "RASA_LICENSE not set" or "OPENAI_API_KEY not found", check that `.env` exists, has the right variable names, and you're running `rasa train` from that folder.
+- **Important**: No quotes around values; no placeholder values. If you see "RASA_LICENSE not set", check that `.env` exists in project root, has RASA_LICENSE, and you've sourced it (see Lab 0.1); run `rasa train` from the level folder.
 
 **5. Run the training command**
 - From the project folder (with venv active), run:
@@ -7765,7 +7760,7 @@ If you're **not** using Codio, follow these steps:
 | **YAML syntax error** (e.g. "block mapping", line/column given) | Check that line: use **2 spaces** (not tabs, not 4 spaces), colons after keys, dashes before list items. Fix and save, then train again. |
 | **Response 'utter_xyz' not found** | The flow uses a response that isn't in `domain/basics.yml`. Add the response in the domain or fix the typo in the flow so the name matches exactly. |
 | **No module named 'rasa'** | Venv not active or Rasa not installed. Activate the venv, then run `python -m pip install --no-cache-dir rasa-pro`. |
-| **RASA_LICENSE / OPENAI_API_KEY not set** | Create a `.env` file in the same folder as `config.yml` with `RASA_LICENSE=...` and `OPENAI_API_KEY=...` (no quotes, no placeholders). Make sure you're running `rasa train` from that folder. |
+| **RASA_LICENSE not set** | Create a `.env` file in the project root with `RASA_LICENSE=...` (no quotes, no placeholders), source it, then run `rasa train` from the level folder (see Lab 0.1). |
 
 **AI Coach**: Ask "Where do I put my Rasa license?" or "How do I set environment variables?"
 
@@ -9806,7 +9801,7 @@ project/
 - `.env` file template provided
 - Students/instructors fill in actual values:
   - `RASA_LICENSE=...`
-  - `OPENAI_API_KEY=...`
+  - (This course uses only RASA_LICENSE; no OpenAI API key required.)
 - Environment variable loading script included
 
 **Port Configuration**:

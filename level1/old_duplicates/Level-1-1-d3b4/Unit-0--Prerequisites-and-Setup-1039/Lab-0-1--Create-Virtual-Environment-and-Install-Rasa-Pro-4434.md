@@ -63,9 +63,8 @@
     **Codio**: Credentials are pre-configured. To verify they're loaded, run:
    ```bash
    [ -n "$RASA_LICENSE" ] && echo "RASA_LICENSE is set" || echo "RASA_LICENSE is not set"
-   [ -n "$OPENAI_API_KEY" ] && echo "OPENAI_API_KEY is set" || echo "OPENAI_API_KEY is not set"
    ```
-    Both should report "is set". If not, ask your instructor.
+   It should report "RASA_LICENSE is set". If not, ask your instructor or see Lab 0.1.
     
     **Local setup**: The .env file should exist in your project root. Run **ls -la .env** to confirm. If it doesn't, create it using the instructions in section 0.1.
 
