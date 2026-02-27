@@ -8,7 +8,7 @@
 		"metadata": {
 			"tags": [],
 			"files": [
-				".guides/assessments/level1_graders/lab_7.2_solution_reference.md",
+				".guides/secure/level1_graders/lab_7.2_solution_reference.md",
 				"level1/data/basics/contact.yml",
 				"level1/data/basics/greet.yml",
 				"level1/data/basics/help.yml",
@@ -60,7 +60,7 @@
 		],
 		"solutions": [
 			{
-				"path": ".guides/assessments/level1_graders/lab_7.2_solution_reference.md",
+				"path": ".guides/secure/level1_graders/lab_7.2_solution_reference.md",
 				"content": "# Lab 7.2 – Reference solution for LLM Rubric Autograde\n\nUse this file as the **Instructor Provided Solution File** in Codio's LLM Rubric Autograde so the LLM has a model answer to compare against student submissions.\n\n**Grading flexibility:** The example below uses \"hours\" only as one valid solution. Accept any student submission that adds a different but valid feature (e.g. branch locations, FAQ, feedback)—any new `utter_*` response and any new flow file in `data/basics/` that meets the rubric structure and links the flow to that response.\n\n---\n\n## 1. New response in domain/basics.yml\n\nOne new response, following the same pattern as existing responses (e.g. utter_greet, utter_help). Example (students may use a different topic, e.g. utter_locations, utter_faq):\n\n```yaml\nresponses:\n  # ... existing responses (utter_greet, utter_help, utter_contact) ...\n  utter_hours:\n    - text: \"We're open Monday–Friday 9am–5pm and Saturday 10am–2pm.\"\n      metadata:\n        rephrase: True\n```\n\n- Valid structure: response name (e.g. `utter_hours`), `- text:` with at least one message, optional `metadata: rephrase: True`.\n- Must be distinct from the original set (greet, help, contact, goodbye).\n\n---\n\n## 2. New flow in data/basics/\n\nOne new flow file (e.g. `hours.yml`, `locations.yml`, `faq.yml`—filename may vary) that uses the new response. Example:\n\n```yaml\nflows:\n  hours:\n    name: bank hours\n    description: \"User asks for branch or bank opening hours, or when we are open.\"\n    steps:\n      - respond: utter_hours\n```\n\n- Valid structure: `flows:`, one flow with `name`, `description`, and `steps`.\n- At least one step must reference the new response (e.g. `respond: utter_hours`).\n- Description should be clear and descriptive so the LLM can match user questions to this flow.\n\n---\n\n## Rubric summary for autograde\n\n- **New response in domain:** Present, valid YAML, not one of greet/help/contact/goodbye. Do not award points for pre-existing responses (utter_greet, utter_help, utter_contact, utter_goodbye).\n- **New flow file:** A file in `data/basics/` that was added for this lab—not one of the originals (greet.yml, help.yml, contact.yml, goodbye.yml). Valid YAML, has name, description, steps. Do not award points for pre-existing flow files.\n- **Flow uses new response:** At least one step references the new response name.\n- **Best practices:** Descriptive flow description; rephrase metadata where appropriate.\n"
 			}
 		]

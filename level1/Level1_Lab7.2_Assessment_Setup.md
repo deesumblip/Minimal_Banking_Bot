@@ -60,7 +60,7 @@ Use these **exact options** and **copy-paste rubric text** when configuring the 
 | Option | Set to |
 |--------|--------|
 | **Total Points** | **20** |
-| **Instructor Provided Solution File** | `.guides/assessments/level1_graders/lab_7.2_solution_reference.md` (or `/home/codio/workspace/.guides/assessments/level1_graders/lab_7.2_solution_reference.md` if Codio requires absolute path) |
+| **Instructor Provided Solution File** | `.guides/secure/level1_graders/lab_7.2_solution_reference.md` (or `/home/codio/workspace/.guides/secure/level1_graders/lab_7.2_solution_reference.md` if Codio requires absolute path) |
 | **Defined Number of Attempts** | **Off** (leave toggle off) |
 | **Show Rationale to Student** | **After [1] attempts** (select that radio, leave the number as 1) |
 
@@ -105,14 +105,14 @@ Configure the assessment so the LLM can read these paths (exact paths to set, if
 - `/home/codio/workspace/level1/data/basics/` (or list each `.yml` in that folder, e.g. `help.yml`, `hours.yml`, etc., depending on Codio's UI)
 
 **If Codio shows "File not found":**  
-1. **Grading tab** – Set **Instructor Provided Solution File** to exactly: `/home/codio/workspace/.guides/assessments/level1_graders/lab_7.2_solution_reference.md` (the file was moved from `level1/.guides/...`; the old path no longer exists).  
-2. Ensure the repo on Codio is up to date so that `.guides/assessments/level1_graders/lab_7.2_solution_reference.md` exists in the workspace (e.g. run `git pull origin main` once the workspace can reach GitHub).
+1. **Grading tab** – Set **Instructor Provided Solution File** to exactly: `/home/codio/workspace/.guides/secure/level1_graders/lab_7.2_solution_reference.md` (the file was moved from `level1/.guides/...`; the old path no longer exists).  
+2. Ensure the repo on Codio is up to date so that `.guides/secure/level1_graders/lab_7.2_solution_reference.md` exists in the workspace (e.g. run `git pull origin main` once the workspace can reach GitHub).
 
 ### Option B: Standard Code Test (Bash)
 
 **Grader script location**:
 ```
-.guides/assessments/level1_graders/lab_7.2_grader.sh
+.guides/secure/level1_graders/lab_7.2_grader.sh
 ```
 
 **Checks** (run from `/home/codio/workspace/level1`):
@@ -123,7 +123,7 @@ Configure the assessment so the LLM can read these paths (exact paths to set, if
 
 **Total suggested points**: 8–10. Output clear PASS/FAIL and hints.
 
-**Codio config**: Add Code Test → Standard Code Test. COMMAND: `bash /home/codio/workspace/.guides/assessments/level1_graders/lab_7.2_grader.sh`. Working Directory: `/home/codio/workspace/level1`. Timeout: 60.
+**Codio config**: Add Code Test → Standard Code Test. COMMAND: `bash /home/codio/workspace/.guides/secure/level1_graders/lab_7.2_grader.sh`. Working Directory: `/home/codio/workspace/level1`. Timeout: 60.
 
 ### Example student deliverable
 

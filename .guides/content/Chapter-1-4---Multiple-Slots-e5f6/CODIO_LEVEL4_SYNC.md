@@ -18,7 +18,7 @@ The main guide index at `.guides/content/index.json` includes `Chapter-1-4---Mul
 
 ## Assessments
 
-Graders and solution references live in `.guides/assessments/level4_graders/` (lab_4.1_grader.py through lab_4.5_grader.py and corresponding solution_reference.md files). Configure each lab assessment in Codio using the Level4_Lab*_Assessment_Setup.md files in `level4/` (Option A: LLM Rubric, Option B: Standard Code Test with substring match for PASS).
+Graders and solution references live in `.guides/secure/level4_graders/` (lab_4.1_grader.py through lab_4.5_grader.py and corresponding solution_reference.md files). Configure each lab assessment in Codio using the Level4_Lab*_Assessment_Setup.md files in `level4/` (Option A: LLM Rubric, Option B: Standard Code Test with substring match for PASS).
 
 ## Re-import from Git
 

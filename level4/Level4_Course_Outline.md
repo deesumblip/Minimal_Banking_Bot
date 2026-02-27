@@ -109,7 +109,7 @@
 | 5.1   | 12     | Code Test               | lab_5.1_grader.py / lab_5.1_solution_reference.md |
 | 5.2   | 10     | Code Test (completion)  | lab_5.2_grader.py / lab_5.2_solution_reference.md |
 
-**Total assessment points**: 50. All graders are Python scripts in `.guides/assessments/level4_graders/`. Codio: use **substring match** for expected output `PASS`, Working Directory `/home/codio/workspace`, venv Python in COMMAND.
+**Total assessment points**: 50. All graders are Python scripts in `.guides/secure/level4_graders/`. Codio: use **substring match** for expected output `PASS`, Working Directory `/home/codio/workspace`, venv Python in COMMAND.
 
 ---
 
@@ -147,8 +147,8 @@ All source files live in **level4/** so you can push to GitHub and sync the same
 
 ### Graders and Solution References (in repo, not student-facing)
 
-- `.guides/assessments/level4_graders/lab_2.1_grader.py`, `lab_3.1_grader.py`, `lab_4.1_grader.py`, `lab_5.1_grader.py`, `lab_5.2_grader.py`
-- `.guides/assessments/level4_graders/lab_2.1_solution_reference.md` … `lab_5.2_solution_reference.md`
+- `.guides/secure/level4_graders/lab_2.1_grader.py`, `lab_3.1_grader.py`, `lab_4.1_grader.py`, `lab_5.1_grader.py`, `lab_5.2_grader.py`
+- `.guides/secure/level4_graders/lab_2.1_solution_reference.md` … `lab_5.2_solution_reference.md`
 
 ---
 

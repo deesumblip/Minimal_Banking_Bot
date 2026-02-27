@@ -23,7 +23,7 @@ This guide describes how to set up Lab 0.1 (Level 1) so that **students provide 
 
 ## 3. Option A: Single `.env` at Project Root (Recommended)
 
-**Idea:** One `.env` file at the **project root** (the folder that contains `level1`, `level2`, `level3`, `.guides`). Students create it once in Lab 0.1. For every terminal session, they load it once from the root, then `cd` into any level and run Rasa; the process inherits `RASA_LICENSE`.
+**Idea:** One `.env` file at the **project root** (the folder that contains all levels used in the course). Students create it once in Lab 0.1. For every terminal session, they load it once from the root, then `cd` into any level and run Rasa; the process inherits `RASA_LICENSE`. The same project root also holds the single `.venv` used for all levels.
 
 **Why it persists:** The file lives in the student's workspace (Codio or local). It is not in git, so `git pull` never overwrites it. Same file is used for all levels.
 
@@ -31,7 +31,7 @@ This guide describes how to set up Lab 0.1 (Level 1) so that **students provide 
 
 ### Lab 0.1 steps (add or adjust)
 
-1. **Create `.env` in the project root** (e.g. `~/workspace` on Codio, or `C:\Users\You\Minimal_Banking_Bot` locally).
+1. **Create `.env` in the project root** (the folder that contains all levels; e.g. `~/workspace` on Codio, or your local project root).
 2. **Add one line** (no quotes around the value):
    ```
    RASA_LICENSE=rasaxxx-your-license-here

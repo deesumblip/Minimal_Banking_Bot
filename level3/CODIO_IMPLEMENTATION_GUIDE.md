@@ -31,7 +31,7 @@ Use these for configuring the Codio course and assessments.
 
 - **Venv**: One `.venv` in **project root** (from Lab 0.1). Students activate from root, then `cd level3`. Graders run from workspace root; script activates venv and `cd`s to `level3`.
 - **Inspector on Codio**: **Rasa Inspect** tab only. Do not use Tools → Ports or port 5005 for students.
-- **Graded labs**: Lab 3.1, 5.1 (LLM Rubric with solution references in `.guides/assessments/level3_graders/`), Lab 6.1 (Python grader `lab_6.1_grader.py`). Working Directory for assessments: `/home/codio/workspace`.
+- **Graded labs**: Lab 3.1, 5.1 (LLM Rubric with solution references in `.guides/secure/level3_graders/`), Lab 6.1 (Python grader `lab_6.1_grader.py`). Working Directory for assessments: `/home/codio/workspace`.
 - **Success output**: Grader must print a line containing `PASS` or `Successfully passed!` for Codio’s expected-output match.
 
 For full details, see **Level3_Implementation_Overview.md**.
@@ -40,7 +40,7 @@ For full details, see **Level3_Implementation_Overview.md**.
 
 ## Auto-Grading and QA (Codio Team)
 
-- **Lab 3.1 / 5.1**: Use LLM Rubric Autograde with the instructor-provided solution files in `.guides/assessments/level3_graders/` (see each lab’s Assessment_Setup.md). Option B: Standard Code Test with Bash scripts if you add `lab_3.1_grader.sh` / `lab_5.1_grader.sh`.
+- **Lab 3.1 / 5.1**: Use LLM Rubric Autograde with the instructor-provided solution files in `.guides/secure/level3_graders/` (see each lab’s Assessment_Setup.md). Option B: Standard Code Test with Bash scripts if you add `lab_3.1_grader.sh` / `lab_5.1_grader.sh`.
 - **Lab 6.1**: Standard Code Test; run `lab_6.1_grader.py` from workspace root (see `Level3_Lab6.1_Assessment_Setup.md`).
 - **QA**: Run course end-to-end in a clean Codio environment; confirm graded labs pass when requirements are met and fail with clear feedback when not. Confirm Rasa Inspect tab works for Inspector.
 

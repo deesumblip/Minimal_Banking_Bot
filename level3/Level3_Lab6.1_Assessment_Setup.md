@@ -50,7 +50,7 @@ This assessment verifies that students can successfully train their Level 3 bot 
 
 Save the grader script at:
 ```
-.guides/assessments/level3_graders/lab_6.1_grader.py
+.guides/secure/level3_graders/lab_6.1_grader.py
 ```
 
 ## Grader Script
@@ -83,9 +83,9 @@ Success = a new `.tar.gz` in `level3/models/` and no errors in the terminal.
 1. **Assessment** – Add assessment, then **Code Test** → **Standard Code Test**.
 2. **Execution**:
    - **COMMAND (recommended):** Use the project venv’s Python so dependencies are available:  
-     `/home/codio/workspace/.venv/bin/python3 /home/codio/workspace/.guides/assessments/level3_graders/lab_6.1_grader.py`  
+     `/home/codio/workspace/.venv/bin/python3 /home/codio/workspace/.guides/secure/level3_graders/lab_6.1_grader.py`  
      **Alternative:** If your Codio image already has the required modules for `python3`, you can use:  
-     `python3 /home/codio/workspace/.guides/assessments/level3_graders/lab_6.1_grader.py`
+     `python3 /home/codio/workspace/.guides/secure/level3_graders/lab_6.1_grader.py`
    - **PRE-EXEC COMMAND:** Leave **empty** when using the venv Python path in COMMAND above.
    - **Working Directory:** `/home/codio/workspace`
    - **Timeout:** `60` seconds
@@ -96,5 +96,5 @@ Success = a new `.tar.gz` in `level3/models/` and no errors in the terminal.
    - **RATIONALE** (text box): Example:
      > The grader verifies the virtual environment in project root, that a model file (`.tar.gz`) exists in `level3/models/`, that the model is recent, and that logs do not show critical errors. Ensure you ran `python -m rasa train` from the `level3` folder with the venv activated.
    - **SHOW EXPECTED ANSWER:** Optional; **When grades are released** or **Always** so students see that the expected output is `PASS`.
-4. **Files.** The script lives in the repo at `.guides/assessments/level3_graders/lab_6.1_grader.py`. Do not upload it; the Execution command runs it from the workspace so `git pull` keeps the grader in sync. No need to chmod (Python); use the venv’s Python in COMMAND if the environment does not provide dependencies globally.
+4. **Files.** The script lives in the repo at `.guides/secure/level3_graders/lab_6.1_grader.py`. Do not upload it; the Execution command runs it from the workspace so `git pull` keeps the grader in sync. No need to chmod (Python); use the venv’s Python in COMMAND if the environment does not provide dependencies globally.
 5. **Test** – Run the assessment after a student has run `rasa train` in `level3` (pass); run in a workspace with no model in `level3` (fail with clear hint).

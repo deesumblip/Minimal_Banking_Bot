@@ -110,7 +110,7 @@ Use **Python graders** (like Level 3) for Labs 2.1–4.1: scripts that parse YAM
 - [ ] **level4/actions/** — Same as Level 3: action_bank_hours.py, action_check_balance_simple.py, __init__.py. Remove **action_process_transfer.py** from the repo (student creates it in a lab).
 - [ ] **level4/config.yml** — Same as Level 3 except `assistant_id: level4-bot` (or your convention).
 - [ ] **Unit 0** — “Level 4 setup”: level4 folder = copy of your Level 3 bot; you will add multiple slots and the transfer flow in the labs.
-- [ ] **Labs 2.1–4.1 and 5.1–5.2 (or your numbering)** — Domain lab, action lab, flow lab; each with content + assessment setup + optional Python grader in `.guides/assessments/level4_graders/` (or equivalent).
+- [ ] **Labs 2.1–4.1 and 5.1–5.2 (or your numbering)** — Domain lab, action lab, flow lab; each with content + assessment setup + optional Python grader in `.guides/secure/level4_graders/` (or equivalent).
 - [ ] **.guides** — New chapter or section for Level 4; index.json updated if needed; unit/lab pages and assessments linked.
 
 ---

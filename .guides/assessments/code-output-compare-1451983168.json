@@ -5,7 +5,7 @@
 		"name": "Lab 4.1: Registering Actions in the Domain.",
 		"showName": true,
 		"instructions": "Verify that you can register actions in the domain file (both action_bank_hours and action_holiday_hours).",
-		"command": "bash /home/codio/workspace/.guides/assessments/level2_graders/lab_4.1_grader.sh",
+		"command": "bash /home/codio/workspace/.guides/secure/level2_graders/lab_4.1_grader.sh",
 		"preExecuteCommand": "cd /home/codio/workspace/level2",
 		"options": {
 			"timeout": 60,
@@ -22,7 +22,7 @@
 				}
 			],
 			"files": [
-				".guides/assessments/level2_graders/lab_4.1_grader.sh"
+				".guides/secure/level2_graders/lab_4.1_grader.sh"
 			],
 			"opened": []
 		},

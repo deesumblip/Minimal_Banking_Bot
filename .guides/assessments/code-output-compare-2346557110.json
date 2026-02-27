@@ -5,7 +5,7 @@
 		"name": "Lab 4.1: Writing the Action That Uses the Slot",
 		"showName": true,
 		"instructions": "After creating your file, run this assessment.",
-		"command": "/home/codio/workspace/.venv/bin/python3 /home/codio/workspace/.guides/assessments/level3_graders/lab_4.1_grader.py",
+		"command": "/home/codio/workspace/.venv/bin/python3 /home/codio/workspace/.guides/secure/level3_graders/lab_4.1_grader.py",
 		"preExecuteCommand": "",
 		"options": {
 			"timeout": 60,
@@ -22,7 +22,7 @@
 				}
 			],
 			"files": [
-				".guides/assessments/level3_graders/lab_4.1_grader.py"
+				".guides/secure/level3_graders/lab_4.1_grader.py"
 			],
 			"opened": [
 				{

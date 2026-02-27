@@ -5,7 +5,7 @@
 		"name": "Lab 5.1: Using Actions in Flows.",
 		"showName": true,
 		"instructions": "Verify that you can create flows that use actions (hours.yml and holiday_hours.yml)",
-		"command": "bash /home/codio/workspace/.guides/assessments/level2_graders/lab_5.1_grader.sh",
+		"command": "bash /home/codio/workspace/.guides/secure/level2_graders/lab_5.1_grader.sh",
 		"preExecuteCommand": "",
 		"options": {
 			"timeout": 60,
@@ -22,7 +22,7 @@
 				}
 			],
 			"files": [
-				".guides/assessments/level2_graders/lab_5.1_grader.sh"
+				".guides/secure/level2_graders/lab_5.1_grader.sh"
 			],
 			"opened": [
 				{

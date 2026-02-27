@@ -93,9 +93,9 @@ project/
   - Clear PASS/FAIL messages with hints
 
 **Assessment Files**:
-- All grader scripts should be saved in `.guides/assessments/level2_graders/`
-- Make scripts executable: `chmod +x .guides/assessments/level2_graders/*.sh`
-- Use absolute paths in COMMAND field: `/home/codio/workspace/.guides/assessments/level2_graders/lab_X.X_grader.sh`
+- All grader scripts should be saved in `.guides/secure/level2_graders/`
+- Make scripts executable: `chmod +x .guides/secure/level2_graders/*.sh`
+- Use absolute paths in COMMAND field: `/home/codio/workspace/.guides/secure/level2_graders/lab_X.X_grader.sh`
 
 ---
 

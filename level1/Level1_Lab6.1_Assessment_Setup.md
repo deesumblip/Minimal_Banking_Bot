@@ -50,7 +50,7 @@ This assessment verifies that students can successfully train their Level 1 bot 
 
 Save the grader script at:
 ```
-.guides/assessments/level1_graders/lab_6.1_grader.sh
+.guides/secure/level1_graders/lab_6.1_grader.sh
 ```
 
 ## Grader Script
@@ -84,10 +84,10 @@ Success = a new `.tar.gz` in `models/` and no errors in the terminal (and option
 
    **General** – Name: *Lab 6.1: Training Your Bot*. Description: *Verify that the student successfully trained the Level 1 bot*. Points: `12` (when using the repo grader script; it has 5 checks totaling 12). Language: `Bash`.
 
-   **Execution** – COMMAND: `bash /home/codio/workspace/.guides/assessments/level1_graders/lab_6.1_grader.sh`. TIMEOUT: `60` seconds. Working Directory: `/home/codio/workspace` (grader script will cd to level1 for model checks; venv is checked in workspace root).
+   **Execution** – COMMAND: `bash /home/codio/workspace/.guides/secure/level1_graders/lab_6.1_grader.sh`. TIMEOUT: `60` seconds. Working Directory: `/home/codio/workspace` (grader script will cd to level1 for model checks; venv is checked in workspace root).
 
    **Grading** – Points: 12 (when using repo grader). Allow partial points: OFF. Case insensitive: ON. Ignore white spaces: ON. **Expected output**: set to `PASS` or `Successfully passed!` (the script prints both on success so either will match).
 
-3. **Grader script in repo** – The script is at `.guides/assessments/level1_graders/lab_6.1_grader.sh`. After pulling from GitHub, make it executable in Codio: `chmod +x /home/codio/workspace/.guides/assessments/level1_graders/lab_6.1_grader.sh`. The script checks venv in workspace root, then runs model/log checks from `level1`; max_score=12.
+3. **Grader script in repo** – The script is at `.guides/secure/level1_graders/lab_6.1_grader.sh`. After pulling from GitHub, make it executable in Codio: `chmod +x /home/codio/workspace/.guides/secure/level1_graders/lab_6.1_grader.sh`. The script checks venv in workspace root, then runs model/log checks from `level1`; max_score=12.
 
 4. **Test** – Run the assessment in Codio after a student has run `rasa train` in `level1`; confirm it passes. Run in a workspace where no model exists; confirm it fails with a clear hint.

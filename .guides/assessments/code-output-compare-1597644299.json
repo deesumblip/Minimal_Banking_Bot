@@ -5,7 +5,7 @@
 		"name": "Lab 4.2: Multiple Actions",
 		"showName": true,
 		"instructions": "Verify that both actions are registered in the domain (same verification as Lab 4.1); optional Inspector steps are ungraded.",
-		"command": "bash /home/codio/workspace/.guides/assessments/level2_graders/lab_4.2_grader.sh",
+		"command": "bash /home/codio/workspace/.guides/secure/level2_graders/lab_4.2_grader.sh",
 		"preExecuteCommand": "",
 		"options": {
 			"timeout": 60,
@@ -22,8 +22,8 @@
 				}
 			],
 			"files": [
-				".guides/assessments/level2_graders/lab_4.1_grader.sh",
-				".guides/assessments/level2_graders/lab_4.2_grader.sh"
+				".guides/secure/level2_graders/lab_4.1_grader.sh",
+				".guides/secure/level2_graders/lab_4.2_grader.sh"
 			],
 			"opened": [
 				{

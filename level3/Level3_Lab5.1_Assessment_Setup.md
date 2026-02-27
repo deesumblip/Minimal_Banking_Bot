@@ -37,7 +37,7 @@ This assessment verifies that the student has created `level3/data/basics/check_
 | Option | Set to |
 |--------|--------|
 | **Total Points** | **8** |
-| **Instructor Provided Solution File** | `.guides/assessments/level3_graders/lab_5.1_solution_reference.md` (or `/home/codio/workspace/.guides/assessments/level3_graders/lab_5.1_solution_reference.md` if Codio requires absolute path) |
+| **Instructor Provided Solution File** | `.guides/secure/level3_graders/lab_5.1_solution_reference.md` (or `/home/codio/workspace/.guides/secure/level3_graders/lab_5.1_solution_reference.md` if Codio requires absolute path) |
 | **Defined Number of Attempts** | **Off** (leave toggle off) |
 | **Show Rationale to Student** | **After [1] attempts** (select that radio, leave the number as 1) |
 
@@ -89,7 +89,7 @@ Use a Python grader for faster feedback. The script checks `level3/data/basics/c
 **Grader script location (in repo):**
 
 ```
-.guides/assessments/level3_graders/lab_5.1_grader.py
+.guides/secure/level3_graders/lab_5.1_grader.py
 ```
 
 **Codio configuration (Standard Code Test):**
@@ -97,10 +97,10 @@ Use a Python grader for faster feedback. The script checks `level3/data/basics/c
 1. **Assessment** – Add assessment, then **Code Test** → **Standard Code Test**.
 2. **Execution**:
    - **COMMAND (recommended):** Use the project venv’s Python so PyYAML is available:  
-     `/home/codio/workspace/.venv/bin/python3 /home/codio/workspace/.guides/assessments/level3_graders/lab_5.1_grader.py`  
+     `/home/codio/workspace/.venv/bin/python3 /home/codio/workspace/.guides/secure/level3_graders/lab_5.1_grader.py`  
      Leave **Pre-Exec** empty when using this.  
      **Alternative:** If your Codio image has PyYAML for `python3`:  
-     `python3 /home/codio/workspace/.guides/assessments/level3_graders/lab_5.1_grader.py`
+     `python3 /home/codio/workspace/.guides/secure/level3_graders/lab_5.1_grader.py`
    - **PRE-EXEC COMMAND:** Leave **empty** when using the venv Python path in COMMAND. Using the venv’s interpreter in COMMAND ensures PyYAML is available without relying on pre-exec or shell activation.
    - **Working Directory:** `/home/codio/workspace`
    - **Timeout:** `60` seconds
@@ -111,4 +111,4 @@ Use a Python grader for faster feedback. The script checks `level3/data/basics/c
    - **RATIONALE** (text box): Example:
      > The grader checks that `level3/data/basics/check_balance.yml` exists, has valid YAML with a **flows:** section, at least one flow with **name** and **steps**, a step with **collect: account**, and a step with **action: action_check_balance_simple**. Review the script output to see which check failed.
    - **SHOW EXPECTED ANSWER:** Optional; **When grades are released** or **Always**.
-4. **Files.** The script lives in the repo at `.guides/assessments/level3_graders/lab_5.1_grader.py`. Do not upload it; run it from the workspace so `git pull` keeps the grader in sync. The script requires Python 3 and PyYAML; use the venv’s Python in COMMAND for consistency.
+4. **Files.** The script lives in the repo at `.guides/secure/level3_graders/lab_5.1_grader.py`. Do not upload it; run it from the workspace so `git pull` keeps the grader in sync. The script requires Python 3 and PyYAML; use the venv’s Python in COMMAND for consistency.

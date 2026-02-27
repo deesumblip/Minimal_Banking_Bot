@@ -73,7 +73,7 @@ This assessment verifies that students can create a custom action file (`action_
 
 Save the grader script at:
 ```
-.guides/assessments/level2_graders/lab_3.1_grader.sh
+.guides/secure/level2_graders/lab_3.1_grader.sh
 ```
 
 ## Grader Script
@@ -212,7 +212,7 @@ class ActionHolidayHours(Action):
 
    **General** – Name: *Lab 3.1: Create Your Own Action*. Description: *Verify that students can create action_holiday_hours.py with correct structure and date-based logic*. Points: `8`. Language: `Bash`.
 
-   **Execution** – COMMAND: `bash /home/codio/workspace/.guides/assessments/level2_graders/lab_3.1_grader.sh`. TIMEOUT: `60` seconds. Working Directory: `/home/codio/workspace/level2`.
+   **Execution** – COMMAND: `bash /home/codio/workspace/.guides/secure/level2_graders/lab_3.1_grader.sh`. TIMEOUT: `60` seconds. Working Directory: `/home/codio/workspace/level2`.
 
    **Grading**
    - **Points**: `8` – Total points for this assessment.
@@ -230,7 +230,7 @@ class ActionHolidayHours(Action):
    - **Defined number of attempts**: `OFF` – No limit on submission attempts (or set a limit if desired).
    - **Rationale** (optional): e.g. *The grader checks only what the lab instructs: action file in actions/, correct imports (including datetime), class ActionHolidayHours(Action), name() returning 'action_holiday_hours', and run() calling dispatcher.utter_message() and returning [].*
 
-   **Files** – Create the grader script at `.guides/assessments/level2_graders/lab_3.1_grader.sh`. In the Codio workspace terminal (from the workspace root), make it executable: `chmod +x .guides/assessments/level2_graders/lab_3.1_grader.sh`.
+   **Files** – Create the grader script at `.guides/secure/level2_graders/lab_3.1_grader.sh`. In the Codio workspace terminal (from the workspace root), make it executable: `chmod +x .guides/secure/level2_graders/lab_3.1_grader.sh`.
 
 3. **Save & Test** the assessment. Enable **Learning Analytics** if desired.
 

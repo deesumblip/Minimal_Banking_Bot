@@ -13,7 +13,7 @@
 | **Single .venv in project root** | No venv inside `level3/`. Students activate from root (`source .venv/bin/activate`), then `cd level3`. |
 | **Codio vs local split** | Every lab: Part 1 (In Codio) then Part 2 (Running locally), with local steps by OS (Windows PowerShell, CMD, macOS/Linux). |
 | **Inspector on Codio** | Use **Rasa Inspect** tab only; no “Tools → Ports” or “port 5005”. |
-| **Assessment pattern** | Grader in `.guides/assessments/level3_graders/`, prints `PASS` / `Successfully passed!`, exit 0 on full score. Codio: Working Directory = workspace root; script activates venv then `cd level3`. |
+| **Assessment pattern** | Grader in `.guides/secure/level3_graders/`, prints `PASS` / `Successfully passed!`, exit 0 on full score. Codio: Working Directory = workspace root; script activates venv then `cd level3`. |
 | **Content file naming** | `Level3_UnitN_Content_*.md`, `Level3_LabX.Y_Content.md`, `Level3_LabX.Y_Assessment_Setup.md`. |
 | **One source of truth** | Student-facing content lives in `level3/*.md`; Codio `.guides` content is copied from there (or linked) so we don’t maintain two versions. |
 
@@ -74,7 +74,7 @@
    - List them in `Level3_Course_Outline.md` and in `Level3_Implementation_Overview.md`.
 
 7. **Grader scripts**  
-   - Add `.guides/assessments/level3_graders/` (e.g. `lab_6.1_grader.sh`).  
+   - Add `.guides/secure/level3_graders/` (e.g. `lab_6.1_grader.sh`).  
    - **Reuse L1/L2 logic:** run from workspace root, check/activate `.venv`, `cd level3`, then check model file / optional log / optional slot or flow.  
    - Script must print a line containing `PASS` or `Successfully passed!` on full score and `exit 0`; on failure print `FAIL` and `exit 1`.  
    - **Template:** Copy `level1` or `level2` Lab 6.1 grader and change paths to `level3`, adjust checks (e.g. `level3/models/*.tar.gz`, `level3/domain/basics.yml` for slot if needed).
@@ -110,7 +110,7 @@
 - [x] **Level3_Unit*_Content*.md** – Units 0–8; Codio/local and venv order fixed; 7.3 Best Practices, 8.1 Knowledge Check added.  
 - [x] **Level3_Lab*_Content.md** – Labs 3.1, 4.1, 5.1, 6.1, 6.2, 7.1; Part 1 (Codio) / Part 2 (local); no Ports.  
 - [x] **Level3_Lab*_Assessment_Setup.md** – All six labs; graded labs have LLM Rubric (3.1, 4.1) or Python grader (6.1); ungraded (5.1, 6.2, 7.1) documented.  
-- [ ] **.guides/assessments/level3_graders/** – Lab 6.1: `lab_6.1_grader.py` done. Lab 3.1/5.1: solution references done; **optional** `lab_3.1_grader.sh`, `lab_5.1_grader.sh` if offering Option B (Bash).  
+- [ ] **.guides/secure/level3_graders/** – Lab 6.1: `lab_6.1_grader.py` done. Lab 3.1/5.1: solution references done; **optional** `lab_3.1_grader.sh`, `lab_5.1_grader.sh` if offering Option B (Bash).  
 - [x] **.guides/content** – Level 3 chapter (Chapter-1-3---Slot-Collection-a4b5) added; Units 0–8 with content and labs pasted from level3.
 - [x] **level3/CODIO_IMPLEMENTATION_GUIDE.md** – Shortened to implementer-only; **.guides/CODIO_IMPLEMENTATION_OVERVIEW.md** – Level 3 section added (shared L1/L2/L3 entry point).
 

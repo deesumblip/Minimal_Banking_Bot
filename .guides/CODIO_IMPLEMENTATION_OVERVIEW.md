@@ -25,7 +25,7 @@
 - **Content**: `.guides/content/Chapter-1-3---Slot-Collection-a4b5/` (populated from `level3/Level3_Unit*_Content_*.md` and `level3/Level3_Lab*_Content.md`)
 - **Implementer docs**: `level3/Level3_Implementation_Overview.md` (primary); `level3/CODIO_IMPLEMENTATION_GUIDE.md` (short implementer-only pointer)
 - **Course outline**: `level3/Level3_Course_Outline.md`
-- **Assessments**: Per `level3/Level3_Lab*_Assessment_Setup.md`; graders in `.guides/assessments/level3_graders/` (LLM Rubric solution refs for 3.1/4.1, Python grader for 6.1). Venv in project root; Working Directory `/home/codio/workspace`; use **Rasa Inspect** tab only (no Ports).
+- **Assessments**: Per `level3/Level3_Lab*_Assessment_Setup.md`; graders in `.guides/secure/level3_graders/` (LLM Rubric solution refs for 3.1/4.1, Python grader for 6.1). Venv in project root; Working Directory `/home/codio/workspace`; use **Rasa Inspect** tab only (no Ports).
 
 ---
 

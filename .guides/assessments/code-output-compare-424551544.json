@@ -5,7 +5,7 @@
 		"name": "Training Verification",
 		"showName": true,
 		"instructions": "Run this assessment to verify your work.",
-		"command": "bash /home/codio/workspace/.guides/assessments/level1_graders/lab_6.1_grader.sh",
+		"command": "bash /home/codio/workspace/.guides/secure/level1_graders/lab_6.1_grader.sh",
 		"preExecuteCommand": "",
 		"options": {
 			"timeout": 30,
@@ -22,7 +22,7 @@
 				}
 			],
 			"files": [
-				".guides/assessments/level1_graders/lab_6.1_grader.sh"
+				".guides/secure/level1_graders/lab_6.1_grader.sh"
 			],
 			"opened": [
 				{

@@ -37,7 +37,7 @@ This assessment verifies that the student has added the `slots:` section with an
 | Option | Set to |
 |--------|--------|
 | **Total Points** | **10** |
-| **Instructor Provided Solution File** | `.guides/assessments/level3_graders/lab_3.1_solution_reference.md` (or `/home/codio/workspace/.guides/assessments/level3_graders/lab_3.1_solution_reference.md` if Codio requires absolute path) |
+| **Instructor Provided Solution File** | `.guides/secure/level3_graders/lab_3.1_solution_reference.md` (or `/home/codio/workspace/.guides/secure/level3_graders/lab_3.1_solution_reference.md` if Codio requires absolute path) |
 | **Defined Number of Attempts** | **Off** (leave toggle off) |
 | **Show Rationale to Student** | **After [1] attempts** (select that radio, leave the number as 1) |
 
@@ -96,7 +96,7 @@ Use a Python grader for faster feedback than the LLM rubric. The script parses `
 **Grader script location (in repo):**
 
 ```
-.guides/assessments/level3_graders/lab_3.1_grader.py
+.guides/secure/level3_graders/lab_3.1_grader.py
 ```
 
 **Codio configuration (Standard Code Test):**
@@ -104,10 +104,10 @@ Use a Python grader for faster feedback than the LLM rubric. The script parses `
 1. **Assessment** – Add assessment, then **Code Test** → **Standard Code Test**.
 2. **Execution**:
    - **COMMAND (recommended):** Use the project venv’s Python so PyYAML is available without relying on pre-exec or shell activation:  
-     `/home/codio/workspace/.venv/bin/python3 /home/codio/workspace/.guides/assessments/level3_graders/lab_3.1_grader.py`  
+     `/home/codio/workspace/.venv/bin/python3 /home/codio/workspace/.guides/secure/level3_graders/lab_3.1_grader.py`  
      Leave **Pre-Exec** empty when using this.  
      **Alternative:** If your Codio image already has PyYAML for `python3`, you can use:  
-     `python3 /home/codio/workspace/.guides/assessments/level3_graders/lab_3.1_grader.py`
+     `python3 /home/codio/workspace/.guides/secure/level3_graders/lab_3.1_grader.py`
    - **PRE-EXEC COMMAND:** Leave **empty** when using the venv Python path in COMMAND above. Codio often runs pre-exec and COMMAND in separate shells, so activating the venv in pre-exec may not make PyYAML available to the grader. Using the venv’s interpreter path in COMMAND avoids that.
    - **Working Directory:** `/home/codio/workspace`
    - **Timeout:** `60` seconds
@@ -119,4 +119,4 @@ Use a Python grader for faster feedback than the LLM rubric. The script parses `
      > The grader checks that `level3/domain/basics.yml` exists, is valid YAML, and contains: a **slots:** section, an **account** slot with **type: text**, the **utter_ask_account** response under **responses:** with at least one message, and **action_check_balance_simple** in the **actions:** list. Review the script output for which check failed and fix that part of the domain file.
    - **SHOW EXPECTED ANSWER:** Optional; set to **When grades are released** or **Always** if you want students to see that the expected output is `PASS`.
 
-**Files.** The script lives in the repo at `.guides/assessments/level3_graders/lab_3.1_grader.py`. Do not upload or paste it into the assessment; the Execution command runs this file from the workspace so `git pull` keeps the grader in sync. The script requires Python 3 and PyYAML. Use the venv’s Python in COMMAND (e.g. `/home/codio/workspace/.venv/bin/python3 …`) so the grader runs with PyYAML without depending on pre-exec or shell activation.
+**Files.** The script lives in the repo at `.guides/secure/level3_graders/lab_3.1_grader.py`. Do not upload or paste it into the assessment; the Execution command runs this file from the workspace so `git pull` keeps the grader in sync. The script requires Python 3 and PyYAML. Use the venv’s Python in COMMAND (e.g. `/home/codio/workspace/.venv/bin/python3 …`) so the grader runs with PyYAML without depending on pre-exec or shell activation.

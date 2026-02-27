@@ -12,7 +12,7 @@ This assessment verifies that students can successfully train their bot with act
 
 Save the grader script at:
 ```
-.guides/assessments/level2_graders/lab_6.1_grader.sh
+.guides/secure/level2_graders/lab_6.1_grader.sh
 ```
 
 ## Grader Script
@@ -90,7 +90,7 @@ A successful run produces a `.tar.gz` model under `models/`; the grader expects 
 
    **General** – Name: *Lab 6.1: Training and Testing with Actions*. Description: *Verify that students can successfully train their bot with actions*. Points: `4`. Language: `Bash`.
 
-   **Execution** – COMMAND: `bash /home/codio/workspace/.guides/assessments/level2_graders/lab_6.1_grader.sh`. TIMEOUT: `60` seconds. Working Directory: `/home/codio/workspace/level2`.
+   **Execution** – COMMAND: `bash /home/codio/workspace/.guides/secure/level2_graders/lab_6.1_grader.sh`. TIMEOUT: `60` seconds. Working Directory: `/home/codio/workspace/level2`.
 
    **Grading**
    - **Points**: `4` – Total points for this assessment.
@@ -108,7 +108,7 @@ A successful run produces a `.tar.gz` model under `models/`; the grader expects 
    - **Defined number of attempts**: `OFF` – No limit on submission attempts (or set a limit if desired).
    - **Rationale** (optional): e.g. *The grader checks that a model file exists under models/ and that training completed without errors (per lab verification).*
 
-   **Files** – Create the grader script at `.guides/assessments/level2_graders/lab_6.1_grader.sh`. In the Codio workspace terminal (from the workspace root), make it executable: `chmod +x .guides/assessments/level2_graders/lab_6.1_grader.sh`.
+   **Files** – Create the grader script at `.guides/secure/level2_graders/lab_6.1_grader.sh`. In the Codio workspace terminal (from the workspace root), make it executable: `chmod +x .guides/secure/level2_graders/lab_6.1_grader.sh`.
 
 3. **Save & Test** the assessment. Enable **Learning Analytics** if desired.
 

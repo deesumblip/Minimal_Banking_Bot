@@ -6,7 +6,7 @@ Reference for building and fixing Codio lab graders (Level 2 and similar). Pull 
 
 ## 1. Where graders live
 
-- **Path:** `.guides/assessments/level2_graders/lab_X.Y_grader.sh`
+- **Path:** `.guides/secure/level2_graders/lab_X.Y_grader.sh`
 - **Run context:** Scripts assume they are run with **working directory** = `/home/codio/workspace/level2` (Level 2 labs). The script does `cd /home/codio/workspace/level2` at the top, so all paths in the script are relative to `level2` (e.g. `data/basics/hours.yml`, `domain/basics.yml`).
 
 ---
@@ -16,7 +16,7 @@ Reference for building and fixing Codio lab graders (Level 2 and similar). Pull 
 For grader updates (pushed to GitHub and pulled on Codio) to take effect:
 
 - **Execution** in the Codio Code Test must run the script **from the workspace path**, e.g.  
-  `bash /home/codio/workspace/.guides/assessments/level2_graders/lab_5.1_grader.sh`
+  `bash /home/codio/workspace/.guides/secure/level2_graders/lab_5.1_grader.sh`
 - **Working directory:** `/home/codio/workspace/level2`
 - **Do not** upload or paste the script content into the assessment. If the test runs an embedded/uploaded copy, `git pull` will not update what students see.
 
@@ -103,7 +103,7 @@ echo "Score: $score/$max_score"
 In the Codio terminal (from workspace or level2):
 
 ```bash
-cd /home/codio/workspace/level2 && bash /home/codio/workspace/.guides/assessments/level2_graders/lab_5.1_grader.sh
+cd /home/codio/workspace/level2 && bash /home/codio/workspace/.guides/secure/level2_graders/lab_5.1_grader.sh
 ```
 
 Replace `lab_5.1_grader.sh` with the script you’re testing. Confirm:
@@ -116,7 +116,7 @@ Replace `lab_5.1_grader.sh` with the script you’re testing. Confirm:
 
 ## 7. Codio assessment configuration (summary)
 
-- **Execution command:** `bash /home/codio/workspace/.guides/assessments/level2_graders/lab_X.Y_grader.sh`
+- **Execution command:** `bash /home/codio/workspace/.guides/secure/level2_graders/lab_X.Y_grader.sh`
 - **Working directory:** `/home/codio/workspace/level2`
 - **Expected output (substring):** ` PASS: ... complete!` (with leading space) so the test passes when the script prints the success line.
 - **Timeout:** 60 seconds is usually enough.
@@ -140,9 +140,9 @@ When adding a new grader, mirror the Lab 5.1 pattern (per-check variables + dire
 
 **How:**
 
-- Add a grader script: `.guides/assessments/level2_graders/lab_X.Y_grader.py`
+- Add a grader script: `.guides/secure/level2_graders/lab_X.Y_grader.py`
 - In the script: `os.chdir('/home/codio/workspace/level2')` (or rely on Codio’s working directory), run your checks, keep points in a list or variables, set `score = sum(points)` or `score = c1 + c2 + ...`. Print the **same human-readable output** (e.g. "Check 1: PASSED ...", " PASS: ... complete! Score: 12/12") so the existing Codio test (substring match) still works.
-- Codio execution: `python3 /home/codio/workspace/.guides/assessments/level2_graders/lab_5.1_grader.py` with working directory `/home/codio/workspace/level2` (or run from repo root if the script does the `chdir`).
+- Codio execution: `python3 /home/codio/workspace/.guides/secure/level2_graders/lab_5.1_grader.py` with working directory `/home/codio/workspace/level2` (or run from repo root if the script does the `chdir`).
 
 **Optional:** Keep a one-line bash wrapper (e.g. `lab_5.1_grader.sh` that does `cd /home/codio/workspace/level2 && exec python3 "$(dirname "$0")/lab_5.1_grader.py"`) so the Codio command can stay `bash .../lab_5.1_grader.sh` while the real logic lives in Python.
 

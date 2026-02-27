@@ -119,8 +119,8 @@ For each graded lab, create an **Assessment_Setup** markdown file for implemente
 
 - **Guide content:** Placement after Unit 2. Task: In level4/domain/basics.yml add slots amount, recipient, account_from; add utter_ask_amount, utter_ask_recipient, utter_ask_account_from; add action_process_transfer to actions. Run assessment when done.
 - **Overview:** Verifies domain has the three slots, the three ask responses, and action_process_transfer in actions.
-- **Option A:** LLM Rubric; solution file `.guides/assessments/level4_graders/lab_2.1_solution_reference.md`; rubric criteria: slots section with amount, recipient, account_from; utter_ask_amount, utter_ask_recipient, utter_ask_account_from present with text; action_process_transfer in actions; valid YAML and Level 3 content preserved.
-- **Option B:** Standard Code Test; COMMAND: venv Python running `.guides/assessments/level4_graders/lab_2.1_grader.py`; Working Directory `/home/codio/workspace`; EXPECTED OUTPUT `PASS` with **substring match**; rationale text for students.
+- **Option A:** LLM Rubric; solution file `.guides/secure/level4_graders/lab_2.1_solution_reference.md`; rubric criteria: slots section with amount, recipient, account_from; utter_ask_amount, utter_ask_recipient, utter_ask_account_from present with text; action_process_transfer in actions; valid YAML and Level 3 content preserved.
+- **Option B:** Standard Code Test; COMMAND: venv Python running `.guides/secure/level4_graders/lab_2.1_grader.py`; Working Directory `/home/codio/workspace`; EXPECTED OUTPUT `PASS` with **substring match**; rationale text for students.
 
 ### Level4_Lab3.1_Assessment_Setup.md
 
@@ -142,9 +142,9 @@ For each graded lab, create an **Assessment_Setup** markdown file for implemente
 
 ---
 
-## 6. Grader scripts (.guides/assessments/level4_graders/)
+## 6. Grader scripts (.guides/secure/level4_graders/)
 
-Create a directory `.guides/assessments/level4_graders/` and add Python graders that run from workspace root (`/home/codio/workspace`). Each script should print check results, then `PASS` and exit 0 on full score, or `FAIL` and exit 1. Codio Standard Code Test: COMMAND = venv Python + script path; EXPECTED OUTPUT = `PASS` with **substring match** enabled.
+Create a directory `.guides/secure/level4_graders/` and add Python graders that run from workspace root (`/home/codio/workspace`). Each script should print check results, then `PASS` and exit 0 on full score, or `FAIL` and exit 1. Codio Standard Code Test: COMMAND = venv Python + script path; EXPECTED OUTPUT = `PASS` with **substring match** enabled.
 
 ### lab_2.1_grader.py
 
@@ -167,7 +167,7 @@ Create a directory `.guides/assessments/level4_graders/` and add Python graders 
 
 ---
 
-## 7. Solution reference files (.guides/assessments/level4_graders/)
+## 7. Solution reference files (.guides/secure/level4_graders/)
 
 For each graded lab, add a **solution reference** markdown file used as the Instructor Provided Solution File for LLM Rubric.
 
@@ -186,8 +186,8 @@ For each graded lab, add a **solution reference** markdown file used as the Inst
 | **Unit content** | Level4_Unit0_Content_0.1_*.md, 0.2_*.md; Unit1 (1.1, 1.2, 1.3); Unit2 (2.1); Unit3 (3.1); Unit4 (4.1); Unit5 (5.1, 5.2); Unit6 (6.1, 6.2, 6.3). |
 | **Lab content** | Level4_Lab2.1_Content.md, Level4_Lab3.1_Content.md, Level4_Lab4.1_Content.md, Level4_Lab5.1_Content.md, Level4_Lab5.2_Content.md |
 | **Assessment setup** | Level4_Lab2.1_Assessment_Setup.md, Level4_Lab3.1_Assessment_Setup.md, Level4_Lab4.1_Assessment_Setup.md, Level4_Lab5.1_Assessment_Setup.md, Level4_Lab5.2_Assessment_Setup.md |
-| **Graders** | .guides/assessments/level4_graders/lab_2.1_grader.py, lab_3.1_grader.py, lab_4.1_grader.py, lab_5.1_grader.py, lab_5.2_grader.py |
-| **Solution refs** | .guides/assessments/level4_graders/lab_2.1_solution_reference.md … lab_5.2_solution_reference.md |
+| **Graders** | .guides/secure/level4_graders/lab_2.1_grader.py, lab_3.1_grader.py, lab_4.1_grader.py, lab_5.1_grader.py, lab_5.2_grader.py |
+| **Solution refs** | .guides/secure/level4_graders/lab_2.1_solution_reference.md … lab_5.2_solution_reference.md |
 
 ---
 
@@ -208,7 +208,7 @@ For each graded lab, add a **solution reference** markdown file used as the Inst
 | 2 | Create Level4_Course_Outline.md and all Level4_Unit*_Content_*.md files. |
 | 3 | Create Level4_Lab2.1, 3.1, 4.1, 5.1, 5.2_Content.md with step-by-step and success criteria. |
 | 4 | Create Level4_Lab4.1–4.4_Assessment_Setup.md (Option A + B, rationale, substring match). |
-| 5 | Add .guides/assessments/level4_graders/ with lab_2.1, 3.1, 4.1, 5.1, 5.2_grader.py and solution_reference.md files. |
+| 5 | Add .guides/secure/level4_graders/ with lab_2.1, 3.1, 4.1, 5.1, 5.2_grader.py and solution_reference.md files. |
 | 6 | Sync content to Codio; configure assessments; update index/navigation. |
 
 This mirrors Level 3: same types of content (units + labs), same assessment pattern (LLM Rubric or Python grader, substring match for PASS), and the same “start from previous level’s end state, add only what this level teaches” approach.

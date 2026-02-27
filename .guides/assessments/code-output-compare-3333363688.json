@@ -5,7 +5,7 @@
 		"name": "Lab 0.1 Virtual Environment and Rasa Pro Install",
 		"showName": true,
 		"instructions": "Run the assessment!",
-		"command": "python3 /home/codio/workspace/.guides/assessments/level1_graders/lab_0.1_grader.py",
+		"command": "python3 /home/codio/workspace/.guides/secure/level1_graders/lab_0.1_grader.py",
 		"preExecuteCommand": "",
 		"options": {
 			"timeout": 60,
@@ -22,7 +22,7 @@
 				}
 			],
 			"files": [
-				".guides/assessments/level1_graders/lab_0.1_grader.py"
+				".guides/secure/level1_graders/lab_0.1_grader.py"
 			],
 			"opened": [
 				{

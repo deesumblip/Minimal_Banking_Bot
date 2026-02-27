@@ -43,7 +43,7 @@ This assessment verifies that students can successfully train their Level 4 bot 
 ### Grader Script Location
 
 ```
-.guides/assessments/level4_graders/lab_5.1_grader.py
+.guides/secure/level4_graders/lab_5.1_grader.py
 ```
 
 ### Grader Script
@@ -62,7 +62,7 @@ The grader runs from **workspace root** (`/home/codio/workspace`): it verifies t
 
 1. **Assessment** – Add assessment, then **Code Test** → **Standard Code Test**.
 2. **Execution**:
-   - **COMMAND (recommended):** `/home/codio/workspace/.venv/bin/python3 /home/codio/workspace/.guides/assessments/level4_graders/lab_5.1_grader.py`
+   - **COMMAND (recommended):** `/home/codio/workspace/.venv/bin/python3 /home/codio/workspace/.guides/secure/level4_graders/lab_5.1_grader.py`
    - **PRE-EXEC COMMAND:** Leave **empty**.
    - **Working Directory:** `/home/codio/workspace`
    - **Timeout:** `60` seconds
@@ -71,4 +71,4 @@ The grader runs from **workspace root** (`/home/codio/workspace`): it verifies t
    - **Test case:** One test case. **EXPECTED OUTPUT:** `PASS`. **Enable substring match**.
    - **SHOW RATIONALE TO STUDENT:** **AFTER [1] ATTEMPTS** (or **ALWAYS**).
    - **RATIONALE:** The grader verifies the virtual environment in project root, that a model file (`.tar.gz`) exists in `level4/models/`, that the model is recent, and that logs do not show critical errors. Ensure you ran `python -m rasa train` from the `level4` folder with the venv activated.
-4. **Files.** Script at `.guides/assessments/level4_graders/lab_5.1_grader.py`; run from workspace.
+4. **Files.** Script at `.guides/secure/level4_graders/lab_5.1_grader.py`; run from workspace.

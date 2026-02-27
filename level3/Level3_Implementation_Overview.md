@@ -82,7 +82,7 @@ level3/
 ```
 
 ### Grader Scripts
-- Store in `.guides/assessments/level3_graders/`
+- Store in `.guides/secure/level3_graders/`
 - **Lab 3.1 & 5.1**: Option A = LLM Rubric (use `lab_3.1_solution_reference.md`, `lab_5.1_solution_reference.md`). Option B = Standard Code Test: `lab_3.1_grader.sh`, `lab_5.1_grader.sh` (create if offering Bash option).
 - **Lab 6.1**: `lab_6.1_grader.py` (Python); COMMAND: `python3 .../lab_6.1_grader.py`
 - **Working Directory**: `/home/codio/workspace` (project root)

@@ -5,7 +5,7 @@
 		"name": "Lab 6.1: Training Your Bot",
 		"showName": true,
 		"instructions": "Verify that you successfully trained the Level 1 bot.",
-		"command": "bash /home/codio/workspace/.guides/assessments/level1_graders/lab_6.1_grader.sh",
+		"command": "bash /home/codio/workspace/.guides/secure/level1_graders/lab_6.1_grader.sh",
 		"preExecuteCommand": "cd /home/codio/workspace/level1",
 		"options": {
 			"timeout": 60,
@@ -22,7 +22,7 @@
 				}
 			],
 			"files": [
-				".guides/assessments/level1_graders/lab_6.1_grader.sh"
+				".guides/secure/level1_graders/lab_6.1_grader.sh"
 			],
 			"opened": [
 				{

@@ -26,7 +26,7 @@ This assessment verifies that the student has added the slots `amount`, `recipie
 
 2. **Add LLM Rubric Assessment.** Add assessment, then **LLM Rubric** / **Autograde**.
 
-3. **Configure** – Use the **Instructor Provided Solution File**: `.guides/assessments/level4_graders/lab_2.1_solution_reference.md` (or `/home/codio/workspace/.guides/assessments/level4_graders/lab_2.1_solution_reference.md`). Define rubric criteria for: slots section with amount, recipient, account_from; utter_ask_amount, utter_ask_recipient, utter_ask_account_from with at least one text each; action_process_transfer in actions; valid YAML and Level 3 content preserved. Suggested total points: 10. **Show Rationale to Student:** After 1 attempt (or Always).
+3. **Configure** – Use the **Instructor Provided Solution File**: `.guides/secure/level4_graders/lab_2.1_solution_reference.md` (or `/home/codio/workspace/.guides/secure/level4_graders/lab_2.1_solution_reference.md`). Define rubric criteria for: slots section with amount, recipient, account_from; utter_ask_amount, utter_ask_recipient, utter_ask_account_from with at least one text each; action_process_transfer in actions; valid YAML and Level 3 content preserved. Suggested total points: 10. **Show Rationale to Student:** After 1 attempt (or Always).
 
 4. **Files tab** – Ensure the LLM can read: `/home/codio/workspace/level4/domain/basics.yml`
 
@@ -41,14 +41,14 @@ Use a Python grader for faster feedback. The script parses `level4/domain/basics
 **Grader script location (in repo):**
 
 ```
-.guides/assessments/level4_graders/lab_2.1_grader.py
+.guides/secure/level4_graders/lab_2.1_grader.py
 ```
 
 **Codio configuration (Standard Code Test):**
 
 1. **Assessment** – Add assessment, then **Code Test** → **Standard Code Test**.
 2. **Execution**:
-   - **COMMAND (recommended):** `/home/codio/workspace/.venv/bin/python3 /home/codio/workspace/.guides/assessments/level4_graders/lab_2.1_grader.py`
+   - **COMMAND (recommended):** `/home/codio/workspace/.venv/bin/python3 /home/codio/workspace/.guides/secure/level4_graders/lab_2.1_grader.py`
    - **PRE-EXEC COMMAND:** Leave **empty** when using the venv Python path in COMMAND.
    - **Working Directory:** `/home/codio/workspace`
    - **Timeout:** `60` seconds
@@ -57,10 +57,10 @@ Use a Python grader for faster feedback. The script parses `level4/domain/basics
    - **Test case:** One test case. **EXPECTED OUTPUT:** `PASS`. **Enable substring match** so Codio passes when `PASS` appears in the output.
    - **SHOW RATIONALE TO STUDENT:** **AFTER [1] ATTEMPTS** (or **ALWAYS**).
    - **RATIONALE:** The grader checks that `level4/domain/basics.yml` exists, is valid YAML, and contains: **slots:** with **amount**, **recipient**, **account_from** (type text), the **utter_ask_amount**, **utter_ask_recipient**, **utter_ask_account_from** responses with at least one message each, and **action_process_transfer** in the **actions:** list. Review the script output for which check failed.
-4. **Files.** Script at `.guides/assessments/level4_graders/lab_2.1_grader.py`; run from workspace so `git pull` keeps it in sync.
+4. **Files.** Script at `.guides/secure/level4_graders/lab_2.1_grader.py`; run from workspace so `git pull` keeps it in sync.
 
 ---
 
 ## Reference for rubric / grading
 
-- **Solution reference:** `.guides/assessments/level4_graders/lab_2.1_solution_reference.md`
+- **Solution reference:** `.guides/secure/level4_graders/lab_2.1_solution_reference.md`

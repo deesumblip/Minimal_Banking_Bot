@@ -108,7 +108,7 @@ Keep the **Check Your Knowledge** section (and answer key) so they still reason 
 
 ### C2. Do not ship the action file (or ship only as reference)
 
-- **Option A (recommended):** Remove `level3/actions/action_check_balance_simple.py` from the repo. Students create it in Lab 4.1. Keep a copy in `.guides/assessments/level3_graders/` (e.g. `lab_4.1_solution_reference.md` or a reference `.py`) for grading only.
+- **Option A (recommended):** Remove `level3/actions/action_check_balance_simple.py` from the repo. Students create it in Lab 4.1. Keep a copy in `.guides/secure/level3_graders/` (e.g. `lab_4.1_solution_reference.md` or a reference `.py`) for grading only.
 - **Option B:** Keep the file in the repo but rename to `action_check_balance_simple_solution.py` and instruct students to create `action_check_balance_simple.py` by following the lab (or copying and adapting the solution). Less clean.
 
 ### C3. Update all "provided" / "explore" wording
@@ -124,7 +124,7 @@ Keep the **Check Your Knowledge** section (and answer key) so they still reason 
 
 ### C4. Lab 4.1 assessment
 
-- **If Lab 4.1 is graded:** Use an LLM Rubric (or script) that checks for: file `level3/actions/action_check_balance_simple.py`; use of `tracker.get_slot("account")`; placeholder check and `utter_ask_account` re-prompt; balance message. Reference solution in `.guides/assessments/level3_graders/` (e.g. `lab_4.1_solution_reference.md` with code snippet or full reference).
+- **If Lab 4.1 is graded:** Use an LLM Rubric (or script) that checks for: file `level3/actions/action_check_balance_simple.py`; use of `tracker.get_slot("account")`; placeholder check and `utter_ask_account` re-prompt; balance message. Reference solution in `.guides/secure/level3_graders/` (e.g. `lab_4.1_solution_reference.md` with code snippet or full reference).
 - **If Lab 4.1 stays ungraded:** No change to assessment; narrative still requires them to write the file.
 
 ### C5. Lab 3.1 wording (action registration)

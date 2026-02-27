@@ -8,9 +8,11 @@
 
 ### Your Task
 
-1. Create a virtual environment in the **main project folder (root)** (the folder that contains `level1`, `level2`, and `.guides`): `python3.11 -m venv .venv` then `source .venv/bin/activate` (Linux/Mac) or `.venv\Scripts\Activate.ps1` (Windows PowerShell). This same `.venv` is used for all levels in the course.
-2. Install Rasa Pro: `pip install --no-cache-dir rasa-pro`.
-3. Verify: `rasa --version` shows version info; `level1` has `domain/`, `data/`, and config files; **RASA_LICENSE** is set (see lab for how to set it for Codio vs local).
+Complete **Lab 0.1** (Steps 1–5 in the lab guide). In short:
+
+1. **Step 1–2:** Create a virtual environment in the **project root** (the folder that contains all levels): `python3.11 -m venv .venv` then activate it (`source .venv/bin/activate` on Linux/Mac, `.venv\Scripts\Activate.ps1` on Windows PowerShell). Install Rasa Pro: `pip install --no-cache-dir rasa-pro`. This same `.venv` is used for every level.
+2. **Step 3–4:** Verify with `rasa --version`; set **RASA_LICENSE** (see lab Step 4 for Codio vs Windows vs macOS/Linux).
+3. **Step 5:** Confirm `level1` has the expected structure: `domain/`, `data/`, and the three config files (`config.yml`, `credentials.yml`, `endpoints.yml`). See the lab guide for the expected file tree.
 
 ---
 
@@ -18,7 +20,7 @@
 
 - Virtual environment exists (`.venv/` in **project root**)
 - `rasa --version` runs successfully (with venv activated)
-- Project structure present in `level1/` (`domain/`, `data/`, config files)
+- Project structure present in `level1/` (`domain/`, `data/`, and `config.yml`, `credentials.yml`, `endpoints.yml`) — see lab Step 5 for expected file tree
 - **RASA_LICENSE** is set (assessment checks that it is set, not its value)
 
 Run the assessment when you're done.
@@ -39,7 +41,7 @@ This assessment verifies that students have created a virtual environment in the
 
 Save the grader script at:
 ```
-.guides/assessments/level1_graders/lab_0.1_grader.py
+.guides/secure/level1_graders/lab_0.1_grader.py
 ```
 
 ## Grader Script
@@ -57,13 +59,13 @@ Use clear PASS/FAIL messages and hints. Suggested total points: 7 (Step 1: 2, St
 
 1. **Navigate** to the Lab 0.1 section in the Codio Guide Editor.
 
-2. **Add Code Test** – Standard Code Test. COMMAND: `python3 /home/codio/workspace/.guides/assessments/level1_graders/lab_0.1_grader.py` (or `python` if that is the default). Working Directory: **`/home/codio/workspace`** (project root, where `.venv` lives). Timeout: 60 seconds.
+2. **Add Code Test** – Standard Code Test. COMMAND: `python3 /home/codio/workspace/.guides/secure/level1_graders/lab_0.1_grader.py` (or `python` if that is the default). Working Directory: **`/home/codio/workspace`** (project root, where `.venv` lives). Timeout: 60 seconds.
 
-3. The grader script `.guides/assessments/level1_graders/lab_0.1_grader.py` runs from workspace root, checks for `.venv` there, verifies Rasa Pro via the venv Python, and optionally checks `level1/domain/` and `level1/data/`.
+3. The grader script `.guides/secure/level1_graders/lab_0.1_grader.py` runs from workspace root, checks for `.venv` there, verifies Rasa Pro via the venv Python, and optionally checks `level1/domain/` and `level1/data/`.
 
 4. **Grading tab – partial points (Option 1: multiple test cases)**  
    Configure Codio so students get partial credit per step:
-   - **Points:** 6 (total).
+   - **Points:** 7 (total).
    - **Allow Partial Points:** ON.
    - **Substring Match:** ON (so expected strings can appear anywhere in the script output).
    - **Case Insensitive:** ON, **Ignore White Spaces:** ON (recommended).

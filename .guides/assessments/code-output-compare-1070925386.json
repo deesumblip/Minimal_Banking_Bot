@@ -5,7 +5,7 @@
 		"name": "Lab 6.1: Training and Testing with Actions.",
 		"showName": true,
 		"instructions": "Verify that you can successfully train your bot with actions.",
-		"command": "bash /home/codio/workspace/.guides/assessments/level2_graders/lab_6.1_grader.sh",
+		"command": "bash /home/codio/workspace/.guides/secure/level2_graders/lab_6.1_grader.sh",
 		"preExecuteCommand": "",
 		"options": {
 			"timeout": 60,
@@ -22,7 +22,7 @@
 				}
 			],
 			"files": [
-				".guides/assessments/level2_graders/lab_6.1_grader.sh"
+				".guides/secure/level2_graders/lab_6.1_grader.sh"
 			],
 			"opened": [
 				{

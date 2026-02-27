@@ -26,7 +26,7 @@ This assessment verifies that the student has created `level3/actions/action_che
 
 2. **Add LLM Rubric Assessment** – Add assessment → **LLM Rubric** / **Autograde**.
 
-3. **Configure** – Use the **Instructor Provided Solution File**: `.guides/assessments/level3_graders/lab_4.1_solution_reference.md` (or `/home/codio/workspace/.guides/assessments/level3_graders/lab_4.1_solution_reference.md`). Define rubric criteria for: file location and name; imports; class and `name()`; `run()` reading slot; placeholder list and re-prompt with `utter_ask_account`; balance message; returning `[]`. Suggested total points: 8–10. **Show Rationale to Student:** After 1 attempt (or Always).
+3. **Configure** – Use the **Instructor Provided Solution File**: `.guides/secure/level3_graders/lab_4.1_solution_reference.md` (or `/home/codio/workspace/.guides/secure/level3_graders/lab_4.1_solution_reference.md`). Define rubric criteria for: file location and name; imports; class and `name()`; `run()` reading slot; placeholder list and re-prompt with `utter_ask_account`; balance message; returning `[]`. Suggested total points: 8–10. **Show Rationale to Student:** After 1 attempt (or Always).
 
 4. **Files tab** – Ensure the LLM can read: `/home/codio/workspace/level3/actions/action_check_balance_simple.py`
 
@@ -41,7 +41,7 @@ Use a Python grader for faster feedback. The script checks `level3/actions/actio
 **Grader script location (in repo):**
 
 ```
-.guides/assessments/level3_graders/lab_4.1_grader.py
+.guides/secure/level3_graders/lab_4.1_grader.py
 ```
 
 **Codio configuration (Standard Code Test):**
@@ -49,8 +49,8 @@ Use a Python grader for faster feedback. The script checks `level3/actions/actio
 1. **Assessment** – Add assessment, then **Code Test** → **Standard Code Test**.
 2. **Execution**:
    - **COMMAND (recommended):** Use the project venv’s Python so the environment is consistent:  
-     `/home/codio/workspace/.venv/bin/python3 /home/codio/workspace/.guides/assessments/level3_graders/lab_4.1_grader.py`  
-     **Alternative:** `python3 /home/codio/workspace/.guides/assessments/level3_graders/lab_4.1_grader.py` (no extra deps; script only reads the action file).
+     `/home/codio/workspace/.venv/bin/python3 /home/codio/workspace/.guides/secure/level3_graders/lab_4.1_grader.py`  
+     **Alternative:** `python3 /home/codio/workspace/.guides/secure/level3_graders/lab_4.1_grader.py` (no extra deps; script only reads the action file).
    - **PRE-EXEC COMMAND:** Leave **empty** when using the venv Python path in COMMAND.
    - **Working Directory:** `/home/codio/workspace`
    - **Timeout:** `60` seconds
@@ -61,13 +61,13 @@ Use a Python grader for faster feedback. The script checks `level3/actions/actio
    - **RATIONALE** (text box): Example:
      > The grader checks that `level3/actions/action_check_balance_simple.py` exists and contains: correct imports, class **ActionCheckBalanceSimple(Action)**, **name()** returning **"action_check_balance_simple"**, **run()** reading the account slot, a placeholder check, re-prompt with **utter_ask_account** when the slot is a placeholder, and a balance message otherwise. Follow the lab steps and review the script output for which check failed.
    - **SHOW EXPECTED ANSWER:** Optional; **When grades are released** or **Always**.
-4. **Files.** The script lives in the repo at `.guides/assessments/level3_graders/lab_4.1_grader.py`. Do not upload it; run it from the workspace so `git pull` keeps the grader in sync. The script only reads the action file (no PyYAML); venv Python is optional but recommended for consistency.
+4. **Files.** The script lives in the repo at `.guides/secure/level3_graders/lab_4.1_grader.py`. Do not upload it; run it from the workspace so `git pull` keeps the grader in sync. The script only reads the action file (no PyYAML); venv Python is optional but recommended for consistency.
 
 ---
 
 ## Reference for rubric / grading
 
-- **Solution reference:** `.guides/assessments/level3_graders/lab_4.1_solution_reference.md` (full reference code and rubric summary).
+- **Solution reference:** `.guides/secure/level3_graders/lab_4.1_solution_reference.md` (full reference code and rubric summary).
 
 ### Script template (implementers only)
 

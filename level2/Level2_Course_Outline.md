@@ -264,7 +264,7 @@
 **Total Assessment Points**: 35 points
 
 **Codio: Grader updates from GitHub**  
-When you set up or edit assessments on Codio, configure each Code Test to **run the grader script from the workspace** (e.g. `bash /home/codio/workspace/.guides/assessments/level2_graders/lab_5.1_grader.sh`). Do **not** upload or paste the script content into the assessment. That way, when you push grader changes to GitHub and pull on Codio, the assessment will use the updated script automatically.
+When you set up or edit assessments on Codio, configure each Code Test to **run the grader script from the workspace** (e.g. `bash /home/codio/workspace/.guides/secure/level2_graders/lab_5.1_grader.sh`). Do **not** upload or paste the script content into the assessment. That way, when you push grader changes to GitHub and pull on Codio, the assessment will use the updated script automatically.
 
 ---
 

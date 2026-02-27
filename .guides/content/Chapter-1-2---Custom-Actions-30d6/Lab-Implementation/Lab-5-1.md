@@ -47,7 +47,7 @@ This assessment verifies that students can create flow files that use actions: t
 
 Save the grader script at:
 ```
-.guides/assessments/level2_graders/lab_5.1_grader.sh
+.guides/secure/level2_graders/lab_5.1_grader.sh
 ```
 
 ## Grader Script
@@ -193,7 +193,7 @@ So that grader changes (pushed to GitHub and pulled on Codio) take effect automa
 
    **General** – Name: *Lab 5.1: Using Actions in Flows*. Description: *Verify that students can create flows that use actions (hours.yml and holiday_hours.yml)*. Points: `12`. Language: `Bash`.
 
-   **Execution** – COMMAND: `bash /home/codio/workspace/.guides/assessments/level2_graders/lab_5.1_grader.sh`. TIMEOUT: `60` seconds. Working Directory: `/home/codio/workspace/level2`. (Runs the script from the workspace so `git pull` updates the grader.)
+   **Execution** – COMMAND: `bash /home/codio/workspace/.guides/secure/level2_graders/lab_5.1_grader.sh`. TIMEOUT: `60` seconds. Working Directory: `/home/codio/workspace/level2`. (Runs the script from the workspace so `git pull` updates the grader.)
 
    **Grading**
    - **Points**: `12` – Total points for this assessment.
@@ -211,7 +211,7 @@ So that grader changes (pushed to GitHub and pulled on Codio) take effect automa
    - **Defined number of attempts**: `OFF` – No limit on submission attempts (or set a limit if desired).
    - **Rationale** (optional): e.g. *The grader checks that `data/basics/hours.yml` and `data/basics/holiday_hours.yml` exist and define flows that use the correct actions.*
 
-   **Files** – The grader is in the repo at `.guides/assessments/level2_graders/lab_5.1_grader.sh`. Do **not** upload or paste it into the assessment; the Execution command runs this file from the workspace so `git pull` keeps the grader in sync. From workspace root: `chmod +x .guides/assessments/level2_graders/lab_5.1_grader.sh` if needed.
+   **Files** – The grader is in the repo at `.guides/secure/level2_graders/lab_5.1_grader.sh`. Do **not** upload or paste it into the assessment; the Execution command runs this file from the workspace so `git pull` keeps the grader in sync. From workspace root: `chmod +x .guides/secure/level2_graders/lab_5.1_grader.sh` if needed.
 
 3. **Save & Test** the assessment. Enable **Learning Analytics** if desired.
 

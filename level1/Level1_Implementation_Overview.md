@@ -70,9 +70,9 @@ level1/
 ```
 
 ### Grader Scripts
-- Store in `.guides/assessments/level1_graders/` (e.g. `lab_0.1_grader.sh`, `lab_6.1_grader.sh`)
-- Run from `/home/codio/workspace/level1` (or project root as appropriate)
-- Use absolute paths in Codio COMMAND field: `/home/codio/workspace/.guides/assessments/level1_graders/lab_X.X_grader.sh`
+- Store in `.guides/secure/level1_graders/` (e.g. `lab_0.1_grader.py`, `lab_6.1_grader.sh`)
+- Run from `/home/codio/workspace` (lab_0.1) or `/home/codio/workspace/level1` as appropriate
+- Use absolute paths in Codio COMMAND field: `/home/codio/workspace/.guides/secure/level1_graders/lab_X.X_grader.py` or `.../lab_X.X_grader.sh` as appropriate
 
 ---
 
@@ -85,6 +85,6 @@ level1/
 | `Level2_UnitN_Content_N.M_*.md` | `Level1_UnitN_Content_N.M_*.md` |
 | `Level2_LabX.Y_Content.md` | `Level1_LabX.Y_Content.md` |
 | `Level2_LabX.Y_Assessment_Setup.md` | `Level1_LabX.Y_Assessment_Setup.md` |
-| `.guides/assessments/level2_graders/` | `.guides/assessments/level1_graders/` |
+| `.guides/secure/level2_graders/` | `.guides/secure/level1_graders/` |
 
 Use the same workflow: copy unit content into guide pages, copy lab content into lab pages, then configure assessments using the Assessment_Setup files and grader scripts.

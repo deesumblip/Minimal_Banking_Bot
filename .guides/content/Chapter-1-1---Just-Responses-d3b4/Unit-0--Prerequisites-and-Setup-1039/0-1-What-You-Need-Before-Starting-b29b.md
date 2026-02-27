@@ -5,7 +5,7 @@ Before diving into building your first Rasa bot, let's make sure you have everyt
 
 **Note for Codio Students**: Start with Lab 0.1 below to create a virtual environment and install Rasa Pro. Follow the lab to set **RASA_LICENSE** (e.g. via `.env` in project root or Codio environment variables).
 
-**Note for Local Setup**: If you are repeating this exercise on your own machine (not in Codio), create a `.env` file in your project root with:
+**Note for Local Setup**: If you are repeating this exercise on your own machine (not in Codio), create a `.env` file in your **project root** (the folder that contains all levels used in the course) with:
 
    ```
    RASA_LICENSE=rasaxxx-your-license-here
