@@ -14,6 +14,8 @@
 
 Run the assessment when done.
 
+{Check It!|assessment}(code-output-compare-2562507355)
+
 ## Part 2: Running locally
 
 Follow the same logic as Part 1, but use your own terminal and OS-specific commands.
