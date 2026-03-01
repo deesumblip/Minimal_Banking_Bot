@@ -3,9 +3,18 @@ language: en
 assistant_id: level1-bot
 
 pipeline:
-  - name: SearchReadyLLMCommandGenerator
-    llm:
-      model_group: gpt-4o-mini
+  - name: WhitespaceTokenizer
+  - name: RegexFeaturizer
+  - name: LexicalSyntacticFeaturizer
+  - name: CountVectorsFeaturizer
+  - name: CountVectorsFeaturizer
+    analyzer: char_wb
+    min_ngram: 1
+    max_ngram: 4
+  - name: DIETClassifier
+    epochs: 30
+  - name: EntitySynonymMapper
+  - name: NLUCommandAdapter
 
 policies:
   - name: FlowPolicy

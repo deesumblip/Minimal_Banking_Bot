@@ -2,7 +2,7 @@
 
 This guide describes how to set up Lab 0.1 (Level 1) so that **students provide their own RASA_LICENSE**, the **environment variable persists for the whole course**, and **the license never leaves the student's own sign-in** (no leaking).
 
-**Scope**: This course uses only **RASA_LICENSE**. No OpenAI API key is required.
+**Scope**: This course uses only **RASA_LICENSE**.
 
 ---
 

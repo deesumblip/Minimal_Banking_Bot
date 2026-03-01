@@ -2,5 +2,7 @@ flows:
   contact:
     name: contact information
     description: Provide contact information for the bank.
+    nlu_trigger:
+      - intent: contact
     steps:
       - action: utter_contact

@@ -1,0 +1,42 @@
+version: "3.1"
+
+nlu:
+  - intent: greet
+    examples: |
+      - hi
+      - hello
+      - hey
+      - hey there
+      - good morning
+      - good afternoon
+      - good evening
+      - hi there
+      - yo
+
+  - intent: help
+    examples: |
+      - help
+      - I need help
+      - what can you do
+      - what do you do
+      - how can you help me
+      - show me options
+      - what are my options
+
+  - intent: contact
+    examples: |
+      - contact
+      - contact information
+      - how do I contact you
+      - customer support
+      - support email
+      - phone number
+      - how can I reach the bank
+
+  - intent: goodbye
+    examples: |
+      - bye
+      - goodbye
+      - see you later
+      - thanks bye
+      - talk to you later

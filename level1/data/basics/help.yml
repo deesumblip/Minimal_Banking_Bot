@@ -2,5 +2,7 @@ flows:
   help:
     name: help
     description: Explain what the bot can do.
+    nlu_trigger:
+      - intent: help
     steps:
       - action: utter_help

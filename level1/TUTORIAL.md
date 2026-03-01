@@ -44,7 +44,7 @@ Before diving into building your first Rasa bot, let's make sure you have everyt
 
 ✅ **Rasa Pro License**
 - You need a Rasa Pro license
-- You need an OpenAI API key (for the LLM functionality)
+- You will set your license in `RASA_LICENSE`
 
 ✅ **Time Commitment**
 - This tutorial takes 2-3 hours to complete thoroughly

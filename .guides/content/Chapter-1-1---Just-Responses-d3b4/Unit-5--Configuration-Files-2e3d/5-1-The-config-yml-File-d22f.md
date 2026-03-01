@@ -10,9 +10,18 @@ language: en
 assistant_id: level1-bot
 
 pipeline:
-  - name: SearchReadyLLMCommandGenerator
-    llm:
-      model_group: gpt-4o-mini
+  - name: WhitespaceTokenizer
+  - name: RegexFeaturizer
+  - name: LexicalSyntacticFeaturizer
+  - name: CountVectorsFeaturizer
+  - name: CountVectorsFeaturizer
+    analyzer: char_wb
+    min_ngram: 1
+    max_ngram: 4
+  - name: DIETClassifier
+    epochs: 30
+  - name: EntitySynonymMapper
+  - name: NLUCommandAdapter
 
 policies:
   - name: FlowPolicy
@@ -37,8 +46,7 @@ policies:
 
 4. **`pipeline:`**
    - Defines how Rasa understands user messages
-   - `SearchReadyLLMCommandGenerator`: Uses an LLM to understand natural language
-   - `model_group: gpt-4o-mini`: Which LLM to use (OpenAI's GPT-4o-mini)
+   - In Level 1, we use a classic NLU pipeline plus the `NLUCommandAdapter` to start flows based on intents.
 
 5. **`policies:`**
    - Defines how Rasa decides what to do next
@@ -52,7 +60,7 @@ config.yml = "How to build this bot"
   ├── recipe: "Use Rasa Pro standard recipe"
   ├── language: "English"
   ├── assistant_id: "level1-bot (unique name)"
-  ├── pipeline: "Use LLM to understand messages"
+  ├── pipeline: "Use NLU + intents to start flows"
   └── policies: "Use flows to decide responses"
 ```
 
