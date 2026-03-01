@@ -1,5 +1,3 @@
-# Lab 0.1: Create Virtual Environment and Install Rasa Pro
-
 Create a virtual environment in the **project root**, install Rasa Pro, set up **your own** Rasa Pro license (`RASA_LICENSE`), and verify everything works. This is your first step—you need this setup before any other lab.
 
 This course uses:
