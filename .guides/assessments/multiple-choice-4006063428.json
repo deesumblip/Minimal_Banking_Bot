@@ -2,8 +2,8 @@
 	"type": "multiple-choice",
 	"taskId": "multiple-choice-4006063428",
 	"source": {
-		"name": "LLM Model Identification",
-		"showName": true,
+		"name": "Chapter 1.1:Lab 5.1 - Exploring the Configuration Files - LLM Model Identification",
+		"showName": false,
 		"instructions": "**What LLM model is being used in the configuration?**",
 		"multipleResponse": false,
 		"isRandomized": true,

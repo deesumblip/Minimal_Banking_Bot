@@ -2,8 +2,8 @@
 	"type": "multiple-choice",
 	"taskId": "multiple-choice-2982013912",
 	"source": {
-		"name": "Endpoints.yml Understanding",
-		"showName": true,
+		"name": "Chapter 1.1:5.3 - Endpoints.yml Understanding",
+		"showName": false,
 		"instructions": "**What is the purpose of the `endpoints.yml` file in a Rasa project? Select all that apply.**",
 		"multipleResponse": true,
 		"isRandomized": true,

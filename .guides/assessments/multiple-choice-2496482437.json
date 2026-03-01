@@ -2,8 +2,8 @@
 	"type": "multiple-choice",
 	"taskId": "multiple-choice-2496482437",
 	"source": {
-		"name": "Config File Purpose",
-		"showName": true,
+		"name": "Chapter 1.1: 5.1 - Config File Purpose",
+		"showName": false,
 		"instructions": "**What is the primary purpose of the `config.yml` file in a Rasa bot project?**",
 		"multipleResponse": false,
 		"isRandomized": true,

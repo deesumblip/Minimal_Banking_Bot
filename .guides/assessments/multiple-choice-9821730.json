@@ -1,0 +1,58 @@
+{
+	"type": "multiple-choice",
+	"taskId": "multiple-choice-9821730",
+	"source": {
+		"name": "Chapter 1.1: 8.1 Knowledge Check - pattern_session_start trigger",
+		"showName": false,
+		"instructions": "**What triggers pattern_session_start?**",
+		"multipleResponse": false,
+		"isRandomized": true,
+		"answers": [
+			{
+				"_id": "6c567951-6732-0659-2af3-1a6bc58641fc",
+				"correct": false,
+				"answer": "User says \"hello\""
+			},
+			{
+				"_id": "5f061a63-8226-425e-d2e7-e5e372b160d0",
+				"correct": false,
+				"answer": "A flow completes"
+			},
+			{
+				"_id": "915e072c-1160-c2fa-9995-eaa2a06dddfb",
+				"correct": false,
+				"answer": "User asks for help"
+			},
+			{
+				"_id": "918c6d17-3494-c57e-112d-7271eae1c848",
+				"correct": true,
+				"answer": "A new conversation begins"
+			}
+		],
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Multiple Choice"
+				}
+			],
+			"files": [],
+			"opened": []
+		},
+		"bloomsObjectiveLevel": "2",
+		"learningObjectives": "SWBAT identify what triggers pattern_session_start",
+		"guidance": "The correct answer is: A new conversation begins. The pattern_session_start is a special trigger that automatically activates when a new conversation session is initiated, not when specific user inputs are received or when flows complete.",
+		"showGuidanceAfterResponseOption": {
+			"type": "Attempts",
+			"passedFrom": 1
+		},
+		"maxAttemptsCount": 1,
+		"showExpectedAnswerOption": {
+			"type": "Always"
+		},
+		"points": 5,
+		"incorrectPoints": 0,
+		"arePartialPointsAllowed": false,
+		"useMaximumScore": false
+	}
+}

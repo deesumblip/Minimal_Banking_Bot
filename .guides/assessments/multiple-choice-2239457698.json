@@ -2,8 +2,8 @@
 	"type": "multiple-choice",
 	"taskId": "multiple-choice-2239457698",
 	"source": {
-		"name": "Bot Language",
-		"showName": true,
+		"name": "Chapter 1.1:Lab 5.1 - Exploring the Configuration Files - Bot Language",
+		"showName": false,
 		"instructions": "**What language is the bot configured for?**",
 		"multipleResponse": false,
 		"isRandomized": true,

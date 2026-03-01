@@ -2,8 +2,8 @@
 	"type": "multiple-choice",
 	"taskId": "multiple-choice-2930821594",
 	"source": {
-		"name": "LLM Temperature Setting",
-		"showName": true,
+		"name": "Chapter 1.1:Lab 5.1 - Exploring the Configuration Files - LLM Temperature Setting",
+		"showName": false,
 		"instructions": "**What does `temperature: 0.3` mean for the LLM?**",
 		"multipleResponse": false,
 		"isRandomized": false,

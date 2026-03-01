@@ -2,8 +2,8 @@
 	"type": "multiple-choice",
 	"taskId": "multiple-choice-1336213773",
 	"source": {
-		"name": "Session Start Pattern Modification",
-		"showName": true,
+		"name": "4.5 Test Your Knowledge - Session Start Pattern Modification",
+		"showName": false,
 		"instructions": "**A chatbot needs to be updated to provide contact information after greeting users. What is the correct YAML code to modify the `pattern_session_start` to accomplish this?**",
 		"multipleResponse": false,
 		"isRandomized": true,

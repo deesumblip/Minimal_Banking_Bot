@@ -2,8 +2,8 @@
 	"type": "multiple-choice",
 	"taskId": "multiple-choice-3061316135",
 	"source": {
-		"name": "Rasa Custom Actions",
-		"showName": true,
+		"name": "Chapter 1.1:Lab 5.1 - Exploring the Configuration Files - Rasa Custom Actions",
+		"showName": false,
 		"instructions": "**Where would Rasa look for custom actions?**",
 		"multipleResponse": false,
 		"isRandomized": true,

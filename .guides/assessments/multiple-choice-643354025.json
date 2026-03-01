@@ -2,7 +2,7 @@
 	"type": "multiple-choice",
 	"taskId": "multiple-choice-643354025",
 	"source": {
-		"name": "System Patterns",
+		"name": "Lab 4.1: Understanding System Patterns",
 		"showName": true,
 		"instructions": "**What is the main purpose of the `pattern_session_start` in the patterns.yml file?**",
 		"multipleResponse": false,
