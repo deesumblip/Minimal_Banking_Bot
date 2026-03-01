@@ -55,7 +55,7 @@
 		"showExpectedAnswerOption": {
 			"type": "Always"
 		},
-		"points": 20,
+		"points": 5,
 		"incorrectPoints": 0,
 		"arePartialPointsAllowed": false,
 		"useMaximumScore": false
