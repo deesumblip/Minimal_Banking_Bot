@@ -91,11 +91,12 @@ Create a `.env` file in your project root with:
 
 ```text
 RASA_LICENSE=rasaxxx-your-license-here
+OPENAI_API_KEY=sk-your-openai-key-here
 ```
 
 ⚠️ **Important**: 
 - Never commit `.env` files to version control (they contain secrets)
-- Replace the placeholder with your actual Rasa Pro license. This course uses only RASA_LICENSE (no OpenAI API key).
+- Replace the placeholders with your actual values.
 
 #### Step 4: Load Environment Variables
 
@@ -1667,12 +1668,13 @@ Rasa needs your Rasa Pro license, but it can't find it.
 
 1. **Check if `.env` file exists:**
    - Should be in the root of your project folder (folder containing level1, level2, .guides)
-   - Should contain: `RASA_LICENSE=...` (this course does not use OPENAI_API_KEY)
+   - Should contain: `RASA_LICENSE=...` and `OPENAI_API_KEY=...`
 
 2. **Verify the format:**
    ```text
    # ✅ CORRECT format:
    RASA_LICENSE=your-actual-license-here
+   OPENAI_API_KEY=your-openai-key-here
    
    # ❌ WRONG format:
    RASA_LICENSE="your-actual-license-here"  # No quotes needed

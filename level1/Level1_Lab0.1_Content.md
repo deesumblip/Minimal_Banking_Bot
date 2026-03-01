@@ -2,7 +2,10 @@
 
 Create a virtual environment in the **project root**, install Rasa Pro, set up **your own** Rasa Pro license (`RASA_LICENSE`), and verify everything works. This is your first step—you need this setup before any other lab.
 
-**This course uses only RASA_LICENSE.**
+This course uses:
+
+- `RASA_LICENSE` (Rasa Pro license)
+- `OPENAI_API_KEY` (LLM features used by Level 1)
 
 ---
 
@@ -79,17 +82,23 @@ rasa --version
 
 ---
 
-## Step 4: Set up your own RASA_LICENSE
+## Step 4: Set up your own RASA_LICENSE and OPENAI_API_KEY
 
-You must provide **your own** Rasa Pro license. Follow the section for **your** environment: Codio, Windows, or macOS/Linux.
+You must provide:
+
+- your **own** Rasa Pro license (`RASA_LICENSE`)
+- an OpenAI API key (`OPENAI_API_KEY`)
+
+Follow the section for **your** environment: Codio, Windows, or macOS/Linux.
 
 ### On Codio
 
-1. In the **project root** (e.g. `~/workspace`), create a file named `.env` from the terminal (replace the placeholder with your real license):
+1. In the **project root** (e.g. `~/workspace`), create a file named `.env` from the terminal (replace the placeholders with your real values):
    ```bash
    cd ~/workspace
    cat > .env <<'EOF'
    RASA_LICENSE=rasaxxx-your-license-here
+   OPENAI_API_KEY=sk-your-openai-key-here
    EOF
    ```
 2. Do **not** commit `.env` (it is in `.gitignore`).
@@ -99,25 +108,31 @@ You must provide **your own** Rasa Pro license. Follow the section for **your** 
    source .env
    set +a
    ```
-4. Then you can `cd level1` (or any level) and run Rasa; the process will have `RASA_LICENSE` set.
+4. Then you can `cd level1` (or any level) and run Rasa; the process will have both variables set.
 
 **Alternative – Codio environment variables**
 
-If your Codio project has an **Environment Variables** (or **Settings**) area where you can add variables, add `RASA_LICENSE` there with your license value. It will then be available in every terminal session without creating a `.env` file.
+If your Codio project has an **Environment Variables** (or **Settings**) area where you can add variables, add both `RASA_LICENSE` and `OPENAI_API_KEY` there. They will then be available in every terminal session without creating a `.env` file.
 
 ---
 
 ### On your local machine (Windows)
 
-1. Create a file named `.env` in the **project root** (the folder that contains all levels). From PowerShell, run (replace the placeholder with your real license):
+1. Create a file named `.env` in the **project root** (the folder that contains all levels). From PowerShell, run (replace the placeholders with your real values):
    ```powershell
-   Set-Content -Path .env -Value "RASA_LICENSE=rasaxxx-your-license-here"
+   Set-Content -Path .env -Value @"
+   RASA_LICENSE=rasaxxx-your-license-here
+   OPENAI_API_KEY=sk-your-openai-key-here
+   "@
    ```
    Do **not** commit `.env`.
 
-2. **Load the variable in the current PowerShell session:**
+2. **Load both variables in the current PowerShell session:**
    ```powershell
-   Get-Content .env | ForEach-Object { if ($_ -match '^RASA_LICENSE=(.+)$') { [System.Environment]::SetEnvironmentVariable('RASA_LICENSE', $matches[1].Trim(), 'Process') } }
+   Get-Content .env | ForEach-Object {
+     if ($_ -match '^RASA_LICENSE=(.+)$') { [System.Environment]::SetEnvironmentVariable('RASA_LICENSE', $matches[1].Trim(), 'Process') }
+     if ($_ -match '^OPENAI_API_KEY=(.+)$') { [System.Environment]::SetEnvironmentVariable('OPENAI_API_KEY', $matches[1].Trim(), 'Process') }
+   }
    ```
    Alternatively, use a small script that reads `.env` and sets `$env:RASA_LICENSE` (do not commit the script with a real key).
 
@@ -127,10 +142,11 @@ If your Codio project has an **Environment Variables** (or **Settings**) area wh
 
 ### On your local machine (macOS / Linux)
 
-1. Create a file named `.env` in the **project root** from your terminal (replace the placeholder with your real license):
+1. Create a file named `.env` in the **project root** from your terminal (replace the placeholders with your real values):
    ```bash
    cat > .env <<'EOF'
    RASA_LICENSE=rasaxxx-your-license-here
+   OPENAI_API_KEY=sk-your-openai-key-here
    EOF
    ```
    Do **not** commit `.env`.
@@ -145,9 +161,12 @@ If your Codio project has an **Environment Variables** (or **Settings**) area wh
 
 ---
 
-### Verify RASA_LICENSE is set (all environments)
+### Verify environment variables are set (all environments)
 
-**Windows / Linux / macOS / Codio:** Run `rasa --version` again to ensure that the license has been correctly set.
+**Windows / Linux / macOS / Codio:** Run:
+
+- `rasa --version` to ensure the license has been correctly set.
+- `python -c "import os; print('OPENAI_API_KEY set' if os.getenv('OPENAI_API_KEY') else 'OPENAI_API_KEY missing')"` to verify the API key is available.
 
 ---
 

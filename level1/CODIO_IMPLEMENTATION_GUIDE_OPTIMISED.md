@@ -9801,7 +9801,7 @@ project/
 - `.env` file template provided
 - Students/instructors fill in actual values:
   - `RASA_LICENSE=...`
-  - (This course uses only RASA_LICENSE; no OpenAI API key required.)
+  - `OPENAI_API_KEY=...`
 - Environment variable loading script included
 
 **Port Configuration**:

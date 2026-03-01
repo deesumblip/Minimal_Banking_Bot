@@ -22,11 +22,12 @@
    python -m pip install --no-cache-dir rasa-pro
    ```
 
-3. **Set RASA_LICENSE:** Create a `.env` file in the project root with:
+3. **Set `RASA_LICENSE` and `OPENAI_API_KEY`:** Create a `.env` file in the project root with:
    ```text
    RASA_LICENSE=rasaxxx-your-license-here
+   OPENAI_API_KEY=sk-your-openai-key-here
    ```
-   Replace with your actual Rasa Pro license. See Lab 0.1 for Codio vs local (Windows/macOS/Linux).
+   Replace with your actual values. See Lab 0.1 for Codio vs local (Windows/macOS/Linux).
 
 4. **Train and run:**
    ```powershell
