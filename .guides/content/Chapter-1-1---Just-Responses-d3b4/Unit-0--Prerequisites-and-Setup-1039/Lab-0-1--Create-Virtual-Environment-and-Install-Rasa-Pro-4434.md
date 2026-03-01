@@ -11,8 +11,8 @@ This course uses:
 
 1. Create a virtual environment (`.venv`) in the **project root** — this same `.venv` is used across **all levels** (level1, level2, level3, etc.)
 2. Install Rasa Pro in that venv
-3. Verify the installation with `rasa --version`
-4. Set your **own** Rasa Pro license (`RASA_LICENSE`) — instructions by environment below
+3. Set up your environment variables (`RASA_LICENSE` and `OPENAI_API_KEY`)
+4. Verify the installation with `rasa --version` (after your environment variables are loaded)
 5. Confirm the `level1` project structure is present
 
 ---
@@ -26,8 +26,8 @@ This course uses:
 ## Before you start
 
 - Open a terminal (Codio or your local machine).
-- Stay in the **project root** for Steps 1–3.
-- You will set up `RASA_LICENSE` in Step 4 according to your environment (Codio, Windows, or macOS/Linux).
+- Stay in the **project root** for Steps 1–4.
+- You will set up `RASA_LICENSE` and `OPENAI_API_KEY` in Step 3 according to your environment (Codio, Windows, or macOS/Linux).
 
 ---
 
@@ -68,19 +68,7 @@ pip install --no-cache-dir rasa-pro
 
 ---
 
-## Step 3: Verify installation
-
-Run:
-
-```bash
-rasa --version
-```
-
-**What you'll see:** Version information such as "Rasa 3.x.x" with no errors.
-
----
-
-## Step 4: Set up your own RASA_LICENSE and OPENAI_API_KEY
+## Step 3: Set up your own RASA_LICENSE and OPENAI_API_KEY
 
 You must provide:
 
@@ -150,18 +138,18 @@ Follow the section for **your** environment: Codio, Windows, or macOS/Linux.
    source .env
    set +a
    ```
-   Then `cd level1` (or any level) and run Rasa; the shell and child processes will have `RASA_LICENSE` set.
+   Then `cd level1` (or any level) and run Rasa; the shell and child processes will have both variables set.
 
 ---
 
-### Verify environment variables are set (all environments)
+## Step 4: Verify installation (after loading environment variables)
 
-**Windows / Linux / macOS / Codio:**
+With the virtual environment active **and** your environment variables loaded (Step 3), run:
 
-Run:
-
-- `rasa --version` to ensure the license has been correctly set.
 - `python -c "import os; print('OPENAI_API_KEY set' if os.getenv('OPENAI_API_KEY') else 'OPENAI_API_KEY missing')"` to verify the API key is available.
+- `rasa --version` to verify Rasa Pro runs successfully with your environment variables.
+
+**What you'll see:** Version information with no errors.
 
 ---
 

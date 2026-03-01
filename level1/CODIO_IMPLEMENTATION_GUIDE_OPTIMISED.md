@@ -289,11 +289,11 @@ Bot responds
 
 ### Lab 0.1: Create Virtual Environment and Install Rasa Pro
 
-**Objective**: Create a virtual environment, install Rasa Pro in it, and verify the installation is successful.
+**Objective**: Create a virtual environment, install Rasa Pro in it, set required environment variables, and verify the installation is successful.
 
 **Important**: This is your first step! You must create a virtual environment and install Rasa Pro before you can proceed with any other exercises.
 
-**Before you start**: Open a terminal in Codio. Run `cd level1` so you are in the `level1` folder. All commands in this lab should be run from there.
+**Before you start**: Open a terminal in Codio and make sure you're in the **project root** (the folder that contains `level1`, `level2`, and `.guides`). The venv for this course lives in the project root.
 
 #### Steps
 
@@ -323,41 +323,39 @@ Bot responds
    - You'll see progress messages as packages are downloaded and installed
    - At the end, you should see "Successfully installed rasa-pro-x.x.x" along with a list of dependencies
 
-3. **Verify Installation**
+3. **Set Environment Variables (required before `rasa --version`)**
+
+   Ensure `RASA_LICENSE` and `OPENAI_API_KEY` are available in your terminal session (e.g., via a `.env` file in the project root or Codio environment variables).
+
+   To check they are loaded in the current shell:
+   ```bash
+   [ -n "$RASA_LICENSE" ] && echo "RASA_LICENSE is set" || echo "RASA_LICENSE is not set"
+   [ -n "$OPENAI_API_KEY" ] && echo "OPENAI_API_KEY is set" || echo "OPENAI_API_KEY is not set"
+   ```
+
+4. **Verify Installation**
    
-   Once installation completes, verify Rasa Pro is installed correctly:
+   After environment variables are set, verify Rasa Pro runs correctly:
    ```bash
    rasa --version
    ```
    
    **Expected output**: You should see version information like "Rasa 3.x.x" (no errors).
-   
-   **If you see an error**: The installation may not have completed successfully. Review any error messages from Step 1 and try installing again.
 
-4. **Check Project Structure** *(After installation)*
+5. **Check Project Structure**
    ```bash
    # Check that project folders exist
-   ls -la domain/
-   ls -la data/
+   ls -la level1/domain/
+   ls -la level1/data/
    ```
    Confirm:
-   - The `domain/` folder exists
-   - The `data/` folder exists
-
+   - The `level1/domain/` folder exists
+   - The `level1/data/` folder exists
+ 
    ```bash
    # Check that the following .yml files exist
-   ls -la config.yml credentials.yml endpoints.yml
+   ls -la level1/config.yml level1/credentials.yml level1/endpoints.yml
    ```
-
-5. **Check Environment Variables**
-
-   **Codio**: Credentials are pre-configured. To verify they're loaded, run:
-   ```bash
-   [ -n "$RASA_LICENSE" ] && echo "RASA_LICENSE is set" || echo "RASA_LICENSE is not set"
-   ```
-   It should report "RASA_LICENSE is set". If not, ask your instructor or see Lab 0.1 for setting RASA_LICENSE (Codio vs local).
-   
-   **Local setup**: The .env file should exist in your project root. Run **ls -la .env** to confirm. If it doesn't, create it using the instructions in section 0.1.
 
 **✅ Success Criteria**: Once you can run `rasa --version` successfully and see version information, you're ready to move on to the next exercises. You can then run the assessment for this lab to confirm your setup.
 
@@ -2817,11 +2815,11 @@ Each lab has a **Step 0.5** section in the "For Codio Team" implementation notes
 
 ### Lab 0.1: Create Virtual Environment and Install Rasa Pro
 
-**Objective**: Create a virtual environment, install Rasa Pro in it, and verify the installation is successful.
+**Objective**: Create a virtual environment, install Rasa Pro in it, set required environment variables, and verify the installation is successful.
 
 **Important**: This is your first step! You must create a virtual environment and install Rasa Pro before you can proceed with any other exercises.
 
-**Before you start**: Open a terminal in Codio. Run `cd level1` so you are in the `level1` folder. All commands in this lab should be run from there.
+**Before you start**: Open a terminal in Codio and make sure you're in the **project root** (the folder that contains `level1`, `level2`, and `.guides`). The venv for this course lives in the project root.
 
 #### Steps
 
@@ -2851,41 +2849,39 @@ Each lab has a **Step 0.5** section in the "For Codio Team" implementation notes
    - You'll see progress messages as packages are downloaded and installed
    - At the end, you should see "Successfully installed rasa-pro-x.x.x" along with a list of dependencies
 
-3. **Verify Installation**
+3. **Set Environment Variables**
    
-   Once installation completes, verify Rasa Pro is installed correctly:
+   **Environment variables must be set before running `rasa --version`.**
+
+   Verify they are available in the current shell:
+   ```bash
+   [ -n "$RASA_LICENSE" ] && echo "RASA_LICENSE is set" || echo "RASA_LICENSE is not set"
+   [ -n "$OPENAI_API_KEY" ] && echo "OPENAI_API_KEY is set" || echo "OPENAI_API_KEY is not set"
+   ```
+
+4. **Verify Installation**
+   
+   After environment variables are set, verify Rasa Pro runs correctly:
    ```bash
    rasa --version
    ```
    
    **Expected output**: You should see version information like "Rasa 3.x.x" (no errors).
-   
-   **If you see an error**: The installation may not have completed successfully. Review any error messages from Step 1 and try installing again.
 
-4. **Check Project Structure** *(After installation)*
+5. **Check Project Structure**
    ```bash
    # Check that project folders exist
-   ls -la domain/
-   ls -la data/
+   ls -la level1/domain/
+   ls -la level1/data/
    ```
    Confirm:
-   - The `domain/` folder exists
-   - The `data/` folder exists
+   - The `level1/domain/` folder exists
+   - The `level1/data/` folder exists
 
    ```bash
    # Check that the following .yml files exist
-   ls -la config.yml credentials.yml endpoints.yml
+   ls -la level1/config.yml level1/credentials.yml level1/endpoints.yml
    ```
-
-5. **Check Environment Variables**
-
-   **Codio**: Credentials are pre-configured. To verify they're loaded, run:
-   ```bash
-   [ -n "$RASA_LICENSE" ] && echo "RASA_LICENSE is set" || echo "RASA_LICENSE is not set"
-   ```
-   It should report "RASA_LICENSE is set". If not, ask your instructor or see Lab 0.1 for setting RASA_LICENSE (Codio vs local).
-   
-   **Local setup**: The .env file should exist in your project root. Run **ls -la .env** to confirm. If it doesn't, create it using the instructions in section 0.1.
 
 **✅ Success Criteria**: Once you can run `rasa --version` successfully and see version information, you're ready to move on to the next exercises. You can then run the assessment for this lab to confirm your setup.
 

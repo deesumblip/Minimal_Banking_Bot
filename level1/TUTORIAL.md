@@ -83,7 +83,7 @@ python -m pip install --upgrade pip
 python -m pip install --no-cache-dir rasa-pro
 ```
 
-**How to verify it worked**: Run `python -m rasa --version` - you should see version information.
+**How to verify it worked**: After Steps 3–4 (environment variables are set and loaded), run `python -m rasa --version` - you should see version information.
 
 #### Step 3: Set Up Environment Variables
 
@@ -287,16 +287,20 @@ Before starting the tutorial, verify everything works:
    # If not, activate it: .\.venv\Scripts\Activate.ps1
    ```
 
-2. **✅ Rasa Pro Installed**
+2. **✅ Environment Variables Set + Loaded**
+   ```powershell
+   # Check .env exists in project root and has BOTH:
+   # RASA_LICENSE=...
+   # OPENAI_API_KEY=...
+   #
+   # Then load them in the current terminal session:
+   . .\load_env.ps1
+   ```
+
+3. **✅ Rasa Pro Runs**
    ```powershell
    python -m rasa --version
    # Should show version information (no errors)
-   ```
-
-3. **✅ RASA_LICENSE Set**
-   ```powershell
-   # Check .env file exists in project root and has RASA_LICENSE (see Lab 0.1)
-   # Make sure value is not the placeholder
    ```
 
 4. **✅ Can Train a Bot**
@@ -1627,6 +1631,7 @@ Python can't find the Rasa library. This usually means Rasa isn't installed, or 
 
 2. **Verify Rasa is installed:**
    ```powershell
+   # Make sure environment variables are loaded first (see Lab 0.1 / Step 4)
    python -m rasa --version
    # Should show version info (not an error)
    ```

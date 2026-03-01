@@ -11,7 +11,7 @@
 Complete **Lab 0.1** (Steps 1–5 in the lab guide). In short:
 
 1. **Step 1-2:** Create a virtual environment in the **project root** (the folder that contains all levels): `python3.11 -m venv .venv` then activate it (`source .venv/bin/activate` on Linux/Mac, `.venv\Scripts\Activate.ps1` on Windows PowerShell). Install Rasa Pro: `pip install --no-cache-dir rasa-pro`. This same `.venv` is used for every level.
-2. **Step 3–4:** Verify with `rasa --version`; set **RASA_LICENSE** and **OPENAI_API_KEY** (see lab Step 4 for Codio vs Windows vs macOS/Linux).
+2. **Step 3–4:** Set **RASA_LICENSE** and **OPENAI_API_KEY** (see lab Step 3), then verify with `rasa --version` (lab Step 4).
 3. **Step 5:** Confirm `level1` has the expected structure: `domain/`, `data/`, and the three config files (`config.yml`, `credentials.yml`, `endpoints.yml`). See the lab guide for the expected file tree.
 
 ---
