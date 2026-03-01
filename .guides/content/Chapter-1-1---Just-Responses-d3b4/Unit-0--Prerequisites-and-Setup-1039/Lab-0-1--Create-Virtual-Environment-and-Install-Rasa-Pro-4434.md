@@ -101,6 +101,11 @@ You must provide **your own** Rasa Pro license. Follow the section for **your** 
    ```
 4. Then you can `cd level1` (or any level) and run Rasa; the process will have `RASA_LICENSE` set.
 
+**Run the assessment for this lab** to confirm your setup.
+
+{Check It!|assessment}(code-output-compare-3333363688)
+
+
 ---
 
 ### On your local machine (Windows)
@@ -176,9 +181,5 @@ Confirm that the **domain/** and **data/** directories exist and that the three 
 - The `level1` folder has the expected structure (domain, data, config files).
 
 For **later labs**: Use the same `.venv` from the project root for every level. Activate it from the root, ensure `RASA_LICENSE` is loaded, then `cd` into the level folder you're working in (e.g. `cd level1`).
-
-**Run the assessment for this lab** to confirm your setup.
-
-{Check It!|assessment}(code-output-compare-3333363688)
 
 ---

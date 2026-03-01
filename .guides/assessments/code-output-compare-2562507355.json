@@ -6,7 +6,7 @@
 		"showName": true,
 		"instructions": "Verify that you successfully trained the Level 1 bot.",
 		"command": "bash /home/codio/workspace/.guides/secure/level1_graders/lab_6.1_grader.sh",
-		"preExecuteCommand": "cd /home/codio/workspace/level1",
+		"preExecuteCommand": "cd /home/codio/workspace && set -a && source .env && set +a",
 		"options": {
 			"timeout": 60,
 			"ignoreCase": true,
