@@ -1,0 +1,11 @@
+recipe: default.v1
+language: en
+assistant_id: level2-bot
+
+pipeline:
+  - name: SearchReadyLLMCommandGenerator
+    llm:
+      model_group: gpt-4o-mini
+
+policies:
+  - name: FlowPolicy

@@ -1,0 +1,9 @@
+# --- Lab 7.2 (Build Your Own Feature) addition ---
+# Students add one new flow in data/basics/ that uses their new response.
+# This example flow handles branch location queries.
+flows:
+  branch_locations:
+    name: branch locations
+    description: Provide bank branch locations and hours.
+    steps:
+      - action: utter_branch_locations
