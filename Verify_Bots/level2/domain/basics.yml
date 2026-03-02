@@ -30,3 +30,6 @@ responses:
     - text: "Goodbye! Have a great day!"
       metadata:
         rephrase: True
+
+actions:
+  - action_bank_hours

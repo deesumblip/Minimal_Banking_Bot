@@ -1,12 +1,13 @@
-# Level 3: Responses + Actions
+# Level 3: Responses + Actions + Slots
 
 **Final bot** students have by the end of Level 3.
 
 ## Contents
 
-- **Responses** (greet, help, contact, goodbye)
-- **Custom actions:** `action_bank_hours` (returns bank hours)
-- **Flows:** greet, help, contact, goodbye, hours
+- **Slots:** `account` (used for balance checks)
+- **Responses:** greet, help, contact, goodbye, utter_ask_account
+- **Custom actions:** `action_bank_hours`, `action_check_balance_simple`
+- **Flows:** greet, help, contact, goodbye, hours, check_balance
 - **Config:** `config.yml`, `credentials.yml`, `endpoints.yml`
 - **Domain:** `domain/basics.yml`
 - **Data:** `data/basics/*.yml`, `data/system/patterns/patterns.yml`
@@ -18,5 +19,6 @@
 - Give contact information (email, phone)
 - Say goodbye
 - **Provide bank hours** via the custom action `action_bank_hours`
+- **Check balance:** ask for account number (slot), then run `action_check_balance_simple` to return a balance
 
-Run from this folder with `RASA_LICENSE` and `OPENAI_API_KEY` set: `rasa train`, then `rasa run` or `rasa inspect`. Start the action server separately if using custom actions at runtime.
+Run from this folder with `RASA_LICENSE` and `OPENAI_API_KEY` set. Start the action server: `rasa run actions`.

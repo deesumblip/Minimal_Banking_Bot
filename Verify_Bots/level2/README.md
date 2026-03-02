@@ -4,9 +4,9 @@
 
 ## Contents
 
-- **Responses** (same as Level 1)
-- **Custom actions:** `actions/` (placeholder/init; Level 2 introduces the pattern)
-- **Flows:** greet, help, contact
+- **Responses** (greet, help, contact, goodbye)
+- **Custom actions:** `action_bank_hours`
+- **Flows:** greet, help, contact, hours
 - **Config:** `config.yml`, `credentials.yml`, `endpoints.yml`
 - **Domain:** `domain/basics.yml`
 - **Data:** `data/basics/*.yml`, `data/system/patterns/patterns.yml`
@@ -16,7 +16,6 @@
 - Greet the user and list what it can help with
 - Explain capabilities (balance, transfers, bank hours, contact info)
 - Give contact information (email, phone)
+- **Provide bank hours** via the custom action `action_bank_hours` (hours flow)
 
-Level 2 adds the **actions** module and wiring so students can add custom actions (e.g. bank hours) in later levels.
-
-Run from this folder with `RASA_LICENSE` and `OPENAI_API_KEY` set: `rasa train`, then `rasa run` or `rasa inspect`.
+Run from this folder with `RASA_LICENSE` and `OPENAI_API_KEY` set. Start the action server for custom actions: `rasa run actions`.
