@@ -239,7 +239,7 @@ if rasa_found:
     score += 3
 else:
     print("❌ Step 2: FAILED - Rasa Pro not installed or not accessible (0 points)")
-    print("Hint: With venv activated from project root, run 'pip install --no-cache-dir rasa-pro'")
+    print("Hint: With venv activated from project root, run 'pip install rasa-pro'")
     print("FAIL")
     sys.exit(1)
 print("")
@@ -282,7 +282,7 @@ if rasa_license_ok:
     score += 1
 else:
     print("❌ Step 4: FAILED - RASA_LICENSE is not set or still placeholder (0 points)")
-    print("Hint: Create .env in project root with RASA_LICENSE=your-actual-license, then source it (see Lab 0.1). On Codio you may use Environment Variables in project settings.")
+    print("Hint: Set RASA_LICENSE for this session: 'export RASA_LICENSE=your-actual-license' (or use a .env file and source it). On Codio you may use Environment Variables in project settings.")
 print("")
 
 # Final summary

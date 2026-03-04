@@ -66,6 +66,13 @@
 				"output": "Step 3: PASSED",
 				"showFeedback": false,
 				"feedback": ""
+			},
+			{
+				"arguments": "",
+				"input": "",
+				"output": "Step 4: PASSED",
+				"showFeedback": false,
+				"feedback": ""
 			}
 		]
 	}

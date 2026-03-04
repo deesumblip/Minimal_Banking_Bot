@@ -5,17 +5,17 @@ Create a virtual environment in the **project root**, install Rasa Pro, set up *
 This course uses:
 
 - `RASA_LICENSE` (Rasa Pro license)
-- `OPENAI_API_KEY` (LLM features used by Level 1)
 
 ---
 
 ## In this lab you will
 
-1. Create a virtual environment (`.venv`) in the **project root** — this same `.venv` is used across **all levels** (level1, level2, level3, etc.)
-2. Install Rasa Pro in that venv
-3. Set up your environment variables (`RASA_LICENSE` and `OPENAI_API_KEY`)
-4. Verify the installation with `rasa --version` (after your environment variables are loaded)
-5. Confirm the `level1` project structure is present
+1. Check Python and pip (`python --version`, `pip --version`)
+2. Create a virtual environment (`.venv`) in the **project root** — this same `.venv` is used across **all levels** (level1, level2, level3, etc.)
+3. Install Rasa Pro in that venv
+4. Set up **RASA_LICENSE** (your own Rasa Pro license)
+5. Verify the installation with `rasa --version` (after your environment variable is loaded)
+6. Confirm the `level1` project structure is present
 
 ---
 
@@ -28,19 +28,35 @@ This course uses:
 ## Before you start
 
 - Open a terminal (Codio or your local machine).
-- Stay in the **project root** for Steps 1–4.
-- You will set up `RASA_LICENSE` and `OPENAI_API_KEY` in Step 3 according to your environment (Codio, Windows, or macOS/Linux).
+- **On Codio:** You are already in the project directory (e.g. `~/workspace`); you do **not** need to run `mkdir` or `cd` into a new folder.
+- Stay in the **project root** for Steps 1–5. You will set up **RASA_LICENSE** in Step 4 according to your environment (Codio, Windows, or macOS/Linux).
 
 ---
 
-## Step 1: Create a virtual environment (project root)
+## Step 1: Check Python and pip
+
+From the **project root**, run:
+
+**Linux / macOS (Codio or local):**
+```bash
+python --version
+pip --version
+```
+
+**Windows (PowerShell):**
+```powershell
+py -3.11 --version
+py -m pip --version
+```
+
+You should see Python 3.11.x (or 3.10+) and pip. If either command is not found, install Python 3.11 for your OS.
+
+---
+
+## Step 2: Create a virtual environment (project root)
 
 1. Confirm you are in the **main project folder** (run `pwd` — the path should **not** end in `level1`).
-2. Check Python 3.11:
-   ```bash
-   python3.11 -V
-   ```
-3. Create and activate the virtual environment:
+2. Create and activate the virtual environment:
 
    **Linux / macOS (Codio or local):**
    ```bash
@@ -51,116 +67,68 @@ This course uses:
    **Windows (PowerShell):**
    ```powershell
    py -3.11 -m venv .venv
-   .venv\Scripts\Activate.ps1
+   .\.venv\Scripts\Activate.ps1
    ```
 
 **What you'll see:** Your prompt should show `(.venv)` at the start. The `.venv` folder is in the project root and is used across all levels — activate it from the root whenever you work in level1, level2, or any other level.
 
 ---
 
-## Step 2: Install Rasa Pro
+## Step 3: Install Rasa Pro
 
 With the virtual environment activated and still in the project root:
 
 ```bash
-pip install --no-cache-dir rasa-pro
+pip install rasa-pro
 ```
 
 **What you'll see:** Installation takes 2–5 minutes.
 
 ---
 
-## Step 3: Set up your own RASA_LICENSE and OPENAI_API_KEY
+## Step 4: Set up your own RASA_LICENSE
 
-You must provide:
+You must provide your **own** Rasa Pro license (`RASA_LICENSE`). Replace `YOUR_LICENSE_KEY` with your actual key.
 
-- your **own** Rasa Pro license (`RASA_LICENSE`)
-- an OpenAI API key (`OPENAI_API_KEY`)
+### On Codio / Linux / macOS
 
-Follow the section for **your** environment: Codio, Windows, or macOS/Linux.
+With the virtual environment activated, from the **project root** run:
 
-### On Codio
+```bash
+export RASA_LICENSE=YOUR_LICENSE_KEY
+```
 
-1. In the **project root** (e.g. `~/workspace`), create a file named `.env` from the terminal (replace the placeholders with your real values):
-   ```bash
-   cd ~/workspace
-   cat > .env <<'EOF'
-   RASA_LICENSE=rasaxxx-your-license-here
-   OPENAI_API_KEY=sk-your-openai-key-here
-   EOF
-   ```
-2. Do **not** commit `.env` (it is in `.gitignore`).
-3. At the start of **each new terminal session**, from the project root run:
-   ```bash
-   set -a
-   source .env
-   set +a
-   ```
-4. Then you can `cd level1` (or any level) and run Rasa; the process will have both variables set.
+This sets RASA_LICENSE for the current terminal session. Then run `rasa --version` (Step 5).
 
-**Alternative – Codio environment variables**
-
-If your Codio project has an **Environment Variables** (or **Settings**) area where you can add variables, add both `RASA_LICENSE` and `OPENAI_API_KEY` there. They will then be available in every terminal session without creating a `.env` file.
+**To have RASA_LICENSE in every new terminal:** Create a `.env` file in the project root with `RASA_LICENSE=your-license`, then at the start of each session run `set -a; source .env; set +a`. Do **not** commit `.env` (it is in `.gitignore`). On Codio, you can also add `RASA_LICENSE` in **Environment Variables** / **Settings** if available.
 
 ---
 
 ### On your local machine (Windows)
 
-1. Create a file named `.env` in the **project root** (the folder that contains all levels). From PowerShell, run (replace the placeholders with your real values):
-   ```powershell
-   Set-Content -Path .env -Value @"
-   RASA_LICENSE=rasaxxx-your-license-here
-   OPENAI_API_KEY=sk-your-openai-key-here
-   "@
-   ```
-   Do **not** commit `.env`.
+In PowerShell, with the virtual environment activated, from the **project root** run (replace with your actual license):
 
-2. **Load both variables in the current PowerShell session:**
-   ```powershell
-   Get-Content .env | ForEach-Object {
-     if ($_ -match '^RASA_LICENSE=(.+)$') { [System.Environment]::SetEnvironmentVariable('RASA_LICENSE', $matches[1].Trim(), 'Process') }
-     if ($_ -match '^OPENAI_API_KEY=(.+)$') { [System.Environment]::SetEnvironmentVariable('OPENAI_API_KEY', $matches[1].Trim(), 'Process') }
-   }
-   ```
-   Alternatively, use a small script that reads `.env` and sets `$env:RASA_LICENSE` (do not commit the script with a real key).
+```powershell
+$env:RASA_LICENSE = "YOUR_LICENSE_KEY"
+```
 
-3. **To have it in every new terminal:** Set the user-level environment variable once (e.g. **System → Environment Variables**, or `[System.Environment]::SetEnvironmentVariable('RASA_LICENSE', 'your-license', 'User')` in PowerShell).
+This sets RASA_LICENSE for the current session. Then run `rasa --version` (Step 5). To have it in every new terminal, set the user environment variable (e.g. **System → Environment Variables**) or use a `.env` file and load it in your profile.
 
 ---
 
-### On your local machine (macOS / Linux)
+## Step 5: Verify installation (after loading RASA_LICENSE)
 
-1. Create a file named `.env` in the **project root** from your terminal (replace the placeholders with your real values):
-   ```bash
-   cat > .env <<'EOF'
-   RASA_LICENSE=rasaxxx-your-license-here
-   OPENAI_API_KEY=sk-your-openai-key-here
-   EOF
-   ```
-   Do **not** commit `.env`.
+With the virtual environment active **and** RASA_LICENSE loaded (Step 4), run:
 
-2. At the start of **each terminal session**, from the project root run:
-   ```bash
-   set -a
-   source .env
-   set +a
-   ```
-   Then `cd level1` (or any level) and run Rasa; the shell and child processes will have both variables set.
-
----
-
-## Step 4: Verify installation (after loading environment variables)
-
-With the virtual environment active **and** your environment variables loaded (Step 3), run:
-
-- `python -c "import os; print('OPENAI_API_KEY set' if os.getenv('OPENAI_API_KEY') else 'OPENAI_API_KEY missing')"` to verify the API key is available.
-- `rasa --version` to verify Rasa Pro runs successfully with your environment variables.
+```bash
+rasa --version
+```
 
 **What you'll see:** Version information with no errors.
 
 ---
 
-## Step 5: Check project structure
+## Step 6: Check project structure
 
 In your file tree, go into `level1` and confirm the bot structure is present. You should see something like this:
 
@@ -189,4 +157,4 @@ Confirm that the **domain/** and **data/** directories exist and that the three 
 
 For **later labs**: Use the same `.venv` from the project root for every level. Activate it from the root, ensure `RASA_LICENSE` is loaded, then `cd` into the level folder you're working in (e.g. `cd level1`).
 
-**Run the assessment for this lab** to confirm your setup.
+**On Codio:** Run the assessment for this lab (use the Check It! button in the guide) to confirm your setup.
