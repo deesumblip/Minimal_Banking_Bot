@@ -1,4 +1,4 @@
-﻿{
+{
     "title":  "Minimal_Banking_Bot",
     "theme":  "light",
     "scripts":  [
@@ -19,5 +19,6 @@
                   "Chapter-1-3---Slot-Collection-a4b5",
                   "Chapter-1-4---Multiple-Slots-e5f6",
                   "Chapter-1-5---Tool-Calling-f9e0"
-              ]
+              ],
+    "content": ""
 }

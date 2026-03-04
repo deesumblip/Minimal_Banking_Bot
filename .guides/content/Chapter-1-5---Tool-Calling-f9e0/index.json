@@ -1,4 +1,4 @@
-﻿{
+{
   "id": "level5-chapter-f9e0-tool-calling",
   "type": "chapter",
   "title": "Chapter 1.5 - Tool Calling",
@@ -10,5 +10,6 @@
     "Unit-4--Using-Tools-in-Conversations-L5u4",
     "Unit-5--Training-and-Testing-L5u5",
     "Unit-6--Summary-and-Next-Steps-L5u6"
-  ]
-}
+  ],
+  "content": ""
+  }
