@@ -3,7 +3,7 @@
 	"title": "0.2 Project Structure",
 	"files": [
 		{
-			"path": "#terminal: ",
+			"path": "#terminal",
 			"panel": 0,
 			"action": "open"
 		}
