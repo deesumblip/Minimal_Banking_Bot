@@ -1,0 +1,32 @@
+## Level 1 (Ollama): Just Responses
+#
+# Same as Level 1 - predefined responses only.
+# No slots, no custom actions. LLM is local Ollama (no OpenAI key).
+
+version: "3.1"
+
+responses:
+  utter_greet:
+    - text: "Hi! I'm a banking assistant. How can I help you today?"
+      metadata:
+        rephrase: True
+
+  utter_help:
+    - text: |
+        I can help you with:
+        - Checking your balance
+        - Transferring money
+        - Bank hours
+        - Contact information
+      metadata:
+        rephrase: True
+
+  utter_contact:
+    - text: "You can reach us at support@bank.com or call 1-800-BANK-123."
+      metadata:
+        rephrase: True
+
+  utter_goodbye:
+    - text: "Goodbye! Have a great day!"
+      metadata:
+        rephrase: True

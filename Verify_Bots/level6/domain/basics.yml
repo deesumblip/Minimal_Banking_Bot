@@ -1,0 +1,69 @@
+## Level 5: Tool Calling
+#
+# This domain includes everything from previous levels, plus tool calling support.
+# - Responses (predefined bot messages)
+# - Actions (custom Python code)
+# - Multiple slots (conversation memory)
+# - Tools (dynamic functions the LLM can call)
+
+version: "3.1"
+
+slots:
+  account:
+    type: text
+  
+  amount:
+    type: text
+  
+  recipient:
+    type: text
+  
+  account_from:
+    type: text
+
+responses:
+  utter_greet:
+    - text: "Hi! I'm a banking assistant. How can I help you today?"
+      metadata:
+        rephrase: True
+
+  utter_help:
+    - text: |
+        I can help you with:
+        - Checking your balance
+        - Transferring money
+        - Bank hours
+        - Contact information
+      metadata:
+        rephrase: True
+
+  utter_contact:
+    - text: "You can reach us at support@bank.com or call 1-800-BANK-123."
+      metadata:
+        rephrase: True
+
+  utter_ask_account:
+    - text: "What is your account number?"
+      metadata:
+        rephrase: True
+
+  utter_ask_amount:
+    - text: "How much would you like to transfer?"
+      metadata:
+        rephrase: True
+
+  utter_ask_recipient:
+    - text: "Who would you like to transfer money to?"
+      metadata:
+        rephrase: True
+
+  utter_ask_account_from:
+    - text: "Which account would you like to transfer from?"
+      metadata:
+        rephrase: True
+
+actions:
+  - action_bank_hours
+  - action_check_balance_simple
+  - action_process_transfer
+  - action_process_transfer_with_tools

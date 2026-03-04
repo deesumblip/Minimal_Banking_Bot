@@ -1,0 +1,18 @@
+flows:
+  transfer_money_tools:
+    name: transfer money with tools
+    description: |
+      Demonstrates tool calling in a flow.
+      The bot collects the necessary information, then the LLM
+      can dynamically decide to call tools (like check_balance
+      or process_transfer) based on the conversation context.
+    steps:
+      - collect: amount
+        description: "transfer amount"
+      - collect: recipient
+        description: "recipient name or account"
+      - collect: account_from
+        description: "source account number"
+      - action: action_process_transfer_with_tools
+      # Note: Tools are registered in endpoints.yml and can be called
+      # dynamically by the LLM during the conversation

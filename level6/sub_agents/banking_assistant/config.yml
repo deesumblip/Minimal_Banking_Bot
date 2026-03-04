@@ -1,0 +1,12 @@
+﻿agent:
+  name: banking_assistant
+  protocol: RASA
+  description: "Helps users with balance checks, transfers, and general banking questions using MCP tools."
+
+configuration:
+  llm:
+    model_group: gpt-4o-mini
+
+connections:
+  mcp_servers:
+    - name: banking_mcp

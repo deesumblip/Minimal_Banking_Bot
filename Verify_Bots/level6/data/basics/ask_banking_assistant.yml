@@ -1,0 +1,9 @@
+﻿flows:
+  ask_banking_assistant:
+    name: ask banking assistant
+    description: |
+      Delegates to the banking assistant sub-agent (ReAct + LLM).
+      The sub-agent uses MCP tools and runs until it calls task_completed.
+    steps:
+      - call: banking_assistant
+      - action: utter_help
