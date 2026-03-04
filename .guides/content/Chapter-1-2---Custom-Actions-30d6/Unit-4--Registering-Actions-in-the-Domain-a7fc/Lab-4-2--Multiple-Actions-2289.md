@@ -28,3 +28,9 @@ In the Inspector chat, try:
 - **"What are your holiday hours?"** — The bot likely won't handle this yet, because there's no flow that uses your action. You'll add that flow in Unit 5.
 
 ---
+
+Run the assessment when you're done. It verifies that both actions are registered in the domain and that you have trained the bot (model file in `level2/models/`).
+
+{Check It!|assessment}(code-output-compare-1597644299)
+
+---

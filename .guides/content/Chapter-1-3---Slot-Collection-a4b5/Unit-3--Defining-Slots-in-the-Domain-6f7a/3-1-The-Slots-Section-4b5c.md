@@ -24,3 +24,5 @@ actions:                  # From Level 2 (unchanged); you add action_check_balan
 ```
 
 `slots:` is at the same indentation level as `responses:` and `actions:`.
+
+{Check It!|assessment}(multiple-choice-2551391875)

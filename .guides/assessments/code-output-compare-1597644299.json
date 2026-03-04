@@ -4,7 +4,7 @@
 	"source": {
 		"name": "Lab 4.2: Multiple Actions",
 		"showName": true,
-		"instructions": "Verify that both actions are registered in the domain (same verification as Lab 4.1); optional Inspector steps are ungraded.",
+		"instructions": "Verify that both actions are registered in the domain and that you have trained the bot (model file exists). Run from project root.",
 		"command": "bash /home/codio/workspace/.guides/secure/level2_graders/lab_4.2_grader.sh",
 		"preExecuteCommand": "",
 		"options": {
@@ -35,7 +35,7 @@
 		},
 		"bloomsObjectiveLevel": "",
 		"learningObjectives": "",
-		"guidance": "Lab 4.2 assessment reuses Lab 4.1 verification (both actions registered). Optional Inspector review is not graded.",
+		"guidance": "The grader runs Lab 4.1 checks (both actions in domain) then verifies a model file exists in level2/models/. If domain fails, fix domain and re-run. If Check 7 fails, run 'cd level2' and 'python -m rasa train' from project root with venv active.",
 		"showGuidanceAfterResponseOption": {
 			"type": "Never"
 		},

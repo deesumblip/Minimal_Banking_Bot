@@ -65,4 +65,6 @@ class ActionBankHours(Action):
 - ❌ Forgetting to return `[]` from `run()`
 - ❌ Typos in method names (`run` not `runs`, `name` not `names`)
 
+{Check It!|assessment}(multiple-choice-596103225)
+
 ---

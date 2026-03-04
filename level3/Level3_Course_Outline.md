@@ -84,8 +84,8 @@
 ---
 
 ### Unit 4: Reading Slots in Actions
-**Type**: Content + Lab (no assessment)  
-**Assessment**: None. Lab 4.1 – Exploring Actions with Slots (ungraded).
+**Type**: Content + Lab (with Assessment)  
+**Assessment**: Lab 4.1 – Writing the Action That Uses the Slot (Code Output Compare, 10 pts; Python grader `lab_4.1_grader.py`).
 
 **Placement**: This unit comes **before** Unit 5 so students understand how the action uses the slot before they create the flow that runs it.
 
@@ -95,7 +95,7 @@
 - 4.2 Placeholder Handling
   - Check for None, placeholders; re-prompt with utter_ask_account
 
-**Lab 4.1**: Explore `action_check_balance_simple.py` (provided); see how it reads the slot and handles placeholders. No graded assessment.
+**Lab 4.1**: Create `action_check_balance_simple.py`; read the slot, handle placeholders, send balance message. Graded via Code Output Compare (taskId: code-output-compare-2346557110).
 
 **Key Concepts**: Tracker, get_slot, placeholder handling
 
@@ -174,18 +174,22 @@
 
 ## Assessment Summary
 
-| Unit | Lab | Points | Type | Grader Script |
-|------|-----|--------|------|---------------|
-| Unit 3 | Lab 3.1 | 8 | LLM Rubric (recommended) or Standard Code Test | `lab_3.1_solution_reference.md` / `lab_3.1_grader.sh` |
-| Unit 5 | Lab 5.1 | 8 | LLM Rubric (recommended) or Standard Code Test | `lab_5.1_solution_reference.md` / `lab_5.1_grader.sh` |
-| Unit 6 | Lab 6.1 | 12 | Standard Code Test (Python) | `lab_6.1_grader.py` |
+| Unit | Lab | Points | Type | Grader / Assessment |
+|------|-----|--------|------|---------------------|
+| Unit 3 | Lab 3.1 | 8 | Code Output Compare (or LLM Rubric) | `lab_3.1_grader.py`; taskId: `code-output-compare-3187585640` |
+| Unit 4 | Lab 4.1 | 10 | Code Output Compare (Python grader) | `lab_4.1_grader.py`; taskId: `code-output-compare-2346557110` |
+| Unit 5 | Lab 5.1 | 8 | Code Output Compare (or LLM Rubric) | `lab_5.1_grader.py`; taskId: `code-output-compare-1235165472` |
+| Unit 6 | Lab 6.1 | 12 | Code Output Compare (Python) | `lab_6.1_grader.py`; taskId: `code-output-compare-1029038275` |
 
-**Total Assessment Points**: ~24–28 (adjust per course design)
+**Total Assessment Points**: 38 (or adjust per course design if using LLM Rubric for 3.1/5.1).
 
 **Conventions** (same as L1/L2):
 - Grader runs from **workspace root**; activates venv, then `cd level3`.
 - Script prints `PASS` / `Successfully passed!` on full score.
 - Codio Working Directory: `/home/codio/workspace`.
+
+**Chapter 1.3 (Codio guide)**  
+Code-output-compare Check It! tags are on Labs 3.1, 4.1, 5.1, 6.1 in `.guides/content/Chapter-1-3---Slot-Collection-a4b5/`. Multiple-choice and fill-in-the-blanks Check It! tags are on content pages: 1.1, 2.3, 3.1, 4.1, 5.1, 5.2, 6.2, Lab 6.2, 8.1.
 
 ---
 
@@ -201,7 +205,7 @@
 
 ### Lab Content + Assessment Setup
 - `Level3_Lab3.1_Content.md` / `Level3_Lab3.1_Assessment_Setup.md` (graded)
-- `Level3_Lab4.1_Content.md` / `Level3_Lab4.1_Assessment_Setup.md` (ungraded, exploration)
+- `Level3_Lab4.1_Content.md` / `Level3_Lab4.1_Assessment_Setup.md` (graded; Python grader)
 - `Level3_Lab5.1_Content.md` / `Level3_Lab5.1_Assessment_Setup.md` (graded)
 - `Level3_Lab6.1_Content.md` / `Level3_Lab6.1_Assessment_Setup.md` (graded)
 - `Level3_Lab6.2_Content.md` / `Level3_Lab6.2_Assessment_Setup.md` (ungraded, testing)

@@ -25,6 +25,10 @@ Explore the `level2` folder, focusing on the `actions/` subfolder. Use the file 
 
 Use what you see to answer the questions.
 
+{Check It!|assessment}(multiple-choice-2271484345)
+{Check It!|assessment}(multiple-choice-1522273536)
+{Check It!|assessment}(multiple-choice-1161185791)
+
 ---
 
 ## Assessment Setup (For Implementers)

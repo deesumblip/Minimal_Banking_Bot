@@ -38,18 +38,18 @@ This document provides implementation guidance for **Level 3: Slot Collection** 
 
 ### Lab Content (Student-facing)
 - `Level3_Lab3.1_Content.md` – Defining a slot in the domain (graded)
-- `Level3_Lab4.1_Content.md` – Exploring actions with slots (ungraded)
+- `Level3_Lab4.1_Content.md` – Writing the action that uses the slot (graded; Python grader)
 - `Level3_Lab5.1_Content.md` – Creating a flow with slot collection (graded)
 - `Level3_Lab6.1_Content.md` – Training and testing with slots (graded)
-- `Level3_Lab6.2_Content.md` – Testing slot collection in Inspector (ungraded)
+- `Level3_Lab6.2_Content.md` – Testing slot collection in Inspector (completion-based; MC Check It! on guide page)
 - `Level3_Lab7.1_Content.md` – Complete bot walkthrough (ungraded)
 
 ### Assessment Setup (Implementers)
-- `Level3_Lab3.1_Assessment_Setup.md` – Lab 3.1 (LLM Rubric or Bash)
-- `Level3_Lab4.1_Assessment_Setup.md` – No assessment
-- `Level3_Lab5.1_Assessment_Setup.md` – Lab 5.1 (LLM Rubric or Bash)
-- `Level3_Lab6.1_Assessment_Setup.md` – Lab 6.1 Python grader
-- `Level3_Lab6.2_Assessment_Setup.md` – No assessment
+- `Level3_Lab3.1_Assessment_Setup.md` – Lab 3.1 (Code Output Compare or LLM Rubric; taskId: code-output-compare-3187585640)
+- `Level3_Lab4.1_Assessment_Setup.md` – Lab 4.1 (Code Output Compare, Python grader; taskId: code-output-compare-2346557110)
+- `Level3_Lab5.1_Assessment_Setup.md` – Lab 5.1 (Code Output Compare or LLM Rubric; taskId: code-output-compare-1235165472)
+- `Level3_Lab6.1_Assessment_Setup.md` – Lab 6.1 (Code Output Compare, Python grader; taskId: code-output-compare-1029038275)
+- `Level3_Lab6.2_Assessment_Setup.md` – No graded assessment (completion-based; multiple-choice Check It! on content/Lab 6.2 page)
 - `Level3_Lab7.1_Assessment_Setup.md` – No assessment
 
 ---
@@ -104,3 +104,6 @@ level3/
 | `LevelN_Lab*_Content.md` + `_Assessment_Setup.md` | Same |
 
 Use the same workflow: copy unit content into guide pages, copy lab content into lab pages, configure assessments from Assessment_Setup files and grader scripts.
+
+**Chapter 1.3 (Codio guide)**  
+The Chapter 1.3 guide in `.guides/content/Chapter-1-3---Slot-Collection-a4b5/` includes Check It! tags: code-output-compare on Labs 3.1, 4.1, 5.1, 6.1; multiple-choice and fill-in-the-blanks on 1.1, 2.3, 3.1, 4.1, 5.1, 5.2, 6.2, Lab 6.2, 8.1.

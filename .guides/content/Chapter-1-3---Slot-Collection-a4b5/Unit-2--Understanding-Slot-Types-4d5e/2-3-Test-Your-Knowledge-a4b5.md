@@ -32,3 +32,8 @@ d) Type: `text`, good name: `data`
 | 1 | **b** | A slot is the bot's memory: it stores information from the conversation. |
 | 2 | **b** | The `collect:` step gets the slot value; if empty, the bot asks using `utter_ask_*` and stores the answer. |
 | 3 | **b** | We use `text` slots in Level 3. Good names are descriptive and lowercase, such as `account`; avoid vague names like `a`, `slot1`, or `data`. |
+
+{Check It!|assessment}(multiple-choice-2132752574)
+{Check It!|assessment}(multiple-choice-3629141196)
+{Check It!|assessment}(multiple-choice-3564777170)
+{Check It!|assessment}(multiple-choice-1338557833)

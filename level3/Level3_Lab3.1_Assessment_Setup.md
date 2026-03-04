@@ -6,6 +6,8 @@
 
 **Task.** In `domain/basics.yml` in the `level3` folder, add the `slots:` section with `account` (type text), the `utter_ask_account` response, and register `action_check_balance_simple` in the `actions:` list. Run the assessment when done.
 
+**Codio guide (Chapter 1.3).** The Lab 3.1 page in the Chapter 1.3 guide includes: `{Check It!|assessment}(code-output-compare-3187585640)`. Assessment JSON: `.guides/assessments/code-output-compare-3187585640.json`.
+
 ---
 
 ## Assessment Setup (For Implementers)

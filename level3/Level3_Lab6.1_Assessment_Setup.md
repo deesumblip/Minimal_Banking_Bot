@@ -26,6 +26,8 @@ Before submitting, confirm:
 
 Run the assessment when you're done (Part 1 path).
 
+**Codio guide (Chapter 1.3).** The Lab 6.1 page includes: `{Check It!|assessment}(code-output-compare-1029038275)`. Assessment JSON: `.guides/assessments/code-output-compare-1029038275.json`. Grader: `.guides/secure/level3_graders/lab_6.1_grader.py`.
+
 ---
 
 #### Review in Inspector (optional)

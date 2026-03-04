@@ -13,3 +13,5 @@ def run(self, dispatcher, tracker, domain):
 Slots can be `None` if not set yet, so always check before using them.
 
 In **Lab 4.1** you'll **write** this action in `action_check_balance_simple.py`. In the next unit you will create the flow that collects the slot and runs this action.
+
+{Check It!|assessment}(multiple-choice-932698064)

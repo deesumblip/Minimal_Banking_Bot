@@ -16,4 +16,7 @@ Your goal is to **complete** the action file that reads the `account` slot and h
 
 - **Verify** your domain (from Lab 3.1) lists `action_check_balance_simple` in the `actions:` section.
 - **Run the assessment** when you're done.
+
+{Check It!|assessment}(code-output-compare-2346557110)
+
 - **Optional.** After Lab 6.1, train and run Inspector. Trigger the check_balance flow and watch the action use the slot and re-ask when the LLM extracts a placeholder.

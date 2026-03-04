@@ -1,18 +1,18 @@
 {
 	"type": "code-output-compare",
-	"taskId": "code-output-compare-1298982787",
+	"taskId": "code-output-compare-401050001",
 	"source": {
-		"name": "Lab 3.1: Create Your Own Action",
+		"name": "Lab 5.1: Training the Level 4 Bot",
 		"showName": true,
-		"instructions": "After you've completed the steps above, run the assessment here to see if you've completed it correctly!",
-		"command": "bash /home/codio/workspace/.guides/secure/level2_graders/lab_3.1_grader.sh",
-		"preExecuteCommand": "cd /home/codio/workspace/level2",
+		"instructions": "Run the assessment.",
+		"command": "/home/codio/workspace/.venv/bin/python3 /home/codio/workspace/.guides/secure/level4_graders/lab_5.1_grader.py",
+		"preExecuteCommand": "",
 		"options": {
 			"timeout": 60,
 			"ignoreCase": true,
 			"ignoreWhitespaces": true,
 			"ignoreNewline": true,
-			"matchSubstring": false
+			"matchSubstring": true
 		},
 		"metadata": {
 			"tags": [
@@ -22,7 +22,7 @@
 				}
 			],
 			"files": [
-				".guides/secure/level2_graders/lab_3.1_grader.sh"
+				".guides/secure/level4_graders/lab_5.1_grader.py"
 			],
 			"opened": [
 				{
@@ -34,14 +34,15 @@
 		},
 		"bloomsObjectiveLevel": "",
 		"learningObjectives": "",
-		"guidance": "",
+		"guidance": "The grader verifies the virtual environment in project root, that a model file (.tar.gz) exists in level4/models/, that the model is recent, and that logs do not show critical errors. Ensure you ran 'python -m rasa train' from the level4 folder with the venv activated.",
 		"showGuidanceAfterResponseOption": {
-			"type": "Never"
+			"type": "Attempts",
+			"passedFrom": 1
 		},
 		"maxAttemptsCount": 0,
 		"points": 12,
 		"showExpectedAnswerOption": {
-			"type": "Always"
+			"type": "WhenGradesReleased"
 		},
 		"arePartialPointsAllowed": true,
 		"useMaximumScore": false,
@@ -49,7 +50,7 @@
 			{
 				"arguments": "",
 				"input": "",
-				"output": "",
+				"output": "PASS",
 				"showFeedback": false,
 				"feedback": ""
 			}

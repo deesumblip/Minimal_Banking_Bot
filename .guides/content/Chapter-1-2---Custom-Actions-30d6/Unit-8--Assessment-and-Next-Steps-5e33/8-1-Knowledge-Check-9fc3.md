@@ -63,4 +63,7 @@ d) They're the same thing
 
 **Explanation**: `utter_*` responses are predefined text messages in the domain file. `action_*` actions are custom Python code that can execute any logic. Both can be called from flows using `- action:`, but they work differently.
 
+{Check It!|assessment}(multiple-choice-2798625275)
+{Check It!|assessment}(multiple-choice-914481846)
+
 ---

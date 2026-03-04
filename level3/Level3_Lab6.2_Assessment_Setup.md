@@ -6,6 +6,8 @@
 
 **Task**: Start Inspector and test slot collection, slot persistence, and Level 1/2 flows. No graded assessment.
 
+**Codio guide (Chapter 1.3).** The Unit 6.2 content page and Lab 6.2 page include multiple-choice Check It! tags (e.g. multiple-choice-2446085116, 3751028362, 2697467428) for knowledge check only; no Code Test.
+
 ---
 
 ## Assessment Setup (For Implementers)

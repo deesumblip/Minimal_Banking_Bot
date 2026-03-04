@@ -48,3 +48,5 @@ Before submitting, confirm:
 - `run()` calls `dispatcher.utter_message()` and returns `[]`
 
 Run the assessment when you're done.
+
+{Check It!|assessment}(code-output-compare-2266471391)

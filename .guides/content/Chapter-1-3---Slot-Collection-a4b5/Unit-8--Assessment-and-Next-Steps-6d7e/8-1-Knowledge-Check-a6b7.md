@@ -48,3 +48,8 @@ d) `slot_<slot_name>_prompt`
 | 3 | **b** | The `collect:` step tells Rasa to get the slot value; if empty, the bot asks (using the `utter_ask_*` response) and stores the answer. |
 | 4 | **b** | In an action, you read a slot from the `tracker`: `tracker.get_slot("slot_name")`. |
 | 5 | **b** | The convention is `utter_ask_<slot_name>`; for the `account` slot you use `utter_ask_account`. |
+
+{Check It!|assessment}(multiple-choice-2551391875)
+{Check It!|assessment}(multiple-choice-2502214147)
+{Check It!|assessment}(multiple-choice-932698064)
+{Check It!|assessment}(multiple-choice-2132752574)

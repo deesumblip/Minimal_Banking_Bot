@@ -7,3 +7,5 @@ As in Unit 1.3, when the flow runs:
 3. Step 2. `action_check_balance_simple` runs and reads the slot.
 
 The bot only asks when the slot is empty. If the slot already has a value, for example from an earlier turn in the conversation, Rasa uses that value immediately.
+
+{Check It!|assessment}(multiple-choice-3629141196)

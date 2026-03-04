@@ -257,14 +257,16 @@
 |--------|-----|--------|------|---------------|
 | Unit 3 | Lab 3.1 | 8 | Standard Code Test | `lab_3.1_grader.sh` |
 | Unit 4 | Lab 4.1 | 11 | Standard Code Test | `lab_4.1_grader.sh` |
-| Unit 4 | Lab 4.2 | — | No assessment | Covered by Lab 4.1 |
+| Unit 4 | Lab 4.2 | 11 | Code Output Compare | `lab_4.2_grader.sh` (domain + model file) |
 | Unit 5 | Lab 5.1 | 12 | Standard Code Test | `lab_5.1_grader.sh` |
 | Unit 6 | Lab 6.1 | 4 | Standard Code Test | `lab_6.1_grader.sh` |
 
-**Total Assessment Points**: 35 points
+**Total Assessment Points**: 46 points
 
 **Codio: Grader updates from GitHub**  
 When you set up or edit assessments on Codio, configure each Code Test to **run the grader script from the workspace** (e.g. `bash /home/codio/workspace/.guides/secure/level2_graders/lab_5.1_grader.sh`). Do **not** upload or paste the script content into the assessment. That way, when you push grader changes to GitHub and pull on Codio, the assessment will use the updated script automatically.
+
+**Chapter 1.2 (Codio guide)**: Code-output-compare Check It! tags are on Labs 3.1, 4.1, 4.2, 5.1, 6.1. Multiple-choice Check It! tags are on content pages: 1.1, 1.4, 2.2, 2.3, Lab 2.1, 3.1, 3.2, 7.1, 8.1 (see `.guides/content/Chapter-1-2---Custom-Actions-30d6/`).
 
 ---
 

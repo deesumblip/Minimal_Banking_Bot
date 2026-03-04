@@ -74,6 +74,8 @@ actions:
 
 Run the assessment when done.
 
+{Check It!|assessment}(code-output-compare-3187585640)
+
 ## Part 2: Running locally
 
 1. Open your project in an editor. Go to the main project folder (root), activate the venv, then `cd level3`.

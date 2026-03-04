@@ -1,0 +1,59 @@
+{
+	"type": "code-output-compare",
+	"taskId": "code-output-compare-401030001",
+	"source": {
+		"name": "Lab 3.1: Writing the Action That Uses Multiple Slots",
+		"showName": true,
+		"instructions": "Run the assessment.",
+		"command": "/home/codio/workspace/.venv/bin/python3 /home/codio/workspace/.guides/secure/level4_graders/lab_3.1_grader.py",
+		"preExecuteCommand": "",
+		"options": {
+			"timeout": 60,
+			"ignoreCase": true,
+			"ignoreWhitespaces": true,
+			"ignoreNewline": true,
+			"matchSubstring": true
+		},
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Standard Code Test"
+				}
+			],
+			"files": [
+				".guides/secure/level4_graders/lab_3.1_grader.py"
+			],
+			"opened": [
+				{
+					"type": "terminal",
+					"panelNumber": 1,
+					"content": ""
+				}
+			]
+		},
+		"bloomsObjectiveLevel": "",
+		"learningObjectives": "",
+		"guidance": "The grader checks that level4/actions/action_process_transfer.py exists and contains: correct imports, class ActionProcessTransfer(Action), name() returning 'action_process_transfer', run() reading amount, recipient, and account_from slots, and sending a confirmation message. Review the script output for which check failed.",
+		"showGuidanceAfterResponseOption": {
+			"type": "Attempts",
+			"passedFrom": 1
+		},
+		"maxAttemptsCount": 0,
+		"points": 10,
+		"showExpectedAnswerOption": {
+			"type": "WhenGradesReleased"
+		},
+		"arePartialPointsAllowed": true,
+		"useMaximumScore": false,
+		"sequence": [
+			{
+				"arguments": "",
+				"input": "",
+				"output": "PASS",
+				"showFeedback": false,
+				"feedback": ""
+			}
+		]
+	}
+}

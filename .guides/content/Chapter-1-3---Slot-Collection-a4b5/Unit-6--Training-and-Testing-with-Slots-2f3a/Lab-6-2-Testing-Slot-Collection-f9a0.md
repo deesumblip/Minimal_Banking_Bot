@@ -58,3 +58,7 @@ d) Check the debug panel only
 | 1 | **b** | When the slot is empty, the `collect:` step prompts the user via `utter_ask_account`. |
 | 2 | **b** | Slot persistence means the bot remembers the account across turns and does not re-ask. |
 | 3 | **b** | "What are your hours?" triggers the Level 2 `hours` flow; if it works, Level 2 is intact. |
+
+{Check It!|assessment}(multiple-choice-2446085116)
+{Check It!|assessment}(multiple-choice-3751028362)
+{Check It!|assessment}(multiple-choice-2697467428)

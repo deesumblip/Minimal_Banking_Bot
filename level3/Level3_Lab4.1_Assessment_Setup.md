@@ -6,6 +6,8 @@
 
 **Task.** Create `level3/actions/action_check_balance_simple.py`: a custom action that reads the `account` slot, treats placeholder values (e.g. "account number", "<missing>") as invalid and re-prompts with `utter_ask_account`, and otherwise sends a demo balance message. The domain already lists `action_check_balance_simple` from Lab 3.1. Run the assessment when done.
 
+**Codio guide (Chapter 1.3).** The Lab 4.1 page includes: `{Check It!|assessment}(code-output-compare-2346557110)`. Assessment JSON: `.guides/assessments/code-output-compare-2346557110.json`. Grader: `.guides/secure/level3_graders/lab_4.1_grader.py`.
+
 ---
 
 ## Assessment Setup (For Implementers)

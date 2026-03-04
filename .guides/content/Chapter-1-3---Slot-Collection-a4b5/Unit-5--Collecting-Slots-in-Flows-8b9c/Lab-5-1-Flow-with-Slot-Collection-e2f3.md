@@ -26,6 +26,8 @@ flows:
 
 Run the assessment when done.
 
+{Check It!|assessment}(code-output-compare-1235165472)
+
 ## Part 2: Running locally
 
 1. From the project root, activate the venv, then `cd level3`.

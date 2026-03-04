@@ -1,0 +1,59 @@
+{
+	"type": "code-output-compare",
+	"taskId": "code-output-compare-401020001",
+	"source": {
+		"name": "Lab 2.1: Adding Multiple Slots in the Domain",
+		"showName": true,
+		"instructions": "Run the assessment.",
+		"command": "/home/codio/workspace/.venv/bin/python3 /home/codio/workspace/.guides/secure/level4_graders/lab_2.1_grader.py",
+		"preExecuteCommand": "",
+		"options": {
+			"timeout": 60,
+			"ignoreCase": true,
+			"ignoreWhitespaces": true,
+			"ignoreNewline": true,
+			"matchSubstring": true
+		},
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Standard Code Test"
+				}
+			],
+			"files": [
+				".guides/secure/level4_graders/lab_2.1_grader.py"
+			],
+			"opened": [
+				{
+					"type": "terminal",
+					"panelNumber": 1,
+					"content": ""
+				}
+			]
+		},
+		"bloomsObjectiveLevel": "",
+		"learningObjectives": "",
+		"guidance": "The grader checks that level4/domain/basics.yml exists, is valid YAML, and contains: slots amount, recipient, account_from (type text); responses utter_ask_amount, utter_ask_recipient, utter_ask_account_from with at least one message each; action_process_transfer in the actions list. Review the script output for which check failed.",
+		"showGuidanceAfterResponseOption": {
+			"type": "Attempts",
+			"passedFrom": 1
+		},
+		"maxAttemptsCount": 0,
+		"points": 10,
+		"showExpectedAnswerOption": {
+			"type": "WhenGradesReleased"
+		},
+		"arePartialPointsAllowed": true,
+		"useMaximumScore": false,
+		"sequence": [
+			{
+				"arguments": "",
+				"input": "",
+				"output": "PASS",
+				"showFeedback": false,
+				"feedback": ""
+			}
+		]
+	}
+}

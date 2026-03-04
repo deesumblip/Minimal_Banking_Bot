@@ -62,4 +62,6 @@ Important:
 
 Run the assessment when you're done.
 
+{Check It!|assessment}(code-output-compare-1451983168)
+
 Optional: after the assessment, see Unit 6.3 to try the bot in the Inspector.

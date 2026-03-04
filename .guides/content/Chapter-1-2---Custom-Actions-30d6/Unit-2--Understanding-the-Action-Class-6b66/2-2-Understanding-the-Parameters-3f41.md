@@ -41,4 +41,6 @@ For Level 2, you typically don't need to access the domain directly.
 
 **Next**: In Unit 3 you'll use this structure to create your own action, and in Lab 3.1 you'll build `action_holiday_hours.py`.
 
+{Check It!|assessment}(multiple-choice-3813943953)
+
 ---

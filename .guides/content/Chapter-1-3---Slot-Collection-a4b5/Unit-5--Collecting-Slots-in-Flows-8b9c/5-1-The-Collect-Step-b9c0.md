@@ -10,3 +10,6 @@ steps:
 
 - **`collect: account`**. The slot to collect.
 - **`description:`**. Helps the LLM understand what to extract. Optional, but recommended.
+
+{Check It!|assessment}(multiple-choice-2502214147)
+{Check It!|assessment}(fill-in-the-blanks-1454903744)

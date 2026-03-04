@@ -12,6 +12,8 @@ Your goal is to train your Level 3 bot (with slots) and verify it works.
 
 Run the assessment when done.
 
+{Check It!|assessment}(code-output-compare-1029038275)
+
 ## Part 2: Running locally
 
 Follow the same logic as Part 1, but use your own terminal and OS-specific commands.
