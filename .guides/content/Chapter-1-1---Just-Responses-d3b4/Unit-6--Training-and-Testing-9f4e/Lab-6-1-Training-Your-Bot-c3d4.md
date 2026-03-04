@@ -4,7 +4,7 @@
 
 1. **Virtual environment**: In the terminal window (it opens at `~/workspace`; your prompt may show `~/workspace$`), go to the main project folder (the one that contains `level1`, `level2`, and `.guides`). Run `ls -la .venv`. If it exists: `source .venv/bin/activate`. If not: `python3.11 -m venv .venv` then `source .venv/bin/activate`. Prompt should show `(.venv)`.
 2. **Navigate to level1**: Go to the `level1` folder: `cd level1`. Confirm with `pwd` (path should end in `level1`).
-3. **Rasa**: Run `python -m rasa --version`. If error, install: `python -m pip install --no-cache-dir rasa-pro`.
+3. **Rasa**: Run `python -m rasa --version`. If error, install: `pip install rasa-pro` (with venv active).
 4. **Train**: From `level1` with venv active: `python -m rasa train`. Wait for "Successfully saved model" (1–3 minutes).
 5. **Verify**: Terminal shows "Successfully saved model to 'models/...'". In the file tree, `level1/models/` should contain a new `.tar.gz` file.
 
@@ -22,7 +22,7 @@ Follow the same logic as Part 1, but use your own terminal and OS-specific comma
 2. **Go to the main project folder** (the one that contains `level1`, `level2`, and `.guides`).  
    Example: `cd C:\Users\You\Minimal_Banking_Bot` or `cd ~/Minimal_Banking_Bot`.
 3. **Activate the virtual environment** (the `.venv` folder is in the main project folder):
-   - **Windows (PowerShell)**: `.venv\Scripts\Activate.ps1`
+   - **Windows (PowerShell)**: `.\.venv\Scripts\Activate.ps1`
    - **Windows (Command Prompt)**: `.venv\Scripts\activate.bat`
    - **macOS / Linux**: `source .venv/bin/activate`  
    Your prompt should show `(.venv)`.

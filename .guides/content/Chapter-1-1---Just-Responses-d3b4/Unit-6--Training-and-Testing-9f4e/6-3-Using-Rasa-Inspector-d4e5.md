@@ -61,7 +61,7 @@ When Inspector opens, you'll see several areas. You don't need to understand eve
 
 #### Launching Rasa Inspector locally
 
-If you're **not** using Codio and want to run Inspector on your own computer, follow the steps for your operating system. You'll need: the `level1` project folder, a virtual environment with Rasa Pro installed, and a `.env` file in `level1` with `RASA_LICENSE` and `OPENAI_API_KEY` set (see Unit 0 and Lab 0.1).
+If you're **not** using Codio and want to run Inspector on your own computer, follow the steps for your operating system. You'll need: the `level1` project folder, a virtual environment with Rasa Pro installed, and **RASA_LICENSE** set (e.g. `.env` in project root; see Unit 0 and Lab 0.1).
 
 **1. Go to your project folder**
 
@@ -99,5 +99,5 @@ Leave this terminal window open. When you see something like `Starting Rasa serv
 **Troubleshooting (local)**
 
 - **"No module named 'rasa'"** – Activate the virtual environment again and make sure Rasa is installed (`pip install rasa-pro`).
-- **"RASA_LICENSE" or "OPENAI_API_KEY" not set** – Create or edit `.env` in the `level1` folder with both variables (no quotes around the values). Restart the terminal and run `rasa inspect` again from `level1`.
+- **"RASA_LICENSE" not set** – Set RASA_LICENSE (e.g. create or edit `.env` in the **project root** with `RASA_LICENSE=your-license`, then source it from root before `cd level1`). See Lab 0.1. Restart the terminal and run `rasa inspect` again from `level1`.
 - **"Address already in use" or port 5005 in use** – Another program is using port 5005. Close other Rasa or Python processes, or use a different port: `python -m rasa inspect --debug --port 5006` and then open **http://localhost:5006** (or …/inspect.html on 5006) in your browser.
