@@ -11,7 +11,7 @@
 	"layout": "2-panels-tree-guides-left",
 	"path": [],
 	"type": "page",
-	"contentType": "markdown",
+	"contentType": "markdown", "content": "",
 	"teacherOnly": false,
 	"closeTerminalSession": true,
 	"learningObjectives": ""
