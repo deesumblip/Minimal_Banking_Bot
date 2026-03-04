@@ -48,7 +48,7 @@
 				{
 					"type": "file",
 					"panelNumber": 1,
-					"content": "level1/data/basics/greet.yml"
+					"path": "level1/data/basics/greet.yml"
 				}
 			]
 		},

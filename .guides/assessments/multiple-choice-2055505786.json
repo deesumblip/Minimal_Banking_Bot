@@ -48,7 +48,7 @@
 				{
 					"type": "file",
 					"panelNumber": 1,
-					"content": "level1/domain/basics.yml"
+					"path": "level1/domain/basics.yml"
 				}
 			]
 		},
