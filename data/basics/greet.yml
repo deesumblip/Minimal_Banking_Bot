@@ -1,7 +1,0 @@
-flows:
-  greet:
-    name: say hello
-    description: Greet the user.
-    steps:
-      - action: utter_greet
-

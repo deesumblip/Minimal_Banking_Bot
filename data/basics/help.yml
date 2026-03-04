@@ -1,7 +1,0 @@
-flows:
-  help:
-    name: help
-    description: Explain what the bot can do.
-    steps:
-      - action: utter_help
-
