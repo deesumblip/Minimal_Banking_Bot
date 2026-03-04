@@ -39,7 +39,7 @@
 			"type": "Never"
 		},
 		"maxAttemptsCount": 0,
-		"points": 6,
+		"points": 7,
 		"showExpectedAnswerOption": {
 			"type": "Always"
 		},
