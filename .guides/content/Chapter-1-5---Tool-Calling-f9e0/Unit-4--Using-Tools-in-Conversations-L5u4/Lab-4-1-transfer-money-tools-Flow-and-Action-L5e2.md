@@ -6,10 +6,28 @@
 - Has a `name` and `description` (e.g. "transfer money with tools" — the description helps the LLM know when to trigger it).
 - **steps:** collect amount (with description), collect recipient (with description), collect account_from (with description), then `action: action_process_transfer_with_tools`.
 
-**Step 2 — Action file.** Create `level5/actions/action_process_transfer_with_tools.py` with a custom action class that:
-- Inherits from `Action` (rasa_sdk).
-- `name()` returns `"action_process_transfer_with_tools"`.
-- `run()` can send a message and/or allow the LLM to use the registered tools in this context (implementation may call the tools or delegate to the LLM tool-calling mechanism per your Rasa version).
+**Step 2 — Action file.** Create `level5/actions/action_process_transfer_with_tools.py` with a custom action class that inherits from `Action` (rasa_sdk), implements `name()` returning `"action_process_transfer_with_tools"`, and implements `run()` returning a list of events (e.g. `[]`). For this lab the action can be minimal: when this step runs, the LLM will use the registered tools in this flow step; you do not need to call the tools from inside the action. A minimal valid action looks like this:
+
+```python
+from typing import Any, Dict, List, Text
+
+from rasa_sdk import Action, Tracker
+from rasa_sdk.executor import CollectingDispatcher
+
+
+class ActionProcessTransferWithTools(Action):
+    def name(self) -> Text:
+        return "action_process_transfer_with_tools"
+
+    def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> List[Dict[Text, Any]]:
+        # Optional: send a message, then return. The LLM can use tools in this step.
+        return []
+```
 
 **Step 3 — Domain.** Open `level5/domain/basics.yml` and add `action_process_transfer_with_tools` to the `actions:` list (alongside the existing actions).
 

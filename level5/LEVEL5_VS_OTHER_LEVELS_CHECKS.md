@@ -53,11 +53,11 @@ Level 4 has LEVEL4_CONTENT_LABS_AND_ASSESSMENTS.md, LEVEL4_BUILD_FROM_LEVEL3_APP
 
 ---
 
-## 6. Grader script behavior (Windows / Unicode)
+## 6. Grader script behavior (Codio-only)
 
-Graders use /home/codio/workspace and Unicode symbols in print(); on Windows this can fail (path and cp1252 encoding).
+Graders use `/home/codio/workspace` and are designed to run on Codio only.
 
-**Check needed:** Document that graders are Codio-only, or make them Windows-friendly (env var for workspace root, ASCII-only output).
+**Resolved:** Graders are Codio-only; no Windows or local support required.
 
 ---
 
@@ -70,4 +70,4 @@ Graders use /home/codio/workspace and Unicode symbols in print(); on Windows thi
 | 3 | Unit 6.4/6.5 source in level5/ | High | Add Level5_Unit6_Content_6.4 and 6.5 .md in level5/; sync with .guides. |
 | 4 | TUTORIAL.md | Medium | Add level5/TUTORIAL.md (ToC + module summary). |
 | 5 | LEVEL5_CONTENT_LABS_AND_ASSESSMENTS | Low | Optional doc mapping content to labs and taskIds. |
-| 6 | Grader Windows/Unicode | Low | Document Codio-only or make graders env/ASCII-safe. |
+| 6 | Grader Codio-only | Done | Graders are Codio-only; no Windows support required. |

@@ -89,7 +89,7 @@ level5/
 - Labs 5.1, 5.2: Code Test (lab_5.1_grader.py, lab_5.2_grader.py).
 - **Working Directory**: `/home/codio/workspace` (project root)
 - **Success output**: Script must print a line containing `PASS` or `Successfully passed!` for Codio expected-output match.
-- **Environment note**: Graders assume **Codio** (working directory `/home/codio/workspace`). On Windows, the path and Unicode output (e.g. emoji in print) may cause failures; run graders on Codio or in a Linux/WSL environment with the same workspace path for smoke testing.
+- **Environment note**: Graders are **Codio-only**. They run in Codio with working directory `/home/codio/workspace`; no need to support Windows or local runs.
 
 ---
 
