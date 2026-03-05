@@ -138,7 +138,7 @@ Having multiple variations of the same response makes your bot feel more natural
 
 #### When to Use Variations
 
-{Check It!|assessment}(llm-based-auto-rubric-3895222681)
+{Check It!|assessment}(code-output-compare-101020002)
 
 
 **Good for**:

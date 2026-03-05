@@ -1,0 +1,57 @@
+{
+	"type": "code-output-compare",
+	"taskId": "code-output-compare-101020002",
+	"source": {
+		"name": "Lab 2.2: Creating Your First Response",
+		"showName": true,
+		"instructions": "Run the assessment to verify your utter_goodbye response in level1/domain/basics.yml.",
+		"command": "python3 /home/codio/workspace/.guides/secure/level1_graders/lab_2.2_grader.py",
+		"preExecuteCommand": "",
+		"options": {
+			"timeout": 15,
+			"ignoreCase": true,
+			"ignoreWhitespaces": true,
+			"ignoreNewline": true,
+			"matchSubstring": true
+		},
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Standard Code Test"
+				}
+			],
+			"files": [
+				".guides/secure/level1_graders/lab_2.2_grader.py"
+			],
+			"opened": [
+				{
+					"type": "terminal",
+					"panelNumber": 1
+				}
+			]
+		},
+		"bloomsObjectiveLevel": "",
+		"learningObjectives": "",
+		"guidance": "If the assessment fails, ensure level1/domain/basics.yml has utter_goodbye under responses: with - text: and metadata: rephrase: True.",
+		"showGuidanceAfterResponseOption": {
+			"type": "Always"
+		},
+		"maxAttemptsCount": 0,
+		"points": 10,
+		"showExpectedAnswerOption": {
+			"type": "Always"
+		},
+		"arePartialPointsAllowed": false,
+		"useMaximumScore": false,
+		"sequence": [
+			{
+				"arguments": "",
+				"input": "",
+				"output": "PASS",
+				"showFeedback": false,
+				"feedback": ""
+			}
+		]
+	}
+}
