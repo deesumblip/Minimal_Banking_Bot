@@ -26,7 +26,7 @@ def main():
 
     try:
         with open(DOMAIN_FILE, "r", encoding="utf-8") as f:
-            content = f.read()
+            content = f.read().replace("\r\n", "\n").replace("\r", "\n")
     except Exception as e:
         print("FAIL")
         print(f"Cannot read file: {e}", file=sys.stderr)
@@ -42,24 +42,17 @@ def main():
         print("utter_goodbye not found under responses:.", file=sys.stderr)
         sys.exit(1)
 
-    # Find the utter_goodbye block (from "utter_goodbye:" until next top-level key at same indent)
-    lines = content.splitlines()
-    in_goodbye = False
-    goodbye_block = []
-    for line in lines:
-        stripped = line.strip()
-        if re.match(r"utter_goodbye\s*:", line) or (stripped.startswith("utter_goodbye:") and not line.startswith(" ")):
-            in_goodbye = True
-            goodbye_block = [line]
-            continue
-        if in_goodbye:
-            if line and not line[0].isspace() and ":" in line:
+    # Extract utter_goodbye section: from "utter_goodbye" to next "utter_xxx:" or end of file
+    block_text = ""
+    idx = content.find("utter_goodbye")
+    if idx >= 0:
+        rest = content[idx:]
+        for m in re.finditer(r"\n\s*utter_[a-z_]+\s*:", rest):
+            if "utter_goodbye" not in m.group(0):
+                block_text = rest[: m.start()].strip()
                 break
-            if line.strip().startswith("utter_") and "utter_goodbye" not in line:
-                break
-            goodbye_block.append(line)
-
-    block_text = "\n".join(goodbye_block)
+        else:
+            block_text = rest.strip()
     if "- text:" not in block_text and "text:" not in block_text:
         print("FAIL")
         print("utter_goodbye must have at least one variation (- text: ...).", file=sys.stderr)
