@@ -30,9 +30,9 @@
 
 ## Quick Start
 
-**Note**: If you're continuing from Level 4, you already have your virtual environment and Rasa Pro installed. You can skip steps 1-3 and go directly to step 4 (Train and run).
+**Note**: Use the **same virtual environment as Level 4** (created at **project root** in Lab 0.1). There is no new venv inside `level5/`. If you're continuing from Level 4, you already have your virtual environment and Rasa Pro installed. You can skip steps 1-3 and go directly to step 4 (Train and run). For Level 5, run all Rasa commands from the **level5** folder: `cd level5`, then `rasa train`, `rasa run`, etc.
 
-1. **Create and activate a virtual environment:**
+1. **Create and activate a virtual environment (only if starting fresh):**
    ```powershell
    py -3.11 -m venv .venv
    .\.venv\Scripts\Activate.ps1
@@ -50,9 +50,10 @@
    OPENAI_API_KEY=your-openai-api-key
    ```
 
-4. **Train and run:**
+4. **Train and run (from the level5 folder):**
    ```powershell
-   . .\load_env.ps1
+   cd level5
+   . ..\load_env.ps1
    python -m rasa train
    python -m rasa inspect --debug --log-file logs/logs.out
    ```

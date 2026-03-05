@@ -16,6 +16,9 @@ Your goal is to **complete** the action file that reads the `amount`, `recipient
 
 - **Verify** your domain (from Lab 2.1) lists `action_process_transfer` in the `actions:` section.
 - **Run the assessment** when you're done.
+
+{Check It!|assessment}(code-output-compare-401030001)
+
 - **Optional.** After Lab 5.1, train and run Inspector. Trigger the transfer flow and provide amount, recipient, and source account; watch the action send the confirmation.
 
 ---

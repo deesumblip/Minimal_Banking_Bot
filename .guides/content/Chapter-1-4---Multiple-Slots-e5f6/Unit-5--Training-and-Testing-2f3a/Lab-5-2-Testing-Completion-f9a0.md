@@ -12,6 +12,8 @@ Your goal is to run the **completion check** for Level 4 and, optionally, test t
    - `level4/data/basics/transfer_money.yml` exists with the three collect steps and the action step
    - A model file exists in `level4/models/`
 
+{Check It!|assessment}(code-output-compare-401050002)
+
 2. If any check fails, complete the corresponding lab (4.1–4.4) and re-run training if needed, then run the assessment again.
 
 ---

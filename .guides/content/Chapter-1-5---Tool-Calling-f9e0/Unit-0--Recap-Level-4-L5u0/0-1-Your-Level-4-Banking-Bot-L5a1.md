@@ -1,8 +1,8 @@
-﻿Before we add tool calling, here is a quick recap of what you built in Level 4. All of this remains unchanged. Level 5 builds on top of it.
+Before we add tool calling, here is a quick recap of what you built in Level 4. All of this remains unchanged. Level 5 builds on top of it.
 
 ## Level 5 Setup
 
-The **level5** folder is set up as a copy of your Level 4 bot. In this chapter you will:
+The **level5** folder is set up as a copy of your Level 4 bot. Use the **same virtual environment** as in Level 4 (project root); there is no new venv inside `level5`. In this chapter you will:
 
 - Create the `tools/` folder and `banking_tools.py` (Lab 2.1)
 - Register tools in `endpoints.yml` (Lab 3.1)

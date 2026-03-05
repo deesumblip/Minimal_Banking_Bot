@@ -13,10 +13,11 @@ models/
 .rasa/
 logs/
 
-# editor
+# editor / OS
 .vscode/
 .idea/
 .DS_Store
+desktop.ini
 
 # Cursor saved chats
 cursor_*.md

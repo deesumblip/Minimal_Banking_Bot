@@ -5,7 +5,7 @@ This folder mirrors the Level 4 content from `level4/` (unit content and lab con
 ## Structure
 
 - **Chapter:** Chapter-1-4---Multiple-Slots-e5f6
-- **Units:** Unit 0 (Recap Level 3) through Unit 6 (Summary and Next Steps) — 7 units total. Folder names are **Unit-0--** through **Unit-6--** so the table of contents shows in order. Unit 1 has three pages (1.1–1.3); Unit 6 has three pages (6.1–6.3).
+- **Units:** Unit 0 (Recap Level 3) through Unit 6 (Summary and Next Steps) — 7 units total. Folder names are **Unit-0--** through **Unit-6--** so the table of contents shows in order. Unit 1 has four pages (1.1–1.4, including Test Your Knowledge); Unit 6 has seven pages (6.1–6.7, including Knowledge Check, Limitations, Level 5 Preview, Course Completion Checklist).
 - **Labs:** Lab 2.1 (domain), Lab 3.1 (action), Lab 4.1 (flow), Lab 5.1 (training), Lab 5.2 (completion check)
 
 Each unit has an `index.json` (section title and order of pages) and each page has a `.md` (content) and `.json` (page metadata: title, type page, contentType markdown).
@@ -18,7 +18,7 @@ The main guide index at `.guides/content/index.json` includes `Chapter-1-4---Mul
 
 ## Assessments
 
-Graders and solution references live in `.guides/secure/level4_graders/` (lab_4.1_grader.py through lab_4.5_grader.py and corresponding solution_reference.md files). Configure each lab assessment in Codio using the Level4_Lab*_Assessment_Setup.md files in `level4/` (Option A: LLM Rubric, Option B: Standard Code Test with substring match for PASS).
+Graders and solution references live in `.guides/secure/level4_graders/` (lab_2.1_grader.py, lab_3.1_grader.py, lab_4.1_grader.py, lab_5.1_grader.py, lab_5.2_grader.py and corresponding solution_reference.md files). Configure each lab assessment in Codio using the Level4_Lab*_Assessment_Setup.md files in `level4/` (Option A: LLM Rubric, Option B: Standard Code Test with substring match for PASS).
 
 ## Re-import from Git
 

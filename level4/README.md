@@ -1,4 +1,4 @@
-# 🔴 Level 4: Multiple Slots
+# Level 4: Multiple Slots
 
 **Goal:** Learn how to collect multiple pieces of information from the user before performing an action.
 
@@ -6,115 +6,60 @@
 
 - How to define multiple slots in the domain
 - How to collect multiple slots in a single flow
-- How to validate multiple slot values in actions
-- How to handle complex multi-step conversations
+- How to read and validate multiple slot values in actions
+- How to handle multi-step conversations (amount, recipient, account_from)
 
 ## Building on Level 3
 
-⚠️ **Important**: This level builds on your Level 3 banking bot. You don't start from scratch!
+**Important:** This level builds on your Level 3 banking bot. You don't start from scratch. You use the **same virtual environment** created in Level 1 (in the **project root**). There is no new `.venv` inside `level4/`.
 
-**What stays the same:**
-- All responses from Level 3 (including `utter_ask_account`)
-- All flows from Level 3 (`greet`, `help`, `contact`, `hours`, `check_balance`)
-- All actions from Level 3 (`action_bank_hours`, `action_check_balance_simple`)
-- All slots from Level 3 (`account`)
+The **level4** folder is set up as a copy of your Level 3 bot. You add the following in the labs.
 
-**What this level adds:**
-- Additional slots: `amount`, `recipient`, `account_from`
-- Additional ask responses: `utter_ask_amount`, `utter_ask_recipient`, `utter_ask_account_from`
-- New action `action_process_transfer`
-- New flow `data/basics/transfer_money.yml`
+**What stays the same:** All Level 3 responses, flows, actions, and the `account` slot remain.
 
-**Your existing Level 3 banking bot continues to work** - this level adds the ability to collect multiple pieces of information before performing an action!
+**What you add:** In Lab 2.1 you add slots `amount`, `recipient`, `account_from` and utter_ask_* responses and register `action_process_transfer`. In Lab 3.1 you create the action file. In Lab 4.1 you create the transfer_money flow. Your existing Level 3 banking bot continues to work; Level 4 adds multiple slot collection for the transfer flow.
+
+---
 
 ## Quick Start
 
-**Note**: If you're continuing from Level 3, you already have your virtual environment and Rasa Pro installed. You can skip steps 1-3 and go directly to step 4 (Train and run).
+**Setup:** Use the virtual environment in the **project root** (the folder that contains `level1`, `level2`, `level3`, `level4`, and `.guides`). Activate it from there, then go into `level4`.
 
-1. **Create and activate a virtual environment:**
-   ```powershell
-   py -3.11 -m venv .venv
-   .\.venv\Scripts\Activate.ps1
-   python -m pip install --upgrade pip
-   ```
+### In Codio
 
-2. **Install Rasa Pro:**
-   ```powershell
-   python -m pip install --no-cache-dir rasa-pro
-   ```
+1. Open a terminal (it opens at `~/workspace`, i.e. project root).
+2. Activate the virtual environment: `source .venv/bin/activate`. Your prompt should show `(.venv)`.
+3. Go to Level 4: `cd level4`.
+4. Train: `python -m rasa train`. Wait for "Successfully saved model".
+5. Start Inspector: `python -m rasa inspect --debug --log-file logs/logs.out`. Leave the terminal open.
+6. Open the chat: In the top menu bar, click the **Rasa Inspect** tab. (Do not use Tools → Ports or port 5005.)
 
-3. **Create `.env` file:**
-   ```text
-   RASA_LICENSE=your-rasa-pro-license
-   OPENAI_API_KEY=your-openai-api-key
-   ```
+### Running locally
 
-4. **Train and run:**
-   ```powershell
-   . .\load_env.ps1
-   python -m rasa train
-   python -m rasa inspect --debug --log-file logs/logs.out
-   ```
+- **Windows (PowerShell):** From project root, run `.venv\Scripts\Activate.ps1`, then `cd level4`. Then `python -m rasa train` and `python -m rasa inspect --debug`. Open **http://localhost:5005** (or …/inspect.html) in your browser.
+- **Windows (Command Prompt):** From project root, run `.venv\Scripts\activate.bat`, then `cd level4`. Same train and inspect commands; open http://localhost:5005 in the browser.
+- **macOS / Linux:** From project root, run `source .venv/bin/activate`, then `cd level4`. Same train and inspect commands; open http://localhost:5005 in the browser.
 
-   Or use the helper script:
-   ```powershell
-   powershell -ExecutionPolicy Bypass -File .\run_inspector.ps1
-   ```
+Use your actual project path. Ensure `.env` exists in the project root (or level4) with `RASA_LICENSE` and `OPENAI_API_KEY` (see Lab 0.1 / Level 1 if needed).
 
-5. **Open Inspector:**
-   - `http://localhost:5005/webhooks/socketio/inspect.html`
+---
 
 ## What's New in This Level
 
 **Additions to your Level 3 banking bot:**
 
-### Multiple Slots (`domain/basics.yml`)
-- **Added more slots:** `amount`, `recipient`, `account_from`
-- Each slot stores a different piece of information
-- All Level 3 slots (`account`) remain unchanged
-- All Level 3 responses remain unchanged
+- **Domain (Lab 2.1):** Slots `amount`, `recipient`, `account_from`; responses `utter_ask_amount`, `utter_ask_recipient`, `utter_ask_account_from`; `action_process_transfer` in the actions list.
+- **Action (Lab 3.1):** `actions/action_process_transfer.py` — reads the three slots and sends a transfer confirmation (and optionally validates placeholders).
+- **Flow (Lab 4.1):** `data/basics/transfer_money.yml` — collect amount, recipient, account_from, then run action_process_transfer.
 
-### New Action (`actions/action_process_transfer.py`)
-- Reads multiple slots: `amount`, `recipient`, `account_from`
-- Validates that all slots have real values (not placeholders)
-- Uses all collected information to process a transfer
-- All Level 3 actions (`action_bank_hours`, `action_check_balance_simple`) remain unchanged
-
-### New Flow (`data/basics/transfer_money.yml`)
-- **Multiple `collect:` steps** - Collects amount, then recipient, then account_from
-- The bot will ask for each piece of information in order
-- Only proceeds to the action when all slots are filled
-- All Level 3 flows (greet, help, contact, hours, check_balance) remain unchanged
-
-### New Responses
-- `utter_ask_amount` - Asks for transfer amount
-- `utter_ask_recipient` - Asks for recipient
-- `utter_ask_account_from` - Asks for source account
-- All Level 3 responses (including `utter_ask_account`) remain unchanged
+All Level 3 content (including check_balance flow and action_check_balance_simple) remains unchanged.
 
 ## Key Concepts
 
-**Multiple Slot Collection:**
-- Flows can have multiple `collect:` steps
-- The bot collects them in order
-- Each `collect:` step will ask for that slot if it's empty
-
-**Validation in Actions:**
-- Always check that all required slots have values
-- Check for placeholder values that the LLM might extract
-- Provide helpful error messages if information is missing
-
-**Complex Conversations:**
-- Users might provide multiple pieces of information at once
-- Users might provide information out of order
-- The bot handles both cases gracefully
-
-## Exercises
-
-1. **Add a confirmation step:** After collecting all slots, ask the user to confirm before processing.
-2. **Add validation:** Check that the amount is a valid number and not negative.
-3. **Add a new slot:** Create a `transfer_date` slot and collect it in the transfer flow.
+- **Multiple slot collection:** A flow can have several `collect:` steps; the bot asks for each value in order.
+- **Consistent naming:** Slot names and `utter_ask_<slot_name>` in the domain must match the flow and the action's `get_slot(...)` calls.
+- **Validation:** In the action you can check for placeholders or missing values and re-prompt using the appropriate utter_ask_*.
 
 ## Next Level
 
-Once you're comfortable with multiple slots, move to **Level 5** to learn about tool calling!
+Once you're comfortable with multiple slots, move to **Level 5** to learn about tool calling. See **Level4_Unit6_Content_6.6_Whats-Next-Level-5-Preview.md** for a preview.

@@ -29,9 +29,18 @@
 
 ---
 
+## Level 4: Multiple Slots (Chapter 1.4)
+
+- **Content**: `.guides/content/Chapter-1-4---Multiple-Slots-e5f6/` (populated from `level4/Level4_Unit*_Content_*.md` and `level4/Level4_Lab*_Content.md`)
+- **Implementer docs**: `level4/Level4_Implementation_Overview.md` (primary); `level4/CODIO_IMPLEMENTATION_GUIDE.md` (implementer pointer)
+- **Course outline**: `level4/Level4_Course_Outline.md`
+- **Assessments**: Per `level4/Level4_Lab*_Assessment_Setup.md`; graders in `.guides/secure/level4_graders/` (Python graders for Labs 2.1, 3.1, 4.1, 5.1; Lab 5.2 completion check). Venv in project root; Working Directory `/home/codio/workspace`; use **Rasa Inspect** tab only (no Ports).
+
+---
+
 ## Conventions (All Levels)
 
-- One `.venv` in **project root** (created in Level 1 Lab 0.1). For Level 2/3, activate from root then `cd level2` or `cd level3`.
+- One `.venv` in **project root** (created in Level 1 Lab 0.1). For Level 2/3/4, activate from root then `cd level2`, `cd level3`, or `cd level4`.
 - Codio: **Rasa Inspect** tab for Inspector (no Tools → Ports / port 5005 for students).
 - Graders: run from workspace root; scripts activate venv and `cd` to the level folder; print `PASS` / `Successfully passed!` on success.
 
