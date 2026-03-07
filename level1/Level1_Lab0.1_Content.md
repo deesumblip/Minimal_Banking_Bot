@@ -99,6 +99,8 @@ rasa --version
 
 You should see version information with no errors.
 
+**On Codio:** Run the assessment for this lab (use the Check It! button in the guide) to confirm your setup.
+
 ---
 
 ## On Windows
@@ -320,5 +322,3 @@ Confirm that the **domain/** and **data/** directories exist and that the three 
 - The `level1` folder has the expected structure (domain, data, config files).
 
 For **later labs**: Use the same `.venv` from the project root for every level. Activate it from the root, ensure `RASA_LICENSE` is loaded, then `cd` into the level folder you're working in (e.g. `cd level1`).
-
-**On Codio:** Run the assessment for this lab (use the Check It! button in the guide) to confirm your setup.
