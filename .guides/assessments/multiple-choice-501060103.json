@@ -1,0 +1,28 @@
+{
+	"type": "multiple-choice",
+	"taskId": "multiple-choice-501060103",
+	"source": {
+		"name": "Chapter 1.6: 6.4 Knowledge Check - main agent and sub-agent",
+		"showName": false,
+		"instructions": "**What is the relationship between the main agent and the sub-agent?**",
+		"multipleResponse": false,
+		"isRandomized": true,
+		"answers": [
+			{"_id": "a5010601-0013-4000-8000-000000000013", "correct": false, "answer": "The sub-agent replaces the main agent"},
+			{"_id": "a5010601-0014-4000-8000-000000000014", "correct": true, "answer": "The main agent orchestrates; it runs a flow that calls the sub-agent; the sub-agent runs until done, then control returns"},
+			{"_id": "a5010601-0015-4000-8000-000000000015", "correct": false, "answer": "They share the same flows"},
+			{"_id": "a5010601-0016-4000-8000-000000000016", "correct": false, "answer": "The sub-agent calls the main agent"}
+		],
+		"metadata": {"tags": [{"name": "Assessment Type", "value": "Multiple Choice"}], "files": [], "opened": []},
+		"bloomsObjectiveLevel": "2",
+		"learningObjectives": "SWBAT describe main and sub-agent relationship",
+		"guidance": "Main agent runs a flow; the flow has a step that calls the sub-agent; sub-agent runs until done, then control returns.",
+		"showGuidanceAfterResponseOption": {"type": "Attempts", "passedFrom": 1},
+		"maxAttemptsCount": 1,
+		"showExpectedAnswerOption": {"type": "Always"},
+		"points": 5,
+		"incorrectPoints": 0,
+		"arePartialPointsAllowed": false,
+		"useMaximumScore": false
+	}
+}

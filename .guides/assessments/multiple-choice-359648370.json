@@ -9,14 +9,14 @@
 		"isRandomized": false,
 		"answers": [
 			{
-				"_id": "21a633d0-921a-2849-d85a-41379a842278",
-				"correct": true,
-				"answer": "A program designed to simulate conversation with human users through text or voice interactions"
-			},
-			{
 				"_id": "940d8ce2-e3cc-b39d-9099-4075ba1a9526",
 				"correct": false,
 				"answer": "A physical robot that can perform automated tasks in the real world"
+			},
+			{
+				"_id": "21a633d0-921a-2849-d85a-41379a842278",
+				"correct": true,
+				"answer": "A program designed to simulate conversation with human users through text or voice interactions"
 			},
 			{
 				"_id": "cfc494da-d621-57ef-82ea-57d86af08b51",

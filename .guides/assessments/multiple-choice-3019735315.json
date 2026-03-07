@@ -14,6 +14,11 @@
 				"answer": "The response needs to dynamically change based on the current day of the week."
 			},
 			{
+				"_id": "eb63755f-fe1c-a882-6670-967d58ee684d",
+				"correct": false,
+				"answer": "The response needs to be stored in a database."
+			},
+			{
 				"_id": "63480173-ae5e-d456-61ef-f05942c77f95",
 				"correct": true,
 				"answer": "Custom actions are required whenever datetime functionality is needed."
@@ -22,11 +27,6 @@
 				"_id": "d57f7ab8-6ba3-daf3-b9e6-4f47ee8cb633",
 				"correct": true,
 				"answer": "Simple utterances cannot handle any kind of conditional logic."
-			},
-			{
-				"_id": "eb63755f-fe1c-a882-6670-967d58ee684d",
-				"correct": false,
-				"answer": "The response needs to be stored in a database."
 			},
 			{
 				"_id": "248a45b5-06b5-8c70-b536-7db074ca49dc",

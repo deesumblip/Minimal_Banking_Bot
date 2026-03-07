@@ -9,14 +9,14 @@
 		"isRandomized": false,
 		"answers": [
 			{
-				"_id": "dfab115b-6c6f-b33a-377d-49dc035f996c",
-				"correct": true,
-				"answer": "```python-hide-clipboard\ndispatcher.utter_message(text=\"Hello, how can I help you?\")\n```"
-			},
-			{
 				"_id": "2e0775fb-b3c3-fa2c-2918-0c279255503b",
 				"correct": false,
 				"answer": "```python-hide-clipboard\ntracker.send_message(text=\"Hello, how can I help you?\")\n```"
+			},
+			{
+				"_id": "dfab115b-6c6f-b33a-377d-49dc035f996c",
+				"correct": true,
+				"answer": "```python-hide-clipboard\ndispatcher.utter_message(text=\"Hello, how can I help you?\")\n```"
 			},
 			{
 				"_id": "11f73d5e-f3b7-582d-3dab-4272d07a1dfc",

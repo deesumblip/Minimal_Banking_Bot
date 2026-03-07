@@ -1,0 +1,28 @@
+{
+	"type": "multiple-choice",
+	"taskId": "multiple-choice-501030108",
+	"source": {
+		"name": "Chapter 1.5: 6.4 Knowledge Check - transfer_money_tools flow",
+		"showName": false,
+		"instructions": "**In Level 5, what does the transfer_money_tools flow do?**",
+		"multipleResponse": false,
+		"isRandomized": true,
+		"answers": [
+			{"_id": "a5010302-0013-4000-8000-000000000013", "correct": false, "answer": "Lists each tool (check_balance, process_transfer) as a separate step"},
+			{"_id": "a5010302-0014-4000-8000-000000000014", "correct": true, "answer": "Collects amount, recipient, account_from, then runs the action `action_process_transfer_with_tools`; the LLM can call tools in that context"},
+			{"_id": "a5010302-0015-4000-8000-000000000015", "correct": false, "answer": "Only runs tools, no action"},
+			{"_id": "a5010302-0016-4000-8000-000000000016", "correct": false, "answer": "Replaces the Level 4 transfer_money flow"}
+		],
+		"metadata": {"tags": [{"name": "Assessment Type", "value": "Multiple Choice"}], "files": [], "opened": []},
+		"bloomsObjectiveLevel": "2",
+		"learningObjectives": "SWBAT describe transfer_money_tools flow",
+		"guidance": "The flow collects slots and runs one action; that action runs in a context where the LLM can call the registered tools.",
+		"showGuidanceAfterResponseOption": {"type": "Attempts", "passedFrom": 1},
+		"maxAttemptsCount": 1,
+		"showExpectedAnswerOption": {"type": "Always"},
+		"points": 5,
+		"incorrectPoints": 0,
+		"arePartialPointsAllowed": false,
+		"useMaximumScore": false
+	}
+}

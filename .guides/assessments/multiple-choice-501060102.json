@@ -1,0 +1,28 @@
+{
+	"type": "multiple-choice",
+	"taskId": "multiple-choice-501060102",
+	"source": {
+		"name": "Chapter 1.6: 6.4 Knowledge Check - mcp_servers in endpoints",
+		"showName": false,
+		"instructions": "**Why do we add mcp_servers to endpoints.yml in Level 6?**",
+		"multipleResponse": false,
+		"isRandomized": true,
+		"answers": [
+			{"_id": "a5010601-0009-4000-8000-000000000009", "correct": false, "answer": "To register custom actions"},
+			{"_id": "a5010601-0010-4000-8000-000000000010", "correct": false, "answer": "So the main agent can call tools directly"},
+			{"_id": "a5010601-0011-4000-8000-000000000011", "correct": true, "answer": "So the sub-agent can connect to the MCP server and use its tools"},
+			{"_id": "a5010601-0012-4000-8000-000000000012", "correct": false, "answer": "To train the model"}
+		],
+		"metadata": {"tags": [{"name": "Assessment Type", "value": "Multiple Choice"}], "files": [], "opened": []},
+		"bloomsObjectiveLevel": "2",
+		"learningObjectives": "SWBAT explain MCP in endpoints",
+		"guidance": "The sub-agent uses MCP tools; the MCP server must be registered in endpoints.yml.",
+		"showGuidanceAfterResponseOption": {"type": "Attempts", "passedFrom": 1},
+		"maxAttemptsCount": 1,
+		"showExpectedAnswerOption": {"type": "Always"},
+		"points": 5,
+		"incorrectPoints": 0,
+		"arePartialPointsAllowed": false,
+		"useMaximumScore": false
+	}
+}

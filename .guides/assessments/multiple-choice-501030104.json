@@ -1,0 +1,28 @@
+{
+	"type": "multiple-choice",
+	"taskId": "multiple-choice-501030104",
+	"source": {
+		"name": "Chapter 1.5: 1.3 Test Your Knowledge - Level 5 adds",
+		"showName": false,
+		"instructions": "**What does Level 5 add on top of Level 4?**",
+		"multipleResponse": false,
+		"isRandomized": true,
+		"answers": [
+			{"_id": "a5010301-0017-4000-8000-000000000017", "correct": false, "answer": "New slots and responses only"},
+			{"_id": "a5010301-0018-4000-8000-000000000018", "correct": true, "answer": "A tools folder, tools registration in endpoints.yml, and flows/actions that use tool calling"},
+			{"_id": "a5010301-0019-4000-8000-000000000019", "correct": false, "answer": "A new virtual environment inside level5"},
+			{"_id": "a5010301-0020-4000-8000-000000000020", "correct": false, "answer": "Replacement of all Level 4 actions with tools"}
+		],
+		"metadata": {"tags": [{"name": "Assessment Type", "value": "Multiple Choice"}], "files": [], "opened": []},
+		"bloomsObjectiveLevel": "2",
+		"learningObjectives": "SWBAT describe what Level 5 adds",
+		"guidance": "Level 5 adds a tools module, registration in endpoints, and flows/actions that use tool calling; Level 4 content remains.",
+		"showGuidanceAfterResponseOption": {"type": "Attempts", "passedFrom": 1},
+		"maxAttemptsCount": 1,
+		"showExpectedAnswerOption": {"type": "Always"},
+		"points": 5,
+		"incorrectPoints": 0,
+		"arePartialPointsAllowed": false,
+		"useMaximumScore": false
+	}
+}

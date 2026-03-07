@@ -1,0 +1,28 @@
+{
+	"type": "multiple-choice",
+	"taskId": "multiple-choice-501030105",
+	"source": {
+		"name": "Chapter 1.5: 6.4 Knowledge Check - tools vs actions",
+		"showName": false,
+		"instructions": "**How do tools differ from actions?**",
+		"multipleResponse": false,
+		"isRandomized": true,
+		"answers": [
+			{"_id": "a5010302-0001-4000-8000-000000000001", "correct": false, "answer": "Tools are in the domain; actions are in endpoints.yml"},
+			{"_id": "a5010302-0002-4000-8000-000000000002", "correct": true, "answer": "Actions are explicitly called in flow steps; tools are functions the LLM can choose to call at runtime"},
+			{"_id": "a5010302-0003-4000-8000-000000000003", "correct": false, "answer": "Tools and actions are the same thing"},
+			{"_id": "a5010302-0004-4000-8000-000000000004", "correct": false, "answer": "Only tools can read slots"}
+		],
+		"metadata": {"tags": [{"name": "Assessment Type", "value": "Multiple Choice"}], "files": [], "opened": []},
+		"bloomsObjectiveLevel": "2",
+		"learningObjectives": "SWBAT distinguish tools from actions",
+		"guidance": "Actions are invoked by flow steps; tools are selected and invoked by the LLM based on conversation context.",
+		"showGuidanceAfterResponseOption": {"type": "Attempts", "passedFrom": 1},
+		"maxAttemptsCount": 1,
+		"showExpectedAnswerOption": {"type": "Always"},
+		"points": 5,
+		"incorrectPoints": 0,
+		"arePartialPointsAllowed": false,
+		"useMaximumScore": false
+	}
+}

@@ -14,6 +14,11 @@
 				"answer": "Comments for developers"
 			},
 			{
+				"_id": "41ac8983-8194-0a76-18ef-3f0dbdc09caa",
+				"correct": true,
+				"answer": "The LLM uses them to match user messages to flows"
+			},
+			{
 				"_id": "572151b1-88b0-3dfb-6a37-96252bb8e280",
 				"correct": false,
 				"answer": "Required for YAML"
@@ -22,11 +27,6 @@
 				"_id": "9f7f492c-08a3-5313-60de-8b586337d70a",
 				"correct": false,
 				"answer": "Displayed to users"
-			},
-			{
-				"_id": "41ac8983-8194-0a76-18ef-3f0dbdc09caa",
-				"correct": true,
-				"answer": "The LLM uses them to match user messages to flows"
 			}
 		],
 		"metadata": {

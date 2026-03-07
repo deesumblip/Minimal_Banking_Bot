@@ -1,0 +1,28 @@
+{
+	"type": "multiple-choice",
+	"taskId": "multiple-choice-501060101",
+	"source": {
+		"name": "Chapter 1.6: 6.4 Knowledge Check - sub-agent config location",
+		"showName": false,
+		"instructions": "**Where is the sub-agent config file located?**",
+		"multipleResponse": false,
+		"isRandomized": true,
+		"answers": [
+			{"_id": "a5010601-0005-4000-8000-000000000005", "correct": false, "answer": "level6/domain/basics.yml"},
+			{"_id": "a5010601-0006-4000-8000-000000000006", "correct": true, "answer": "level6/sub_agents/banking_assistant/config.yml"},
+			{"_id": "a5010601-0007-4000-8000-000000000007", "correct": false, "answer": "level6/endpoints.yml"},
+			{"_id": "a5010601-0008-4000-8000-000000000008", "correct": false, "answer": "level6/data/basics/ask_banking_assistant.yml"}
+		],
+		"metadata": {"tags": [{"name": "Assessment Type", "value": "Multiple Choice"}], "files": [], "opened": []},
+		"bloomsObjectiveLevel": "1",
+		"learningObjectives": "SWBAT locate sub-agent config",
+		"guidance": "Sub-agent config lives in sub_agents/<name>/config.yml.",
+		"showGuidanceAfterResponseOption": {"type": "Attempts", "passedFrom": 1},
+		"maxAttemptsCount": 1,
+		"showExpectedAnswerOption": {"type": "Always"},
+		"points": 5,
+		"incorrectPoints": 0,
+		"arePartialPointsAllowed": false,
+		"useMaximumScore": false
+	}
+}
