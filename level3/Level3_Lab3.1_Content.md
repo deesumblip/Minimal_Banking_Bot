@@ -1,9 +1,4 @@
-**Objective.** In this lab you will:
-
-- Add the `account` slot and `utter_ask_account` response to your Level 3 domain
-- Register the new action `action_check_balance_simple` so the bot can collect and remember an account number
-
-You will add the action **name** to the domain here; you will **create the action file** in Lab 4.1.
+**Objective.** In Unit 3.1 you saw how the domain includes `slots:`, ask responses, and `actions:`. In this lab you add the same structure: the `account` slot, `utter_ask_account` response, and registration of `action_check_balance_simple`. You add the action **name** to the domain here; you **create the action file** in Lab 4.1.
 
 ## Step-by-Step Instructions
 

@@ -1,6 +1,6 @@
 # Lab 3.2: Creating Your First Flow
 
-**Objective**: Create a new `goodbye.yml` flow that uses the `utter_goodbye` response from Lab 2.2.
+**Objective**: In Unit 3.2 you saw the structure of a flow (e.g. `greet.yml`). In this lab you create your own flow: `goodbye.yml`, using the `utter_goodbye` response from Lab 2.2.
 
 #### Before You Begin
 

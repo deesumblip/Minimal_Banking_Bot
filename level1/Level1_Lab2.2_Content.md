@@ -1,6 +1,6 @@
 # Lab 2.2: Creating Your First Response
 
-**Objective**: Add a new `utter_goodbye` response to your bot's domain file.
+**Objective**: In Unit 2 you saw how responses are structured (e.g. `utter_greet`, `utter_contact`). In this lab you add your own response: `utter_goodbye`.
 
 #### Before You Begin
 

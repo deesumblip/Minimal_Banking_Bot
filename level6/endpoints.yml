@@ -16,9 +16,3 @@ model_groups:
       - provider: openai
         model: gpt-4o-mini-2024-07-18
         temperature: 0.3
-
-# MCP server for Level 6 sub-agent
-mcp_servers:
-  - name: banking_mcp
-    url: http://localhost:8080
-    type: http

@@ -23,4 +23,42 @@ After Lab 4.1 your domain will have the existing Level 3 content plus:
 - Under `responses:`: the existing utter_* and `utter_ask_account`, plus `utter_ask_amount`, `utter_ask_recipient`, `utter_ask_account_from`
 - Under `actions:`: `action_bank_hours`, `action_check_balance_simple`, and `action_process_transfer`
 
-Follow **Lab 2.1** for the exact steps and YAML. When you are done, run the assessment for Lab 2.1.
+## Example: What you will add to the domain
+
+Below is an example of the **new** pieces you will add. Your existing `slots:` already has `account`; you add the three slots below. Under `responses:` you add the three ask responses. Under `actions:` you add `action_process_transfer` (you will create the `.py` file in Lab 3.1).
+
+**New slots (add under existing slots:):**
+```yaml
+  amount:
+    type: text
+  recipient:
+    type: text
+  account_from:
+    type: text
+```
+
+**New ask responses (add under responses:):**
+```yaml
+  utter_ask_amount:
+    - text: "How much would you like to transfer?"
+      metadata:
+        rephrase: True
+  utter_ask_recipient:
+    - text: "Who would you like to transfer money to?"
+      metadata:
+        rephrase: True
+  utter_ask_account_from:
+    - text: "Which account would you like to transfer from?"
+      metadata:
+        rephrase: True
+```
+
+**Updated actions list (include the new action):**
+```yaml
+actions:
+  - action_bank_hours
+  - action_check_balance_simple
+  - action_process_transfer
+```
+
+In **Lab 2.1** you will add your own version of these to `level4/domain/basics.yml`. When you are done, run the assessment for Lab 2.1.

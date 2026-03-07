@@ -25,9 +25,9 @@
 
 1. **Level 3 course outline**  
    - Create `level3/Level3_Course_Outline.md` using **Level 2’s outline as a template**.  
-   - Map Level 3 to units from the existing `CODIO_IMPLEMENTATION_GUIDE.md` (Module 0 → Unit 0, Module 1 → Unit 1, etc.).  
+   - Map Level 3 to units from the existing `CODIO_IMPLEMENTATION_GUIDE.md` (Unit 0, Unit 1, etc.).  
    - List which units are content-only and which labs have assessments.  
-   - **Source:** Table of contents and module list in `level3/CODIO_IMPLEMENTATION_GUIDE.md` + `Course_Topics_By_Level.md` (Level 3 row).
+   - **Source:** Table of contents and unit list in `level3/CODIO_IMPLEMENTATION_GUIDE.md` + `Course_Topics_By_Level.md` (Level 3 row).
 
 2. **Level 3 implementation overview**  
    - Create `level3/Level3_Implementation_Overview.md` (short).  

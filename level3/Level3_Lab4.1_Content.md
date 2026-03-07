@@ -1,4 +1,4 @@
-Your goal is to **complete** the action file that reads the `account` slot and handles placeholder values. The domain already lists `action_check_balance_simple` from Lab 3.1. First complete the script in the fill-in-the-blanks exercise below; then put the complete script in the file tree and run the assessment.
+In Unit 4.1 you saw how to read the slot from the tracker and send a message. In this lab you **complete** the action file `action_check_balance_simple.py` that reads the `account` slot and handles placeholder values. The domain already lists `action_check_balance_simple` from Lab 3.1. First complete the script in the fill-in-the-blanks exercise below; then put the complete script in the file tree and run the assessment.
 
 ---
 

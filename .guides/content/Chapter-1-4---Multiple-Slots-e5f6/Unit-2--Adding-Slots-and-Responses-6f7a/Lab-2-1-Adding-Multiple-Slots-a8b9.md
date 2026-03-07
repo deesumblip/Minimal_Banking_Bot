@@ -1,8 +1,8 @@
-**Objective.** In this lab you will:
+**Objective.** In Unit 2 you saw an example of the slots, ask responses, and action registration for the transfer flow. In this lab you will add your own version to `level4/domain/basics.yml`:
 
-- Add the slots `amount`, `recipient`, and `account_from` to your Level 4 domain
+- Add the slots `amount`, `recipient`, and `account_from`
 - Add the ask responses `utter_ask_amount`, `utter_ask_recipient`, and `utter_ask_account_from`
-- Register the new action `action_process_transfer` so the bot can collect and use all three values (you will create the .py file in Lab 3.1)
+- Register the new action `action_process_transfer` (you will create the .py file in Lab 3.1)
 
 ## Step-by-Step Instructions
 

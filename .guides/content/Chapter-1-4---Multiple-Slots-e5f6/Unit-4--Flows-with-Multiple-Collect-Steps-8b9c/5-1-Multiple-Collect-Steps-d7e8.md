@@ -11,6 +11,25 @@ The flow will:
 
 Each `collect:` step can optionally include a `description:` for the slot (e.g. for documentation or tools). The important part is that the three collect steps appear in order, followed by the action step.
 
-## Lab 4.1
+## Example: The transfer_money flow
 
-In **Lab 4.1** you will create the file `level4/data/basics/transfer_money.yml` with this flow. When you are done, run the assessment for Lab 4.1.
+Below is an example of the flow file. You will create your own version in Lab 4.1 (e.g. with a name and description that fit your bot).
+
+```yaml
+flows:
+  transfer_money:
+    name: transfer money
+    description: |
+      Demonstrates collecting multiple slots before executing an action.
+      The bot will collect amount, recipient, and source account, then process the transfer.
+    steps:
+      - collect: amount
+        description: "transfer amount"
+      - collect: recipient
+        description: "recipient name or account"
+      - collect: account_from
+        description: "source account number"
+      - action: action_process_transfer
+```
+
+In **Lab 4.1** you will create the file `level4/data/basics/transfer_money.yml` with your own version of this flow. When you are done, run the assessment for Lab 4.1.

@@ -39,7 +39,7 @@ Level 4 has all Unit 6 content files (6.1-6.7) in level4/. Level 5 has only 6.1,
 
 ## 4. TUTORIAL.md
 
-Level 4 has level4/TUTORIAL.md (table of contents, module-by-module summary). Level 5 has no TUTORIAL.md.
+Level 4 has level4/TUTORIAL.md (table of contents, unit-by-unit summary). Level 5 has no TUTORIAL.md.
 
 **Check needed:** Add level5/TUTORIAL.md with ToC and module summaries aligned with Level 4 style.
 
@@ -68,6 +68,6 @@ Graders use `/home/codio/workspace` and are designed to run on Codio only.
 | 1 | Unit 1 Test Your Knowledge | Medium | Add 1.3 or 1.4 Test Your Knowledge in level5 + .guides Unit 1. |
 | 2 | Unit 6 Limitations + What's Next | Low | Optionally add 6.5 Limitations, 6.6 Level 6 Preview; renumber Checklist to 6.7. |
 | 3 | Unit 6.4/6.5 source in level5/ | High | Add Level5_Unit6_Content_6.4 and 6.5 .md in level5/; sync with .guides. |
-| 4 | TUTORIAL.md | Medium | Add level5/TUTORIAL.md (ToC + module summary). |
+| 4 | TUTORIAL.md | Medium | Add level5/TUTORIAL.md (ToC + unit summary). |
 | 5 | LEVEL5_CONTENT_LABS_AND_ASSESSMENTS | Low | Optional doc mapping content to labs and taskIds. |
 | 6 | Grader Codio-only | Done | Graders are Codio-only; no Windows support required. |

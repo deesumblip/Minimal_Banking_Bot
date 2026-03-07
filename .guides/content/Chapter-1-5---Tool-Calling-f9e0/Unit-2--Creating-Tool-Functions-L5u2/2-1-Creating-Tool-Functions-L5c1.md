@@ -1,4 +1,4 @@
-﻿Tool functions are plain Python functions that the LLM can call. They live in a **tools** module (e.g. `tools/banking_tools.py`).
+Tool functions are plain Python functions that the LLM can call. They live in a **tools** module (e.g. `tools/banking_tools.py`).
 
 ## Requirements
 
@@ -6,12 +6,34 @@
 - **Signature**: Each tool is a function with a clear name, parameters, and a return value (typically a dict or string). Use type hints and a docstring so the LLM understands what the function does.
 - **Discovery**: Export the functions that should be available as tools via `__all__` in the module (e.g. `__all__ = ["check_balance", "process_transfer", "get_account_info"]`).
 
-## Example
+## Example: One complete tool function
+
+Below is a full example of one tool function. The LLM uses the function name and docstring to decide when to call it. You will create a module with at least three tools (check_balance, process_transfer, get_account_info); this example shows the pattern for one of them.
 
 In `tools/banking_tools.py` you might define:
 
-- `check_balance(account: str)` — returns a dict with balance info.
-- `process_transfer(amount: str, from_account: str, to_account: str)` — returns a dict with success/message.
-- `get_account_info(account: str)` — returns a dict with account details.
+```python
+__all__ = ["check_balance", "process_transfer", "get_account_info"]
 
-Each function should have a docstring describing what it does; the LLM uses these to decide when to call each tool. In Lab 2.1 you will create this folder and file and add at least these three tools.
+
+def check_balance(account: str):
+    """Check the balance for a given bank account.
+    
+    Use this when the user asks for their balance or how much is in an account.
+    
+    Args:
+        account: The account number or identifier to check.
+        
+    Returns:
+        A dict with keys such as account, balance, currency, status.
+    """
+    # Demo: in production you would query a real system
+    return {
+        "account": account,
+        "balance": 1234.56,
+        "currency": "USD",
+        "status": "active"
+    }
+```
+
+You will add two more functions following the same pattern: **process_transfer(amount, from_account, to_account)** (returns a dict with success/message) and **get_account_info(account)** (returns a dict with account details). Each needs a clear docstring so the LLM knows when to call it. The `__all__` list at the top tells Rasa which functions to expose as tools. In Lab 2.1 you will create the `tools/` folder and `banking_tools.py` with all three tools and `__all__`.

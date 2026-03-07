@@ -16,19 +16,19 @@
 
 ## Table of Contents
 
-0. [Recap: What You Built in Level 3](#module-0-recap-what-you-built-in-level-3)
-1. [Introduction to Multiple Slots](#module-1-introduction-to-multiple-slots)
-2. [Defining Multiple Slots](#module-2-defining-multiple-slots)
-3. [Collecting Multiple Slots in Flows](#module-3-collecting-multiple-slots-in-flows)
-4. [Validating Multiple Slots in Actions](#module-4-validating-multiple-slots-in-actions)
-5. [Handling Complex Conversations](#module-5-handling-complex-conversations)
-6. [Training and Testing with Multiple Slots](#module-6-training-and-testing-with-multiple-slots)
-7. [Putting It All Together](#module-7-putting-it-all-together)
-8. [Assessment and Next Steps](#module-8-assessment-and-next-steps)
+0. [Recap: What You Built in Level 3](#unit-0-recap-what-you-built-in-level-3)
+1. [Introduction to Multiple Slots](#unit-1-introduction-to-multiple-slots)
+2. [Defining Multiple Slots](#unit-2-defining-multiple-slots)
+3. [Collecting Multiple Slots in Flows](#unit-3-collecting-multiple-slots-in-flows)
+4. [Validating Multiple Slots in Actions](#unit-4-validating-multiple-slots-in-actions)
+5. [Handling Complex Conversations](#unit-5-handling-complex-conversations)
+6. [Training and Testing with Multiple Slots](#unit-6-training-and-testing-with-multiple-slots)
+7. [Putting It All Together](#unit-7-putting-it-all-together)
+8. [Assessment and Next Steps](#unit-8-assessment-and-next-steps)
 
 ---
 
-## Module 0: Recap - What You Built in Level 3
+## Unit 0: Recap - What You Built in Level 3
 
 ### 0.1 Your Level 3 Banking Bot
 
@@ -97,7 +97,7 @@ Level 4 introduces **Multiple Slot Collection** - the ability to collect several
 
 ---
 
-## Module 1: Introduction to Multiple Slots
+## Unit 1: Introduction to Multiple Slots
 
 ### 1.1 Why Multiple Slots?
 
@@ -195,7 +195,7 @@ Bot: "(Demo) Transfer of $100 from account 1234 to John has been processed succe
 
 ---
 
-## Module 2: Defining Multiple Slots
+## Unit 2: Defining Multiple Slots
 
 ### 2.1 Adding More Slots to the Domain
 
@@ -329,7 +329,7 @@ Check:
 
 ---
 
-## Module 3: Collecting Multiple Slots in Flows
+## Unit 3: Collecting Multiple Slots in Flows
 
 ### 3.1 Creating a Flow with Multiple Collect Steps
 
@@ -473,7 +473,7 @@ Bot: [Stores account_from="1234", processes transfer]
 
 ---
 
-## Module 4: Validating Multiple Slots in Actions
+## Unit 4: Validating Multiple Slots in Actions
 
 ### 4.1 Why Validate Multiple Slots?
 
@@ -623,7 +623,7 @@ if not amount:
 
 ---
 
-## Module 5: Handling Complex Conversations
+## Unit 5: Handling Complex Conversations
 
 ### 5.1 Users Providing Information Out of Order
 
@@ -699,7 +699,7 @@ description: Transfer money  # Too vague - doesn't mention multiple slots
 
 ---
 
-## Module 6: Training and Testing with Multiple Slots
+## Unit 6: Training and Testing with Multiple Slots
 
 ### 6.1 Training with Multiple Slots
 
@@ -806,7 +806,7 @@ In Inspector debug panel, you can see all slot values:
 
 ---
 
-## Module 7: Putting It All Together
+## Unit 7: Putting It All Together
 
 ### 7.1 Complete Bot Walkthrough
 
@@ -951,7 +951,7 @@ But you now have comprehensive data collection capabilities!
 
 ---
 
-## Module 8: Assessment and Next Steps
+## Unit 8: Assessment and Next Steps
 
 ### 8.1 Knowledge Check
 
@@ -1177,7 +1177,7 @@ This document is a **combined student course + Codio implementation guide** for 
 
 ### Content Integration Strategy
 
-- The full content from `TUTORIAL.md` is included in this document (to keep the course self-contained).
+- Unit content is included in this document (to keep the course self-contained). Canonical source for narrative is also the Level4_Unit*_Content_*.md files.
 - Exercises should be implemented as **auto-graded labs** wherever possible.
 
 ---

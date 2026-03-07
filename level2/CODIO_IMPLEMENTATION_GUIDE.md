@@ -16,15 +16,15 @@
 
 ## Table of Contents
 
-0. [Recap: What You Built in Level 1](#module-0-recap-what-you-built-in-level-1)
-1. [Introduction to Actions](#module-1-introduction-to-actions)
-2. [Understanding the Action Class](#module-2-understanding-the-action-class)
-3. [Creating Your First Action](#module-3-creating-your-first-action)
-4. [Registering Actions in the Domain](#module-4-registering-actions-in-the-domain)
-5. [Using Actions in Flows](#module-5-using-actions-in-flows)
-6. [Training and Testing with Actions](#module-6-training-and-testing-with-actions)
-7. [Putting It All Together](#module-7-putting-it-all-together)
-8. [Assessment and Next Steps](#module-8-assessment-and-next-steps)
+0. [Recap: What You Built in Level 1](#unit-0-recap-what-you-built-in-level-1)
+1. [Introduction to Actions](#unit-1-introduction-to-actions)
+2. [Understanding the Action Class](#unit-2-understanding-the-action-class)
+3. [Creating Your First Action](#unit-3-creating-your-first-action)
+4. [Registering Actions in the Domain](#unit-4-registering-actions-in-the-domain)
+5. [Using Actions in Flows](#unit-5-using-actions-in-flows)
+6. [Training and Testing with Actions](#unit-6-training-and-testing-with-actions)
+7. [Putting It All Together](#unit-7-putting-it-all-together)
+8. [Assessment and Next Steps](#unit-8-assessment-and-next-steps)
 
 ---
 
@@ -1225,7 +1225,7 @@ This document is a **combined student course + Codio implementation guide** for 
 
 ### Content Integration Strategy
 
-- The full content from `TUTORIAL.md` is included in this document (to keep the course self-contained).
+- Unit content is included in this document (to keep the course self-contained). Canonical source for narrative is also the Level2_Unit*_Content_*.md files.
 - Exercises should be implemented as **auto-graded labs** wherever possible.
 
 ---

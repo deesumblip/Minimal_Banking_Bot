@@ -1,21 +1,30 @@
-# Level 5: Tool Calling
+# Level 6: Sub-Agents
 
-**Final bot** students have by the end of Level 5.
+This folder is your **Level 6 starter**. It contains everything you need to get started with the Level 6 exercises.
 
-## Contents
+## What you have to start (Level 5 end state)
 
-- **Slots:** `account`, `amount`, `recipient`, `account_from` (for transfers)
-- **Responses:** greet, help, contact, goodbye, utter_ask_* (account, amount, recipient, account_from)
-- **Custom actions:** `action_bank_hours`, `action_check_balance_simple`, `action_process_transfer`, `action_process_transfer_with_tools`
-- **Flows:** greet, help, contact, goodbye, hours, check_balance, transfer_money, transfer_money_tools
-- **Config:** `config.yml`, `credentials.yml`, `endpoints.yml`
-- **Domain:** `domain/basics.yml`
-- **Data:** `data/basics/*.yml`, `data/system/patterns/patterns.yml`
+- **Domain, config, credentials:** Same as Level 5 (slots, responses, actions, tools).
+- **Flows:** greet, help, contact, goodbye, hours, check_balance, transfer_money, transfer_money_tools.
+- **Actions:** action_bank_hours, action_check_balance_simple, action_process_transfer, action_process_transfer_with_tools.
+- **Tools:** `tools/banking_tools.py` (check_balance, process_transfer, get_account_info), registered in `endpoints.yml`.
+- **MCP server code:** `mcp_server/` is included so you can run the banking MCP server once you have registered it in Lab 3.1.
 
-## What this bot can do
+You can **train and run** this bot from the level6 folder (activate the project-root venv, then `cd level6`, then `rasa train` / `rasa run actions` / `rasa run` or `rasa inspect`).
 
-- Everything Level 4 can do (greet, help, contact, goodbye, bank hours, check balance)
-- **Transfer money:** collect amount, recipient, and source account via slots, then run `action_process_transfer`
-- **Transfer with tools:** use `action_process_transfer_with_tools` so the LLM can call tools for transfer handling
+## What you add in the Level 6 labs
 
-Run from this folder with `RASA_LICENSE` and `OPENAI_API_KEY` set. Start the action server: `rasa run actions`.
+- **Lab 2.1:** Create `sub_agents/banking_assistant/config.yml` (sub-agent config).
+- **Lab 3.1:** Add `mcp_servers:` to `endpoints.yml` (so the sub-agent can use the MCP server).
+- **Lab 4.1:** Create `data/basics/ask_banking_assistant.yml` (flow that calls the sub-agent).
+- **Labs 5.1–5.2:** Train and run the completion check.
+
+After you complete the labs, the bot will support **orchestration**: when the user asks to talk to the banking assistant, the main agent runs the `ask_banking_assistant` flow, which calls the ReAct sub-agent; the sub-agent uses MCP tools until it signals completion, then control returns to the main flow.
+
+## How to run (after the labs)
+
+1. **MCP server:** From level6: `python mcp_server/banking.py` (or the script that starts the banking MCP server on the URL you set in `endpoints.yml`).
+2. **Action server:** From level6: `rasa run actions`.
+3. **Rasa:** From level6: `rasa run` or `rasa inspect`. Open Inspector and trigger the "ask banking assistant" flow.
+
+Set `RASA_LICENSE` (and `OPENAI_API_KEY` if required by your model config) in the environment before running.

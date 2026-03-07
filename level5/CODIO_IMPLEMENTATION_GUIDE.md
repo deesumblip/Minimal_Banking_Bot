@@ -16,19 +16,19 @@
 
 ## Table of Contents
 
-0. [Recap: What You Built in Level 4](#module-0-recap-what-you-built-in-level-4)
-1. [Introduction to Tools](#module-1-introduction-to-tools)
-2. [Understanding Tools vs. Actions](#module-2-understanding-tools-vs-actions)
-3. [Creating Tool Functions](#module-3-creating-tool-functions)
-4. [Registering Tools](#module-4-registering-tools)
-5. [Using Tools in Conversations](#module-5-using-tools-in-conversations)
-6. [Training and Testing with Tools](#module-6-training-and-testing-with-tools)
-7. [Putting It All Together](#module-7-putting-it-all-together)
-8. [Assessment and Next Steps](#module-8-assessment-and-next-steps)
+0. [Recap: What You Built in Level 4](#unit-0-recap-what-you-built-in-level-4)
+1. [Introduction to Tools](#unit-1-introduction-to-tools)
+2. [Understanding Tools vs. Actions](#unit-2-understanding-tools-vs-actions)
+3. [Creating Tool Functions](#unit-3-creating-tool-functions)
+4. [Registering Tools](#unit-4-registering-tools)
+5. [Using Tools in Conversations](#unit-5-using-tools-in-conversations)
+6. [Training and Testing with Tools](#unit-6-training-and-testing-with-tools)
+7. [Putting It All Together](#unit-7-putting-it-all-together)
+8. [Assessment and Next Steps](#unit-8-assessment-and-next-steps)
 
 ---
 
-## Module 0: Recap - What You Built in Level 4
+## Unit 0: Recap - What You Built in Level 4
 
 ### 0.1 Your Level 4 Banking Bot
 
@@ -93,7 +93,7 @@ Level 5 introduces **Tool Calling** - allowing the LLM to dynamically select and
 
 ---
 
-## Module 1: Introduction to Tools
+## Unit 1: Introduction to Tools
 
 ### 1.1 What is a Tool?
 
@@ -170,7 +170,7 @@ When tools are available, the LLM:
 
 ---
 
-## Module 2: Understanding Tools vs. Actions
+## Unit 2: Understanding Tools vs. Actions
 
 ### 2.1 Key Differences
 
@@ -217,7 +217,7 @@ They complement each other - use the right tool for the right job.
 
 ---
 
-## Module 3: Creating Tool Functions
+## Unit 3: Creating Tool Functions
 
 ### 3.1 Tool Function Structure
 
@@ -414,7 +414,7 @@ Check:
 
 ---
 
-## Module 4: Registering Tools
+## Unit 4: Registering Tools
 
 ### 4.1 Tools Registration in endpoints.yml
 
@@ -509,7 +509,7 @@ Check:
 
 ---
 
-## Module 5: Using Tools in Conversations
+## Unit 5: Using Tools in Conversations
 
 ### 5.1 How Tools Are Called
 
@@ -622,7 +622,7 @@ class ActionProcessTransferWithTools(Action):
 
 ---
 
-## Module 6: Training and Testing with Tools
+## Unit 6: Training and Testing with Tools
 
 ### 6.1 Training with Tools
 
@@ -719,7 +719,7 @@ In Inspector debug panel, you can see:
 
 ---
 
-## Module 7: Putting It All Together
+## Unit 7: Putting It All Together
 
 ### 7.1 Complete Bot Walkthrough
 
@@ -878,7 +878,7 @@ Returns:
 
 ---
 
-## Module 8: Assessment and Next Steps
+## Unit 8: Assessment and Next Steps
 
 ### 8.1 Knowledge Check
 
@@ -1104,7 +1104,7 @@ This document is a **combined student course + Codio implementation guide** for 
 
 ### Content Integration Strategy
 
-- The full content from `TUTORIAL.md` is included in this document (to keep the course self-contained).
+- Unit content is included in this document (to keep the course self-contained). Canonical source for narrative is also the Level5_Unit*_Content_*.md files.
 - Exercises should be implemented as **auto-graded labs** wherever possible.
 
 ---

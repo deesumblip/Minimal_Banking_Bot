@@ -5,13 +5,51 @@ To use tools in a conversation, you need a **flow** that brings the user to a po
 
 The flow does not list individual tools; it lists one action. That action runs in an environment where the LLM can call the registered tools (check_balance, process_transfer, get_account_info) based on the conversation.
 
-## transfer_money_tools.yml
+## Example: The transfer_money_tools flow
 
-Create a flow (e.g. `data/basics/transfer_money_tools.yml`) with:
+Below is an example of the flow file. You will create your own version in Lab 4.1 (e.g. with a description that fits your bot). The structure is: collect the three slots, then run the action that enables tool calling.
 
-- **name** and **description** (e.g. "transfer money with tools" — the description helps the LLM understand when to trigger this flow).
-- **steps**: collect amount, collect recipient, collect account_from, then `action: action_process_transfer_with_tools`.
+```yaml
+flows:
+  transfer_money_tools:
+    name: transfer money with tools
+    description: |
+      The bot collects amount, recipient, and source account.
+      Then the LLM can call tools (check_balance, process_transfer, etc.)
+      based on what the user says.
+    steps:
+      - collect: amount
+        description: "transfer amount"
+      - collect: recipient
+        description: "recipient name or account"
+      - collect: account_from
+        description: "source account number"
+      - action: action_process_transfer_with_tools
+```
 
-## action_process_transfer_with_tools
+## Example: The action_process_transfer_with_tools action
 
-Create an action class that runs in a context where the LLM can call tools. Rasa discovers the tools you registered in `endpoints.yml` and makes them available when this action runs; the LLM can then choose to invoke them (e.g. check_balance, process_transfer) based on the conversation. In this course the action uses a **minimal implementation**: it reads the collected slots, optionally validates them, and sends a demo confirmation message. In production you might also call the tool functions from Python or rely on the framework to let the LLM invoke them. In Lab 4.1 you will create this flow file and the action file (using the template below), and register the action in the domain.
+The flow’s last step runs an **action** (not the tools directly). That action runs in a context where the LLM can call your registered tools. Below is a minimal action class. You will create your own action file in Lab 4.1 following this pattern and register it in the domain.
+
+```python
+from typing import Any, Dict, List, Text
+
+from rasa_sdk import Action, Tracker
+from rasa_sdk.executor import CollectingDispatcher
+
+
+class ActionProcessTransferWithTools(Action):
+    def name(self) -> Text:
+        return "action_process_transfer_with_tools"
+
+    def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> List[Dict[Text, Any]]:
+        # Optional: send a message. The LLM can call tools in this step.
+        return []
+```
+
+In Lab 4.1 you will create the flow file and the action file (your own version of the examples above), and add `action_process_transfer_with_tools` to the domain `actions:` list.

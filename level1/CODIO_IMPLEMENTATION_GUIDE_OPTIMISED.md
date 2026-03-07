@@ -1234,7 +1234,7 @@ Show Hints: ✓ (optional, but helpful for students)
 
 **What it does**: Codio allows updating assessment settings (points, timeout, etc.) **in bulk** across many assessments at once.
 
-**How to use it**: From the course dashboard, find **Bulk Assessment Update** (or similar) in the course/module settings. Select assessments and update settings in one step.
+**How to use it**: From the course dashboard, find **Bulk Assessment Update** (or similar) in the course settings. Select assessments and update settings in one step.
 
 **💡 When to use**: After creating all assessments, if you need to adjust points or timeouts across many at once.
 
@@ -9406,7 +9406,7 @@ If you can check all these boxes, you're ready for Level 2!
 - [ ] Manual grading assignment created (10 points)
 - [ ] All assessments tested
 
-### Next Steps Module
+### Next Steps
 
 **Content Structure**:
 - Brief preview of Level 2 (Actions) (preserved from TUTORIAL.md)

@@ -2,7 +2,7 @@
 
 ### Your Task
 
-You've learned how actions are structured and how they work. Now create a **new** action: `action_holiday_hours`, which returns the bank's holiday schedule **based on today's date**. If today is a holiday, the action should say we're closed today; otherwise it should return the general holiday schedule. That way the response depends on the current date—so it has to be an action, not a single `utter_*` response. Follow the steps below.
+In Unit 3.1 you saw the full example `action_bank_hours`. In this lab you create your own action: `action_holiday_hours`, which returns the bank's holiday schedule **based on today's date**. If today is a holiday, the action should say we're closed today; otherwise it should return the general holiday schedule. That way the response depends on the current date—so it has to be an action, not a single `utter_*` response. Follow the steps below.
 
 ---
 

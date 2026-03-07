@@ -1,0 +1,15 @@
+{
+  "id": "c7d8e9f0-1a2b-3c4d-5e6f-7a8b9c0d1e2f",
+  "type": "chapter",
+  "title": "Chapter 1.6 - Sub-Agents",
+  "order": [
+    "Unit-0--Recap-Level-5-L6u0",
+    "Unit-1--Sub-Agents-Concept-L6u1",
+    "Unit-2--Sub-Agent-Config-L6u2",
+    "Unit-3--MCP-and-ReAct-L6u3",
+    "Unit-4--Flow-Calling-Sub-Agent-L6u4",
+    "Unit-5--Training-and-Testing-L6u5",
+    "Unit-6--Summary-and-Next-Steps-L6u6"
+  ],
+  "content": ""
+}
