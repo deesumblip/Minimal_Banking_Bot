@@ -15,7 +15,7 @@ This document provides implementation guidance for **Level 1: Just Responses** o
 - **Unit content**: One markdown file per numbered subsection (e.g. `Level1_Unit1_Content_1.1_What-is-a-Conversational-Bot.md`). Copy into Codio Guide Editor as one page per section.
 - **Lab content**: One file per lab (e.g. `Level1_Lab6.1_Content.md`) – student-facing instructions. Copy into Codio as the lab’s guide content.
 - **Assessment setup**: One file per graded lab (e.g. `Level1_Lab6.1_Assessment_Setup.md`) – implementer instructions, grader script location, and Codio assessment config. Use for Lab-Implementation or internal docs.
-- **Source**: The single-document reference remains `CODIO_IMPLEMENTATION_GUIDE_OPTIMISED.md`; the split files are the canonical source for copying into Codio.
+- **Source**: The split files (unit content, lab content, assessment setup) are the canonical source for copying into Codio.
 
 ---
 

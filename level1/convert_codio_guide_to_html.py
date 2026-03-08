@@ -2,7 +2,7 @@
 """
 Convert CODIO_IMPLEMENTATION_GUIDE*.md files to HTML with GitHub-style CSS.
 
-Converts both CODIO_IMPLEMENTATION_GUIDE_OPTIMISED.md and CODIO_IMPLEMENTATION_GUIDE_LINEAR.md.
+Converts CODIO_IMPLEMENTATION_GUIDE_LINEAR.md.
 
 Usage:
     python convert_codio_guide_to_html.py
@@ -248,7 +248,6 @@ Examples:
     
     script_dir = Path(__file__).parent
     guides = [
-        ("CODIO_IMPLEMENTATION_GUIDE_OPTIMISED.md", "Level 1: Codio Course Guide (Optimised)"),
         ("CODIO_IMPLEMENTATION_GUIDE_LINEAR.md", "Level 1: Codio Course Guide (Linear)"),
     ]
     

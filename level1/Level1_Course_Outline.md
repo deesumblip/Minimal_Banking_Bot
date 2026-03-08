@@ -172,7 +172,6 @@
 ### Implementation Files
 - `Level1_Implementation_Overview.md` – Codio team guide
 - `Level1_Course_Outline.md` – This file
-- `CODIO_IMPLEMENTATION_GUIDE_OPTIMISED.md` – Full optimized guide (reference; content is split into the files above)
 
 ---
 
