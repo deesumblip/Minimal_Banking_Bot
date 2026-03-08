@@ -239,7 +239,7 @@ if rasa_found:
     score += 3
 else:
     print("❌ Step 2: FAILED - Rasa Pro not installed or not accessible (0 points)")
-    print("Hint: With venv activated from project root, run 'pip install rasa-pro'")
+    print("Hint: With venv activated from project root, run 'pip install --no-cache-dir rasa-pro'")
     print("FAIL")
     sys.exit(1)
 print("")

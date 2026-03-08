@@ -74,11 +74,10 @@ Your prompt should show `(.venv)` at the start.
 **3. Install Rasa Pro**
 
 ```bash
-pip install rasa-pro
-pip install --upgrade litellm
+pip install --no-cache-dir rasa-pro
 ```
 
-Installation takes 2–5 minutes. The litellm upgrade fixes a known compatibility issue that otherwise causes `rasa --version` to fail.
+Installation takes 2–5 minutes.
 
 **4. Set RASA_LICENSE**
 
@@ -143,11 +142,10 @@ Your prompt should show `(.venv)` at the start.
 **3. Install Rasa Pro**
 
 ```powershell
-pip install rasa-pro
-pip install --upgrade litellm
+pip install --no-cache-dir rasa-pro
 ```
 
-Installation takes 2–5 minutes. The litellm upgrade fixes a known compatibility issue that otherwise causes `rasa --version` to fail.
+Installation takes 2–5 minutes.
 
 **4. Set RASA_LICENSE**
 
@@ -207,11 +205,10 @@ Your prompt should show `(.venv)` at the start.
 **3. Install Rasa Pro**
 
 ```bash
-pip install rasa-pro
-pip install --upgrade litellm
+pip install --no-cache-dir rasa-pro
 ```
 
-Installation takes 2–5 minutes. The litellm upgrade fixes a known compatibility issue that otherwise causes `rasa --version` to fail.
+Installation takes 2–5 minutes.
 
 **4. Set RASA_LICENSE**
 
@@ -272,11 +269,10 @@ Your prompt should show `(.venv)` at the start.
 **3. Install Rasa Pro**
 
 ```bash
-pip install rasa-pro
-pip install --upgrade litellm
+pip install --no-cache-dir rasa-pro
 ```
 
-Installation takes 2–5 minutes. The litellm upgrade fixes a known compatibility issue that otherwise causes `rasa --version` to fail.
+Installation takes 2–5 minutes.
 
 **4. Set RASA_LICENSE**
 
