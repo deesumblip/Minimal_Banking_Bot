@@ -68,7 +68,7 @@
 - Lab 3.3: Multi-Step Flow
 - 3.4 Flow Descriptions and LLM Understanding
 - Lab 3.4: Flow Descriptions and LLM Matching
-- Lab 3.5: Complete Your Bot for Training
+- Lab 3.5: Adding New Flows
 - 3.6 Test Your Knowledge
 
 **Key Concepts**: Flows, steps, flow descriptions, LLM matching

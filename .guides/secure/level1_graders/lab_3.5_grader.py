@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Lab 3.5: Complete Your Bot for Training - Grader Script
+Lab 3.5: Adding New Flows - Grader Script
 Runs from workspace root. Checks: domain has utter_hours and utter_balance;
 hours.yml and balance.yml exist with correct flow structure.
 """

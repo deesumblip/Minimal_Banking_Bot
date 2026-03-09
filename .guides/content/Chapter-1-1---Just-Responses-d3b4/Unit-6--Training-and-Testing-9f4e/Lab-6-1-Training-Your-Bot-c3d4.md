@@ -1,6 +1,6 @@
 **Objective**: Train your bot and verify it works.
 
-**Before you begin**: Complete Lab 3.5 (Complete Your Bot for Training) so your domain and flows (hours, balance) are set up; then training will pass validation.
+**Before you begin**: Complete Lab 3.5 (Adding New Flows) so your domain and flows (hours, balance) are set up; then training will pass validation.
 
 ## Part 1: In Codio
 

@@ -1,5 +1,3 @@
-# Lab 3.4: Flow Descriptions and LLM Matching
-
 **Objective**: In Units 3.1–3.3 you saw flow structure and how descriptions help the LLM match user messages. In this lab you create two new flows (hours, balance) with clear, specific descriptions.
 
 **Before You Begin**: You've completed Lab 3.2; you understand flow structure; you can use `greet.yml` or `goodbye.yml` as templates.

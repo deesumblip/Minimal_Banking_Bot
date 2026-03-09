@@ -2,7 +2,7 @@
 	"type": "code-output-compare",
 	"taskId": "code-output-compare-350500005",
 	"source": {
-		"name": "Lab 3.5 Complete Your Bot for Training",
+		"name": "Lab 3.5 Adding New Flows",
 		"showName": true,
 		"instructions": "Run the assessment!",
 		"command": "python3 /home/codio/workspace/.guides/secure/level1_graders/lab_3.5_grader.py",

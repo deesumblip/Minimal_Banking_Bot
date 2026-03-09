@@ -1,4 +1,4 @@
-# Lab 3.5: Complete Your Bot for Training - Assessment Setup
+# Lab 3.5: Adding New Flows - Assessment Setup
 
 ## Guide Content (For Students)
 

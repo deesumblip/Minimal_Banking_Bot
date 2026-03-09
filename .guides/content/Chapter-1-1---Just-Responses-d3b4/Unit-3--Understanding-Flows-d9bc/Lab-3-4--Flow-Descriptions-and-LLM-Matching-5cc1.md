@@ -1,5 +1,3 @@
-### Lab 3.4: Flow Descriptions and LLM Matching
-
 **Objective**: Create new flows with good descriptions that help the LLM match user messages.
 
 **Before You Begin**:

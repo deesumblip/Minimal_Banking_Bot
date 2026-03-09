@@ -1,5 +1,3 @@
-# Lab 3.5: Complete Your Bot for Training
-
 **Objective**: Add flows that use the `utter_hours` and `utter_balance` responses. You will paste in pre-written response text and flow files so the assessment for this section can verify your project.
 
 **Why this lab**: In Lab 3.4 you created flows for bank hours and account balance (and may have added your own responses). If your Lab 3.4 assessment passed, those responses met all valid criteria. Here you are given **exact, pre-written versions** of those responses and the corresponding flow files. By pasting them in, you ensure your bot has the responses and flows the automated assessment for *this* section expects—so you can pass the Lab 3.5 assessment and be ready for training in Lab 6.1.
