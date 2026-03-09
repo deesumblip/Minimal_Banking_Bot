@@ -41,7 +41,7 @@ Create 2 new flow files in `data/basics/` folder. Use `greet.yml` or `goodbye.ym
 **Flow 2: Account Balance Help**
 - **File**: `data/basics/balance.yml`
 - **Flow name**: `balance`
-- **Description**: Write a clear, specific description about explaining how to check account balance
+- **Description**: Write a clear, specific description that explains **how the user checks their balance**, for example that they need to log in to online banking or have their account number ready. The description should make the *process* clear (what steps or requirements apply) so the LLM can match questions like "how do I check my balance?" or "what's the login process?"
 - **Steps**: At least one action (e.g., `utter_balance_help` or use an existing response)
 
 #### Step-by-Step Instructions
