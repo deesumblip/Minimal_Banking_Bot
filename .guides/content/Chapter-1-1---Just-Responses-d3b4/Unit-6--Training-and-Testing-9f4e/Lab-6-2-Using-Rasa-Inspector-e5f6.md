@@ -10,7 +10,15 @@
      cd level1
      ```
 
-#### Step 2: Start Inspector in the terminal
+#### Step 2: Create the logs folder
+
+From the `level1` folder, create a `logs` directory so the Inspector log can be written:
+
+```bash
+mkdir -p logs
+```
+
+#### Step 3: Start Inspector in the terminal
 
 From the `level1` folder (with venv active), run:
 
@@ -25,7 +33,7 @@ Starting Rasa server on http://0.0.0.0:5005
 ```
 **Leave this terminal open.** Inspector is running as a server; if you close the terminal, it will stop.
 
-#### Step 3: Open the chat in Codio
+#### Step 4: Open the chat in Codio
 
 In Codio, go to the top menu bar and click the **Rasa Inspect** tab. The chat interface should open.
 
@@ -77,7 +85,11 @@ If you're **not** using Codio and want to run Inspector on your own computer, fo
 - Navigate into the `level1` folder (the one that contains `config.yml`, `domain/`, and `data/`).
 - Example: `cd C:\Users\You\Minimal_Banking_Bot\level1` or `cd ~/Minimal_Banking_Bot/level1`.
 
-**2. Activate the virtual environment and start Inspector**
+**2. Create the logs folder**
+
+- From the `level1` folder, run: `mkdir -p logs` (macOS/Linux) or `mkdir logs` (Windows, if the folder doesn't exist).
+
+**3. Activate the virtual environment and start Inspector**
 
 - **Windows (PowerShell)**  
   ```powershell
@@ -97,7 +109,7 @@ If you're **not** using Codio and want to run Inspector on your own computer, fo
 
 Leave this terminal window open. When you see something like `Starting Rasa server on http://0.0.0.0:5005`, Inspector is running.
 
-**3. Open Inspector in your browser**
+**4. Open Inspector in your browser**
 
 - Open a web browser (Chrome, Firefox, Edge, etc.).
 - Go to: **http://localhost:5005**  
