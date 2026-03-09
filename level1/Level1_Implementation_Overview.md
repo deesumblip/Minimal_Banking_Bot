@@ -29,7 +29,7 @@ This document provides implementation guidance for **Level 1: Just Responses** o
 ### Lab Content (Student-facing)
 - `Level1_Lab0.1_Content.md` – Virtual environment and Rasa install
 - `Level1_Lab2.1_Content.md`, `Level1_Lab2.2_Content.md`, `Level1_Lab2.3_Content.md`
-- `Level1_Lab3.1_Content.md` … `Level1_Lab3.4_Content.md`
+- `Level1_Lab3.1_Content.md` … `Level1_Lab3.5_Content.md`
 - `Level1_Lab4.1_Content.md`, `Level1_Lab4.2_Content.md`
 - `Level1_Lab5.1_Content.md`
 - `Level1_Lab6.1_Content.md`, `Level1_Lab6.2_Content.md`, `Level1_Lab6.3_Content.md`
@@ -37,6 +37,7 @@ This document provides implementation guidance for **Level 1: Just Responses** o
 
 ### Assessment Setup (Implementers)
 - `Level1_Lab0.1_Assessment_Setup.md` – Lab 0.1 grader and config
+- `Level1_Lab3.5_Assessment_Setup.md` – Lab 3.5 (Complete Your Bot for Training) – domain + hours/balance flows; grader: `lab_3.5_grader.py`
 - `Level1_Lab6.1_Assessment_Setup.md` – Lab 6.1 (training) grader and config
 - `Level1_Lab7.2_Assessment_Setup.md` – Lab 7.2 (Build Your Own Feature) – file manipulation: new response + flow
 - (Add others per course design: e.g. Lab 2.1, 2.2, 2.3, 3.1–3.4, 4.1, 4.2, 5.1, 6.2, 6.3, 7.1)

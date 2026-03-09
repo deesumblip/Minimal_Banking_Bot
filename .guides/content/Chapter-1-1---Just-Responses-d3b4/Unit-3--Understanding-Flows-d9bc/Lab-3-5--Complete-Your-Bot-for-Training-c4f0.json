@@ -1,6 +1,6 @@
 {
-	"id": "26ac0075-299d-6b97-9314-39a1a9cdb79a",
-	"title": "3.6: Test Your Knowledge",
+	"id": "c4f0a1b2-3505-4d5e-9f6a-7b8c9d0e1f2a",
+	"title": "Lab 3.5: Complete Your Bot for Training",
 	"files": [
 		{
 			"path": "#tabs",
@@ -12,7 +12,8 @@
 		"level1"
 	],
 	"type": "page",
-	"contentType": "markdown", "content": "",
+	"contentType": "markdown",
+	"content": "",
 	"teacherOnly": false,
 	"closeTerminalSession": true,
 	"learningObjectives": ""

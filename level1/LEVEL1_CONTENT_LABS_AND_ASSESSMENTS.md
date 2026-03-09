@@ -65,6 +65,7 @@ Level 1 uses **9 units** (0–8): Setup → Domain → Flows → Patterns → Co
 | 3.2 | Level1_Lab3.2_Content.md | — | Create goodbye.yml flow |
 | 3.3 | Level1_Lab3.3_Content.md | — | Multi-step flow |
 | 3.4 | Level1_Lab3.4_Content.md | — | Create hours + balance flows |
+| 3.5 | Level1_Lab3.5_Content.md | Level1_Lab3.5_Assessment_Setup.md | Complete domain + hours/balance flows; grader: lab_3.5_grader.py |
 | 4.1 | Level1_Lab4.1_Content.md | — | Explore system patterns |
 | 4.2 | Level1_Lab4.2_Content.md | — | Modify patterns |
 | 5.1 | Level1_Lab5.1_Content.md | — | Config |

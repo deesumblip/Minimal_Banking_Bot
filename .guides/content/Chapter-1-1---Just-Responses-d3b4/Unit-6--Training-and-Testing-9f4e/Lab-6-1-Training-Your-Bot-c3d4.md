@@ -1,5 +1,7 @@
 **Objective**: Train your bot and verify it works.
 
+**Before you begin**: Complete Lab 3.5 (Complete Your Bot for Training) so your domain and flows (hours, balance) are set up; then training will pass validation.
+
 ## Part 1: In Codio
 
 1. **Virtual environment**: In the terminal window (it opens at `~/workspace`; your prompt may show `~/workspace$`), go to the main project folder (the one that contains `level1`, `level2`, and `.guides`). Run `ls -la .venv`. If it exists: `source .venv/bin/activate`. If not: `python3.11 -m venv .venv` then `source .venv/bin/activate`. Prompt should show `(.venv)`.

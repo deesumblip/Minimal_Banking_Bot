@@ -1,0 +1,71 @@
+{
+	"type": "code-output-compare",
+	"taskId": "code-output-compare-350500005",
+	"source": {
+		"name": "Lab 3.5 Complete Your Bot for Training",
+		"showName": true,
+		"instructions": "Run the assessment!",
+		"command": "python3 /home/codio/workspace/.guides/secure/level1_graders/lab_3.5_grader.py",
+		"preExecuteCommand": "",
+		"options": {
+			"timeout": 60,
+			"ignoreCase": true,
+			"ignoreWhitespaces": true,
+			"ignoreNewline": true,
+			"matchSubstring": true
+		},
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Standard Code Test"
+				}
+			],
+			"files": [
+				".guides/secure/level1_graders/lab_3.5_grader.py"
+			],
+			"opened": [
+				{
+					"type": "terminal",
+					"panelNumber": 1
+				}
+			]
+		},
+		"bloomsObjectiveLevel": "",
+		"learningObjectives": "",
+		"guidance": "",
+		"showGuidanceAfterResponseOption": {
+			"type": "Never"
+		},
+		"maxAttemptsCount": 0,
+		"points": 3,
+		"showExpectedAnswerOption": {
+			"type": "Always"
+		},
+		"arePartialPointsAllowed": true,
+		"useMaximumScore": false,
+		"sequence": [
+			{
+				"arguments": "",
+				"input": "",
+				"output": "Step 1: PASSED",
+				"showFeedback": false,
+				"feedback": ""
+			},
+			{
+				"arguments": "",
+				"input": "",
+				"output": "Step 2: PASSED",
+				"showFeedback": false,
+				"feedback": ""
+			},
+			{
+				"arguments": "",
+				"input": "",
+				"output": "Step 3: PASSED",
+				"showFeedback": false,
+				"feedback": ""
+			}
+		]
+	}
+}

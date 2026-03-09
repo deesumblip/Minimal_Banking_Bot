@@ -58,7 +58,7 @@
 
 ### Unit 3: Understanding Flows
 **Type**: Content + Labs  
-**Assessments**: Lab 3.1–3.4 (as configured)
+**Assessments**: Lab 3.1–3.5 (as configured)
 
 **Sections**:
 - 3.1 What is a Flow?
@@ -68,6 +68,8 @@
 - Lab 3.3: Multi-Step Flow
 - 3.4 Flow Descriptions and LLM Understanding
 - Lab 3.4: Flow Descriptions and LLM Matching
+- Lab 3.5: Complete Your Bot for Training
+- 3.6 Test Your Knowledge
 
 **Key Concepts**: Flows, steps, flow descriptions, LLM matching
 
@@ -167,7 +169,7 @@
 - `Level1_Lab7.1_Content.md`, `Level1_Lab7.2_Content.md`
 
 ### Assessment Setup (for implementers)
-- `Level1_Lab0.1_Assessment_Setup.md`, `Level1_Lab6.1_Assessment_Setup.md`, `Level1_Lab7.2_Assessment_Setup.md` (one per graded lab that involves file manipulation)
+- `Level1_Lab0.1_Assessment_Setup.md`, `Level1_Lab3.5_Assessment_Setup.md`, `Level1_Lab6.1_Assessment_Setup.md`, `Level1_Lab7.2_Assessment_Setup.md` (one per graded lab that involves file manipulation)
 
 ### Implementation Files
 - `Level1_Implementation_Overview.md` – Codio team guide
@@ -184,7 +186,7 @@ Unit 1: Introduction to Rasa Bots
     ↓
 Unit 2: Understanding the Domain File ✓ Labs 2.1, 2.2, 2.3
     ↓
-Unit 3: Understanding Flows ✓ Labs 3.1–3.4
+Unit 3: Understanding Flows ✓ Labs 3.1–3.5
     ↓
 Unit 4: System Patterns ✓ Labs 4.1, 4.2
     ↓
