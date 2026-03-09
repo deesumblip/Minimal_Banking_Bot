@@ -2,6 +2,8 @@
 
 Understanding the file structure will help you navigate the codebase and understand how everything fits together.
 
+**Why we have this layout**: Rasa expects a specific layout so it can find your domain, flows, and config. When you add a response or a flow, you'll know exactly where it goes. When something breaks, you'll know which file to open. Think of it as a map: once you know where things live, building and debugging become straightforward.
+
 #### Complete File Tree
 
 ```

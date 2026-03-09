@@ -1,5 +1,7 @@
 ### 6.5 Understanding Bot Behavior
 
+**Why this matters**: When the bot says something unexpected, you need a mental model of what happened. Message → pipeline (LLM) → flow match → steps → domain responses. Knowing that chain helps you fix issues: for example, if the wrong flow runs, improve the description; if the text is wrong, fix the domain.
+
 #### How the Bot Decides What to Do
 
 1. User sends a message (e.g. "hello").

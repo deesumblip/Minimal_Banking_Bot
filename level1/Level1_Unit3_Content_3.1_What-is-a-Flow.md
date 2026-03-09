@@ -2,7 +2,9 @@
 
 A **flow** is a conversation script - a step-by-step plan for how the bot should handle a particular conversation path.
 
-**File Location**: `data/basics/*.yml` (one file per flow, or multiple flows per file)
+**Why flows matter**: The bot has to decide what to do when the user says something. Flows are that decision map: when the user asks for help, run these steps, such as saying the help response. Without flows, the bot would have responses defined but no rule for when to use them. With flows, you design clear paths: greeting, help, contact, goodbye, hours, balance. The bot then behaves predictably.
+
+**File Location**: `data/basics/*.yml`. You can put one flow per file or multiple flows per file.
 
 **Analogy**: A flow is like a recipe. It has:
 - A name (what recipe is this?)

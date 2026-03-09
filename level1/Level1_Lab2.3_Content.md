@@ -2,6 +2,8 @@
 
 **Objective**: Add a second variation to `utter_goodbye`.
 
+**Why variations**: If the bot says exactly the same thing every time ("Goodbye! Have a great day!"), it feels robotic. Adding a second (and later, more) variations lets Rasa pick one at random so the conversation feels more natural. You'll use this same idea for other responses as you build out the bot.
+
 **Before You Begin**:
 - ✅ You've completed Lab 2.2 (created `utter_goodbye`)
 - ✅ You have `domain/basics.yml` open in your editor

@@ -1,5 +1,7 @@
 ### 3.2 Flow Structure Deep Dive
 
+Before you create your own flow, it helps to see how an existing one is built. Every flow you add will follow this same pattern: a name, a description the LLM uses to match user messages, and steps that run in order.
+
 Let's examine a real flow from `data/basics/greet.yml`:
 
 ```yaml
@@ -19,13 +21,13 @@ flows:
 
 3. **`name: say hello`**: Human-readable name for logs and debugging.
 
-4. **`description: ...`**: **Critical** – The LLM uses this to match user messages to flows. Should be clear and specific (e.g. "Greet the user when they start a conversation" helps the LLM trigger on "hello", "hi", "hey").
+4. **`description: ...`**: **Critical.** The LLM uses this to match user messages to flows. It should be clear and specific. For example, "Greet the user when they start a conversation" helps the LLM trigger on "hello", "hi", and "hey".
 
 ⚠️ **Critical**: Flow descriptions are **essential**! Without a good description, the LLM won't know when to trigger your flow.
 
 **Example of good vs bad descriptions**:
 - ❌ **Bad**: "Say hello" (too vague)
-- ✅ **Good**: "Greet the user when they start a conversation" (clear context and purpose)
+- ✅ **Good**: "Greet the user when they start a conversation," because it gives clear context and purpose.
 
 5. **`steps:`**: The actual steps to execute – a list of actions in order.
 

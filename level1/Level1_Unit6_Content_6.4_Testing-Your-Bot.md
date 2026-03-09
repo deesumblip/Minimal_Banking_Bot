@@ -1,5 +1,7 @@
 ### 6.4 Testing Your Bot
 
+**Why test deliberately**: Clicking around once isn't enough. You want to verify each flow (greet, help, contact, goodbye, hours, and balance) with different phrasings so you see that the LLM matches correctly and the right response appears. That catches bad descriptions or missing responses before anyone else uses the bot.
+
 #### Basic Testing Workflow
 
 1. **Start Inspector** (see 6.3).

@@ -1,6 +1,6 @@
 **Objective**: Add flows that use the `utter_hours` and `utter_balance` responses. You will paste in pre-written response text and flow files so the assessment for this section can verify your project.
 
-**Why this lab**: In Lab 3.4 you created flows for bank hours and account balance (and may have added your own responses). If your Lab 3.4 assessment passed, those responses met all valid criteria. Here you are given **exact, pre-written versions** of those responses and the corresponding flow files. By pasting them in, you ensure your bot has the responses and flows the automated assessment for *this* section expects—so you can pass the Lab 3.5 assessment and be ready for training in Lab 6.1.
+**Why this lab**: In Lab 3.4 you created flows for bank hours and account balance (and may have added your own responses). If your Lab 3.4 assessment passed, those responses met all valid criteria. Here you are given **exact, pre-written versions** of those responses and the corresponding flow files. By pasting them in, you ensure your bot has the responses and flows the automated assessment for *this* section expects—so you can pass the Lab 3.5 assessment.
 
 **Before You Begin**: You've completed Lab 3.4 (or at least understand flow structure). You are in the `level1` project (folder that contains `domain/`, `data/`, `config.yml`).
 
@@ -28,9 +28,9 @@ Save the file.
 
 ---
 
-#### Step 2: Create the hours flow
+#### Step 2: Replace the hours flow
 
-Create a new file **`data/basics/hours.yml`** with this content:
+Open **`data/basics/hours.yml`** (you created this in Lab 3.4). Replace all of its contents with the following. If the file doesn't exist yet, create it with this content.
 
 ```yaml
 flows:
@@ -45,9 +45,9 @@ Save the file.
 
 ---
 
-#### Step 3: Create the balance flow
+#### Step 3: Replace the balance flow
 
-Create a new file **`data/basics/balance.yml`** with this content:
+Open **`data/basics/balance.yml`** (you created this in Lab 3.4). Replace all of its contents with the following. If the file doesn't exist yet, create it with this content.
 
 ```yaml
 flows:
@@ -68,8 +68,6 @@ Save the file.
 - [ ] `data/basics/hours.yml` exists and has a flow named `hours` with step `utter_hours`.
 - [ ] `data/basics/balance.yml` exists and has a flow named `balance` with step `utter_balance`.
 
-When you reach **Lab 6.1 (Training Your Bot)**, run `rasa train` from the `level1` folder; with this lab complete, your project will be in the state the course expects and training can run.
-
-**Run the assessment when done** to pass the Lab 3.5 assessment and confirm you're ready for Lab 6.1 (Training).
+**Run the assessment when done** to pass the Lab 3.5 assessment.
 
 {Check It!|assessment}(code-output-compare-350500005)

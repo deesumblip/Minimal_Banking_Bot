@@ -1,7 +1,9 @@
 ### 7.2 Your Level 1 Banking Bot: Summary
 
-**Domain**: `utter_greet`, `utter_help`, `utter_contact` (and `utter_goodbye` if added).  
-**Flows**: `greet`, `help`, `contact` (and `goodbye`, `hours`, `balance` if added).  
+You've built a bot that can greet, help, and inform, all without writing code. This summary is a quick reference for what you have and what comes next.
+
+**Domain**: `utter_greet`, `utter_help`, `utter_contact`, and optionally `utter_goodbye`.  
+**Flows**: `greet`, `help`, `contact`, and optionally `goodbye`, `hours`, and `balance`.  
 **System patterns**: `pattern_session_start`, `pattern_completed`.
 
 **What your bot can do**: Greet users, explain services, provide contact information.

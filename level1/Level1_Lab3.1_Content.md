@@ -2,6 +2,8 @@
 
 **Objective**: Understand flow structure by examining existing flows.
 
+**Why this lab**: You'll create your first flow in Lab 3.2. Here you're not changing anything; you're seeing how greet, help, and contact are already built. Once you recognize the pattern (flows, name, description, steps), creating goodbye and later hours and balance will feel like filling in a template.
+
 #### Steps
 
 1. **Navigate to the Data Folder**

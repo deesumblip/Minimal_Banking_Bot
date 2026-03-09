@@ -2,17 +2,19 @@
 
 Having multiple variations of the same response makes your bot feel more natural and less robotic.
 
+**Why we use them**: Users notice when a bot repeats the exact same phrase. Variations, plus `rephrase: True` where appropriate, keep the meaning the same but change the wording, so the bot feels more like a person and less like a script.
+
 #### When to Use Variations
 
 ✅ **Good for**:
-- Greetings (various ways to say hello)
-- Confirmations (different ways to say "yes")
-- General information (can be phrased differently)
+- Greetings: various ways to say hello
+- Confirmations: different ways to say "yes"
+- General information that can be phrased differently
 
 ❌ **Not good for**:
-- Critical information (account numbers, error codes)
-- Legal disclaimers (must be exact)
-- Step-by-step instructions (clarity is more important than variety)
+- Critical information such as account numbers or error codes
+- Legal disclaimers that must be exact
+- Step-by-step instructions where clarity matters more than variety
 
 #### Example: Multiple Variations
 

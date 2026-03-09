@@ -2,6 +2,8 @@
 
 Before diving into building your first Rasa bot, let's make sure you have everything set up correctly.
 
+**Why this matters**: Every lab in this course assumes you can run Rasa commands and that your bot files are in a known layout. Taking a few minutes now to get Python, a virtual environment, and a Rasa Pro license in place means you won't hit "command not found" or "license required" later. You'll be able to focus on what the bot does, not on environment issues.
+
 #### Prerequisites Checklist
 
 ✅ **Python Knowledge**

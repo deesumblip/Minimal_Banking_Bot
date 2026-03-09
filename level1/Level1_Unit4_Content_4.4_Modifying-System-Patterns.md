@@ -1,6 +1,6 @@
 ### 4.4 Modifying System Patterns
 
-You can customize system patterns to change default behavior.
+You can customize system patterns to change default behavior. That way the first thing users see, or the way a turn ends, matches your design. For example, you might show greet plus help, or greet plus contact.
 
 #### Example: Enhanced Session Start
 

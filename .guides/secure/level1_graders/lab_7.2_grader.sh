@@ -16,12 +16,14 @@ fail() {
 [[ -d "$BASICS_DATA_DIR" ]] || fail "Missing flows folder: level1/data/basics/"
 
 # Lab 7.2 asks for a NEW response + a NEW flow file. We look for a flow file
-# in data/basics that is not one of the earlier lab files.
+# in data/basics that is not one of the earlier lab files (including hours/balance from Lab 3.5).
 known_files=(
   "greet.yml"
   "help.yml"
   "contact.yml"
   "goodbye.yml"
+  "hours.yml"
+  "balance.yml"
   "check_balance.yml"
 )
 
@@ -43,7 +45,7 @@ for f in "$BASICS_DATA_DIR"/*.yml; do
 done
 shopt -u nullglob
 
-(( ${#candidate_flows[@]} > 0 )) || fail "No new flow file found in level1/data/basics/. Create a new .yml flow file (not greet/help/contact/goodbye)."
+(( ${#candidate_flows[@]} > 0 )) || fail "No new flow file found in level1/data/basics/. Create a new .yml flow file (not greet/help/contact/goodbye/hours/balance)."
 
 flow_file="${candidate_flows[0]}"
 

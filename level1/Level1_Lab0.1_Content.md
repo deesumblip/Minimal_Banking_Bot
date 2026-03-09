@@ -1,6 +1,8 @@
 # Lab 0.1: Create Virtual Environment and Install Rasa Pro
 
-Create a virtual environment in the **project root**, install Rasa Pro, set up **your own** Rasa Pro license (`RASA_LICENSE`), and verify everything works. This is your first step—you need this setup before any other lab.
+**Why this lab**: Every later lab depends on being able to run Rasa from a clean, predictable environment. A virtual environment keeps Rasa and its dependencies separate from the rest of your system so versions don't clash. Setting your Rasa Pro license here means training and running the bot will work when you get to Unit 6. Without this step, nothing that follows will run.
+
+In this lab you will create a virtual environment in the **project root**, install Rasa Pro, set up **your own** Rasa Pro license (`RASA_LICENSE`), and verify everything works.
 
 This course uses:
 
@@ -11,7 +13,7 @@ This course uses:
 ## In this lab you will
 
 1. Check Python and pip
-2. Create a virtual environment (`.venv`) in the **project root** — this same `.venv` is used across **all levels** (level1, level2, level3, etc.)
+2. Create a virtual environment (`.venv`) in the **project root**. This same `.venv` is used across all levels: level1, level2, level3, and so on.
 3. Install Rasa Pro in that venv
 4. Set up **RASA_LICENSE** (your own Rasa Pro license)
 5. Verify the installation with `rasa --version` (after your environment variable is loaded)
@@ -62,7 +64,7 @@ python3.11 -m ensurepip --upgrade
 
 **2. Create and activate the virtual environment**
 
-Confirm you're in the project root (run `pwd` — the path should **not** end in `level1`). Then:
+Confirm you're in the project root (run `pwd`; the path should **not** end in `level1`). Then:
 
 ```bash
 python3.11 -m venv .venv
@@ -193,7 +195,7 @@ Then run `pip --version` (or `pip3 --version`) again. After any install, close a
 
 **2. Create and activate the virtual environment**
 
-Confirm you're in the project root (run `pwd` — the path should **not** end in `level1`). Then:
+Confirm you're in the project root (run `pwd`; the path should **not** end in `level1`). Then:
 
 ```bash
 python3.11 -m venv .venv
@@ -257,7 +259,7 @@ Then run `pip --version` again. After any install, close and reopen your termina
 
 **2. Create and activate the virtual environment**
 
-Confirm you're in the project root (run `pwd` — the path should **not** end in `level1`). Then:
+Confirm you're in the project root (run `pwd`; the path should **not** end in `level1`). Then:
 
 ```bash
 python3.11 -m venv .venv

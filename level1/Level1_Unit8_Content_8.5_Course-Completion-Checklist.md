@@ -1,5 +1,7 @@
 ### 8.5 Course Completion Checklist
 
+**Why use this checklist**: These items are the minimum you need to have solid before Level 2. If you can do each one, you're not missing a step. You're ready to add actions and keep building on the same bot.
+
 Before moving to Level 2, ensure you can:
 
 - Explain what a response is and where it's defined

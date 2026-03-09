@@ -2,6 +2,8 @@
 
 **Objective**: Modify `pattern_session_start` to greet the user and provide contact information.
 
+**Why modify session start**: By default the bot might only greet. Adding a second step, such as contact info, means every new user immediately sees how to reach you. You're designing the first impression of the bot: what it says before the user has typed anything.
+
 #### Steps
 
 1. Open `data/system/patterns/patterns.yml`

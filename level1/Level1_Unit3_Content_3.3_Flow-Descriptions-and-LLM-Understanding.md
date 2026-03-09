@@ -2,6 +2,8 @@
 
 The `description` field is **critical** because the LLM uses it to match user messages to flows.
 
+**Why descriptions matter**: Users don't type keywords. They say things like "when are you open?" or "what's your phone number?" The LLM has to decide which flow fits. Your description is the only place you tell it "this flow is for bank hours" or "this flow is for contact info." A clear description means the right flow runs; a vague one means the bot might pick the wrong flow or none at all.
+
 #### How It Works
 
 1. User sends a message: "I need help"

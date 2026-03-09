@@ -7,11 +7,13 @@ The **domain file** is the bot's knowledge base. It defines everything the bot "
 
 **File Location**: `domain/basics.yml`
 
-**Analogy**: The domain is like a dictionary that defines all the words (responses) the bot can use.
+**Why we care**: Flows don't contain the actual message text; they only say "say this response." The domain is the single place where that text lives. When you add a response here, any flow can use it. When you change the wording, you change it in one place and it updates everywhere. That keeps your bot consistent and easy to maintain.
+
+**Analogy**: The domain is like a dictionary that defines all the responses the bot can use.
 
 #### Domain Structure
 
-The domain file has three main sections (but Level 1 only uses `responses:`):
+The domain file has three main sections. Level 1 only uses `responses:`.
 
 ```yaml
 version: "3.1"        # Rasa version (always "3.1" for current Rasa Pro)

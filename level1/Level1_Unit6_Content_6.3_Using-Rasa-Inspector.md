@@ -1,6 +1,8 @@
 ### 6.3 Using Rasa Inspector
 
-**Inspector** is Rasa's built-in testing interface. It lets you chat with your bot in a web page so you can see how it responds. You start it from the **terminal**, then open the chat in your **browser** (or in Codio's Rasa Inspect tab).
+**Inspector** is Rasa's built-in testing interface. It lets you chat with your bot in a web page so you can see how it responds. You start it from the **terminal**, then open the chat in your **browser** or in Codio's Rasa Inspect tab.
+
+**Why use Inspector**: You need a way to try the bot without deploying it. Inspector gives you a chat UI and, in debug mode, shows which flow triggered and what the LLM understood. That makes it easy to check that "when are you open?" hits the hours flow and that your descriptions and responses work as intended.
 
 #### Step 1: Activate the virtual environment
 
@@ -40,7 +42,7 @@ At this stage the bot only uses simple responses, so the answers will be straigh
 
 #### Inspector interface: what you see (beginner guide)
 
-When Inspector opens, you'll see several areas. You don't need to understand every part to use it—here's what matters at Level 1.
+When Inspector opens, you'll see several areas. You don't need to understand every part to use it. Here's what matters at Level 1.
 
 1. **Chat area (main part)**
    - This is where you type and where the bot's replies appear.
@@ -63,7 +65,7 @@ When Inspector opens, you'll see several areas. You don't need to understand eve
 
 #### Launching Rasa Inspector locally
 
-If you're **not** using Codio and want to run Inspector on your own computer, follow the steps for your operating system. You'll need: the `level1` project folder, a virtual environment with Rasa Pro installed, and **RASA_LICENSE** set (e.g. via a `.env` file in project root—see Unit 0 and Lab 0.1).
+If you're **not** using Codio and want to run Inspector on your own computer, follow the steps for your operating system. You'll need the `level1` project folder, a virtual environment with Rasa Pro installed, and **RASA_LICENSE** set. You can set it via a `.env` file in the project root; see Unit 0 and Lab 0.1.
 
 **1. Go to your project folder**
 

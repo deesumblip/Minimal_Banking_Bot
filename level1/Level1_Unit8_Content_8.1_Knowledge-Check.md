@@ -1,5 +1,7 @@
 ### 8.1 Knowledge Check
 
+**Why check your knowledge**: These questions reinforce the main ideas: where responses live, what flows do, how the LLM uses descriptions, and what system patterns are for. If you can answer them, you're ready to move to Level 2 or to design your own bot from scratch.
+
 **Q1: What is a Flow?**  
 a) A predefined bot message  b) A conversation script with steps  c) A Python function  d) A configuration file  
 **Answer**: b) A conversation script with steps.

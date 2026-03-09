@@ -2,6 +2,8 @@
 
 The `pattern_session_start` flow automatically triggers when a new conversation begins.
 
+**Why it matters**: When someone opens the chat, they shouldn't have to type "hello" to get a response. Session start runs as soon as the conversation starts, so you can greet them and optionally show help or contact info right away. That makes the bot feel welcoming instead of blank.
+
 #### How It Works
 
 ```yaml

@@ -2,11 +2,13 @@
 
 **Objective**: Start Inspector and test a simple conversation.
 
+**Why this lab**: You need to see the bot in action. Inspector is the place to do that: you start it, open the chat, and send messages. You'll see which flow runs and what the bot says. That confirms your training worked and gives you a baseline before you add more flows or move to Level 2.
+
 ---
 
 ## Part 1: In Codio
 
-1. **Terminal**: From the main project folder (root, where `level1` and `.venv` live), run `source .venv/bin/activate`, then `cd level1`. Your prompt should show `(.venv)` and you should be in `level1`.
+1. **Terminal**: From the main project folder, the root where `level1` and `.venv` live, run `source .venv/bin/activate`, then `cd level1`. Your prompt should show `(.venv)` and you should be in `level1`.
 2. **Start Inspector**: Run `python -m rasa inspect --debug --log-file logs/logs.out`. Wait for "Starting Rasa server on http://0.0.0.0:5005". Leave the terminal open.
 3. **Open Inspector**: In the top menu bar, click the **Rasa Inspect** tab. The chat interface opens.
 4. **Test**: In the chat, type **hello** and press Enter. The bot should respond. Check the flow/debug panel to see which flow triggered.
@@ -66,4 +68,4 @@ Wait for "Starting Rasa server on http://0.0.0.0:5005". Leave this terminal open
 
 In the Inspector chat, type **hello** and press Enter. The bot should respond.
 
-**Troubleshooting (local only):** If you see "Address already in use" or port 5005 is in use, run Inspector on another port: `python -m rasa inspect --debug --port 5006` and open **http://localhost:5006** (or …/inspect.html on 5006) in your browser.
+**Troubleshooting (local only):** If you see "Address already in use" or port 5005 is in use, run Inspector on another port: `python -m rasa inspect --debug --port 5006` and open **http://localhost:5006**, or the inspect.html page on port 5006, in your browser.

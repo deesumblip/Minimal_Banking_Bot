@@ -2,6 +2,8 @@
 
 **Objective**: Learn YAML syntax by exploring existing responses.
 
+**Why this lab**: Before you add or edit responses, you need to see how they're structured in the domain file. Once you can spot the pattern (response name, `- text:`, `metadata:`), adding your own in Lab 2.2 will be straightforward. This is a short look-around; no typing is required.
+
 #### Steps
 
 1. **Open the Domain File**

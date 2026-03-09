@@ -2,6 +2,8 @@
 
 **Objective**: Test your bot thoroughly with multiple variations.
 
+**Why this lab**: One message per flow isn't enough. Users phrase things differently ("hi", "hello", "hey there"). Testing with several phrasings per flow shows whether your descriptions are broad enough and whether the right flow triggers. Writing down what you said, which flow ran, and what the bot replied builds a habit of systematic testing that you'll use for every bot you build.
+
 #### Task
 
 1. Test the `greet` flow with 3 different greetings.

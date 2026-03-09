@@ -2,6 +2,8 @@
 
 **YAML** (Yet Another Markup Language) is a human-readable format for configuration files. Rasa uses YAML extensively, so understanding the basics is essential.
 
+**Why this matters**: Every response and flow you add will be written in YAML. One wrong space or missing dash can cause "parse error" when you train. Spending a few minutes on the rules below will save you from frustrating debugging later. You'll know why something broke and how to fix it.
+
 #### Why YAML?
 
 YAML is designed to be easy for humans to read and write, making it perfect for configuration files. All Rasa bot files use YAML format.

@@ -2,12 +2,14 @@
 
 **Objective**: Modify `greet.yml` to have two steps.
 
+**Why multi-step flows**: So far each flow has done one thing, such as say greet or say goodbye. In real conversations you often want a short sequence: for example, greet the user and then immediately show what the bot can do. Adding a second step to the greet flow does exactly that. One trigger like "hello" runs two actions in order: greet, then help. You'll use the same idea whenever one user message should lead to several bot replies.
+
 **Before You Begin**: You understand how flows work; you know where `data/basics/greet.yml` is; `utter_greet` and `utter_help` exist in your domain.
 
 #### Steps
 
 1. Open `data/basics/greet.yml` in your editor.
-2. Find the `steps:` section (one step: `- action: utter_greet`).
+2. Find the `steps:` section. It has one step: `- action: utter_greet`.
 3. Add a second step: `- action: utter_help` at the same indentation level as the first step.
 4. Save the file.
 

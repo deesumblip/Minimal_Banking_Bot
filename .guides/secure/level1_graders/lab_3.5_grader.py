@@ -24,18 +24,28 @@ max_score = 3
 print("Running Lab 3.5 Assessment Checks...")
 print("")
 
-# Step 1: Domain has utter_hours and utter_balance (1 point)
-print("Step 1: Checking domain for utter_hours and utter_balance...")
+# Step 1: Domain has utter_hours and utter_balance with Lab 3.5 handout content (1 point)
+# Require key phrases so Lab 3.5 cannot be passed with only Lab 3.4's configuration.
+print("Step 1: Checking domain for utter_hours and utter_balance (Lab 3.5 content)...")
 if not DOMAIN_FILE.is_file():
     print("❌ Step 1: FAILED - domain/basics.yml not found (0 points)")
     print("FAIL")
     sys.exit(1)
 text = DOMAIN_FILE.read_text(encoding="utf-8")
-has_hours = "utter_hours" in text and ("text:" in text or "utter_hours:" in text)
-has_balance = "utter_balance" in text and ("text:" in text or "utter_balance:" in text)
-if not (has_hours and has_balance):
+if "utter_hours" not in text or "utter_balance" not in text:
     print("❌ Step 1: FAILED - domain must define utter_hours and utter_balance under responses: (0 points)")
     print("Hint: Add both response blocks in Lab 3.5 Step 1.")
+    print("FAIL")
+    sys.exit(1)
+# Require handout phrases so 3.4-only (student-written) content does not pass.
+if "Monday" not in text and "9am" not in text:
+    print("❌ Step 1: FAILED - utter_hours must use the Lab 3.5 handout text (e.g. Monday, 9am). (0 points)")
+    print("Hint: Paste the exact utter_hours block from Lab 3.5 Step 1.")
+    print("FAIL")
+    sys.exit(1)
+if "account number" not in text:
+    print("❌ Step 1: FAILED - utter_balance must use the Lab 3.5 handout text (include 'account number'). (0 points)")
+    print("Hint: Paste the exact utter_balance block from Lab 3.5 Step 1.")
     print("FAIL")
     sys.exit(1)
 print("✅ Step 1: PASSED - Domain has utter_hours and utter_balance (1 point)")

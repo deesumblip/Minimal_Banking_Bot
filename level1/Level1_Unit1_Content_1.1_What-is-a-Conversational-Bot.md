@@ -2,6 +2,8 @@
 
 A **conversational bot** is a computer program that can have natural, human-like conversations with users. Unlike traditional programs that require specific commands, conversational bots understand natural language and respond in kind.
 
+**Why we're building one**: In this course you build a small banking assistant. The goal isn't just to run commands. It's to see how a bot decides what to say and when. Once you understand that, you can design better conversations and add more power in later levels, such as memory and custom actions.
+
 #### Key Characteristics
 
 1. **Natural Language Understanding (NLU)**: The bot can understand what users mean, even when they phrase things differently. For example:

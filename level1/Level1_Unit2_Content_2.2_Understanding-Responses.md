@@ -2,6 +2,8 @@
 
 A **response** is a predefined message the bot can send to users. Responses are defined in the domain file and used in flows.
 
+**Why responses live in the domain**: The bot has many things it might say (greeting, help, contact info, goodbye, etc.). Putting all of them in one place, the domain, means flows only need to say "use this response." They don't repeat the actual text. That way you edit the message once and every flow that uses it stays correct.
+
 #### Response Structure
 
 Let's examine a real response from `domain/basics.yml`:
