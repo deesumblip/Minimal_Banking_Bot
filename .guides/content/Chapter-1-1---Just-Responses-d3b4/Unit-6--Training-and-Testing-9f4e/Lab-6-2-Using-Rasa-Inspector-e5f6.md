@@ -1,5 +1,3 @@
-# Lab 6.2: Using Rasa Inspector
-
 **Inspector** is Rasa's built-in testing interface. It lets you chat with your bot in a web page so you can see how it responds. You start it from the **terminal**, then open the chat in your **browser** (or in Codio's Rasa Inspect tab).
 
 #### Step 1: Activate the virtual environment
@@ -39,6 +37,12 @@ Try a few more questions, for example:
 - "Hi!"
 
 At this stage the bot only uses simple responses, so the answers will be straightforward.
+
+---
+
+Run the assessment when done.
+
+{Check It!|assessment}(code-output-compare-2562507356)
 
 #### Inspector interface: what you see (beginner guide)
 
@@ -107,9 +111,3 @@ Leave this terminal window open. When you see something like `Starting Rasa serv
 - **"Address already in use" or port 5005 in use** – Another program is using port 5005. Close other Rasa or Python processes, or use a different port: `python -m rasa inspect --debug --log-file logs/logs.out --port 5006` and then open **http://localhost:5006** (or …/inspect.html on 5006) in your browser.
 
 **AI Coach**: Ask "How do I access Inspector in Codio?" or "Why won't Inspector start?"
-
----
-
-Run the assessment when done.
-
-{Check It!|assessment}(code-output-compare-2562507356)
