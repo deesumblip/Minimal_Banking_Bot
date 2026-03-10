@@ -1,1 +1,19 @@
-{"id":"a4b5d7ec-xxxx-xxxx-xxxx-xxxxxxxxxxxx","title":"7.3 Best Practices","files":[{"path":"#terminal","panel":1,"action":"open","command":"cd /home/codio/workspace && source .venv/bin/activate && cd level1 && mkdir -p logs && python -m rasa inspect --debug --log-file logs/logs.out"}],"layout":"2-panels-tree-guides-left","path":[],"type":"page","contentType":"markdown", "content": "","teacherOnly":false,"closeTerminalSession":true,"learningObjectives":""}
+{
+	"id": "a4b5d7ec-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+	"title": "7.3 Best Practices",
+	"files": [
+		{
+			"path": "#terminal",
+			"panel": 1,
+			"action": "open"
+		}
+	],
+	"layout": "2-panels-tree-guides-left",
+	"path": [],
+	"type": "page",
+	"contentType": "markdown",
+	"content": "",
+	"teacherOnly": false,
+	"closeTerminalSession": true,
+	"learningObjectives": ""
+}

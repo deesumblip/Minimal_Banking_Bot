@@ -1,5 +1,3 @@
-To restart your bot, click **[Start Rasa Inspector](open_terminal panel=1; cmd bash /home/codio/workspace/.guides/scripts/start_rasa_inspect.sh)**. Then click Rasa Inspect in the main toolbar above to load the chat tab.
-
 **Domain**: `utter_greet`, `utter_help`, `utter_contact` (and `utter_goodbye` if added).  
 **Flows**: `greet`, `help`, `contact` (and `goodbye`, `hours`, `balance` if added).  
 **System patterns**: `pattern_session_start`, `pattern_completed`.
