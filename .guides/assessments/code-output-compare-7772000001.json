@@ -2,10 +2,10 @@
 	"type": "code-output-compare",
 	"taskId": "code-output-compare-7772000001",
 	"source": {
-		"name": "Lab 7.2: Build Your Own Feature",
+		"name": "Lab 7.1: Build Your Own Feature",
 		"showName": true,
-		"instructions": "Verify that you added a new response and a new flow for your Level 1 bot.",
-		"command": "bash /home/codio/workspace/.guides/secure/level1_graders/lab_7.2_grader.sh",
+		"instructions": "Lab 7.1: Verify that you added a new response and a new flow for your Level 1 bot.",
+		"command": "bash /home/codio/workspace/.guides/secure/level1_graders/lab_7.1_grader.sh",
 		"preExecuteCommand": "",
 		"options": {
 			"timeout": 60,
@@ -22,7 +22,7 @@
 				}
 			],
 			"files": [
-				".guides/secure/level1_graders/lab_7.2_grader.sh"
+				".guides/secure/level1_graders/lab_7.1_grader.sh"
 			],
 			"opened": [
 				{

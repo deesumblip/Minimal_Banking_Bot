@@ -15,7 +15,7 @@ fail() {
 [[ -f "$DOMAIN_FILE" ]] || fail "Missing domain file: level1/domain/basics.yml"
 [[ -d "$BASICS_DATA_DIR" ]] || fail "Missing flows folder: level1/data/basics/"
 
-# Lab 7.2 asks for a NEW response + a NEW flow file. We look for a flow file
+# Lab 7.1 asks for a NEW response + a NEW flow file. We look for a flow file
 # in data/basics that is not one of the earlier lab files (including hours/balance from Lab 3.5).
 known_files=(
   "greet.yml"
@@ -58,7 +58,7 @@ grep -Eq '^[[:space:]]+description:' "$flow_file" || fail "Flow file $(basename 
 utter_action="$(
   grep -Eo 'action:[[:space:]]*utter_[A-Za-z0-9_]+' "$flow_file" \
     | head -n 1 \
-    | sed -E 's/.*(utter_[A-Za-z0-9_]+).*/\\1/'
+    | sed -E 's/.*(utter_[A-Za-z0-9_]+).*/\1/'
 )"
 
 [[ -n "${utter_action:-}" ]] || fail "Flow file $(basename "$flow_file") does not reference any 'utter_*' action."

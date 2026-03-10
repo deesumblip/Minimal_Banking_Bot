@@ -1,4 +1,4 @@
-# Lab 7.2 – Reference solution for LLM Rubric Autograde
+# Lab 7.1 – Reference solution for LLM Rubric Autograde
 
 Use this file as the **Instructor Provided Solution File** in Codio's LLM Rubric Autograde so the LLM has a model answer to compare against student submissions.
 
