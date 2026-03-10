@@ -1,6 +1,8 @@
+When you open this page, a terminal should open and **Rasa Inspector** may start automatically (if your Codio guide is set to run the terminal command). If Inspector is not running, click: **[Start Rasa Inspector](open_terminal panel=1; cmd bash -c "cd /home/codio/workspace && source .venv/bin/activate && cd level1 && mkdir -p logs && python -m rasa inspect --debug --log-file logs/logs.out")** to open a terminal and start it in one step.
+
 #### Basic testing workflow
 
-1. **Start Inspector** (see Lab 6.2).
+1. **Start Inspector** (see Lab 6.2 if you need to run it manually).
 2. **Test each flow**:
    - Type "hello" (or "hi", "hey") → should trigger the `greet` flow
    - Type "help" or "what can you do?" → should trigger the `help` flow
@@ -27,4 +29,4 @@ The LLM uses your flow descriptions to match user messages. For example:
 - **User says**: "hello", "hi", "hey", "good morning"
 - **Result**: All of these can trigger the `greet` flow because the LLM treats them as greetings
 
-If the wrong flow triggers for something you said, improve that flow’s description (or add examples) so the LLM can match it better.
+If the wrong flow triggers for something you said, improve that flow's description (or add examples) so the LLM can match it better.
