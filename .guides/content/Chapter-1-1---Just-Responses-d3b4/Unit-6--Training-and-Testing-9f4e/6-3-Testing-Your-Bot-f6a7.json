@@ -15,6 +15,6 @@
 	"contentType": "markdown",
 	"content": "",
 	"teacherOnly": false,
-	"closeTerminalSession": false,
+	"closeTerminalSession": true,
 	"learningObjectives": ""
 }
