@@ -1,6 +1,6 @@
-When you open this section, **Rasa Inspector** should start automatically in the terminal so you can test your bot. If it doesn’t, click: **[Start Rasa Inspector](open_terminal panel=1; cmd bash /home/codio/workspace/.guides/scripts/start_rasa_inspect.sh)**.
+﻿To restart your bot, click **[Start Rasa Inspector](open_terminal panel=1; cmd bash /home/codio/workspace/.guides/scripts/start_rasa_inspect.sh)**.
 
-Leave the terminal open and use the **Rasa Inspect** tab (or your browser) to chat with the bot.
+Then click Rasa Inspect in the main toolbar above to load the chat tab.
 
 #### Basic testing workflow
 
