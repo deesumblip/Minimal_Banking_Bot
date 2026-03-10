@@ -1,6 +1,10 @@
 {
   "commands": {
-    "Node version": "node --version"
+    "Node version": "node --version",
+    "Start Rasa Inspector": {
+      "id": "backend-guide",
+      "cmd": "bash /home/codio/workspace/.guides/scripts/start_rasa_inspect.sh"
+    }
   },
   "preview": {
     "Rasa Inspect": "https://{{domain5005}}/"

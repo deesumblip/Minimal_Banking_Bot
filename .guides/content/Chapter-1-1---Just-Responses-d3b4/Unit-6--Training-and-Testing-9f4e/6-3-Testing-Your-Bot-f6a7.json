@@ -6,7 +6,8 @@
 			"path": "#terminal",
 			"panel": 1,
 			"action": "open",
-			"command": "cd /home/codio/workspace && source .venv/bin/activate && cd level1 && mkdir -p logs && python -m rasa inspect --debug --log-file logs/logs.out"
+			"command": "bash /home/codio/workspace/.guides/scripts/start_rasa_inspect.sh",
+			"cmd": "bash /home/codio/workspace/.guides/scripts/start_rasa_inspect.sh"
 		}
 	],
 	"layout": "2-panels-tree-guides-left",

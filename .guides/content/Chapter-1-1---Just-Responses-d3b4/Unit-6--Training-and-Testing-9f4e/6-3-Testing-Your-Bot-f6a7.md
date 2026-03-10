@@ -1,4 +1,6 @@
-When you open this page, a terminal should open and **Rasa Inspector** may start automatically (if your Codio guide is set to run the terminal command). If Inspector is not running, click: **[Start Rasa Inspector](open_terminal panel=1; cmd bash -c "cd /home/codio/workspace && source .venv/bin/activate && cd level1 && mkdir -p logs && python -m rasa inspect --debug --log-file logs/logs.out")** to open a terminal and start it in one step.
+When you open this section, **Rasa Inspector** should start automatically in the terminal so you can test your bot. If it doesn’t, click: **[Start Rasa Inspector](open_terminal panel=1; cmd bash /home/codio/workspace/.guides/scripts/start_rasa_inspect.sh)**.
+
+Leave the terminal open and use the **Rasa Inspect** tab (or your browser) to chat with the bot.
 
 #### Basic testing workflow
 
