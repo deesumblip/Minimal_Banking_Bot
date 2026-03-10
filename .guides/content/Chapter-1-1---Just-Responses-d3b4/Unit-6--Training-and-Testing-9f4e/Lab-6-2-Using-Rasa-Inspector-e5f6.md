@@ -10,8 +10,6 @@
      cd level1
      ```
 
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
 #### Step 2: Create the logs folder
 
 From the `level1` folder, create a `logs` directory so the Inspector log can be written:
