@@ -29,7 +29,7 @@ utter_goodbye:
 
 **What This Means**: When `utter_goodbye` is used, Rasa will randomly select one of the two variations, making your bot feel more natural.
 
-{Check It!|assessment}(llm-based-auto-rubric-3562566144)
+{Check It!|assessment}(code-output-compare-302300002)
 
 
 ---

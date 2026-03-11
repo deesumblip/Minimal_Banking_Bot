@@ -77,6 +77,6 @@ The `description` field is **critical** because the LLM uses it to match user me
 
 **Why**: The LLM understands all these are greetings that start conversations.
 
-{Check It!|assessment}(llm-based-auto-rubric-1352381554)
+{Check It!|assessment}(code-output-compare-303300002)
 
 ---

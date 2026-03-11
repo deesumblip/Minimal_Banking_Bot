@@ -90,6 +90,12 @@ def main():
         print("metadata should contain rephrase: True.", file=sys.stderr)
         sys.exit(1)
 
+    print("Checks passed:", file=sys.stderr)
+    print("  ✓ level1/domain/basics.yml exists", file=sys.stderr)
+    print("  ✓ responses: section contains utter_goodbye", file=sys.stderr)
+    print("  ✓ utter_goodbye has at least one - text: variation", file=sys.stderr)
+    print("  ✓ text is a farewell message (e.g. Goodbye, See you)", file=sys.stderr)
+    print("  ✓ metadata with rephrase: True present", file=sys.stderr)
     print("PASS")
     sys.exit(0)
 

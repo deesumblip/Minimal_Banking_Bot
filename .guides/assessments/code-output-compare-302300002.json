@@ -1,0 +1,57 @@
+{
+	"type": "code-output-compare",
+	"taskId": "code-output-compare-302300002",
+	"source": {
+		"name": "Lab 2.3: Add Response Variations (utter_goodbye)",
+		"showName": true,
+		"instructions": "Run the assessment to verify utter_goodbye has at least two - text: variations in level1/domain/basics.yml.",
+		"command": "python3 /home/codio/workspace/.guides/secure/level1_graders/lab_2.3_grader.py",
+		"preExecuteCommand": "",
+		"options": {
+			"timeout": 15,
+			"ignoreCase": true,
+			"ignoreWhitespaces": true,
+			"ignoreNewline": true,
+			"matchSubstring": true
+		},
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Standard Code Test"
+				}
+			],
+			"files": [
+				".guides/secure/level1_graders/lab_2.3_grader.py"
+			],
+			"opened": [
+				{
+					"type": "terminal",
+					"panelNumber": 1
+				}
+			]
+		},
+		"bloomsObjectiveLevel": "",
+		"learningObjectives": "",
+		"guidance": "Add a second - text: item to utter_goodbye under responses: in level1/domain/basics.yml (e.g. two different farewell messages).",
+		"showGuidanceAfterResponseOption": {
+			"type": "Always"
+		},
+		"maxAttemptsCount": 0,
+		"points": 5,
+		"showExpectedAnswerOption": {
+			"type": "Always"
+		},
+		"arePartialPointsAllowed": false,
+		"useMaximumScore": false,
+		"sequence": [
+			{
+				"arguments": "",
+				"input": "",
+				"output": "PASS",
+				"showFeedback": false,
+				"feedback": ""
+			}
+		]
+	}
+}

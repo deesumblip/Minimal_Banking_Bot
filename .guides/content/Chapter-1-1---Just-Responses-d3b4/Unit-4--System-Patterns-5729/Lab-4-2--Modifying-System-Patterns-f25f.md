@@ -22,6 +22,6 @@ pattern_session_start:
 
 **What Happens**: New conversations start with greeting, then contact info.
 
-{Check It!|assessment}(llm-based-auto-rubric-472025846)
+{Check It!|assessment}(code-output-compare-304200002)
 
 ---

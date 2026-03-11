@@ -66,4 +66,9 @@ utter_action="$(
 # Ensure the response exists in the domain.
 grep -Eq "^[[:space:]]*$utter_action[[:space:]]*:" "$DOMAIN_FILE" || fail "Domain is missing response '$utter_action:' in level1/domain/basics.yml"
 
+echo "Checks passed:" >&2
+echo "  ✓ level1/ folder and domain/basics.yml present" >&2
+echo "  ✓ level1/data/basics/ contains a new flow file (not greet/help/contact/goodbye/hours/balance)" >&2
+echo "  ✓ New flow has flows:, name:, description:, and at least one utter_* action" >&2
+echo "  ✓ Referenced response ($utter_action) exists in domain/basics.yml" >&2
 echo "Successfully passed!"

@@ -99,7 +99,7 @@ Before saving, check:
 1. Save the file (Ctrl+S or Cmd+S)
 2. Your file should now contain a complete flow definition
 
-{Check It!|assessment}(llm-based-auto-rubric-4035286235)
+{Check It!|assessment}(code-output-compare-303200002)
 
 #### Complete File
 
