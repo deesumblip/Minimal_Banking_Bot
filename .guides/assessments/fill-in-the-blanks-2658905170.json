@@ -1,0 +1,52 @@
+{
+	"type": "fill-in-the-blanks",
+	"taskId": "fill-in-the-blanks-2658905170",
+	"source": {
+		"name": "Lab 2.1: Exploring the Actions Folder - dispatcher method",
+		"showName": false,
+		"instructions": "**Fill in the blank. To send a message to the user, the action calls `dispatcher.________(text=\"...\")`.**",
+		"showValues": true,
+		"text": "To send a message to the user, the action calls `dispatcher.<<<utter_message>>>(text=\"...\")`.",
+		"distractors": "send_message\nsend\ntell\nmessage\nreply",
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Fill in the Blanks"
+				}
+			],
+			"files": [],
+			"opened": [
+				{
+					"type": "terminal",
+					"panelNumber": 1
+				}
+			]
+		},
+		"bloomsObjectiveLevel": "",
+		"learningObjectives": "",
+		"guidance": "The CollectingDispatcher method to send a text message to the user is `utter_message()`. You call it as `dispatcher.utter_message(text=\"Your message here\")`.",
+		"showGuidanceAfterResponseOption": {
+			"type": "Attempts",
+			"passedFrom": 1
+		},
+		"maxAttemptsCount": 1,
+		"showExpectedAnswerOption": {
+			"type": "Always"
+		},
+		"points": 1,
+		"arePartialPointsAllowed": false,
+		"useMaximumScore": false,
+		"tokens": {
+			"blank": [
+				"utter_message"
+			],
+			"text": [
+				"To send a message to the user, the action calls `dispatcher.",
+				0,
+				"(text=\"...\")`."
+			],
+			"regexPositions": []
+		}
+	}
+}

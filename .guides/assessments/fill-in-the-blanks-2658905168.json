@@ -1,0 +1,52 @@
+{
+	"type": "fill-in-the-blanks",
+	"taskId": "fill-in-the-blanks-2658905168",
+	"source": {
+		"name": "Lab 2.1: Exploring the Actions Folder - class name",
+		"showName": false,
+		"instructions": "**Fill in the blank. The class in `action_bank_hours.py` is named ________.**",
+		"showValues": true,
+		"text": "The class in `action_bank_hours.py` is named <<<ActionBankHours>>>.",
+		"distractors": "action_bank_hours\nBankHours\nAction\nBankHoursAction",
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Fill in the Blanks"
+				}
+			],
+			"files": [],
+			"opened": [
+				{
+					"type": "terminal",
+					"panelNumber": 1
+				}
+			]
+		},
+		"bloomsObjectiveLevel": "",
+		"learningObjectives": "",
+		"guidance": "The Python class that implements the bank hours action is named `ActionBankHours`. The action name returned by `name()` is `action_bank_hours`; the class name uses PascalCase.",
+		"showGuidanceAfterResponseOption": {
+			"type": "Attempts",
+			"passedFrom": 1
+		},
+		"maxAttemptsCount": 1,
+		"showExpectedAnswerOption": {
+			"type": "Always"
+		},
+		"points": 1,
+		"arePartialPointsAllowed": false,
+		"useMaximumScore": false,
+		"tokens": {
+			"blank": [
+				"ActionBankHours"
+			],
+			"text": [
+				"The class in `action_bank_hours.py` is named ",
+				0,
+				"."
+			],
+			"regexPositions": []
+		}
+	}
+}

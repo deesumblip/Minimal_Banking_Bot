@@ -1,0 +1,52 @@
+{
+	"type": "fill-in-the-blanks",
+	"taskId": "fill-in-the-blanks-2658905169",
+	"source": {
+		"name": "Lab 2.1: Exploring the Actions Folder - action filename",
+		"showName": false,
+		"instructions": "**Fill in the blank. The action file that returns bank hours is named ________.**",
+		"showValues": true,
+		"text": "The action file that returns bank hours is named <<<action_bank_hours.py>>>.",
+		"distractors": "bank_hours.py\naction_bank_hours\nActionBankHours.py\nbank_hours_action.py",
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Fill in the Blanks"
+				}
+			],
+			"files": [],
+			"opened": [
+				{
+					"type": "terminal",
+					"panelNumber": 1
+				}
+			]
+		},
+		"bloomsObjectiveLevel": "",
+		"learningObjectives": "",
+		"guidance": "The filename is `action_bank_hours.py`. Rasa convention is to name action files after the action name with a `.py` extension.",
+		"showGuidanceAfterResponseOption": {
+			"type": "Attempts",
+			"passedFrom": 1
+		},
+		"maxAttemptsCount": 1,
+		"showExpectedAnswerOption": {
+			"type": "Always"
+		},
+		"points": 1,
+		"arePartialPointsAllowed": false,
+		"useMaximumScore": false,
+		"tokens": {
+			"blank": [
+				"action_bank_hours.py"
+			],
+			"text": [
+				"The action file that returns bank hours is named ",
+				0,
+				"."
+			],
+			"regexPositions": []
+		}
+	}
+}
