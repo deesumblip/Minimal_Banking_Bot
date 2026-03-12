@@ -49,8 +49,8 @@
 				"arguments": "",
 				"input": "",
 				"output": "PASS",
-				"showFeedback": false,
-				"feedback": ""
+				"showFeedback": true,
+				"feedback": "data/basics/goodbye.yml has correct flow structure (flows:, goodbye:, name:, description:, steps: with utter_goodbye)."
 			}
 		]
 	}

@@ -49,8 +49,8 @@
 				"arguments": "",
 				"input": "",
 				"output": "Successfully passed!",
-				"showFeedback": false,
-				"feedback": ""
+				"showFeedback": true,
+				"feedback": "New response and new flow added for Level 1 bot."
 			}
 		]
 	}

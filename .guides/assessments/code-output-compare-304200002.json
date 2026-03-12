@@ -49,8 +49,8 @@
 				"arguments": "",
 				"input": "",
 				"output": "PASS",
-				"showFeedback": false,
-				"feedback": ""
+				"showFeedback": true,
+				"feedback": "pattern_session_start in patterns.yml has both utter_greet and utter_contact in steps."
 			}
 		]
 	}

@@ -49,8 +49,8 @@
 				"arguments": "",
 				"input": "",
 				"output": "PASS",
-				"showFeedback": false,
-				"feedback": ""
+				"showFeedback": true,
+				"feedback": "utter_goodbye has at least two - text: variations in domain/basics.yml."
 			}
 		]
 	}

@@ -49,8 +49,8 @@
 				"arguments": "",
 				"input": "",
 				"output": "Successfully passed!",
-				"showFeedback": false,
-				"feedback": ""
+				"showFeedback": true,
+				"feedback": "Rasa Inspector started with model and log evidence."
 			}
 		]
 	}

@@ -49,22 +49,22 @@
 				"arguments": "",
 				"input": "",
 				"output": "Step 1: PASSED",
-				"showFeedback": false,
-				"feedback": ""
+				"showFeedback": true,
+				"feedback": "Domain has utter_hours and utter_balance with the required handout text."
 			},
 			{
 				"arguments": "",
 				"input": "",
 				"output": "Step 2: PASSED",
-				"showFeedback": false,
-				"feedback": ""
+				"showFeedback": true,
+				"feedback": "data/basics/hours.yml exists with flow 'hours' and step utter_hours."
 			},
 			{
 				"arguments": "",
 				"input": "",
 				"output": "Step 3: PASSED",
-				"showFeedback": false,
-				"feedback": ""
+				"showFeedback": true,
+				"feedback": "data/basics/balance.yml exists with flow 'balance' and step utter_balance."
 			}
 		]
 	}

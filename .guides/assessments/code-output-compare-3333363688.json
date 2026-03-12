@@ -49,29 +49,29 @@
 				"arguments": "",
 				"input": "",
 				"output": "Step 1: PASSED",
-				"showFeedback": false,
-				"feedback": ""
+				"showFeedback": true,
+				"feedback": "Virtual environment (.venv) found in project root."
 			},
 			{
 				"arguments": "",
 				"input": "",
 				"output": "Step 2: PASSED",
-				"showFeedback": false,
-				"feedback": ""
+				"showFeedback": true,
+				"feedback": "Rasa Pro is installed in the virtual environment."
 			},
 			{
 				"arguments": "",
 				"input": "",
 				"output": "Step 3: PASSED",
-				"showFeedback": false,
-				"feedback": ""
+				"showFeedback": true,
+				"feedback": "Project structure verified (level1/domain/, level1/data/)."
 			},
 			{
 				"arguments": "",
 				"input": "",
 				"output": "Step 4: PASSED",
-				"showFeedback": false,
-				"feedback": ""
+				"showFeedback": true,
+				"feedback": "RASA_LICENSE environment variable is set."
 			}
 		]
 	}

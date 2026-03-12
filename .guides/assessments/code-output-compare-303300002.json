@@ -49,8 +49,8 @@
 				"arguments": "",
 				"input": "",
 				"output": "PASS",
-				"showFeedback": false,
-				"feedback": ""
+				"showFeedback": true,
+				"feedback": "data/basics/greet.yml has two steps: utter_greet and utter_help."
 			}
 		]
 	}

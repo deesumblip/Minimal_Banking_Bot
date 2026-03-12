@@ -49,8 +49,8 @@
 				"arguments": "",
 				"input": "",
 				"output": "PASS",
-				"showFeedback": false,
-				"feedback": ""
+				"showFeedback": true,
+				"feedback": "utter_goodbye response is defined in domain/basics.yml with text and metadata."
 			}
 		]
 	}

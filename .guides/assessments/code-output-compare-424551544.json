@@ -49,8 +49,8 @@
 				"arguments": "",
 				"input": "",
 				"output": "✅ PASS: Training verification complete",
-				"showFeedback": false,
-				"feedback": ""
+				"showFeedback": true,
+				"feedback": "Level 1 bot trained successfully."
 			}
 		]
 	}
