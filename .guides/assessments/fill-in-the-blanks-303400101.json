@@ -1,0 +1,61 @@
+{
+	"type": "fill-in-the-blanks",
+	"taskId": "fill-in-the-blanks-303400101",
+	"source": {
+		"name": "Lab 3.4: Hours flow (fill in the blanks)",
+		"showName": false,
+		"instructions": "**Fill in the blanks to complete the hours flow YAML.** Use the exact words shown in the guidance so the LLM can match user messages about bank hours.",
+		"showValues": true,
+		"text": "Complete the flow that provides bank hours:\n\n```yaml\n<<<flows>>>:\n  <<<hours>>>:\n    name: bank hours\n    description: <<<Provide bank opening hours and schedule.>>>\n    steps:\n      - action: <<<utter_hours>>>\n```",
+		"distractors": "flow\nbalance\nTell the user when we're open.\nutter_balance\naction",
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Fill in the Blanks"
+				}
+			],
+			"files": [],
+			"opened": [
+				{
+					"type": "terminal",
+					"panelNumber": 1
+				}
+			]
+		},
+		"bloomsObjectiveLevel": "",
+		"learningObjectives": "",
+		"guidance": "The correct answers are: **flows** (top-level key), **hours** (flow name), **Provide bank opening hours and schedule.** (description the LLM uses to match), **utter_hours** (the response action). You will add this flow to your project in the next step.",
+		"showGuidanceAfterResponseOption": {
+			"type": "Attempts",
+			"passedFrom": 1
+		},
+		"maxAttemptsCount": 1,
+		"showExpectedAnswerOption": {
+			"type": "Always"
+		},
+		"points": 5,
+		"arePartialPointsAllowed": false,
+		"useMaximumScore": false,
+		"tokens": {
+			"blank": [
+				"flows",
+				"hours",
+				"Provide bank opening hours and schedule.",
+				"utter_hours"
+			],
+			"text": [
+				"Complete the flow that provides bank hours:\n\n```yaml\n",
+				0,
+				":\n  ",
+				1,
+				":\n    name: bank hours\n    description: ",
+				2,
+				"\n    steps:\n      - action: ",
+				3,
+				"\n```"
+			],
+			"regexPositions": []
+		}
+	}
+}

@@ -1,0 +1,58 @@
+{
+	"type": "fill-in-the-blanks",
+	"taskId": "fill-in-the-blanks-303400102",
+	"source": {
+		"name": "Lab 3.4: Balance flow (fill in the blanks)",
+		"showName": false,
+		"instructions": "**Fill in the blanks to complete the balance flow YAML.** Use the exact words shown in the guidance so the LLM can match user messages about checking balance.",
+		"showValues": true,
+		"text": "Complete the flow that explains how to check balance:\n\n```yaml\nflows:\n  <<<balance>>>:\n    name: account balance help\n    description: <<<Explain how to check account balance.>>>\n    steps:\n      - action: <<<utter_balance>>>\n```",
+		"distractors": "hours\nflows\nTell the user their balance.\nutter_hours\nresponse",
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Fill in the Blanks"
+				}
+			],
+			"files": [],
+			"opened": [
+				{
+					"type": "terminal",
+					"panelNumber": 1
+				}
+			]
+		},
+		"bloomsObjectiveLevel": "",
+		"learningObjectives": "",
+		"guidance": "The correct answers are: **balance** (flow name), **Explain how to check account balance.** (description the LLM uses to match), **utter_balance** (the response action). You will add this flow to your project in the next step.",
+		"showGuidanceAfterResponseOption": {
+			"type": "Attempts",
+			"passedFrom": 1
+		},
+		"maxAttemptsCount": 1,
+		"showExpectedAnswerOption": {
+			"type": "Always"
+		},
+		"points": 5,
+		"arePartialPointsAllowed": false,
+		"useMaximumScore": false,
+		"tokens": {
+			"blank": [
+				"balance",
+				"Explain how to check account balance.",
+				"utter_balance"
+			],
+			"text": [
+				"Complete the flow that explains how to check balance:\n\n```yaml\nflows:\n  ",
+				0,
+				":\n    name: account balance help\n    description: ",
+				1,
+				"\n    steps:\n      - action: ",
+				2,
+				"\n```"
+			],
+			"regexPositions": []
+		}
+	}
+}

@@ -1,104 +1,101 @@
-**Objective**: Create new flows with good descriptions that help the LLM match user messages.
+**Objective**: Learn the structure of the hours and balance flows, then add them (and their responses) to your project so your bot is ready for training.
 
 **Before You Begin**:
 - ✅ You've completed Lab 3.2 (created goodbye.yml)
 - ✅ You understand flow structure (flows:, name:, description:, steps:)
-- ✅ You know where `data/basics/` folder is located
-- ✅ You can reference existing flows (greet.yml, goodbye.yml) as templates
+- ✅ You know where `data/basics/` and `domain/basics.yml` are located
 
-#### Understanding Flow Descriptions
+---
 
-The `description` field is **critical** because the LLM uses it to match user messages to flows.
+#### Why These Flows?
 
-**How It Works**:
-1. User sends a message: "What are your hours?"
-2. LLM reads all flow descriptions
-3. LLM matches the message to the best-fitting description
-4. Rasa triggers that flow
+The `description` field is **critical** because the LLM uses it to match user messages to flows. For example, when a user asks "What are your hours?" or "How do I check my balance?", the LLM reads flow descriptions and triggers the right flow.
 
-**Writing Good Descriptions**:
+You will complete **two fill-in-the-blank** flows (hours and balance), then add those flows and the matching responses to your project.
 
-**Good descriptions**:
-- Clear and specific: "Tell the user when the bank is open and what the operating hours are"
-- Action-oriented: "Provide contact information for the bank"
-- Context-aware: "Explain what the bot can help with"
+---
 
-**Bad descriptions**:
-- Too vague: "Help user" (what kind of help?)
-- Too specific: "Respond when user says exactly 'hello'" (misses "hi", "hey")
-- Missing context: "Say hello" (when? why?)
+#### Part 1: Complete the hours flow (fill in the blanks)
 
-#### Task: Create 2 New Flows
+Fill in the blanks to complete the **hours** flow YAML. This flow will provide bank opening hours.
 
-Create 2 new flow files in `data/basics/` folder. Use `greet.yml` or `goodbye.yml` as templates for structure.
+{Check It!|assessment}(fill-in-the-blanks-303400101)
 
-**Flow 1: Bank Hours**
-- **File**: `data/basics/hours.yml`
-- **Flow name**: `hours`
-- **Description**: Write a clear, specific description about providing bank hours
-- **Steps**: At least one action (e.g., `utter_hours` - you may need to create this response in domain/basics.yml first, or use an existing response)
+---
 
-**Flow 2: Account Balance Help**
-- **File**: `data/basics/balance.yml`
-- **Flow name**: `balance`
-- **Description**: Write a clear, specific description that explains **how the user checks their balance**, for example that they need to log in to online banking or have their account number ready. The description should make the *process* clear (what steps or requirements apply) so the LLM can match questions like "how do I check my balance?" or "what's the login process?"
-- **Steps**: At least one action (e.g., `utter_balance_help` or use an existing response)
+#### Part 2: Complete the balance flow (fill in the blanks)
 
-#### Step-by-Step Instructions
+Fill in the blanks to complete the **balance** flow YAML. This flow will explain how to check account balance.
 
-1. **Create hours.yml**:
-   - Copy the structure from `greet.yml` or `goodbye.yml` as a template
-   - Change the flow name to `hours`
-   - Write a good description (see examples below)
-   - Add at least one step with an action
+{Check It!|assessment}(fill-in-the-blanks-303400102)
 
-2. **Create balance.yml**:
-   - Copy the structure from `greet.yml` or `goodbye.yml` as a template
-   - Change the flow name to `balance`
-   - Write a good description (see examples below)
-   - Add at least one step with an action
+---
 
-#### Example: Good Descriptions
+#### Part 3: Add the flows and responses to your project
 
-Here are examples of good flow descriptions for **different** flows (not the ones you're creating):
+Once you've passed both fill-in-the-blank checks, add the **exact** content below to your `level1` project. This ensures your bot has the responses and flows the assessment expects.
 
-**Example 1: Contact Information Flow**:
+**Step 1: Add two responses to the domain**
+
+Open **`level1/domain/basics.yml`**. Under the `responses:` section, add the two blocks below after your last response (e.g. after `utter_goodbye`). Use the same indentation (2 spaces).
+
 ```yaml
-flows:
-  contact:
-    name: contact info
-    description: "Provide contact information for the bank, including phone numbers and email addresses"
-    steps:
-      - action: utter_contact
+  utter_hours:
+    - text: "We're open Monday–Friday 9am–5pm and Saturday 9am–1pm. Closed Sundays."
+      metadata:
+        rephrase: True
+
+  utter_balance:
+    - text: "To check your balance, we'll need your account number. You can say 'Check my balance' and have your account number ready."
+      metadata:
+        rephrase: True
 ```
 
-**Example 2: Services Flow**:
+Save the file.
+
+---
+
+**Step 2: Create the hours flow file**
+
+Create **`level1/data/basics/hours.yml`** with this content (same as the flow you completed in Part 1):
+
 ```yaml
 flows:
-  services:
-    name: available services
-    description: "List all the services and features the bot can help with, including account management and support options"
+  hours:
+    name: bank hours
+    description: Provide bank opening hours and schedule.
     steps:
-      - action: utter_help
+      - action: utter_hours
 ```
 
-**Key**: Be specific about what the flow does, not how the user asks for it. Notice how these descriptions:
-- Use action verbs ("Provide", "List")
-- Are specific about what information is given
-- Include context about what the flow accomplishes
-- Are at least 20 characters long
+Save the file.
 
-**Your Task**: Create similar descriptions for `hours.yml` and `balance.yml` following this pattern, but write your own descriptions (don't copy these examples).
+---
+
+**Step 3: Create the balance flow file**
+
+Create **`level1/data/basics/balance.yml`** with this content (same as the flow you completed in Part 2):
+
+```yaml
+flows:
+  balance:
+    name: account balance help
+    description: Explain how to check account balance.
+    steps:
+      - action: utter_balance
+```
+
+Save the file.
+
+---
 
 #### Checklist
 
-Before submitting, verify:
-- Both files exist in `data/basics/` folder
-- Both flows have `name:` fields
-- Both flows have `description:` fields (at least 20 characters, specific and action-oriented)
-- Both flows have `steps:` sections with at least one action
-- Descriptions are unique (different from each other and from other flows)
-- YAML syntax is correct (2 spaces indentation, no tabs)
-- File structure matches the template (flows: at top level, proper indentation)
+- [ ] Part 1 and Part 2: Both fill-in-the-blank assessments passed
+- [ ] `level1/domain/basics.yml` contains `utter_hours` and `utter_balance` under `responses:`
+- [ ] `level1/data/basics/hours.yml` exists with flow `hours` and step `utter_hours`
+- [ ] `level1/data/basics/balance.yml` exists with flow `balance` and step `utter_balance`
 
-{Check It!|assessment}(llm-based-auto-rubric-1348023599)
+**Run the assessment below** to verify your project is ready for training (Lab 6.1).
+
+{Check It!|assessment}(code-output-compare-350500005)
