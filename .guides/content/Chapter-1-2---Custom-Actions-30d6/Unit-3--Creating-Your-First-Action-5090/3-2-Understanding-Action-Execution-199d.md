@@ -12,6 +12,4 @@ When Rasa executes your action:
 
 **Next**: Complete Lab 3.1 to create `action_holiday_hours.py` following the pattern from Unit 3.1.
 
-{Check It!|assessment}(multiple-choice-1235412103)
-
 ---

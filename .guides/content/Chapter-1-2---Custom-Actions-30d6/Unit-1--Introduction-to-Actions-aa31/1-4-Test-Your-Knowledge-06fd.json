@@ -5,7 +5,8 @@
   "layout": "1-panel",
   "path": [],
   "type": "page",
-  "contentType": "markdown", "content": "",
+  "contentType": "markdown",
+  "content": "",
   "teacherOnly": false,
   "closeTerminalSession": true,
   "learningObjectives": ""

@@ -54,6 +54,4 @@ Bot: "You can reach us at support@bank.com or call 1-800-BANK-123."
 
 **Notice**: The bot uses Level 1 responses, the example action (`action_bank_hours`), and the action you built (`action_holiday_hours`). You can replay this same conversation in Rasa Inspector and see which flow and action run for each message—that's how your modifications (domain, flows, actions) show up in the GUI.
 
-{Check It!|assessment}(multiple-choice-3927719488)
-
 ---

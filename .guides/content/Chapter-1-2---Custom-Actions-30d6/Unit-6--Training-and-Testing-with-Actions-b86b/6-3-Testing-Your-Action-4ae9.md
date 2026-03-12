@@ -37,7 +37,7 @@ Follow this structured workflow to verify everything works:
    - Ask about **regular hours** (e.g. "What are your hours?") → Should trigger `hours` flow and `action_bank_hours`
    - Ask about **holiday hours** (e.g. "What are your holiday hours?" or "Are you open on holidays?") → Should trigger `holiday_hours` flow and `action_holiday_hours`; message will vary by whether today is a holiday ("closed today") or not (general schedule)
 
-**Key Point**: All Level 1 functionality remains, and both the example action and the action you created should work. If your new action doesn't trigger, check that it's registered in the domain and that its flow has a clear `description`.
+**Key Point**: All Level 1 functionality remains, and both the example action and the action you created should work. If your new action doesn’t trigger, check that it’s registered in the domain and that its flow has a clear `description`.
 
 **Explore how your modifications show up**: In Inspector you can see which **flow** was matched and which **action** ran for each message. Try "What are your hours?" vs "What are your holiday hours?" and observe how the selected flow and action change—that's your domain registration and flow YAML directly affecting the bot's behavior.
 

@@ -45,7 +45,4 @@ def run(self, dispatcher, tracker, domain):
     # Return dynamic message: "We're open today until 5pm" or "We're closed today"
 ```
 
-{Check It!|assessment}(multiple-choice-409711960)
-{Check It!|assessment}(multiple-choice-3609389718)
-
 ---

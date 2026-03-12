@@ -1,4 +1,4 @@
-In Level 1, flows used `utter_*` responses. In Level 2, flows can use `action_*` actions.
+Now that your actions are registered in the domain (Lab 4.1), you need flows that use them—the example **hours** flow and your **holiday_hours** flow. In Level 1, flows used `utter_*` responses. In Level 2, flows can use `action_*` actions.
 
 #### Level 1 Flow (Response)
 

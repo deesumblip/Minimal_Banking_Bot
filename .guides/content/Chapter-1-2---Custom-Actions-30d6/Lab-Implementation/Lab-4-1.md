@@ -54,7 +54,7 @@ Save the grader script at:
 
 ## Grader Script
 
-The grader checks only what the lab instructs: domain file exists, `actions:` section, both `action_bank_hours` and `action_holiday_hours` registered, correct YAML list syntax, and valid YAML. No check for virtual environment.
+The grader checks only what the lab instructs: domain file exists, `actions:` section, both `action_bank_hours` and `action_holiday_hours` registered, correct YAML list syntax (indented list under `actions:` is accepted), and valid YAML. It accepts the Level 2 domain layout (e.g. `version`, `responses`, then `actions:` with list items indented). No check for virtual environment.
 
 ```bash
 #!/bin/bash
@@ -120,9 +120,9 @@ else
 fi
 echo ""
 
-# Check 5: Correct YAML syntax / list format (2 points) - verification: "correct indentation and dashes"
+# Check 5: Correct YAML syntax / list format (2 points) - accepts indented list under actions:
 echo "Check 5: Verifying YAML list syntax (dashes)..."
-if [ -f "domain/basics.yml" ] && (grep -q "^- action_bank_hours" domain/basics.yml 2>/dev/null && grep -q "^- action_holiday_hours" domain/basics.yml 2>/dev/null); then
+if [ -f "domain/basics.yml" ] && (grep -qE "^\s*-\s+action_bank_hours" domain/basics.yml 2>/dev/null && grep -qE "^\s*-\s+action_holiday_hours" domain/basics.yml 2>/dev/null); then
     echo " Check 5: PASSED - Correct YAML list syntax (dash format) (2 points)"
     score=$((score + 2))
 else
@@ -160,10 +160,18 @@ fi
 
 ### Example student deliverable (for grading reference)
 
-Students should add or edit the `actions:` section in `domain/basics.yml` so that it lists both actions. Example snippet (the rest of the file may contain `responses:`, etc.):
+Students add or edit the `actions:` section in `domain/basics.yml` so it lists both actions. The Level 2 domain typically has `version`, `responses`, then `actions:` with list items indented (comments are optional). Example:
 
 ```yaml
+version: "3.1"
+
+responses:
+  utter_greet:
+    - text: "Hi! I'm a banking assistant. How can I help you today?"
+  # ... other responses ...
+
 actions:
+  # List all custom actions here; name must match name() in actions/*.py
   - action_bank_hours
   - action_holiday_hours
 ```

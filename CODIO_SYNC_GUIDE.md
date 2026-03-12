@@ -4,6 +4,45 @@ This guide explains how Codio content is structured and how to **sync your edits
 
 ---
 
+## Refreshing the guide in Codio after `git pull`
+
+**Problem:** Running `git pull` in Codio updates the files on disk (including `.guides/content/` and `.guides/assessments/`), but **Codio often does not automatically reload the Guide**. The sidebar and pages may still show old content or structure.
+
+**What to do:** After pulling, you need Codio to **reload** the guide from the workspace. Use one of these:
+
+### 1. Update / Re-import from Git (instructor)
+
+- In Codio, go to **Project** or **Course** settings (gear or **Settings**).
+- Look for **Import**, **Update from Git**, **Sync with Git**, or **Re-import project**.
+- If there is an **Update from Git** or **Pull and refresh** option, run it so Codio reloads the project (and thus `.guides/`).
+
+### 2. Reload the guide (if your Codio version supports it)
+
+- Open the **Guide** (or **Curriculum** / **Content**) tab.
+- Check the guide panel or its menu (e.g. **⋯** or **Refresh**) for **Reload guide**, **Refresh content**, or **Load from workspace**. Use it so the guide is read again from `.guides/content/`.
+
+### 3. Re-import the project once
+
+- In Codio’s **Dashboard**, use **New Project** (or **Import**).
+- Choose **Import from Git** and enter the same repo URL (e.g. `https://github.com/deesumblip/Minimal_Banking_Bot.git`), branch `main`.
+- Codio creates a new project with the latest `.guides/content/` and `.guides/assessments/`.
+- Point your **course** or **assignment** to this new project so students see the updated guide. (You can archive or delete the old project.)
+
+### 4. Confirm files are present after pull
+
+In the Codio terminal:
+
+```bash
+cd /home/codio/workspace
+git pull origin main
+ls -la .guides/content/
+ls -la .guides/assessments/
+```
+
+If the files are there but the Guide tab still shows old content, Codio is using a cached copy; use step 1 or 2 (or 3) so it reloads from the workspace.
+
+---
+
 ## How Codio content is organized
 
 Codio Guides use a **hierarchy of JSON + Markdown** under `.guides/content/`:

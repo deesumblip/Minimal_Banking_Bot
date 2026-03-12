@@ -6,30 +6,7 @@
 
 **Where to work:** Students do this lab from the **level2** folder. All file paths are relative to `level2`. In Codio, the terminal opens in the workspace (`~/workspace`); they run `cd level2`. Locally, they open the terminal in the main project folder (contains `level1`, `level2`, `.guides`), then run `cd level2`.
 
----
-
-### Your Task
-
-1. **Example flow** – Ensure the `hours` flow exists in `data/basics/hours.yml` and uses `action_bank_hours` (your starter may already include this).
-2. **Your flow** – Create `data/basics/holiday_hours.yml` with a flow that uses **action_holiday_hours** (the action you created in Lab 3.1). The flow should have:
-   - A flow id (e.g. `holiday_hours`)
-   - `name:` and `description:` so the LLM can match questions about holiday hours
-   - `steps:` with `- action: action_holiday_hours`
-
----
-
-### Verification
-
-Before submitting, confirm:
-
-- `hours.yml` has the `hours` flow and calls `action_bank_hours`
-- `holiday_hours.yml` exists, has a flow (e.g. `holiday_hours`), and calls `action_holiday_hours`
-
-Run the assessment when you're done.
-
-#### Review in Inspector
-
-Follow the steps in **Lab 4.2** (go to main folder → activate the virtual environment → `cd level2` → train → start Inspector and open the GUI) to see if your bot is working. Then use the questions from Unit 5 (hours, holiday hours, hello) and check that the bot's replies and the triggered flow/action match. If a question doesn't trigger the right flow, check the flow's `description` and that you re-trained after adding or changing flows.
+**Full instructions:** See **Level2_Lab5.1_Content.md** (and Codio Lab 5.1 guide) for the complete step-by-step: (1) go to `data/basics/`, (2) create/ensure `hours.yml` with the `hours` flow and `action_bank_hours`, (3) create `holiday_hours.yml` with the `holiday_hours` flow and `action_holiday_hours`, (4) verify both files, then run the assessment. Optional: Review in Inspector (Lab 4.2 steps; example questions: hours, holiday hours, hello).
 
 ---
 
@@ -37,7 +14,7 @@ Follow the steps in **Lab 4.2** (go to main folder → activate the virtual envi
 
 ## Overview
 
-This assessment verifies that students can create flow files that use actions: the example `hours.yml` (action_bank_hours) and their own `holiday_hours.yml` (action_holiday_hours), with correct YAML structure. The lab instructs students to work from the **level2** folder (main project folder, then `cd level2`). The grader runs from `/home/codio/workspace/level2` and checks files under that directory. Optional Inspector review directs students to Lab 4.2 for train/Inspector steps.
+This assessment verifies that students can create flow files that use actions: the example `hours.yml` (action_bank_hours) and their own `holiday_hours.yml` (action_holiday_hours), with correct YAML structure. The lab instructs students to work from the **level2** folder (main project folder, then `cd level2`). The grader runs from `level2` and checks files under that directory. Optional Inspector review directs students to Lab 4.2 for train/Inspector steps.
 
 ### Assessment Type
 
@@ -185,7 +162,7 @@ flows:
 ## Assessment Setup and Configuration
 
 **Codio: Grader updates from GitHub**  
-So that grader changes (pushed to GitHub and pulled on Codio) take effect automatically, the assessment **must run the script from the workspace**. In **Execution**, set COMMAND to the path below. Do **not** upload or embed the script in the assessment; otherwise Codio runs a stored copy and `git pull` will not update the grader.
+To have grader changes (pushed to GitHub and pulled on Codio) take effect automatically, the assessment **must run the script from the workspace**, not use an uploaded or pasted copy. In **Execution**, set the COMMAND to run the file path below. Do **not** upload or embed the script content in the assessment; otherwise Codio runs a stored copy and `git pull` will not update the grader.
 
 1. **Navigate** to the Lab 5.1 section in the Codio Guide Editor.
 
@@ -193,7 +170,7 @@ So that grader changes (pushed to GitHub and pulled on Codio) take effect automa
 
    **General** – Name: *Lab 5.1: Using Actions in Flows*. Description: *Verify that students can create flows that use actions (hours.yml and holiday_hours.yml)*. Points: `12`. Language: `Bash`.
 
-   **Execution** – COMMAND: `bash /home/codio/workspace/.guides/secure/level2_graders/lab_5.1_grader.sh`. TIMEOUT: `60` seconds. Working Directory: `/home/codio/workspace/level2`. (Runs the script from the workspace so `git pull` updates the grader.)
+   **Execution** – COMMAND: `bash /home/codio/workspace/.guides/secure/level2_graders/lab_5.1_grader.sh`. TIMEOUT: `60` seconds. Working Directory: `/home/codio/workspace/level2`. (This runs the script from the workspace so `git pull` updates the grader.)
 
    **Grading**
    - **Points**: `12` – Total points for this assessment.
@@ -211,7 +188,7 @@ So that grader changes (pushed to GitHub and pulled on Codio) take effect automa
    - **Defined number of attempts**: `OFF` – No limit on submission attempts (or set a limit if desired).
    - **Rationale** (optional): e.g. *The grader checks that `data/basics/hours.yml` and `data/basics/holiday_hours.yml` exist and define flows that use the correct actions.*
 
-   **Files** – The grader is in the repo at `.guides/secure/level2_graders/lab_5.1_grader.sh`. Do **not** upload or paste it into the assessment; the Execution command runs this file from the workspace so `git pull` keeps the grader in sync. From workspace root: `chmod +x .guides/secure/level2_graders/lab_5.1_grader.sh` if needed.
+   **Files** – Ensure the grader script exists at `.guides/secure/level2_graders/lab_5.1_grader.sh` (it is in the repo). Do **not** upload or paste the script into the assessment; the Execution command above runs this file from the workspace so that `git pull` keeps the grader in sync. From the workspace root: `chmod +x .guides/secure/level2_graders/lab_5.1_grader.sh` if needed.
 
 3. **Save & Test** the assessment. Enable **Learning Analytics** if desired.
 

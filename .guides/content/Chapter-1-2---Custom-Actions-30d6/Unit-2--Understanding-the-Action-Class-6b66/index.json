@@ -4,9 +4,7 @@
   "title": "Unit 2: Understanding The Action Class",
   "order": [
     "2-1-The-Action-Class-Deep-Dive-49b9",
-    "Lab-2-1--Exploring-the-Actions-Folder-45a5",
     "2-2-Understanding-the-Parameters-3f41",
     "2-3-Test-Your-Knowledge-5051"
-  ],
-  "content": ""
-  }
+  ]
+}
