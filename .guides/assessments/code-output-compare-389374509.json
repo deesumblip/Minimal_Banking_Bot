@@ -4,7 +4,7 @@
 	"source": {
 		"name": "Lab 5.1: Using Actions in Flows.",
 		"showName": true,
-		"instructions": "Verify that you can create flows that use actions (hours.yml and holiday_hours.yml)",
+		"instructions": "Pass the following check:\n\nCheck 1: Flows that use actions exist (hours.yml and holiday_hours.yml).",
 		"command": "bash /home/codio/workspace/.guides/secure/level2_graders/lab_5.1_grader.sh",
 		"preExecuteCommand": "",
 		"options": {

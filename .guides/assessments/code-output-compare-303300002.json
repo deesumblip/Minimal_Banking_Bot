@@ -4,7 +4,7 @@
 	"source": {
 		"name": "Lab 3.3: Multi-Step Flow (greet.yml)",
 		"showName": true,
-		"instructions": "Run the assessment to verify greet.yml has two steps: - action: utter_greet and - action: utter_help.",
+		"instructions": "Pass the following check:\n\nCheck 1: data/basics/greet.yml has two steps: utter_greet and utter_help.",
 		"command": "python3 /home/codio/workspace/.guides/secure/level1_graders/lab_3.3_grader.py",
 		"preExecuteCommand": "",
 		"options": {

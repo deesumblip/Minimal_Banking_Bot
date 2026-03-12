@@ -4,7 +4,7 @@
 	"source": {
 		"name": "Lab 4.2: Modifying System Patterns (pattern_session_start)",
 		"showName": true,
-		"instructions": "Run the assessment to verify pattern_session_start in level1/data/system/patterns/patterns.yml has both utter_greet and utter_contact in steps.",
+		"instructions": "Pass the following check:\n\nCheck 1: pattern_session_start in patterns.yml has both utter_greet and utter_contact in steps.",
 		"command": "python3 /home/codio/workspace/.guides/secure/level1_graders/lab_4.2_grader.py",
 		"preExecuteCommand": "",
 		"options": {

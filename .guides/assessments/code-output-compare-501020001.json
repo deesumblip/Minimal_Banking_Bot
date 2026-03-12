@@ -4,7 +4,7 @@
 	"source": {
 		"name": "Lab 2.1: Creating the Tools Folder and banking_tools.py",
 		"showName": true,
-		"instructions": "Run the assessment.",
+		"instructions": "Pass the following check:\n\nCheck 1: Tools folder and banking_tools.py exist with check_balance, process_transfer, get_account_info, and __all__.",
 		"command": "/home/codio/workspace/.venv/bin/python3 /home/codio/workspace/.guides/secure/level5_graders/lab_2.1_grader.py",
 		"preExecuteCommand": "",
 		"options": {

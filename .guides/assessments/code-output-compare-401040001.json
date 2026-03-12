@@ -4,7 +4,7 @@
 	"source": {
 		"name": "Lab 4.1: Creating the Transfer Flow",
 		"showName": true,
-		"instructions": "Run the assessment.",
+		"instructions": "Pass the following check:\n\nCheck 1: Transfer flow and action are set up correctly.",
 		"command": "/home/codio/workspace/.venv/bin/python3 /home/codio/workspace/.guides/secure/level4_graders/lab_4.1_grader.py",
 		"preExecuteCommand": "",
 		"options": {

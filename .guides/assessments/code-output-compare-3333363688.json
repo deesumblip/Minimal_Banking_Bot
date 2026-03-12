@@ -4,7 +4,7 @@
 	"source": {
 		"name": "Lab 0.1 Virtual Environment and Rasa Pro Install",
 		"showName": true,
-		"instructions": "Run the assessment!",
+		"instructions": "Pass the following checks:\n\nCheck 1: Virtual environment (.venv) is in the project root.\nCheck 2: Rasa Pro is installed in the virtual environment.\nCheck 3: Project structure is correct (level1/domain/, level1/data/ exist).\nCheck 4: RASA_LICENSE environment variable is set.",
 		"command": "python3 /home/codio/workspace/.guides/secure/level1_graders/lab_0.1_grader.py",
 		"preExecuteCommand": "",
 		"options": {

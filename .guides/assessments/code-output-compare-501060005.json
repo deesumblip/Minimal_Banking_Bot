@@ -4,7 +4,7 @@
 	"source": {
 		"name": "Lab 5.2: Completion Check Level 6",
 		"showName": true,
-		"instructions": "Run the assessment.",
+		"instructions": "Pass the following check:\n\nCheck 1: All Level 6 artifacts are in place (sub_agents config, mcp_servers, ask_banking_assistant flow).",
 		"command": "/home/codio/workspace/.venv/bin/python3 /home/codio/workspace/.guides/secure/level6_graders/lab_5.2_grader.py",
 		"preExecuteCommand": "",
 		"options": {

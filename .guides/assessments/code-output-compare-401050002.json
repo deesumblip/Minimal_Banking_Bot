@@ -4,7 +4,7 @@
 	"source": {
 		"name": "Lab 5.2: Testing the Transfer Flow (Completion Check)",
 		"showName": true,
-		"instructions": "Run the assessment to verify your Level 4 bot has domain, action file, flow file, and a trained model.",
+		"instructions": "Pass the following check:\n\nCheck 1: Level 4 bot has domain, action file, flow file, and a trained model.",
 		"command": "/home/codio/workspace/.venv/bin/python3 /home/codio/workspace/.guides/secure/level4_graders/lab_5.2_grader.py",
 		"preExecuteCommand": "",
 		"options": {

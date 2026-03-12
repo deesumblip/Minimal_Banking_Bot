@@ -4,7 +4,7 @@
 	"source": {
 		"name": "Lab 2.1: Adding Multiple Slots in the Domain",
 		"showName": true,
-		"instructions": "Run the assessment.",
+		"instructions": "Pass the following check:\n\nCheck 1: Multiple slots and response for the transfer flow are correctly added (Lab 2.1).",
 		"command": "/home/codio/workspace/.venv/bin/python3 /home/codio/workspace/.guides/secure/level4_graders/lab_2.1_grader.py",
 		"preExecuteCommand": "",
 		"options": {

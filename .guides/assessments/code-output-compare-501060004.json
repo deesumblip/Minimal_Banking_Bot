@@ -4,7 +4,7 @@
 	"source": {
 		"name": "Lab 5.1: Training Level 6",
 		"showName": true,
-		"instructions": "Run the assessment.",
+		"instructions": "Pass the following check:\n\nCheck 1: Level 6 model exists (level6/models/ contains a .tar.gz model).",
 		"command": "/home/codio/workspace/.venv/bin/python3 /home/codio/workspace/.guides/secure/level6_graders/lab_5.1_grader.py",
 		"preExecuteCommand": "",
 		"options": {

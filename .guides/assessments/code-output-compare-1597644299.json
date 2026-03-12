@@ -4,7 +4,7 @@
 	"source": {
 		"name": "Lab 4.2: Multiple Actions",
 		"showName": true,
-		"instructions": "Verify that both actions are registered in the domain and that you have trained the bot (model file exists). Run from project root.",
+		"instructions": "Pass the following check:\n\nCheck 1: Both actions are registered in the domain and the bot has been trained (model file exists).",
 		"command": "bash /home/codio/workspace/.guides/secure/level2_graders/lab_4.2_grader.sh",
 		"preExecuteCommand": "",
 		"options": {

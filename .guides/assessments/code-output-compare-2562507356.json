@@ -4,7 +4,7 @@
 	"source": {
 		"name": "Lab 6.2: Using Rasa Inspector",
 		"showName": true,
-		"instructions": "Verify that you started Inspector and have a model plus log evidence.",
+		"instructions": "Pass the following check:\n\nCheck 1: Rasa Inspector started with model and log evidence.",
 		"command": "bash /home/codio/workspace/.guides/secure/level1_graders/lab_6.2_grader.sh",
 		"preExecuteCommand": "cd /home/codio/workspace && set -a && if [ -f .env ]; then . ./.env; fi && if [ -f level1/.env ]; then . ./level1/.env; fi; set +a",
 		"options": {

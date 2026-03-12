@@ -4,7 +4,7 @@
 	"source": {
 		"name": "Lab 6.1: Training and Testing with Actions.",
 		"showName": true,
-		"instructions": "Verify that you can successfully train your bot with actions.",
+		"instructions": "Pass the following check:\n\nCheck 1: Bot with actions trained successfully.",
 		"command": "bash /home/codio/workspace/.guides/secure/level2_graders/lab_6.1_grader.sh",
 		"preExecuteCommand": "",
 		"options": {

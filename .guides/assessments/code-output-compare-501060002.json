@@ -4,7 +4,7 @@
 	"source": {
 		"name": "Lab 3.1: Registering MCP",
 		"showName": true,
-		"instructions": "Run the assessment.",
+		"instructions": "Pass the following check:\n\nCheck 1: endpoints.yml has mcp_servers with at least one server (name, url, type).",
 		"command": "/home/codio/workspace/.venv/bin/python3 /home/codio/workspace/.guides/secure/level6_graders/lab_3.1_grader.py",
 		"preExecuteCommand": "",
 		"options": {

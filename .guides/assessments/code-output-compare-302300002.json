@@ -4,7 +4,7 @@
 	"source": {
 		"name": "Lab 2.3: Add Response Variations (utter_goodbye)",
 		"showName": true,
-		"instructions": "Run the assessment to verify utter_goodbye has at least two - text: variations in level1/domain/basics.yml.",
+		"instructions": "Pass the following check:\n\nCheck 1: utter_goodbye has at least two - text: variations in domain/basics.yml.",
 		"command": "python3 /home/codio/workspace/.guides/secure/level1_graders/lab_2.3_grader.py",
 		"preExecuteCommand": "",
 		"options": {

@@ -4,7 +4,7 @@
 	"source": {
 		"name": "Lab 4.1: Creating the transfer_money_tools Flow and Action",
 		"showName": true,
-		"instructions": "Run the assessment.",
+		"instructions": "Pass the following check:\n\nCheck 1: transfer_money_tools.yml flow, action_process_transfer_with_tools.py, and domain actions are set up correctly.",
 		"command": "/home/codio/workspace/.venv/bin/python3 /home/codio/workspace/.guides/secure/level5_graders/lab_4.1_grader.py",
 		"preExecuteCommand": "",
 		"options": {

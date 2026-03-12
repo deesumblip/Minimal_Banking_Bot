@@ -4,7 +4,7 @@
 	"source": {
 		"name": "Lab 3.1: Create Your Own Action",
 		"showName": true,
-		"instructions": "Verify that you can create action_holiday_hours.py with correct structure and date-based logic.",
+		"instructions": "Pass the following check:\n\nCheck 1: action_holiday_hours.py exists with correct structure and date-based logic.",
 		"command": "bash /home/codio/workspace/.guides/secure/level2_graders/lab_3.1_grader.sh",
 		"preExecuteCommand": "",
 		"options": {

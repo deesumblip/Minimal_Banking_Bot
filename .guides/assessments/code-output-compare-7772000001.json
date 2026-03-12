@@ -4,7 +4,7 @@
 	"source": {
 		"name": "Lab 7.1: Build Your Own Feature",
 		"showName": true,
-		"instructions": "Lab 7.1: Verify that you added a new response and a new flow for your Level 1 bot.",
+		"instructions": "Pass the following check:\n\nCheck 1: New response and new flow added for Level 1 bot.",
 		"command": "bash /home/codio/workspace/.guides/secure/level1_graders/lab_7.1_grader.sh",
 		"preExecuteCommand": "",
 		"options": {

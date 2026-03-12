@@ -4,7 +4,7 @@
 	"source": {
 		"name": "Lab 6.1: Training Your Bot",
 		"showName": true,
-		"instructions": "Verify that you successfully trained the Level 1 bot.",
+		"instructions": "Pass the following check:\n\nCheck 1: Level 1 bot trained successfully.",
 		"command": "bash /home/codio/workspace/.guides/secure/level1_graders/lab_6.1_grader.sh",
 		"preExecuteCommand": "cd /home/codio/workspace && set -a && if [ -f .env ]; then . ./.env; fi && if [ -f level1/.env ]; then . ./level1/.env; fi; set +a",
 		"options": {

@@ -4,7 +4,7 @@
 	"source": {
 		"name": "Lab 6.1: Training and Testing with Slots",
 		"showName": true,
-		"instructions": "Run the assessment.",
+		"instructions": "Pass the following check:\n\nCheck 1: Level 3 bot is trained (model file exists in level3/models/ and is valid).",
 		"command": "/home/codio/workspace/.venv/bin/python3 /home/codio/workspace/.guides/secure/level3_graders/lab_6.1_grader.py",
 		"preExecuteCommand": "",
 		"options": {
