@@ -2,12 +2,12 @@
 	"type": "fill-in-the-blanks",
 	"taskId": "fill-in-the-blanks-303400102",
 	"source": {
-		"name": "Lab 3.4: Balance flow (fill in the blanks)",
+		"name": "balance flow yaml structure",
 		"showName": false,
-		"instructions": "**Fill in the blanks to complete the balance flow YAML.** Use the exact words shown in the guidance so the LLM can match user messages about checking balance.",
+		"instructions": "**Fill in the blanks to complete the balance flow YAML code.** Use the exact syntax and structure required for a proper flow definition.",
 		"showValues": true,
-		"text": "Complete the flow that explains how to check balance:\n\n```yaml\nflows:\n  <<<balance>>>:\n    name: account balance help\n    description: <<<Explain how to check account balance.>>>\n    steps:\n      - action: <<<utter_balance>>>\n```",
-		"distractors": "hours\nflows\nTell the user their balance.\nutter_hours\nresponse",
+		"text": "```yaml\n<<<flows>>>:\n  <<<balance>>>:\n    <<<name>>>: account balance help\n    <<<description>>>: Explain how to check account balance.\n    <<<steps>>>:\n      - <<<action>>>: utter_balance\n```",
+		"distractors": "flow\nbalances\ntitle\nexplanation\nactions\nresponse",
 		"metadata": {
 			"tags": [
 				{
@@ -16,16 +16,11 @@
 				}
 			],
 			"files": [],
-			"opened": [
-				{
-					"type": "terminal",
-					"panelNumber": 1
-				}
-			]
+			"opened": []
 		},
 		"bloomsObjectiveLevel": "",
 		"learningObjectives": "",
-		"guidance": "The correct answers are: **balance** (flow name), **Explain how to check account balance.** (description the LLM uses to match), **utter_balance** (the response action). You will add this flow to your project in the next step.",
+		"guidance": "The correct answers are:\n\n* **flows** - Top-level YAML key that contains all flow definitions\n* **balance** - The unique identifier name for this specific flow\n* **name** - Field that provides a human-readable title for the flow\n* **description** - Field that helps the LLM match user messages to this flow\n* **steps** - Field that contains the list of actions to execute\n* **action** - Field that specifies what response or behavior to trigger",
 		"showGuidanceAfterResponseOption": {
 			"type": "Attempts",
 			"passedFrom": 1
@@ -39,18 +34,27 @@
 		"useMaximumScore": false,
 		"tokens": {
 			"blank": [
+				"flows",
 				"balance",
-				"Explain how to check account balance.",
-				"utter_balance"
+				"name",
+				"description",
+				"steps",
+				"action"
 			],
 			"text": [
-				"Complete the flow that explains how to check balance:\n\n```yaml\nflows:\n  ",
+				"```yaml\n",
 				0,
-				":\n    name: account balance help\n    description: ",
-				1,
-				"\n    steps:\n      - action: ",
-				2,
-				"\n```"
+				":\n  ",
+				0,
+				":\n    ",
+				0,
+				": account balance help\n    ",
+				0,
+				": Explain how to check account balance.\n    ",
+				0,
+				":\n      - ",
+				0,
+				": utter_balance\n```"
 			],
 			"regexPositions": []
 		}

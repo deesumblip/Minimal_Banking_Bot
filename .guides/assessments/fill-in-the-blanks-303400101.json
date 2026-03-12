@@ -2,12 +2,12 @@
 	"type": "fill-in-the-blanks",
 	"taskId": "fill-in-the-blanks-303400101",
 	"source": {
-		"name": "Lab 3.4: Hours flow (fill in the blanks)",
+		"name": "hours_flow_completion",
 		"showName": false,
-		"instructions": "**Fill in the blanks to complete the hours flow YAML.** Use the exact words shown in the guidance so the LLM can match user messages about bank hours.",
+		"instructions": "**Fill in the blanks to complete the hours flow YAML.** Use the exact structure and naming conventions for Rasa flows.",
 		"showValues": true,
-		"text": "Complete the flow that provides bank hours:\n\n```yaml\n<<<flows>>>:\n  <<<hours>>>:\n    name: bank hours\n    description: <<<Provide bank opening hours and schedule.>>>\n    steps:\n      - action: <<<utter_hours>>>\n```",
-		"distractors": "flow\nbalance\nTell the user when we're open.\nutter_balance\naction",
+		"text": "Complete the YAML structure for the hours flow:\n\n```yaml\n<<<flows>>>:\n  <<<hours>>>:\n    <<<name>>>: bank hours\n    <<<description>>>: Provide bank opening hours and schedule.\n    <<<steps>>>:\n      - <<<action>>>: utter_hours\n```",
+		"distractors": "flow\nhour\ntitle\nstep\nresponse\nactions\nutter",
 		"metadata": {
 			"tags": [
 				{
@@ -16,16 +16,11 @@
 				}
 			],
 			"files": [],
-			"opened": [
-				{
-					"type": "terminal",
-					"panelNumber": 1
-				}
-			]
+			"opened": []
 		},
 		"bloomsObjectiveLevel": "",
 		"learningObjectives": "",
-		"guidance": "The correct answers are: **flows** (top-level key), **hours** (flow name), **Provide bank opening hours and schedule.** (description the LLM uses to match), **utter_hours** (the response action). You will add this flow to your project in the next step.",
+		"guidance": "The correct answers are:\n\n* **flows** - Top-level key that contains all flow definitions\n* **hours** - Unique identifier for this specific flow\n* **name** - Field that provides a human-readable name for the flow\n* **description** - Field that helps the LLM match user intents to this flow\n* **steps** - Field that contains the sequence of actions to execute\n* **action** - Key that specifies the type of step to perform\n\nThis structure follows Rasa's YAML format for defining conversational flows.",
 		"showGuidanceAfterResponseOption": {
 			"type": "Attempts",
 			"passedFrom": 1
@@ -41,19 +36,25 @@
 			"blank": [
 				"flows",
 				"hours",
-				"Provide bank opening hours and schedule.",
-				"utter_hours"
+				"name",
+				"description",
+				"steps",
+				"action"
 			],
 			"text": [
-				"Complete the flow that provides bank hours:\n\n```yaml\n",
+				"Complete the YAML structure for the hours flow:\n\n```yaml\n",
 				0,
 				":\n  ",
-				1,
-				":\n    name: bank hours\n    description: ",
-				2,
-				"\n    steps:\n      - action: ",
-				3,
-				"\n```"
+				0,
+				":\n    ",
+				0,
+				": bank hours\n    ",
+				0,
+				": Provide bank opening hours and schedule.\n    ",
+				0,
+				":\n      - ",
+				0,
+				": utter_hours\n```"
 			],
 			"regexPositions": []
 		}

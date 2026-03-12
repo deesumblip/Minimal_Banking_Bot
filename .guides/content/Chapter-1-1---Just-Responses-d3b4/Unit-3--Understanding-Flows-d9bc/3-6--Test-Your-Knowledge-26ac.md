@@ -1,5 +1,3 @@
-### 3.6 Test Your Knowledge
-
 Let's do a quick review of your knowledge on flows.
 
 {Check It!|assessment}(multiple-choice-1071475270)

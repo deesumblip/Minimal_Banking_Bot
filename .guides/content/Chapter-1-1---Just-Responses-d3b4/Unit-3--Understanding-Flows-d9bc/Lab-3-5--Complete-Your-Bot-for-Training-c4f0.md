@@ -60,9 +60,9 @@ Save the file.
 
 #### Checklist
 
-- [ ] `level1/domain/basics.yml` contains `utter_hours` and `utter_balance` under `responses:`
-- [ ] `level1/data/basics/hours.yml` exists with flow `hours` and step `utter_hours`
-- [ ] `level1/data/basics/balance.yml` exists with flow `balance` and step `utter_balance`
+- `level1/domain/basics.yml` contains `utter_hours` and `utter_balance` under `responses:`
+- `level1/data/basics/hours.yml` exists with flow `hours` and step `utter_hours`
+- `level1/data/basics/balance.yml` exists with flow `balance` and step `utter_balance`
 
 **Run the assessment below** to verify your project is ready for training (Lab 6.1).
 
