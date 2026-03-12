@@ -1,16 +1,12 @@
-**Objective**: Add flows that use the `utter_hours` and `utter_balance` responses. You will paste in pre-written response text and flow files so the assessment for this section can verify your project.
+**Objective**: Add the hours and balance flows (and their responses) to your `level1` project so your bot is ready for training.
 
-**Why this lab**: In Lab 3.4 you created flows for bank hours and account balance (and may have added your own responses). If your Lab 3.4 assessment passed, those responses met all valid criteria. Here you are given **exact, pre-written versions** of those responses and the corresponding flow files. By pasting them in, you ensure your bot has the responses and flows the automated assessment for *this* section expects—so you can pass the Lab 3.5 assessment.
-
-**Before You Begin**: You've completed Lab 3.4 (or at least understand flow structure). You are in the `level1` project (folder that contains `domain/`, `data/`, `config.yml`).
+**Before You Begin**: You've passed both fill-in-the-blank checks in Lab 3.4 (hours flow and balance flow). You are in the `level1` project (folder that contains `domain/`, `data/`, `config.yml`).
 
 ---
 
 #### Step 1: Add two responses to the domain
 
-Open **`domain/basics.yml`**. Under the `responses:` section, add the two blocks below. Place them after your last response (e.g. after `utter_goodbye`) and keep the same indentation (2 spaces).
-
-**Paste this after `utter_goodbye` (and its `metadata` block):**
+Open **`level1/domain/basics.yml`**. Under the `responses:` section, add the two blocks below after your last response (e.g. after `utter_goodbye`). Use the same indentation (2 spaces).
 
 ```yaml
   utter_hours:
@@ -28,9 +24,9 @@ Save the file.
 
 ---
 
-#### Step 2: Replace the hours flow
+#### Step 2: Create the hours flow file
 
-Open **`data/basics/hours.yml`** (you created this in Lab 3.4). Replace all of its contents with the following. If the file doesn't exist yet, create it with this content.
+Create **`level1/data/basics/hours.yml`** with this content (same as the flow you completed in Lab 3.4 Part 1):
 
 ```yaml
 flows:
@@ -45,9 +41,9 @@ Save the file.
 
 ---
 
-#### Step 3: Replace the balance flow
+#### Step 3: Create the balance flow file
 
-Open **`data/basics/balance.yml`** (you created this in Lab 3.4). Replace all of its contents with the following. If the file doesn't exist yet, create it with this content.
+Create **`level1/data/basics/balance.yml`** with this content (same as the flow you completed in Lab 3.4 Part 2):
 
 ```yaml
 flows:
@@ -64,10 +60,10 @@ Save the file.
 
 #### Checklist
 
-- [ ] `domain/basics.yml` contains `utter_hours` and `utter_balance` under `responses:`.
-- [ ] `data/basics/hours.yml` exists and has a flow named `hours` with step `utter_hours`.
-- [ ] `data/basics/balance.yml` exists and has a flow named `balance` with step `utter_balance`.
+- [ ] `level1/domain/basics.yml` contains `utter_hours` and `utter_balance` under `responses:`
+- [ ] `level1/data/basics/hours.yml` exists with flow `hours` and step `utter_hours`
+- [ ] `level1/data/basics/balance.yml` exists with flow `balance` and step `utter_balance`
 
-**Run the assessment when done** to pass the Lab 3.5 assessment.
+**Run the assessment below** to verify your project is ready for training (Lab 6.1).
 
 {Check It!|assessment}(code-output-compare-350500005)

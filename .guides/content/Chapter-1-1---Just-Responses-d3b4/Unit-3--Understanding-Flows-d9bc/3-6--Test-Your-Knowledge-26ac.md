@@ -1,4 +1,4 @@
-### 3.6: Test Your Knowledge
+### 3.6 Test Your Knowledge
 
 Let's do a quick review of your knowledge on flows.
 
