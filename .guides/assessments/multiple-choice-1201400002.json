@@ -4,7 +4,7 @@
 	"source": {
 		"name": "Chapter 1.2: 1.4 Test Your Knowledge - Actions vs Responses",
 		"showName": false,
-		"instructions": "**How do actions differ from responses (utter_*) in Rasa?**",
+		"instructions": "**How do actions differ from responses (utter_\\*) in Rasa?**",
 		"multipleResponse": false,
 		"isRandomized": false,
 		"answers": [
