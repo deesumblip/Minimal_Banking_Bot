@@ -1,0 +1,74 @@
+{
+	"type": "fill-in-the-blanks",
+	"taskId": "fill-in-the-blanks-1202100001",
+	"source": {
+		"name": "Lab 2.1: Complete the action file (branch address)",
+		"showName": false,
+		"instructions": "**Fill in the blanks to complete the action file.** This action returns the bank's main branch address and the current day (so the message changes—it needs an action, not a static utter). Use the exact names and structure you learned for Rasa actions.",
+		"showValues": true,
+		"text": "Complete the action file for a bank branch address action that includes the current day (so it must be an action, not an utter):\n\n```python\nfrom datetime import datetime\nfrom typing import Any, Dict, List, Text\n\nfrom rasa_sdk import Action, Tracker\nfrom rasa_sdk.executor import <<<CollectingDispatcher>>>\n\nclass <<<ActionBranchAddress>>>(<<<Action>>>):\n    def name(self) -> Text:\n        return \"<<<action_branch_address>>>\"\n\n    def run(self, <<<dispatcher>>>, <<<tracker>>>, <<<domain>>>):\n        day = [\"Mon\",\"Tue\",\"Wed\",\"Thu\",\"Fri\",\"Sat\",\"Sun\"][datetime.now().weekday()]\n        message = \"Our main branch is at 123 High Street. Today is \" + day + \".\"\n        <<<dispatcher>>>.<<<utter_message>>>(text=message)\n        return <<<[]>>>\n```",
+		"distractors": "action\nTracker\nCollectingDispatcher\nActionBranch\naction_branch\nrun\nmessage\nreturn []",
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Fill in the Blanks"
+				}
+			],
+			"files": [],
+			"opened": []
+		},
+		"bloomsObjectiveLevel": "",
+		"learningObjectives": "",
+		"guidance": "The correct answers are:\n\n* **CollectingDispatcher** – Import from rasa_sdk.executor; the type of the first run() parameter, used to send messages\n* **ActionBranchAddress** – Class name (PascalCase), must inherit from Action\n* **Action** – Base class from rasa_sdk that all custom actions inherit from\n* **action_branch_address** – String returned by name(); must match what you register in the domain\n* **dispatcher** – First parameter of run(); use it to send messages (dispatcher.utter_message)\n* **tracker** – Second parameter; holds conversation state (used in later levels)\n* **domain** – Third parameter; holds domain config\n* **utter_message** – Method on dispatcher used to send text to the user\n* **[]** – Simple actions typically return an empty list of events\n\nThis action uses datetime so the message includes the current day—that's why it's an action instead of a static utter_ response.",
+		"showGuidanceAfterResponseOption": {
+			"type": "Attempts",
+			"passedFrom": 1
+		},
+		"maxAttemptsCount": 1,
+		"showExpectedAnswerOption": {
+			"type": "Always"
+		},
+		"points": 5,
+		"arePartialPointsAllowed": false,
+		"useMaximumScore": false,
+		"tokens": {
+			"blank": [
+				"CollectingDispatcher",
+				"ActionBranchAddress",
+				"Action",
+				"action_branch_address",
+				"dispatcher",
+				"tracker",
+				"domain",
+				"dispatcher",
+				"utter_message",
+				"[]"
+			],
+			"text": [
+				"Complete the action file for a bank branch address action that includes the current day (so it must be an action, not an utter):\n\n```python\nfrom datetime import datetime\nfrom typing import Any, Dict, List, Text\n\nfrom rasa_sdk import Action, Tracker\nfrom rasa_sdk.executor import ",
+				0,
+				"\n\nclass ",
+				0,
+				"(",
+				0,
+				"):\n    def name(self) -> Text:\n        return \"",
+				0,
+				"\"\n\n    def run(self, ",
+				0,
+				", ",
+				0,
+				", ",
+				0,
+				"):\n        day = [\"Mon\",\"Tue\",\"Wed\",\"Thu\",\"Fri\",\"Sat\",\"Sun\"][datetime.now().weekday()]\n        message = \"Our main branch is at 123 High Street. Today is \" + day + \".\"\n        ",
+				0,
+				".",
+				0,
+				"(text=message)\n        return ",
+				0,
+				"\n```"
+			],
+			"regexPositions": []
+		}
+	}
+}

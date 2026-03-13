@@ -2,7 +2,15 @@
 
 ## Guide Content (For Students)
 
-**Placement**: This lab comes right after the section on the Action Class Structure. Before starting, you should understand that every action is a Python class that inherits from `Action`, with required methods `name()` and `run()`.
+**Placement**: This lab comes right after Unit 2 Test Your Knowledge. You should understand that every action is a Python class that inherits from `Action`, with required methods `name()` and `run()`.
+
+---
+
+#### Complete the action file (fill in the blanks)
+
+Fill in the blanks to complete a **branch address** action that returns the bank's main branch address and the current day (so the message is dynamic and requires an action, not a static `utter_`). The structure is the same as the bank hours action: class name, `name()`, `run()` with `dispatcher`, `tracker`, `domain`, and sending a message.
+
+*In the Codio guide this section has a Check It! assessment linked to `fill-in-the-blanks-1202100001` (`.guides/assessments/fill-in-the-blanks-1202100001.json`).*
 
 ---
 
@@ -33,7 +41,7 @@ Use what you see to answer the questions.
 
 ### Overview
 
-This lab uses **Multiple Choice** and **Fill in the Blanks** assessments. Students explore the `level2/actions/` folder and answer questions based on what they observe. Use Codio's AI Generation feature or manually create assessments from the question bank below.
+This lab uses **Fill in the Blanks** (complete action file), **Multiple Choice**, and **Fill in the Blanks** (short answers). The first assessment is a single fill-in-the-blanks task that completes a full action file (branch address)—see `.guides/assessments/fill-in-the-blanks-1202100001.json`. Students then explore the `level2/actions/` folder and answer MC/FIB questions from the question bank below.
 
 ### Assessment Type
 
