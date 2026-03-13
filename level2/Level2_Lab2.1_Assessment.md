@@ -41,11 +41,10 @@ Use what you see to answer the questions.
 
 ### Overview
 
-This lab uses **Fill in the Blanks** (complete action file), **Multiple Choice**, and **Fill in the Blanks** (short answers). The first assessment is a single fill-in-the-blanks task that completes a full action file (branch address)—see `.guides/assessments/fill-in-the-blanks-1202100001.json`. Students then explore the `level2/actions/` folder and answer MC/FIB questions from the question bank below.
+This lab uses **Fill in the Blanks** only. The first assessment is a single fill-in-the-blanks task that completes a full action file (branch address)—see `.guides/assessments/fill-in-the-blanks-1202100001.json`. Students then explore the `level2/actions/` folder and answer the short fill-in-the-blanks questions below (taskIds 2658905168, 2658905169, 2658905170, 341339148, 235818681).
 
 ### Assessment Type
 
-- **Multiple Choice** (select one correct answer)
 - **Fill in the Blanks** (short text, case-sensitive or case-insensitive as noted)
 
 ### Working Directory / Context
@@ -56,88 +55,6 @@ This lab uses **Fill in the Blanks** (complete action file), **Multiple Choice**
 ---
 
 ## Question Bank
-
-### Multiple Choice Questions
-
-**Question 1: Actions folder location**  
-*What is the main folder where custom Rasa actions live in this project?*
-
-- [ ] `domain/`
-- [x] `actions/`
-- [ ] `data/`
-- [ ] `config/`
-
----
-
-**Question 2: Purpose of `__init__.py`**  
-*Why does the `actions/` folder contain an `__init__.py` file?*
-
-- [ ] To define the action logic
-- [ ] To store the action name
-- [x] To make the folder a Python package so Rasa can find your actions
-- [ ] To configure the domain
-
----
-
-**Question 3: Why an action instead of an utter response?**  
-*Why is `action_bank_hours` implemented as a custom action rather than a simple `utter_*` response in the domain?*
-
-- [ ] Actions are faster than responses
-- [ ] Responses can't send messages to users
-- [x] The message changes based on the current day (Saturday, Sunday, weekday)—that requires Python logic and `datetime`
-- [ ] Actions are required for all bank-related messages
-
----
-
-**Question 4: Class inheritance**  
-*What must every custom action class inherit from?*
-
-- [ ] `CollectingDispatcher`
-- [ ] `Tracker`
-- [x] `Action`
-- [ ] `rasa_sdk`
-
----
-
-**Question 5: What `name()` returns**  
-*In `action_bank_hours.py`, what does the `name()` method return?*
-
-- [ ] `ActionBankHours`
-- [ ] `bank_hours`
-- [x] `action_bank_hours`
-- [ ] The filename
-
----
-
-**Question 6: Sending messages**  
-*How does the action send a message to the user?*
-
-- [ ] `tracker.utter_message(...)`
-- [ ] `domain.utter_message(...)`
-- [x] `dispatcher.utter_message(...)`
-- [ ] `return "message text"`
-
----
-
-**Question 7: Required parameters for `run()`**  
-*Which parameters does the `run()` method receive? (Select the most accurate list)*
-
-- [ ] `self` only
-- [ ] `self` and `domain`
-- [x] `self`, `dispatcher`, `tracker`, and `domain`
-- [ ] `self` and `dispatcher` only
-
----
-
-**Question 8: Return value of `run()`**  
-*What should `run()` return for a simple action that only sends a message?*
-
-- [ ] `None`
-- [ ] A string
-- [x] An empty list `[]`
-- [ ] The message text
-
----
 
 ### Fill in the Blanks Questions
 
@@ -173,35 +90,25 @@ The `CollectingDispatcher` is imported from `rasa_sdk.________`.
 
 ## Codio Setup Instructions
 
-### Multiple Choice
-
-1. Add a **Multiple Choice** assessment for each multiple-choice question (Questions 1–8).
-2. Copy the question text and options from the Question Bank above.
-3. Mark the correct answer (indicated with [x]).
-4. Set points (e.g., 1–2 per question, total ~14–16).
-5. Use Codio's AI Generation if available: provide the question and correct answer as context.
-
 ### Fill in the Blanks
 
-1. Add a **Fill in the Blanks** (or short-answer) assessment for each fill-in question (Questions 9–13).
-2. Use the expected answers provided; configure case sensitivity as needed.
-3. Set points (e.g., 1 per question, total 5).
+1. The **complete action file** task is already in the guide: `fill-in-the-blanks-1202100001`.
+2. Add or keep **Fill in the Blanks** assessments for each short fill-in question (Questions 9–13) with the expected answers below; configure case sensitivity as needed.
+3. Set points (e.g., 1 per question for short FIBs; the complete-action-file task may carry more).
 4. For AI-based grading: provide the question stem and expected answer in the rubric.
 
 ### Suggested Point Allocation
 
-| Questions | Type              | Points |
-|----------|-------------------|--------|
-| 1–8      | Multiple choice   | 16 (2 each) |
-| 9–13     | Fill in the blanks| 5 (1 each) |
-| **Total**|                   | **21** |
+| Assessment | Type              | Points |
+|------------|-------------------|--------|
+| Complete action file (1202100001) | Fill in the blanks | e.g. 5 |
+| Questions 9–13 (short FIB) | Fill in the blanks | 5 (1 each) |
+| **Total**  |                   | **10** |
 
 ---
 
 ## Learning Objectives
 
-- SWBAT locate the `actions/` folder in a Rasa project
-- SWBAT identify the purpose of `__init__.py` in the actions folder
-- SWBAT explain why dynamic content (e.g., day-based messages) requires an action, not an utter response
-- SWBAT recognize the structure of an action file (class, `name()`, `run()`)
+- SWBAT complete the structure of a Rasa action file (imports, class, `name()`, `run()`, dispatcher, return)
+- SWBAT recognize the structure of an action file (class, `name()`, `run()`) by exploring `actions/`
 - SWBAT match action concepts (inheritance, dispatcher, return value, datetime) to their implementation
