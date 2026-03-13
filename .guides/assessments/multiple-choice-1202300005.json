@@ -1,0 +1,48 @@
+{
+	"type": "multiple-choice",
+	"taskId": "multiple-choice-1202300005",
+	"source": {
+		"name": "Chapter 1.2: 2.3 Test Your Knowledge - actions/ Folder and run() Return",
+		"showName": false,
+		"instructions": "**What should a simple action's run() method typically return at the end?**",
+		"multipleResponse": false,
+		"isRandomized": false,
+		"answers": [
+			{
+				"_id": "c9d0e1f2-a3b4-5678-2345-789012345678",
+				"correct": false,
+				"answer": "The message string that was sent to the user"
+			},
+			{
+				"_id": "c9d0e1f2-a3b4-5678-2345-789012345679",
+				"correct": false,
+				"answer": "None"
+			},
+			{
+				"_id": "c9d0e1f2-a3b4-5678-2345-789012345680",
+				"correct": true,
+				"answer": "An empty list: return []"
+			},
+			{
+				"_id": "c9d0e1f2-a3b4-5678-2345-789012345681",
+				"correct": false,
+				"answer": "dispatcher"
+			}
+		],
+		"metadata": {
+			"tags": [{"name": "Assessment Type", "value": "Multiple Choice"}],
+			"files": [],
+			"opened": []
+		},
+		"bloomsObjectiveLevel": "1",
+		"learningObjectives": "SWBAT state the return value of run() for simple actions",
+		"guidance": "For simple actions that only send messages, run() returns a list of events—usually an empty list []. In Level 3 and beyond you may return slot-setting events or other events. Returning [] tells Rasa the action completed without adding extra events to the conversation.",
+		"showGuidanceAfterResponseOption": {"type": "Attempts", "passedFrom": 1},
+		"maxAttemptsCount": 1,
+		"showExpectedAnswerOption": {"type": "Always"},
+		"points": 5,
+		"incorrectPoints": 0,
+		"arePartialPointsAllowed": false,
+		"useMaximumScore": false
+	}
+}
