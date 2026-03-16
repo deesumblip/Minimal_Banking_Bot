@@ -1,4 +1,5 @@
 # Publish this repo to a Codio assignment when code is pushed to main.
+# Trigger: re-run workflow
 # See CODIO_GITHUB_ACTIONS_SETUP.md for setup steps.
 # Docs: https://docs.codio.com/develop/develop/ide/tools/ghapi.html#implementing-workflow-actions
 
@@ -29,4 +30,5 @@ jobs:
           course-id: aa4ebdb33acdf01910c922abef0c3a79f
           assignment-id: a5f4cb7c5c7e8a37afb029730d1ae48
           changelog: ${{ github.event.head_commit.message }}
+          # Use codio.co.uk if your Codio org is on the UK site
           domain: codio.com
