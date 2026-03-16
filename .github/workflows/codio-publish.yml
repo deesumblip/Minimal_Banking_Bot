@@ -1,0 +1,32 @@
+# Publish this repo to a Codio assignment when code is pushed to main.
+# See CODIO_GITHUB_ACTIONS_SETUP.md for setup steps.
+# Docs: https://docs.codio.com/develop/develop/ide/tools/ghapi.html#implementing-workflow-actions
+
+name: codio-publish
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  publish-to-codio:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Optional: remove or modify files before Codio receives the project
+      # - name: Cleanup
+      #   run: rm -rf README.md
+
+      - name: Publish to Codio
+        uses: codio/codio-assignment-publish-action@master
+        with:
+          client-id: ${{ secrets.CODIO_PRODUCTION_CLIENT_ID }}
+          secret-id: ${{ secrets.CODIO_PRODUCTION_SECRET_ID }}
+          dir: ./
+          course-id: aa4ebdb33acdf01910c922abef0c3a79f
+          assignment-id: a5f4cb7c5c7e8a37afb029730d1ae48
+          changelog: ${{ github.event.head_commit.message }}
+          domain: codio.com
