@@ -1,7 +1,8 @@
 # Publish this repo to a Codio assignment when code is pushed to main.
-# Trigger: re-run workflow
 # See CODIO_GITHUB_ACTIONS_SETUP.md for setup steps.
 # Docs: https://docs.codio.com/develop/develop/ide/tools/ghapi.html#implementing-workflow-actions
+#
+# 404? Ensure assignment is published, then use course-id/assignment-id from the URL on the assignment Overview tab.
 
 name: codio-publish
 
@@ -27,6 +28,7 @@ jobs:
           client-id: ${{ secrets.CODIO_PRODUCTION_CLIENT_ID }}
           secret-id: ${{ secrets.CODIO_PRODUCTION_SECRET_ID }}
           dir: ./
+          # IDs from the assignment URL (Overview tab). Update if 404 persists.
           course-id: aa4ebdb33acdf01910c922abef0c3a79f
           assignment-id: a5f4cb7c5c7e8a37afb029730d1ae48
           changelog: ${{ github.event.head_commit.message }}
