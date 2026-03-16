@@ -4,7 +4,7 @@
 	"source": {
 		"name": "Lab 6.1: Training and Testing with Actions.",
 		"showName": true,
-		"instructions": "Pass the following check:\n\nCheck 1: Bot with actions trained successfully.",
+		"instructions": "To pass this assessment, all of the following checks must pass (run from level2 with venv active):\n\n• Check 1: A model file (.tar.gz) exists in level2/models/ (run 'python -m rasa train' to create it).\n• Check 2: Training completed without errors (no errors/exceptions in logs).",
 		"command": "bash /home/codio/workspace/.guides/secure/level2_graders/lab_6.1_grader.sh",
 		"preExecuteCommand": "",
 		"options": {

@@ -31,6 +31,6 @@ This audit covers all content and labs that come **after** Level 2 Lab 5.1.
 ## Files updated in this audit
 
 - **Lab 5.1** (`level2/Level2_Lab5.1_Content.md`, `.guides/.../Lab-5-1--Using-Actions-in-Flows-e512.md`) — full step-by-step (navigate to data/basics, create hours.yml and holiday_hours.yml with full YAML, verify, optional Inspector). Former 5.2 (Creating a Flow) removed; its instructions were already integrated here.
-- **5.2** (`level2/Level2_Unit5_Content_5.2_Mixing-Responses-and-Actions.md`, `.guides/.../5-2-Mixing-Responses-and-Actions-bdb7.md`) — Mixing Responses and Actions (conceptual only).
+- **5.2** (`level2/Level2_Unit5_Content_5.2_Mixing-Responses-and-Actions.md`, `.guides/.../5-2-Mixing-Responses-and-Actions-460b.md`) — Mixing Responses and Actions (conceptual only).
 
 Students now have one place for instructions and one assessment (Lab 5.1); no repeated steps across pages.

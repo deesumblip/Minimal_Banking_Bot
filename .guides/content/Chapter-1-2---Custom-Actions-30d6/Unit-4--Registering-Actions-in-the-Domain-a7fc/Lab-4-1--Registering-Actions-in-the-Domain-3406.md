@@ -64,4 +64,4 @@ Run the assessment when you're done.
 
 {Check It!|assessment}(code-output-compare-1451983168)
 
-Optional: after the assessment, see Unit 6.3 to try the bot in the Inspector.
+After you train your bot in Unit 6 (Lab 6.1), you'll run a final verification (Lab 6.2: Verify Domain and Training) in that unit. Optional now: see Unit 6.3 to try the bot in the Inspector.

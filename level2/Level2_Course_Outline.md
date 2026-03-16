@@ -104,12 +104,13 @@
 
 ### Unit 4: Registering Actions in the Domain
 **Type**: Lab (with Assessment)  
-**Assessments**: Lab 4.1 – Registering Actions in the Domain (11 points). Lab 4.2 – Multiple Actions (11 points; same verification as 4.1, optional Inspector ungraded).
+**Assessment**: Lab 4.1 – Registering Actions in the Domain (11 points).
 
 **Sections**:
 - 4.1 Why Register Actions?
 - Lab 4.1: Registering Actions in the Domain
-- Lab 4.2: Multiple Actions (recap + optional Inspector)
+
+*(Lab 6.2: Verify Domain and Training appears in Unit 6, right after Lab 6.1.)*
 
 **Key Concepts**: Domain registration, YAML syntax, action naming
 
@@ -150,13 +151,14 @@
 ---
 
 ### Unit 6: Training and Testing with Actions
-**Type**: Lab (with Assessment)  
-**Assessment**: Lab 6.1 - Training and Testing with Actions (4 points)
+**Type**: Lab (with Assessments)  
+**Assessments**: Lab 6.1 - Training and Testing with Actions (4 points). Lab 6.2 - Verify Domain and Training (11 points; right after Lab 6.1).
 
 **Sections**:
 - 6.1 Training with Actions
   - Training command (Codio and local)
   - What happens during training (4-step process)
+- Lab 6.1: Training and Testing with Actions
 - 6.2 Common Training Errors with Actions
   - Error: Action Not Found
   - Error: Import Error
@@ -169,6 +171,7 @@
 - 6.4 Debugging Actions
   - Check debug output
   - Common issues and solutions
+- Lab 6.2: Verify Domain and Training (domain + model file check; optional Inspector)
 
 **Key Concepts**: Training, testing, debugging, Rasa Inspector, port forwarding
 
@@ -257,16 +260,16 @@
 |--------|-----|--------|------|---------------|
 | Unit 3 | Lab 3.1 | 8 | Standard Code Test | `lab_3.1_grader.sh` |
 | Unit 4 | Lab 4.1 | 11 | Standard Code Test | `lab_4.1_grader.sh` |
-| Unit 4 | Lab 4.2 | 11 | Code Output Compare | `lab_4.2_grader.sh` (domain + model file) |
 | Unit 5 | Lab 5.1 | 12 | Standard Code Test | `lab_5.1_grader.sh` |
 | Unit 6 | Lab 6.1 | 4 | Standard Code Test | `lab_6.1_grader.sh` |
+| Unit 6 | Lab 6.2 | 11 | Code Output Compare | `lab_4.2_grader.sh` (domain + model file) |
 
 **Total Assessment Points**: 46 points
 
 **Codio: Grader updates from GitHub**  
 When you set up or edit assessments on Codio, configure each Code Test to **run the grader script from the workspace** (e.g. `bash /home/codio/workspace/.guides/secure/level2_graders/lab_5.1_grader.sh`). Do **not** upload or paste the script content into the assessment. That way, when you push grader changes to GitHub and pull on Codio, the assessment will use the updated script automatically.
 
-**Chapter 1.2 (Codio guide)**: Code-output-compare Check It! tags are on Labs 3.1, 4.1, 4.2, 5.1, 6.1. Multiple-choice Check It! tags are on content pages: 1.1, 1.4, 2.2, 2.3, Lab 2.1, 3.1, 3.2, 7.1, 8.1 (see `.guides/content/Chapter-1-2---Custom-Actions-30d6/`).
+**Chapter 1.2 (Codio guide)**: Code-output-compare Check It! tags are on Labs 3.1, 4.1, 5.1, 6.1, 6.2. Multiple-choice Check It! tags are on content pages: 1.1, 1.4, 2.2, 2.3, Lab 2.1, 3.1, 3.2, 7.1, 8.1 (see `.guides/content/Chapter-1-2---Custom-Actions-30d6/`).
 
 ---
 
@@ -285,7 +288,7 @@ Content is split by subsection (one file per numbered subsection). Examples:
 ### Assessment Files (Implementation Instructions)
 - `Level2_Lab3.1_Content.md` / `Level2_Lab3.1_Assessment_Setup.md` - Lab 3.1 (student page + implementer doc)
 - `Level2_Lab4.1_Content.md` / `Level2_Lab4.1_Assessment_Setup.md` – Lab 4.1
-- `Level2_Lab4.2_Content.md` / `Level2_Lab4.2_Assessment_Setup.md` – Lab 4.2
+- `Level2_Lab4.2_Content.md` / `Level2_Lab4.2_Assessment_Setup.md` – Lab 6.2 (Verify Domain and Training)
 - `Level2_Lab5.1_Content.md` / `Level2_Lab5.1_Assessment_Setup.md` - Lab 5.1
 - `Level2_Lab6.1_Content.md` / `Level2_Lab6.1_Assessment_Setup.md` - Lab 6.1
 
@@ -308,11 +311,11 @@ Unit 2: Understanding the Action Class (Conceptual)
     ↓
 Unit 3: Creating Your First Action (Hands-on Lab) ✓ Lab 3.1 Assessment
     ↓
-Unit 4: Registering Actions (Hands-on Labs) ✓ Lab 4.1 & 4.2 Assessments
+Unit 4: Registering Actions (Hands-on Lab) ✓ Lab 4.1 Assessment
     ↓
 Unit 5: Using Actions in Flows (Hands-on Lab) ✓ Lab 5.1 Assessment
     ↓
-Unit 6: Training and Testing (Hands-on Lab) ✓ Lab 6.1 Assessment
+Unit 6: Training and Testing (Hands-on Labs) ✓ Lab 6.1 & Lab 6.2 (Verify Domain and Training) Assessments
     ↓
 Unit 7: Putting It All Together (Integration)
     ↓

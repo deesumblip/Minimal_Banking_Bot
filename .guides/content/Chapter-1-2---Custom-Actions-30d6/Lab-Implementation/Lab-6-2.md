@@ -1,10 +1,10 @@
-# Lab 4.2: Multiple Actions – Assessment Setup
+# Lab 6.2: Verify Domain and Training – Assessment Setup
 
 ## Overview
 
-Lab 4.2 reinforces that both actions are registered and adds training/Inspector exploration. The lab uses the **virtual environment in the main folder** (project root): students go to main folder, activate that venv, then `cd level2` and train/run the Level 2 bot from there so Rasa uses level2's domain, flows, and actions. Steps separate **In Codio** (Linux) from **Running locally** (Windows/macOS/Linux).
+Lab 6.2 reinforces that both actions are registered and verifies that the student has trained the bot. The lab uses the **virtual environment in the main folder** (project root): students go to main folder, activate that venv, then `cd level2` and train/run the Level 2 bot from there so Rasa uses level2's domain, flows, and actions. Steps separate **In Codio** (Linux) from **Running locally** (Windows/macOS/Linux).
 
-**Lab 4.2 has its own graded assessment.** It runs the Lab 4.1 grader (domain registration) and additionally verifies that the student has trained the bot (a model file exists in `level2/models/`). Students run this assessment after completing Lab 4.1 and the Lab 4.2 steps (including training).
+**Lab 6.2 has its own graded assessment.** It runs the Lab 4.1 grader (domain registration) and additionally verifies that the student has trained the bot (a model file exists in `level2/models/`). Students run this assessment after completing Lab 4.1 (Unit 4), Lab 6.1 (training), and the Lab 6.2 steps. The lab is placed in Unit 6 **right after Lab 6.1** so training is done first.
 
 ### Assessment Type
 
@@ -19,7 +19,7 @@ Lab 4.2 reinforces that both actions are registered and adds training/Inspector 
 
 ### Codio Setup
 
-1. Create a **Code Test** (code-output-compare) for Lab 4.2.
+1. Create a **Code Test** (code-output-compare) for Lab 6.2.
 2. **Execution** – Command (run from workspace):
    ```bash
    bash /home/codio/workspace/.guides/secure/level2_graders/lab_4.2_grader.sh
@@ -30,9 +30,8 @@ Lab 4.2 reinforces that both actions are registered and adds training/Inspector 
 
 ### Check It! Tag (Chapter 1.2 guide)
 
-The Lab 4.2 page in the Chapter 1.2 Codio guide includes:
+The Lab 6.2 page in the Chapter 1.2 Codio guide is in **Unit 6, right after Lab 6.1**. It includes:
 `{Check It!|assessment}(code-output-compare-1597644299)`  
 so students can run the assessment from the guide.
 
 ---
-

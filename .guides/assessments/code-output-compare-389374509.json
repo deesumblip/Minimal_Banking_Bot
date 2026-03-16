@@ -4,7 +4,7 @@
 	"source": {
 		"name": "Lab 5.1: Using Actions in Flows.",
 		"showName": true,
-		"instructions": "Pass the following check:\n\nCheck 1: Flows that use actions exist (hours.yml and holiday_hours.yml).",
+		"instructions": "To pass this assessment, all of the following checks must pass (in level2/data/basics/):\n\n• Check 1: hours.yml exists.\n• Check 2: hours flow exists (flows:, hours:).\n• Check 3: hours flow uses action_bank_hours in steps.\n• Check 4: holiday_hours.yml exists.\n• Check 5: holiday_hours flow exists and uses action_holiday_hours in steps.\n• Check 6: holiday_hours flow has name: and description:.",
 		"command": "bash /home/codio/workspace/.guides/secure/level2_graders/lab_5.1_grader.sh",
 		"preExecuteCommand": "",
 		"options": {

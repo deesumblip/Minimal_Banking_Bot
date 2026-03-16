@@ -1,6 +1,6 @@
-# Lab 4.2: Multiple Actions
+# Lab 6.2: Verify Domain and Training
 
-You've now registered both actions in the domain: **action_bank_hours** (the example) and **action_holiday_hours** (the one you created in Lab 3.1). With both registered, Rasa can invoke them—in Unit 5 you'll connect them to flows. When you add more actions later, list each on its own line under `actions:` with a dash.
+You've now registered both actions in the domain (Unit 4) and trained (Lab 6.1). This lab verifies both. You've registered: **action_bank_hours** (the example) and **action_holiday_hours** (the one you created in Lab 3.1). With both registered, Rasa can invoke them—in Unit 5 you'll connect them to flows. When you add more actions later, list each on its own line under `actions:` with a dash.
 
 ---
 

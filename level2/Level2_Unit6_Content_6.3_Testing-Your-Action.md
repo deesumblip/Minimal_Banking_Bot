@@ -1,8 +1,8 @@
 ### 6.3 Testing Your Action
 
-You already used Rasa Inspector in **Lab 4.2** and **Lab 5.1** to explore your bot. This section formalizes the testing workflow and provides a complete checklist to verify all your flows and actions work correctly.
+You can use Rasa Inspector as in **Lab 5.1** (optional) or **Lab 6.2** to explore your bot. This section formalizes the testing workflow and provides a complete checklist to verify all your flows and actions work correctly.
 
-**Setup reminder**: If you need to review Inspector setup (go to main folder → activate virtual environment → `cd level2` → train → start Inspector), see **Lab 4.2** for the full step-by-step instructions.
+**Setup reminder**: If you need to review Inspector setup (go to main folder → activate virtual environment → `cd level2` → train → start Inspector), see **Lab 6.2** for the full step-by-step instructions.
 
 #### Questions to ask in the Inspector chat
 
@@ -22,7 +22,7 @@ Follow this structured workflow to verify everything works:
 
 1. **Train your bot**: From the `level2` folder (with virtual environment activated), run `python -m rasa train`. Wait for training to complete.
 
-2. **Start Inspector**: Run `python -m rasa inspect --debug --log-file logs/logs.out` and leave it running. Open Inspector in your browser (see **Lab 4.2** for Codio port forwarding or local setup details).
+2. **Start Inspector**: Run `python -m rasa inspect --debug --log-file logs/logs.out` and leave it running. Open Inspector in your browser (see **Lab 6.2** for Codio port forwarding or local setup details).
 
 3. **Test the action**:
    - Type "What are your hours?" or "When are you open?"

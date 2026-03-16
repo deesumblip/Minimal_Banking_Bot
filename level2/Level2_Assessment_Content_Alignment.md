@@ -48,11 +48,11 @@ No venv, model recency, or action file checks. **Verdict**: Fully aligned (4 poi
 
 ---
 
-## Lab 4.2: Multiple Actions (domain + training)
+## Lab 6.2: Verify Domain and Training (domain + training)
 
-| Content step (Unit 4 / Lab 4.2) | Assessment check | Aligned? |
+| Content step (Unit 6 / Lab 6.2) | Assessment check | Aligned? |
 |----------------------------------|------------------|----------|
-| Lab 4.1 done (both actions in domain) | Lab 4.2 grader runs lab_4.1_grader.sh | ✓ |
+| Lab 4.1 done (both actions in domain) | Lab 6.2 grader runs lab_4.1_grader.sh | ✓ |
 | Train from level2 (model file exists) | Check 7: level2/models/*.tar.gz exists | ✓ |
 
 **Verdict**: Fully aligned (11 points). Grader: `lab_4.2_grader.sh`. TaskId: code-output-compare-1597644299.

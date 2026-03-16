@@ -4,7 +4,7 @@
 	"source": {
 		"name": "Lab 4.1: Registering Actions in the Domain.",
 		"showName": true,
-		"instructions": "Pass the following check:\n\nCheck 1: Both action_bank_hours and action_holiday_hours are registered in the domain file.",
+		"instructions": "To pass this assessment, all of the following checks must pass (in level2/domain/basics.yml):\n\n• Check 1: domain/basics.yml exists.\n• Check 2: An actions: section exists.\n• Check 3: action_bank_hours is registered under actions:.\n• Check 4: action_holiday_hours is registered under actions:.\n• Check 5: Both actions use correct YAML list syntax (dash format).\n• Check 6: The domain file is valid YAML (no syntax errors).",
 		"command": "bash /home/codio/workspace/.guides/secure/level2_graders/lab_4.1_grader.sh",
 		"preExecuteCommand": "cd /home/codio/workspace/level2",
 		"options": {
