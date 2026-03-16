@@ -22,15 +22,19 @@ You can also add `from typing import Any, Dict, List, Text` for type hints.
 
 **Step 4 – Implement `name()`**  
 - Add a method `name(self)` that returns the string `"action_holiday_hours"`  
-  (this must match the filename, without `.py`).
+  (this must match the filename, without `.py`).  
+- **Use double quotes** around the return value so the autograder recognizes it: `return "action_holiday_hours"`.
 
 **Step 5 – Implement `run()` with date-based logic**  
 - Add the `run()` method with parameters: `dispatcher`, `tracker`, and `domain`.  
-- Get today's date, e.g. `now = datetime.now()` and use `now.month` and `now.day` to check if today is a holiday.  
-- **If today is a holiday** (e.g. New Year's Day Jan 1, Independence Day July 4, or Christmas Dec 25—you can use these or your own list): set a message like *"We're closed today for [holiday name]."*  
-- **Otherwise**: set a message with the general holiday schedule, e.g. *"We're closed on New Year's Day, Independence Day, and Christmas. On other holidays we may have limited hours—please call ahead."*  
-- Call `dispatcher.utter_message(text=message)` **once** with whichever message you chose.  
-- At the end of `run()`, return `[]` (an empty list).
+- Get today's date: `now = datetime.now()`, then use `now.month` and `now.day` to decide the message.  
+- **Holiday logic (copy this structure):**  
+  - If `(now.month == 1 and now.day == 1)` → message = *"We're closed today for New Year's Day."*  
+  - Else if `(now.month == 7 and now.day == 4)` → message = *"We're closed today for Independence Day."*  
+  - Else if `(now.month == 12 and now.day == 25)` → message = *"We're closed today for Christmas."*  
+  - Else → message = *"We're closed on New Year's Day, Independence Day, and Christmas. On other holidays we may have limited hours—please call ahead."*  
+- Call `dispatcher.utter_message(text=message)` **once**.  
+- At the end of `run()`, use the **literal** `return []` (type the empty list directly, not a variable) so the autograder passes.
 
 **Step 6 – Save and verify**  
 - Save the file and run the assessment below.
@@ -44,8 +48,8 @@ Before submitting, confirm:
 - File is in the `actions/` folder and named `action_holiday_hours.py`
 - You import `datetime` and use it (e.g. `datetime.now()`) to choose the message
 - Class is `ActionHolidayHours(Action)`
-- `name()` returns `"action_holiday_hours"`
-- `run()` calls `dispatcher.utter_message()` and returns `[]`
+- `name()` returns `"action_holiday_hours"` (with **double quotes**)
+- `run()` calls `dispatcher.utter_message()` and ends with the **literal** `return []`
 
 Run the assessment when you're done.
 
