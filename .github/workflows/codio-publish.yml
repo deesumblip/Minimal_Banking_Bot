@@ -28,9 +28,9 @@ jobs:
           client-id: ${{ secrets.CODIO_PRODUCTION_CLIENT_ID }}
           secret-id: ${{ secrets.CODIO_PRODUCTION_SECRET_ID }}
           dir: ./
-          # IDs from the assignment URL (Overview tab). Update if 404 persists.
-          course-id: aa4ebdb33acdf01910c922abef0c3a79f
-          assignment-id: a5f4cb7c5c7e8a37afb029730d1ae48
+          # IDs from Overview URL (path = course-id, assignmentId = assignment-id)
+          course-id: aa4e8b53acdf01910c922abe1cc3a79f
+          assignment-id: a5f4cb7c5fc7e8a37afb029730d1ae48
           changelog: ${{ github.event.head_commit.message }}
-          # Use codio.co.uk if your Codio org is on the UK site
-          domain: codio.com
+          # Set repo variable CODIO_DOMAIN to codio.co.uk if you use the UK site; otherwise codio.com
+          domain: ${{ vars.CODIO_DOMAIN || 'codio.com' }}
