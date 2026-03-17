@@ -1,12 +1,19 @@
 {
-  "id": "398c8cf5-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-  "title": "Lab 4.1: Registering Actions in the Domain",
-  "files": [],
-  "layout": "1-panel",
-  "path": [],
-  "type": "page",
-  "contentType": "markdown", "content": "",
-  "teacherOnly": false,
-  "closeTerminalSession": true,
-  "learningObjectives": ""
+	"id": "398c8cf5-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+	"title": "Lab 4.1: Registering Actions in the Domain",
+	"files": [
+		{
+			"path": "",
+			"panel": 1,
+			"action": "open"
+		}
+	],
+	"layout": "2-panels-tree-guides-left",
+	"path": [],
+	"type": "page",
+	"contentType": "markdown",
+	"content": "",
+	"teacherOnly": false,
+	"closeTerminalSession": true,
+	"learningObjectives": ""
 }

@@ -1,13 +1,19 @@
 {
-  "id": "79ff5057-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-  "title": "0.1 Your Level 1 Banking Bot",
-  "files": [],
-  "layout": "1-panel",
-  "path": [],
-  "type": "page",
-  "contentType": "markdown",
-  "content": "",
-  "teacherOnly": false,
-  "closeTerminalSession": true,
-  "learningObjectives": ""
+	"id": "79ff5057-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+	"title": "0.1 Your Level 1 Banking Bot",
+	"files": [
+		{
+			"path": "",
+			"panel": 1,
+			"action": "open"
+		}
+	],
+	"layout": "2-panels-tree-guides-left",
+	"path": [],
+	"type": "page",
+	"contentType": "markdown",
+	"content": "",
+	"teacherOnly": false,
+	"closeTerminalSession": true,
+	"learningObjectives": ""
 }

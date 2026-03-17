@@ -1,13 +1,19 @@
 {
-  "id": "7109226d-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-  "title": "4.1 Why Register Actions?",
-  "files": [],
-  "layout": "1-panel",
-  "path": [],
-  "type": "page",
-  "contentType": "markdown",
-  "content": "",
-  "teacherOnly": false,
-  "closeTerminalSession": true,
-  "learningObjectives": ""
+	"id": "7109226d-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+	"title": "4.1 Why Register Actions?",
+	"files": [
+		{
+			"path": "",
+			"panel": 1,
+			"action": "open"
+		}
+	],
+	"layout": "2-panels-tree-guides-left",
+	"path": [],
+	"type": "page",
+	"contentType": "markdown",
+	"content": "",
+	"teacherOnly": false,
+	"closeTerminalSession": true,
+	"learningObjectives": ""
 }

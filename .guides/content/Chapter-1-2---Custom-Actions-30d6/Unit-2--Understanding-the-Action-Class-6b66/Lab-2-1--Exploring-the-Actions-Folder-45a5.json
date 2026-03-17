@@ -1,12 +1,19 @@
 {
-  "id": "12847947-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-  "title": "Lab 2.1: Exploring the Actions Folder",
-  "files": [],
-  "layout": "1-panel",
-  "path": [],
-  "type": "page",
-  "contentType": "markdown", "content": "",
-  "teacherOnly": false,
-  "closeTerminalSession": true,
-  "learningObjectives": ""
+	"id": "12847947-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+	"title": "Lab 2.1: Exploring the Actions Folder",
+	"files": [
+		{
+			"path": "",
+			"panel": 1,
+			"action": "open"
+		}
+	],
+	"layout": "2-panels-tree-guides-left",
+	"path": [],
+	"type": "page",
+	"contentType": "markdown",
+	"content": "",
+	"teacherOnly": false,
+	"closeTerminalSession": true,
+	"learningObjectives": ""
 }

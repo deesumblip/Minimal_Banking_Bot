@@ -1,13 +1,19 @@
 {
-  "id": "b0605bb7-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-  "title": "2.2 Understanding the Parameters",
-  "files": [],
-  "layout": "1-panel",
-  "path": [],
-  "type": "page",
-  "contentType": "markdown",
-  "content": "",
-  "teacherOnly": false,
-  "closeTerminalSession": true,
-  "learningObjectives": ""
+	"id": "b0605bb7-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+	"title": "2.2 Understanding the Parameters",
+	"files": [
+		{
+			"path": "",
+			"panel": 1,
+			"action": "open"
+		}
+	],
+	"layout": "2-panels-tree-guides-left",
+	"path": [],
+	"type": "page",
+	"contentType": "markdown",
+	"content": "",
+	"teacherOnly": false,
+	"closeTerminalSession": true,
+	"learningObjectives": ""
 }

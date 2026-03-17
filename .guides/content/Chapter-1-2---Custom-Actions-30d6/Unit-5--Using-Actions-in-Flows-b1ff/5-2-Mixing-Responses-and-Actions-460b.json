@@ -1,12 +1,18 @@
 {
-  "id": "f4c621f9-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-  "title": "5.2 Mixing Responses and Actions",
-  "files": [],
-  "layout": "1-panel",
-  "path": [],
-  "type": "page",
-  "contentType": "markdown",
-  "teacherOnly": false,
-  "closeTerminalSession": true,
-  "learningObjectives": ""
+	"id": "f4c621f9-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+	"title": "5.2 Mixing Responses and Actions",
+	"files": [
+		{
+			"path": "",
+			"panel": 1,
+			"action": "open"
+		}
+	],
+	"layout": "2-panels-tree-guides-left",
+	"path": [],
+	"type": "page",
+	"contentType": "markdown",
+	"teacherOnly": false,
+	"closeTerminalSession": true,
+	"learningObjectives": ""
 }
