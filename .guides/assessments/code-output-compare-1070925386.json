@@ -48,7 +48,14 @@
 			{
 				"arguments": "",
 				"input": "",
-				"output": "PASS: Training verification complete!",
+				"output": "Check 1: PASSED",
+				"showFeedback": false,
+				"feedback": ""
+			},
+			{
+				"arguments": "",
+				"input": "",
+				"output": "Check 2: PASSED",
 				"showFeedback": false,
 				"feedback": ""
 			}
