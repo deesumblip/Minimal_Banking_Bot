@@ -19,6 +19,7 @@ logs/
 .DS_Store
 desktop.ini
 
-# Cursor saved chats
+# Cursor – keep all Cursor data local (chats, transcripts, workspace state)
+.cursor/
 cursor_*.md
 *cursor*chat*.md
