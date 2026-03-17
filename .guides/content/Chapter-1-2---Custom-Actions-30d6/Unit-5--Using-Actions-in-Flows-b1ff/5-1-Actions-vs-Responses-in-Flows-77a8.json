@@ -9,7 +9,7 @@
 		}
 	],
 	"layout": "2-panels-tree-guides-left",
-	"path": [],
+	"path": ["level2"],
 	"type": "page",
 	"contentType": "markdown",
 	"content": "",
