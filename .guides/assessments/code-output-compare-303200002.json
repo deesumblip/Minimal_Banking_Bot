@@ -4,7 +4,7 @@
 	"source": {
 		"name": "Lab 3.2: Creating Your First Flow (goodbye.yml)",
 		"showName": true,
-		"instructions": "Pass the following check:\n\nCheck 1: data/basics/goodbye.yml has the correct flow structure (flows:, goodbye:, name:, description:, steps: with utter_goodbye).",
+		"instructions": "To pass this assessment, all of the following checks must pass:\n\n• Check 1: data/basics/goodbye.yml has the correct flow structure (flows:, goodbye:, name:, description:, steps: with utter_goodbye).",
 		"command": "python3 /home/codio/workspace/.guides/secure/level1_graders/lab_3.2_grader.py",
 		"preExecuteCommand": "",
 		"options": {
