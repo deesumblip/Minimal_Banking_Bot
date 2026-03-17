@@ -9,6 +9,11 @@
 		"isRandomized": false,
 		"answers": [
 			{
+				"_id": "b2c3d4e5-f6a7-8901-bcde-f12345678903",
+				"correct": true,
+				"answer": "When you need dynamic content (e.g. current day), calculations, or external data (e.g. database, API)"
+			},
+			{
 				"_id": "b2c3d4e5-f6a7-8901-bcde-f12345678901",
 				"correct": false,
 				"answer": "Whenever you want to send any message to the user"
@@ -17,11 +22,6 @@
 				"_id": "b2c3d4e5-f6a7-8901-bcde-f12345678902",
 				"correct": false,
 				"answer": "When the message never changes and is static text"
-			},
-			{
-				"_id": "b2c3d4e5-f6a7-8901-bcde-f12345678903",
-				"correct": true,
-				"answer": "When you need dynamic content (e.g. current day), calculations, or external data (e.g. database, API)"
 			},
 			{
 				"_id": "b2c3d4e5-f6a7-8901-bcde-f12345678904",

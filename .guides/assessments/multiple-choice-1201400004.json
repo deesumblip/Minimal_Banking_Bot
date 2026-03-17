@@ -14,11 +14,6 @@
 				"answer": "Rasa looks up a predefined response in the domain and sends it"
 			},
 			{
-				"_id": "c3d4e5f6-a7b8-9012-cdef-123456789013",
-				"correct": true,
-				"answer": "Rasa finds the action in the actions/ folder and executes its run() method"
-			},
-			{
 				"_id": "c3d4e5f6-a7b8-9012-cdef-123456789014",
 				"correct": false,
 				"answer": "The user is prompted to type a message"
@@ -27,6 +22,11 @@
 				"_id": "c3d4e5f6-a7b8-9012-cdef-123456789015",
 				"correct": false,
 				"answer": "The flow stops and waits for a manual trigger"
+			},
+			{
+				"_id": "c3d4e5f6-a7b8-9012-cdef-123456789013",
+				"correct": true,
+				"answer": "Rasa finds the action in the actions/ folder and executes its run() method"
 			}
 		],
 		"metadata": {

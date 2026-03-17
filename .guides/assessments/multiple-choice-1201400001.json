@@ -9,14 +9,14 @@
 		"isRandomized": false,
 		"answers": [
 			{
-				"_id": "7f7473ce-a246-a0b4-be04-612df2402841",
-				"correct": true,
-				"answer": "Custom Python code that the bot can execute (e.g. calculations, APIs, dynamic logic)"
-			},
-			{
 				"_id": "9dd55676-d714-434e-ad77-46ddb22cb6d1",
 				"correct": false,
 				"answer": "A predefined text message defined under responses in the domain"
+			},
+			{
+				"_id": "7f7473ce-a246-a0b4-be04-612df2402841",
+				"correct": true,
+				"answer": "Custom Python code that the bot can execute (e.g. calculations, APIs, dynamic logic)"
 			},
 			{
 				"_id": "6af06eee-82ee-9ce1-5ecb-49e6454f3351",

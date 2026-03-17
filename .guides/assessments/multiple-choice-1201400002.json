@@ -14,14 +14,14 @@
 				"answer": "Actions are defined in YAML; responses are defined in Python"
 			},
 			{
-				"_id": "a1b2c3d4-e5f6-7890-abcd-ef1234567802",
-				"correct": true,
-				"answer": "Responses send predefined text only; actions run custom Python code and can do calculations, API calls, or dynamic logic"
-			},
-			{
 				"_id": "a1b2c3d4-e5f6-7890-abcd-ef1234567803",
 				"correct": false,
 				"answer": "Responses are used in flows; actions are only used in the domain file"
+			},
+			{
+				"_id": "a1b2c3d4-e5f6-7890-abcd-ef1234567802",
+				"correct": true,
+				"answer": "Responses send predefined text only; actions run custom Python code and can do calculations, API calls, or dynamic logic"
 			},
 			{
 				"_id": "a1b2c3d4-e5f6-7890-abcd-ef1234567804",
