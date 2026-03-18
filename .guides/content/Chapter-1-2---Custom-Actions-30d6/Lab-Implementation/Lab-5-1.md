@@ -83,7 +83,7 @@ echo ""
 echo "Check 4: Verifying holiday_hours.yml flow file exists..."
 if [ ! -f "data/basics/holiday_hours.yml" ]; then
     echo "❌ Check 4: FAILED - data/basics/holiday_hours.yml not found (0 points)"
-    echo "Hint: Create holiday_hours.yml in the data/basics/ folder (flow for your action from Lab 3.1)"
+    echo "Hint: Create holiday_hours.yml in the data/basics/ folder (flow for your action from Lab 3.2)"
 else
     echo " Check 4: PASSED - holiday_hours.yml file exists (2 points)"
     score=$((score + 2))

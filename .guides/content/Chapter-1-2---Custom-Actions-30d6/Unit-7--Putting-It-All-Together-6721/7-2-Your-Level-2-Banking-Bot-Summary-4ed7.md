@@ -9,11 +9,11 @@ Congratulations! You've extended your Level 1 banking bot with custom Python cod
 **Flows (`data/basics/`)**:
 - All Level 1 flows (`greet`, `help`, `contact`, `goodbye`)
 - Example flow (`hours`) that uses `action_bank_hours`
-- Your flow (`holiday_hours`) that uses `action_holiday_hours` (the action you created in Lab 3.1)
+- Your flow (`holiday_hours`) that uses `action_holiday_hours` (the action you created in Lab 3.2)
 
 **Actions (`actions/`)**:
 - `action_bank_hours.py` - Example: returns bank hours dynamically
-- `action_holiday_hours.py` - Yours: returns holiday hours based on today's date—"closed today" on a holiday, otherwise the general schedule (you created this in Lab 3.1)
+- `action_holiday_hours.py` - Yours: returns holiday hours based on today's date—"closed today" on a holiday, otherwise the general schedule (you created this in Lab 3.2)
 
 **System Patterns**: Unchanged from Level 1
 

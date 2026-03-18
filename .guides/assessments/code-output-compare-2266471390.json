@@ -1,0 +1,57 @@
+{
+	"type": "code-output-compare",
+	"taskId": "code-output-compare-2266471390",
+	"source": {
+		"name": "Lab 3.1: Step-by-Step: Creating an Action",
+		"showName": true,
+		"instructions": "To pass this assessment, you must have created the file at the correct location:\n\n• Check 1: level2/actions/ folder exists.\n• Check 2: level2/actions/action_bank_hours.py exists (the file you created and pasted the code into).",
+		"command": "bash /home/codio/workspace/.guides/secure/level2_graders/lab_3.1_grader.sh",
+		"preExecuteCommand": "",
+		"options": {
+			"timeout": 60,
+			"ignoreCase": true,
+			"ignoreWhitespaces": true,
+			"ignoreNewline": true,
+			"matchSubstring": true
+		},
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Standard Code Test"
+				}
+			],
+			"files": [
+				".guides/secure/level2_graders/lab_3.1_grader.sh"
+			],
+			"opened": [
+				{
+					"type": "terminal",
+					"panelNumber": 1
+				}
+			]
+		},
+		"bloomsObjectiveLevel": "",
+		"learningObjectives": "",
+		"guidance": "The grader checks that level2/actions/ exists and that action_bank_hours.py is present there. Create the actions folder inside level2 if needed, then create action_bank_hours.py in that folder and paste the code from Lab 3.1.",
+		"showGuidanceAfterResponseOption": {
+			"type": "Never"
+		},
+		"maxAttemptsCount": 0,
+		"points": 4,
+		"showExpectedAnswerOption": {
+			"type": "Always"
+		},
+		"arePartialPointsAllowed": true,
+		"useMaximumScore": false,
+		"sequence": [
+			{
+				"arguments": "",
+				"input": "",
+				"output": " PASS: Lab 3.1 setup verified!",
+				"showFeedback": false,
+				"feedback": ""
+			}
+		]
+	}
+}

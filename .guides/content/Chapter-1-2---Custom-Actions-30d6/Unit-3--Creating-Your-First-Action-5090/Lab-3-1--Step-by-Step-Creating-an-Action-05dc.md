@@ -1,4 +1,6 @@
-You've seen `action_bank_hours.py`—it uses `datetime` and conditional logic to return different messages based on the current day. That's why it's an action, not a simple `utter_*` response. In **Lab 3.1** you'll create your own action, **action_holiday_hours**, that also uses the current date: if today is a holiday (e.g. New Year's Day, Christmas), it says "We're closed today"; otherwise it returns the general holiday schedule. Same structure as `action_bank_hours`, but for holidays. Later (Labs 4.1 and 5.1) you'll register it and add a flow for it.
+### Lab 3.1: Step-by-Step: Creating an Action
+
+You've seen `action_bank_hours.py`—it uses `datetime` and conditional logic to return different messages based on the current day. That's why it's an action, not a simple `utter_*` response. In **Lab 3.2** you'll create your own action, **action_holiday_hours**, that also uses the current date: if today is a holiday (e.g. New Year's Day, Christmas), it says "We're closed today"; otherwise it returns the general holiday schedule. Same structure as `action_bank_hours`, but for holidays. Later (Labs 4.1 and 5.1) you'll register it and add a flow for it.
 
 **What you learned from `action_bank_hours`**:
 - Actions need imports (including `datetime` if you use the current date/time)
@@ -8,7 +10,7 @@ You've seen `action_bank_hours.py`—it uses `datetime` and conditional logic to
 
 ---
 
-**For reference, here's the structure of `action_bank_hours`** (the file already exists in your project):
+**Here's the full code for `action_bank_hours`.** You'll add it to your project in the steps below.
 
 ```python
 from datetime import datetime
@@ -46,11 +48,21 @@ class ActionBankHours(Action):
         return []
 ```
 
-**Next**: Complete **Lab 3.1** to create `action_holiday_hours.py` following this pattern. After that, you'll register it in the domain (Unit 4 / Lab 4.1) and add a flow for it (Unit 5 / Lab 5.1).
+---
+
+### Your task
+
+1. **Go to the `level2` folder** in your project (the folder that contains `actions/`, `domain/`, `data/`, etc.). If you're in the main project root, open or create the `level2` folder.
+2. **Create the `actions` folder** inside `level2` if it doesn't exist (path: `level2/actions/`).
+3. **Create a new file** at **`level2/actions/action_bank_hours.py`**.
+4. **Copy and paste** the entire code block above into that file and **save**.
+5. Run the assessment below to verify the file is in the correct location.
+
+After you pass, complete **Lab 3.2** to create `action_holiday_hours.py` following the same pattern. Then you'll register it in the domain (Unit 4 / Lab 4.1) and add a flow for it (Unit 5 / Lab 5.1).
 
 ---
 
-**When creating your action (Lab 3.1), verify**:
+**When creating your action (Lab 3.2), verify**:
 
  **Imports**: Include `datetime` (you'll need it to check if today is a holiday); include Rasa SDK imports  
  **Class name**: Descriptive, starts with `Action` (e.g., `ActionHolidayHours`)  
@@ -64,5 +76,11 @@ class ActionBankHours(Action):
 - ❌ Wrong return type in `name()` (should return string, not call it)
 - ❌ Forgetting to return `[]` from `run()`
 - ❌ Typos in method names (`run` not `runs`, `name` not `names`)
+
+---
+
+Run the assessment below to verify that `action_bank_hours.py` is in the correct location (`level2/actions/`).
+
+{Check It!|assessment}(code-output-compare-2266471390)
 
 ---

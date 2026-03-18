@@ -1,4 +1,4 @@
-You created **action_holiday_hours** in Lab 3.1. For Rasa to use it (and the example **action_bank_hours**), both must be listed in the domain. Actions must be registered in the domain file so Rasa knows they exist—without registration, Rasa won't find your actions even if the Python files exist.
+You created **action_holiday_hours** in Lab 3.2. For Rasa to use it (and the example **action_bank_hours**), both must be listed in the domain. Actions must be registered in the domain file so Rasa knows they exist—without registration, Rasa won't find your actions even if the Python files exist.
 
 **File location**: `domain/basics.yml`
 

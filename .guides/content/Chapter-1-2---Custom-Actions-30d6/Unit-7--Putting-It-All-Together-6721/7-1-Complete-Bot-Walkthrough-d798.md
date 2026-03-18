@@ -34,7 +34,7 @@ Bot: [Dynamic message—e.g., "Today is Saturday—we're open 10am-2pm." or full
    FlowPolicy matches to: holiday_hours flow (Level 2 - your flow)
    ↓
    Flow: holiday_hours
-   Step: action_holiday_hours (Level 2 - the action you created in Lab 3.1!)
+   Step: action_holiday_hours (Level 2 - the action you created in Lab 3.2!)
    ↓
    Action runs (checks if today is a holiday via datetime), sends message
    ↓

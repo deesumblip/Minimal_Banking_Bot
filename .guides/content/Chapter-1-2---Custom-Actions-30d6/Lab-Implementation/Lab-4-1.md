@@ -11,7 +11,7 @@
 Add an `actions:` section to `domain/basics.yml` (if it isn’t already there) and register **both**:
 
 - **action_bank_hours** – the example action you studied in the units  
-- **action_holiday_hours** – the action you created in Lab 3.1  
+- **action_holiday_hours** – the action you created in Lab 3.2  
 
 Each action must appear as a list item under `actions:` (e.g. `- action_bank_hours`).
 
@@ -39,7 +39,7 @@ After the assessment, train and open the Rasa Inspector GUI (see Unit 6.3). In t
 
 ## Overview
 
-This assessment verifies that students can register actions in the domain file with correct YAML syntax, including both the example action and the action they created in Lab 3.1.
+This assessment verifies that students can register actions in the domain file with correct YAML syntax, including both the example action and the action they created in Lab 3.2.
 
 ### Assessment Type
 
@@ -116,7 +116,7 @@ if [ -f "domain/basics.yml" ] && grep -q "action_holiday_hours" domain/basics.ym
     fi
 else
     echo "❌ Check 4: FAILED - action_holiday_hours not found in domain file (0 points)"
-    echo "Hint: Add '- action_holiday_hours' under the actions: section (the action you created in Lab 3.1)"
+    echo "Hint: Add '- action_holiday_hours' under the actions: section (the action you created in Lab 3.2)"
 fi
 echo ""
 

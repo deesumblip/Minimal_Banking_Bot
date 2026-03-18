@@ -5,7 +5,7 @@
 
 ---
 
-You need two flows that use actions: the **example** flow `hours.yml` (for `action_bank_hours`) and **your** flow `holiday_hours.yml` (for the action you created in Lab 3.1, `action_holiday_hours`). Follow the steps below, then run the assessment.
+You need two flows that use actions: the **example** flow `hours.yml` (for `action_bank_hours`) and **your** flow `holiday_hours.yml` (for the action you created in Lab 3.2, `action_holiday_hours`). Follow the steps below, then run the assessment.
 
 ### Step 1: Navigate to the data folder
 
@@ -31,7 +31,7 @@ flows:
 ### Step 3: Create your holiday_hours flow
 
 1. Create a new file: `data/basics/holiday_hours.yml`
-2. Add a flow that uses **action_holiday_hours** (the action you created in Lab 3.1):
+2. Add a flow that uses **action_holiday_hours** (the action you created in Lab 3.2):
 
 ```yaml
 flows:

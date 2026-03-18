@@ -1,9 +1,9 @@
 {
 	"id": "520d5a79-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-	"title": "3.1 Step-by-Step: Creating an Action",
+	"title": "Lab 3.1: Step-by-Step: Creating an Action",
 	"files": [
 		{
-			"path": "",
+			"path": "#terminal",
 			"panel": 1,
 			"action": "open"
 		}

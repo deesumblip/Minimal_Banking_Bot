@@ -16,7 +16,7 @@ actions:
 Add an `actions:` section to `domain/basics.yml` (if it isn't already there) and register **both**:
 
 - **action_bank_hours** – the example action you studied in the units  
-- **action_holiday_hours** – the action you created in Lab 3.1  
+- **action_holiday_hours** – the action you created in Lab 3.2  
 
 Each action must appear as a list item under `actions:` (e.g. `- action_bank_hours`).
 
