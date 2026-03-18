@@ -1,0 +1,48 @@
+{
+	"type": "multiple-choice",
+	"taskId": "multiple-choice-1201800003",
+	"source": {
+		"name": "Chapter 1.2: 8.1 Knowledge Check - Action name() method",
+		"showName": false,
+		"instructions": "**What must an action's name() method return, and why does it matter?**",
+		"multipleResponse": false,
+		"isRandomized": false,
+		"answers": [
+			{
+				"_id": "u8q3-a",
+				"correct": false,
+				"answer": "The filename of the action; it is only used for logging"
+			},
+			{
+				"_id": "u8q3-b",
+				"correct": true,
+				"answer": "A string that identifies the action (e.g. \"action_bank_hours\"); it must match the name used in the domain and in flow steps, or Rasa won't find the action"
+			},
+			{
+				"_id": "u8q3-c",
+				"correct": false,
+				"answer": "The class name of the action (e.g. ActionBankHours)"
+			},
+			{
+				"_id": "u8q3-d",
+				"correct": false,
+				"answer": "Nothing; name() is optional in Rasa"
+			}
+		],
+		"metadata": {
+			"tags": [{"name": "Assessment Type", "value": "Multiple Choice"}],
+			"files": [],
+			"opened": []
+		},
+		"bloomsObjectiveLevel": "1",
+		"learningObjectives": "SWBAT explain the role of the action name() method",
+		"guidance": "The name() method must return a string that uniquely identifies the action (e.g. \"action_bank_hours\"). This string must match exactly: (1) the name you list under actions: in the domain, and (2) the name you use in flow steps (- action: action_bank_hours). By convention it matches the module/filename without .py. If there is a mismatch, Rasa will report that the action was not found.",
+		"showGuidanceAfterResponseOption": {"type": "Attempts", "passedFrom": 1},
+		"maxAttemptsCount": 1,
+		"showExpectedAnswerOption": {"type": "Always"},
+		"points": 5,
+		"incorrectPoints": 0,
+		"arePartialPointsAllowed": false,
+		"useMaximumScore": false
+	}
+}

@@ -1,0 +1,48 @@
+{
+	"type": "multiple-choice",
+	"taskId": "multiple-choice-1201800005",
+	"source": {
+		"name": "Chapter 1.2: 8.1 Knowledge Check - Training with actions",
+		"showName": false,
+		"instructions": "**When you run 'python -m rasa train' in Level 2, what does Rasa do with your action files?**",
+		"multipleResponse": false,
+		"isRandomized": false,
+		"answers": [
+			{
+				"_id": "u8q5-a",
+				"correct": false,
+				"answer": "It compiles them into the model file so the bot runs without the actions server"
+			},
+			{
+				"_id": "u8q5-b",
+				"correct": false,
+				"answer": "It ignores them; actions are loaded only when you start the action server"
+			},
+			{
+				"_id": "u8q5-c",
+				"correct": true,
+				"answer": "It checks that every action listed in the domain has a corresponding Python file in the actions/ folder; training fails if an action is missing or misnamed"
+			},
+			{
+				"_id": "u8q5-d",
+				"correct": false,
+				"answer": "It embeds the action code into the flow YAML files"
+			}
+		],
+		"metadata": {
+			"tags": [{"name": "Assessment Type", "value": "Multiple Choice"}],
+			"files": [],
+			"opened": []
+		},
+		"bloomsObjectiveLevel": "2",
+		"learningObjectives": "SWBAT describe how training validates actions",
+		"guidance": "During training, Rasa validates that each action registered in the domain has a corresponding action class in the actions/ folder (the action's name() must match). If you register action_holiday_hours in the domain but the file or name() is wrong, training will fail with an error like 'Action X not found'. The model itself does not contain the action code; at runtime the action server loads the .py files when the bot runs.",
+		"showGuidanceAfterResponseOption": {"type": "Attempts", "passedFrom": 1},
+		"maxAttemptsCount": 1,
+		"showExpectedAnswerOption": {"type": "Always"},
+		"points": 5,
+		"incorrectPoints": 0,
+		"arePartialPointsAllowed": false,
+		"useMaximumScore": false
+	}
+}

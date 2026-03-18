@@ -1,0 +1,48 @@
+{
+	"type": "multiple-choice",
+	"taskId": "multiple-choice-1201800004",
+	"source": {
+		"name": "Chapter 1.2: 8.1 Knowledge Check - Sending messages from an action",
+		"showName": false,
+		"instructions": "**How does an action send a text message to the user?**",
+		"multipleResponse": false,
+		"isRandomized": false,
+		"answers": [
+			{
+				"_id": "u8q4-a",
+				"correct": false,
+				"answer": "By returning a string from run()"
+			},
+			{
+				"_id": "u8q4-b",
+				"correct": false,
+				"answer": "By writing to the domain responses section"
+			},
+			{
+				"_id": "u8q4-c",
+				"correct": true,
+				"answer": "By calling dispatcher.utter_message(text=message) inside run(); the dispatcher is passed into run() as a parameter"
+			},
+			{
+				"_id": "u8q4-d",
+				"correct": false,
+				"answer": "By adding a step to the flow that references utter_*"
+			}
+		],
+		"metadata": {
+			"tags": [{"name": "Assessment Type", "value": "Multiple Choice"}],
+			"files": [],
+			"opened": []
+		},
+		"bloomsObjectiveLevel": "1",
+		"learningObjectives": "SWBAT identify how to send messages from an action",
+		"guidance": "Inside your action's run() method, you receive a CollectingDispatcher (usually named dispatcher). To send a message to the user, you call dispatcher.utter_message(text=\"Your message here\"). The run() method should also return [] (an empty list) at the end. You do not return the message string; you use the dispatcher to send it.",
+		"showGuidanceAfterResponseOption": {"type": "Attempts", "passedFrom": 1},
+		"maxAttemptsCount": 1,
+		"showExpectedAnswerOption": {"type": "Always"},
+		"points": 5,
+		"incorrectPoints": 0,
+		"arePartialPointsAllowed": false,
+		"useMaximumScore": false
+	}
+}

@@ -1,0 +1,48 @@
+{
+	"type": "multiple-choice",
+	"taskId": "multiple-choice-1201800002",
+	"source": {
+		"name": "Chapter 1.2: 8.1 Knowledge Check - Flows and actions",
+		"showName": false,
+		"instructions": "**How does a flow use a custom action?**",
+		"multipleResponse": false,
+		"isRandomized": false,
+		"answers": [
+			{
+				"_id": "u8q2-a",
+				"correct": false,
+				"answer": "The flow file imports the action class and calls run() directly"
+			},
+			{
+				"_id": "u8q2-b",
+				"correct": true,
+				"answer": "The flow lists the action as a step, e.g. under steps: with - action: action_name; Rasa looks up the action and runs it when that step is reached"
+			},
+			{
+				"_id": "u8q2-c",
+				"correct": false,
+				"answer": "The action is defined inside the flow YAML file"
+			},
+			{
+				"_id": "u8q2-d",
+				"correct": false,
+				"answer": "The domain file links the flow to the action file path"
+			}
+		],
+		"metadata": {
+			"tags": [{"name": "Assessment Type", "value": "Multiple Choice"}],
+			"files": [],
+			"opened": []
+		},
+		"bloomsObjectiveLevel": "2",
+		"learningObjectives": "SWBAT describe how flows reference and use actions",
+		"guidance": "In a flow YAML file (e.g. data/basics/hours.yml), you define steps. A step that runs a custom action looks like: - action: action_bank_hours. The action name must match the name() return value of your action class and must be registered in the domain. Rasa executes that action when the conversation reaches that step.",
+		"showGuidanceAfterResponseOption": {"type": "Attempts", "passedFrom": 1},
+		"maxAttemptsCount": 1,
+		"showExpectedAnswerOption": {"type": "Always"},
+		"points": 5,
+		"incorrectPoints": 0,
+		"arePartialPointsAllowed": false,
+		"useMaximumScore": false
+	}
+}

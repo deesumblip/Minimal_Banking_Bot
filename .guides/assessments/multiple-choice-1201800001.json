@@ -1,0 +1,48 @@
+{
+	"type": "multiple-choice",
+	"taskId": "multiple-choice-1201800001",
+	"source": {
+		"name": "Chapter 1.2: 8.1 Knowledge Check - Registering actions in the domain",
+		"showName": false,
+		"instructions": "**Why must custom actions be listed in the domain file (under an actions: section)?**",
+		"multipleResponse": false,
+		"isRandomized": false,
+		"answers": [
+			{
+				"_id": "u8q1-a",
+				"correct": false,
+				"answer": "So that Rasa knows which Python files to compile"
+			},
+			{
+				"_id": "u8q1-b",
+				"correct": true,
+				"answer": "So that Rasa knows the action exists and can call it; without registration, Rasa won't find your action even if the .py file exists"
+			},
+			{
+				"_id": "u8q1-c",
+				"correct": false,
+				"answer": "So that the flow YAML files can import the action class"
+			},
+			{
+				"_id": "u8q1-d",
+				"correct": false,
+				"answer": "Only optional; it is for documentation purposes"
+			}
+		],
+		"metadata": {
+			"tags": [{"name": "Assessment Type", "value": "Multiple Choice"}],
+			"files": [],
+			"opened": []
+		},
+		"bloomsObjectiveLevel": "2",
+		"learningObjectives": "SWBAT explain why actions must be registered in the domain",
+		"guidance": "Actions must be listed under the actions: section in the domain (e.g. domain/basics.yml) so Rasa knows they exist. The name in the domain must match exactly what the action's name() method returns. Without registration, Rasa will not call your action even if the Python file is in the actions/ folder.",
+		"showGuidanceAfterResponseOption": {"type": "Attempts", "passedFrom": 1},
+		"maxAttemptsCount": 1,
+		"showExpectedAnswerOption": {"type": "Always"},
+		"points": 5,
+		"incorrectPoints": 0,
+		"arePartialPointsAllowed": false,
+		"useMaximumScore": false
+	}
+}
