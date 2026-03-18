@@ -3,7 +3,7 @@
 	"title": "6.3 Testing Your Action",
 	"files": [
 		{
-			"path": "",
+			"path": "#terminal",
 			"panel": 1,
 			"action": "open"
 		}

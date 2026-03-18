@@ -3,7 +3,7 @@
 	"title": "6.1 Training with Actions",
 	"files": [
 		{
-			"path": "",
+			"path": "#terminal",
 			"panel": 1,
 			"action": "open"
 		}
