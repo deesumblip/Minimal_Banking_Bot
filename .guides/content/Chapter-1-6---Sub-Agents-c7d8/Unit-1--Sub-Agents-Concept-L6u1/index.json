@@ -1,1 +1,10 @@
-{"id":"level6-unit1-concept-L6u1","type":"section","title":"Unit 1: Sub-Agents Concept","order":["1-1-What-Are-Sub-Agents-L6b1","1-2-When-to-Use-Sub-Agents-L6b2"],"content": ""}
+{
+  "id": "level6-unit1-concept-L6u1",
+  "type": "section",
+  "title": "Unit 1: Sub-Agents Concept",
+  "order": [
+    "1-1-What-Are-Sub-Agents-L6b1",
+    "1-2-When-to-Use-Sub-Agents-L6b2"
+  ],
+  "content": ""
+}
