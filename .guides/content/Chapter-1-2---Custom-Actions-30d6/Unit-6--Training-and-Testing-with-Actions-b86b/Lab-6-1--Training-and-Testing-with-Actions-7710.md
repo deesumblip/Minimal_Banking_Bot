@@ -1,12 +1,16 @@
 ### Your Task
 
-Train your bot so that it includes your actions and flows. With your virtual environment activated, run:
+Train your bot so that it includes your actions and flows. You must run the training command **from inside the `level2` folder** (so Rasa finds `config.yml`, `endpoints.yml`, and your domain/data).
 
-```bash
-python -m rasa train
-```
+1. **Go to the project root** (the folder that contains `level1`, `level2`, and `.guides`). If you're already in `level2`, run `cd ..`.
+2. **Activate the virtual environment** (e.g. `source .venv/bin/activate` on Codio/Linux, or `.venv\Scripts\Activate.ps1` on Windows PowerShell). Your prompt should show `(.venv)`.
+3. **Go into `level2`:** run `cd level2`.
+4. **Run training:**
+   ```bash
+   python -m rasa train
+   ```
 
-Wait for training to finish. A model file (`.tar.gz`) will be created in the `models/` folder.
+Wait for training to finish. A model file (`.tar.gz`) will be created in `level2/models/`.
 
 ---
 
