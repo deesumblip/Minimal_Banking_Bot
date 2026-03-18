@@ -6,7 +6,20 @@
 
 The assessment below runs the same domain checks as Lab 4.1, then confirms that a model file exists in `level2/models/` (i.e. you've run `python -m rasa train`). If you haven't trained yet, complete Lab 6.1 first.
 
-Run the assessment when you're done.
+**In the terminal, do the following:**
+
+1. Activate the virtual environment and go to `level2`:
+   ```bash
+   source .venv/bin/activate
+   cd level2
+   ```
+   You should see a prompt like `(.venv) codio@...:~/workspace/level2$`.
+
+2. **Before running the assessment**, start the Inspector so you can verify your bot:
+   ```bash
+   python -m rasa inspect --debug
+   ```
+   Leave it running (or run it whenever you want to test in the Inspector). When you're ready, run the assessment below.
 
 {Check It!|assessment}(code-output-compare-1597644299)
 
