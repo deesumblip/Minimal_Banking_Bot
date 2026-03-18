@@ -1,8 +1,8 @@
-Create a virtual environment in the **project root**, install Rasa Pro, set up **your own** Rasa Pro license (`RASA_LICENSE`), and verify everything works. This is your first step—you need this setup before any other lab.
+Create a virtual environment in the **project root**, install Rasa, set up **your own** Rasa developer edition license (`RASA_LICENSE`), and verify everything works. This is your first step—you need this setup before any other lab.
 
 This course uses:
 
-- `RASA_LICENSE` (Rasa Pro license)
+- `RASA_LICENSE` (Rasa license)
 
 ---
 
@@ -10,8 +10,8 @@ This course uses:
 
 1. Check Python and pip
 2. Create a virtual environment (`.venv`) in the **project root** — this same `.venv` is used across **all levels** (level1, level2, level3, etc.)
-3. Install Rasa Pro in that venv
-4. Set up **RASA_LICENSE** (your own Rasa Pro license)
+3. Install Rasa in that venv
+4. Set up **RASA_LICENSE** (your own Rasa license)
 5. Verify the installation with `rasa --version` (after your environment variable is loaded)
 6. Confirm the `level1` project structure is present
 

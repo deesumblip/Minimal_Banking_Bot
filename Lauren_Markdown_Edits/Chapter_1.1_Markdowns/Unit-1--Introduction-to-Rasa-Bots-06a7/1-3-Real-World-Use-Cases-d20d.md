@@ -1,5 +1,5 @@
 
-**Level 1** bots are perfect for:
+**Level 1** Agents are perfect for:
 
 - **Company Information**: "What are your hours?", "Where are you located?"
 - **Product FAQs**: "What features does this product have?", "How do I get started?"
@@ -22,6 +22,6 @@ User: "How do I contact you?"
 Bot: "You can reach us at support@bank.com or call 1-800-BANK-123."
 ```
 
-**Notice**: The bot provides information but doesn't remember anything or perform any actions.
+**Notice**: The agent provides information but doesn't remember anything or perform any actions.
 
 {Check It!|assessment}(multiple-choice-22590480)
