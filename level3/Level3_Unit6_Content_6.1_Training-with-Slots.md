@@ -1,11 +1,17 @@
-Training with slots is similar to Level 2: you run `rasa train` from the `level3` folder so Rasa builds a model. The difference is what Rasa includes in that model.
+Training with slots works the same way as in Level 2. You run `rasa train` from the `level3` folder and Rasa writes a model. What changes is the extra information Rasa packs into that model.
 
-## What Rasa does when you train (Level 3)
+## What Rasa does when you train in Level 3
 
-Rasa reads your **slot definitions** from `domain/basics.yml` and checks that slot types and structure are valid. It processes your **flows** and any steps that use `collect:` so it knows which slots to fill and in what order. It also checks that each collected slot has a matching **response** (e.g. `utter_ask_account` for the `account` slot). When everything is consistent, it produces a model that knows about your slots, flows, and actions—so at runtime the bot can collect slot values and call your custom action with the right data.
+First, Rasa reads your **slot definitions** from `domain/basics.yml` and checks that types and structure are valid.
 
-So training with slots is still "run training from level3"; the extra step is that the model now encodes slot collection and how it ties to your domain and flows.
+Next, it reads your **flows**. When a step uses `collect:`, Rasa records which slot to fill and how that step fits in the flow order.
 
-## What's coming up
+It also checks that each collected slot has a matching **response** in the domain. For example, the `account` slot needs something like `utter_ask_account` so the bot knows what to say when it must ask for that slot.
 
-In **Lab 6.1** you'll run the training (with step-by-step instructions for Codio and for running locally), verify the model was saved, and run the assessment. After that, **6.2** and the rest of the unit cover testing slot collection and understanding slot state so you can debug and improve the bot.
+When those pieces line up, the trained model includes your slots, your flows, and your actions. At runtime the bot can collect slot values and run your custom action with the data it already stored.
+
+You still run training from `level3`. The model is simply aware of slot collection and how it connects to the domain and flows.
+
+## What comes next in this unit
+
+**Lab 6.1** walks through training with step-by-step notes for Codio and for a local machine. You will confirm that the model file was created and you will run the assessment. After that, section **6.2** and the rest of the unit focus on testing slot collection and slot state so you can debug your bot.

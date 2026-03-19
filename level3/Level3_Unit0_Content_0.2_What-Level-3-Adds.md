@@ -1,19 +1,27 @@
-Level 3 adds **slots**: the bot's memory. With slots, your bot will be able to remember what the user said, store it, and use it later.
+Level 3 adds **slots**. A slot is a named place in the domain where Rasa can store something the user said so the bot can use it again later.
 
-Your Level 2 bot will still work. You will just add memory on top.
+Your Level 2 bot still works. You are only adding memory on top of what you already have.
 
-You will implement in this order: **domain** (Lab 3.1), then **the action that uses the slot** (Lab 4.1), then **the flow that collects it** (Lab 5.1). That way you see how the action works before you wire it into a flow.
+You will work in a fixed order on purpose. First you change the **domain** so Rasa knows about the new slot and the new action name. Next you **write the action** that reads the slot. Last you **add the flow** that collects the slot before it runs that action. That order lets you understand the action on its own before you connect it to a flow.
 
-## What You'll Add
+## What you will add
 
-**Lab 3.1 — Domain.** You will update the domain:
+### Lab 3.1: domain
 
-- Add a `slots:` section with the `account` slot
-- Add the response `utter_ask_account` so the bot can ask for the account number
-- Add `action_check_balance_simple` to the `actions:` list (you will create the Python file in Lab 4.1)
+You will update `domain/basics.yml` in the `level3` folder.
 
-**Lab 4.1 — Action.** You will **write** the file `action_check_balance_simple.py`: the action that reads the slot and handles placeholders.
+- Add a `slots:` section with an `account` slot.
+- Add the response `utter_ask_account` so the bot can ask for the account number when the slot is empty.
+- Add `action_check_balance_simple` to the `actions:` list. You will create the matching Python file in Lab 4.1.
 
-**Lab 5.1 — Flow.** You will create the flow file `data/basics/check_balance.yml`. That flow will collect the account number, then run `action_check_balance_simple`.
+### Lab 4.1: action
 
-**Unchanged.** All your Level 2 responses, flows, and actions will stay as they are. You will build Level 3 by adding these pieces.
+You will create `level3/actions/action_check_balance_simple.py`. That action reads the `account` slot from the tracker and handles placeholder values the model might fill in by mistake.
+
+### Lab 5.1: flow
+
+You will create `level3/data/basics/check_balance.yml`. The flow will collect the account number into the slot, then run `action_check_balance_simple`.
+
+### What stays the same
+
+All Level 2 responses, flows, and actions stay in your project. Level 3 only adds the items above.

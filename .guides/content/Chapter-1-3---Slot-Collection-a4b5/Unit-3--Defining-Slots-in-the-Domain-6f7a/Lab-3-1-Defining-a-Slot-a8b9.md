@@ -64,7 +64,7 @@ actions:
 
 ## Part 1: In Codio
 
-This lab only requires editing the domain file in the file tree—you do **not** need the terminal or a virtual environment for this step. (You will use `source .venv/bin/activate` and `cd level3` in later labs when you run Rasa.)
+This lab only asks you to edit the domain file in the file tree. You do **not** need the terminal or a virtual environment for this step. Later labs use `source .venv/bin/activate` and `cd level3` when you run Rasa commands.
 
 1. In the file tree, open **`level3/domain/basics.yml`** in the editor.
 2. **Follow Steps 2–4 above** to add:

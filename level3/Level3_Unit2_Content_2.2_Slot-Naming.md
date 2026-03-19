@@ -1,11 +1,13 @@
-**Good slot names**:
-- `account` — Clear and descriptive
-- `user_name` — Descriptive
-- `transfer_amount` — Clear purpose
+**Good slot names**
 
-**Bad slot names**:
-- `a` — Too vague
-- `slot1` — Not descriptive
-- `data` — Too generic
+- `account`: clear and describes what you store.
+- `user_name`: describes the information without being cryptic.
+- `transfer_amount`: states the purpose of the slot.
 
-**Convention**: Use lowercase, descriptive names. Use underscores for multi-word names.
+**Bad slot names**
+
+- `a`: too vague. A teammate cannot tell what belongs in the slot.
+- `slot1`: not descriptive. The name should say what the slot holds.
+- `data`: too generic. Almost everything in a bot is "data."
+
+**Convention.** Use lowercase, descriptive names. Use underscores for multi-word names.

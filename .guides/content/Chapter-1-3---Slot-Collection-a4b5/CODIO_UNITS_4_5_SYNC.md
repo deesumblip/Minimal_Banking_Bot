@@ -2,7 +2,7 @@
 
 ## Duplicate units (e.g. two Unit 5s)
 
-If you see **two Unit 5s** in the Chapter 1.3 guide—e.g. `Unit-5--Collecting-Slots-in-Flows-8b9c` and **`Unit-5--Reading-Slots-in-Actions-0d1e`**—the extra one is a **Codio leftover** from an older structure. The repo has only one Unit 4 and one Unit 5:
+If you see **two Unit 5s** in the Chapter 1.3 guide, for example `Unit-5--Collecting-Slots-in-Flows-8b9c` and **`Unit-5--Reading-Slots-in-Actions-0d1e`**, the extra one is a **Codio leftover** from an older structure. The repo has only one Unit 4 and one Unit 5:
 
 - **Unit 4:** `Unit-4--Reading-Slots-in-Actions-0d1e`
 - **Unit 5:** `Unit-5--Collecting-Slots-in-Flows-8b9c`

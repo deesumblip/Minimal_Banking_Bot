@@ -1,10 +1,10 @@
-In Unit 4.1 you saw how to read the slot from the tracker and send a message. In this lab you **complete** the action file `action_check_balance_simple.py` that reads the `account` slot and handles placeholder values. The domain already lists `action_check_balance_simple` from Lab 3.1.
+In this lab you finish the action that Lab 3.1 already registered in the domain. You will create `action_check_balance_simple.py`. The action reads the `account` slot and handles placeholder values, as you saw in Unit 4.2.
 
 ---
 
 #### Complete the action file (fill in the blanks)
 
-Use the same structure you learned in Level 2 (`Action`, `name()`, `run()`, `CollectingDispatcher`) and Chapter 1.3 (`tracker.get_slot`, placeholders, `utter_ask_*` responses). When every blank is correct, **copy the full completed script** into `level3/actions/action_check_balance_simple.py` (see steps below), then run the **Code Test**.
+The exercise uses the same pieces you saw in Level 2 in *The Action Class Deep Dive* and in this chapter in Units 4.1 and 4.2. Complete every blank, then **copy the full script** into `level3/actions/action_check_balance_simple.py` using the steps below. Run the **Code Test** when the file is saved.
 
 {Check It!|assessment}(fill-in-the-blanks-2346557111)
 

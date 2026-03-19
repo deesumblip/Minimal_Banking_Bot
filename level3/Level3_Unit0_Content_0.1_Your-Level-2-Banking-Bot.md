@@ -1,4 +1,4 @@
-Before we add slots—the bot's memory—here is a quick recap of what you built in Level 2. All of this remains unchanged. Level 3 builds on top of it.
+Here is a quick recap of what you built in Level 2. In this chapter you will add **slots**, which give the bot memory across turns. None of your Level 2 work goes away. Level 3 adds new pieces on top of the same bot.
 
 ## Level 3 Setup
 
@@ -30,7 +30,7 @@ Everything else is your Level 2 content.
 
 - `action_bank_hours.py`
 - If you built it in Level 2: `action_holiday_hours.py`
-- **Level 3:** In Lab 3.1 you register **action_check_balance_simple** in the domain; in Lab 4.1 you will **write** the file `action_check_balance_simple.py`.
+- **Level 3.** In Lab 3.1 you register **action_check_balance_simple** in the domain. In Lab 4.1 you **write** `action_check_balance_simple.py`.
 
 ### System and config
 
@@ -47,4 +47,4 @@ Your Level 2 bot could run custom Python code, but it could not:
 - Use information from earlier in the conversation
 - Ask for missing information and remember it
 
-**Example.** If a user said "Check my balance", your Level 2 bot could not remember which account they have, ask for the account number and remember it, or use that account number in a later reply.
+**Example.** Suppose a user says, "Check my balance." A Level 2 bot cannot remember which account they mean. It cannot ask for an account number, store that answer, and reuse it in a later turn. Slots in Level 3 fix that gap.

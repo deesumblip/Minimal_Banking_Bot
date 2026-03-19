@@ -1,4 +1,4 @@
-To use slot values in your actions, you read them from the `tracker` parameter.
+When an action runs, Rasa passes a **tracker** object into `run()`. The tracker holds the conversation state, including any slot values that were collected earlier. You read a slot by calling `tracker.get_slot` with the slot name.
 
 ```python
 def run(self, dispatcher, tracker, domain):
@@ -10,8 +10,8 @@ def run(self, dispatcher, tracker, domain):
     return []
 ```
 
-Slots can be `None` if not set yet, so always check before using them.
+A slot may be `None` if the user has not given a value yet. Check for that before you use the value in logic or in a message.
 
-In **Lab 4.1** you'll **write** this action in `action_check_balance_simple.py`. In the next unit you will create the flow that collects the slot and runs this action.
+You will implement a fuller version of this pattern in **Lab 4.1** inside `action_check_balance_simple.py`. Unit 4.2 in this chapter explains how to handle bad or placeholder slot text. **Unit 5** then shows how to build the flow that collects the slot before your action runs.
 
 {Check It!|assessment}(multiple-choice-932698064)

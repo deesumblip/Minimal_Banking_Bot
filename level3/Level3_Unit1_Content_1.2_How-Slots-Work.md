@@ -1,22 +1,25 @@
-Slots work in three steps:
+Slots follow the same story each time. You define them in the domain, you collect them in a flow, and you read them in an action when you need the value.
 
-1. **Define the slot** in `domain/basics.yml`:
-   ```yaml
-   slots:
-     account:
-       type: text
-   ```
+**Step 1. Define the slot** in `domain/basics.yml`:
 
-2. **Collect the slot** in a flow:
-   ```yaml
-   steps:
-     - collect: account
-       description: "account number"
-   ```
+```yaml
+slots:
+  account:
+    type: text
+```
 
-3. **Read the slot** in an action:
-   ```python
-   account = tracker.get_slot("account")
-   ```
+**Step 2. Collect the slot** in a flow:
 
-These three steps—define, collect, read—are the core of slot-based memory in Level 3.
+```yaml
+steps:
+  - collect: account
+    description: "account number"
+```
+
+**Step 3. Read the slot** in an action:
+
+```python
+account = tracker.get_slot("account")
+```
+
+These three steps are the core of slot-based memory in Level 3. You will walk through them in order in the labs in this chapter.

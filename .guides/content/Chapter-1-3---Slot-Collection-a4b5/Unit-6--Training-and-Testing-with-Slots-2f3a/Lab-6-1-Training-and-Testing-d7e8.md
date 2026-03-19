@@ -4,7 +4,7 @@ Your goal is to train your Level 3 bot (with slots) and verify it works.
 
 1. **Virtual environment.** In the terminal (it opens at `~/workspace`), run `source .venv/bin/activate`. The prompt should show `(.venv)`.
 2. **Navigate to level3.** Run `cd level3`. Confirm with `pwd` (path should end in `level3`).
-3. **Rasa.** Run `python -m rasa --version`. If you see an error, ensure the venv is activated and Rasa Pro is installed (see **Lab 0.1** in **Chapter 1.1** — Prerequisites and Setup).
+3. **Rasa.** Run `python -m rasa --version`. If you see an error, ensure the venv is activated and Rasa Pro is installed. Use **Lab 0.1** in **Chapter 1.1**, *Prerequisites and Setup*, if you need a full environment checklist.
 4. **Train.** From `level3` with venv active, run `python -m rasa train`. Wait for "Successfully saved model" (about 1–3 minutes).
 5. **Verify.** The terminal shows "Successfully saved model to 'models/...'". In the file tree, `level3/models/` should contain a new `.tar.gz` file.
 
