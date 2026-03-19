@@ -106,4 +106,4 @@ level3/
 Use the same workflow: copy unit content into guide pages, copy lab content into lab pages, configure assessments from Assessment_Setup files and grader scripts.
 
 **Chapter 1.3 (Codio guide)**  
-The Chapter 1.3 guide in `.guides/content/Chapter-1-3---Slot-Collection-a4b5/` includes Check It! tags: code-output-compare on Labs 3.1, 4.1, 5.1, 6.1; multiple-choice and fill-in-the-blanks on 1.1, 2.3, 3.1, 4.1, 5.1, 5.2, 6.2, Lab 6.2, 8.1.
+The Chapter 1.3 guide in `.guides/content/Chapter-1-3---Slot-Collection-a4b5/` includes Check It! tags: code-output-compare on Labs 3.1, 4.1, 5.1, 6.1; multiple-choice and fill-in-the-blanks on 1.1, 2.3, 3.1, 4.1, 5.1, 5.2 (`multiple-choice-5130520013`), 6.2, Lab 6.2, 8.1 (five multiple-choice items, including `multiple-choice-5130520013`).

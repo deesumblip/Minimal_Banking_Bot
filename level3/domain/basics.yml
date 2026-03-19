@@ -34,3 +34,4 @@ responses:
 
 actions:
   - action_bank_hours
+  - action_holiday_hours

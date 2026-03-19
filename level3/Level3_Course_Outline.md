@@ -189,7 +189,7 @@
 - Codio Working Directory: `/home/codio/workspace`.
 
 **Chapter 1.3 (Codio guide)**  
-Code-output-compare Check It! tags are on Labs 3.1, 4.1, 5.1, 6.1 in `.guides/content/Chapter-1-3---Slot-Collection-a4b5/`. Multiple-choice and fill-in-the-blanks Check It! tags are on content pages: 1.1, 2.3, 3.1, 4.1, 5.1, 5.2, 6.2, Lab 6.2, 8.1.
+Code-output-compare Check It! tags are on Labs 3.1, 4.1, 5.1, 6.1 in `.guides/content/Chapter-1-3---Slot-Collection-a4b5/`. Multiple-choice and fill-in-the-blanks Check It! tags are on content pages: 1.1, 2.3, 3.1, 4.1, 5.1, 5.2 (`multiple-choice-5130520013` — slot already filled), 6.2, Lab 6.2, 8.1 (includes `multiple-choice-5130520013` plus domain/action/slot recap questions).
 
 ---
 

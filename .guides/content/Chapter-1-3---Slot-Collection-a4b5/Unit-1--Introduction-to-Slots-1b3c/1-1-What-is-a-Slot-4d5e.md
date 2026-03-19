@@ -30,5 +30,5 @@ Bot: [Remembers account 1234 from slot]
 Bot: "Balance for account 1234 is $123.45"
 ```
 
-{Check It!|assessment}(multiple-choice-4197766402)
+{Check It!|assessment}(multiple-choice-2132752574)
 {Check It!|assessment}(multiple-choice-2467199161)

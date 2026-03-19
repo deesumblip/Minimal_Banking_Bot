@@ -20,8 +20,11 @@ responses:                # From Level 1 & 2 (unchanged) plus one new response
 
 actions:                  # From Level 2 (unchanged); you add action_check_balance_simple in Lab 3.1
   - action_bank_hours
+  - action_holiday_hours   # Include if your Level 2 bot had this action (keep it; do not remove)
   - action_check_balance_simple
 ```
+
+If your `level3` domain does not list `action_holiday_hours`, you only need `action_bank_hours` plus `action_check_balance_simple`. If it already lists `action_holiday_hours` from Level 2, keep that line and add `action_check_balance_simple`.
 
 `slots:` is at the same indentation level as `responses:` and `actions:`.
 
