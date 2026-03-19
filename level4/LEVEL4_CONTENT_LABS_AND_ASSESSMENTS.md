@@ -86,7 +86,7 @@ Each lab has one **Content** markdown file that students see. Match the style of
 - **Part 1 / Part 2:** Same Codio vs local pattern. Run assessment when done.
 - **Success criteria:** File exists; has correct name; run() reads all three slots and sends a message.
 
-You can add a **fill-in-the-blanks** version (like Level 3 Lab 4.1) with a template and key in the **assessment setup** doc (implementers only), or keep it “write from scratch” with hints.
+You can add a **fill-in-the-blanks** Codio assessment (like Level 3 Lab 4.1’s `fill-in-the-blanks-2346557111`) with a matching `.json` in `.guides/assessments/`, or keep it “write from scratch” with hints.
 
 ### Lab 4.1 — Flow (create transfer_money.yml)
 

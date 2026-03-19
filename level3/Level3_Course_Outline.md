@@ -85,7 +85,7 @@
 
 ### Unit 4: Reading Slots in Actions
 **Type**: Content + Lab (with Assessment)  
-**Assessment**: Lab 4.1 – Writing the Action That Uses the Slot (Code Output Compare, 10 pts; Python grader `lab_4.1_grader.py`).
+**Assessment**: Lab 4.1 – Writing the Action That Uses the Slot (Fill in the blanks, 5 pts, `fill-in-the-blanks-2346557111`; Code Output Compare, 10 pts; Python grader `lab_4.1_grader.py`).
 
 **Placement**: This unit comes **before** Unit 5 so students understand how the action uses the slot before they create the flow that runs it.
 
@@ -95,7 +95,7 @@
 - 4.2 Placeholder Handling
   - Check for None, placeholders; re-prompt with utter_ask_account
 
-**Lab 4.1**: Create `action_check_balance_simple.py`; read the slot, handle placeholders, send balance message. Graded via Code Output Compare (taskId: code-output-compare-2346557110).
+**Lab 4.1**: Create `action_check_balance_simple.py`; read the slot, handle placeholders, send balance message. Complete `fill-in-the-blanks-2346557111` first, then Code Output Compare (`code-output-compare-2346557110`).
 
 **Key Concepts**: Tracker, get_slot, placeholder handling
 
@@ -177,7 +177,7 @@
 | Unit | Lab | Points | Type | Grader / Assessment |
 |------|-----|--------|------|---------------------|
 | Unit 3 | Lab 3.1 | 8 | Code Output Compare (or LLM Rubric) | `lab_3.1_grader.py`; taskId: `code-output-compare-3187585640` |
-| Unit 4 | Lab 4.1 | 10 | Code Output Compare (Python grader) | `lab_4.1_grader.py`; taskId: `code-output-compare-2346557110` |
+| Unit 4 | Lab 4.1 | 15 | Fill in the blanks + Code Output Compare | `fill-in-the-blanks-2346557111` (5 pts); `lab_4.1_grader.py`; taskId: `code-output-compare-2346557110` (10 pts) |
 | Unit 5 | Lab 5.1 | 8 | Code Output Compare (or LLM Rubric) | `lab_5.1_grader.py`; taskId: `code-output-compare-1235165472` |
 | Unit 6 | Lab 6.1 | 12 | Code Output Compare (Python) | `lab_6.1_grader.py`; taskId: `code-output-compare-1029038275` |
 
@@ -189,7 +189,7 @@
 - Codio Working Directory: `/home/codio/workspace`.
 
 **Chapter 1.3 (Codio guide)**  
-Code-output-compare Check It! tags are on Labs 3.1, 4.1, 5.1, 6.1 in `.guides/content/Chapter-1-3---Slot-Collection-a4b5/`. Multiple-choice and fill-in-the-blanks Check It! tags are on content pages: 1.1, 2.3, 3.1, 4.1, 5.1, 5.2 (`multiple-choice-5130520013` — slot already filled), 6.2, Lab 6.2, 8.1 (includes `multiple-choice-5130520013` plus domain/action/slot recap questions).
+Code-output-compare Check It! tags are on Labs 3.1, 4.1, 5.1, 6.1 in `.guides/content/Chapter-1-3---Slot-Collection-a4b5/`. Fill-in-the-blanks Check It! tags are on content pages **1.1, 2.3, 5.1** and **Lab 4.1** (`fill-in-the-blanks-2346557111` — full `action_check_balance_simple` script; paste into file then run code test). Multiple-choice Check It! tags are on **3.1, 5.2** (`multiple-choice-5130520013` — slot already filled), **6.2, Lab 6.2, 8.1** (includes `multiple-choice-5130520013` plus domain/action/slot recap questions).
 
 ---
 

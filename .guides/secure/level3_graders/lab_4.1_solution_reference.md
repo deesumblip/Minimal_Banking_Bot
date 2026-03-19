@@ -1,6 +1,6 @@
 # Lab 4.1 – Reference solution for graders (action file)
 
-Use this file as the **Instructor Provided Solution** for Lab 4.1 (Writing the Action That Uses the Slot) if you add an LLM Rubric or script to grade the action file. Lab 4.1 is currently ungraded; this reference is for instructors and future autograding.
+Use this file as the **Instructor Provided Solution** for Lab 4.1 (Writing the Action That Uses the Slot) if you add an LLM Rubric. Students also complete **`fill-in-the-blanks-2346557111`** (Codio) before the **Code Output Compare** grader (`lab_4.1_grader.py`).
 
 ---
 
@@ -8,7 +8,7 @@ Use this file as the **Instructor Provided Solution** for Lab 4.1 (Writing the A
 
 The student creates this file. It must:
 
-1. Import from `typing`: `Any`, `Dict`, `List`, `Text`; from `rasa_sdk`: `Action`, `Tracker`, `CollectingDispatcher`.
+1. Import from `typing`: `Any`, `Dict`, `List`, `Text`; from `rasa_sdk`: `Action`, `Tracker`; from `rasa_sdk.executor`: `CollectingDispatcher`.
 2. Define class `ActionCheckBalanceSimple(Action)` with:
    - `name(self)` returning `"action_check_balance_simple"`.
    - `run(self, dispatcher, tracker, domain)` that:

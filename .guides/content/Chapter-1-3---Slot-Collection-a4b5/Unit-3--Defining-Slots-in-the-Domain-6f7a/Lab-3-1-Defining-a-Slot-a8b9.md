@@ -64,13 +64,14 @@ actions:
 
 ## Part 1: In Codio
 
-1. **Terminal.** From project root (`~/workspace`), run `source .venv/bin/activate`, then `cd level3`. The prompt should show `(.venv)` and you should be in `level3`.
-2. **Open** `domain/basics.yml` in the editor.
-3. **Follow Steps 2–4 above** to add:
+This lab only requires editing the domain file in the file tree—you do **not** need the terminal or a virtual environment for this step. (You will use `source .venv/bin/activate` and `cd level3` in later labs when you run Rasa.)
+
+1. In the file tree, open **`level3/domain/basics.yml`** in the editor.
+2. **Follow Steps 2–4 above** to add:
    - The `slots:` section
    - The `utter_ask_account` response
    - `action_check_balance_simple` to the `actions:` list
-4. **Verify** as in Step 5 above.
+3. **Verify** as in Step 5 above.
 
 Run the assessment when done.
 

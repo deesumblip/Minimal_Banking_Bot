@@ -1,0 +1,94 @@
+{
+	"type": "fill-in-the-blanks",
+	"taskId": "fill-in-the-blanks-2346557111",
+	"source": {
+		"name": "Lab 4.1: Complete action_check_balance_simple (slots & placeholders)",
+		"showName": false,
+		"instructions": "**Fill in the blanks to complete the action file.** This is the same script you will copy into `level3/actions/action_check_balance_simple.py` for the code assessment. Use exact names from your domain and the patterns you learned for reading slots, detecting placeholders, and re-prompting with an `utter_ask_*` response.",
+		"showValues": true,
+		"text": "Complete the action that reads the `account` slot, re-prompts with `utter_ask_account` when the value is a placeholder, and otherwise sends a demo balance message:\n\n```python\nfrom typing import <<<Any, Dict, List, Text>>>\n\nfrom rasa_sdk import Action, Tracker\nfrom rasa_sdk.executor import <<<CollectingDispatcher>>>\n\n\nclass <<<ActionCheckBalanceSimple>>>(<<<Action>>>):\n    \"\"\"A custom action that reads a slot and returns a balance.\"\"\"\n\n    def name(self) -> Text:\n        return \"<<<action_check_balance_simple>>>\"\n\n    def run(\n        self,\n        dispatcher: CollectingDispatcher,\n        tracker: Tracker,\n        domain: Dict[Text, Any],\n    ) -> <<<List[Dict[Text, Any]]>>>:\n        account = tracker.<<<get_slot>>>(<<<\"account\">>>) or <<<\"<missing>\">>>\n\n        placeholder_values = [\"account number\", \"user_account_number\", <<<\"<missing>\">>>]\n\n        if <<<account.lower() in [p.lower() for p in placeholder_values]>>>:\n            dispatcher.utter_message(response=\"<<<utter_ask_account>>>\")\n            return <<<[]>>>\n\n        dispatcher.utter_message(text=<<<f\"(Demo) Balance for account {account} is $123.45.\">>>)\n        return <<<[]>>>\n```",
+		"distractors": "Any, Dict, Text\nList[Dict[Any, Any]]\nActionExecutor\nActionCheckBalance\nsession\nslots\nget_latest_entity\nget_slot_values\n\"user_account_number\"\n\"slot_account\"\n\"none\"\nplaceholder_values\naccount in placeholder_values\nutter_ask_balance\nutter_account\n{}\nreturn\n(Demo) Balance is $123.45.",
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Fill in the Blanks"
+				}
+			],
+			"files": [],
+			"opened": [
+				{
+					"type": "terminal",
+					"panelNumber": 1
+				}
+			]
+		},
+		"bloomsObjectiveLevel": "",
+		"learningObjectives": "",
+		"guidance": "The correct answers are:\n\n* **Any, Dict, List, Text** - Typing names used in `run()` signature and return type (same pattern as Level 2 actions).\n* **CollectingDispatcher** - Import from `rasa_sdk.executor`; used to send messages from `run()`.\n* **ActionCheckBalanceSimple** - Your custom class name (PascalCase).\n* **Action** - Base class from `rasa_sdk` that every custom action subclasses.\n* **action_check_balance_simple** - String returned by `name()`; must match the action listed under `actions:` in the domain (from Lab 3.1).\n* **List[Dict[Text, Any]]** - Return type of `run()`: a list of event dictionaries.\n* **get_slot** - `Tracker` method that reads a slot value from conversation memory.\n* **\"account\"** - The slot name; must match `slots:` and the flow that collects it (Chapter 1.3).\n* **\"<missing>\"** (after `or`) - Default when the slot is empty so you can treat missing values like other placeholders.\n* **\"<missing>\"** (in the list) - Include the same token in `placeholder_values` so empty slots are re-prompted.\n* **account.lower() in [p.lower() for p in placeholder_values]** - Case-insensitive check that the slot is still a placeholder before re-asking.\n* **utter_ask_account** - Response key from the domain used to ask for the account again (`response=`).\n* **[]** - Custom actions return a list of events; an empty list means no extra events (both branches).\n* **f\"(Demo) Balance for account {account} is $123.45.\"** - `text=` message when the slot looks valid; includes balance context for the grader.\n\nAfter this exercise, paste the **completed** script into `level3/actions/action_check_balance_simple.py` and run the **Code Test** assessment.",
+		"showGuidanceAfterResponseOption": {
+			"type": "Attempts",
+			"passedFrom": 1
+		},
+		"maxAttemptsCount": 1,
+		"showExpectedAnswerOption": {
+			"type": "Always"
+		},
+		"points": 5,
+		"arePartialPointsAllowed": false,
+		"useMaximumScore": false,
+		"tokens": {
+			"blank": [
+				"Any, Dict, List, Text",
+				"CollectingDispatcher",
+				"ActionCheckBalanceSimple",
+				"Action",
+				"action_check_balance_simple",
+				"List[Dict[Text, Any]]",
+				"get_slot",
+				"\"account\"",
+				"\"<missing>\"",
+				"\"<missing>\"",
+				"account.lower() in [p.lower() for p in placeholder_values]",
+				"utter_ask_account",
+				"[]",
+				"f\"(Demo) Balance for account {account} is $123.45.\"",
+				"[]"
+			],
+			"text": [
+				"Complete the action that reads the `account` slot, re-prompts with `utter_ask_account` when the value is a placeholder, and otherwise sends a demo balance message:\n\n```python\nfrom typing import ",
+				0,
+				"\n\nfrom rasa_sdk import Action, Tracker\nfrom rasa_sdk.executor import ",
+				0,
+				"\n\n\nclass ",
+				0,
+				"(",
+				0,
+				"):\n    \"\"\"A custom action that reads a slot and returns a balance.\"\"\"\n\n    def name(self) -> Text:\n        return \"",
+				0,
+				"\"\n\n    def run(\n        self,\n        dispatcher: CollectingDispatcher,\n        tracker: Tracker,\n        domain: Dict[Text, Any],\n    ) -> ",
+				0,
+				":\n        account = tracker.",
+				0,
+				"(",
+				0,
+				") or ",
+				0,
+				"\n\n        placeholder_values = [\"account number\", \"user_account_number\", ",
+				0,
+				"]\n\n        if ",
+				0,
+				":\n            dispatcher.utter_message(response=\"",
+				0,
+				"\")\n            return ",
+				0,
+				"\n\n        dispatcher.utter_message(text=",
+				0,
+				")\n        return ",
+				0,
+				"\n```"
+			],
+			"regexPositions": []
+		}
+	}
+}

@@ -7,4 +7,4 @@ You've seen how to read a slot. Sometimes the LLM extracts generic text like "ac
 
 Always validate slot values before using them in logic or messages.
 
-In **Lab 4.1** you'll **write** `action_check_balance_simple.py` with this logic. That lab has no graded assessment. In the next unit you will create the flow that collects the slot and runs this action.
+In **Lab 4.1** you'll **write** `action_check_balance_simple.py` with this logic. That lab uses **Fill in the blanks** (`fill-in-the-blanks-2346557111`) and **Code Output Compare** (`code-output-compare-2346557110`). In the next unit you will create the flow that collects the slot and runs this action.

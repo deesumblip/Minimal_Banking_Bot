@@ -12,7 +12,7 @@ This document summarizes gaps and inconsistencies found in Chapter 1.3 (Slot Col
 
 - **Where:** `Unit-4--Reading-Slots-in-Actions-0d1e/4-2-Placeholder-Handling-a4b5.md`
 - **Issue:** The page states: “That lab has no graded assessment.”
-- **Reality:** Lab 4.1 includes `{Check It!|assessment}(code-output-compare-2346557110)` and instructs students to “Run the final assessment.”
+- **Reality:** Lab 4.1 includes `{Check It!|assessment}(fill-in-the-blanks-2346557111)` and `{Check It!|assessment}(code-output-compare-2346557110)` and instructs students to complete both.
 - **Gap:** Content contradicts the presence of a graded assessment and can confuse students or instructors.
 
 **Recommendation:** In 4.2, remove or rephrase the sentence about “no graded assessment” (e.g. “Lab 4.1 includes a code assessment that checks the action file.”) so it matches the lab.

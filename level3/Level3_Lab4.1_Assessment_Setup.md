@@ -4,9 +4,12 @@
 
 **Placement.** This lab follows Unit 4 (Reading Slots in Actions), after 4.1 and 4.2.
 
-**Task.** Create `level3/actions/action_check_balance_simple.py`: a custom action that reads the `account` slot, treats placeholder values (e.g. "account number", "<missing>") as invalid and re-prompts with `utter_ask_account`, and otherwise sends a demo balance message. The domain already lists `action_check_balance_simple` from Lab 3.1. Run the assessment when done.
+**Task.** Create `level3/actions/action_check_balance_simple.py`: a custom action that reads the `account` slot, treats placeholder values (e.g. "account number", "<missing>") as invalid and re-prompts with `utter_ask_account`, and otherwise sends a demo balance message. The domain already lists `action_check_balance_simple` from Lab 3.1. Students complete the **Fill in the blanks** assessment first (same script they paste into the file), then run the **Code Test**.
 
-**Codio guide (Chapter 1.3).** The Lab 4.1 page includes: `{Check It!|assessment}(code-output-compare-2346557110)`. Assessment JSON: `.guides/assessments/code-output-compare-2346557110.json`. Grader: `.guides/secure/level3_graders/lab_4.1_grader.py`.
+**Codio guide (Chapter 1.3).** The Lab 4.1 page includes:
+
+- `{Check It!|assessment}(fill-in-the-blanks-2346557111)` — Fill in the blanks (5 pts). JSON: `.guides/assessments/fill-in-the-blanks-2346557111.json`.
+- `{Check It!|assessment}(code-output-compare-2346557110)` — Code Output Compare (10 pts). JSON: `.guides/assessments/code-output-compare-2346557110.json`. Grader: `.guides/secure/level3_graders/lab_4.1_grader.py`.
 
 ---
 
@@ -71,76 +74,57 @@ Use a Python grader for faster feedback. The script checks `level3/actions/actio
 
 - **Solution reference:** `.guides/secure/level3_graders/lab_4.1_solution_reference.md` (full reference code and rubric summary).
 
-### Script template (implementers only)
+### Fill-in-the-blanks assessment (implementers)
 
-Copy this into level3/actions/action_check_balance_simple.py; students fill in the blanks (1)–(11).
+Students complete blanks in **`.guides/assessments/fill-in-the-blanks-2346557111.json`** (taskId `fill-in-the-blanks-2346557111`). The token order in that file is the source of truth. Summary:
 
-**What goes in each blank:**
+| Order | Correct blank | Concept |
+|-------|----------------|---------|
+| 1 | `Any, Dict, List, Text` | Typing for `run()` signature (L2) |
+| 2 | `CollectingDispatcher` | Import from `rasa_sdk.executor` (L2) |
+| 3 | `ActionCheckBalanceSimple` | Custom class name (L2) |
+| 4 | `Action` | Base class (L2) |
+| 5 | `action_check_balance_simple` | `name()` string; domain `actions:` (L2/L3) |
+| 6 | `List[Dict[Text, Any]]` | Return type of `run()` (L2) |
+| 7 | `get_slot` | Read slot from tracker (L3) |
+| 8 | `"account"` | Slot name (L3) |
+| 9 | `"<missing>"` | Default when slot empty (L3) |
+| 10 | `"<missing>"` | Same token in `placeholder_values` (L3) |
+| 11 | `account.lower() in [p.lower() for p in placeholder_values]` | Placeholder check (L3) |
+| 12 | `utter_ask_account` | Domain `responses:` re-prompt (L1/L3) |
+| 13 | `[]` | Return after re-prompt (L2) |
+| 14 | `f"(Demo) Balance for account {account} is $123.45."` | Valid-slot branch; satisfies grader (L2) |
+| 15 | `[]` | Return after balance message (L2) |
 
-- **(1)** — The typing names needed for action signatures: `Any`, `Dict`, `List`, and `Text`.
-- **(2)** — The base class that every custom action must inherit from (from `rasa_sdk`).
-- **(3)** — The action name string that must match the name used in the domain `actions:` list and in flows.
-- **(4)** — The return type of `run()`: a list of dictionaries (events).
-- **(5)** — The slot name that matches the domain `slots:` and the flow that collects it.
-- **(6)** — Expression that reads the `account` slot from the tracker and uses a default string when the slot is empty.
-- **(7)** — The placeholder string used when the slot is empty; also add it to the `placeholder_values` list.
-- **(8)** — Condition: true when `account` (case-insensitive) is one of the placeholder values.
-- **(9)** — The response name from the domain that asks the user for their account (must match a key under `responses:`).
-- **(10)** — The value that `run()` must return in both branches (an empty list of events).
-- **(11)** — The text to send for the balance message; include the `account` variable so the user sees their account.
+### Reference solution (copy-paste sanity check)
 
 ```python
-from typing import (1)
+from typing import Any, Dict, List, Text
 
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 
 
-class ActionCheckBalanceSimple((2)):
-    """A custom action that reads a slot and returns a balance.
-
-    - Reads the 'account' slot from conversation memory
-    - Re-prompts if the slot contains a placeholder (e.g. "account number", "<missing>")
-    - Otherwise sends a demo balance message
-    """
+class ActionCheckBalanceSimple(Action):
+    """A custom action that reads a slot and returns a balance."""
 
     def name(self) -> Text:
-        return (3)
+        return "action_check_balance_simple"
 
     def run(
         self,
         dispatcher: CollectingDispatcher,
         tracker: Tracker,
         domain: Dict[Text, Any],
-    ) -> (4):
-        # Read the '(5)' slot from conversation memory (or "<missing>" if empty)
-        account = (6)
+    ) -> List[Dict[Text, Any]]:
+        account = tracker.get_slot("account") or "<missing>"
 
-        # Values that are not real account numbers—we re-ask if the slot has one of these
-        placeholder_values = ["account number", "user_account_number", (7)]
+        placeholder_values = ["account number", "user_account_number", "<missing>"]
 
-        # If the slot is a placeholder, re-prompt and return
-        if (8):
-            dispatcher.utter_message(response=(9))
-            return (10)
+        if account.lower() in [p.lower() for p in placeholder_values]:
+            dispatcher.utter_message(response="utter_ask_account")
+            return []
 
-        # Otherwise send the demo balance message
-        dispatcher.utter_message(text=(11))
-        return (10)
+        dispatcher.utter_message(text=f"(Demo) Balance for account {account} is $123.45.")
+        return []
 ```
-
-### Fill-in-the-blanks key (implementers only)
-
-| Blank | Replace with | Concept (Level) |
-|-------|------------------|------------------|
-| **(1)** | `Any, Dict, List, Text` | Typing imports for action signatures (L2) |
-| **(2)** | `Action` | Base class for custom actions (L2) |
-| **(3)** | `"action_check_balance_simple"` | Action name; must match domain `actions:` (L2) |
-| **(4)** | `List[Dict[Text, Any]]` | Return type of `run()` — list of events (L2) |
-| **(5)** | `"account"` | Slot name; must match domain `slots:` and flow (L3) |
-| **(6)** | `tracker.get_slot("account") or "<missing>"` | Reading a slot; default when empty (L3) |
-| **(7)** | `"<missing>"` | Placeholder value when slot is empty (L3) |
-| **(8)** | `account.lower() in [p.lower() for p in placeholder_values]` | Placeholder check (L3) |
-| **(9)** | `"utter_ask_account"` | Response name from domain (L1/L3) |
-| **(10)** | `[]` | `run()` must return a list (empty = no extra events) (L2) |
-| **(11)** | `f"(Demo) Balance for account {account} is $123.45."` | Sending a message (L2) |
