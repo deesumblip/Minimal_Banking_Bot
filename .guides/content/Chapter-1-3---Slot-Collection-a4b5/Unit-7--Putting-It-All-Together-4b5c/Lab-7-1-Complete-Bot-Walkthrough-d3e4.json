@@ -1,1 +1,21 @@
-{"id":"d3e4b6ae-xxxx-xxxx-xxxx-xxxxxxxxxxxx","title":"Lab 7.1: Complete Bot Walkthrough","files":[],"layout":"1-panel","path":[],"type":"page","contentType":"markdown", "content": "","teacherOnly":false,"closeTerminalSession":true,"learningObjectives":""}
+{
+	"id": "d3e4b6ae-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+	"title": "Lab 7.1: Complete Bot Walkthrough",
+	"files": [
+		{
+			"path": "#terminal",
+			"panel": 1,
+			"action": "open"
+		}
+	],
+	"layout": "2-panels-tree-guides-left",
+	"path": [
+		"level3"
+	],
+	"type": "page",
+	"contentType": "markdown",
+	"content": "",
+	"teacherOnly": false,
+	"closeTerminalSession": true,
+	"learningObjectives": ""
+}

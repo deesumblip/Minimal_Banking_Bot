@@ -1,1 +1,21 @@
-{"id":"2f3ab6ae-xxxx-xxxx-xxxx-xxxxxxxxxxxx","title":"2.2 Slot Naming","files":[],"layout":"1-panel","path":[],"type":"page","contentType":"markdown", "content": "","teacherOnly":false,"closeTerminalSession":true,"learningObjectives":""}
+{
+	"id": "2f3ab6ae-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+	"title": "2.2 Slot Naming",
+	"files": [
+		{
+			"path": "",
+			"panel": 1,
+			"action": "open"
+		}
+	],
+	"layout": "2-panels-tree-guides-left",
+	"path": [
+		"level3"
+	],
+	"type": "page",
+	"contentType": "markdown",
+	"content": "",
+	"teacherOnly": false,
+	"closeTerminalSession": true,
+	"learningObjectives": ""
+}

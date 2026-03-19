@@ -1,1 +1,21 @@
-{"id":"b7c8b6ae-xxxx-xxxx-xxxx-xxxxxxxxxxxx","title":"8.2 What You've Learned","files":[],"layout":"1-panel","path":[],"type":"page","contentType":"markdown", "content": "","teacherOnly":false,"closeTerminalSession":true,"learningObjectives":""}
+{
+	"id": "b7c8b6ae-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+	"title": "8.2 What You've Learned",
+	"files": [
+		{
+			"path": "",
+			"panel": 1,
+			"action": "open"
+		}
+	],
+	"layout": "2-panels-tree-guides-left",
+	"path": [
+		"level3"
+	],
+	"type": "page",
+	"contentType": "markdown",
+	"content": "",
+	"teacherOnly": false,
+	"closeTerminalSession": true,
+	"learningObjectives": ""
+}

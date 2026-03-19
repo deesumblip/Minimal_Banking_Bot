@@ -1,1 +1,21 @@
-{"id":"c2a1b6ae-xxxx-xxxx-xxxx-xxxxxxxxxxxx","title":"0.1 Your Level 2 Banking Bot","files":[],"layout":"1-panel","path":[],"type":"page","contentType":"markdown", "content": "","teacherOnly":false,"closeTerminalSession":true,"learningObjectives":""}
+{
+	"id": "c2a1b6ae-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+	"title": "0.1 Your Level 2 Banking Bot",
+	"files": [
+		{
+			"path": "",
+			"panel": 1,
+			"action": "open"
+		}
+	],
+	"layout": "2-panels-tree-guides-left",
+	"path": [
+		"level3"
+	],
+	"type": "page",
+	"contentType": "markdown",
+	"content": "",
+	"teacherOnly": false,
+	"closeTerminalSession": true,
+	"learningObjectives": ""
+}
