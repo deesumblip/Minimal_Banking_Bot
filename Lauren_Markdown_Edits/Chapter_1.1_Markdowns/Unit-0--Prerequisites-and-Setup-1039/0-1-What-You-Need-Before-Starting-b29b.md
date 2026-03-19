@@ -1,7 +1,7 @@
 
 Before diving into building your first Rasa bot, let's make sure you have everything set up correctly.
 
-**Prerequisites**: Python knowledge, command line familiarity, file editing, **Rasa license**. Plan for 2–3 hours. You can get your Rasa developer edition license [at this link](https://rasa.com/rasa-pro-developer-edition-license-key-request)
+**Prerequisites**: Python knowledge, command line familiarity, file editing, **Rasa license**. Plan for 2–3 hours. You can get your free Rasa developer edition license [at this link](https://rasa.com/rasa-pro-developer-edition-license-key-request)
 
 **Note for Codio Students**: Start with Lab 0.1 below to create a virtual environment and install Rasa. Follow the lab to set **RASA_LICENSE** (e.g. via `export RASA_LICENSE=...` or `.env` in project root or Codio environment variables) before running `rasa --version` or other Rasa commands.
 

@@ -1,4 +1,4 @@
-Create a virtual environment in the **project root**, install Rasa, set up **your own** Rasa developer edition license (`RASA_LICENSE`), and verify everything works. This is your first step—you need this setup before any other lab.
+Create a virtual environment in the **project root**, install Rasa, set up **your own** Rasa developer edition license (`RASA_LICENSE`), and verify everything works. This is your first step—you need this setup before any other lab. 
 
 This course uses:
 
@@ -69,7 +69,7 @@ source .venv/bin/activate
 
 Your prompt should show `(.venv)` at the start.
 
-**3. Install Rasa Pro**
+**3. Install Rasa**
 
 ```bash
 pip install --no-cache-dir rasa-pro
@@ -79,7 +79,7 @@ Installation takes 2–5 minutes.
 
 **4. Set RASA_LICENSE**
 
-Replace `YOUR_LICENSE_KEY` with your actual Rasa Pro license key:
+Replace `YOUR_LICENSE_KEY` with your actual Rasa developer edition license key you recieved via email:
 
 ```bash
 export RASA_LICENSE=YOUR_LICENSE_KEY
