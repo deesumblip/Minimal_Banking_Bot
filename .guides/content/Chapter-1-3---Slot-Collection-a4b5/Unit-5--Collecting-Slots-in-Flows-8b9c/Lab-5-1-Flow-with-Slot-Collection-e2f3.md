@@ -2,11 +2,9 @@ You have already defined the slot and ask response in the domain (Lab 3.1) and *
 
 ## Part 1: In Codio
 
-1. **Terminal.** From the project root, run `source .venv/bin/activate`, then `cd level3`.
+1. **Create** the file `data/basics/check_balance.yml` in the `level3` folder.
 
-2. **Create** the file `data/basics/check_balance.yml` in the `level3` folder.
-
-3. **Add** the following flow:
+2. **Add** the following flow:
 
 ```yaml
 flows:
@@ -22,7 +20,7 @@ flows:
       - action: action_check_balance_simple
 ```
 
-4. **Verify.** The file is in `data/basics/`, and the flow has `name`, `description`, and `steps` with a first step `collect: account` and a second step `action: action_check_balance_simple`.
+3. **Verify.** The file is in `data/basics/`, and the flow has `name`, `description`, and `steps` with a first step `collect: account` and a second step `action: action_check_balance_simple`.
 
 Run the assessment when done.
 
@@ -30,8 +28,7 @@ Run the assessment when done.
 
 ## Part 2: Running locally
 
-1. From the project root, activate the venv, then `cd level3`.
-2. Create `level3/data/basics/check_balance.yml` with the flow structure above.
-3. Verify as in Part 1.
+1. Create `level3/data/basics/check_balance.yml` with the flow structure above.
+2. Verify as in Part 1.
 
 You're done when `data/basics/check_balance.yml` exists with a flow that has `collect: account` and `action: action_check_balance_simple`.
