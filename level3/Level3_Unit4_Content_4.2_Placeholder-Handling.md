@@ -7,4 +7,25 @@ You've seen how to read a slot. Sometimes the LLM extracts generic text like "ac
 
 Always validate slot values before using them in logic or messages.
 
+#### Patterns you already saw (so the lab blanks are not guesses)
+
+From **Level 2** (`action_bank_hours.py` in *The Action Class Deep Dive*): you import `Any`, `Dict`, `List`, `Text` from `typing`; `Action`, `Tracker` from `rasa_sdk`; `CollectingDispatcher` from `rasa_sdk.executor`; you define `class ActionBankHours(Action):`, return `"action_bank_hours"` from `name()`, and type `run(...) -> List[Dict[Text, Any]]`. For this lab, use the **same pattern**: class **`ActionCheckBalanceSimple`** with **`action_check_balance_simple`** as the string in `name()` (PascalCase class + `action_` + snake_case name, like the bank-hours example).
+
+From **Unit 4.1** you already saw `tracker.get_slot("account")`, an f-string balance line, and `return []`.
+
+Putting the placeholder steps together in code (this matches what you will fill in **Lab 4.1**):
+
+```python
+placeholder_values = ["account number", "user_account_number", "<missing>"]
+
+if account.lower() in [p.lower() for p in placeholder_values]:
+    dispatcher.utter_message(response="utter_ask_account")
+    return []
+
+dispatcher.utter_message(text=f"(Demo) Balance for account {account} is $123.45.")
+return []
+```
+
+The list comprehension compares the slot string to each placeholder **case-insensitively**—so `"Account Number"` still counts as a placeholder.
+
 In **Lab 4.1** you'll **write** `action_check_balance_simple.py` with this logic. That lab uses **Fill in the blanks** (`fill-in-the-blanks-2346557111`) and **Code Output Compare** (`code-output-compare-2346557110`). In the next unit you will create the flow that collects the slot and runs this action.
