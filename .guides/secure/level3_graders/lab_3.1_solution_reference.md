@@ -2,7 +2,9 @@
 
 Use this file as the **Instructor Provided Solution File** in Codio's LLM Rubric Autograde for Lab 3.1 (Defining a Slot in the Domain).
 
-**Standard Code Test:** The Python grader (`.guides/secure/level3_graders/lab_3.1_grader.py`) uses the same template as **Lab 4.1**: **Running Lab 3.1 Assessment Checks…**, then **Check 0** … **Check 7** with **✅ PASSED** / **❌ FAILED** (and **⚠️ PARTIAL** where noted), then **PASS** / **FAIL** and **Successfully passed!** on full score.
+**Standard Code Test:** The Python grader (`.guides/secure/level3_graders/lab_3.1_grader.py`) follows the **Chapter 1.2 Lab 6.2** template (`lab_4.1_grader.sh`): **Check 1–8** (1-based), **PASSED** lines with a **leading space** (no emoji on pass), **❌** / **⚠️** on fail/partial, **`==========================================`** band, then **` PASS: Lab 3.1 verification complete! Score: 10/10`** on full score.
+
+**Codio Code Output Compare:** `code-output-compare-3187585640.json` uses the same **sequence** pattern as **`code-output-compare-1597644299`** (Lab 6.2): **`Check 1: PASSED`** through **`Check 8: PASSED`**, **`showFeedback`: false**, **`showGuidanceAfterResponseOption`: Never**, **`showExpectedAnswerOption`: Always**.
 
 ---
 
