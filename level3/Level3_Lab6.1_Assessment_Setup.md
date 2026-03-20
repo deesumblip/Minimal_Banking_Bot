@@ -57,15 +57,15 @@ Save the grader script at:
 
 ## Grader Script
 
-The grader runs from **workspace root** (`/home/codio/workspace`): it verifies the venv exists, then checks `level3` for model and log files. It performs the following checks:
+The grader runs from **workspace root** (`/home/codio/workspace`): it verifies the venv exists, then `cd`s to `level3` for model and log checks. Output matches **Lab 3.1 / Lab 6.2** (Check **1–5**, leading-space PASSED lines, **`==========================================`** band).
 
-1. **Check 0 – Virtual environment** (2 pts): `.venv` exists in workspace root and Python is available.
-2. **Check 1 – Model file exists** (2 pts): at least one `.tar.gz` in `level3/models/`.
-3. **Check 2 – Model recent** (3 pts): newest model is under 10 minutes old (uses file modification time).
-4. **Check 3 – Logs** (3 pts): if `level3/logs/logs.out` exists, checks for "error"/"exception"/"failed" (case-insensitive); if no log file, passes.
-5. **Check 4 – Training completed** (2 pts): implied by passing above.
+1. **Check 1 – Virtual environment** (2 pts): `.venv` exists; Python in `bin/` or `Scripts/`.
+2. **Check 2 – Model file** (2 pts): at least one `.tar.gz` in `level3/models/`.
+3. **Check 3 – Model recent** (3 pts): newest model under 10 minutes old; otherwise **PARTIAL** (0 pts on that check).
+4. **Check 4 – Logs** (3 pts): `logs/logs.out` without obvious errors, or no log file (pass).
+5. **Check 5 – Artifacts** (2 pts): training bundle ready for inspect.
 
-**Total: 12 points.** The script must print a line containing `PASS` and `Successfully passed!` on full success so Codio's expected-output match works. On failure print `FAIL` and exit 1.
+**Total: 12 points.** The repo assessment **`code-output-compare-1029038275.json`** sequences **`Check 1: PASSED`** … **`Check 5: PASSED`**. On full score: **` PASS: Lab 6.1 verification complete! Score: 12/12`**. Exit **1** if the score is below 12.
 
 **Why Python?** Python provides better file timestamp handling, more robust log parsing, and clearer error messages than Bash for these checks.
 
@@ -92,11 +92,11 @@ Success = a new `.tar.gz` in `level3/models/` and no errors in the terminal.
    - **Working Directory:** `/home/codio/workspace`
    - **Timeout:** `60` seconds
 3. **Grading** tab:
-   - **Points:** Set to **12** (or match your course scale). The script reports partial checks; you can enable **Allow partial points** if Codio supports it for this test type.
-   - **Add item to check / Test case:** Add one test case. Leave **INPUT - ARGUMENTS** and **INPUT - STDIN** empty. In **EXPECTED OUTPUT**, enter: `PASS` (the script prints this on success; you may also match `Successfully passed!` if Codio allows).
-   - **SHOW RATIONALE TO STUDENT:** Recommended: **AFTER [1] ATTEMPTS** (or **ALWAYS**). Set the number to 1 if using "AFTER … ATTEMPTS".
+   - **Points:** Set to **12**. Enable **Allow partial points** if desired (Check 3 or 4 may be partial).
+   - **Sequence:** Use repo **`code-output-compare-1029038275.json`** — five **`Check N: PASSED`** steps, **`showGuidanceAfterResponseOption`:** Never, **`showExpectedAnswerOption`:** Always (Lab 3.1 / Lab 6.2 layout).
+   - **SHOW RATIONALE TO STUDENT:** Optional.
    - **RATIONALE** (text box): Example:
-     > The grader verifies the virtual environment in project root, that a model file (`.tar.gz`) exists in `level3/models/`, that the model is recent, and that logs do not show critical errors. Ensure you ran `python -m rasa train` from the `level3` folder with the venv activated.
-   - **SHOW EXPECTED ANSWER:** Optional; **When grades are released** or **Always** so students see that the expected output is `PASS`.
+     > Five checks: venv, model file, recent model, logs, artifacts. Re-run **`python -m rasa train`** from **level3** if Check 3 or 4 is partial. Full credit **12/12**.
+   - **SHOW EXPECTED ANSWER:** **Always**.
 4. **Files.** The script lives in the repo at `.guides/secure/level3_graders/lab_6.1_grader.py`. Do not upload it; the Execution command runs it from the workspace so `git pull` keeps the grader in sync. No need to chmod (Python); use the venv’s Python in COMMAND if the environment does not provide dependencies globally.
 5. **Test** – Run the assessment after a student has run `rasa train` in `level3` (pass); run in a workspace with no model in `level3` (fail with clear hint).

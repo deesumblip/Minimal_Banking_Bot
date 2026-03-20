@@ -41,7 +41,7 @@ This assessment verifies that the student has created `level3/actions/action_che
 
 ### Option B: Standard Code Test (Python script)
 
-Use a Python grader for faster feedback. The script checks `level3/actions/action_check_balance_simple.py` for: file exists; required imports (Action, Tracker, CollectingDispatcher); class `ActionCheckBalanceSimple(Action)`; `name()` returning `"action_check_balance_simple"`; `run()` reading `tracker.get_slot("account")`; placeholder handling and `utter_ask_account` re-prompt; balance message. Total: 10 points. On full score it prints `PASS` and `Successfully passed!`; otherwise `FAIL` and exit 1. Checks are flexible (e.g. variable names and placeholder list contents can vary).
+Use a Python grader for faster feedback. Output matches **Chapter 1.3 Lab 3.1** / **Chapter 1.2 Lab 6.2**: **Check 1–7** with leading-space **` Check N: PASSED`** lines, **`==========================================`** summary, **` PASS: Lab 4.1 verification complete! Score: 10/10`** on success. The assessment JSON uses a **sequence** of **`Check 1: PASSED`** … **`Check 7: PASSED`** with **`showFeedback`: false** (same Codio UI as Lab 3.1). Checks are flexible (e.g. placeholder list contents can vary).
 
 **Grader script location (in repo):**
 
@@ -60,12 +60,12 @@ Use a Python grader for faster feedback. The script checks `level3/actions/actio
    - **Working Directory:** `/home/codio/workspace`
    - **Timeout:** `60` seconds
 3. **Grading** tab:
-   - **Points:** Set to **10**. Enable **Allow partial points** if you want partial credit for partial checks.
-   - **Add item to check / Test case:** One test case. Leave **INPUT - ARGUMENTS** and **INPUT - STDIN** empty. **EXPECTED OUTPUT:** `PASS`. **Enable substring match** so Codio passes when `PASS` appears in the output (the script prints detailed check lines before `PASS`).
-   - **SHOW RATIONALE TO STUDENT:** Recommended **AFTER [1] ATTEMPTS** (or **ALWAYS**). Set the number to 1 if using "AFTER … ATTEMPTS".
+   - **Points:** Set to **10**. Enable **Allow partial points** if desired.
+   - **Sequence:** Import **`code-output-compare-2346557110.json`** from the repo — seven steps **`Check 1: PASSED`** through **`Check 7: PASSED`**, **`showGuidanceAfterResponseOption`:** Never, **`showExpectedAnswerOption`:** Always (same pattern as Lab 3.1).
+   - **SHOW RATIONALE TO STUDENT:** Optional; Lab 3.1-style assessments often use **Never** for guidance-after-response when the sequence lists each check.
    - **RATIONALE** (text box): Example:
-     > The grader checks that `level3/actions/action_check_balance_simple.py` exists and contains: correct imports, class **ActionCheckBalanceSimple(Action)**, **name()** returning **"action_check_balance_simple"**, **run()** reading the account slot, a placeholder check, re-prompt with **utter_ask_account** when the slot is a placeholder, and a balance message otherwise. Follow the lab steps and review the script output for which check failed.
-   - **SHOW EXPECTED ANSWER:** Optional; **When grades are released** or **Always**.
+     > Seven checks (file, imports, class, name, get_slot, placeholder + re-prompt, balance message). Find **Check N: FAILED** in the terminal. Full credit: **Score: 10/10** and **` PASS: Lab 4.1 verification complete!`**
+   - **SHOW EXPECTED ANSWER:** **Always** (match Lab 6.2 / Lab 3.1).
 4. **Files.** The script lives in the repo at `.guides/secure/level3_graders/lab_4.1_grader.py`. Do not upload it; run it from the workspace so `git pull` keeps the grader in sync. The script only reads the action file (no PyYAML); venv Python is optional but recommended for consistency.
 
 ---

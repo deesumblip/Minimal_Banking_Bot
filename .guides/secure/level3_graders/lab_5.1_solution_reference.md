@@ -2,6 +2,8 @@
 
 Use this file as the **Instructor Provided Solution File** in Codio's LLM Rubric Autograde for Lab 5.1 (Creating a Flow with Slot Collection).
 
+**Standard Code Test:** Grader **`lab_5.1_grader.py`** prints **Check 1–4** (Lab 3.1 / Lab 6.2 layout). Assessment **`code-output-compare-1235165472.json`** sequences **`Check 1: PASSED`** … **`Check 4: PASSED`**.
+
 ---
 
 ## Required deliverable: level3/data/basics/check_balance.yml

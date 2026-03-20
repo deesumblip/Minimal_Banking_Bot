@@ -86,7 +86,7 @@ Configure the assessment so the LLM can read:
 
 ### Option B: Standard Code Test (Python script)
 
-Use a Python grader for faster feedback. The script checks `level3/data/basics/check_balance.yml` for: file exists; valid YAML with a top-level `flows:` section; at least one flow with `name` and `steps`; at least one step with `collect: account`; at least one step with `action: action_check_balance_simple`. Total: 8 points. On full score it prints `PASS` and `Successfully passed!`; otherwise `FAIL` and exit 1.
+Use a Python grader for faster feedback. Output matches **Lab 3.1 / Lab 6.2**: **Check 1–4**, leading-space PASSED lines, **`==========================================`** band, **` PASS: Lab 5.1 verification complete! Score: 8/8`**. The repo JSON **`code-output-compare-1235165472.json`** sequences **`Check 1: PASSED`** … **`Check 4: PASSED`** with **`showFeedback`: false**.
 
 **Grader script location (in repo):**
 
@@ -107,10 +107,10 @@ Use a Python grader for faster feedback. The script checks `level3/data/basics/c
    - **Working Directory:** `/home/codio/workspace`
    - **Timeout:** `60` seconds
 3. **Grading** tab:
-   - **Points:** Set to **8** (or match your course scale). Enable **Allow partial points** if you want partial credit for partial checks.
-   - **Add item to check / Test case:** One test case. Leave **INPUT - ARGUMENTS** and **INPUT - STDIN** empty. **EXPECTED OUTPUT:** `PASS`. **Enable substring match** so Codio passes when `PASS` appears in the output (the script prints detailed check lines before `PASS`).
-   - **SHOW RATIONALE TO STUDENT:** Recommended **AFTER [1] ATTEMPTS** (or **ALWAYS**). Set the number to 1 if using "AFTER … ATTEMPTS".
+   - **Points:** Set to **8**. Enable **Allow partial points** if desired.
+   - **Sequence:** Use repo **`code-output-compare-1235165472.json`** (four **`Check N: PASSED`** steps, **`showGuidanceAfterResponseOption`:** Never, **`showExpectedAnswerOption`:** Always).
+   - **SHOW RATIONALE TO STUDENT:** Optional.
    - **RATIONALE** (text box): Example:
-     > The grader checks that `level3/data/basics/check_balance.yml` exists, has valid YAML with a **flows:** section, at least one flow with **name** and **steps**, a step with **collect: account**, and a step with **action: action_check_balance_simple**. Review the script output to see which check failed.
-   - **SHOW EXPECTED ANSWER:** Optional; **When grades are released** or **Always**.
+     > Four checks: file, flows structure, **collect: account**, **action: action_check_balance_simple**. Full credit **8/8** and **` PASS: Lab 5.1 verification complete!`**
+   - **SHOW EXPECTED ANSWER:** **Always**.
 4. **Files.** The script lives in the repo at `.guides/secure/level3_graders/lab_5.1_grader.py`. Do not upload it; run it from the workspace so `git pull` keeps the grader in sync. The script requires Python 3 and PyYAML; use the venv’s Python in COMMAND for consistency.
