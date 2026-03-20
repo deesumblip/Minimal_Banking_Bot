@@ -2,6 +2,8 @@
 
 Use this file as the **Instructor Provided Solution File** in Codio's LLM Rubric Autograde for Lab 3.1 (Defining a Slot in the Domain).
 
+**Standard Code Test:** The Python grader (`.guides/secure/level3_graders/lab_3.1_grader.py`) uses the same template as **Lab 4.1**: **Running Lab 3.1 Assessment Checks…**, then **Check 0** … **Check 7** with **✅ PASSED** / **❌ FAILED** (and **⚠️ PARTIAL** where noted), then **PASS** / **FAIL** and **Successfully passed!** on full score.
+
 ---
 
 ## Required changes in level3/domain/basics.yml

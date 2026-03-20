@@ -93,7 +93,20 @@ Configure the assessment so the LLM can read:
 
 ### Option B: Standard Code Test (Python script)
 
-Use a Python grader for faster feedback than the LLM rubric. The script parses `level3/domain/basics.yml` and checks: file exists and is valid YAML; `slots:` section present; `account` slot with `type: text`; `utter_ask_account` under `responses:` with at least one text message; `actions:` contains `action_bank_hours`, `action_holiday_hours`, and `action_check_balance_simple`. Total: 10 points. On full score it prints `PASS` and `Successfully passed!` and exits 0; otherwise prints `FAIL` and exits 1.
+Use a Python grader for faster feedback than the LLM rubric. The script follows the **same output template as Lab 4.1** (`lab_4.1_grader.py`): banner **Running Lab 3.1 Assessment Checks…**, numbered **Check 0** through **Check 7**, each with **Verifying…** then **✅ PASSED** or **❌ FAILED** (Checks 3–4 may show **⚠️ PARTIAL**), blank line between checks, then **====** separator and **PASS** / **FAIL**.
+
+| Check | What it verifies | Points |
+|-------|------------------|--------|
+| 0 | Domain file `level3/domain/basics.yml` exists | 1 |
+| 1 | Valid YAML; root is a mapping (must pass; no points) | — |
+| 2 | Top-level `slots:` section | 2 |
+| 3 | `account` slot with `type: text` (partial if wrong type) | 2 |
+| 4 | `utter_ask_account` with at least one `text:` (partial if empty) | 2 |
+| 5 | `action_check_balance_simple` in `actions:` | 1 |
+| 6 | `action_bank_hours` in `actions:` | 1 |
+| 7 | `action_holiday_hours` in `actions:` | 1 |
+
+**Total: 10 points.** On **10/10** it prints `PASS` and `Successfully passed!` and exits **0**; otherwise `FAIL` and exit **1**.
 
 **Grader script location (in repo):**
 
@@ -118,7 +131,7 @@ Use a Python grader for faster feedback than the LLM rubric. The script parses `
    - **Add item to check / Test case:** Add one test case. Leave **INPUT - ARGUMENTS** and **INPUT - STDIN** empty. In **EXPECTED OUTPUT**, enter: `PASS` (the script prints this on success). You can optionally also match `Successfully passed!` if Codio allows multiple expected strings; one match is enough.
    - **SHOW RATIONALE TO STUDENT:** Choose when students see the explanation. Recommended: **AFTER [1] ATTEMPTS** so they see the rationale after their first run (or **ALWAYS** if you want it visible immediately). Set the number in the box to 1 if using "AFTER … ATTEMPTS".
    - **RATIONALE** (the text box below): Paste or type a short explanation so students know what was checked. Example:
-     > The grader checks that `level3/domain/basics.yml` exists, is valid YAML, and contains: a **slots:** section, an **account** slot with **type: text**, the **utter_ask_account** response under **responses:** with at least one message, and **actions:** listing **action_bank_hours**, **action_holiday_hours**, and **action_check_balance_simple**. Review the script output for which check failed.
+     > The grader uses **Check 0**–**Check 7** like Lab 4.1. Find which **Check N: FAILED** (or **PARTIAL**) and fix that part of `level3/domain/basics.yml`. **Check 1** must pass (valid YAML). Full credit shows **Lab 3.1 verification complete! Score: 10/10** and **PASS**.
    - **SHOW EXPECTED ANSWER:** Optional; set to **When grades are released** or **Always** if you want students to see that the expected output is `PASS`.
 
 **Files.** The script lives in the repo at `.guides/secure/level3_graders/lab_3.1_grader.py`. Do not upload or paste it into the assessment; the Execution command runs this file from the workspace so `git pull` keeps the grader in sync. The script requires Python 3 and PyYAML. Use the venv’s Python in COMMAND (e.g. `/home/codio/workspace/.venv/bin/python3 …`) so the grader runs with PyYAML without depending on pre-exec or shell activation.
