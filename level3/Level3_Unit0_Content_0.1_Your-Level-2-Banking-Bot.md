@@ -1,44 +1,49 @@
 Here is a quick recap of what you built in Level 2. In this chapter you will add **slots**, which give the bot memory across turns. None of your Level 2 work goes away. Level 3 adds new pieces on top of the same bot.
 
-## Level 3 Setup
+## Level 3 setup
 
-The **level3** folder is set up as a copy of your Level 2 bot. In this chapter you will:
+The **level3** folder in this course is a **ready-to-use copy** of the expected end state after **Chapter 1.2** (Custom Actions): same domain shape, flows, and **both** Level 2 custom action files. You do **not** recreate `action_holiday_hours.py` in Chapter 1.3; it is **already in** `level3/actions/` so training matches the `holiday_hours` flow. If you completed Chapter 1.2 in your own repo, your files should match this starter.
+
+In this chapter you will:
 
 - Add slots and an ask response in the domain
-- Register the new action name in the domain (you will create the action file in Lab 4.1)
+- Register the new action name in the domain (you will create the Python file in Lab 4.1)
 - Create the check_balance flow
 
-Everything else is your Level 2 content.
+Everything else stays as it was at the start of `level3/`.
 
 ---
 
-## What You Have from Level 2
+## What is already in the Level 3 starter
 
 ### Domain (`domain/basics.yml`)
 
-- Level 1 responses: `utter_greet`, `utter_help`, `utter_contact`, and often `utter_goodbye`
-- An `actions:` section with `action_bank_hours` registered
-- If you did Level 2, your domain may also list `action_holiday_hours`
+- Level 1 responses: `utter_greet`, `utter_help`, `utter_contact`, and `utter_goodbye`
+- An `actions:` section with **`action_bank_hours`** and **`action_holiday_hours`** (required for the existing flows)
 
 ### Flows (`data/basics/`)
 
-- Level 1 flows: `greet`, `help`, `contact`
-- Level 2 flow: `hours` (uses `action_bank_hours`)
-- If you did Level 2 Lab 5.1: `holiday_hours` as well
+- Level 1 flows: `greet`, `help`, `contact`, `goodbye` (as in the repo)
+- Level 2 flows: **`hours.yml`** and **`holiday_hours.yml`**
 
 ### Actions (`actions/`)
 
-- `action_bank_hours.py`
-- If you built it in Level 2: `action_holiday_hours.py`
-- **Level 3.** In Lab 3.1 you register **action_check_balance_simple** in the domain. In Lab 4.1 you **write** `action_check_balance_simple.py`.
+These Python files are **preloaded** for you at the start of Chapter 1.3:
+
+- **`action_bank_hours.py`** (bank hours by day of week)
+- **`action_holiday_hours.py`** (holiday schedule; same role as in Chapter 1.2, Lab 3.2)
+
+You will **add** in Chapter 1.3:
+
+- **`action_check_balance_simple.py`** in **Lab 4.1** (new file; not in the starter)
 
 ### System and config
 
-Unchanged from Level 2.
+Same pattern as Level 2: config and endpoints under `level3/`, project **`.venv`** at the **project root**.
 
 ---
 
-## What Level 2 Couldn't Do
+## What Level 2 could not do
 
 Your Level 2 bot could run custom Python code, but it could not:
 

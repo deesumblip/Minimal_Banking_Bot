@@ -2,7 +2,7 @@
 
 This document summarizes gaps and inconsistencies found in Chapter 1.3 (Slot Collection) content and assessment progression. Recommendations are at the end.
 
-**Resolved in repo (items 1–4):** (1) 4.2 now states Lab 4.1 has a graded code assessment. (2) 3.1 domain example includes `action_holiday_hours` with explanatory prose. (3) Lab 6.1 references **Lab 0.1 in Chapter 1.1** for venv/Rasa Pro and `.env`. (4) Unit 5.2 uses new MCQ `multiple-choice-5130520013` (slot already filled); Unit 2.3 still uses `multiple-choice-3629141196` (empty slot).
+**Resolved in repo (items 1–5):** (1) 4.2 now states Lab 4.1 has a graded code assessment. (2) 3.1 domain example includes all three actions (`action_bank_hours`, `action_holiday_hours`, `action_check_balance_simple`) with prose that the starter preloads the Level 2 actions. (3) Lab 6.1 references **Lab 0.1 in Chapter 1.1** for venv/Rasa Pro and `.env`. (4) Unit 5.2 uses new MCQ `multiple-choice-5130520013` (slot already filled); Unit 2.3 still uses `multiple-choice-3629141196` (empty slot). (5) Unit 0.1 states **`action_holiday_hours.py`** is **preloaded** at the start of Chapter 1.3; Lab 3.1 grader and rubric expect all three action names in `domain/basics.yml`.
 
 ---
 
@@ -19,19 +19,11 @@ This document summarizes gaps and inconsistencies found in Chapter 1.3 (Slot Col
 
 ---
 
-### 1.2 Unit 3.1 domain example omits `action_holiday_hours` — fixed
+### 1.2 Unit 3.1 domain example — fixed (three actions + preload story)
 
-- **Where:** `Unit-3--Defining-Slots-in-the-Domain-6f7a/3-1-The-Slots-Section-4b5c.md`
-- **Issue:** The YAML example under “Domain Structure in Level 3” shows only:
-  ```yaml
-  actions:
-    - action_bank_hours
-    - action_check_balance_simple
-  ```
-  Lab 3.1 correctly says: “If your domain already lists `action_holiday_hours`, keep it and add `action_check_balance_simple` as well.”
-- **Gap:** The unit content does not show the optional Level 2 action, so students with a level3 that includes `action_holiday_hours` may think they should remove it.
-
-**Recommendation:** In 3.1, either add a comment in the snippet (e.g. “include `action_holiday_hours` if present from Level 2”) or show a two-line example that includes it so the unit and lab are aligned.
+- **Where:** `Unit-3--Defining-Slots-in-the-Domain-6f7a/3-1-The-Slots-Section-4b5c.md` (and Lab 3.1).
+- **Former issue:** Example sometimes showed only `action_bank_hours` + `action_check_balance_simple`, which encouraged dropping **`action_holiday_hours`** and breaking training.
+- **Current:** The unit snippet lists **`action_bank_hours`**, **`action_holiday_hours`**, and **`action_check_balance_simple`**. Unit 0.1 and Lab 3.1 state that **`action_holiday_hours.py`** is **preloaded** with the Chapter 1.3 starter; assessments expect the full three-name `actions:` list.
 
 ---
 

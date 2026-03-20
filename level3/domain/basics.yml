@@ -1,6 +1,9 @@
 ## Level 3: Responses + Actions + Slots
 #
-# This folder is a copy of your Level 2 bot. In Lab 3.1 you will add:
+# Preloaded: action_bank_hours.py and action_holiday_hours.py are in actions/
+# (Chapter 1.2–equivalent).
+#
+# In Lab 3.1 you will add:
 # - slots: section (with account) and utter_ask_account response
 # - action_check_balance_simple to the actions list (you will create the .py file in Lab 4.1)
 

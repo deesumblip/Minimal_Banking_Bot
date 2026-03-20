@@ -27,15 +27,16 @@ responses:
         rephrase: True
 ```
 
-4. **action_check_balance_simple in actions** – Under `actions:`, add `action_check_balance_simple` to the list so Rasa can use the action (the student creates the .py file in Lab 4.1). Example (Level 2 actions plus the new one):
+4. **actions: list** – The Chapter 1.3 `level3` starter preloads **`action_bank_hours.py`** and **`action_holiday_hours.py`**. The finished `actions:` list includes **`action_bank_hours`**, **`action_holiday_hours`**, and **`action_check_balance_simple`** (Python file for the latter created in Lab 4.1). Example:
 
 ```yaml
 actions:
   - action_bank_hours
+  - action_holiday_hours
   - action_check_balance_simple
 ```
 
-If the student's domain already lists other actions (e.g. action_holiday_hours), those should remain; the list must include `action_check_balance_simple`.
+If the student's domain lists other entries, those may remain; the list must include all three names above.
 
 ---
 
@@ -44,5 +45,5 @@ If the student's domain already lists other actions (e.g. action_holiday_hours),
 - **slots: section:** Present in domain/basics.yml with valid YAML.
 - **account slot:** Present under slots with type text (or equivalent).
 - **utter_ask_account:** Present under responses with at least one message.
-- **action_check_balance_simple:** Present under the actions: list.
-- **Valid YAML / structure:** File is valid; existing Level 2 content (responses, actions) is preserved.
+- **actions: list:** Includes `action_bank_hours`, `action_holiday_hours`, and `action_check_balance_simple`.
+- **Valid YAML / structure:** File is valid; existing Level 1 responses and other domain content is preserved.

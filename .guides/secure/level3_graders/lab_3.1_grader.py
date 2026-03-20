@@ -2,7 +2,8 @@
 """
 Lab 3.1: Defining a Slot in the Domain - Grader Script
 Checks level3/domain/basics.yml for: slots section, account slot (text),
-utter_ask_account response, action_check_balance_simple in actions.
+utter_ask_account response, and actions listing action_bank_hours,
+action_holiday_hours, and action_check_balance_simple.
 Runs from workspace root; expects /home/codio/workspace.
 """
 
@@ -106,18 +107,42 @@ else:
         score += 1
 print("")
 
-# Check 4: action_check_balance_simple in actions (3 points)
+# Check 4: action_check_balance_simple in actions (1 point)
 print("Check 4: Verifying action_check_balance_simple in actions...")
 actions = data.get("actions")
 if not isinstance(actions, list):
     print("❌ Check 4: FAILED - No 'actions:' list or it is not a list (0 points)")
-    print("Hint: Add an actions: section with - action_check_balance_simple")
+    print("Hint: Add an actions: section listing action_bank_hours, action_holiday_hours, and action_check_balance_simple")
 elif "action_check_balance_simple" not in actions:
     print("❌ Check 4: FAILED - action_check_balance_simple not in actions list (0 points)")
     print("Hint: Add '- action_check_balance_simple' under the actions: section")
 else:
-    print("✅ Check 4: PASSED - action_check_balance_simple registered (3 points)")
-    score += 3
+    print("✅ Check 4: PASSED - action_check_balance_simple registered (1 point)")
+    score += 1
+print("")
+
+# Check 5: action_bank_hours (1 point)
+print("Check 5: Verifying action_bank_hours in actions...")
+if not isinstance(actions, list):
+    print("❌ Check 5: FAILED - actions list missing (0 points)")
+elif "action_bank_hours" not in actions:
+    print("❌ Check 5: FAILED - action_bank_hours missing from actions (0 points)")
+    print("Hint: Include '- action_bank_hours' in the actions: list (see Lab 3.1 example).")
+else:
+    print("✅ Check 5: PASSED - action_bank_hours present (1 point)")
+    score += 1
+print("")
+
+# Check 6: action_holiday_hours (1 point)
+print("Check 6: Verifying action_holiday_hours in actions...")
+if not isinstance(actions, list):
+    print("❌ Check 6: FAILED - actions list missing (0 points)")
+elif "action_holiday_hours" not in actions:
+    print("❌ Check 6: FAILED - action_holiday_hours missing from actions (0 points)")
+    print("Hint: Include '- action_holiday_hours' in the actions: list (pairs with holiday_hours flow).")
+else:
+    print("✅ Check 6: PASSED - action_holiday_hours present (1 point)")
+    score += 1
 print("")
 
 # Summary

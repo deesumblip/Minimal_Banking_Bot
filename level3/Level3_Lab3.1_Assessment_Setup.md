@@ -4,7 +4,7 @@
 
 **Placement.** This lab follows Unit 3: Defining Slots in the Domain.
 
-**Task.** In `domain/basics.yml` in the `level3` folder, add the `slots:` section with `account` (type text), the `utter_ask_account` response, and register `action_check_balance_simple` in the `actions:` list. Run the assessment when done.
+**Task.** In `domain/basics.yml` in the `level3` folder, add the `slots:` section with `account` (type text), the `utter_ask_account` response, and register `action_check_balance_simple` in the `actions:` list together with `action_bank_hours` and `action_holiday_hours`. Run the assessment when done.
 
 **Codio guide (Chapter 1.3).** The Lab 3.1 page in the Chapter 1.3 guide includes: `{Check It!|assessment}(code-output-compare-3187585640)`. Assessment JSON: `.guides/assessments/code-output-compare-3187585640.json`.
 
@@ -14,7 +14,7 @@
 
 ### Overview
 
-This assessment verifies that the student has added the `slots:` section with an `account` slot, the `utter_ask_account` response, and `action_check_balance_simple` in the `actions:` list in `level3/domain/basics.yml`.
+This assessment verifies that the student has added the `slots:` section with an `account` slot, the `utter_ask_account` response, and all three actions — `action_bank_hours`, `action_holiday_hours`, and `action_check_balance_simple` — in `level3/domain/basics.yml`.
 
 ### Assessment Type
 
@@ -30,7 +30,7 @@ This assessment verifies that the student has added the `slots:` section with an
 
 3. **Configure** (see **Grading** tab below).
 
-4. **Test.** Run with a complete domain (slots, utter_ask_account, action_check_balance_simple in actions) for pass; with any of these missing for fail with feedback.
+4. **Test.** Run with a complete domain (slots, utter_ask_account, all three actions including preloaded bank/holiday) for pass; with any of these missing for fail with feedback.
 
 ---
 
@@ -72,14 +72,14 @@ Under "responses:" the student added "utter_ask_account" with at least one messa
 Copy and paste this into the criterion description:
 
 ```
-Under "actions:" the student added "action_check_balance_simple" to the list (e.g. "- action_check_balance_simple"). Award full points if action_check_balance_simple appears in the actions section; zero if missing.
+Under "actions:" the list includes "action_bank_hours", "action_holiday_hours", and "action_check_balance_simple". Award full points if all three are present; zero if any is missing.
 ```
 
 **Rubric 5** — Points: **2**  
 Copy and paste this into the criterion description:
 
 ```
-The domain file is valid YAML and existing Level 2 content (other responses, actions) is preserved. No required sections were removed. Award full points if file is valid and structure is intact; partial if minor issues; zero if file is invalid or critical content was deleted.
+The domain file is valid YAML. Level 1 responses and the three expected action names are present. Award full points if the file is valid and complete; partial if minor issues; zero if the file is invalid or required entries are missing.
 ```
 
 ---
@@ -93,7 +93,7 @@ Configure the assessment so the LLM can read:
 
 ### Option B: Standard Code Test (Python script)
 
-Use a Python grader for faster feedback than the LLM rubric. The script parses `level3/domain/basics.yml` and checks: file exists and is valid YAML; `slots:` section present; `account` slot with `type: text`; `utter_ask_account` under `responses:` with at least one text message; `action_check_balance_simple` in the `actions:` list. Total: 10 points. On full score it prints `PASS` and `Successfully passed!` and exits 0; otherwise prints `FAIL` and exits 1.
+Use a Python grader for faster feedback than the LLM rubric. The script parses `level3/domain/basics.yml` and checks: file exists and is valid YAML; `slots:` section present; `account` slot with `type: text`; `utter_ask_account` under `responses:` with at least one text message; `actions:` contains `action_bank_hours`, `action_holiday_hours`, and `action_check_balance_simple`. Total: 10 points. On full score it prints `PASS` and `Successfully passed!` and exits 0; otherwise prints `FAIL` and exits 1.
 
 **Grader script location (in repo):**
 
@@ -118,7 +118,7 @@ Use a Python grader for faster feedback than the LLM rubric. The script parses `
    - **Add item to check / Test case:** Add one test case. Leave **INPUT - ARGUMENTS** and **INPUT - STDIN** empty. In **EXPECTED OUTPUT**, enter: `PASS` (the script prints this on success). You can optionally also match `Successfully passed!` if Codio allows multiple expected strings; one match is enough.
    - **SHOW RATIONALE TO STUDENT:** Choose when students see the explanation. Recommended: **AFTER [1] ATTEMPTS** so they see the rationale after their first run (or **ALWAYS** if you want it visible immediately). Set the number in the box to 1 if using "AFTER … ATTEMPTS".
    - **RATIONALE** (the text box below): Paste or type a short explanation so students know what was checked. Example:
-     > The grader checks that `level3/domain/basics.yml` exists, is valid YAML, and contains: a **slots:** section, an **account** slot with **type: text**, the **utter_ask_account** response under **responses:** with at least one message, and **action_check_balance_simple** in the **actions:** list. Review the script output for which check failed and fix that part of the domain file.
+     > The grader checks that `level3/domain/basics.yml` exists, is valid YAML, and contains: a **slots:** section, an **account** slot with **type: text**, the **utter_ask_account** response under **responses:** with at least one message, and **actions:** listing **action_bank_hours**, **action_holiday_hours**, and **action_check_balance_simple**. Review the script output for which check failed.
    - **SHOW EXPECTED ANSWER:** Optional; set to **When grades are released** or **Always** if you want students to see that the expected output is `PASS`.
 
 **Files.** The script lives in the repo at `.guides/secure/level3_graders/lab_3.1_grader.py`. Do not upload or paste it into the assessment; the Execution command runs this file from the workspace so `git pull` keeps the grader in sync. The script requires Python 3 and PyYAML. Use the venv’s Python in COMMAND (e.g. `/home/codio/workspace/.venv/bin/python3 …`) so the grader runs with PyYAML without depending on pre-exec or shell activation.
