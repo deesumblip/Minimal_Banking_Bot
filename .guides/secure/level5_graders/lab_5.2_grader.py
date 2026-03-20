@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """
-Lab 5.2: Testing / Completion Check - Grader Script
+Lab 5.2: Testing / Completion Check - Grader Script (Level 5)
+Output format matches Chapter 1.2 Lab 6.2 template (⚠️ for partial on model).
+
 Verifies all Level 5 artifacts: tools/, endpoints.yml tools, transfer_money_tools.yml,
 action_process_transfer_with_tools, domain, and model. Runs from workspace root.
 """
@@ -36,7 +38,7 @@ print("Check 1: Verifying tools folder and banking_tools.py...")
 if TOOLS_DIR.is_dir() and BANKING_TOOLS.exists():
     content = BANKING_TOOLS.read_text(encoding="utf-8")
     if "__all__" in content and "check_balance" in content and "process_transfer" in content:
-        print("✅ Check 1: PASSED - tools/ and banking_tools.py with __all__ (2 points)")
+        print(" Check 1: PASSED - tools/ and banking_tools.py with __all__ (2 points)")
         score += 2
     else:
         print("❌ Check 1: FAILED - banking_tools.py must have __all__ and tool functions (0 points)")
@@ -52,7 +54,7 @@ if ENDPOINTS_PATH.exists():
             ep = yaml.safe_load(f)
         tools = ep.get("tools") or {}
         if tools.get("tools_module") == "tools":
-            print("✅ Check 2: PASSED - endpoints.yml has tools_module (2 points)")
+            print(" Check 2: PASSED - endpoints.yml has tools_module (2 points)")
             score += 2
         else:
             print("❌ Check 2: FAILED - tools: tools_module: \"tools\" required (0 points)")
@@ -86,13 +88,13 @@ if ACTION_PATH.exists():
     ac = ACTION_PATH.read_text(encoding="utf-8")
     action_ok = "action_process_transfer_with_tools" in ac and "def name" in ac.lower()
 if flow_ok and action_ok:
-    print("✅ Check 3: PASSED - transfer_money_tools.yml and action file (3 points)")
+    print(" Check 3: PASSED - transfer_money_tools.yml and action file (3 points)")
     score += 3
 else:
     print("❌ Check 3: FAILED - Flow and action_process_transfer_with_tools.py required (0 points)")
 print("")
 
-# Check 4: Domain and model (3 points)
+# Check 4: Domain and model (3 points; 1 partial)
 print("Check 4: Verifying domain and model...")
 domain_ok = False
 if DOMAIN_PATH.exists():
@@ -104,25 +106,26 @@ if DOMAIN_PATH.exists():
         pass
 model_ok = MODELS_DIR.exists() and bool(list(MODELS_DIR.glob("*.tar.gz")))
 if domain_ok and model_ok:
-    print("✅ Check 4: PASSED - domain has action and model exists (3 points)")
+    print(" Check 4: PASSED - domain has action and model exists (3 points)")
     score += 3
 elif domain_ok:
-    print("⚠️ Check 4: PARTIAL - domain OK; run 'cd level5' and 'python -m rasa train' (1 point)")
+    print("⚠️  Check 4: PARTIAL - domain OK; run 'cd level5' and 'python -m rasa train' (1 point)")
     score += 1
 else:
     print("❌ Check 4: FAILED - domain must list action_process_transfer_with_tools; train from level5 (0 points)")
 print("")
 
 # Summary
-print("=" * 50)
+print("==========================================")
 if score >= max_score:
-    print(f"✅ PASS: Lab 5.2 completion check passed! Score: {score}/{max_score}")
-    print("PASS")
-    print("Successfully passed!")
-    print("=" * 50)
-    sys.exit(0)
+    print(f" PASS: Lab 5.2 completion check passed! Score: {score}/{max_score}")
 else:
     print(f"❌ FAIL: Score {score}/{max_score}. Complete Labs 2.1–5.1 and re-run training if needed.")
-    print("FAIL")
-    print("=" * 50)
-    sys.exit(1)
+print("==========================================")
+print("")
+print("Summary: Check 1 (tools) | Check 2 (endpoints) | Check 3 (flow+action) | Check 4 (domain+model)")
+print(f"Score: {score}/{max_score}")
+
+if score >= max_score:
+    sys.exit(0)
+sys.exit(1)

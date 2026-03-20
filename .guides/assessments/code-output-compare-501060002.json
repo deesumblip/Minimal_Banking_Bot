@@ -4,7 +4,7 @@
 	"source": {
 		"name": "Lab 3.1: Registering MCP",
 		"showName": true,
-		"instructions": "Pass the following check:\n\nCheck 1: endpoints.yml has mcp_servers with at least one server (name, url, type).",
+		"instructions": "To pass, all checks must pass:\n\n• Check 1: level6/endpoints.yml exists.\n• Check 2: Top-level mcp_servers is present.\n• Check 3: At least one server entry includes name, url, and type.\n\nFull score: 10/10.",
 		"command": "/home/codio/workspace/.venv/bin/python3 /home/codio/workspace/.guides/secure/level6_graders/lab_3.1_grader.py",
 		"preExecuteCommand": "",
 		"options": {
@@ -33,26 +33,21 @@
 		},
 		"bloomsObjectiveLevel": "",
 		"learningObjectives": "",
-		"guidance": "The grader checks level6/endpoints.yml for a top-level mcp_servers entry with at least one server (name, url, type). Run from workspace root.",
+		"guidance": "Add or fix mcp_servers block in level6/endpoints.yml.",
 		"showGuidanceAfterResponseOption": {
-			"type": "Attempts",
-			"passedFrom": 1
+			"type": "Never"
 		},
 		"maxAttemptsCount": 0,
 		"points": 10,
 		"showExpectedAnswerOption": {
-			"type": "WhenGradesReleased"
+			"type": "Always"
 		},
 		"arePartialPointsAllowed": true,
 		"useMaximumScore": false,
 		"sequence": [
-			{
-				"arguments": "",
-				"input": "",
-				"output": "PASS",
-				"showFeedback": false,
-				"feedback": ""
-			}
+			{ "arguments": "", "input": "", "output": "Check 1: PASSED", "showFeedback": false, "feedback": "" },
+			{ "arguments": "", "input": "", "output": "Check 2: PASSED", "showFeedback": false, "feedback": "" },
+			{ "arguments": "", "input": "", "output": "Check 3: PASSED", "showFeedback": false, "feedback": "" }
 		]
 	}
 }

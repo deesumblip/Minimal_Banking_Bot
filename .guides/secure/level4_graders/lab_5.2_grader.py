@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """
 Lab 4.5: Testing the Transfer Flow - Completion Check - Grader Script
+Output format matches Chapter 1.2 Lab 6.2 template.
+
 Verifies Level 4 bot is complete: domain (slots + ask responses + action), action file,
 transfer_money.yml flow, and a trained model. Runs from workspace root.
 """
@@ -40,16 +42,21 @@ else:
         responses = data.get("responses") or {}
         actions = data.get("actions") or []
         has_slots = all(s in slots for s in ["amount", "recipient", "account_from"])
-        has_asks = all(r in responses for r in ["utter_ask_amount", "utter_ask_recipient", "utter_ask_account_from"])
+        has_asks = all(
+            r in responses for r in ["utter_ask_amount", "utter_ask_recipient", "utter_ask_account_from"]
+        )
         has_action = "action_process_transfer" in actions
         if has_slots and has_asks and has_action:
-            print("✅ Check 1: PASSED - Domain has transfer slots, ask responses, action_process_transfer (3 points)")
+            print(" Check 1: PASSED - Domain has transfer slots, ask responses, action_process_transfer (3 points)")
             score += 3
         else:
             missing = []
-            if not has_slots: missing.append("slots amount/recipient/account_from")
-            if not has_asks: missing.append("utter_ask_amount/recipient/account_from")
-            if not has_action: missing.append("action_process_transfer in actions")
+            if not has_slots:
+                missing.append("slots amount/recipient/account_from")
+            if not has_asks:
+                missing.append("utter_ask_amount/recipient/account_from")
+            if not has_action:
+                missing.append("action_process_transfer in actions")
             print(f"❌ Check 1: FAILED - Domain missing: {missing} (0 points)")
     except Exception as e:
         print(f"❌ Check 1: FAILED - Could not parse domain: {e} (0 points)")
@@ -66,10 +73,13 @@ else:
     has_account_from = "account_from" in content and "get_slot" in content
     has_name = "action_process_transfer" in content and "def name" in content.lower()
     if has_amount and has_recipient and has_account_from and has_name:
-        print("✅ Check 2: PASSED - Action file exists and reads amount, recipient, account_from (3 points)")
+        print(" Check 2: PASSED - Action file exists and reads amount, recipient, account_from (3 points)")
         score += 3
     else:
-        print("❌ Check 2: FAILED - Action file must define name() and run() reading amount, recipient, account_from (0 points)")
+        print(
+            "❌ Check 2: FAILED - Action file must define name() and run() reading "
+            "amount, recipient, account_from (0 points)"
+        )
 print("")
 
 # Check 3: Flow file (2 points)
@@ -94,10 +104,13 @@ else:
                         has_action_step = True
         required_collect = {"amount", "recipient", "account_from"}
         if required_collect.issubset(collect_found) and has_action_step:
-            print("✅ Check 3: PASSED - transfer_money.yml has collect steps and action (2 points)")
+            print(" Check 3: PASSED - transfer_money.yml has collect steps and action (2 points)")
             score += 2
         else:
-            print("❌ Check 3: FAILED - Flow must have collect amount/recipient/account_from and action: action_process_transfer (0 points)")
+            print(
+                "❌ Check 3: FAILED - Flow must have collect amount/recipient/account_from "
+                "and action: action_process_transfer (0 points)"
+            )
     except Exception as e:
         print(f"❌ Check 3: FAILED - Invalid YAML or structure: {e} (0 points)")
 print("")
@@ -108,20 +121,21 @@ if not MODELS_DIR.exists() or not list(MODELS_DIR.glob("*.tar.gz")):
     print("❌ Check 4: FAILED - No model file in level4/models/ (0 points)")
     print("Hint: Run 'cd level4' and 'python -m rasa train' with venv activated")
 else:
-    print("✅ Check 4: PASSED - Model file exists (2 points)")
+    print(" Check 4: PASSED - Model file exists (2 points)")
     score += 2
 print("")
 
 # Summary
-print("=" * 50)
+print("==========================================")
 if score >= max_score:
-    print(f"✅ PASS: Lab 4.5 completion check passed! Score: {score}/{max_score}")
-    print("PASS")
-    print("Successfully passed!")
-    print("=" * 50)
-    sys.exit(0)
+    print(f" PASS: Lab 4.5 completion check passed! Score: {score}/{max_score}")
 else:
     print(f"❌ FAIL: Score {score}/{max_score}. Complete Labs 4.1–4.4 and re-run training if needed.")
-    print("FAIL")
-    print("=" * 50)
-    sys.exit(1)
+print("==========================================")
+print("")
+print("Summary: Check 1 (domain) | Check 2 (action) | Check 3 (flow) | Check 4 (model)")
+print(f"Score: {score}/{max_score}")
+
+if score >= max_score:
+    sys.exit(0)
+sys.exit(1)

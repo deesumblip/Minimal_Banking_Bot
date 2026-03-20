@@ -38,7 +38,7 @@ This assessment verifies that the student has created `level4/actions/action_pro
 
 ### Option B: Standard Code Test (Python script)
 
-Use a Python grader for faster feedback. The script checks `level4/actions/action_process_transfer.py` for: file exists; required imports; class `ActionProcessTransfer(Action)`; `name()` returning `"action_process_transfer"`; `run()` reading `tracker.get_slot("amount")`, `get_slot("recipient")`, `get_slot("account_from")`; sending a message (dispatcher.utter_message). Total: 10 points. On full score it prints `PASS` and `Successfully passed!`; otherwise `FAIL` and exit 1.
+Use a Python grader for faster feedback. Output matches **Lab 6.2 / Lab 3.1** style: **Check 1–6**, pass lines with leading space, score band, **` PASS: Lab 4.2 verification complete! Score: 10/10`** on full pass; exit **0** only on full score. Verifies: action file exists; imports; class `ActionProcessTransfer(Action)`; `name()`; `run()` reads three slots; `utter_message`.
 
 **Grader script location (in repo):**
 
@@ -56,7 +56,7 @@ Use a Python grader for faster feedback. The script checks `level4/actions/actio
    - **Timeout:** `60` seconds
 3. **Grading** tab:
    - **Points:** Set to **10**. Enable **Allow partial points** if desired.
-   - **Test case:** One test case. **EXPECTED OUTPUT:** `PASS`. **Enable substring match**.
+   - **Sequence:** From `code-output-compare-401030001.json`: `Check 1: PASSED` … `Check 6: PASSED`, **`showFeedback`: false**, substring match, **showExpectedAnswer: Always**, **showGuidance: Never**.
    - **SHOW RATIONALE TO STUDENT:** **AFTER [1] ATTEMPTS** (or **ALWAYS**).
    - **RATIONALE:** The grader checks that `level4/actions/action_process_transfer.py` exists and contains: correct imports, class **ActionProcessTransfer(Action)**, **name()** returning **"action_process_transfer"**, **run()** reading the **amount**, **recipient**, and **account_from** slots, and sending a confirmation message. Follow the lab steps and review the script output for which check failed.
 4. **Files.** Script at `.guides/secure/level4_graders/lab_3.1_grader.py`; run from workspace.

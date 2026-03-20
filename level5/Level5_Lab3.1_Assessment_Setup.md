@@ -26,4 +26,4 @@ Solution reference: `.guides/secure/level5_graders/lab_3.1_solution_reference.md
 
 ### Option B: Code Test
 
-Grader: `.guides/secure/level5_graders/lab_3.1_grader.py`. Checks: endpoints.yml exists; valid YAML; key "tools" present; "tools_module" with value "tools". COMMAND: `/home/codio/workspace/.venv/bin/python3 /home/codio/workspace/.guides/secure/level5_graders/lab_3.1_grader.py`. WD: `/home/codio/workspace`. Expected: `PASS`.
+Grader: `.guides/secure/level5_graders/lab_3.1_grader.py`. **Check 1–3**, Lab 6.2-style output; **` PASS: Lab 3.1 verification complete! Score: 10/10`**. COMMAND: venv Python + grader. WD: workspace root. Sequence: `code-output-compare-501030001.json`.

@@ -4,7 +4,7 @@
 	"source": {
 		"name": "Lab 2.1: Creating the Tools Folder and banking_tools.py",
 		"showName": true,
-		"instructions": "Pass the following check:\n\nCheck 1: Tools folder and banking_tools.py exist with check_balance, process_transfer, get_account_info, and __all__.",
+		"instructions": "To pass, all checks must pass:\n\n• Check 1: level5/tools/ exists.\n• Check 2: level5/tools/banking_tools.py exists.\n• Check 3: Functions check_balance, process_transfer, get_account_info are defined.\n• Check 4: __all__ is defined.\n\nFull score: 10/10.",
 		"command": "/home/codio/workspace/.venv/bin/python3 /home/codio/workspace/.guides/secure/level5_graders/lab_2.1_grader.py",
 		"preExecuteCommand": "",
 		"options": {
@@ -33,26 +33,22 @@
 		},
 		"bloomsObjectiveLevel": "",
 		"learningObjectives": "",
-		"guidance": "The grader checks level5/tools/ and level5/tools/banking_tools.py for check_balance, process_transfer, get_account_info, and __all__. Run from workspace root.",
+		"guidance": "Review which check failed; add missing tools or exports under level5/tools/.",
 		"showGuidanceAfterResponseOption": {
-			"type": "Attempts",
-			"passedFrom": 1
+			"type": "Never"
 		},
 		"maxAttemptsCount": 0,
 		"points": 10,
 		"showExpectedAnswerOption": {
-			"type": "WhenGradesReleased"
+			"type": "Always"
 		},
 		"arePartialPointsAllowed": true,
 		"useMaximumScore": false,
 		"sequence": [
-			{
-				"arguments": "",
-				"input": "",
-				"output": "PASS",
-				"showFeedback": false,
-				"feedback": ""
-			}
+			{ "arguments": "", "input": "", "output": "Check 1: PASSED", "showFeedback": false, "feedback": "" },
+			{ "arguments": "", "input": "", "output": "Check 2: PASSED", "showFeedback": false, "feedback": "" },
+			{ "arguments": "", "input": "", "output": "Check 3: PASSED", "showFeedback": false, "feedback": "" },
+			{ "arguments": "", "input": "", "output": "Check 4: PASSED", "showFeedback": false, "feedback": "" }
 		]
 	}
 }

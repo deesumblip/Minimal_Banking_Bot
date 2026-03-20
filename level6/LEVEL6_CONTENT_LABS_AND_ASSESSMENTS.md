@@ -48,7 +48,7 @@ This document maps **Level 6** (Chapter 1.6 – Sub-Agents) content files, labs,
 | 5.1 | Level6_Lab5.1_Content.md | Level6_Lab5.1_Assessment_Setup.md | code-output-compare-501060004 | lab_5.1_grader.py |
 | 5.2 | Level6_Lab5.2_Content.md | Level6_Lab5.2_Assessment_Setup.md | code-output-compare-501060005 | lab_5.2_grader.py |
 
-**Assessment JSONs:** `.guides/assessments/code-output-compare-501060001.json` through `501060005.json`. COMMAND uses `.guides/secure/level6_graders/lab_*.py`. Working Directory: `/home/codio/workspace`. Expected output: `PASS`.
+**Assessment JSONs:** `.guides/assessments/code-output-compare-501060001.json` through `501060005.json`. COMMAND uses `.guides/secure/level6_graders/lab_*.py`. Working Directory: `/home/codio/workspace`. **Sequence:** `Check 1: PASSED` … (per lab), Lab 6.2 / Lab 3.1 style; **`showGuidanceAfterResponseOption`: Never**; **`showExpectedAnswerOption`: Always**.
 
 ---
 

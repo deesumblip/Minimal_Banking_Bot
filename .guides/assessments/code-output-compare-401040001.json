@@ -4,7 +4,7 @@
 	"source": {
 		"name": "Lab 4.1: Creating the Transfer Flow",
 		"showName": true,
-		"instructions": "Pass the following check:\n\nCheck 1: Transfer flow and action are set up correctly.",
+		"instructions": "To pass, all checks must pass:\n\n• Check 1: level4/data/basics/transfer_money.yml exists.\n• Check 2: flows: includes a flow with name and steps.\n• Check 3: collect steps for amount, recipient, account_from.\n• Check 4: A step with action: action_process_transfer.\n\nFull score: 8/8.",
 		"command": "/home/codio/workspace/.venv/bin/python3 /home/codio/workspace/.guides/secure/level4_graders/lab_4.1_grader.py",
 		"preExecuteCommand": "",
 		"options": {
@@ -33,26 +33,22 @@
 		},
 		"bloomsObjectiveLevel": "",
 		"learningObjectives": "",
-		"guidance": "The grader checks that level4/data/basics/transfer_money.yml exists, has valid YAML with a flows: section, at least one flow with name and steps, steps with collect: amount, collect: recipient, collect: account_from, and action: action_process_transfer. Review the script output for which check failed.",
+		"guidance": "Fix transfer_money.yml per the failed check; valid YAML is required before later checks run.",
 		"showGuidanceAfterResponseOption": {
-			"type": "Attempts",
-			"passedFrom": 1
+			"type": "Never"
 		},
 		"maxAttemptsCount": 0,
 		"points": 8,
 		"showExpectedAnswerOption": {
-			"type": "WhenGradesReleased"
+			"type": "Always"
 		},
 		"arePartialPointsAllowed": true,
 		"useMaximumScore": false,
 		"sequence": [
-			{
-				"arguments": "",
-				"input": "",
-				"output": "PASS",
-				"showFeedback": false,
-				"feedback": ""
-			}
+			{ "arguments": "", "input": "", "output": "Check 1: PASSED", "showFeedback": false, "feedback": "" },
+			{ "arguments": "", "input": "", "output": "Check 2: PASSED", "showFeedback": false, "feedback": "" },
+			{ "arguments": "", "input": "", "output": "Check 3: PASSED", "showFeedback": false, "feedback": "" },
+			{ "arguments": "", "input": "", "output": "Check 4: PASSED", "showFeedback": false, "feedback": "" }
 		]
 	}
 }

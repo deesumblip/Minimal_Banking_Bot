@@ -4,7 +4,7 @@
 	"source": {
 		"name": "Lab 2.1: Adding Multiple Slots in the Domain",
 		"showName": true,
-		"instructions": "Pass the following check:\n\nCheck 1: Multiple slots and response for the transfer flow are correctly added (Lab 2.1).",
+		"instructions": "To pass this assessment, all of the following must be true (same Codio layout as Chapter 1.2 Lab 6.2):\n\n• Check 1: level4/domain/basics.yml exists.\n• Check 2: Slots amount, recipient, and account_from are present.\n• Check 3: utter_ask_amount, utter_ask_recipient, and utter_ask_account_from each have a text message.\n• Check 4: action_process_transfer is listed under actions:.\n\nFull score: 10/10.",
 		"command": "/home/codio/workspace/.venv/bin/python3 /home/codio/workspace/.guides/secure/level4_graders/lab_2.1_grader.py",
 		"preExecuteCommand": "",
 		"options": {
@@ -33,26 +33,22 @@
 		},
 		"bloomsObjectiveLevel": "",
 		"learningObjectives": "",
-		"guidance": "The grader checks that level4/domain/basics.yml exists, is valid YAML, and contains: slots amount, recipient, account_from (type text); responses utter_ask_amount, utter_ask_recipient, utter_ask_account_from with at least one message each; action_process_transfer in the actions list. Review the script output for which check failed.",
+		"guidance": "The grader prints Check 1–4 with PASSED or FAILED, then a score band. Fix any failed line in level4/domain/basics.yml.",
 		"showGuidanceAfterResponseOption": {
-			"type": "Attempts",
-			"passedFrom": 1
+			"type": "Never"
 		},
 		"maxAttemptsCount": 0,
 		"points": 10,
 		"showExpectedAnswerOption": {
-			"type": "WhenGradesReleased"
+			"type": "Always"
 		},
 		"arePartialPointsAllowed": true,
 		"useMaximumScore": false,
 		"sequence": [
-			{
-				"arguments": "",
-				"input": "",
-				"output": "PASS",
-				"showFeedback": false,
-				"feedback": ""
-			}
+			{ "arguments": "", "input": "", "output": "Check 1: PASSED", "showFeedback": false, "feedback": "" },
+			{ "arguments": "", "input": "", "output": "Check 2: PASSED", "showFeedback": false, "feedback": "" },
+			{ "arguments": "", "input": "", "output": "Check 3: PASSED", "showFeedback": false, "feedback": "" },
+			{ "arguments": "", "input": "", "output": "Check 4: PASSED", "showFeedback": false, "feedback": "" }
 		]
 	}
 }

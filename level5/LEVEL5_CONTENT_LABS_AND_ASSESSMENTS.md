@@ -55,7 +55,7 @@ This document maps **Level 5** (Chapter 1.5 – Tool Calling) content files, lab
 | 5.1 | Level5_Lab5.1_Content.md | Level5_Lab5.1_Assessment_Setup.md | code-output-compare-501050001 | lab_5.1_grader.py, lab_5.1_solution_reference.md |
 | 5.2 | Level5_Lab5.2_Content.md | Level5_Lab5.2_Assessment_Setup.md | code-output-compare-501050002 | lab_5.2_grader.py, lab_5.2_solution_reference.md |
 
-**Assessment JSONs:** `.guides/assessments/code-output-compare-501020001.json` through `code-output-compare-501050002.json`. Each COMMAND uses venv Python and `.guides/secure/level5_graders/lab_X.X_grader.py`. Working Directory: `/home/codio/workspace`. Expected output: `PASS` (substring match).
+**Assessment JSONs:** `.guides/assessments/code-output-compare-501020001.json` through `code-output-compare-501050002.json`. Each COMMAND uses venv Python and `.guides/secure/level5_graders/lab_X.X_grader.py`. Working Directory: `/home/codio/workspace`. Grading uses a **sequence** of `Check N: PASSED` substring matches (Lab 6.2 / Lab 3.1 style), **`showGuidanceAfterResponseOption`: Never**, **`showExpectedAnswerOption`: Always**.
 
 ---
 

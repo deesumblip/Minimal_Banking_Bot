@@ -4,7 +4,7 @@
 	"source": {
 		"name": "Lab 4.1: ask_banking_assistant Flow",
 		"showName": true,
-		"instructions": "Pass the following check:\n\nCheck 1: ask_banking_assistant.yml exists with a flow that has call: banking_assistant.",
+		"instructions": "To pass, all checks must pass:\n\n• Check 1: ask_banking_assistant.yml exists.\n• Check 2: Flow includes call: banking_assistant.\n• Check 3: Flow name ask_banking_assistant appears in the file.\n\nFull score: 10/10.",
 		"command": "/home/codio/workspace/.venv/bin/python3 /home/codio/workspace/.guides/secure/level6_graders/lab_4.1_grader.py",
 		"preExecuteCommand": "",
 		"options": {
@@ -33,26 +33,21 @@
 		},
 		"bloomsObjectiveLevel": "",
 		"learningObjectives": "",
-		"guidance": "The grader checks level6/data/basics/ask_banking_assistant.yml exists and contains a flow with call: banking_assistant. Run from workspace root.",
+		"guidance": "Edit level6/data/basics/ask_banking_assistant.yml per the failed check.",
 		"showGuidanceAfterResponseOption": {
-			"type": "Attempts",
-			"passedFrom": 1
+			"type": "Never"
 		},
 		"maxAttemptsCount": 0,
 		"points": 10,
 		"showExpectedAnswerOption": {
-			"type": "WhenGradesReleased"
+			"type": "Always"
 		},
 		"arePartialPointsAllowed": true,
 		"useMaximumScore": false,
 		"sequence": [
-			{
-				"arguments": "",
-				"input": "",
-				"output": "PASS",
-				"showFeedback": false,
-				"feedback": ""
-			}
+			{ "arguments": "", "input": "", "output": "Check 1: PASSED", "showFeedback": false, "feedback": "" },
+			{ "arguments": "", "input": "", "output": "Check 2: PASSED", "showFeedback": false, "feedback": "" },
+			{ "arguments": "", "input": "", "output": "Check 3: PASSED", "showFeedback": false, "feedback": "" }
 		]
 	}
 }

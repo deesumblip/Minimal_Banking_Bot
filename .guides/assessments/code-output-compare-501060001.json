@@ -4,7 +4,7 @@
 	"source": {
 		"name": "Lab 2.1: Sub-Agent Config",
 		"showName": true,
-		"instructions": "Pass the following check:\n\nCheck 1: Sub-agent config (banking_assistant config.yml) has agent name, protocol, and mcp_servers.",
+		"instructions": "To pass, all checks must pass:\n\n• Check 1: level6/sub_agents/banking_assistant/config.yml exists.\n• Check 2: Config references banking_assistant.\n• Check 3: Protocol (e.g. RASA) is present.\n• Check 4: mcp_servers is present.\n\nFull score: 10/10.",
 		"command": "/home/codio/workspace/.venv/bin/python3 /home/codio/workspace/.guides/secure/level6_graders/lab_2.1_grader.py",
 		"preExecuteCommand": "",
 		"options": {
@@ -33,26 +33,22 @@
 		},
 		"bloomsObjectiveLevel": "",
 		"learningObjectives": "",
-		"guidance": "The grader checks level6/sub_agents/banking_assistant/config.yml for agent name, protocol, mcp_servers. Run from workspace root.",
+		"guidance": "Edit sub-agent config.yml until all four checks pass.",
 		"showGuidanceAfterResponseOption": {
-			"type": "Attempts",
-			"passedFrom": 1
+			"type": "Never"
 		},
 		"maxAttemptsCount": 0,
 		"points": 10,
 		"showExpectedAnswerOption": {
-			"type": "WhenGradesReleased"
+			"type": "Always"
 		},
 		"arePartialPointsAllowed": true,
 		"useMaximumScore": false,
 		"sequence": [
-			{
-				"arguments": "",
-				"input": "",
-				"output": "PASS",
-				"showFeedback": false,
-				"feedback": ""
-			}
+			{ "arguments": "", "input": "", "output": "Check 1: PASSED", "showFeedback": false, "feedback": "" },
+			{ "arguments": "", "input": "", "output": "Check 2: PASSED", "showFeedback": false, "feedback": "" },
+			{ "arguments": "", "input": "", "output": "Check 3: PASSED", "showFeedback": false, "feedback": "" },
+			{ "arguments": "", "input": "", "output": "Check 4: PASSED", "showFeedback": false, "feedback": "" }
 		]
 	}
 }

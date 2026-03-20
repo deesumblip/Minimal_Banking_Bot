@@ -13,7 +13,7 @@
 ## Assessment Setup (For Implementers)
 
 **COMMAND:** `/home/codio/workspace/.venv/bin/python3 /home/codio/workspace/.guides/secure/level6_graders/lab_4.1_grader.py`  
-**Working Directory:** `/home/codio/workspace`. **Expected output:** `PASS`.  
-**Grader:** `.guides/secure/level6_graders/lab_4.1_grader.py`. **Points:** 10.
+**Working Directory:** `/home/codio/workspace`. **Sequence:** `code-output-compare-501060003.json` (`Check 1`–`Check 3: PASSED`).  
+**Grader:** `.guides/secure/level6_graders/lab_4.1_grader.py`. **Points:** 10. Full pass: **` PASS: Lab 4.1 verification complete! Score: 10/10`**.
 
-**Verifies:** level6/data/basics/ask_banking_assistant.yml exists; flow contains step call: banking_assistant.
+**Verifies:** flow file; call: banking_assistant; ask_banking_assistant naming.

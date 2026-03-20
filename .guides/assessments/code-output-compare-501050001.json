@@ -4,7 +4,7 @@
 	"source": {
 		"name": "Lab 5.1: Training the Level 5 Bot",
 		"showName": true,
-		"instructions": "Pass the following check:\n\nCheck 1: Level 5 bot structure is correct and the model is trained.",
+		"instructions": "To pass, all checks must pass:\n\n• Check 1: .venv with Python exists.\n• Check 2: level5 has domain, config, endpoints, and tools/banking_tools.py.\n• Check 3: Trained .tar.gz model in level5/models/.\n\nFull score: 10/10.",
 		"command": "/home/codio/workspace/.venv/bin/python3 /home/codio/workspace/.guides/secure/level5_graders/lab_5.1_grader.py",
 		"preExecuteCommand": "",
 		"options": {
@@ -33,26 +33,21 @@
 		},
 		"bloomsObjectiveLevel": "",
 		"learningObjectives": "",
-		"guidance": "The grader verifies level5 structure and a trained model (or runs training). Timeout is 120s to allow training.",
+		"guidance": "Run rasa train from level5 with venv activated if the model check fails.",
 		"showGuidanceAfterResponseOption": {
-			"type": "Attempts",
-			"passedFrom": 1
+			"type": "Never"
 		},
 		"maxAttemptsCount": 0,
 		"points": 10,
 		"showExpectedAnswerOption": {
-			"type": "WhenGradesReleased"
+			"type": "Always"
 		},
 		"arePartialPointsAllowed": true,
 		"useMaximumScore": false,
 		"sequence": [
-			{
-				"arguments": "",
-				"input": "",
-				"output": "PASS",
-				"showFeedback": false,
-				"feedback": ""
-			}
+			{ "arguments": "", "input": "", "output": "Check 1: PASSED", "showFeedback": false, "feedback": "" },
+			{ "arguments": "", "input": "", "output": "Check 2: PASSED", "showFeedback": false, "feedback": "" },
+			{ "arguments": "", "input": "", "output": "Check 3: PASSED", "showFeedback": false, "feedback": "" }
 		]
 	}
 }

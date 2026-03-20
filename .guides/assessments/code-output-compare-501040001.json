@@ -4,7 +4,7 @@
 	"source": {
 		"name": "Lab 4.1: Creating the transfer_money_tools Flow and Action",
 		"showName": true,
-		"instructions": "Pass the following check:\n\nCheck 1: transfer_money_tools.yml flow, action_process_transfer_with_tools.py, and domain actions are set up correctly.",
+		"instructions": "To pass, all checks must pass:\n\n• Check 1: transfer_money_tools.yml exists.\n• Check 2: Flow has collect amount/recipient/account_from and action_process_transfer_with_tools.\n• Check 3: action_process_transfer_with_tools.py with correct name().\n• Check 4: Domain actions list includes action_process_transfer_with_tools.\n\nFull score: 10/10.",
 		"command": "/home/codio/workspace/.venv/bin/python3 /home/codio/workspace/.guides/secure/level5_graders/lab_4.1_grader.py",
 		"preExecuteCommand": "",
 		"options": {
@@ -33,26 +33,22 @@
 		},
 		"bloomsObjectiveLevel": "",
 		"learningObjectives": "",
-		"guidance": "The grader checks level5/data/basics/transfer_money_tools.yml, action_process_transfer_with_tools.py, and domain actions.",
+		"guidance": "Align flow YAML, custom action, and domain per the first failing check.",
 		"showGuidanceAfterResponseOption": {
-			"type": "Attempts",
-			"passedFrom": 1
+			"type": "Never"
 		},
 		"maxAttemptsCount": 0,
 		"points": 10,
 		"showExpectedAnswerOption": {
-			"type": "WhenGradesReleased"
+			"type": "Always"
 		},
 		"arePartialPointsAllowed": true,
 		"useMaximumScore": false,
 		"sequence": [
-			{
-				"arguments": "",
-				"input": "",
-				"output": "PASS",
-				"showFeedback": false,
-				"feedback": ""
-			}
+			{ "arguments": "", "input": "", "output": "Check 1: PASSED", "showFeedback": false, "feedback": "" },
+			{ "arguments": "", "input": "", "output": "Check 2: PASSED", "showFeedback": false, "feedback": "" },
+			{ "arguments": "", "input": "", "output": "Check 3: PASSED", "showFeedback": false, "feedback": "" },
+			{ "arguments": "", "input": "", "output": "Check 4: PASSED", "showFeedback": false, "feedback": "" }
 		]
 	}
 }

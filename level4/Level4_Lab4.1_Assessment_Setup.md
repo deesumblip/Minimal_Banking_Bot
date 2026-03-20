@@ -38,7 +38,7 @@ This assessment verifies that the student has created `level4/data/basics/transf
 
 ### Option B: Standard Code Test (Python script)
 
-Use a Python grader for faster feedback. The script checks `level4/data/basics/transfer_money.yml` for: file exists; valid YAML with top-level `flows:`; at least one flow with `name` and `steps`; steps contain `collect: amount`, `collect: recipient`, `collect: account_from`; steps contain `action: action_process_transfer`. Total: 8 points. On full score it prints `PASS` and `Successfully passed!`; otherwise `FAIL` and exit 1.
+Use a Python grader for faster feedback. **Lab 6.2 / Lab 3.1** output: **Check 1–4**, score band, **` PASS: Lab 4.3 verification complete! Score: 8/8`** on full pass. The script checks `level4/data/basics/transfer_money.yml` for: file exists; valid YAML with top-level `flows:`; flow with `name` and `steps`; collect amount, recipient, account_from; `action: action_process_transfer`.
 
 **Grader script location (in repo):**
 
@@ -56,7 +56,7 @@ Use a Python grader for faster feedback. The script checks `level4/data/basics/t
    - **Timeout:** `60` seconds
 3. **Grading** tab:
    - **Points:** Set to **8**. Enable **Allow partial points** if desired.
-   - **Test case:** One test case. **EXPECTED OUTPUT:** `PASS`. **Enable substring match**.
+   - **Sequence:** From `code-output-compare-401040001.json`: `Check 1: PASSED` … `Check 4: PASSED`, **`showFeedback`: false**, substring match.
    - **SHOW RATIONALE TO STUDENT:** **AFTER [1] ATTEMPTS** (or **ALWAYS**).
    - **RATIONALE:** The grader checks that `level4/data/basics/transfer_money.yml` exists, has valid YAML with a **flows:** section, at least one flow with **name** and **steps**, steps with **collect: amount**, **collect: recipient**, **collect: account_from**, and **action: action_process_transfer**. Review the script output to see which check failed.
 4. **Files.** Script at `.guides/secure/level4_graders/lab_4.1_grader.py`; run from workspace.

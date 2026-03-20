@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """
 Lab 5.2: Completion Check Level 6 - Grader
-Verifies all Level 6 artifacts: sub_agent config, mcp_servers, ask_banking_assistant flow.
-Optionally checks for models/.
+Output format matches Chapter 1.2 Lab 6.2 template.
+
+Verifies Level 6 artifacts: sub_agent config, mcp_servers in endpoints, ask_banking_assistant flow.
 """
 
 import sys
@@ -13,25 +14,76 @@ if not WORKSPACE_ROOT.exists():
     WORKSPACE_ROOT = Path(__file__).resolve().parents[2]
 LEVEL6 = WORKSPACE_ROOT / "level6"
 
-def check(msg, cond):
-    if not cond:
-        print(f"FAIL: {msg}")
-        sys.exit(1)
+score = 0
+max_score = 10
 
 print("Running Lab 5.2 Completion Check...")
 print("")
 
+# Check 1: config (3 points)
+print("Check 1: Verifying sub-agent config...")
 config = LEVEL6 / "sub_agents" / "banking_assistant" / "config.yml"
-check("level6/sub_agents/banking_assistant/config.yml must exist", config.exists())
+if not config.exists():
+    print("❌ Check 1: FAILED - level6/sub_agents/banking_assistant/config.yml must exist (0 points)")
+    print("FAIL")
+    sys.exit(1)
+print(" Check 1: PASSED - config.yml exists (3 points)")
+score += 3
+print("")
 
+# Check 2: endpoints + mcp_servers (4 points)
+print("Check 2: Verifying endpoints.yml and mcp_servers...")
 endpoints = LEVEL6 / "endpoints.yml"
-check("level6/endpoints.yml must exist", endpoints.exists())
-check("endpoints.yml must contain mcp_servers", "mcp_servers" in endpoints.read_text(encoding="utf-8"))
+if not endpoints.exists():
+    print("❌ Check 2: FAILED - level6/endpoints.yml must exist (0 points)")
+    print("FAIL")
+    sys.exit(1)
+try:
+    ep_text = endpoints.read_text(encoding="utf-8")
+except Exception as e:
+    print(f"❌ Check 2: FAILED - Could not read endpoints: {e} (0 points)")
+    print("FAIL")
+    sys.exit(1)
+if "mcp_servers" not in ep_text:
+    print("❌ Check 2: FAILED - endpoints.yml must contain mcp_servers (0 points)")
+    print("FAIL")
+    sys.exit(1)
+print(" Check 2: PASSED - endpoints with mcp_servers (4 points)")
+score += 4
+print("")
 
+# Check 3: flow with call (3 points)
+print("Check 3: Verifying ask_banking_assistant flow...")
 flow_file = LEVEL6 / "data" / "basics" / "ask_banking_assistant.yml"
-check("level6/data/basics/ask_banking_assistant.yml must exist", flow_file.exists())
-content = flow_file.read_text(encoding="utf-8")
-check("Flow must contain call: banking_assistant", "call:" in content and "banking_assistant" in content)
+if not flow_file.exists():
+    print("❌ Check 3: FAILED - level6/data/basics/ask_banking_assistant.yml must exist (0 points)")
+    print("FAIL")
+    sys.exit(1)
+try:
+    content = flow_file.read_text(encoding="utf-8")
+except Exception as e:
+    print(f"❌ Check 3: FAILED - Could not read flow: {e} (0 points)")
+    print("FAIL")
+    sys.exit(1)
+if "call:" not in content or "banking_assistant" not in content:
+    print("❌ Check 3: FAILED - Flow must contain call: banking_assistant (0 points)")
+    print("FAIL")
+    sys.exit(1)
+print(" Check 3: PASSED - ask_banking_assistant flow with call step (3 points)")
+score += 3
+print("")
 
-print("PASS")
-sys.exit(0)
+# Summary
+print("==========================================")
+if score >= max_score:
+    print(f" PASS: Lab 5.2 completion check passed! Score: {score}/{max_score}")
+else:
+    print(f"❌ FAIL: Score {score}/{max_score} - Review the failed checks above and try again.")
+print("==========================================")
+print("")
+print("Summary: Check 1 (sub-agent config) | Check 2 (endpoints mcp) | Check 3 (flow)")
+print(f"Score: {score}/{max_score}")
+
+if score >= max_score:
+    sys.exit(0)
+sys.exit(1)

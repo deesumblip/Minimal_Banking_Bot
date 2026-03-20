@@ -22,4 +22,4 @@ Verifies that the student can train from level5 (or that required files are pres
 
 ### Code Test
 
-Grader: `.guides/secure/level5_graders/lab_5.1_grader.py`. May execute: activate venv, cd level5, rasa train; or verify presence of level5/domain, level5/data, level5/config.yml, level5/endpoints.yml with tools, level5/tools/. On success print `PASS`. COMMAND: `/home/codio/workspace/.venv/bin/python3 /home/codio/workspace/.guides/secure/level5_graders/lab_5.1_grader.py`. WD: `/home/codio/workspace`. Expected: `PASS`.
+Grader: `.guides/secure/level5_graders/lab_5.1_grader.py`. **Check 1–3**, Lab 6.2-style; **` PASS: Lab 5.1 verification complete! Score: 10/10`**. Verifies venv, level5 structure, model. COMMAND: venv Python + grader. Sequence: `code-output-compare-501050001.json`.

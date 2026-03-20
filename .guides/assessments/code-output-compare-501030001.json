@@ -4,7 +4,7 @@
 	"source": {
 		"name": "Lab 3.1: Registering Tools in endpoints.yml",
 		"showName": true,
-		"instructions": "Pass the following check:\n\nCheck 1: endpoints.yml has a tools: section and tools_module set to \"tools\".",
+		"instructions": "To pass, all checks must pass:\n\n• Check 1: level5/endpoints.yml exists.\n• Check 2: Top-level tools: section is a mapping.\n• Check 3: tools_module is exactly \"tools\".\n\nFull score: 10/10.",
 		"command": "/home/codio/workspace/.venv/bin/python3 /home/codio/workspace/.guides/secure/level5_graders/lab_3.1_grader.py",
 		"preExecuteCommand": "",
 		"options": {
@@ -33,26 +33,21 @@
 		},
 		"bloomsObjectiveLevel": "",
 		"learningObjectives": "",
-		"guidance": "The grader checks level5/endpoints.yml for a tools: section and tools_module: \"tools\".",
+		"guidance": "Fix endpoints.yml YAML and tools/tools_module per the failed check.",
 		"showGuidanceAfterResponseOption": {
-			"type": "Attempts",
-			"passedFrom": 1
+			"type": "Never"
 		},
 		"maxAttemptsCount": 0,
 		"points": 10,
 		"showExpectedAnswerOption": {
-			"type": "WhenGradesReleased"
+			"type": "Always"
 		},
 		"arePartialPointsAllowed": true,
 		"useMaximumScore": false,
 		"sequence": [
-			{
-				"arguments": "",
-				"input": "",
-				"output": "PASS",
-				"showFeedback": false,
-				"feedback": ""
-			}
+			{ "arguments": "", "input": "", "output": "Check 1: PASSED", "showFeedback": false, "feedback": "" },
+			{ "arguments": "", "input": "", "output": "Check 2: PASSED", "showFeedback": false, "feedback": "" },
+			{ "arguments": "", "input": "", "output": "Check 3: PASSED", "showFeedback": false, "feedback": "" }
 		]
 	}
 }

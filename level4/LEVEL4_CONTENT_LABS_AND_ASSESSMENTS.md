@@ -35,7 +35,7 @@ Create **Level4_Course_Outline.md** in `level4/` with:
 - **Unit 5:** Training and testing → **Lab 5.1** (train from level4), **Lab 5.2** (test transfer in Inspector) (5.1 graded like 6.1; 5.2 optional/ungraded).
 - **Unit 6:** Complete bot walkthrough, summary, what’s next.
 
-**Assessment summary table:** Lab 2.1 (domain), 3.1 (action), 4.1 (flow), 5.1 (train), 5.2 (test); points and types as in Level 3 (LLM Rubric or Standard Code Test with Python grader; substring match for PASS).
+**Assessment summary table:** Lab 2.1 (domain), 3.1 (action), 4.1 (flow), 5.1 (train), 5.2 (test); same Codio pattern as Level 3 Lab 3.1 / Chapter 1.2 Lab 6.2: **sequence** of `Check N: PASSED` substring tests (see `code-output-compare-40102*` – `401050002.json`), not a single `PASS` line.
 
 ---
 

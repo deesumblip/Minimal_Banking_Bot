@@ -52,13 +52,13 @@ This assessment verifies that students can successfully train their Level 4 bot 
 
 The grader runs from **workspace root** (`/home/codio/workspace`): it verifies the venv exists, then checks `level4` for model files. Checks:
 
-1. **Check 0 – Virtual environment** (2 pts): `.venv` exists in workspace root and Python is available.
-2. **Check 1 – Model file exists** (2 pts): at least one `.tar.gz` in `level4/models/`.
-3. **Check 2 – Model recent** (3 pts): newest model is under 10 minutes old (file modification time).
-4. **Check 3 – Logs** (3 pts): if `level4/logs/logs.out` exists, check for error/exception/failed; if no log file, pass.
-5. **Check 4 – Training completed** (2 pts): implied by passing above.
+1. **Check 1 – Virtual environment** (2 pts): `.venv` exists in workspace root and Python is available.
+2. **Check 2 – Model file exists** (2 pts): at least one `.tar.gz` in `level4/models/`.
+3. **Check 3 – Model recent** (3 pts): newest model is under 10 minutes old (warnings / **PARTIAL** if older).
+4. **Check 4 – Logs** (3 pts): if `level4/logs/logs.out` exists, check for error/exception/failed; if no log file, pass (**PARTIAL** if errors suspected).
+5. **Check 5 – Training completed** (2 pts): confirmation step.
 
-**Total: 12 points.** Script must print a line containing `PASS` and `Successfully passed!` on full success. On failure print `FAIL` and exit 1.
+**Total: 12 points.** **Lab 6.2-style:** **` PASS: Lab 4.4 verification complete! Score: 12/12`** and exit **0** only on full score; checks 3–4 may print **⚠️ PARTIAL** (substring `Check N: PASSED` missing → assessment not fully passed).
 
 ### Codio configuration (Standard Code Test)
 
@@ -70,7 +70,7 @@ The grader runs from **workspace root** (`/home/codio/workspace`): it verifies t
    - **Timeout:** `60` seconds
 3. **Grading** tab:
    - **Points:** Set to **12**. Enable **Allow partial points** if desired.
-   - **Test case:** One test case. **EXPECTED OUTPUT:** `PASS`. **Enable substring match**.
+   - **Sequence:** From `code-output-compare-401050001.json`: `Check 1: PASSED` … `Check 5: PASSED`, **`showFeedback`: false**, substring match.
    - **SHOW RATIONALE TO STUDENT:** **AFTER [1] ATTEMPTS** (or **ALWAYS**).
    - **RATIONALE:** The grader verifies the virtual environment in project root, that a model file (`.tar.gz`) exists in `level4/models/`, that the model is recent, and that logs do not show critical errors. Ensure you ran `python -m rasa train` from the `level4` folder with the venv activated.
 4. **Files.** Script at `.guides/secure/level4_graders/lab_5.1_grader.py`; run from workspace.

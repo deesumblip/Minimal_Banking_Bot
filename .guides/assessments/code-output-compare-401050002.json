@@ -4,7 +4,7 @@
 	"source": {
 		"name": "Lab 5.2: Testing the Transfer Flow (Completion Check)",
 		"showName": true,
-		"instructions": "Pass the following check:\n\nCheck 1: Level 4 bot has domain, action file, flow file, and a trained model.",
+		"instructions": "Completion check — all must pass:\n\n• Check 1: Domain has three slots, three ask responses, and action_process_transfer.\n• Check 2: action_process_transfer.py reads all three slots.\n• Check 3: transfer_money.yml has the collect steps and action step.\n• Check 4: Trained model exists in level4/models/.\n\nFull score: 10/10.",
 		"command": "/home/codio/workspace/.venv/bin/python3 /home/codio/workspace/.guides/secure/level4_graders/lab_5.2_grader.py",
 		"preExecuteCommand": "",
 		"options": {
@@ -33,26 +33,22 @@
 		},
 		"bloomsObjectiveLevel": "",
 		"learningObjectives": "",
-		"guidance": "The completion check verifies: (1) domain has transfer slots and ask responses and action_process_transfer, (2) action_process_transfer.py exists and reads the three slots, (3) transfer_money.yml exists with the three collect steps and action step, (4) a model file exists in level4/models/. If any check fails, complete the corresponding lab and re-run training if needed, then run this assessment again.",
+		"guidance": "Complete Labs 4.1–4.4 as needed; train from level4 before re-running.",
 		"showGuidanceAfterResponseOption": {
-			"type": "Attempts",
-			"passedFrom": 1
+			"type": "Never"
 		},
 		"maxAttemptsCount": 0,
 		"points": 10,
 		"showExpectedAnswerOption": {
-			"type": "WhenGradesReleased"
+			"type": "Always"
 		},
 		"arePartialPointsAllowed": true,
 		"useMaximumScore": false,
 		"sequence": [
-			{
-				"arguments": "",
-				"input": "",
-				"output": "PASS",
-				"showFeedback": false,
-				"feedback": ""
-			}
+			{ "arguments": "", "input": "", "output": "Check 1: PASSED", "showFeedback": false, "feedback": "" },
+			{ "arguments": "", "input": "", "output": "Check 2: PASSED", "showFeedback": false, "feedback": "" },
+			{ "arguments": "", "input": "", "output": "Check 3: PASSED", "showFeedback": false, "feedback": "" },
+			{ "arguments": "", "input": "", "output": "Check 4: PASSED", "showFeedback": false, "feedback": "" }
 		]
 	}
 }

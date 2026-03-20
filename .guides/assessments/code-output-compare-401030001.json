@@ -4,7 +4,7 @@
 	"source": {
 		"name": "Lab 3.1: Writing the Action That Uses Multiple Slots",
 		"showName": true,
-		"instructions": "Pass the following check:\n\nCheck 1: action_process_transfer.py is complete and reads slots correctly.",
+		"instructions": "To pass, all checks must pass (Chapter 1.2 Lab 6.2 style output):\n\n• Check 1: level4/actions/action_process_transfer.py exists.\n• Check 2: Correct imports (Action, Tracker, Dispatcher).\n• Check 3: Class ActionProcessTransfer(Action).\n• Check 4: name() returns action_process_transfer.\n• Check 5: run() reads amount, recipient, account_from via get_slot.\n• Check 6: Sends a confirmation message (utter_message).\n\nFull score: 10/10.",
 		"command": "/home/codio/workspace/.venv/bin/python3 /home/codio/workspace/.guides/secure/level4_graders/lab_3.1_grader.py",
 		"preExecuteCommand": "",
 		"options": {
@@ -33,26 +33,24 @@
 		},
 		"bloomsObjectiveLevel": "",
 		"learningObjectives": "",
-		"guidance": "The grader checks that level4/actions/action_process_transfer.py exists and contains: correct imports, class ActionProcessTransfer(Action), name() returning 'action_process_transfer', run() reading amount, recipient, and account_from slots, and sending a confirmation message. Review the script output for which check failed.",
+		"guidance": "Review terminal output for the first failing check; update action_process_transfer.py accordingly.",
 		"showGuidanceAfterResponseOption": {
-			"type": "Attempts",
-			"passedFrom": 1
+			"type": "Never"
 		},
 		"maxAttemptsCount": 0,
 		"points": 10,
 		"showExpectedAnswerOption": {
-			"type": "WhenGradesReleased"
+			"type": "Always"
 		},
 		"arePartialPointsAllowed": true,
 		"useMaximumScore": false,
 		"sequence": [
-			{
-				"arguments": "",
-				"input": "",
-				"output": "PASS",
-				"showFeedback": false,
-				"feedback": ""
-			}
+			{ "arguments": "", "input": "", "output": "Check 1: PASSED", "showFeedback": false, "feedback": "" },
+			{ "arguments": "", "input": "", "output": "Check 2: PASSED", "showFeedback": false, "feedback": "" },
+			{ "arguments": "", "input": "", "output": "Check 3: PASSED", "showFeedback": false, "feedback": "" },
+			{ "arguments": "", "input": "", "output": "Check 4: PASSED", "showFeedback": false, "feedback": "" },
+			{ "arguments": "", "input": "", "output": "Check 5: PASSED", "showFeedback": false, "feedback": "" },
+			{ "arguments": "", "input": "", "output": "Check 6: PASSED", "showFeedback": false, "feedback": "" }
 		]
 	}
 }

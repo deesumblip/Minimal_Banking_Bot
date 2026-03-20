@@ -38,7 +38,7 @@ This assessment verifies that the student has added the slots `amount`, `recipie
 
 ### Option B: Standard Code Test (Python script)
 
-Use a Python grader for faster feedback. The script parses `level4/domain/basics.yml` and checks: file exists and is valid YAML; `slots:` section contains `amount`, `recipient`, `account_from` (each type text or equivalent); `responses:` contains `utter_ask_amount`, `utter_ask_recipient`, `utter_ask_account_from` with at least one text message each; `action_process_transfer` in the `actions:` list. Total: 10 points. On full score it prints `PASS` and `Successfully passed!`; otherwise `FAIL` and exit 1.
+Use a Python grader for faster feedback. Output matches the **Chapter 1.2 Lab 6.2** template (same as **Level 3 Lab 3.1**): **Check 1–4** (1-based), leading space on pass lines (` Check N: PASSED - …`), **==========================================** score band, **` PASS: Lab 4.1 verification complete! Score: 10/10`** on full pass; exit **0** only on **10/10**. The script parses `level4/domain/basics.yml` and checks: file exists; valid YAML; `slots:` contains `amount`, `recipient`, `account_from`; `responses:` has the three ask utterances with text; `action_process_transfer` in `actions:`.
 
 **Grader script location (in repo):**
 
@@ -56,7 +56,7 @@ Use a Python grader for faster feedback. The script parses `level4/domain/basics
    - **Timeout:** `60` seconds
 3. **Grading** tab:
    - **Points:** Set to **10**. Enable **Allow partial points** if desired.
-   - **Test case:** One test case. **EXPECTED OUTPUT:** `PASS`. **Enable substring match** so Codio passes when `PASS` appears in the output.
+   - **Sequence:** Re-import from `.guides/assessments/code-output-compare-401020001.json`: four substring matches `Check 1: PASSED` … `Check 4: PASSED`, each **`showFeedback`: false**. **`matchSubstring`: true**. **`showGuidanceAfterResponseOption`:** **Never**; **`showExpectedAnswerOption`:** **Always** (matches Lab 3.1 / Lab 6.2).
    - **SHOW RATIONALE TO STUDENT:** **AFTER [1] ATTEMPTS** (or **ALWAYS**).
    - **RATIONALE:** The grader checks that `level4/domain/basics.yml` exists, is valid YAML, and contains: **slots:** with **amount**, **recipient**, **account_from** (type text), the **utter_ask_amount**, **utter_ask_recipient**, **utter_ask_account_from** responses with at least one message each, and **action_process_transfer** in the **actions:** list. Review the script output for which check failed.
 4. **Files.** Script at `.guides/secure/level4_graders/lab_2.1_grader.py`; run from workspace so `git pull` keeps it in sync.

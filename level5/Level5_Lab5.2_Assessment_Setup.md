@@ -22,4 +22,4 @@ Verifies all Level 5 artifacts: level5/tools/ and banking_tools.py with __all__;
 
 ### Code Test
 
-Grader: `.guides/secure/level5_graders/lab_5.2_grader.py`. Checks all of the above. On full pass print `PASS`. COMMAND: `/home/codio/workspace/.venv/bin/python3 /home/codio/workspace/.guides/secure/level5_graders/lab_5.2_grader.py`. WD: `/home/codio/workspace`. Expected: `PASS`.
+Grader: `.guides/secure/level5_graders/lab_5.2_grader.py`. **Check 1–4** (Check 4 may be **PARTIAL** if domain OK but no model). **` PASS: Lab 5.2 completion check passed! Score: 10/10`**. Sequence: `code-output-compare-501050002.json`.

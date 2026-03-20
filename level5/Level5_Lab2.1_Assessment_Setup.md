@@ -26,4 +26,4 @@ Use solution reference `.guides/secure/level5_graders/lab_2.1_solution_reference
 
 ### Option B: Code Test
 
-Python grader at `.guides/secure/level5_graders/lab_2.1_grader.py`. Checks: level5/tools/ exists; level5/tools/banking_tools.py exists; file contains "check_balance", "process_transfer", "get_account_info", "__all__". COMMAND: `/home/codio/workspace/.venv/bin/python3 /home/codio/workspace/.guides/secure/level5_graders/lab_2.1_grader.py`. Working Directory: `/home/codio/workspace`. Expected output: `PASS` (substring match).
+Python grader at `.guides/secure/level5_graders/lab_2.1_grader.py`. **Lab 6.2-style:** **Check 1–4** with leading space on ` Check N: PASSED` lines, score band, **` PASS: Lab 2.1 verification complete! Score: 10/10`**. COMMAND: `/home/codio/workspace/.venv/bin/python3 /home/codio/workspace/.guides/secure/level5_graders/lab_2.1_grader.py`. WD: `/home/codio/workspace`. Codio: import sequence from `code-output-compare-501020001.json` (`Check 1: PASSED` … `Check 4: PASSED`, **`showFeedback`: false**).

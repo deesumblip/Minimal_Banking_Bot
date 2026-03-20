@@ -13,7 +13,7 @@
 ## Assessment Setup (For Implementers)
 
 **COMMAND:** `/home/codio/workspace/.venv/bin/python3 /home/codio/workspace/.guides/secure/level6_graders/lab_5.1_grader.py`  
-**Working Directory:** `/home/codio/workspace`. **Expected output:** `PASS`.  
-**Grader:** `.guides/secure/level6_graders/lab_5.1_grader.py`. **Points:** 10.
+**Working Directory:** `/home/codio/workspace`. **Sequence:** `code-output-compare-501060004.json` (`Check 1`–`Check 2: PASSED`).  
+**Grader:** `.guides/secure/level6_graders/lab_5.1_grader.py`. **Points:** 10. Full pass: **` PASS: Lab 5.1 verification complete! Score: 10/10`**.
 
-**Verifies:** level6/models/ exists and contains at least one model (tar.gz) or equivalent success indicator.
+**Verifies:** level6/models/ and at least one `.tar.gz`.

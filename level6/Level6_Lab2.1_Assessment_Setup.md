@@ -13,7 +13,7 @@
 ## Assessment Setup (For Implementers)
 
 **COMMAND:** `/home/codio/workspace/.venv/bin/python3 /home/codio/workspace/.guides/secure/level6_graders/lab_2.1_grader.py`  
-**Working Directory:** `/home/codio/workspace`. **Expected output:** `PASS` (substring match).  
-**Grader:** `.guides/secure/level6_graders/lab_2.1_grader.py`. **Points:** 10.
+**Working Directory:** `/home/codio/workspace`. **Codio sequence:** `code-output-compare-501060001.json` — `Check 1: PASSED` … `Check 4: PASSED`, substring match, **`showFeedback`: false**.  
+**Grader:** `.guides/secure/level6_graders/lab_2.1_grader.py`. **Points:** 10. Full pass: **` PASS: Lab 2.1 verification complete! Score: 10/10`**.
 
-**Verifies:** level6/sub_agents/banking_assistant/config.yml exists; file contains agent name banking_assistant, protocol RASA, and mcp_servers (or connections.mcp_servers).
+**Verifies:** config exists; banking_assistant; protocol; mcp_servers.

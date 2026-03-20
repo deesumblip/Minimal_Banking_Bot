@@ -4,7 +4,7 @@
 	"source": {
 		"name": "Lab 5.2: Completion Check Level 6",
 		"showName": true,
-		"instructions": "Pass the following check:\n\nCheck 1: All Level 6 artifacts are in place (sub_agents config, mcp_servers, ask_banking_assistant flow).",
+		"instructions": "Completion check — all must pass:\n\n• Check 1: Sub-agent config.yml exists.\n• Check 2: level6/endpoints.yml exists and contains mcp_servers.\n• Check 3: ask_banking_assistant.yml exists with call: banking_assistant.\n\nFull score: 10/10.",
 		"command": "/home/codio/workspace/.venv/bin/python3 /home/codio/workspace/.guides/secure/level6_graders/lab_5.2_grader.py",
 		"preExecuteCommand": "",
 		"options": {
@@ -33,26 +33,21 @@
 		},
 		"bloomsObjectiveLevel": "",
 		"learningObjectives": "",
-		"guidance": "The grader verifies all Level 6 artifacts: sub_agents config, endpoints mcp_servers, ask_banking_assistant flow. Run from workspace root.",
+		"guidance": "Complete prior Level 6 labs so config, endpoints, and flow are in place.",
 		"showGuidanceAfterResponseOption": {
-			"type": "Attempts",
-			"passedFrom": 1
+			"type": "Never"
 		},
 		"maxAttemptsCount": 0,
 		"points": 10,
 		"showExpectedAnswerOption": {
-			"type": "WhenGradesReleased"
+			"type": "Always"
 		},
 		"arePartialPointsAllowed": true,
 		"useMaximumScore": false,
 		"sequence": [
-			{
-				"arguments": "",
-				"input": "",
-				"output": "PASS",
-				"showFeedback": false,
-				"feedback": ""
-			}
+			{ "arguments": "", "input": "", "output": "Check 1: PASSED", "showFeedback": false, "feedback": "" },
+			{ "arguments": "", "input": "", "output": "Check 2: PASSED", "showFeedback": false, "feedback": "" },
+			{ "arguments": "", "input": "", "output": "Check 3: PASSED", "showFeedback": false, "feedback": "" }
 		]
 	}
 }

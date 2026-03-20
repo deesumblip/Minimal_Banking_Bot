@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """
 Lab 4.3: Creating the Transfer Flow - Grader Script
+Output format matches Chapter 1.2 Lab 6.2 template.
+
 Checks level4/data/basics/transfer_money.yml for: file exists, valid YAML with flows:,
 flow with collect: amount, collect: recipient, collect: account_from, action: action_process_transfer.
 Runs from workspace root; expects /home/codio/workspace.
@@ -25,14 +27,17 @@ max_score = 8
 print("Running Lab 4.3 Assessment Checks...")
 print("")
 
-# Check 0: File exists (2 points)
-print("Check 0: Verifying transfer_money.yml exists...")
+# Check 1: File exists (2 points)
+print("Check 1: Verifying transfer_money.yml exists...")
 if not FLOW_PATH.exists():
-    print("❌ Check 0: FAILED - level4/data/basics/transfer_money.yml not found (0 points)")
-    print("Hint: Create the file in level4/data/basics/ with a flow that has collect amount, recipient, account_from and action: action_process_transfer")
+    print("❌ Check 1: FAILED - level4/data/basics/transfer_money.yml not found (0 points)")
+    print(
+        "Hint: Create the file in level4/data/basics/ with a flow that has collect amount, "
+        "recipient, account_from and action: action_process_transfer"
+    )
     print("FAIL")
     sys.exit(1)
-print("✅ Check 0: PASSED - file exists (2 points)")
+print(" Check 1: PASSED - file exists (2 points)")
 score += 2
 print("")
 
@@ -52,24 +57,25 @@ if not isinstance(data, dict):
 
 flows = data.get("flows")
 if not isinstance(flows, dict) or not flows:
-    print("❌ Check 1: FAILED - No top-level 'flows:' section or it is empty (0 points)")
+    print("❌ Check 2: FAILED - No top-level 'flows:' section or it is empty (0 points)")
     print("FAIL")
     sys.exit(1)
 
-# Check 1: flows with name and steps (2 points)
+# Check 2: flows with name and steps (2 points)
 has_valid_flow = False
 for flow_def in flows.values():
     if isinstance(flow_def, dict) and "name" in flow_def and "steps" in flow_def:
         has_valid_flow = True
         break
+print("Check 2: Verifying flows structure...")
 if has_valid_flow:
-    print("✅ Check 1: PASSED - flows: with at least one flow (name, steps) (2 points)")
+    print(" Check 2: PASSED - flows: with at least one flow (name, steps) (2 points)")
     score += 2
 else:
-    print("❌ Check 1: FAILED - At least one flow must have 'name' and 'steps' (0 points)")
+    print("❌ Check 2: FAILED - At least one flow must have 'name' and 'steps' (0 points)")
 print("")
 
-# Check 2: collect amount, recipient, account_from (2 points)
+# Check 3: collect amount, recipient, account_from (2 points)
 collect_required = {"amount", "recipient", "account_from"}
 collect_found = set()
 for flow_def in flows.values() if isinstance(flows, dict) else []:
@@ -79,16 +85,17 @@ for flow_def in flows.values() if isinstance(flows, dict) else []:
     for step in steps:
         if isinstance(step, dict) and "collect" in step:
             collect_found.add(step.get("collect"))
+print("Check 3: Verifying collect steps...")
 if collect_required.issubset(collect_found):
-    print("✅ Check 2: PASSED - collect: amount, recipient, account_from found (2 points)")
+    print(" Check 3: PASSED - collect: amount, recipient, account_from found (2 points)")
     score += 2
 else:
     missing = collect_required - collect_found
-    print(f"❌ Check 2: FAILED - Missing collect steps: {missing} (0 points)")
+    print(f"❌ Check 3: FAILED - Missing collect steps: {missing} (0 points)")
     print("Hint: Add steps with collect: amount, collect: recipient, collect: account_from")
 print("")
 
-# Check 3: action: action_process_transfer (2 points)
+# Check 4: action: action_process_transfer (2 points)
 has_action = False
 for flow_def in flows.values() if isinstance(flows, dict) else []:
     if not isinstance(flow_def, dict):
@@ -99,24 +106,29 @@ for flow_def in flows.values() if isinstance(flows, dict) else []:
             break
     if has_action:
         break
+print("Check 4: Verifying action step...")
 if has_action:
-    print("✅ Check 3: PASSED - action: action_process_transfer found (2 points)")
+    print(" Check 4: PASSED - action: action_process_transfer found (2 points)")
     score += 2
 else:
-    print("❌ Check 3: FAILED - No step with 'action: action_process_transfer' (0 points)")
+    print("❌ Check 4: FAILED - No step with 'action: action_process_transfer' (0 points)")
     print("Hint: Add a step with action: action_process_transfer")
 print("")
 
 # Summary
-print("=" * 50)
+print("==========================================")
 if score >= max_score:
-    print(f"✅ PASS: Lab 4.3 verification complete! Score: {score}/{max_score}")
-    print("PASS")
-    print("Successfully passed!")
-    print("=" * 50)
-    sys.exit(0)
+    print(f" PASS: Lab 4.3 verification complete! Score: {score}/{max_score}")
 else:
-    print(f"❌ FAIL: Score {score}/{max_score}. Review the failed checks above.")
-    print("FAIL")
-    print("=" * 50)
-    sys.exit(1)
+    print(f"❌ FAIL: Score {score}/{max_score} - Review the failed checks above and try again.")
+print("==========================================")
+print("")
+print(
+    "Summary: Check 1 (file exists) | Check 2 (flows structure) | "
+    "Check 3 (collect steps) | Check 4 (action_process_transfer)"
+)
+print(f"Score: {score}/{max_score}")
+
+if score >= max_score:
+    sys.exit(0)
+sys.exit(1)

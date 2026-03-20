@@ -37,7 +37,7 @@ The grader runs from **workspace root** (`/home/codio/workspace`). It performs t
 3. **Flow file** (2 pts): `level4/data/basics/transfer_money.yml` exists with valid YAML, collect amount/recipient/account_from, and action action_process_transfer.
 4. **Model** (2 pts): at least one `.tar.gz` in `level4/models/`.
 
-**Total: 10 points.** Script prints `PASS` and `Successfully passed!` on full success; otherwise `FAIL` and exit 1. This allows every Level 4 lab to be evaluated without requiring a live Inspector session.
+**Total: 10 points.** **Lab 6.2-style:** **Check 1–4**, **` PASS: Lab 4.5 completion check passed! Score: 10/10`** on full pass; exit **0** only on full score.
 
 ### Codio configuration (Standard Code Test)
 
@@ -49,7 +49,7 @@ The grader runs from **workspace root** (`/home/codio/workspace`). It performs t
    - **Timeout:** `60` seconds
 3. **Grading** tab:
    - **Points:** Set to **10**. Enable **Allow partial points** if desired.
-   - **Test case:** One test case. **EXPECTED OUTPUT:** `PASS`. **Enable substring match**.
+   - **Sequence:** From `code-output-compare-401050002.json`: `Check 1: PASSED` … `Check 4: PASSED`, **`showFeedback`: false**, substring match.
    - **SHOW RATIONALE TO STUDENT:** **AFTER [1] ATTEMPTS** (or **ALWAYS**).
    - **RATIONALE:** The completion check verifies that your Level 4 bot has: the domain updated with transfer slots and ask responses and action_process_transfer, the action file that reads the three slots, the transfer_money flow file, and a trained model. If any check fails, complete the corresponding lab (4.1–4.4) and re-run training if needed, then run this assessment again.
 4. **Files.** Script at `.guides/secure/level4_graders/lab_5.2_grader.py`; run from workspace.

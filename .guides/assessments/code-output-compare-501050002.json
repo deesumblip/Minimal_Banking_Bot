@@ -4,7 +4,7 @@
 	"source": {
 		"name": "Lab 5.2: Testing Tool Calling / Completion Check",
 		"showName": true,
-		"instructions": "Pass the following check:\n\nCheck 1: All Level 5 artifacts are in place (tools/, endpoints.yml, transfer_money_tools flow, action, domain, model).",
+		"instructions": "Completion check — all must pass for full Codio score:\n\n• Check 1: tools/ and banking_tools.py with __all__ and tool functions.\n• Check 2: endpoints.yml tools_module: \"tools\".\n• Check 3: transfer_money_tools flow and action_process_transfer_with_tools.py.\n• Check 4: Domain lists the action and model exists (PARTIAL if domain OK but no model).\n\nFull score: 10/10.",
 		"command": "/home/codio/workspace/.venv/bin/python3 /home/codio/workspace/.guides/secure/level5_graders/lab_5.2_grader.py",
 		"preExecuteCommand": "",
 		"options": {
@@ -33,26 +33,22 @@
 		},
 		"bloomsObjectiveLevel": "",
 		"learningObjectives": "",
-		"guidance": "The grader verifies all Level 5 artifacts: tools/, endpoints.yml, transfer_money_tools flow, action, domain, and model.",
+		"guidance": "Train from level5 if Check 4 is partial; full pass requires Check 4: PASSED.",
 		"showGuidanceAfterResponseOption": {
-			"type": "Attempts",
-			"passedFrom": 1
+			"type": "Never"
 		},
 		"maxAttemptsCount": 0,
 		"points": 10,
 		"showExpectedAnswerOption": {
-			"type": "WhenGradesReleased"
+			"type": "Always"
 		},
 		"arePartialPointsAllowed": true,
 		"useMaximumScore": false,
 		"sequence": [
-			{
-				"arguments": "",
-				"input": "",
-				"output": "PASS",
-				"showFeedback": false,
-				"feedback": ""
-			}
+			{ "arguments": "", "input": "", "output": "Check 1: PASSED", "showFeedback": false, "feedback": "" },
+			{ "arguments": "", "input": "", "output": "Check 2: PASSED", "showFeedback": false, "feedback": "" },
+			{ "arguments": "", "input": "", "output": "Check 3: PASSED", "showFeedback": false, "feedback": "" },
+			{ "arguments": "", "input": "", "output": "Check 4: PASSED", "showFeedback": false, "feedback": "" }
 		]
 	}
 }

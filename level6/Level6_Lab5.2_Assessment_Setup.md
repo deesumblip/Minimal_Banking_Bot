@@ -13,7 +13,7 @@
 ## Assessment Setup (For Implementers)
 
 **COMMAND:** `/home/codio/workspace/.venv/bin/python3 /home/codio/workspace/.guides/secure/level6_graders/lab_5.2_grader.py`  
-**Working Directory:** `/home/codio/workspace`. **Expected output:** `PASS`.  
-**Grader:** `.guides/secure/level6_graders/lab_5.2_grader.py`. **Points:** 10.
+**Working Directory:** `/home/codio/workspace`. **Sequence:** `code-output-compare-501060005.json` (`Check 1`–`Check 3: PASSED`).  
+**Grader:** `.guides/secure/level6_graders/lab_5.2_grader.py`. **Points:** 10. Full pass: **` PASS: Lab 5.2 completion check passed! Score: 10/10`**.
 
-**Verifies:** All Level 6 artifacts: level6/sub_agents/banking_assistant/config.yml; level6/endpoints.yml mcp_servers; level6/data/basics/ask_banking_assistant.yml with call: banking_assistant; optionally level6/models/.
+**Verifies:** sub-agent config; endpoints mcp_servers; ask_banking_assistant flow with call step.

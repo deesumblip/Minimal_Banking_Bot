@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """
 Lab 4.2: Writing the Action That Uses Multiple Slots - Grader Script
+Output format matches Chapter 1.2 Lab 6.2 template (leading space on PASSED lines,
+no emoji on pass; ❌ on fail; ========== summary band; exit 0 only on full score).
+
 Checks level4/actions/action_process_transfer.py for: correct class, name(),
 run() reading amount, recipient, account_from slots, and sending a message.
 Runs from workspace root; expects /home/codio/workspace.
@@ -19,14 +22,14 @@ max_score = 10
 print("Running Lab 4.2 Assessment Checks...")
 print("")
 
-# Check 0: Action file exists
-print("Check 0: Verifying action file exists...")
+# Check 1: Action file exists
+print("Check 1: Verifying action file exists...")
 if not ACTION_PATH.exists():
-    print("❌ Check 0: FAILED - level4/actions/action_process_transfer.py not found (0 points)")
+    print("❌ Check 1: FAILED - level4/actions/action_process_transfer.py not found (0 points)")
     print("Hint: Create the file in level4/actions/ with the name action_process_transfer.py")
     print("FAIL")
     sys.exit(1)
-print("✅ Check 0: PASSED - action file exists")
+print(" Check 1: PASSED - action file exists (1 point)")
 score += 1
 print("")
 
@@ -40,75 +43,87 @@ except Exception as e:
 
 content_lower = content.lower()
 
-# Check 1: Required imports (2 points)
-print("Check 1: Verifying imports...")
+# Check 2: Required imports (2 points)
+print("Check 2: Verifying imports...")
 has_action = "action" in content_lower and "rasa_sdk" in content
 has_tracker = "tracker" in content_lower and "rasa_sdk" in content
 has_dispatcher = "collectingdispatcher" in content_lower or "dispatcher" in content_lower
 if has_action and has_tracker and has_dispatcher:
-    print("✅ Check 1: PASSED - Action, Tracker, and CollectingDispatcher present (2 points)")
+    print(" Check 2: PASSED - Action, Tracker, and CollectingDispatcher present (2 points)")
     score += 2
 else:
-    print("❌ Check 1: FAILED - Missing or incorrect imports (0 points)")
+    print("❌ Check 2: FAILED - Missing or incorrect imports (0 points)")
     print("Hint: Import Action, Tracker from rasa_sdk and CollectingDispatcher from rasa_sdk.executor")
 print("")
 
-# Check 2: Class ActionProcessTransfer(Action) (1 point)
-print("Check 2: Verifying class definition...")
+# Check 3: Class ActionProcessTransfer(Action) (1 point)
+print("Check 3: Verifying class definition...")
 if re.search(r"class\s+ActionProcessTransfer\s*\(\s*Action\s*\)", content):
-    print("✅ Check 2: PASSED - ActionProcessTransfer(Action) found (1 point)")
+    print(" Check 3: PASSED - ActionProcessTransfer(Action) found (1 point)")
     score += 1
 else:
-    print("❌ Check 2: FAILED - Class ActionProcessTransfer(Action) not found (0 points)")
+    print("❌ Check 3: FAILED - Class ActionProcessTransfer(Action) not found (0 points)")
 print("")
 
-# Check 3: name() returns "action_process_transfer" (1 point)
-print("Check 3: Verifying name() method...")
+# Check 4: name() returns "action_process_transfer" (1 point)
+print("Check 4: Verifying name() method...")
 if re.search(r'return\s+["\']action_process_transfer["\']', content) or (
     "action_process_transfer" in content and "def name" in content_lower
 ):
-    print("✅ Check 3: PASSED - name() returns 'action_process_transfer' (1 point)")
+    print(" Check 4: PASSED - name() returns 'action_process_transfer' (1 point)")
     score += 1
 else:
-    print("❌ Check 3: FAILED - name() must return the string 'action_process_transfer' (0 points)")
+    print("❌ Check 4: FAILED - name() must return the string 'action_process_transfer' (0 points)")
 print("")
 
-# Check 4: run() reads all three slots (3 points)
-print("Check 4: Verifying run() reads amount, recipient, account_from...")
+# Check 5: run() reads all three slots (3 points)
+print("Check 5: Verifying run() reads amount, recipient, account_from...")
 has_amount = "get_slot" in content and ('"amount"' in content or "'amount'" in content)
 has_recipient = "recipient" in content and "get_slot" in content
 has_account_from = "account_from" in content and "get_slot" in content
 if has_amount and has_recipient and has_account_from:
-    print("✅ Check 4: PASSED - run() reads amount, recipient, account_from (3 points)")
+    print(" Check 5: PASSED - run() reads amount, recipient, account_from (3 points)")
     score += 3
 else:
     missing = []
-    if not has_amount: missing.append("amount")
-    if not has_recipient: missing.append("recipient")
-    if not has_account_from: missing.append("account_from")
-    print(f"❌ Check 4: FAILED - run() must read all three slots; missing or unclear: {missing} (0 points)")
+    if not has_amount:
+        missing.append("amount")
+    if not has_recipient:
+        missing.append("recipient")
+    if not has_account_from:
+        missing.append("account_from")
+    print(f"❌ Check 5: FAILED - run() must read all three slots; missing or unclear: {missing} (0 points)")
     print("Hint: amount = tracker.get_slot('amount') or ''; same for recipient and account_from")
 print("")
 
-# Check 5: Sends a message (1 point)
-print("Check 5: Verifying confirmation message...")
-if "utter_message" in content_lower and ("transfer" in content_lower or "amount" in content or "recipient" in content):
-    print("✅ Check 5: PASSED - Sends a message (e.g. transfer confirmation) (1 point)")
-    score += 1
+# Check 6: Sends a message (2 points total remainder: was 1pt — keep 2 pts for max 10)
+print("Check 6: Verifying confirmation message...")
+if "utter_message" in content_lower and (
+    "transfer" in content_lower or "amount" in content or "recipient" in content
+):
+    print(" Check 6: PASSED - Sends a message (e.g. transfer confirmation) (2 points)")
+    score += 2
 else:
-    print("❌ Check 5: FAILED - When slots are valid, send a message (dispatcher.utter_message(text=...)) (0 points)")
+    print(
+        "❌ Check 6: FAILED - When slots are valid, send a message "
+        "(dispatcher.utter_message(text=...)) (0 points)"
+    )
 print("")
 
 # Summary
-print("=" * 50)
+print("==========================================")
 if score >= max_score:
-    print(f"✅ PASS: Lab 4.2 verification complete! Score: {score}/{max_score}")
-    print("PASS")
-    print("Successfully passed!")
-    print("=" * 50)
-    sys.exit(0)
+    print(f" PASS: Lab 4.2 verification complete! Score: {score}/{max_score}")
 else:
-    print(f"❌ FAIL: Score {score}/{max_score}. Review the failed checks above.")
-    print("FAIL")
-    print("=" * 50)
-    sys.exit(1)
+    print(f"❌ FAIL: Score {score}/{max_score} - Review the failed checks above and try again.")
+print("==========================================")
+print("")
+print(
+    "Summary: Check 1 (action file) | Check 2 (imports) | Check 3 (class) | "
+    "Check 4 (name) | Check 5 (run slots) | Check 6 (utter_message)"
+)
+print(f"Score: {score}/{max_score}")
+
+if score >= max_score:
+    sys.exit(0)
+sys.exit(1)

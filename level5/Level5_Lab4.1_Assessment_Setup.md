@@ -26,4 +26,4 @@ Solution: `.guides/secure/level5_graders/lab_4.1_solution_reference.md`. Criteri
 
 ### Option B: Code Test
 
-Grader: `.guides/secure/level5_graders/lab_4.1_grader.py`. Checks file existence and content (flow steps, action name, domain actions). COMMAND: `/home/codio/workspace/.venv/bin/python3 /home/codio/workspace/.guides/secure/level5_graders/lab_4.1_grader.py`. WD: `/home/codio/workspace`. Expected: `PASS`.
+Grader: `.guides/secure/level5_graders/lab_4.1_grader.py`. **Check 1–4**, Lab 6.2-style; **` PASS: Lab 4.1 verification complete! Score: 10/10`**. COMMAND: venv Python + grader. Sequence: `code-output-compare-501040001.json`.
