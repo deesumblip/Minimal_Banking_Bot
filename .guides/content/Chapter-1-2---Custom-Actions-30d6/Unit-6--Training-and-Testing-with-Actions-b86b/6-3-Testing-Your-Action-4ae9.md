@@ -1,4 +1,4 @@
-You can use Rasa Inspector as in **Lab 5.1** (optional) or **Lab 6.2** (optional section) to explore your bot. This section formalizes the testing workflow and provides a complete checklist to verify all your flows and actions work correctly.
+You can use Rasa Inspector as in **Lab 5.1** (optional) or **Lab 6.2** to explore your bot. This section formalizes the testing workflow and provides a complete checklist to verify all your flows and actions work correctly.
 
 **Setup reminder**: If you need to review Inspector setup (go to main folder → activate virtual environment → `cd level2` → train → start Inspector), see **Lab 6.2** for the full step-by-step instructions.
 

@@ -1,19 +1,21 @@
 {
-	"id": "c524d8d9-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-	"title": "1.2 How Actions Work",
-	"files": [
-		{
-			"path": "",
-			"panel": 1,
-			"action": "open"
-		}
-	],
-	"layout": "2-panels-tree-guides-left",
-	"path": ["level2"],
-	"type": "page",
-	"contentType": "markdown",
-	"content": "",
-	"teacherOnly": false,
-	"closeTerminalSession": true,
-	"learningObjectives": ""
+  "id": "c524d8d9-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+  "title": "1.2 How Actions Work",
+  "files": [
+    {
+      "path": "",
+      "panel": 1,
+      "action": "open"
+    }
+  ],
+  "layout": "2-panels-tree-guides-left",
+  "path": [
+    "level2"
+  ],
+  "type": "page",
+  "contentType": "markdown",
+  "content": "",
+  "teacherOnly": false,
+  "closeTerminalSession": true,
+  "learningObjectives": ""
 }

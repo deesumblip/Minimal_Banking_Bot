@@ -108,6 +108,10 @@ This gives you full control but is slower when you change many sections. The scr
 
 The sync script maps these files into the Unit folders and sets the page order in each unit’s `index.json` so that the Codio order matches the course outline. No need to manually split or merge unless you want a different page structure.
 
+**Lab numbering vs. unit:** The middle number in `Level2_Lab*.*_Content.md` sets which **unit** the page lands in (`int` of the major number, e.g. `6.2` → Unit **6**). Use **`Level2_Lab6.2_Content.md`** for *Lab 6.2* (Verify Domain and Training), not `Level2_Lab4.2_*` (that would place the page in Unit 4).
+
+After `python sync_level2_to_codio.py`, old page files whose slugs are no longer in `index.json` are removed automatically so you don’t accumulate duplicate filenames (e.g. after renames).
+
 ---
 
 ## Level 1 content

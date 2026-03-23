@@ -1,19 +1,21 @@
 {
-	"id": "bb1d24b2-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-	"title": "0.2 What Level 2 Adds",
-	"files": [
-		{
-			"path": "",
-			"panel": 1,
-			"action": "open"
-		}
-	],
-	"layout": "2-panels-tree-guides-left",
-	"path": ["level2"],
-	"type": "page",
-	"contentType": "markdown",
-	"content": "",
-	"teacherOnly": false,
-	"closeTerminalSession": true,
-	"learningObjectives": ""
+  "id": "bb1d24b2-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+  "title": "0.2 What Level 2 Adds",
+  "files": [
+    {
+      "path": "",
+      "panel": 1,
+      "action": "open"
+    }
+  ],
+  "layout": "2-panels-tree-guides-left",
+  "path": [
+    "level2"
+  ],
+  "type": "page",
+  "contentType": "markdown",
+  "content": "",
+  "teacherOnly": false,
+  "closeTerminalSession": true,
+  "learningObjectives": ""
 }

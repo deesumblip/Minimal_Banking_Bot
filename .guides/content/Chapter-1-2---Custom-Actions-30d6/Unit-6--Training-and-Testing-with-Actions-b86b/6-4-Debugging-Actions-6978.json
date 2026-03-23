@@ -1,19 +1,21 @@
 {
-	"id": "002d06c9-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-	"title": "6.4 Debugging Actions",
-	"files": [
-		{
-			"path": "#terminal",
-			"panel": 1,
-			"action": "open"
-		}
-	],
-	"layout": "2-panels-tree-guides-left",
-	"path": ["level2"],
-	"type": "page",
-	"contentType": "markdown",
-	"content": "",
-	"teacherOnly": false,
-	"closeTerminalSession": true,
-	"learningObjectives": ""
+  "id": "002d06c9-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+  "title": "6.4 Debugging Actions",
+  "files": [
+    {
+      "path": "#terminal",
+      "panel": 1,
+      "action": "open"
+    }
+  ],
+  "layout": "2-panels-tree-guides-left",
+  "path": [
+    "level2"
+  ],
+  "type": "page",
+  "contentType": "markdown",
+  "content": "",
+  "teacherOnly": false,
+  "closeTerminalSession": true,
+  "learningObjectives": ""
 }

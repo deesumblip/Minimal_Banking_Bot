@@ -22,6 +22,4 @@ When testing in Inspector, check the debug panel:
    - Verify all imports are correct
    - Check for typos in method names
 
-**Next:** Run **Lab 6.2** (earlier in this unit, right after Lab 6.1) to verify that both your domain registration and your trained model are correct.
-
 ---

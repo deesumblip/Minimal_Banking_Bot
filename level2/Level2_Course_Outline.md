@@ -288,7 +288,7 @@ Content is split by subsection (one file per numbered subsection). Examples:
 ### Assessment Files (Implementation Instructions)
 - `Level2_Lab3.1_Content.md` / `Level2_Lab3.1_Assessment_Setup.md` - Lab 3.1 (student page + implementer doc)
 - `Level2_Lab4.1_Content.md` / `Level2_Lab4.1_Assessment_Setup.md` – Lab 4.1
-- `Level2_Lab4.2_Content.md` / `Level2_Lab4.2_Assessment_Setup.md` – Lab 6.2 (Verify Domain and Training)
+- `Level2_Lab6.2_Content.md` / `Level2_Lab6.2_Assessment_Setup.md` – Lab 6.2 (Verify Domain and Training)
 - `Level2_Lab5.1_Content.md` / `Level2_Lab5.1_Assessment_Setup.md` - Lab 5.1
 - `Level2_Lab6.1_Content.md` / `Level2_Lab6.1_Assessment_Setup.md` - Lab 6.1
 

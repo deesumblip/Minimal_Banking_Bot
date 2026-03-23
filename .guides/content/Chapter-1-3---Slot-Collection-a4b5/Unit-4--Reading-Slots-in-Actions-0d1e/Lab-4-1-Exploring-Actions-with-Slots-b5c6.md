@@ -29,5 +29,3 @@ The grader checks that the file exists, has the right structure, reads the `acco
 ### Optional
 
 After Lab 6.1, train and run Inspector. Trigger the check_balance flow and watch the action use the slot and re-ask when the LLM extracts a placeholder.
-
-**Instructor answer key** (blanks and full script): `level3/Level3_Lab4.1_Assessment_Setup.md`.

@@ -29,5 +29,3 @@ The grader checks that the file exists, has the right structure, reads the `amou
 ### Optional
 
 After Lab 5.1, train and run Inspector. Trigger the transfer flow and provide amount, recipient, and source account; watch the action send the confirmation.
-
-**Instructor answer key** (blanks and full script): `level4/Level4_Lab3.1_Assessment_Setup.md` and `level4/Level4_Lab3.1_Content.md`.

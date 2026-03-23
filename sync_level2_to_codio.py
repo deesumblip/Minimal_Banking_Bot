@@ -20,7 +20,7 @@ GUIDES_CONTENT = REPO_ROOT / ".guides" / "content"
 # Level 2 lives inside this existing Codio chapter (do not create a new chapter)
 LEVEL2_CHAPTER_FOLDER = "Chapter-1-2---Custom-Actions-30d6"
 # Stable slug ids for lab content pages (so we overwrite same Codio page and preserve assessment JSON)
-LAB_CONTENT_SLUG_IDS = {"3.1": "04c0", "4.1": "3406", "4.2": "2289", "5.1": "e512", "6.1": "7710"}
+LAB_CONTENT_SLUG_IDS = {"3.1": "04c0", "4.1": "3406", "5.1": "e512", "6.1": "7710", "6.2": "2289"}
 UNIT_TITLES = {
     0: "Recap--What-You-Built-in-Level-1",
     1: "Introduction-to-Actions",
@@ -194,6 +194,26 @@ def _default_page_meta(md_path: Path, slug: str, title: str) -> dict:
     }
 
 
+def cleanup_orphan_unit_pages(chapter_dir: Path) -> int:
+    """Remove *.md and *.json in each unit folder that are not in that unit's index.json ``order``."""
+    removed = 0
+    for unit in chapter_dir.iterdir():
+        if not unit.is_dir() or unit.name.startswith(".") or unit.name == "Lab-Implementation":
+            continue
+        idx = unit / "index.json"
+        if not idx.exists():
+            continue
+        data = json.loads(idx.read_text(encoding="utf-8"))
+        keep = set(data.get("order") or [])
+        for p in list(unit.glob("*.md")) + list(unit.glob("*.json")):
+            if p.stem == "index":
+                continue
+            if p.stem not in keep:
+                p.unlink()
+                removed += 1
+    return removed
+
+
 def sync():
     GUIDES_CONTENT.mkdir(parents=True, exist_ok=True)
     pages_by_unit = collect_level2_pages()
@@ -255,6 +275,10 @@ def sync():
             lab_num = m.group(1).replace(".", "-")
             out_name = f"Lab-{lab_num}.md"
             (lab_impl_dir / out_name).write_text(path.read_text(encoding="utf-8"), encoding="utf-8")
+
+    n_units = cleanup_orphan_unit_pages(chapter_dir)
+    if n_units:
+        print(f"[cleanup] Removed {n_units} orphan unit page(s) (old slugs not in index.json).")
 
     # Update root content index to include Level 2 if missing
     root_index_path = GUIDES_CONTENT / "index.json"

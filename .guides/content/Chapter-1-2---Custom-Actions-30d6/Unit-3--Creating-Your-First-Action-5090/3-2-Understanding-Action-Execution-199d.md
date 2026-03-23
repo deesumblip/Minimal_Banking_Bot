@@ -10,6 +10,6 @@ When Rasa executes your action:
 
 **Key Point**: Rasa handles all the infrastructure—you just write the `run()` method with your logic.
 
-**Next**: Complete Lab 3.2 to create `action_holiday_hours.py` following the pattern from Lab 3.1.
+**Next**: Complete Lab 3.1 to create `action_holiday_hours.py` following the pattern from Unit 3.1.
 
 ---

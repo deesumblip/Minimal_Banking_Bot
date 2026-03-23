@@ -1,19 +1,21 @@
 {
-	"id": "82f6a014-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-	"title": "5.1 Actions vs. Responses in Flows",
-	"files": [
-		{
-			"path": "",
-			"panel": 1,
-			"action": "open"
-		}
-	],
-	"layout": "2-panels-tree-guides-left",
-	"path": ["level2"],
-	"type": "page",
-	"contentType": "markdown",
-	"content": "",
-	"teacherOnly": false,
-	"closeTerminalSession": true,
-	"learningObjectives": ""
+  "id": "82f6a014-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+  "title": "5.1 Actions vs. Responses in Flows",
+  "files": [
+    {
+      "path": "",
+      "panel": 1,
+      "action": "open"
+    }
+  ],
+  "layout": "2-panels-tree-guides-left",
+  "path": [
+    "level2"
+  ],
+  "type": "page",
+  "contentType": "markdown",
+  "content": "",
+  "teacherOnly": false,
+  "closeTerminalSession": true,
+  "learningObjectives": ""
 }
