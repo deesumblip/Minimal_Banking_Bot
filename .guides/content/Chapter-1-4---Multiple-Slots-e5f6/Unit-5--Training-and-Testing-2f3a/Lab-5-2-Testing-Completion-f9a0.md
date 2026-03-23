@@ -34,6 +34,14 @@ Use this after Part 1 passes (or when you are ready to exercise the bot). Start 
 5. **Confirm** — You should see the confirmation from `action_process_transfer` using all three values.
 6. **Verify other flows (optional)** — Try “Check my balance” and “What are your hours?” to confirm Level 3 / Level 2 behavior still works.
 
+### If the bot says “unable to understand you” when collecting the recipient (or account)
+
+**What you might see:** Amount works, then after you type a name (e.g. “Alice” or “Ronald McDonald”) the bot replies with something like *“I’m sorry I am unable to understand you, could you please rephrase?”* and asks again—sometimes losing the amount in the follow-up prompt.
+
+**Why:** With **Rasa Pro** (CALM + `SearchReadyLLMCommandGenerator`), **slot collection** is sensitive to how ask prompts are generated. If **`utter_ask_amount` / `utter_ask_recipient` / `utter_ask_account_from`** use **`metadata: rephrase: True`**, the model can rephrase those questions during collection; the command layer may then fail to map your free-text answer to the slot and fall back to that generic message.
+
+**Fix:** In **`level4/domain/basics.yml`**, set **`rephrase: False`** for those three `utter_ask_*` responses (keep `rephrase: True` on greetings/help if you want). **Retrain** (`python -m rasa train` from `level4`) and test again. This is the pattern recommended in **Lab 2.1**.
+
 ---
 
 ## Part 3: Running locally (optional)

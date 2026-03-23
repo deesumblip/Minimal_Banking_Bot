@@ -17,7 +17,7 @@ In Lab 2.1 you will update the domain so the bot can collect amount, recipient, 
 
 ## Domain Structure (concept)
 
-After Lab 4.1 your domain will have the existing Level 3 content plus:
+After Lab 2.1 your domain will have the existing Level 3 content plus:
 
 - Under `slots:`: `account` (from Level 3), and `amount`, `recipient`, `account_from`
 - Under `responses:`: the existing utter_* and `utter_ask_account`, plus `utter_ask_amount`, `utter_ask_recipient`, `utter_ask_account_from`
@@ -42,16 +42,18 @@ Below is an example of the **new** pieces you will add. Your existing `slots:` a
   utter_ask_amount:
     - text: "How much would you like to transfer?"
       metadata:
-        rephrase: True
+        rephrase: False
   utter_ask_recipient:
     - text: "Who would you like to transfer money to?"
       metadata:
-        rephrase: True
+        rephrase: False
   utter_ask_account_from:
     - text: "Which account would you like to transfer from?"
       metadata:
-        rephrase: True
+        rephrase: False
 ```
+
+Use **`rephrase: False`** on these three asks so prompts stay stable during slot collection (see Lab 2.1 note—`rephrase: True` here can break CALM slot filling and trigger “unable to understand you”).
 
 **Updated actions list (include the new action):**
 ```yaml

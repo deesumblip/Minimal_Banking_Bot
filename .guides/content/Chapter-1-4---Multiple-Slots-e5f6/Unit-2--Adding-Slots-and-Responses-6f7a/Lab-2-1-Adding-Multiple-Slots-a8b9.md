@@ -30,18 +30,20 @@ Use 2-space indentation. Each slot has `type: text`.
   utter_ask_amount:
     - text: "How much would you like to transfer?"
       metadata:
-        rephrase: True
+        rephrase: False
   utter_ask_recipient:
     - text: "Who would you like to transfer money to?"
       metadata:
-        rephrase: True
+        rephrase: False
   utter_ask_account_from:
     - text: "Which account would you like to transfer from?"
       metadata:
-        rephrase: True
+        rephrase: False
 ```
 
 Naming: `utter_ask_<slot_name>` for each slot.
+
+**Why `rephrase: False` here?** With **Rasa Pro** (CALM + `SearchReadyLLMCommandGenerator`), **slot collection** works best when these ask prompts stay **fixed**. If `rephrase: True`, the bot may reword the question while collecting slots; the LLM can then fail to map your reply (e.g. a person’s name) to the slot and respond with *“I’m sorry I am unable to understand you…”*—especially after the first slot. Keep `rephrase: True` on greetings and help text; use **`rephrase: False`** for these three `utter_ask_*` responses.
 
 **Step 4.** Add `action_process_transfer` to the `actions:` list:
 

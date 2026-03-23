@@ -42,16 +42,18 @@ Below is an example of the **new** pieces you will add. Your existing `slots:` a
   utter_ask_amount:
     - text: "How much would you like to transfer?"
       metadata:
-        rephrase: True
+        rephrase: False
   utter_ask_recipient:
     - text: "Who would you like to transfer money to?"
       metadata:
-        rephrase: True
+        rephrase: False
   utter_ask_account_from:
     - text: "Which account would you like to transfer from?"
       metadata:
-        rephrase: True
+        rephrase: False
 ```
+
+Use **`rephrase: False`** on these three asks so CALM slot collection stays stable (see Lab 2.1).
 
 **Updated actions list (include the new action):**
 ```yaml

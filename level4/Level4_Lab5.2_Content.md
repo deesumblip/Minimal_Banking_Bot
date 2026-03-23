@@ -31,6 +31,8 @@ From **`level4`** with the virtual environment active:
 5. Confirm the message from `action_process_transfer`.
 6. Optionally try balance / hours to confirm other flows still work.
 
+**Troubleshooting:** If the bot accepts the amount but then says it **cannot understand** you when you enter the recipient (or account), check **`level4/domain/basics.yml`**: for **`utter_ask_amount`**, **`utter_ask_recipient`**, and **`utter_ask_account_from`**, use **`metadata: rephrase: False`**. With `rephrase: True`, Rasa Pro’s LLM layer can fail to fill the next text slot and fall back to a generic error. **Retrain** after changing the domain.
+
 ---
 
 ## Part 3: Running locally (optional)

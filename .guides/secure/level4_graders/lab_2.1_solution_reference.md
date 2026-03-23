@@ -1,6 +1,6 @@
-# Lab 4.1 – Reference solution for LLM Rubric Autograde
+# Lab 2.1 – Reference solution for LLM Rubric Autograde
 
-Use this file as the **Instructor Provided Solution File** in Codio's LLM Rubric Autograde for Lab 4.1 (Adding Multiple Slots in the Domain).
+Use this file as the **Instructor Provided Solution File** in Codio's LLM Rubric Autograde for Lab 2.1 (Adding Multiple Slots in the Domain).
 
 ---
 
@@ -13,7 +13,7 @@ Use this file as the **Instructor Provided Solution File** in Codio's LLM Rubric
    - `utter_ask_recipient` with at least one text (e.g. "Who would you like to transfer money to?")
    - `utter_ask_account_from` with at least one text (e.g. "Which account would you like to transfer from?")
 
-3. **action_process_transfer in actions** – Under `actions:`, add `action_process_transfer` to the list. The student will create the .py file in Lab 4.2.
+3. **action_process_transfer in actions** – Under `actions:`, add `action_process_transfer` to the list. The student will create the `.py` file in Lab 3.1.
 
 Example (additions only):
 
@@ -33,21 +33,23 @@ responses:
   utter_ask_amount:
     - text: "How much would you like to transfer?"
       metadata:
-        rephrase: True
+        rephrase: False
   utter_ask_recipient:
     - text: "Who would you like to transfer money to?"
       metadata:
-        rephrase: True
+        rephrase: False
   utter_ask_account_from:
     - text: "Which account would you like to transfer from?"
       metadata:
-        rephrase: True
+        rephrase: False
 
 actions:
   - action_bank_hours
   - action_check_balance_simple
   - action_process_transfer
 ```
+
+Prefer **`rephrase: False`** on these three `utter_ask_*` responses: with CALM + LLM command generation, **`rephrase: True` during slot collection** can break filling later slots (e.g. recipient) and trigger “unable to understand you” fallbacks.
 
 ---
 

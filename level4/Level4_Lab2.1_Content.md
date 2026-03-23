@@ -30,16 +30,18 @@ Use 2-space indentation. Each slot has `type: text`.
   utter_ask_amount:
     - text: "How much would you like to transfer?"
       metadata:
-        rephrase: True
+        rephrase: False
   utter_ask_recipient:
     - text: "Who would you like to transfer money to?"
       metadata:
-        rephrase: True
+        rephrase: False
   utter_ask_account_from:
     - text: "Which account would you like to transfer from?"
       metadata:
-        rephrase: True
+        rephrase: False
 ```
+
+Use **`rephrase: False`** for these three `utter_ask_*` responses. With Rasa Pro CALM + LLM command generation, **`rephrase: True` on utter_ask during slot collection** can cause the bot to fail filling the next slot (e.g. recipient names) and reply with *“I’m sorry I am unable to understand you…”*. Keep `rephrase: True` on greetings/help if you like.
 
 Naming: `utter_ask_<slot_name>` for each slot.
 
