@@ -57,7 +57,7 @@ obj = {
     "source": {
         "name": "Lab 3.1: Complete action_process_transfer (multiple slots & placeholders)",
         "showName": False,
-        "instructions": "**Fill in the blanks to complete the action file.** This is the same script you will copy into `level4/actions/action_process_transfer.py` for the code assessment. Use exact names from your domain and Unit 3.1—`tracker.get_slot(...)`, `placeholder_values`, and the confirmation **f-string**.",
+        "instructions": "**Fill in the blanks to complete the action file.** This is the same script you will copy into `level4/actions/action_process_transfer.py` for the code assessment. Use exact names from your domain and the patterns you learned in Unit 3.1 for reading slots, `placeholder_values`, and the confirmation **f-string**.",
         "showValues": True,
         "text": main_text,
         "distractors": 'Any, Dict, Text\nList[Dict[Any, Any]]\nActionExecutor\nActionProcessTransfer\nsession\nget_latest_entity\n"account"\n"amount"\naccount in placeholder_values\nutter_ask_amount\n{}\nreturn\nTransfer done.',
@@ -70,15 +70,18 @@ obj = {
         "learningObjectives": "",
         "guidance": """The correct answers are:
 
-* **Any, Dict, List, Text** — Typing names for `run()` signature and return type (same pattern as Level 2 and Chapter 1.3 Lab 4.1).
-* **Action** — Base class from `rasa_sdk` that `ActionProcessTransfer` subclasses.
-* **action_process_transfer** — String returned by `name()`; must match `actions:` in the domain (Lab 2.1) and the `transfer_money` flow.
-* **List[Dict[Text, Any]]** — Return type of `run()`.
-* **tracker.get_slot("amount") or ""** — Same pattern for `recipient` and `account_from` (Unit 3.1).
-* **amount in placeholder_values or ...** — True when any slot is still a placeholder (see Unit 3.1 example).
-* **"Please provide a real amount, recipient, and source account."** — Message when re-prompting (`text=`).
-* **[]** — Empty event list after re-prompt and after confirmation.
-* **f"Transfer of ..."** — Confirmation including amount, `account_from`, and `recipient`.
+* **Any, Dict, List, Text** - Typing names for `run()` signature and return type (same pattern as Level 2 and Chapter 1.3 Lab 4.1).
+* **Action** - Base class from `rasa_sdk` that `ActionProcessTransfer` subclasses.
+* **action_process_transfer** - String returned by `name()`; must match `actions:` in the domain (Lab 2.1) and the `transfer_money` flow.
+* **List[Dict[Text, Any]]** - Return type of `run()`.
+* **tracker.get_slot("amount") or ""** - Same pattern for `recipient` and `account_from` (Unit 3.1).
+* **tracker.get_slot("recipient") or ""** - Reads the recipient slot.
+* **tracker.get_slot("account_from") or ""** - Reads the source account slot.
+* **amount in placeholder_values or recipient in placeholder_values or account_from in placeholder_values** - True when any slot is still a placeholder (see Unit 3.1 example).
+* **"Please provide a real amount, recipient, and source account."** - Message when re-prompting (`text=`).
+* **[]** - Empty event list after re-prompt (first branch).
+* **f\"Transfer of ${amount} from account {account_from} to {recipient} processed.\"** - Confirmation `text=` when slots look valid.
+* **[]** - Empty event list after confirmation (second branch).
 
 After this exercise, paste the **completed** script into `level4/actions/action_process_transfer.py` and run the **Code Test** assessment.""",
         "showGuidanceAfterResponseOption": {"type": "Attempts", "passedFrom": 1},
@@ -89,7 +92,8 @@ After this exercise, paste the **completed** script into `level4/actions/action_
         "useMaximumScore": False,
         "tokens": {
             "blank": blanks,
-            "text": parts,
+            # Codio format: every blank slot in `text` is the literal 0 (sequential blanks), matching Lab 4.1 fill-in-the-blanks-2346557111.json
+            "text": [p if isinstance(p, str) else 0 for p in parts],
             "regexPositions": [],
         },
     },
