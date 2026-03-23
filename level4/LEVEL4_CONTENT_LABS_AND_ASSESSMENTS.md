@@ -53,7 +53,6 @@ Create one markdown file per section, same naming pattern as Level 3. Paths unde
 | `Level4_Unit2_Content_2.1_Adding-Slots-and-Responses.md` | Domain: add slots amount, recipient, account_from (type text); add utter_ask_amount, utter_ask_recipient, utter_ask_account_from; add action_process_transfer to actions. Pointer to Lab 2.1. |
 | `Level4_Unit3_Content_3.1_Reading-Multiple-Slots.md` | In an action, use tracker.get_slot("amount"), get_slot("recipient"), get_slot("account_from"); validate or re-prompt as needed. Pointer to Lab 3.1. |
 | `Level4_Unit4_Content_4.1_Multiple-Collect-Steps.md` | Flow steps: multiple `collect:` steps (e.g. amount, then recipient, then account_from), then `action: action_process_transfer`. Pointer to Lab 4.1. |
-| `Level4_Unit5_Content_5.1_Training-Level-4.md` | Train from level4 (same as Level 3: venv, cd level4, rasa train). Lab 5.1. |
 | `Level4_Unit5_Content_5.2_Testing-Transfer.md` | Run Inspector, trigger transfer flow, provide amount/recipient/account_from; Lab 5.2. |
 | `Level4_Unit6_Content_6.1_Complete-Bot-Walkthrough.md` | Guided walkthrough of Level 4 bot (optional). |
 | `Level4_Unit6_Content_6.2_What-Youve-Learned.md` | Summary: multiple slots, multiple collect steps, one action using all slots. |
@@ -101,7 +100,7 @@ You can add a **fill-in-the-blanks** Codio assessment (like Level 3 Lab 4.1’s 
 
 **File:** `level4/Level4_Lab5.1_Content.md`
 
-- Mirror **Level3_Lab6.1_Content.md**: venv from project root, cd level4, rasa train, verify model in level4/models/. Run assessment when done.
+- Same workflow as Level 3 training: venv from project root → `cd level4` → `python -m rasa train` → verify a new `.tar.gz` in `level4/models/`. Includes short context on what Rasa loads (domain, flows, actions), troubleshooting mapped to Labs 2.1 / 3.1 / 4.1, pointer to Lab 5.2 after **Check It!** (Codio). No separate Unit 5 “5.1 concept” page — all student-facing training content lives here.
 
 ### Lab 5.2 — Testing transfer in Inspector
 

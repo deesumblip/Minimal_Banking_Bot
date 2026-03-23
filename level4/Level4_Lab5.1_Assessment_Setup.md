@@ -2,7 +2,7 @@
 
 ## Guide Content (For Students)
 
-**Placement.** This lab follows Unit 6: Training and Testing (Level 4).
+**Placement.** This lab is **Unit 5: Training and Testing** (Level 4) — the first page in that unit (standalone **Lab 5.1**; there is no separate “5.1 concept” page).
 
 **Structure.** Part 1 (In Codio) and Part 2 (Running locally). Both follow the same order: **activate the virtual environment in the main project folder (root)** first, then **navigate to `level4`**, then train. Run the assessment when done (Part 1 path).
 

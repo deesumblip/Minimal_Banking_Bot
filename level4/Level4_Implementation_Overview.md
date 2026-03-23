@@ -32,7 +32,7 @@ This document provides implementation guidance for **Level 4: Multiple Slots** o
 - `Level4_Unit2_Content_2.1_*.md`
 - `Level4_Unit3_Content_3.1_*.md`
 - `Level4_Unit4_Content_4.1_*.md`
-- `Level4_Unit5_Content_5.1_*.md`, `5.2_*.md`
+- `Level4_Unit5_Content_5.2_*.md` (training is **Lab 5.1** only — `Level4_Lab5.1_Content.md`)
 - `Level4_Unit6_Content_6.1_*.md`, `6.2_*.md`, `6.3_*.md`, `6.4_Knowledge-Check.md`, `6.5_Limitations-of-Level-4.md`, `6.6_Whats-Next-Level-5-Preview.md`, `6.7_Course-Completion-Checklist.md`
 
 ### Lab Content (Student-facing)

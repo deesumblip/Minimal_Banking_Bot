@@ -1,6 +1,6 @@
 Your goal is to run the **completion check** for Level 4 and, optionally, test the transfer flow in Rasa Inspector.
 
-**Prerequisite.** Complete Labs 4.1–4.4. You need: domain with transfer slots and ask responses, `action_process_transfer.py`, `transfer_money.yml`, and a trained model in `level4/models/`.
+**Prerequisite.** Complete **Labs 2.1, 3.1, and 4.1**, then **Lab 5.1** (train so a model exists). You need: domain with transfer slots and ask responses, `action_process_transfer.py`, `transfer_money.yml`, and a trained model in `level4/models/`.
 
 ---
 
@@ -16,7 +16,7 @@ The grader checks that:
    - `level4/data/basics/transfer_money.yml` exists with the three collect steps and the action step
    - A model file exists in `level4/models/`
 
-2. If any check fails, complete the corresponding lab (4.1–4.4) and re-run training if needed, then run the assessment again.
+2. If any check fails, fix the corresponding lab (**2.1** domain, **3.1** action, **4.1** flow, or **5.1** training), then run the assessment again.
 
 ---
 

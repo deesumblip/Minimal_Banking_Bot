@@ -1,6 +1,6 @@
 Your goal is to run the **completion check** for Level 4 and, optionally, test the transfer flow in Rasa Inspector.
 
-**Prerequisite.** Complete Labs 4.1–4.4. You need: domain with transfer slots and ask responses, `action_process_transfer.py`, `transfer_money.yml`, and a trained model in `level4/models/`.
+**Prerequisite.** Complete **Labs 2.1, 3.1, and 4.1**, then **Lab 5.1** (train so a model exists). You need: domain with transfer slots and ask responses, `action_process_transfer.py`, `transfer_money.yml`, and a trained model in `level4/models/`.
 
 ---
 
@@ -14,7 +14,7 @@ Your goal is to run the **completion check** for Level 4 and, optionally, test t
 
 {Check It!|assessment}(code-output-compare-401050002)
 
-2. If any check fails, complete the corresponding lab (4.1–4.4) and re-run training if needed, then **in Codio** use **Check It!** again.
+2. If any check fails, fix the corresponding lab (**2.1** domain, **3.1** action, **4.1** flow, or **5.1** training), then **in Codio** use **Check It!** again.
 
 ---
 

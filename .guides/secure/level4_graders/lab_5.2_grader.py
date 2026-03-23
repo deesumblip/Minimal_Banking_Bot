@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Lab 4.5: Testing the Transfer Flow - Completion Check - Grader Script
+Lab 5.2: Completion Check (Transfer Flow) — Grader Script
 Output format matches Chapter 1.2 Lab 6.2 template.
 
 Verifies Level 4 bot is complete: domain (slots + ask responses + action), action file,
@@ -27,7 +27,7 @@ except ImportError:
 score = 0
 max_score = 10
 
-print("Running Lab 4.5 Completion Check...")
+print("Running Lab 5.2 completion check...")
 print("")
 
 # Check 1: Domain (3 points)
@@ -128,9 +128,9 @@ print("")
 # Summary
 print("==========================================")
 if score >= max_score:
-    print(f" PASS: Lab 4.5 completion check passed! Score: {score}/{max_score}")
+    print(f" PASS: Lab 5.2 completion check passed! Score: {score}/{max_score}")
 else:
-    print(f"❌ FAIL: Score {score}/{max_score}. Complete Labs 4.1–4.4 and re-run training if needed.")
+    print(f"❌ FAIL: Score {score}/{max_score}. Fix Labs 2.1, 3.1, or 4.1 as needed; complete Lab 5.1 (train), then re-run.")
 print("==========================================")
 print("")
 print("Summary: Check 1 (domain) | Check 2 (action) | Check 3 (flow) | Check 4 (model)")

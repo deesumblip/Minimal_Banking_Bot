@@ -1,29 +1,41 @@
-Your goal is to train your Level 4 bot and verify it works.
+**Objective.** Train your Level 4 bot from the **`level4`** folder using the same pattern as Level 3: activate the virtual environment at the **project root**, then `cd level4` and run Rasa.
+
+**What training uses:** Rasa reads your **domain** (slots and `utter_ask_*` responses), your **flows** (including `transfer_money`), and your **actions** (including `action_process_transfer`). If training fails, the messages usually point to **Lab 2.1** (domain), **Lab 3.1** (action), or **Lab 4.1** (flow).
+
+After training succeeds, use **Check It!** in Codio (**Lab 5.1** assessment). Then continue to **Lab 5.2** for the completion check and Inspector.
+
+---
 
 ## Part 1: In Codio
 
-1. **Virtual environment.** In the terminal (it opens at `~/workspace`), run `source .venv/bin/activate`. The prompt should show `(.venv)`.
-2. **Navigate to level4.** Run `cd level4`. Confirm with `pwd` (path should end in `level4`).
-3. **Rasa.** Run `python -m rasa --version`. If you see an error, ensure the venv is activated and Rasa Pro is installed (from Lab 0.1).
-4. **Train.** From `level4` with venv active, run `python -m rasa train`. Wait for "Successfully saved model" (about 1–3 minutes).
-5. **Verify.** The terminal shows "Successfully saved model to 'models/...'". In the file tree, `level4/models/` should contain a new `.tar.gz` file.
+1. Open the terminal (starts at `~/workspace`, the project root).
+2. Run `source .venv/bin/activate` — prompt should show `(.venv)`.
+3. Run `cd level4` — confirm with `pwd` that the path ends in `level4`.
+4. Run `python -m rasa --version`. If it fails, check the venv and Rasa Pro (**Lab 0.1**).
+5. Run `python -m rasa train` — wait for **Successfully saved model** (about 1–3 minutes).
+6. In the file tree, confirm `level4/models/` has a new `.tar.gz` file.
 
-**Common errors.** If you get slot or utter_ask errors, check the domain and flow. If you get "No module 'rasa'", activate the venv from the project root. If RASA_LICENSE or OPENAI_API_KEY is not set, check Lab 0.1 or ask your instructor.
+### Troubleshooting
 
-Run the assessment when done.
+| Symptom | What to check |
+|--------|----------------|
+| Slot or `utter_ask_*` errors | `level4/domain/basics.yml` (Lab 2.1) |
+| Flow / collect errors | `level4/data/basics/transfer_money.yml` (Lab 4.1) |
+| Action errors | `level4/actions/action_process_transfer.py` (Lab 3.1) |
+| `No module named 'rasa'` | Activate `.venv` from project root, then `cd level4` again |
+| License / API key | `.env` and Lab 0.1 |
 
-{Check It!|assessment}(code-output-compare-401050001)
+When steps are complete, run **Check It!** for Lab 5.1 in Codio.
+
+---
 
 ## Part 2: Running locally
 
-Follow the same logic as Part 1, but use your own terminal and OS-specific commands.
+1. Open your OS terminal and `cd` to the project root (folder with `level1` … `level4`, `.guides`).
+2. Activate `.venv` (PowerShell: `.venv\Scripts\Activate.ps1`; CMD: `.venv\Scripts\activate.bat`; macOS/Linux: `source .venv/bin/activate`).
+3. `cd level4`.
+4. Ensure `.env` has `RASA_LICENSE` and `OPENAI_API_KEY` (Lab 0.1).
+5. Run `python -m rasa train` until **Successfully saved model**.
+6. Confirm a new `.tar.gz` in `level4/models/`.
 
-1. **Open a terminal** (PowerShell, Command Prompt, or Terminal.app / your Linux terminal).
-2. **Go to the main project folder** (the one that contains `level1`, `level2`, `level3`, `level4`, and `.guides`). For example `cd C:\Users\You\Minimal_Banking_Bot` or `cd ~/Minimal_Banking_Bot`.
-3. **Activate the virtual environment.** The `.venv` folder is in the main project folder. On Windows (PowerShell) use `.venv\Scripts\Activate.ps1`. On Windows (Command Prompt) use `.venv\Scripts\activate.bat`. On macOS or Linux use `source .venv/bin/activate`. Your prompt should show `(.venv)`.
-4. **Navigate to level4.** Go to the `level4` folder with `cd level4` (the one that contains `config.yml`, `domain/`, and `data/`).
-5. **Ensure `.env` exists** in the project (or level4) with `RASA_LICENSE` and `OPENAI_API_KEY`. See Lab 0.1 or your instructor if you need these.
-6. **Train.** With venv active and from the `level4` folder, run `python -m rasa train`. Wait for "Successfully saved model".
-7. **Verify.** A new `.tar.gz` file appears in `level4/models/`.
-
-You're done when training completes with no errors and a new model file appears in `models/`.
+Then proceed to **Lab 5.2**.

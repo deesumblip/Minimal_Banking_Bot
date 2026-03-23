@@ -1,8 +1,8 @@
-# Lab 5.2: Testing the Transfer Flow - Completion Check - Assessment Setup
+# Lab 5.2: Completion Check (Transfer Flow) — Assessment Setup
 
 ## Guide Content (For Students)
 
-**Placement.** This lab follows Unit 6: Training and Testing (Level 4), after Lab 5.1.
+**Placement.** This lab is in **Unit 5: Training and Testing** (Level 4), after **Lab 5.1** and the **5.2 Testing Transfer in Inspector** page.
 
 **Task.** Start your Level 4 bot (e.g. `rasa run` or use the Rasa Inspect tab), open Rasa Inspector, and run through the transfer flow: trigger the transfer intent, provide amount, recipient, and source account when asked, and confirm you see the transfer confirmation from `action_process_transfer`. The completion check verifies that your Level 4 bot has all required pieces in place so the transfer flow can run (domain, action file, flow file, and a trained model).
 
@@ -37,7 +37,7 @@ The grader runs from **workspace root** (`/home/codio/workspace`). It performs t
 3. **Flow file** (2 pts): `level4/data/basics/transfer_money.yml` exists with valid YAML, collect amount/recipient/account_from, and action action_process_transfer.
 4. **Model** (2 pts): at least one `.tar.gz` in `level4/models/`.
 
-**Total: 10 points.** **Lab 6.2-style:** **Check 1–4**, **` PASS: Lab 4.5 completion check passed! Score: 10/10`** on full pass; exit **0** only on full score.
+**Total: 10 points.** **Lab 6.2-style:** **Check 1–4**, **` PASS: Lab 5.2 completion check passed! Score: 10/10`** on full pass; exit **0** only on full score.
 
 ### Codio configuration (Standard Code Test)
 
@@ -51,7 +51,7 @@ The grader runs from **workspace root** (`/home/codio/workspace`). It performs t
    - **Points:** Set to **10**. Enable **Allow partial points** if desired.
    - **Sequence:** From `code-output-compare-401050002.json`: `Check 1: PASSED` … `Check 4: PASSED`, **`showFeedback`: false**, substring match.
    - **SHOW RATIONALE TO STUDENT:** **AFTER [1] ATTEMPTS** (or **ALWAYS**).
-   - **RATIONALE:** The completion check verifies that your Level 4 bot has: the domain updated with transfer slots and ask responses and action_process_transfer, the action file that reads the three slots, the transfer_money flow file, and a trained model. If any check fails, complete the corresponding lab (4.1–4.4) and re-run training if needed, then run this assessment again.
+   - **RATIONALE:** The completion check verifies that your Level 4 bot has: the domain updated with transfer slots and ask responses and action_process_transfer, the action file that reads the three slots, the transfer_money flow file, and a trained model. If any check fails, fix **Labs 2.1, 3.1, or 4.1** as needed, complete **Lab 5.1** (train), then run this assessment again.
 4. **Files.** Script at `.guides/secure/level4_graders/lab_5.2_grader.py`; run from workspace.
 
 ---
