@@ -4,9 +4,12 @@
 
 **Placement.** This lab follows Unit 4 (Reading Multiple Slots in Actions), Level 4.
 
-**Task.** Create `level4/actions/action_process_transfer.py`: a custom action that reads the `amount`, `recipient`, and `account_from` slots, treats placeholder values as invalid (and optionally re-prompts or sends a single message), and otherwise sends a demo transfer confirmation. The domain already lists `action_process_transfer` from Lab 2.1. First complete the script in the fill-in-the-blanks exercise below; then put the complete script in the file tree and run the assessment.
+**Task.** Create `level4/actions/action_process_transfer.py`: a custom action that reads the `amount`, `recipient`, and `account_from` slots, treats placeholder values as invalid (and optionally re-prompts or sends a single message), and otherwise sends a demo transfer confirmation. The domain already lists `action_process_transfer` from Lab 2.1. Students complete the **Fill in the blanks** assessment first (same script they paste into the file), then run the **Code Test**—same pattern as **Chapter 1.3 Lab 4.1**.
 
-**Codio guide (Chapter 1.4).** The Lab 3.1 page in the Chapter 1.4 guide includes: `{Check It!|assessment}(code-output-compare-401030001)`. Assessment JSON: `.guides/assessments/code-output-compare-401030001.json`.
+**Codio guide (Chapter 1.4).** The Lab 3.1 page includes:
+
+- `{Check It!|assessment}(fill-in-the-blanks-401030010)` — Fill in the blanks (5 pts). JSON: `.guides/assessments/fill-in-the-blanks-401030010.json`.
+- `{Check It!|assessment}(code-output-compare-401030001)` — Code Output Compare (10 pts). JSON: `.guides/assessments/code-output-compare-401030001.json`. Grader: `.guides/secure/level4_graders/lab_3.1_grader.py`.
 
 ---
 
