@@ -4,16 +4,17 @@
 	"files": [
 		{
 			"path": "#terminal",
-			"panel": 0,
+			"panel": 1,
 			"action": "open"
 		}
 	],
-	"layout": "1-panel-tree",
+	"layout": "2-panels-tree-guides-left",
 	"path": [
 		"level1"
 	],
 	"type": "page",
-	"contentType": "markdown", "content": "",
+	"contentType": "markdown",
+	"content": "",
 	"teacherOnly": false,
 	"closeTerminalSession": true,
 	"learningObjectives": ""

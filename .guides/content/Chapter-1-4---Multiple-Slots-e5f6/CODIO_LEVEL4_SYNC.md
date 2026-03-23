@@ -12,6 +12,8 @@ Each unit has an `index.json` (section title and order of pages) and each page h
 
 **File tree:** Every **page** `.json` uses **`layout`: `2-panels-tree-guides-left`**, **`files`** (open panel 1), and **`path`: [`level4`]** so the workspace tree opens on the **`level4`** folder for all Chapter 1.4 pages (Units 0–6).
 
+**Terminal:** Pages whose markdown expects CLI use (training, Inspector, `cd level4`, **Check It!** code assessments, etc.) also set **`files`** to open **`#terminal`** on **panel 1** (right-hand stack with guide on the left). Repo script: `.guides/scripts/patch_guide_terminal_panels.py` (run from project root after adding lab/training pages).
+
 **IDs must be unique across the whole guide.** Chapter 1.4 section and page ids use an `e5f6` suffix so they do not collide with Chapter 1.3 (which shares similar unit names and previously caused the TOC to merge or show wrong content). Do not reuse section or page ids from Chapter 1.3 when adding or editing Chapter 1.4 content.
 
 ## Root index

@@ -3,7 +3,7 @@
 	"title": "5.2 Testing Transfer",
 	"files": [
 		{
-			"path": "",
+			"path": "#terminal",
 			"panel": 1,
 			"action": "open"
 		}

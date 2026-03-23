@@ -1,1 +1,19 @@
-{"id":"a1b2d7ec-xxxx-xxxx-xxxx-xxxxxxxxxxxx","title":"6.1 What is Training?","files":[],"layout":"1-panel","path":[],"type":"page","contentType":"markdown", "content": "","teacherOnly":false,"closeTerminalSession":true,"learningObjectives":""}
+{
+	"id": "a1b2d7ec-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+	"title": "6.1 What is Training?",
+	"files": [
+		{
+			"path": "#terminal",
+			"panel": 1,
+			"action": "open"
+		}
+	],
+	"layout": "2-panels-tree-guides-left",
+	"path": [],
+	"type": "page",
+	"contentType": "markdown",
+	"content": "",
+	"teacherOnly": false,
+	"closeTerminalSession": true,
+	"learningObjectives": ""
+}

@@ -1,1 +1,19 @@
-{"id":"level5-page-Lab-5-2-Testing-Completion-Check-L5f4","title":"Lab 5.2: Testing / Completion Check","files":[],"layout":"1-panel","path":[],"type":"page","contentType":"markdown", "content": "","teacherOnly":false,"closeTerminalSession":true,"learningObjectives":""}
+{
+	"id": "level5-page-Lab-5-2-Testing-Completion-Check-L5f4",
+	"title": "Lab 5.2: Testing / Completion Check",
+	"files": [
+		{
+			"path": "#terminal",
+			"panel": 1,
+			"action": "open"
+		}
+	],
+	"layout": "2-panels-tree-guides-left",
+	"path": [],
+	"type": "page",
+	"contentType": "markdown",
+	"content": "",
+	"teacherOnly": false,
+	"closeTerminalSession": true,
+	"learningObjectives": ""
+}

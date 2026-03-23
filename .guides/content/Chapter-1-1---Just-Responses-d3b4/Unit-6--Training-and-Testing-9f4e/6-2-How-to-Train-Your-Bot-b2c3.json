@@ -1,1 +1,19 @@
-{"id":"b2c3d7ec-xxxx-xxxx-xxxx-xxxxxxxxxxxx","title":"6.2 How to Train Your Bot","files":[],"layout":"1-panel","path":[],"type":"page","contentType":"markdown", "content": "","teacherOnly":false,"closeTerminalSession":true,"learningObjectives":""}
+{
+	"id": "b2c3d7ec-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+	"title": "6.2 How to Train Your Bot",
+	"files": [
+		{
+			"path": "#terminal",
+			"panel": 1,
+			"action": "open"
+		}
+	],
+	"layout": "2-panels-tree-guides-left",
+	"path": [],
+	"type": "page",
+	"contentType": "markdown",
+	"content": "",
+	"teacherOnly": false,
+	"closeTerminalSession": true,
+	"learningObjectives": ""
+}

@@ -3,8 +3,9 @@
 	"title": "Lab 3.2: Creating Your First Flow",
 	"files": [
 		{
-			"path": "#tabs",
-			"action": "close"
+			"path": "#terminal",
+			"panel": 1,
+			"action": "open"
 		}
 	],
 	"layout": "2-panels-tree-guides-left",
@@ -12,7 +13,8 @@
 		"level1"
 	],
 	"type": "page",
-	"contentType": "markdown", "content": "",
+	"contentType": "markdown",
+	"content": "",
 	"teacherOnly": false,
 	"closeTerminalSession": true,
 	"learningObjectives": ""

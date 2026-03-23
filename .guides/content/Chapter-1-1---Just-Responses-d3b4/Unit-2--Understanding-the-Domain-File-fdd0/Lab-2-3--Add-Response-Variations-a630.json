@@ -3,11 +3,7 @@
 	"title": "Lab 2.3: Add Response Variations",
 	"files": [
 		{
-			"path": "#tabs",
-			"action": "close"
-		},
-		{
-			"path": "level1/domain/basics.yml",
+			"path": "#terminal",
 			"panel": 1,
 			"action": "open"
 		}
@@ -17,7 +13,8 @@
 		"level1"
 	],
 	"type": "page",
-	"contentType": "markdown", "content": "",
+	"contentType": "markdown",
+	"content": "",
 	"teacherOnly": false,
 	"closeTerminalSession": true,
 	"learningObjectives": ""
