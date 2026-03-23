@@ -43,7 +43,7 @@ Use 2-space indentation. Each slot has `type: text`.
 
 Naming: `utter_ask_<slot_name>` for each slot.
 
-**Why `rephrase: False` here?** With **Rasa Pro** (CALM + `SearchReadyLLMCommandGenerator`), **slot collection** works best when these ask prompts stay **fixed**. If `rephrase: True`, the bot may reword the question while collecting slots; the LLM can then fail to map your reply (e.g. a person’s name) to the slot and respond with *“I’m sorry I am unable to understand you…”*—especially after the first slot. Keep `rephrase: True` on greetings and help text; use **`rephrase: False`** for these three `utter_ask_*` responses.
+**Why `rephrase: False` here?** With **Rasa Pro** (CALM), **slot collection** works best when these ask prompts stay **fixed**. If `rephrase: True`, the model may reword the question while collecting slots; the command generator can then fail to map your reply (e.g. free-text **recipient** or **account_from**) and you may see *“I’m sorry I am unable to understand you…”*. **Level 4** uses **`CompactLLMCommandGenerator`** in `level4/config.yml` (Chapter 1.3 / **`level3`** may still use **`SearchReadyLLMCommandGenerator`**). Either way, keep **`rephrase: False`** on these three `utter_ask_*` responses; keep `rephrase: True` on greetings and help text if you want.
 
 **Step 4.** Add `action_process_transfer` to the `actions:` list:
 

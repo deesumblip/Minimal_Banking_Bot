@@ -14,7 +14,7 @@ This document describes how to create **Level 4** content, labs, and assessment 
 | Unit 2 + **Lab 3.1** (domain: account, utter_ask_account, register action) | Unit 2 + **Lab 2.1** (domain: amount, recipient, account_from + utter_ask_* + register action_process_transfer) |
 | Unit 3 + **Lab 4.1** (action file: action_check_balance_simple) | Unit 3 + **Lab 3.1** (action file: action_process_transfer) |
 | Unit 4 + **Lab 5.1** (flow: check_balance.yml, collect account + action) | Unit 4 + **Lab 4.1** (flow: transfer_money.yml, collect amount/recipient/account_from + action) |
-| Unit 5 + Lab 6.1 (train) + Lab 6.2 (test Inspector) | Unit 5 + Lab 5.1 (train) + Lab 5.2 (completion check + optional Inspector) |
+| Unit 5 + Lab 6.1 (train) + Lab 6.2 (test Inspector) | Unit 5 + Lab 5.1 (train) + Lab 5.2 (completion check + Inspector with **scripted transfer** table) |
 | Unit 6: Walkthrough, summary, Level 4 preview | Unit 6: Complete walkthrough, What you've learned, What's next (6.1, 6.2, 6.3) |
 
 **Lab numbering (this course):** Level 4 uses **Lab 2.1** (domain), **3.1** (action), **4.1** (flow), **5.1** (train), **5.2** (completion check + Inspector)—same pattern as Level 3’s chapter lab index, not a single “4.x-only” sequence.
@@ -32,7 +32,7 @@ Create **Level4_Course_Outline.md** in `level4/` with:
 - **Unit 2:** Domain — add three slots, three ask responses, register action_process_transfer → **Lab 2.1** (graded).
 - **Unit 3:** Reading multiple slots in actions → **Lab 3.1** (create action_process_transfer.py) (graded).
 - **Unit 4:** Flows with multiple collect steps → **Lab 4.1** (create transfer_money.yml) (graded).
-- **Unit 5:** Training and testing → **Lab 5.1** (train from level4), **Lab 5.2** (completion check graded + optional Inspector walkthrough). No separate Unit 5 concept-only pages.
+- **Unit 5:** Training and testing → **Lab 5.1** (train from level4), **Lab 5.2** (completion check graded + **Rasa Inspector** using a **fixed sequence of user turns** in the Lab 5.2 page—see **Scripted transfer** below). No separate Unit 5 concept-only pages.
 - **Unit 6:** Complete bot walkthrough, summary, what’s next.
 
 **Assessment summary table:** Lab 2.1 (domain), 3.1 (action), 4.1 (flow), 5.1 (train), 5.2 (test); same Codio pattern as Level 3 Lab 3.1 / Chapter 1.2 Lab 6.2: **sequence** of `Check N: PASSED` substring tests (see `code-output-compare-40102*` – `401050002.json`), not a single `PASS` line.
@@ -51,9 +51,9 @@ Create one markdown file per section, same naming pattern as Level 3. Paths unde
 | `Level4_Unit1_Content_1.2_Order-of-Collection.md` | Order of `collect:` steps in the flow determines the order the bot asks; keep order consistent with the action’s expectations. |
 | `Level4_Unit1_Content_1.3_Slot-Naming-Multiple.md` | Naming: utter_ask_<slot_name>; slot names used in action must match domain and flow. |
 | `Level4_Unit2_Content_2.1_Adding-Slots-and-Responses.md` | Domain: add slots amount, recipient, account_from (type text); add utter_ask_amount, utter_ask_recipient, utter_ask_account_from; add action_process_transfer to actions. Pointer to Lab 2.1. |
-| `Level4_Unit3_Content_3.1_Reading-Multiple-Slots.md` | In an action, use tracker.get_slot("amount"), get_slot("recipient"), get_slot("account_from"); validate or re-prompt as needed. Pointer to Lab 3.1. |
-| `Level4_Unit4_Content_4.1_Multiple-Collect-Steps.md` | Flow steps: multiple `collect:` steps (e.g. amount, then recipient, then account_from), then `action: action_process_transfer`. Pointer to Lab 4.1. |
-| `Level4_Unit6_Content_6.1_Complete-Bot-Walkthrough.md` | Guided walkthrough of Level 4 bot (optional). |
+| `Level4_Unit3_Content_3.1_Reading-Multiple-Slots.md` | In an action, use `tracker.get_slot` for all three slots; cap **recipient** at **100** characters in code to match the flow; validate placeholders; pointer to Lab 3.1. |
+| `Level4_Unit4_Content_4.1_Multiple-Collect-Steps.md` | Flow steps: multiple `collect:` steps (e.g. amount, then recipient, then account_from), then `action: action_process_transfer`. **`collect: recipient`** `description:` should state free text up to **100** chars (course build). Pointer to Lab 4.1. |
+| `Level4_Unit6_Content_6.1_Complete-Bot-Walkthrough.md` | Short recap + same **scripted transfer** turns as Lab 5.2 / Unit 6.1 guide page (optional hands-on). |
 | `Level4_Unit6_Content_6.2_What-Youve-Learned.md` | Summary: multiple slots, multiple collect steps, one action using all slots. |
 | `Level4_Unit6_Content_6.3_Whats-Next.md` | What's next: forms, NLU, channels. |
 
@@ -79,12 +79,12 @@ Each lab has one **Content** markdown file that students see. Match the style of
 
 **File:** `level4/Level4_Lab3.1_Content.md`
 
-- **Objective:** Create `level4/actions/action_process_transfer.py` that reads `amount`, `recipient`, and `account_from` from the tracker and sends a confirmation message (and optionally validates placeholders).
-- **Steps:** 1) Create the file in level4/actions/. 2) Use Action base class, name() returning "action_process_transfer". 3) In run(), get the three slots; optionally check for placeholders and re-prompt; then utter a demo confirmation (e.g. “Transfer of $X from account Y to Z processed”). 4) Return [].
+- **Objective:** Create `level4/actions/action_process_transfer.py` that reads `amount`, `recipient`, and `account_from` from the tracker, caps **recipient** at **100** characters (course build), validates placeholders, and sends the demo confirmation (`(Demo) Transfer of $…`).
+- **Steps:** 1) Create the file in level4/actions/. 2) Use Action base class, name() returning "action_process_transfer". 3) In run(), get the three slots; apply `[:100]` to recipient; check placeholders (case-insensitive); re-prompt or utter the demo confirmation. 4) Return [].
 - **Part 1 / Part 2:** Same Codio vs local pattern. Run assessment when done.
 - **Success criteria:** File exists; has correct name; run() reads all three slots and sends a message.
 
-You can add a **fill-in-the-blanks** Codio assessment (like Level 3 Lab 4.1’s `fill-in-the-blanks-2346557111`) with a matching `.json` in `.guides/assessments/`, or keep it “write from scratch” with hints.
+Use the **fill-in-the-blanks** assessment **`fill-in-the-blanks-401030010.json`** (twelve blanks, aligned with the repo action); regenerate via `.guides/scripts/regen_fill_401030010.py` if the canonical action changes.
 
 ### Lab 4.1 — Flow (create transfer_money.yml)
 
@@ -106,7 +106,22 @@ You can add a **fill-in-the-blanks** Codio assessment (like Level 3 Lab 4.1’s 
 **File:** `level4/Level4_Lab5.2_Content.md`
 
 - **Part 1:** Graded **completion check** (`lab_5.2_grader.py`) — domain, action, flow, and model present. Does not run Rasa.
-- **Parts 2–3:** Optional **Rasa Inspector** (and local) steps: start `rasa inspect` / `rasa run`, trigger transfer flow, confirm `action_process_transfer`, spot-check other flows. Same page as the check (no separate Unit 5 “5.2 concept” file).
+- **Parts 2–3:** **Rasa Inspector** (Codio or local): start `rasa inspect` / `rasa run`, then follow the **scripted transfer** on the lab page. Spot-check other flows (balance, hours) if time. Same page as the check (no separate Unit 5 “5.2 concept” file).
+
+#### Scripted transfer (Inspector) — canonical user turns
+
+Students should type **in order** (mirrors **Chapter 1.4** `.guides/.../Lab-5-2-Testing-Completion-f9a0.md` and `level4/README.md`):
+
+| Step | Example user message | What to verify |
+|------|----------------------|----------------|
+| 1 | `Can I transfer some money?` | Transfer flow starts. |
+| 2 | `let's say 300 dollars` | **Amount** collected; bot asks for recipient. |
+| 3 | `Alice` (or any short free-text **recipient**; **≤100** chars in action + flow) | **Recipient** stored; bot asks for source account. |
+| 4 | `savings` (or e.g. `1234`) | **`action_process_transfer`** runs; confirmation starts with **`(Demo) Transfer of $`** … |
+
+**Expected shape:** `(Demo) Transfer of $300 from account savings to Alice has been processed successfully.` (exact wording may vary slightly with slot values.)
+
+**Troubleshooting** (if “unable to understand you” on names): `rephrase: False` on `utter_ask_*` in domain; clear `description:` on `collect: recipient` / `account_from` in flow; **`level4/config.yml`** uses **`CompactLLMCommandGenerator`**; retrain from `level4`. See `PIPELINE_CHAPTER_1_3_AND_4.md`.
 
 ---
 
@@ -143,7 +158,7 @@ For each graded lab, create an **Assessment_Setup** markdown file for implemente
 
 ## 6. Grader scripts (.guides/secure/level4_graders/)
 
-Create a directory `.guides/secure/level4_graders/` and add Python graders that run from workspace root (`/home/codio/workspace`). Each script should print check results, then `PASS` and exit 0 on full score, or `FAIL` and exit 1. Codio Standard Code Test: COMMAND = venv Python + script path; EXPECTED OUTPUT = `PASS` with **substring match** enabled.
+Create a directory `.guides/secure/level4_graders/` and add Python graders that run from workspace root (`/home/codio/workspace`). Each script should print check results, then a summary line (`PASS: Lab X.X verification complete!` or similar) and exit 0 on full score, or `FAIL` and exit 1. Codio **code-output-compare** assessments use **substring** matches on each **`Check N: PASSED`** line (see `40102*`–`401050002.json`), not a single `PASS` token.
 
 ### lab_2.1_grader.py
 
@@ -164,6 +179,10 @@ Create a directory `.guides/secure/level4_graders/` and add Python graders that 
 
 - Mirror lab_6.1_grader.py: check level4/models/ has a .tar.gz model file (and optionally that it’s recent). Paths: WORKSPACE_ROOT / "level4" / "models".
 
+### lab_5.2_grader.py
+
+- **Checks:** Composite “completion”: domain (three transfer slots + three `utter_ask_*` + `action_process_transfer` in actions); `action_process_transfer.py` reads amount, recipient, account_from; `transfer_money.yml` has the three `collect:` steps and `action: action_process_transfer`; `level4/models/*.tar.gz` exists. Prints **`Check N: PASSED`** sequence for Codio **code-output-compare** (`401050002.json`). Does **not** run Inspector—the **scripted transfer** table is manual QA (documented in Lab 5.2 content and this file §4).
+
 ---
 
 ## 7. Solution reference files (.guides/secure/level4_graders/)
@@ -171,9 +190,10 @@ Create a directory `.guides/secure/level4_graders/` and add Python graders that 
 For each graded lab, add a **solution reference** markdown file used as the Instructor Provided Solution File for LLM Rubric.
 
 - **lab_2.1_solution_reference.md:** Describe required domain changes: slots amount, recipient, account_from (type text); utter_ask_amount, utter_ask_recipient, utter_ask_account_from with example text; action_process_transfer in actions. Include minimal YAML snippets.
-- **lab_3.1_solution_reference.md:** Describe required action: class name, name() return value, run() reading three slots and sending confirmation; optional placeholder check. Include minimal code snippets or full reference.
+- **lab_3.1_solution_reference.md:** Describe required action: class name, name() return value, run() reading three slots (recipient capped at **100** chars), placeholder check, demo confirmation. Include minimal code snippets or full reference.
 - **lab_4.1_solution_reference.md:** Describe required flow: flows.transfer_money, steps with collect amount, recipient, account_from and action action_process_transfer. Include full transfer_money.yml reference.
 - **lab_5.1_solution_reference.md:** Describe that student must train from level4 and that a model file must exist in level4/models/.
+- **lab_5.2_solution_reference.md:** Describe completion criteria (domain + action + flow + model); point authors to the **scripted transfer** turns (§4) for optional Inspector QA.
 
 ---
 
@@ -194,7 +214,7 @@ For each graded lab, add a **solution reference** markdown file used as the Inst
 
 - **Chapter/section:** Add a Level 4 chapter (or section) in Codio; create units and lab pages that link to the assessments.
 - **Content:** Copy or sync from level4/Level4_Unit*_Content_*.md and Level4_Lab*_Content.md into `.guides/content/...` (or paste into Codio Guide Editor). Remove duplicate H1 if the guide adds its own title.
-- **Assessments:** For each lab, add either LLM Rubric (Option A) or Standard Code Test (Option B). For Option B, set COMMAND (venv Python + grader path), Working Directory `/home/codio/workspace`, EXPECTED OUTPUT `PASS`, **enable substring match**, and add rationale text as in Level 3.
+- **Assessments:** For each lab, add either LLM Rubric (Option A) or Standard Code Test (Option B). For Option B, set COMMAND (venv Python + grader path), Working Directory `/home/codio/workspace`, **enable substring match**, and add rationale text as in Level 3. Level 4 **code-output-compare** JSONs use a **sequence** of outputs (`Check 1: PASSED` … `Check N: PASSED`), not a single `PASS` line—see `code-output-compare-40102*` through `401050002.json`.
 - **index.json:** Update so Level 4 units and labs appear in the course navigation.
 
 ---
@@ -210,4 +230,4 @@ For each graded lab, add a **solution reference** markdown file used as the Inst
 | 5 | Add .guides/secure/level4_graders/ with lab_2.1, 3.1, 4.1, 5.1, 5.2_grader.py and solution_reference.md files. |
 | 6 | Sync content to Codio; configure assessments; update index/navigation. |
 
-This mirrors Level 3: same types of content (units + labs), same assessment pattern (LLM Rubric or Python grader, substring match for PASS), and the same “start from previous level’s end state, add only what this level teaches” approach.
+This mirrors Level 3: same types of content (units + labs), same assessment pattern (LLM Rubric or Python grader, substring match for **`Check N: PASSED`** on Level 4), and the same “start from previous level’s end state, add only what this level teaches” approach. **Lab 5.2** adds a **scripted Inspector script** (§4, **Scripted transfer**) so students and authors test **multi-slot + free-text recipient** behavior consistently.

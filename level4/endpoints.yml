@@ -7,8 +7,10 @@ nlg:
     model_group: gpt-4o-mini
 
 model_groups:
+  # Group id kept for config.yml compatibility. Model is gpt-4o (not mini): mini often fails
+  # FillSlot commands for person names on the recipient step; 4o follows flow/slot instructions better.
   - id: gpt-4o-mini
     models:
       - provider: openai
-        model: gpt-4o-mini-2024-07-18
-        temperature: 0.3
+        model: gpt-4o-2024-11-20
+        temperature: 0.1

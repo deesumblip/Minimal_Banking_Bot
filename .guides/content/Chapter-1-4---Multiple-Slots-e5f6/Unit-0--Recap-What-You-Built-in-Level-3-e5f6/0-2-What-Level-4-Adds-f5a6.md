@@ -18,6 +18,6 @@ You will implement in this order: **domain** (Lab 2.1), then **the action that u
 
 **Lab 5.1 — Training.** You will train your Level 4 bot from the `level4` folder.
 
-**Lab 5.2 — Testing.** You will run the completion check and optionally test the transfer flow in Rasa Inspector.
+**Lab 5.2 — Testing.** You will run the **graded completion check**, then **Rasa Inspector** using the **scripted transfer** (step-by-step turns on the Lab 5.2 page) to confirm **`action_process_transfer`** and free-text **recipient** (100-character cap).
 
 **Unchanged.** All your Level 3 responses, flows, and actions stay as they are. You build Level 4 by adding these pieces.

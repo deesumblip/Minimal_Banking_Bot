@@ -4,11 +4,11 @@ In this chapter you:
 
 1. **Domain (Lab 2.1)** — Added three slots (`amount`, `recipient`, `account_from`) and three ask responses (`utter_ask_amount`, `utter_ask_recipient`, `utter_ask_account_from`), and registered `action_process_transfer` in the actions list.
 
-2. **Action (Lab 3.1)** — Created `action_process_transfer.py`, which reads the three slots from the tracker and sends a transfer confirmation (and optionally validates placeholders).
+2. **Action (Lab 3.1)** — Created `action_process_transfer.py`, which reads the three slots, caps **recipient** at **100** characters, validates placeholders, and sends the demo transfer confirmation.
 
-3. **Flow (Lab 4.1)** — Created `transfer_money.yml` with three `collect:` steps (amount, recipient, account_from) and one `action:` step (action_process_transfer).
+3. **Flow (Lab 4.1)** — Created `transfer_money.yml` with three `collect:` steps (amount, recipient, account_from) and one `action:` step (`action_process_transfer`), with **`description:`** text for CALM (free-text **recipient** up to **100** chars in the lab YAML).
 
-4. **Training and testing (Labs 5.1 and 5.2)** — Trained the Level 4 bot from the `level4` folder (Lab 5.1), then ran the completion check and optionally tested the transfer flow in Inspector (Lab 5.2).
+4. **Training and testing (Labs 5.1 and 5.2)** — Trained from `level4` (Lab 5.1), then the **completion check** and **Inspector** with the **scripted transfer** in Lab 5.2 (amount → recipient → account → `(Demo) Transfer of $…`).
 
 ## Key Ideas
 

@@ -13,6 +13,10 @@ __pycache__/
 models/
 .rasa/
 logs/
+# Rasa inspect --log-file does not create logs/; keep level4/logs in repo
+!level4/logs/
+!level4/logs/.gitkeep
+level4/logs/*.out
 
 # editor / OS
 .vscode/

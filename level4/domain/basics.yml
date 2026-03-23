@@ -1,13 +1,18 @@
-## Level 4: Multiple Slots (starts as your Level 3 bot)
+## Level 4: Multiple Slots — Chapter 1.4 completion (domain + transfer flow)
 #
-# This folder is a copy of your Level 3 bot. In Lab 2.1 you will add:
-# - slots: amount, recipient, account_from and utter_ask_amount, utter_ask_recipient, utter_ask_account_from
-# - action_process_transfer to the actions list (you will create the .py file in Lab 3.1)
+# Transfer slots and action_process_transfer are registered; see actions/action_process_transfer.py
+# and data/basics/transfer_money.yml.
 
 version: "3.1"
 
 slots:
   account:
+    type: text
+  amount:
+    type: text
+  recipient:
+    type: text
+  account_from:
     type: text
 
 responses:
@@ -41,6 +46,22 @@ responses:
       metadata:
         rephrase: True
 
+  utter_ask_amount:
+    - text: "How much would you like to transfer?"
+      metadata:
+        rephrase: False
+
+  utter_ask_recipient:
+    - text: "Who would you like to transfer money to?"
+      metadata:
+        rephrase: False
+
+  utter_ask_account_from:
+    - text: "Which account would you like to transfer from?"
+      metadata:
+        rephrase: False
+
 actions:
   - action_bank_hours
   - action_check_balance_simple
+  - action_process_transfer

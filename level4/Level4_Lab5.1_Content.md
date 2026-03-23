@@ -38,4 +38,4 @@ When steps are complete, run **Check It!** for Lab 5.1 in Codio.
 5. Run `python -m rasa train` until **Successfully saved model**.
 6. Confirm a new `.tar.gz` in `level4/models/`.
 
-Then proceed to **Lab 5.2**.
+Then proceed to **Lab 5.2** — run the **completion check**, then **Inspector** using the **scripted transfer** table in Lab 5.2 (amount → recipient → account → demo confirmation).

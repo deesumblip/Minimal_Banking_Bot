@@ -4,7 +4,7 @@
 	"source": {
 		"name": "Lab 3.1: Writing the Action That Uses Multiple Slots",
 		"showName": true,
-		"instructions": "To pass, all checks must pass (Chapter 1.2 Lab 6.2 style output):\n\n• Check 1: level4/actions/action_process_transfer.py exists.\n• Check 2: Correct imports (Action, Tracker, Dispatcher).\n• Check 3: Class ActionProcessTransfer(Action).\n• Check 4: name() returns action_process_transfer.\n• Check 5: run() reads amount, recipient, account_from via get_slot.\n• Check 6: Sends a confirmation message (utter_message).\n\nFull score: 10/10.",
+		"instructions": "To pass, all checks must pass (Chapter 1.2 Lab 6.2 style output):\n\n• Check 1: level4/actions/action_process_transfer.py exists.\n• Check 2: Correct imports (Action, Tracker, Dispatcher).\n• Check 3: Class ActionProcessTransfer(Action).\n• Check 4: name() returns action_process_transfer.\n• Check 5: run() reads amount, recipient, account_from via get_slot.\n• Check 6: Sends a confirmation message (utter_message).\n\nThe course solution also caps recipient text at 100 characters in code; the grader does not require that substring. Full score: 10/10.",
 		"command": "bash /home/codio/workspace/.guides/scripts/run_python_grader.sh /home/codio/workspace/.guides/secure/level4_graders/lab_3.1_grader.py",
 		"preExecuteCommand": "",
 		"options": {

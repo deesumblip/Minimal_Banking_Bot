@@ -6,7 +6,7 @@ You do **not** need to activate the virtual environment for this lab—**Check I
 
 #### Complete the action file (fill in the blanks)
 
-The exercise uses the same pieces you saw in Level 2 in *The Action Class Deep Dive*, in Chapter 1.3 in **Lab 4.1** (`action_check_balance_simple`), and in this chapter in **Unit 3.1** (reading multiple slots with `tracker.get_slot(...)`). Complete every blank, then **copy the full script** into `level4/actions/action_process_transfer.py` using the steps below. Run the **Code Test** when the file is saved.
+The exercise uses the same pieces you saw in Level 2 (*The Action Class Deep Dive*), Chapter 1.3 **Lab 4.1** (`action_check_balance_simple`), and **Unit 3.1** (`tracker.get_slot`, placeholders, **100-character** cap on `recipient`). **Twelve blanks** cover imports, class, `name()`, return type, three slot reads (including **`[:100]`** on recipient), the placeholder `if`, messages, and `return []`. Complete every blank, then **copy the full script** into `level4/actions/action_process_transfer.py`. Run the **Code Test** when the file is saved.
 
 {Check It!|assessment}(fill-in-the-blanks-401030010)
 

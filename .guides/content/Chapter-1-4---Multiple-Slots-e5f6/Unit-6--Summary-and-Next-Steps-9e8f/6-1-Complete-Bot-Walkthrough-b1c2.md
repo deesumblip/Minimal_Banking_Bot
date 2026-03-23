@@ -1,17 +1,25 @@
-You now have a Level 4 bot that extends Level 3 with a transfer flow.
+You now have a **Level 4** assistant: same **Level 3** behavior, plus a **transfer** flow that collects **three** slots and runs **`action_process_transfer`**.
 
-## What Your Bot Can Do
+## What your bot can do
 
-- **Level 1:** Greet, help, contact, goodbye (responses only).
-- **Level 2:** Bank hours (action_bank_hours).
-- **Level 3:** Check balance — collect account number, then run action_check_balance_simple.
-- **Level 4:** Transfer money — collect amount, recipient, and account_from, then run action_process_transfer and send a confirmation.
+| Layer | What it does |
+|-------|----------------|
+| **Level 1** | Greet, help, contact, goodbye (responses). |
+| **Level 2** | Bank hours — `action_bank_hours`. |
+| **Level 3** | Check balance — collect `account`, then `action_check_balance_simple`. |
+| **Level 4** | Transfer — collect **`amount` → `recipient` → `account_from`**, then **`action_process_transfer`** (demo confirmation). |
 
-## Flow Summary
+Train **once** from **`level4`**; one model serves all flows.
 
-| Flow          | Slots collected        | Action                      |
-|---------------|------------------------|-----------------------------|
-| check_balance | account                | action_check_balance_simple |
-| transfer_money| amount, recipient, account_from | action_process_transfer |
+## Quick verification (same as Lab 5.2)
 
-All flows and actions live in the **level4** folder. You train once from `level4` and run one assistant that supports all of these flows. Use Rasa Inspector to try each flow and confirm slots are collected and used correctly.
+In **Rasa Inspector**, you can repeat the **scripted transfer** from **Lab 5.2** to see **multi-slot collection** and **free-text recipient** (capped at **100** characters in the action and flow):
+
+1. `Can I transfer some money?`
+2. `let's say 300 dollars`
+3. `Alice` (or any short free-text label)
+4. `savings`
+
+You should get a final line like **`(Demo) Transfer of $300 from account savings to Alice has been processed successfully.`**
+
+For graded checks and troubleshooting, use **Lab 5.2** in Unit 5.

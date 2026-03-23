@@ -41,7 +41,7 @@ Use 2-space indentation. Each slot has `type: text`.
         rephrase: False
 ```
 
-Use **`rephrase: False`** for these three `utter_ask_*` responses. With Rasa Pro CALM + LLM command generation, **`rephrase: True` on utter_ask during slot collection** can cause the bot to fail filling the next slot (e.g. recipient names) and reply with *“I’m sorry I am unable to understand you…”*. Keep `rephrase: True` on greetings/help if you like.
+Use **`rephrase: False`** for these three `utter_ask_*` responses. With Rasa Pro CALM, **`rephrase: True` on `utter_ask_*` during slot collection** can cause the command generator to miss-map the user’s reply (especially free-text **recipient** or **account_from**) and reply with *“I’m sorry I am unable to understand you…”*. **Level 4** uses **`CompactLLMCommandGenerator`** in `level4/config.yml` (Chapter 1.3 / `level3` may still use **`SearchReadyLLMCommandGenerator`**); either way, fixed ask text helps. Keep `rephrase: True` on greetings/help if you like.
 
 Naming: `utter_ask_<slot_name>` for each slot.
 

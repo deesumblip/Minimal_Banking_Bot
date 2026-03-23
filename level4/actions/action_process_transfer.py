@@ -1,25 +1,3 @@
-In Level 3 you read one slot in `action_check_balance_simple` with `tracker.get_slot("account")`. In Level 4 you will read **three** slots in `action_process_transfer`.
-
-## Reading Multiple Slots in the Action
-
-Inside `run()` you read each slot the same way. For **`recipient`**, the course solution also **caps free text at 100 characters** (aligned with Lab 4.1’s flow `description:`), so the stored value matches the confirmation:
-
-```python
-amount = tracker.get_slot("amount") or ""
-recipient = (tracker.get_slot("recipient") or "")[:100]
-account_from = tracker.get_slot("account_from") or ""
-```
-
-The flow collects these before the action runs (or values may be empty / placeholder-like). Your action can:
-
-- Treat placeholders case-insensitively and re-prompt with one message, then `return []`.
-- Otherwise send a demo confirmation (e.g. starting with `(Demo) Transfer of $…`) and `return []`.
-
-## Example: Complete action class
-
-Below is the **reference** implementation. Create your file in **Lab 3.1** (fill-in-the-blanks, then paste into `level4/actions/action_process_transfer.py`).
-
-```python
 from typing import Any, Dict, List, Text
 
 from rasa_sdk import Action, Tracker
@@ -60,6 +38,3 @@ class ActionProcessTransfer(Action):
             )
         )
         return []
-```
-
-In **Lab 3.1** you will create this action, then run the assessments.

@@ -10,24 +10,24 @@ In Unit 4 you saw an example of the transfer_money flow (YAML with three collect
 flows:
   transfer_money:
     name: transfer money
+    always_include_in_prompt: true
+    if: true
     description: |
-      User transfers money in USD. Collect in order: dollar amount, payee (free text),
-      then source account; then run the transfer action.
+      Transfer money in USD. Steps: get dollar amount, then who receives it (any name or text), then which account to take it from, then run the transfer action.
     steps:
       - collect: amount
         description: |
-          Dollar amount to send. Extract the numeric value from input like "50 dollars", "$50", or "fifty".
+          US dollar amount. Parse the user's message and set slot amount to the main number as text (e.g. 20 from "20 dollars").
       - collect: recipient
         description: |
-          Who receives the money. Map the user's entire message to this slot as plain text,
-          including multi-word names (e.g. "Alice", "John Smith", "George W Bush").
+          Payee: any free-text string. Set slot recipient to the user's full message (plain text), up to 100 characters.
       - collect: account_from
         description: |
-          Source account number or label the user gives for the account to transfer from.
+          Source account. Set slot account_from to the user's full message (plain text), up to 120 characters.
       - action: action_process_transfer
 ```
 
-**Why the longer `description` lines?** Rasa Pro’s **LLM command generator** uses these strings when deciding how to **fill slots**. Short phrases like `"recipient name or account"` often fail for multi-word names; richer descriptions match [Rasa’s guidance](https://rasa.com/docs/reference/config/components/llm-command-generators/#customizing-the-prompt) to improve extraction.
+**Why these `description` lines?** Rasa Pro’s **LLM command generator** uses them when **filling slots**. For payee and account, a **simple rule** works well: store the **entire user message** as text, **any characters**, within a **fixed length range** (here 1–100 for recipient, 1–120 for account). See also [Rasa’s guidance](https://rasa.com/docs/reference/config/components/llm-command-generators/#customizing-the-prompt).
 
 3. **Verify.** The file is in `data/basics/`, and the flow has `name`, `description`, and `steps` with the three collect steps and the action step.
 

@@ -1,10 +1,10 @@
 {
-  "id": "0d1ee5f6-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-  "type": "section",
-  "title": "Unit 3: Reading Multiple Slots in Actions",
-  "order": [
-    "3-1-Reading-Multiple-Slots-b5c6",
-    "Lab-3-1-Writing-the-Action-c6d7"
-  ],
-  "content": ""
+	"id": "ed70ab63-8863-5a35-b343-83123035cf09",
+	"type": "section",
+	"title": "Unit 3: Reading Multiple Slots in Actions",
+	"order": [
+		"3-1-Reading-Multiple-Slots-b5c6",
+		"Lab-3-1-Writing-the-Action-c6d7"
+	],
+	"content": ""
 }

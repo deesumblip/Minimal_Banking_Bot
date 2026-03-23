@@ -9,7 +9,7 @@ The flow will:
 3. **Collect account_from** — Step with `collect: account_from`. When empty, Rasa uses `utter_ask_account_from`.
 4. **Run the action** — Step with `action: action_process_transfer`, which reads all three slots and sends the confirmation.
 
-Each `collect:` step can include a **`description:`** for the slot. In **Rasa Pro (CALM)**, the LLM **command generator** uses these descriptions when filling slots—short one-line descriptions are often **not enough** for free-text names (multi-word payees). Use **clear, explicit** descriptions (see Lab 4.1 example). The important part is that the three collect steps appear in order, followed by the action step.
+Each `collect:` step can include a **`description:`** for the slot. In **Rasa Pro (CALM)**, the LLM **command generator** uses it when filling slots. For free-text payee/account fields, a **simple rule** works well: **whole user message**, **any characters**, **fixed length range** (see Lab 4.1). The important part is that the three collect steps appear in order, followed by the action step.
 
 ## Example: The transfer_money flow
 
@@ -19,18 +19,20 @@ Below is an example of the flow file. You will create your own version in Lab 4.
 flows:
   transfer_money:
     name: transfer money
+    always_include_in_prompt: true
+    if: true
     description: |
-      User transfers money in USD. Collect amount, payee (free text), source account; then action.
+      Transfer money in USD. Steps: get dollar amount, then who receives it (any name or text), then which account to take it from, then run the transfer action.
     steps:
       - collect: amount
         description: |
-          Dollar amount. Extract the numeric value from "50 dollars", "$50", etc.
+          US dollar amount. Parse the user's message and set slot amount to the main number as text (e.g. 20 from "20 dollars").
       - collect: recipient
         description: |
-          Payee as free text; include multi-word names (e.g. "Alice", "George W Bush").
+          Payee: any free-text string. Set slot recipient to the user's full message (plain text), up to 100 characters.
       - collect: account_from
         description: |
-          Source account number or label from the user.
+          Source account. Set slot account_from to the user's full message (plain text), up to 120 characters.
       - action: action_process_transfer
 ```
 

@@ -47,4 +47,6 @@ Same sequence on your machine; only the activate command changes by OS.
 6. **Train:** `python -m rasa train` until you see **Successfully saved model**.
 7. **Verify:** A new `.tar.gz` appears under `level4/models/`.
 
-You are done when training completes with no errors and `models/` contains a new model. Continue with **Lab 5.2** for the completion check and Inspector testing.
+You are done when training completes with no errors and `models/` contains a new model.
+
+**Next:** Open **Lab 5.2** — run the **completion check** (`Check It!`), then **Rasa Inspector** using the **step-by-step turns** in the Lab 5.2 table (transfer: amount → recipient → account → demo confirmation).

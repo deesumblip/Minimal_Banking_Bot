@@ -17,7 +17,7 @@ The file must contain a flow that:
 
 3. **Action step** – At least one step that calls the transfer action: `action: action_process_transfer`.
 
-**Recommended:** Use **detailed `description:`** text on each `collect:` step so the CALM LLM command generator reliably fills slots (especially multi-word recipient names). See example below.
+**Recommended:** Use clear **`description:`** text on each `collect:` step so the CALM LLM command generator fills slots. For free-text slots, a **simple rule** often works: **whole user message**, **any characters**, **length within a fixed range** (see example).
 
 Example:
 
@@ -25,20 +25,20 @@ Example:
 flows:
   transfer_money:
     name: transfer money
+    always_include_in_prompt: true
+    if: true
     description: |
-      User transfers money in USD. Collect in order: dollar amount, payee (free text),
-      then source account; then run the transfer action.
+      Transfer money in USD. Steps: get dollar amount, then who receives it (any name or text), then which account to take it from, then run the transfer action.
     steps:
       - collect: amount
         description: |
-          Dollar amount to send. Extract the numeric value from input like "50 dollars", "$50", or "fifty".
+          US dollar amount. Parse the user's message and set slot amount to the main number as text (e.g. 20 from "20 dollars").
       - collect: recipient
         description: |
-          Who receives the money. Map the user's entire message to this slot as plain text,
-          including multi-word names (e.g. "Alice", "John Smith", "George W Bush").
+          Payee: any free-text string. Set slot recipient to the user's full message (plain text), up to 100 characters.
       - collect: account_from
         description: |
-          Source account number or label the user gives for the account to transfer from.
+          Source account. Set slot account_from to the user's full message (plain text), up to 120 characters.
       - action: action_process_transfer
 ```
 

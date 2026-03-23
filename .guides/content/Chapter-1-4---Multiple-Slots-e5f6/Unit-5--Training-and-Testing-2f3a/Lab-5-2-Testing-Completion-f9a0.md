@@ -1,57 +1,60 @@
-After **Lab 5.1** (training), **Lab 5.2** finishes Unit 5 with two parts:
+**Unit 5 — Lab 5.2.** You already **trained** the bot in **Lab 5.1**. This lab has two parts in order:
 
-1. **Completion check (graded)** — Confirms your domain, action, flow, and trained model are in place. The grader **does not** start Rasa or open Inspector; it only checks files and structure.
-2. **Testing in Rasa Inspector (optional)** — Walk through the **transfer** flow live: trigger it, answer the prompts, and confirm `action_process_transfer` runs. You can also spot-check **Level 3** flows (e.g. balance, hours).
+1. **Completion check (graded)** — Confirms domain, action, flow YAML, and a trained model are in place. The grader **does not** start Rasa or Inspector.
+2. **Rasa Inspector (recommended)** — Run the **transfer** flow and confirm **`action_process_transfer`** fires with the expected demo message (free-text **recipient**, **100-character cap** in code + flow).
 
-**Recommended order:** Run **Check It!** in Part 1 first. If that passes, your project is ready to run; Part 2 is for hands-on verification.
-
-**Prerequisite.** Complete **Labs 2.1, 3.1, and 4.1**, then **Lab 5.1** (so a model exists in `level4/models/`). You need: domain with transfer slots and ask responses, `action_process_transfer.py`, `transfer_money.yml`, and a trained model.
+**Prerequisite:** **Labs 2.1 → 3.1 → 4.1** done, then **Lab 5.1** so `level4/models/` contains a `.tar.gz` file.
 
 ---
 
 ## Part 1: Completion check (Codio)
 
-1. Use **Check It!** below. The grader checks that:
-   - The domain has the three transfer slots, three ask responses, and `action_process_transfer` in the actions list
-   - `level4/actions/action_process_transfer.py` exists and reads the three slots
-   - `level4/data/basics/transfer_money.yml` exists with the three collect steps and the action step
-   - A model file exists in `level4/models/`
+1. Use **Check It!** below. The grader verifies:
+   - **Domain:** slots `amount`, `recipient`, `account_from`; `utter_ask_amount`, `utter_ask_recipient`, `utter_ask_account_from`; `action_process_transfer` in `actions:`
+   - **Action:** `level4/actions/action_process_transfer.py` reads the three slots (via `get_slot`)
+   - **Flow:** `level4/data/basics/transfer_money.yml` has the three `collect:` steps and `action: action_process_transfer`
+   - **Model:** at least one `.tar.gz` under `level4/models/`
 
 {Check It!|assessment}(code-output-compare-401050002)
 
-2. If any check fails, fix the corresponding lab (**2.1** domain, **3.1** action, **4.1** flow, or **5.1** training), then use **Check It!** again.
+2. If a check fails, fix the matching lab (**2.1** domain, **3.1** action, **4.1** flow, **5.1** train), then run **Check It!** again.
 
 ---
 
-## Part 2: Test in Rasa Inspector (optional)
+## Part 2: Test in Rasa Inspector (hands-on)
 
-Use this after Part 1 passes (or when you are ready to exercise the bot). Start from **`level4`** with the virtual environment active.
+**When:** After Part 1 passes (or whenever you want to see the bot live).
 
-1. **Start the bot** — For example: `python -m rasa inspect --debug`. Your course may use `python -m rasa run` instead; follow your instructor if unsure. Leave the process running.
-2. **Open the UI** — On **Codio**, when you see **Starting Worker** in the terminal, open the **Rasa Inspect** tab. **Locally**, open the URL shown (e.g. `http://localhost:5005`).
-3. **Trigger the transfer flow** — Try phrases like “I want to transfer money” or “Transfer funds.”
-4. **Answer the prompts** — The bot should ask for **amount**, then **recipient**, then **source account**. Example values: `50`, `Alice`, `1234`.
-5. **Confirm** — You should see the confirmation from `action_process_transfer` using all three values.
-6. **Verify other flows (optional)** — Try “Check my balance” and “What are your hours?” to confirm Level 3 / Level 2 behavior still works.
+**Where:** From **`level4`** with the project **virtual environment** active (same as Lab 5.1).
 
-### If the bot says “unable to understand you” when collecting the recipient (or account)
+1. **Start the assistant** — e.g. `python -m rasa inspect --debug` (your course may use `python -m rasa run`; follow your instructor if unsure). Leave the process running.
+2. **Open the UI** — On **Codio**, open the **Rasa Inspect** tab when the terminal shows the server is up. **Locally**, use the URL shown (often `http://localhost:5005`).
+3. **Run the scripted transfer** — Type the turns **in order** so you exercise **amount → recipient → account_from → confirmation**:
 
-**What you might see:** Amount works, then after you type a name (e.g. “Alice” or “Ronald McDonald”) the bot replies with something like *“I’m sorry I am unable to understand you, could you please rephrase?”* and asks again—sometimes losing the amount in the follow-up prompt.
+| Step | You type (example) | What you’re checking |
+|------|--------------------|----------------------|
+| 1 | `Can I transfer some money?` | Bot enters the transfer flow (may greet first). |
+| 2 | `let's say 300 dollars` | **Amount** slot filled; bot asks for recipient. |
+| 3 | `Alice` *(or any short free text, e.g. `MC hammer`)* | **Recipient** is stored as plain text (up to **100** chars in action + flow); bot asks for source account. |
+| 4 | `savings` *(or e.g. `1234`)* | **account_from** filled; bot runs **`action_process_transfer`**. |
+| 5 | *(read only)* | Final line should match the demo pattern: **`(Demo) Transfer of $… from account … to … has been processed successfully.`** |
 
-**Why:** With **Rasa Pro** (CALM + `SearchReadyLLMCommandGenerator`), **slot collection** is sensitive to how ask prompts are generated. If **`utter_ask_amount` / `utter_ask_recipient` / `utter_ask_account_from`** use **`metadata: rephrase: True`**, the model can rephrase those questions during collection; the command layer may then fail to map your free-text answer to the slot and fall back to that generic message.
+4. **Optional sanity checks** — Try **“What’s my balance?”** / **“What are your hours?”** to confirm Level 3 / Level 2 flows still work from the same `level4` model.
 
-**Fix (domain):** In **`level4/domain/basics.yml`**, set **`rephrase: False`** for those three `utter_ask_*` responses (keep `rephrase: True` on greetings/help if you want). **Retrain** (`python -m rasa train` from `level4`) and test again. This is the pattern recommended in **Lab 2.1**.
+---
 
-**Still stuck? Fix (flow YAML):** In **`level4/data/basics/transfer_money.yml`**, expand the **`description:`** under **`collect: recipient`** (and each collect step) so the LLM command generator knows to treat the **whole user message** as free text, including **multi-word names**. Short strings like `"recipient name or account"` are often **not** enough for CALM. Use the **Lab 4.1** example (longer descriptions). **Retrain** after editing the flow.
+### If the bot says “unable to understand you” on recipient or account
 
-**Optional (advanced):** Rasa docs recommend **`CompactLLMCommandGenerator`** when you are **not** using Enterprise Search / RAG. This course’s **`config.yml`** uses **`SearchReadyLLMCommandGenerator`** (fine for many setups). If problems persist after domain + flow fixes, ask your instructor about trying **`CompactLLMCommandGenerator`** in `level4/config.yml` per [Rasa LLM command generators](https://rasa.com/docs/reference/config/components/llm-command-generators/).
+1. **Domain:** In **`level4/domain/basics.yml`**, use **`metadata: rephrase: False`** on **`utter_ask_amount`**, **`utter_ask_recipient`**, and **`utter_ask_account_from`** (see Lab 2.1).
+2. **Flow:** In **`level4/data/basics/transfer_money.yml`**, ensure **`collect: recipient`** and **`collect: account_from`** have clear **`description:`** text (full user message as text; **1–100** chars for recipient, **1–120** for account in Lab 4.1). **Retrain** after edits.
+3. **Pipeline:** Use this repo’s **`level4/config.yml`** (**`CompactLLMCommandGenerator`**). Chapter 1.3 **`level3`** keeps **`SearchReadyLLMCommandGenerator`**. After any config or YAML change: **`python -m rasa train`** from **`level4`**. See **`level4/PIPELINE_CHAPTER_1_3_AND_4.md`**.
 
 ---
 
 ## Part 3: Running locally (optional)
 
-Same flow as Part 2 on your own machine: activate `.venv` at the project root, `cd level4`, then `python -m rasa inspect --debug` (or `rasa run` per your setup). Open **Rasa Inspect** or the served URL as above.
+Same as Part 2: activate `.venv` at the **project root**, `cd level4`, run Inspect or `rasa run`, open the UI, then use the **same table** as in Part 2.
 
 ---
 
-**Done when:** The completion check in Part 1 passes. Optionally, you have also walked through the transfer flow in Inspector (and any extra checks you care about).
+**Done when:** Part 1 **Check It!** passes. Part 2 is strongly recommended so you see the **multi-slot + free-text recipient** behavior end-to-end.

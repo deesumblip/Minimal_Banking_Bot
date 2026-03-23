@@ -9,7 +9,7 @@ The flow will:
 3. **Collect account_from** — Step with `collect: account_from`. When empty, Rasa uses `utter_ask_account_from`.
 4. **Run the action** — Step with `action: action_process_transfer`, which reads all three slots and sends the confirmation.
 
-Each `collect:` step can optionally include a `description:` for the slot (e.g. for documentation or tools). The important part is that the three collect steps appear in order, followed by the action step.
+Each `collect:` step can include a **`description:`** for the slot. In **Rasa Pro (CALM)**, the LLM **command generator** uses it when filling slots. For **free-text** slots (payee, account), a simple pattern is: **store the user’s full message**, **any characters**, **between a min and max length**—see Lab 4.1. The important part is that the three collect steps appear in order, followed by the action step.
 
 ## Example: The transfer_money flow
 
@@ -19,16 +19,20 @@ Below is an example of the flow file. You will create your own version in Lab 4.
 flows:
   transfer_money:
     name: transfer money
+    always_include_in_prompt: true
+    if: true
     description: |
-      Demonstrates collecting multiple slots before executing an action.
-      The bot will collect amount, recipient, and source account, then process the transfer.
+      Transfer money in USD. Steps: get dollar amount, then who receives it (any name or text), then which account to take it from, then run the transfer action.
     steps:
       - collect: amount
-        description: "transfer amount"
+        description: |
+          US dollar amount. Parse the user's message and set slot amount to the main number as text (e.g. 20 from "20 dollars").
       - collect: recipient
-        description: "recipient name or account"
+        description: |
+          Payee: any free-text string. Set slot recipient to the user's full message (plain text), up to 100 characters.
       - collect: account_from
-        description: "source account number"
+        description: |
+          Source account. Set slot account_from to the user's full message (plain text), up to 120 characters.
       - action: action_process_transfer
 ```
 

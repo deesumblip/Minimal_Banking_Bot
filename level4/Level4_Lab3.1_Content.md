@@ -8,7 +8,7 @@ Students do **not** need to activate the virtual environment for this lab—**Ch
 
 1. **Fill in the Blanks** — `{Check It!|assessment}(fill-in-the-blanks-401030010)`  
    - Assessment JSON: `.guides/assessments/fill-in-the-blanks-401030010.json`  
-   - Twelve blanks cover typing imports, `Action`, action name, return type, three `tracker.get_slot(...)` lines, placeholder `if`, re-prompt text, and `[]` / confirmation `f-string`.
+   - **Twelve blanks:** imports, `Action`, `name()`, return type, three slot reads (**recipient** includes **`[:100]`**), placeholder `if` (case-insensitive), re-prompt string, confirmation `f-string`, and `return []`.
 
 2. **After you complete the blanks** — Open `level4/actions/action_process_transfer.py`, paste your completed script, save.
 

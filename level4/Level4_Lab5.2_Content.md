@@ -1,6 +1,6 @@
-**Objective.** After **Lab 5.1** (training), **Lab 5.2** completes Unit 5: (1) a **graded completion check** that your domain, action, flow, and model are present—the grader does **not** start Rasa or Inspector; (2) **optional** testing in **Rasa Inspector** to run the transfer flow and confirm behavior.
+**Objective.** After **Lab 5.1** (training), **Lab 5.2** completes Unit 5: (1) a **graded completion check** that your domain, action, flow, and model are present—the grader does **not** start Rasa or Inspector; (2) **hands-on testing** in **Rasa Inspector** to run the transfer flow and confirm **`action_process_transfer`** and the **free-text recipient** behavior (including the **100-character** cap in code + flow).
 
-**Recommended order:** Complete the completion check first, then use Inspector if you want hands-on verification.
+**Recommended order:** Pass the completion check first, then use Inspector with the **scripted turns** below.
 
 **Prerequisite.** Finish **Labs 2.1, 3.1, and 4.1**, then **Lab 5.1** (a model must exist under `level4/models/`).
 
@@ -8,7 +8,7 @@
 
 ## Part 1: Completion check
 
-1. In **Codio**, use **Check It!** for Lab 5.2 (assessment `code-output-compare-401050002`).
+1. In **Codio**, use **Check It!** for Lab 5.2 (`code-output-compare-401050002`).
 
 The grader checks that:
    - The domain has the three transfer slots, three ask responses, and `action_process_transfer` in the actions list
@@ -20,31 +20,38 @@ The grader checks that:
 
 ---
 
-## Part 2: Test in Rasa Inspector (optional)
+## Part 2: Rasa Inspector (recommended)
 
 From **`level4`** with the virtual environment active:
 
-1. Start the bot (e.g. `python -m rasa inspect --debug`, or `python -m rasa run` if your course uses that). Leave it running.
-2. Open **Rasa Inspect** (Codio tab) or the local URL (e.g. `http://localhost:5005`).
-3. Trigger the transfer flow (“I want to transfer money”, etc.).
-4. Provide amount, recipient, and source account when asked.
-5. Confirm the message from `action_process_transfer`.
-6. Optionally try balance / hours to confirm other flows still work.
+1. Start the bot (e.g. `python -m rasa inspect --debug`, or `python -m rasa run` per your course).
+2. Open **Rasa Inspect** (Codio) or the local URL (e.g. `http://localhost:5005`).
 
-**Troubleshooting:** If the bot accepts the amount but then says it **cannot understand** you when you enter the recipient (or account):
+**Scripted transfer (type in order):**
+
+| Step | You type (example) | What to verify |
+|------|--------------------|----------------|
+| 1 | `Can I transfer some money?` | Transfer flow starts. |
+| 2 | `let's say 300 dollars` | Amount collected; bot asks for recipient. |
+| 3 | `Alice` (or any short free text) | Recipient stored as plain text; bot asks for account. |
+| 4 | `savings` (or e.g. `1234`) | Confirmation from **`action_process_transfer`**: `(Demo) Transfer of $…` |
+
+3. Optionally try balance / hours to confirm other flows still work.
+
+**Troubleshooting:** If the bot accepts the amount but then **cannot understand** you on recipient or account:
 
 1. **Domain:** In **`level4/domain/basics.yml`**, set **`metadata: rephrase: False`** on **`utter_ask_amount`**, **`utter_ask_recipient`**, and **`utter_ask_account_from`** (see Lab 2.1).
 
-2. **Flow:** In **`level4/data/basics/transfer_money.yml`**, expand the **`description:`** on each **`collect:`** step—especially **`recipient`**—so CALM knows to map the **entire user message** as free text, including multi-word names. See **Lab 4.1** for a full example.
+2. **Flow:** In **`level4/data/basics/transfer_money.yml`**, ensure **`collect: recipient`** and **`account_from`** **`description:`** lines tell the command generator to store the **full user message** as text with a **clear length range** (Lab 4.1: **1–100** chars for recipient, **1–120** for account). **Retrain** after edits.
 
-3. **Retrain** after changing domain or flow: `python -m rasa train` from **`level4`**.
+3. **Pipeline:** The **`level4`** repo uses **`CompactLLMCommandGenerator`** (Chapter 1.3 / **`level3`** stays **`SearchReadyLLMCommandGenerator`**). Confirm **`level4/config.yml`** and **`python -m rasa train`** from **`level4`**. See **`PIPELINE_CHAPTER_1_3_AND_4.md`**.
 
 ---
 
 ## Part 3: Running locally (optional)
 
-Same as Part 2 on your machine: activate `.venv` at the project root, `cd level4`, then start Inspect or run as above.
+Same as Part 2: activate `.venv` at the project root, `cd level4`, start Inspect or run, then use the **same table** as above.
 
 ---
 
-**Done when:** The completion check passes; Inspector testing is optional but recommended for confidence.
+**Done when:** The completion check passes; Inspector is recommended for confidence.

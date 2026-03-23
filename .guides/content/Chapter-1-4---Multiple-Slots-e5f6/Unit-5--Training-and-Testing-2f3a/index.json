@@ -1,10 +1,10 @@
 {
-  "id": "2f3ae5f6-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-  "type": "section",
-  "title": "Unit 5: Training and Testing",
-  "order": [
-    "Lab-5-1-Training-d7e8",
-    "Lab-5-2-Testing-Completion-f9a0"
-  ],
-  "content": ""
+	"id": "37d44e95-82b5-5347-aea9-5f206410c46d",
+	"type": "section",
+	"title": "Unit 5: Training and Testing",
+	"order": [
+		"Lab-5-1-Training-d7e8",
+		"Lab-5-2-Testing-Completion-f9a0"
+	],
+	"content": ""
 }
