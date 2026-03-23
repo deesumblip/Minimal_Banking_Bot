@@ -6,7 +6,7 @@
 
 **Where to work:** Students do this lab from the **level2** folder. All file paths are relative to `level2`. In Codio, the terminal opens in the workspace (`~/workspace`); they run `cd level2`. Locally, they open the terminal in the main project folder (contains `level1`, `level2`, `.guides`), then run `cd level2`.
 
-**Full instructions:** See **Level2_Lab5.1_Content.md** (and Codio Lab 5.1 guide) for the complete step-by-step: (1) go to `data/basics/`, (2) create/ensure `hours.yml` with the `hours` flow and `action_bank_hours`, (3) create `holiday_hours.yml` with the `holiday_hours` flow and `action_holiday_hours`, (4) verify both files, then run the assessment. Optional: Review in Inspector (Lab 6.2 steps; example questions: hours, holiday hours, hello).
+**Full instructions:** See **Level2_Lab5.1_Content.md** (and Codio Lab 5.1 guide) for the complete step-by-step: (1) go to `data/basics/`, (2) create/ensure `hours.yml` with the `hours` flow and `action_bank_hours`, (3) create `holiday_hours.yml` with the `holiday_hours` flow and `action_holiday_hours`, (4) verify both files, then **in Codio** use **Check It!**. Optional: Review in Inspector (Lab 6.2 steps; example questions: hours, holiday hours, hello).
 
 ---
 

@@ -97,7 +97,7 @@ rasa --version
 
 You should see version information with no errors.
 
-Run the assessment for this lab to confirm your setup.
+**In Codio**, use **Check It!** for this lab to confirm your setup.
 
 {Check It!|assessment}(code-output-compare-3333363688)
 

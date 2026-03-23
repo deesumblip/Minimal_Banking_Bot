@@ -20,7 +20,7 @@ mkdir -p logs
 
 #### Step 3: Start Inspector in the terminal
 
-From the `level1` folder (with venv active), run:
+From the `level1` folder, run:
 
 ```bash
 python -m rasa inspect --debug --log-file logs/logs.out
@@ -48,7 +48,7 @@ At this stage the bot only uses simple responses, so the answers will be straigh
 
 ---
 
-Run the assessment when done.
+**Use Check It!** below when done (Codio).
 
 {Check It!|assessment}(code-output-compare-2562507356)
 

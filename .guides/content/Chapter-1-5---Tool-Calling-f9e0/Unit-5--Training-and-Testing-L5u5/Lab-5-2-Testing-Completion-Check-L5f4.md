@@ -6,7 +6,7 @@
 
 **Step 2.** Optionally run the assistant: start the action server (`rasa run actions`) in one terminal and Rasa (`rasa run` or `rasa inspect`) in another. Open Inspector and trigger the transfer_money_tools flow; confirm the bot collects slots and that tool calling works (e.g. you get a balance or transfer confirmation).
 
-**Step 3.** Run the assessment.
+**Step 3.** **In Codio**, use **Check It!**.
 
 {Check It!|assessment}(code-output-compare-501050002)
 

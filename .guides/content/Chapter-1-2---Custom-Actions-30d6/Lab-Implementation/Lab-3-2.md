@@ -45,7 +45,7 @@ You can also add `from typing import Any, Dict, List, Text` for type hints.
 - At the end of `run()`, use the **literal** `return []` (type the empty list directly, not a variable) so the autograder passes.
 
 **Step 6 – Save and verify**  
-- Save the file and run the assessment below.
+- Save the file and **in Codio** use **Check It!** below.
 
 ---
 
@@ -59,7 +59,7 @@ Before submitting, confirm:
 - [ ] `name()` returns `"action_holiday_hours"` (with **double quotes**)
 - [ ] `run()` calls `dispatcher.utter_message()` and ends with the **literal** `return []`
 
-Run the assessment when you're done.
+**In Codio**, use **Check It!** when you're done.
 
 ---
 

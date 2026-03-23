@@ -5,7 +5,7 @@
 
 ---
 
-You need two flows that use actions: the **example** flow `hours.yml` (for `action_bank_hours`) and **your** flow `holiday_hours.yml` (for the action you created in Lab 3.2, `action_holiday_hours`). Follow the steps below, then run the assessment.
+You need two flows that use actions: the **example** flow `hours.yml` (for `action_bank_hours`) and **your** flow `holiday_hours.yml` (for the action you created in Lab 3.2, `action_holiday_hours`). Follow the steps below, then **in Codio** use **Check It!**.
 
 ### Step 1: Navigate to the data folder
 
@@ -50,7 +50,7 @@ flows:
 - Each flow has `name:`, `description:`, and `steps:` with the correct action
 - YAML syntax is correct (spaces, no tabs)
 
-Run the **Lab 5.1 assessment** when you're done. In Unit 6 you'll train and test both flows.
+**In Codio**, use **Check It!** for Lab 5.1 when you're done. In Unit 6 you'll train and test both flows.
 
 {Check It!|assessment}(code-output-compare-389374509)
 

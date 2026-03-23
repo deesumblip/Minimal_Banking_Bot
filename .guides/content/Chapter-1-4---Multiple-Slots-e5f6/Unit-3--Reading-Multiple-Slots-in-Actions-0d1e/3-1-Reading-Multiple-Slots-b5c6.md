@@ -54,4 +54,4 @@ class ActionProcessTransfer(Action):
         return []
 ```
 
-In **Lab 3.1** you will create your own version of this action in `level4/actions/action_process_transfer.py` (you can use the fill-in-the-blanks script in the lab), then run the assessment.
+In **Lab 3.1** you will create your own version of this action in `level4/actions/action_process_transfer.py` (you can use the fill-in-the-blanks script in the lab), then **in Codio** use **Check It!** for that lab.

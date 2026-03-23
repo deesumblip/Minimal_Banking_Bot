@@ -8,10 +8,10 @@
 - **name** and **description** (e.g. "ask banking assistant" — the description helps the LLM know when to trigger it).
 - **steps:** at least one step `call: banking_assistant`, and optionally a follow-up step (e.g. `action: utter_help`).
 
-**Step 3.** Verify: the file exists and the flow has `call: banking_assistant` (name must match the sub-agent from Lab 2.1). Run the assessment when done.
+**Step 3.** Verify: the file exists and the flow has `call: banking_assistant` (name must match the sub-agent from Lab 2.1). **Use Check It!** below when done (Codio).
 
 {Check It!|assessment}(code-output-compare-501060003)
 
 ## Running locally
 
-From project root activate the venv, `cd level6`. Create the flow file as above. Run the assessment when done.
+From project root activate the venv, `cd level6`. Create the flow file as above.

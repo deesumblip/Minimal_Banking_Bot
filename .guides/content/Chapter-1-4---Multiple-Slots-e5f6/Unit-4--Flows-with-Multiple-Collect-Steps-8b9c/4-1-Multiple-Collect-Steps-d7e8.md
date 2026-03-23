@@ -32,4 +32,4 @@ flows:
       - action: action_process_transfer
 ```
 
-In **Lab 4.1** you will create the file `level4/data/basics/transfer_money.yml` with your own version of this flow. When you are done, run the assessment for Lab 4.1.
+In **Lab 4.1** you will create the file `level4/data/basics/transfer_money.yml` with your own version of this flow. When you are done, **in Codio** use **Check It!** for Lab 4.1.

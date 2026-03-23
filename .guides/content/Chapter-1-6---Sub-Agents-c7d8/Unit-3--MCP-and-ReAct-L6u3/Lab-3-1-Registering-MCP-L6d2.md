@@ -9,10 +9,10 @@
 - `url: http://localhost:8080` (or the URL where your MCP server runs)
 - `type: http`
 
-**Step 3.** Save the file. Verify YAML is valid and the name matches the sub-agent config from Lab 2.1. Run the assessment when done.
+**Step 3.** Save the file. Verify YAML is valid and the name matches the sub-agent config from Lab 2.1. **Use Check It!** below when done (Codio).
 
 {Check It!|assessment}(code-output-compare-501060002)
 
 ## Running locally
 
-From project root activate the venv, `cd level6`. Edit endpoints.yml as above. Run the assessment when done.
+From project root activate the venv, `cd level6`. Edit endpoints.yml as above.

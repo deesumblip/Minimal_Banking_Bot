@@ -22,11 +22,11 @@
 
 1. From project root run `source .venv/bin/activate`, then `cd level5`.
 2. Create `level5/tools/` and `level5/tools/__init__.py`, then `level5/tools/banking_tools.py` with the three functions and `__all__`.
-3. Run the assessment when done.
+3. **Use Check It!** below when done (Codio).
 
 {Check It!|assessment}(code-output-compare-501020001)
 
 ## Running locally
 
 1. Open the project, activate the venv, `cd level5`.
-2. Create the `tools` folder and files as above. Run the assessment when done.
+2. Create the `tools` folder and files as above.

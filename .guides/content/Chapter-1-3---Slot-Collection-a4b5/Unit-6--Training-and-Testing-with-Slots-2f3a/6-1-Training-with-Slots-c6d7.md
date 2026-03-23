@@ -14,4 +14,4 @@ You still run training from `level3`. The model is simply aware of slot collecti
 
 ## What comes next in this unit
 
-**Lab 6.1** walks through training with step-by-step notes for Codio and for a local machine. You will confirm that the model file was created and you will run the assessment. After that, section **6.2** and the rest of the unit focus on testing slot collection and slot state so you can debug your bot.
+**Lab 6.1** walks through training with step-by-step notes for Codio and for a local machine. After training, confirm the model file was created. **Graded assessments** use **Check It!** in the guide and are meant for the **Codio** course environment—not for a local-only checkout by itself. After that, section **6.2** and the rest of the unit focus on testing slot collection and slot state so you can debug your bot.

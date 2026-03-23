@@ -12,7 +12,7 @@
 
 **Common errors**: YAML syntax → use 2 spaces, colons, dashes. Response not found → add response in domain or fix flow typo. No module 'rasa' → activate venv, install rasa-pro. RASA_LICENSE not set → check Lab 0.1 (set RASA_LICENSE) or ask instructor.
 
-Run the assessment when done.
+**Use Check It!** below when done (Codio).
 
 {Check It!|assessment}(code-output-compare-2562507355)
 

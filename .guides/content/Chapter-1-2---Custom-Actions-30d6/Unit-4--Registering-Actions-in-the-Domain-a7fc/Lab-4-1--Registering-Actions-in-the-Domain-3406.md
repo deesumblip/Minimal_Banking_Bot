@@ -60,7 +60,7 @@ Important:
 - Both `action_bank_hours` and `action_holiday_hours` are listed
 - YAML is valid (correct indentation and dashes)
 
-Run the assessment when you're done.
+**Use Check It!** below when done (Codio).
 
 {Check It!|assessment}(code-output-compare-1451983168)
 

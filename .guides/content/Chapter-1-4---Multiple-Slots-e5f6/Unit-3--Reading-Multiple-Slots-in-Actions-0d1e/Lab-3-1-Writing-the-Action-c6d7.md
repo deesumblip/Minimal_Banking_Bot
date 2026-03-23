@@ -1,4 +1,4 @@
-**Objective.** In Unit 3 you saw an example of the complete `action_process_transfer` class (reading slots, placeholder check, confirmation message). In this lab you will create your own version: complete the action file using the fill-in-the-blanks exercise below, then put the complete script in `level4/actions/action_process_transfer.py` and run the assessment. The domain already lists `action_process_transfer` from Lab 2.1.
+**Objective.** In Unit 3 you saw an example of the complete `action_process_transfer` class (reading slots, placeholder check, confirmation message). In this lab you will create your own version: complete the action file using the fill-in-the-blanks exercise below, then put the complete script in `level4/actions/action_process_transfer.py`. The domain already lists `action_process_transfer` from Lab 2.1.
 
 ---
 
@@ -8,14 +8,14 @@
 
 2. **Reproduce the complete script in the file tree.** Create or open `level4/actions/action_process_transfer.py` and paste your completed script (with all blanks filled in) into that file. Save the file.
 
-3. **Run the final assessment.** The grader checks that the file exists, has the right structure, reads all three slots, and sends the transfer confirmation message.
+3. **In Codio, use Check It!** (below). The grader checks that the file exists, has the right structure, reads all three slots, and sends the transfer confirmation message.
 
 ---
 
 ### After you finish
 
 - **Verify** your domain (from Lab 2.1) lists `action_process_transfer` in the `actions:` section.
-- **Run the assessment** when you're done.
+- **Use Check It!** below when done (Codio).
 
 {Check It!|assessment}(code-output-compare-401030001)
 

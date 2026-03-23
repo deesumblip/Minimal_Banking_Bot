@@ -22,7 +22,7 @@ flows:
 
 3. **Verify.** The file is in `data/basics/`, and the flow has `name`, `description`, and `steps` with a first step `collect: account` and a second step `action: action_check_balance_simple`.
 
-Run the assessment when done.
+**Use Check It!** below when done (Codio).
 
 {Check It!|assessment}(code-output-compare-1235165472)
 

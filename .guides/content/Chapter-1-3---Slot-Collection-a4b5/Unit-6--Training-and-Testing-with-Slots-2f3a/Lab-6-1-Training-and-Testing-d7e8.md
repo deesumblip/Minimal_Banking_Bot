@@ -10,7 +10,7 @@ Your goal is to train your Level 3 bot (with slots) and verify it works.
 
 **Common errors.** If you get slot or utter_ask errors, check the domain and flow. If you get "No module 'rasa'", activate the venv from the project root. If RASA_LICENSE or OPENAI_API_KEY is not set, check Lab 0.1 or ask your instructor.
 
-Run the assessment when done.
+**Use Check It!** below when done (Codio).
 
 {Check It!|assessment}(code-output-compare-1029038275)
 

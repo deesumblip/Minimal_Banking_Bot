@@ -56,7 +56,7 @@ class ActionBankHours(Action):
 2. **Create the `actions` folder** inside `level2` if it doesn't exist (path: `level2/actions/`).
 3. **Create a new file** at **`level2/actions/action_bank_hours.py`**.
 4. **Copy and paste** the entire code block above into that file and **save**.
-5. Run the assessment below to verify the file is in the correct location.
+5. **In Codio**, use **Check It!** below to verify the file is in the correct location.
 
 After you pass, complete **Lab 3.2** to create `action_holiday_hours.py` following the same pattern. Then you'll register it in the domain (Unit 4 / Lab 4.1) and add a flow for it (Unit 5 / Lab 5.1).
 
@@ -79,7 +79,7 @@ After you pass, complete **Lab 3.2** to create `action_holiday_hours.py` followi
 
 ---
 
-Run the assessment below to verify that `action_bank_hours.py` is in the correct location (`level2/actions/`).
+**In Codio**, use **Check It!** below to verify that `action_bank_hours.py` is in the correct location (`level2/actions/`).
 
 {Check It!|assessment}(code-output-compare-2266471390)
 

@@ -27,7 +27,7 @@ flows:
 
 4. **Verify.** The file is in `data/basics/`, and the flow has `name`, `description`, and `steps` with the three collect steps and the action step.
 
-Run the assessment when done.
+**Use Check It!** below when done (Codio).
 
 {Check It!|assessment}(code-output-compare-401040001)
 

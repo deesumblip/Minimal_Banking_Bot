@@ -15,11 +15,11 @@ The assessment below runs the same domain checks as Lab 4.1, then confirms that 
    ```
    You should see a prompt like `(.venv) codio@...:~/workspace/level2$`.
 
-2. **Before running the assessment**, start the Inspector so you can verify your bot:
+2. **Before using Check It! in Codio**, start the Inspector so you can verify your bot:
    ```bash
    python -m rasa inspect --debug
    ```
-   Leave it running (or run it whenever you want to test in the Inspector). When you're ready, run the assessment below.
+   Leave it running (or run it whenever you want to test in the Inspector). When you're ready, **use Check It!** below (Codio).
 
 {Check It!|assessment}(code-output-compare-1597644299)
 

@@ -72,7 +72,7 @@ This lab only asks you to edit the domain file in the file tree. You do **not** 
    - `action_check_balance_simple` to the `actions:` list **while keeping** `action_bank_hours` and `action_holiday_hours`
 3. **Verify** as in Step 5 above.
 
-Run the assessment when done.
+**Use Check It!** below when done (Codio).
 
 {Check It!|assessment}(code-output-compare-3187585640)
 
@@ -83,7 +83,7 @@ Run the assessment when done.
    - `slots:` with `account` (type text)
    - `utter_ask_account` under `responses:`
    - `action_check_balance_simple` to the `actions:` list together with `action_bank_hours` and `action_holiday_hours`
-3. Verify as above. Run the assessment when done if your environment supports it.
+3. Verify as above.
 
 **Success criteria.** `domain/basics.yml` must contain:
 

@@ -61,4 +61,4 @@ actions:
   - action_process_transfer
 ```
 
-In **Lab 2.1** you will add your own version of these to `level4/domain/basics.yml`. When you are done, run the assessment for Lab 2.1.
+In **Lab 2.1** you will add your own version of these to `level4/domain/basics.yml`. When you are done, **in Codio** use **Check It!** for Lab 2.1.

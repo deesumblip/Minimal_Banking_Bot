@@ -5,6 +5,6 @@ Create one new response in `domain/basics.yml` and one new flow in `data/basics/
 > To restart your bot, click **[Start Rasa Inspector](open_terminal panel=1; cmd bash /home/codio/workspace/.guides/scripts/start_rasa_inspect.sh)**.
 > Then click **Rasa Inspect** in the main toolbar above to load the chat tab.
 
-Run the assessment when done.
+**Use Check It!** below when done (Codio).
 
 {Check It!|assessment}(code-output-compare-7772000001)

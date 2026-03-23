@@ -70,7 +70,7 @@ You will create the file `action_process_transfer.py` in Lab 3.1; here you only 
 3. **Follow Steps 2–4 above** to add the three slots, the three ask responses, and `action_process_transfer` to the actions list.
 4. **Verify** as in Step 5.
 
-Run the assessment when done.
+**Use Check It!** below when done (Codio).
 
 {Check It!|assessment}(code-output-compare-401020001)
 
@@ -78,7 +78,7 @@ Run the assessment when done.
 
 1. Open your project in an editor. Go to the main project folder, activate the venv, then `cd level4`.
 2. Edit `level4/domain/basics.yml`. Add the three slots, the three utter_ask_* responses, and `action_process_transfer` to the actions list.
-3. Verify as above. Run the assessment when done if your environment supports it.
+3. Verify as above.
 
 **Success criteria.** `domain/basics.yml` must contain:
 

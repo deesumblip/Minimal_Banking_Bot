@@ -19,4 +19,4 @@ flows:
 - **name** and **description** — Help the LLM know when to trigger this flow (e.g. user says they want to talk to the banking assistant).
 - **steps** — First step `call: banking_assistant` runs the sub-agent until it completes; then `action: utter_help` runs so the main bot can offer help again.
 
-In **Lab 4.1** you will create the file `level6/data/basics/ask_banking_assistant.yml` with your own version of this flow. When you are done, run the assessment for Lab 4.1.
+In **Lab 4.1** you will create the file `level6/data/basics/ask_banking_assistant.yml` with your own version of this flow. When you are done, **in Codio** use **Check It!** for Lab 4.1.

@@ -35,8 +35,12 @@ class ActionProcessTransferWithTools(Action):
 
 ---
 
-## In Codio / Locally
+## In Codio
 
-From project root activate venv, `cd level5`. Create the flow and action files and update the domain. Run the assessment when done.
+From project root activate venv, `cd level5`. Create the flow and action files and update the domain. **Use Check It!** below when done (Codio).
 
 {Check It!|assessment}(code-output-compare-501040001)
+
+## Running locally
+
+From project root, `cd level5`. Create the flow and action files and update the domain.

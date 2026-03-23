@@ -32,6 +32,6 @@ Lab 6.2 reinforces that both actions are registered and verifies that the studen
 
 The Lab 6.2 page in the Chapter 1.2 Codio guide is in **Unit 6, right after Lab 6.1**. It includes:
 `{Check It!|assessment}(code-output-compare-1597644299)`  
-so students can run the assessment from the guide.
+so students can use **Check It!** in the Codio guide.
 
 ---

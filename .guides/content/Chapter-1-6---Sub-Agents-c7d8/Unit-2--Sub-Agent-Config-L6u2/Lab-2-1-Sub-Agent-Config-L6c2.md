@@ -9,10 +9,10 @@
 - `configuration:` with `llm:` and `model_group:` (e.g. gpt-4o-mini) matching your config.
 - `connections:` with `mcp_servers:` listing the name of the MCP server (e.g. `banking_mcp` — you will register it in Lab 3.1).
 
-**Step 3.** Verify: the file exists at `level6/sub_agents/banking_assistant/config.yml` and has the required keys. Run the assessment when done.
+**Step 3.** Verify: the file exists at `level6/sub_agents/banking_assistant/config.yml` and has the required keys. **Use Check It!** below when done (Codio).
 
 {Check It!|assessment}(code-output-compare-501060001)
 
 ## Running locally
 
-From project root activate the venv, `cd level6`. Create the folder and config file as above. Run the assessment when done.
+From project root activate the venv, `cd level6`. Create the folder and config file as above.

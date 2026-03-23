@@ -4,9 +4,9 @@ Your goal is to run the **completion check** for Level 4 and, optionally, test t
 
 ---
 
-## Part 1: Completion check (assessment)
+## Part 1: Completion check (Codio)
 
-1. Run the **Lab 5.2 assessment**. The grader checks that:
+1. **In Codio**, use **Check It!** for **Lab 5.2**. The grader checks that:
    - The domain has the three transfer slots, three ask responses, and `action_process_transfer` in the actions list
    - `level4/actions/action_process_transfer.py` exists and reads the three slots
    - `level4/data/basics/transfer_money.yml` exists with the three collect steps and the action step
@@ -14,7 +14,7 @@ Your goal is to run the **completion check** for Level 4 and, optionally, test t
 
 {Check It!|assessment}(code-output-compare-401050002)
 
-2. If any check fails, complete the corresponding lab (4.1–4.4) and re-run training if needed, then run the assessment again.
+2. If any check fails, complete the corresponding lab (4.1–4.4) and re-run training if needed, then **in Codio** use **Check It!** again.
 
 ---
 

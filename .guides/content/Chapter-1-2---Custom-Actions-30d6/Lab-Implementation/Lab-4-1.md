@@ -25,7 +25,7 @@ Before submitting, confirm:
 - Both `action_bank_hours` and `action_holiday_hours` are listed  
 - YAML is valid (correct indentation and dashes)  
 
-Run the assessment when you’re done.
+**In Codio**, use **Check It!** when you’re done.
 
 ---
 

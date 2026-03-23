@@ -64,6 +64,6 @@ Save the file.
 - `level1/data/basics/hours.yml` exists with flow `hours` and step `utter_hours`
 - `level1/data/basics/balance.yml` exists with flow `balance` and step `utter_balance`
 
-**Run the assessment below** to verify your project is ready for training (Lab 6.1).
+**In Codio**, use **Check It!** below to verify your project is ready for training (Lab 6.1).
 
 {Check It!|assessment}(code-output-compare-350500005)

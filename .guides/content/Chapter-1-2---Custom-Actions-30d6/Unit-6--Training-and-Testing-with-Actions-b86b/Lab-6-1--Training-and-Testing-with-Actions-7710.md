@@ -20,6 +20,6 @@ Before submitting, confirm:
 - Training completed without errors
 - A model file exists under `models/`
 
-Run the assessment when you're done.
+**Use Check It!** below when done (Codio).
 
 {Check It!|assessment}(code-output-compare-1070925386)
