@@ -37,8 +37,9 @@ Students should **start from their Level 3 bot as the baseline** and build Level
 
 ### 1.4 level4/config.yml (and credentials, endpoints)
 
-- **config.yml:** Same structure as Level 3; only change `assistant_id` to something like `level4-bot` so the assistant identity is distinct.  
-- **credentials.yml / endpoints.yml:** Can match Level 3 (no Level 4-specific changes required for a minimal setup).
+- **`config.yml`:** **Not** the same as Level 3 for a working Chapter 1.4 bot. Use the course **`level4/config.yml`**: **`CompactLLMCommandGenerator`** (not **`SearchReadyLLMCommandGenerator`**), **`minimize_num_calls: false`**, **`flow_retrieval`** (`turns_to_embed`, `num_flows`), and **`assistant_id`** such as **`level4-bot`**. See **`PIPELINE_CHAPTER_1_3_AND_4.md`** and **Unit 0.3** in Chapter 1.4.  
+- **`endpoints.yml`:** Should follow the course **`level4/endpoints.yml`** for **`model_groups`** / **`temperature`** so FillSlot commands for free-text slots are reliable; it is **not** identical to a minimal **`level3/endpoints.yml`**.  
+- **`credentials.yml`:** Can match Level 3 (same channels pattern).
 
 ### 1.5 level4/ — other files
 
@@ -51,12 +52,12 @@ Students should **start from their Level 3 bot as the baseline** and build Level
 
 ## 2. Add an explicit “Level 4 setup” in the chapter (Unit 0)
 
-**Where:** Unit 0 (e.g. 0.1 “Your Level 3 bot” and 0.2 “What Level 4 adds”).
+**Where:** Unit 0 — **0.1** (Your Level 3 bot), **0.2** (What Level 4 adds), **0.3** (Complete delta Chapter 1.3 → 1.4).
 
 **Message:**
 
-- “Level 4 uses the **level4** folder. We’ve set it up as a **copy of your Level 3 bot** (same domain, flows, and actions). Your job in this chapter is to **add** multiple slots and a transfer flow: (1) new slots and ask responses in the domain, (2) the new action and its registration, (3) the transfer_money flow.”
-- Optional: “If you built Level 3 in your own repo and have different content, copy your level3 folder to level4 so level4 matches your Level 3, then follow the labs.”
+- “Level 4 uses the **`level4`** folder. Baseline = Chapter 1.3 end state; you **add** transfer domain/action/flow **and** align **`config.yml`** / **`endpoints.yml`** with the course **`level4`** (see **0.3**).”
+- “If you copy **`level3` → `level4`** yourself, apply the **full delta** in **0.3** so pipeline files match—not only domain and labs.”
 
 ---
 
@@ -72,6 +73,7 @@ Following the Level 3 pattern, students **add** domain content and **create** ne
 | Register `action_process_transfer` in domain | **Student** | Lab 2.1 (domain) |
 | Create `action_process_transfer.py` | **Student** | Lab 3.1 (actions) |
 | Create `transfer_money.yml` (flow with multiple collect steps + action) | **Student** | Lab 4.1 (data/basics) |
+| Align **`config.yml`** and **`endpoints.yml`** with course **`level4`** | **Student** (or provided repo) | **Unit 0.3** + **`PIPELINE_CHAPTER_1_3_AND_4.md`** (before / with labs) |
 | Train and test | **Student** | Lab 5.1 / Lab 5.2 |
 
 - **Lab 2.1 (domain):** Add the three new slots, the three new utter_ask_* responses, and `action_process_transfer` to the `actions:` list. Note that the action **file** is created in Lab 3.1.  

@@ -5,7 +5,7 @@
 **Title**: Level 4: Multiple Slots  
 **Description**: Adding a Transfer Flow with Multiple Slot Collection  
 **Prerequisites**: Level 1, Level 2, and Level 3 must be completed  
-**Learning Objective**: Students learn to add multiple slots, multiple ask responses, one new action that uses all slots, and one flow that collects several slots then runs the action. Labs are ordered: domain (Lab 2.1) → action (Lab 3.1) → flow (Lab 4.1) → train (Lab 5.1) → completion check (Lab 5.2).
+**Learning Objective**: Students learn to add multiple slots, multiple ask responses, one new action that uses all slots, and one flow that collects several slots then runs the action. They also align **`level4/config.yml`** and **`level4/endpoints.yml`** with the Chapter 1.4 pattern (see **Unit 0.3**). Labs are ordered: domain (Lab 2.1) → action (Lab 3.1) → flow (Lab 4.1) → train (Lab 5.1) → completion check (Lab 5.2).
 
 ---
 
@@ -18,8 +18,9 @@
 **Sections**:
 - 0.1 Your Level 3 Banking Bot — `Level4_Unit0_Content_0.1_Your-Level-3-Banking-Bot.md`
 - 0.2 What Level 4 Adds — `Level4_Unit0_Content_0.2_What-Level-4-Adds.md`
+- 0.3 Complete Delta: Chapter 1.3 End → Chapter 1.4 End — `Level4_Unit0_Content_0.3_Complete-Delta-Chapter-1-3-to-1-4.md`
 
-**Key Concepts**: Recap Level 3, level4 folder = Level 3 end state, what Level 4 adds (transfer flow)
+**Key Concepts**: Recap Level 3, **`level4/`** baseline, **full file delta** (pipeline + labs), what Level 4 adds (transfer flow)
 
 ---
 
@@ -126,6 +127,7 @@ All source files live in **level4/** so you can push to GitHub and sync the same
 |------|------|
 | 0.1 | Level4_Unit0_Content_0.1_Your-Level-3-Banking-Bot.md |
 | 0.2 | Level4_Unit0_Content_0.2_What-Level-4-Adds.md |
+| 0.3 | Level4_Unit0_Content_0.3_Complete-Delta-Chapter-1-3-to-1-4.md |
 | 1.1 | Level4_Unit1_Content_1.1_Multiple-Slots.md |
 | 1.2 | Level4_Unit1_Content_1.2_Order-of-Collection.md |
 | 1.3 | Level4_Unit1_Content_1.3_Slot-Naming-Multiple.md |

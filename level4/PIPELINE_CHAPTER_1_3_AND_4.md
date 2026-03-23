@@ -20,7 +20,7 @@ That is a **known limitation** of the retrieval-oriented generator when you are 
 | `level3/` (Ch. 1.3) | `SearchReadyLLMCommandGenerator` |
 | `level4/` (Ch. 1.4) | `CompactLLMCommandGenerator` |
 
-Everything else (recipe, `endpoints.yml` pattern, `.env`) matches the Level 3 setup.
+The **`recipe`**, **`.env`**, and overall **`endpoints.yml`** layout match Level 3; the **`model_groups`** entry for command generation is **tuned in `level4/endpoints.yml`** (model + temperature)—see **Unit 0.3** in Chapter 1.4 for the full Chapter 1.3 → 1.4 checklist.
 
 **`endpoints.yml` model** — The **`gpt-4o-mini`** *group id* still points Rasa at **`model: gpt-4o-2024-11-20`** for Level 4. **`gpt-4o-mini`** alone often mis-generates **FillSlot** commands for **recipient** names; **`gpt-4o`** is more reliable for CALM command DSL (higher API cost). NLG rephrase uses the same group.
 

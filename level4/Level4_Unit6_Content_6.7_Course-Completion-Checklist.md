@@ -1,10 +1,11 @@
 Before moving to Level 5, ensure you can:
 
-- Add multiple slots to the domain and matching `utter_ask_*` responses
-- Create an action that reads multiple slots from the tracker and sends a confirmation (and optionally handles placeholders)
+- Explain the **full delta** from Chapter 1.3 end → Chapter 1.4 end: **`level4/config.yml`** (**`CompactLLMCommandGenerator`**, **`flow_retrieval`**) and **`level4/endpoints.yml`** (**`model_groups`** / temperature), not only domain and labs (**Unit 0.3**)
+- Add multiple slots to the domain and matching `utter_ask_*` responses (with **`rephrase: False`** on transfer asks)
+- Create an action that reads multiple slots, caps **recipient** at **100** characters, handles placeholders, and sends the demo confirmation
 - Create a flow with multiple `collect:` steps in order, then an `action:` step
 - Explain why the order of `collect:` steps matters
-- Train the Level 4 bot from the `level4` folder and run the completion check (and optionally test the transfer flow in Inspector)
-- Understand that Level 4 builds on Level 3 and that all Level 3 content remains
+- Train the Level 4 bot from the `level4` folder and run the completion check (and the **scripted transfer** in Inspector from Lab 5.2)
+- Understand that Level 4 builds on Level 3 and that all Level 3 content remains in `level4/`
 
 If you can do all of the above, you're ready for Level 5!

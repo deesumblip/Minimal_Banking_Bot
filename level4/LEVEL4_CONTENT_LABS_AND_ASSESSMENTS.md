@@ -27,7 +27,7 @@ Create **Level4_Course_Outline.md** in `level4/` with:
 
 - **Prerequisites:** Level 1, 2, and 3 completed.
 - **Learning objective:** Add multiple slots, multiple ask responses, one new action, and one flow that collects several slots then runs the action.
-- **Unit 0:** Recap Level 3 (domain with account slot, check_balance flow, action_check_balance_simple). What Level 4 adds: slots `amount`, `recipient`, `account_from`; utter_ask_amount, utter_ask_recipient, utter_ask_account_from; action_process_transfer; transfer_money flow.
+- **Unit 0:** Recap Level 3 (domain with account slot, check_balance flow, action_check_balance_simple). **0.3** documents the **complete delta** (pipeline **`config.yml`** / **`endpoints.yml`** + lab deliverables). What Level 4 adds in labs: slots `amount`, `recipient`, `account_from`; utter_ask_*; action_process_transfer; transfer_money flow.
 - **Unit 1:** Concept content only (what are multiple slots, why order matters, slot naming — 1.1, 1.2, 1.3).
 - **Unit 2:** Domain — add three slots, three ask responses, register action_process_transfer → **Lab 2.1** (graded).
 - **Unit 3:** Reading multiple slots in actions → **Lab 3.1** (create action_process_transfer.py) (graded).
@@ -47,6 +47,7 @@ Create one markdown file per section, same naming pattern as Level 3. Paths unde
 |------|--------|
 | `Level4_Unit0_Content_0.1_Your-Level-3-Banking-Bot.md` | Recap: level4 folder = your Level 3 bot; what’s in domain (account slot, utter_ask_account, actions), data/basics (check_balance, hours, …), actions (action_bank_hours, action_check_balance_simple). What Level 3 couldn’t do: collect several pieces of info in one flow (e.g. amount, recipient, account). |
 | `Level4_Unit0_Content_0.2_What-Level-4-Adds.md` | Level 4 adds: three slots (amount, recipient, account_from), three utter_ask_* responses, action_process_transfer, transfer_money flow. Order: domain (Lab 2.1) → action (Lab 3.1) → flow (Lab 4.1) → train/test (5.1, 5.2). |
+| `Level4_Unit0_Content_0.3_Complete-Delta-Chapter-1-3-to-1-4.md` | **Authoritative checklist:** all differences from Chapter 1.3 end bot → Chapter 1.4 end bot: **`config.yml`** / **`endpoints.yml`**, lab files, what stays from Level 3. |
 | `Level4_Unit1_Content_1.1_Multiple-Slots.md` | Multiple slots = bot remembers several values in one conversation (e.g. amount, recipient, account_from for a transfer). |
 | `Level4_Unit1_Content_1.2_Order-of-Collection.md` | Order of `collect:` steps in the flow determines the order the bot asks; keep order consistent with the action’s expectations. |
 | `Level4_Unit1_Content_1.3_Slot-Naming-Multiple.md` | Naming: utter_ask_<slot_name>; slot names used in action must match domain and flow. |
@@ -202,7 +203,7 @@ For each graded lab, add a **solution reference** markdown file used as the Inst
 | Category | Files to create |
 |----------|------------------|
 | **Outline** | level4/Level4_Course_Outline.md |
-| **Unit content** | Level4_Unit0_Content_0.1_*.md, 0.2_*.md; Unit1 (1.1, 1.2, 1.3); Unit2 (2.1); Unit3 (3.1); Unit4 (4.1); Unit5 (5.1, 5.2); Unit6 (6.1, 6.2, 6.3). |
+| **Unit content** | Level4_Unit0_Content_0.1_*.md, 0.2_*.md, **0.3_*.md** (complete delta); Unit1 (1.1, 1.2, 1.3); Unit2 (2.1); Unit3 (3.1); Unit4 (4.1); Unit5 (5.1, 5.2); Unit6 (6.1, 6.2, 6.3). |
 | **Lab content** | Level4_Lab2.1_Content.md, Level4_Lab3.1_Content.md, Level4_Lab4.1_Content.md, Level4_Lab5.1_Content.md, Level4_Lab5.2_Content.md |
 | **Assessment setup** | Level4_Lab2.1_Assessment_Setup.md, Level4_Lab3.1_Assessment_Setup.md, Level4_Lab4.1_Assessment_Setup.md, Level4_Lab5.1_Assessment_Setup.md, Level4_Lab5.2_Assessment_Setup.md |
 | **Graders** | .guides/secure/level4_graders/lab_2.1_grader.py, lab_3.1_grader.py, lab_4.1_grader.py, lab_5.1_grader.py, lab_5.2_grader.py |

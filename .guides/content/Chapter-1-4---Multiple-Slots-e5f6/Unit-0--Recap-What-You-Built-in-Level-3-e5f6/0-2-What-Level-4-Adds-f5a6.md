@@ -2,6 +2,8 @@ Level 4 adds **multiple slots** in one flow: the bot will remember several value
 
 Your Level 3 bot will still work. You will add the transfer flow on top.
 
+**Full checklist:** **0.3 Complete Delta: Chapter 1.3 End → Chapter 1.4 End** lists **every** file-level change (pipeline **`config.yml`** / **`endpoints.yml`**, labs, and what stays from Level 3). Read it once before Labs 2.1–5.2 if you maintain your own copy of the project.
+
 You will implement in this order: **domain** (Lab 2.1), then **the action that uses the slots** (Lab 3.1), then **the flow that collects them** (Lab 4.1), then **train and test** (Labs 5.1 and 5.2).
 
 ## What You'll Add

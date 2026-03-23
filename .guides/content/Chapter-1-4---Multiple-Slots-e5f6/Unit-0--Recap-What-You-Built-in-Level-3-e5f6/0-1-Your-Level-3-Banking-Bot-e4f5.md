@@ -32,9 +32,11 @@ Everything else is your Level 3 content.
 - `action_bank_hours.py`
 - `action_check_balance_simple.py` (reads the `account` slot and returns a demo balance)
 
-### System and config
+### System and config (Chapter 1.3)
 
-Unchanged from Level 3. Config uses `assistant_id: level4-bot`.
+In **`level3/`**, **`config.yml`** uses **`SearchReadyLLMCommandGenerator`** (Chapter 1.3 pattern). Your **`endpoints.yml`** and **`.env`** supply API keys.
+
+When you move to Chapter 1.4, you work in **`level4/`**. The Level 4 assistant is **not** identical to Level 3 at the pipeline layer: you need **`CompactLLMCommandGenerator`**, **`flow_retrieval`**, and (in this course) an **`endpoints.yml`** **model_groups** profile suited to multi-slot FillSlot—see **0.3 Complete Delta** and **`level4/PIPELINE_CHAPTER_1_3_AND_4.md`**. Do **not** assume only **`assistant_id: level4-bot`** changes.
 
 ---
 

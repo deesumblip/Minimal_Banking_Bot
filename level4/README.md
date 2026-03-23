@@ -15,6 +15,8 @@
 
 **Pipeline:** Chapter 1.3 (`level3`) still uses **`SearchReadyLLMCommandGenerator`**. Chapter 1.4 (`level4`) uses **`CompactLLMCommandGenerator`** for reliable multi-slot / free-text collection (same `model_group` and `FlowPolicy`). **Level 3 is not modified.** Details: **`PIPELINE_CHAPTER_1_3_AND_4.md`**.
 
+**Full delta (Ch 1.3 end → Ch 1.4 end):** **`Level4_Unit0_Content_0.3_Complete-Delta-Chapter-1-3-to-1-4.md`** (config, endpoints, labs, and what to keep from Level 3).
+
 The **level4** folder is set up as a copy of your Level 3 bot. You add the following in the labs.
 
 **What stays the same:** All Level 3 responses, flows, actions, and the `account` slot remain.
