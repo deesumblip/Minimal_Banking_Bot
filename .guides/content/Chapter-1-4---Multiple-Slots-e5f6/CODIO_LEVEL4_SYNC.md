@@ -10,6 +10,8 @@ This folder mirrors the Level 4 content from `level4/` (unit content and lab con
 
 Each unit has an `index.json` (section title and order of pages) and each page has a `.md` (content) and `.json` (page metadata: title, type page, contentType markdown).
 
+**Page order and naming:** Section `order` arrays list pages in teaching order (concept pages before labs where applicable). Content filenames use a **`U-M-`** prefix matching **unit** `U` and subsection `M` (e.g. Unit 2 → `2-1-…`, `Lab-2-1-…`; Unit 5 training → `5-1-…`, `5-2-…`, `Lab-5-1-…`) so the TOC matches unit numbering (avoid reusing the next unit’s index, e.g. `6-1` under Unit 5).
+
 **File tree:** Every **page** `.json` uses **`layout`: `2-panels-tree-guides-left`**, **`files`** (open panel 1), and **`path`: [`level4`]** so the workspace tree opens on the **`level4`** folder for all Chapter 1.4 pages (Units 0–6).
 
 **Terminal:** Pages whose markdown expects CLI use (training, Inspector, `cd level4`, **Check It!** code assessments, etc.) also set **`files`** to open **`#terminal`** on **panel 1** (right-hand stack with guide on the left). Repo script: `.guides/scripts/patch_guide_terminal_panels.py` (run from project root after adding lab/training pages).
