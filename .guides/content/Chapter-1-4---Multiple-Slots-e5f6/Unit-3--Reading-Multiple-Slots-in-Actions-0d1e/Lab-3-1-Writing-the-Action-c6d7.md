@@ -1,5 +1,7 @@
 In this lab you finish the action that **Lab 2.1** already registered in the domain. You will create `action_process_transfer.py`. The action reads the `amount`, `recipient`, and `account_from` slots and handles placeholder values, as you saw in **Unit 3.1** (*Example: Complete action class*).
 
+You do **not** need to activate the virtual environment for this lab—**Check It!** only checks your saved file on disk.
+
 ---
 
 #### Complete the action file (fill in the blanks)

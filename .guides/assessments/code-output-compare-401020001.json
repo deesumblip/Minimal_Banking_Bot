@@ -5,7 +5,7 @@
 		"name": "Lab 2.1: Adding Multiple Slots in the Domain",
 		"showName": true,
 		"instructions": "To pass this assessment, all of the following must be true (same Codio layout as Chapter 1.2 Lab 6.2):\n\n• Check 1: level4/domain/basics.yml exists.\n• Check 2: Slots amount, recipient, and account_from are present.\n• Check 3: utter_ask_amount, utter_ask_recipient, and utter_ask_account_from each have a text message.\n• Check 4: action_process_transfer is listed under actions:.\n\nFull score: 10/10.",
-		"command": "/home/codio/workspace/.venv/bin/python3 /home/codio/workspace/.guides/secure/level4_graders/lab_2.1_grader.py",
+		"command": "bash /home/codio/workspace/.guides/scripts/run_python_grader.sh /home/codio/workspace/.guides/secure/level4_graders/lab_2.1_grader.py",
 		"preExecuteCommand": "",
 		"options": {
 			"timeout": 60,
@@ -45,10 +45,34 @@
 		"arePartialPointsAllowed": true,
 		"useMaximumScore": false,
 		"sequence": [
-			{ "arguments": "", "input": "", "output": "Check 1: PASSED", "showFeedback": false, "feedback": "" },
-			{ "arguments": "", "input": "", "output": "Check 2: PASSED", "showFeedback": false, "feedback": "" },
-			{ "arguments": "", "input": "", "output": "Check 3: PASSED", "showFeedback": false, "feedback": "" },
-			{ "arguments": "", "input": "", "output": "Check 4: PASSED", "showFeedback": false, "feedback": "" }
+			{
+				"arguments": "",
+				"input": "",
+				"output": "Check 1: PASSED",
+				"showFeedback": false,
+				"feedback": ""
+			},
+			{
+				"arguments": "",
+				"input": "",
+				"output": "Check 2: PASSED",
+				"showFeedback": false,
+				"feedback": ""
+			},
+			{
+				"arguments": "",
+				"input": "",
+				"output": "Check 3: PASSED",
+				"showFeedback": false,
+				"feedback": ""
+			},
+			{
+				"arguments": "",
+				"input": "",
+				"output": "Check 4: PASSED",
+				"showFeedback": false,
+				"feedback": ""
+			}
 		]
 	}
 }

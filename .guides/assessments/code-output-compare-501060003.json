@@ -5,7 +5,7 @@
 		"name": "Lab 4.1: ask_banking_assistant Flow",
 		"showName": true,
 		"instructions": "To pass, all checks must pass:\n\n• Check 1: ask_banking_assistant.yml exists.\n• Check 2: Flow includes call: banking_assistant.\n• Check 3: Flow name ask_banking_assistant appears in the file.\n\nFull score: 10/10.",
-		"command": "/home/codio/workspace/.venv/bin/python3 /home/codio/workspace/.guides/secure/level6_graders/lab_4.1_grader.py",
+		"command": "bash /home/codio/workspace/.guides/scripts/run_python_grader.sh /home/codio/workspace/.guides/secure/level6_graders/lab_4.1_grader.py",
 		"preExecuteCommand": "",
 		"options": {
 			"timeout": 60,
@@ -45,9 +45,27 @@
 		"arePartialPointsAllowed": true,
 		"useMaximumScore": false,
 		"sequence": [
-			{ "arguments": "", "input": "", "output": "Check 1: PASSED", "showFeedback": false, "feedback": "" },
-			{ "arguments": "", "input": "", "output": "Check 2: PASSED", "showFeedback": false, "feedback": "" },
-			{ "arguments": "", "input": "", "output": "Check 3: PASSED", "showFeedback": false, "feedback": "" }
+			{
+				"arguments": "",
+				"input": "",
+				"output": "Check 1: PASSED",
+				"showFeedback": false,
+				"feedback": ""
+			},
+			{
+				"arguments": "",
+				"input": "",
+				"output": "Check 2: PASSED",
+				"showFeedback": false,
+				"feedback": ""
+			},
+			{
+				"arguments": "",
+				"input": "",
+				"output": "Check 3: PASSED",
+				"showFeedback": false,
+				"feedback": ""
+			}
 		]
 	}
 }

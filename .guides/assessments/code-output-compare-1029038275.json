@@ -5,7 +5,7 @@
 		"name": "Lab 6.1: Training and Testing with Slots",
 		"showName": true,
 		"instructions": "To pass this assessment, all of the following must be true (same Codio layout as Chapter 1.2 Lab 6.2):\n\n• Check 1: Project root has an active .venv.\n• Check 2: A trained model (.tar.gz) exists in level3/models/.\n• Check 3: The model was created within the last 10 minutes.\n• Check 4: logs/logs.out has no obvious errors (or no log file yet).\n• Check 5: Training artifacts present for inspect/testing.\n\nFull score: 12/12. Re-run rasa train from level3 if a check fails.",
-		"command": "/home/codio/workspace/.venv/bin/python3 /home/codio/workspace/.guides/secure/level3_graders/lab_6.1_grader.py",
+		"command": "bash /home/codio/workspace/.guides/scripts/run_python_grader.sh /home/codio/workspace/.guides/secure/level3_graders/lab_6.1_grader.py",
 		"preExecuteCommand": "",
 		"options": {
 			"timeout": 60,
@@ -45,11 +45,41 @@
 		"arePartialPointsAllowed": true,
 		"useMaximumScore": false,
 		"sequence": [
-			{ "arguments": "", "input": "", "output": "Check 1: PASSED", "showFeedback": false, "feedback": "" },
-			{ "arguments": "", "input": "", "output": "Check 2: PASSED", "showFeedback": false, "feedback": "" },
-			{ "arguments": "", "input": "", "output": "Check 3: PASSED", "showFeedback": false, "feedback": "" },
-			{ "arguments": "", "input": "", "output": "Check 4: PASSED", "showFeedback": false, "feedback": "" },
-			{ "arguments": "", "input": "", "output": "Check 5: PASSED", "showFeedback": false, "feedback": "" }
+			{
+				"arguments": "",
+				"input": "",
+				"output": "Check 1: PASSED",
+				"showFeedback": false,
+				"feedback": ""
+			},
+			{
+				"arguments": "",
+				"input": "",
+				"output": "Check 2: PASSED",
+				"showFeedback": false,
+				"feedback": ""
+			},
+			{
+				"arguments": "",
+				"input": "",
+				"output": "Check 3: PASSED",
+				"showFeedback": false,
+				"feedback": ""
+			},
+			{
+				"arguments": "",
+				"input": "",
+				"output": "Check 4: PASSED",
+				"showFeedback": false,
+				"feedback": ""
+			},
+			{
+				"arguments": "",
+				"input": "",
+				"output": "Check 5: PASSED",
+				"showFeedback": false,
+				"feedback": ""
+			}
 		]
 	}
 }

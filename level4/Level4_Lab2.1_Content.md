@@ -65,10 +65,11 @@ You will create the file `action_process_transfer.py` in Lab 3.1; here you only 
 
 ## Part 1: In Codio
 
-1. **Terminal.** From project root (`~/workspace`), run `source .venv/bin/activate`, then `cd level4`.
-2. **Open** `domain/basics.yml` in the editor.
-3. **Follow Steps 2–4 above** to add the three slots, the three ask responses, and `action_process_transfer` to the actions list.
-4. **Verify** as in Step 5.
+You do **not** need to activate the virtual environment for this lab—**Check It!** only checks your saved file.
+
+1. **Open** `level4/domain/basics.yml` in the editor (from the file tree).
+2. **Follow Steps 2–4 above** to add the three slots, the three ask responses, and `action_process_transfer` to the actions list.
+3. **Verify** as in Step 5.
 
 Run the assessment when done.
 
@@ -76,8 +77,8 @@ Run the assessment when done.
 
 ## Part 2: Running locally
 
-1. Open your project in an editor. Go to the main project folder, activate the venv, then `cd level4`.
-2. Edit `level4/domain/basics.yml`. Add the three slots, the three utter_ask_* responses, and `action_process_transfer` to the actions list.
+1. Open your project in an editor. Go to the main project folder and open `level4/domain/basics.yml` (you do not need to activate the virtual environment for this lab—**Check It!** only checks your saved file).
+2. Add the three slots, the three utter_ask_* responses, and `action_process_transfer` to the actions list.
 3. Verify as above. Run the assessment when done if your environment supports it.
 
 **Success criteria.** `domain/basics.yml` must contain:

@@ -1,5 +1,7 @@
 **Objective.** Create `action_process_transfer` that reads `amount`, `recipient`, and `account_from`, re-prompts on placeholders, and sends a demo confirmation. This lab follows the **same two-step pattern as Chapter 1.3 Lab 4.1** (*Exploring Actions with Slots*): complete the **Fill in the Blanks** assessment first, then paste the full script and run the **code** assessment.
 
+Students do **not** need to activate the virtual environment for this lab—**Check It!** only checks the saved file.
+
 ---
 
 ## Student-facing flow (Codio guide)

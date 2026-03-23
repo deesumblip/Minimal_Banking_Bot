@@ -5,7 +5,7 @@
 		"name": "Lab 5.2: Testing Tool Calling / Completion Check",
 		"showName": true,
 		"instructions": "Completion check — all must pass for full Codio score:\n\n• Check 1: tools/ and banking_tools.py with __all__ and tool functions.\n• Check 2: endpoints.yml tools_module: \"tools\".\n• Check 3: transfer_money_tools flow and action_process_transfer_with_tools.py.\n• Check 4: Domain lists the action and model exists (PARTIAL if domain OK but no model).\n\nFull score: 10/10.",
-		"command": "/home/codio/workspace/.venv/bin/python3 /home/codio/workspace/.guides/secure/level5_graders/lab_5.2_grader.py",
+		"command": "bash /home/codio/workspace/.guides/scripts/run_python_grader.sh /home/codio/workspace/.guides/secure/level5_graders/lab_5.2_grader.py",
 		"preExecuteCommand": "",
 		"options": {
 			"timeout": 60,
@@ -45,10 +45,34 @@
 		"arePartialPointsAllowed": true,
 		"useMaximumScore": false,
 		"sequence": [
-			{ "arguments": "", "input": "", "output": "Check 1: PASSED", "showFeedback": false, "feedback": "" },
-			{ "arguments": "", "input": "", "output": "Check 2: PASSED", "showFeedback": false, "feedback": "" },
-			{ "arguments": "", "input": "", "output": "Check 3: PASSED", "showFeedback": false, "feedback": "" },
-			{ "arguments": "", "input": "", "output": "Check 4: PASSED", "showFeedback": false, "feedback": "" }
+			{
+				"arguments": "",
+				"input": "",
+				"output": "Check 1: PASSED",
+				"showFeedback": false,
+				"feedback": ""
+			},
+			{
+				"arguments": "",
+				"input": "",
+				"output": "Check 2: PASSED",
+				"showFeedback": false,
+				"feedback": ""
+			},
+			{
+				"arguments": "",
+				"input": "",
+				"output": "Check 3: PASSED",
+				"showFeedback": false,
+				"feedback": ""
+			},
+			{
+				"arguments": "",
+				"input": "",
+				"output": "Check 4: PASSED",
+				"showFeedback": false,
+				"feedback": ""
+			}
 		]
 	}
 }

@@ -2,11 +2,9 @@ In Unit 4 you saw an example of the transfer_money flow (YAML with three collect
 
 ## Part 1: In Codio
 
-1. **Terminal.** From the project root, run `source .venv/bin/activate`, then `cd level4`.
+1. **Create** the file `data/basics/transfer_money.yml` under the `level4` folder (use the file tree / editor—you do not need to activate the virtual environment for this lab; **Check It!** only checks your saved YAML).
 
-2. **Create** the file `data/basics/transfer_money.yml` in the `level4` folder.
-
-3. **Add** the following flow:
+2. **Add** the following flow:
 
 ```yaml
 flows:
@@ -25,7 +23,7 @@ flows:
       - action: action_process_transfer
 ```
 
-4. **Verify.** The file is in `data/basics/`, and the flow has `name`, `description`, and `steps` with the three collect steps and the action step.
+3. **Verify.** The file is in `data/basics/`, and the flow has `name`, `description`, and `steps` with the three collect steps and the action step.
 
 **Use Check It!** below when done (Codio).
 
@@ -33,8 +31,7 @@ flows:
 
 ## Part 2: Running locally
 
-1. From the project root, activate the venv, then `cd level4`.
-2. Create `level4/data/basics/transfer_money.yml` with the flow structure above.
-3. Verify as in Part 1.
+1. In your editor, create `level4/data/basics/transfer_money.yml` with the flow structure above (no terminal or venv required for this lab).
+2. Verify as in Part 1.
 
 You're done when `data/basics/transfer_money.yml` exists with a flow that has `collect: amount`, `collect: recipient`, `collect: account_from`, and `action: action_process_transfer`.
