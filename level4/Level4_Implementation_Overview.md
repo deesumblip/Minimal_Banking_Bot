@@ -32,7 +32,7 @@ This document provides implementation guidance for **Level 4: Multiple Slots** o
 - `Level4_Unit2_Content_2.1_*.md`
 - `Level4_Unit3_Content_3.1_*.md`
 - `Level4_Unit4_Content_4.1_*.md`
-- `Level4_Unit5_Content_5.2_*.md` (training is **Lab 5.1** only — `Level4_Lab5.1_Content.md`)
+- **Unit 5** has no separate unit-only content files; training and testing are **`Level4_Lab5.1_Content.md`** and **`Level4_Lab5.2_Content.md`** only.
 - `Level4_Unit6_Content_6.1_*.md`, `6.2_*.md`, `6.3_*.md`, `6.4_Knowledge-Check.md`, `6.5_Limitations-of-Level-4.md`, `6.6_Whats-Next-Level-5-Preview.md`, `6.7_Course-Completion-Checklist.md`
 
 ### Lab Content (Student-facing)
@@ -40,7 +40,7 @@ This document provides implementation guidance for **Level 4: Multiple Slots** o
 - `Level4_Lab3.1_Content.md` – Writing the action that uses multiple slots (graded)
 - `Level4_Lab4.1_Content.md` – Creating the transfer flow (graded)
 - `Level4_Lab5.1_Content.md` – Training Level 4 (graded)
-- `Level4_Lab5.2_Content.md` – Completion check / testing transfer in Inspector (completion-based)
+- `Level4_Lab5.2_Content.md` – Completion check (graded) + optional Inspector testing (single lab page; no separate Unit 5 “5.2 concept” file)
 
 ### Assessment Setup (Implementers)
 - `Level4_Lab2.1_Assessment_Setup.md` – Lab 2.1 (Code Output Compare, Python grader)

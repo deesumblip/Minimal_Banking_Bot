@@ -74,13 +74,12 @@
 ---
 
 ### Unit 5: Training and Testing
-**Type**: Content + Labs (with Assessments)  
+**Type**: Labs (with Assessments); no separate unit-only content pages  
 **Assessment**: Lab 5.1 (training), Lab 5.2 (completion check)
 
 **Sections**:
-- 5.2 Testing Transfer — `Level4_Unit5_Content_5.2_Testing-Transfer.md`
-- Lab 5.1: Training (concept + steps + graded check) — `Level4_Lab5.1_Content.md` / `Level4_Lab5.1_Assessment_Setup.md`
-- Lab 5.2: Testing / Completion Check — `Level4_Lab5.2_Content.md` / `Level4_Lab5.2_Assessment_Setup.md`
+- Lab 5.1: Training (steps + graded check) — `Level4_Lab5.1_Content.md` / `Level4_Lab5.1_Assessment_Setup.md`
+- Lab 5.2: Completion check + optional Inspector — `Level4_Lab5.2_Content.md` / `Level4_Lab5.2_Assessment_Setup.md`
 
 **Key Concepts**: Train from level4, model in level4/models/, completion check (domain + action + flow + model)
 
@@ -134,7 +133,6 @@ All source files live in **level4/** so you can push to GitHub and sync the same
 | 2.1 | Level4_Unit2_Content_2.1_Adding-Slots-and-Responses.md |
 | 3.1 | Level4_Unit3_Content_3.1_Reading-Multiple-Slots.md |
 | 4.1 | Level4_Unit4_Content_4.1_Multiple-Collect-Steps.md |
-| 5.2 | Level4_Unit5_Content_5.2_Testing-Transfer.md |
 | 6.1 | Level4_Unit6_Content_6.1_Complete-Bot-Walkthrough.md |
 | 6.2 | Level4_Unit6_Content_6.2_What-Youve-Learned.md |
 | 6.3 | Level4_Unit6_Content_6.3_Whats-Next.md |
@@ -142,6 +140,8 @@ All source files live in **level4/** so you can push to GitHub and sync the same
 | 6.5 | Level4_Unit6_Content_6.5_Limitations-of-Level-4.md |
 | 6.6 | Level4_Unit6_Content_6.6_Whats-Next-Level-5-Preview.md |
 | 6.7 | Level4_Unit6_Content_6.7_Course-Completion-Checklist.md |
+
+**Unit 5:** There are no `Level4_Unit5_Content_*` files—training and testing are only in **`Level4_Lab5.1_Content.md`** and **`Level4_Lab5.2_Content.md`**.
 
 ### Lab Content + Assessment Setup
 

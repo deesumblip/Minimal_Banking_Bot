@@ -1,14 +1,14 @@
-Your goal is to run the **completion check** for Level 4 and, optionally, test the transfer flow in Rasa Inspector.
+**Objective.** After **Lab 5.1** (training), **Lab 5.2** completes Unit 5: (1) a **graded completion check** that your domain, action, flow, and model are present—the grader does **not** start Rasa or Inspector; (2) **optional** testing in **Rasa Inspector** to run the transfer flow and confirm behavior.
 
-**Prerequisite.** Complete **Labs 2.1, 3.1, and 4.1**, then **Lab 5.1** (train so a model exists). You need: domain with transfer slots and ask responses, `action_process_transfer.py`, `transfer_money.yml`, and a trained model in `level4/models/`.
+**Recommended order:** Complete the completion check first, then use Inspector if you want hands-on verification.
+
+**Prerequisite.** Finish **Labs 2.1, 3.1, and 4.1**, then **Lab 5.1** (a model must exist under `level4/models/`).
 
 ---
 
-## Part 1: Completion check (assessment)
+## Part 1: Completion check
 
-1. Run the **Lab 5.2 assessment**.
-
-{Check It!|assessment}(code-output-compare-401050002)
+1. In **Codio**, use **Check It!** for Lab 5.2 (assessment `code-output-compare-401050002`).
 
 The grader checks that:
    - The domain has the three transfer slots, three ask responses, and `action_process_transfer` in the actions list
@@ -16,20 +16,27 @@ The grader checks that:
    - `level4/data/basics/transfer_money.yml` exists with the three collect steps and the action step
    - A model file exists in `level4/models/`
 
-2. If any check fails, fix the corresponding lab (**2.1** domain, **3.1** action, **4.1** flow, or **5.1** training), then run the assessment again.
+2. If any check fails, fix **Labs 2.1, 3.1, or 4.1** as needed, complete **Lab 5.1** (train), then run the assessment again.
 
 ---
 
-## Part 2: Test in Inspector (optional)
+## Part 2: Test in Rasa Inspector (optional)
 
-1. **Start the bot.** From `level4` with venv active, run `python -m rasa inspect --debug`. Leave the terminal open. When you see "Starting Worker", open the **Rasa Inspect** tab (Codio) or the URL shown (e.g. http://localhost:5005).
+From **`level4`** with the virtual environment active:
 
-2. **Trigger the transfer flow.** Type "I want to transfer money" or "Transfer funds."
+1. Start the bot (e.g. `python -m rasa inspect --debug`, or `python -m rasa run` if your course uses that). Leave it running.
+2. Open **Rasa Inspect** (Codio tab) or the local URL (e.g. `http://localhost:5005`).
+3. Trigger the transfer flow (“I want to transfer money”, etc.).
+4. Provide amount, recipient, and source account when asked.
+5. Confirm the message from `action_process_transfer`.
+6. Optionally try balance / hours to confirm other flows still work.
 
-3. **Answer the prompts.** The bot should ask for amount, then recipient, then source account. Provide values (e.g. 50, Alice, 1234).
+---
 
-4. **Confirm.** You should see the confirmation message from `action_process_transfer` using the three values.
+## Part 3: Running locally (optional)
 
-5. **Verify other flows.** Try "Check my balance" and "What are your hours?" to confirm Level 3 and Level 2 flows still work.
+Same as Part 2 on your machine: activate `.venv` at the project root, `cd level4`, then start Inspect or run as above.
 
-You're done when the completion check passes and, if you ran Inspector, the transfer flow and other flows behave as expected.
+---
+
+**Done when:** The completion check passes; Inspector testing is optional but recommended for confidence.

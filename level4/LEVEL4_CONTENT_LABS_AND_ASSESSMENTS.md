@@ -14,7 +14,7 @@ This document describes how to create **Level 4** content, labs, and assessment 
 | Unit 2 + **Lab 3.1** (domain: account, utter_ask_account, register action) | Unit 2 + **Lab 2.1** (domain: amount, recipient, account_from + utter_ask_* + register action_process_transfer) |
 | Unit 3 + **Lab 4.1** (action file: action_check_balance_simple) | Unit 3 + **Lab 3.1** (action file: action_process_transfer) |
 | Unit 4 + **Lab 5.1** (flow: check_balance.yml, collect account + action) | Unit 4 + **Lab 4.1** (flow: transfer_money.yml, collect amount/recipient/account_from + action) |
-| Unit 5 + Lab 6.1 (train) + Lab 6.2 (test Inspector) | Unit 5 + Lab 5.1 (train) + Lab 5.2 (test transfer in Inspector) |
+| Unit 5 + Lab 6.1 (train) + Lab 6.2 (test Inspector) | Unit 5 + Lab 5.1 (train) + Lab 5.2 (completion check + optional Inspector) |
 | Unit 6: Walkthrough, summary, Level 4 preview | Unit 6: Complete walkthrough, What you've learned, What's next (6.1, 6.2, 6.3) |
 
 **Lab numbering:** Level 3 uses Labs 3.1, 4.1, 5.1, 6.1, 6.2, 7.1. For Level 4 you can use **Lab 4.1 (domain), 4.2 (action), 4.3 (flow), 4.4 (train), 4.5 (test)** so the “4.x” sequence is self-contained. Alternatively keep a global lab index (e.g. Lab 8.1, 8.2, …) if your course numbers across levels; the structure below uses 4.1–4.5 for clarity.
@@ -32,7 +32,7 @@ Create **Level4_Course_Outline.md** in `level4/` with:
 - **Unit 2:** Domain — add three slots, three ask responses, register action_process_transfer → **Lab 2.1** (graded).
 - **Unit 3:** Reading multiple slots in actions → **Lab 3.1** (create action_process_transfer.py) (graded).
 - **Unit 4:** Flows with multiple collect steps → **Lab 4.1** (create transfer_money.yml) (graded).
-- **Unit 5:** Training and testing → **Lab 5.1** (train from level4), **Lab 5.2** (test transfer in Inspector) (5.1 graded like 6.1; 5.2 optional/ungraded).
+- **Unit 5:** Training and testing → **Lab 5.1** (train from level4), **Lab 5.2** (completion check graded + optional Inspector walkthrough). No separate Unit 5 concept-only pages.
 - **Unit 6:** Complete bot walkthrough, summary, what’s next.
 
 **Assessment summary table:** Lab 2.1 (domain), 3.1 (action), 4.1 (flow), 5.1 (train), 5.2 (test); same Codio pattern as Level 3 Lab 3.1 / Chapter 1.2 Lab 6.2: **sequence** of `Check N: PASSED` substring tests (see `code-output-compare-40102*` – `401050002.json`), not a single `PASS` line.
@@ -53,7 +53,6 @@ Create one markdown file per section, same naming pattern as Level 3. Paths unde
 | `Level4_Unit2_Content_2.1_Adding-Slots-and-Responses.md` | Domain: add slots amount, recipient, account_from (type text); add utter_ask_amount, utter_ask_recipient, utter_ask_account_from; add action_process_transfer to actions. Pointer to Lab 2.1. |
 | `Level4_Unit3_Content_3.1_Reading-Multiple-Slots.md` | In an action, use tracker.get_slot("amount"), get_slot("recipient"), get_slot("account_from"); validate or re-prompt as needed. Pointer to Lab 3.1. |
 | `Level4_Unit4_Content_4.1_Multiple-Collect-Steps.md` | Flow steps: multiple `collect:` steps (e.g. amount, then recipient, then account_from), then `action: action_process_transfer`. Pointer to Lab 4.1. |
-| `Level4_Unit5_Content_5.2_Testing-Transfer.md` | Run Inspector, trigger transfer flow, provide amount/recipient/account_from; Lab 5.2. |
 | `Level4_Unit6_Content_6.1_Complete-Bot-Walkthrough.md` | Guided walkthrough of Level 4 bot (optional). |
 | `Level4_Unit6_Content_6.2_What-Youve-Learned.md` | Summary: multiple slots, multiple collect steps, one action using all slots. |
 | `Level4_Unit6_Content_6.3_Whats-Next.md` | What's next: forms, NLU, channels. |
@@ -102,11 +101,12 @@ You can add a **fill-in-the-blanks** Codio assessment (like Level 3 Lab 4.1’s 
 
 - Same workflow as Level 3 training: venv from project root → `cd level4` → `python -m rasa train` → verify a new `.tar.gz` in `level4/models/`. Includes short context on what Rasa loads (domain, flows, actions), troubleshooting mapped to Labs 2.1 / 3.1 / 4.1, pointer to Lab 5.2 after **Check It!** (Codio). No separate Unit 5 “5.1 concept” page — all student-facing training content lives here.
 
-### Lab 5.2 — Testing transfer in Inspector
+### Lab 5.2 — Completion check & Inspector
 
 **File:** `level4/Level4_Lab5.2_Content.md`
 
-- Mirror **Level3_Lab6.2_Content.md**: start Rasa (e.g. rasa run), open Rasa Inspect, trigger transfer flow, provide amount/recipient/account_from. No graded assessment (or optional completion check).
+- **Part 1:** Graded **completion check** (`lab_5.2_grader.py`) — domain, action, flow, and model present. Does not run Rasa.
+- **Parts 2–3:** Optional **Rasa Inspector** (and local) steps: start `rasa inspect` / `rasa run`, trigger transfer flow, confirm `action_process_transfer`, spot-check other flows. Same page as the check (no separate Unit 5 “5.2 concept” file).
 
 ---
 

@@ -1,12 +1,10 @@
-# Lab 5.2: Completion Check (Transfer Flow) — Assessment Setup
+# Lab 5.2: Completion Check & Testing in Inspector — Assessment Setup
 
 ## Guide Content (For Students)
 
-**Placement.** This lab is in **Unit 5: Training and Testing** (Level 4), after **Lab 5.1** and the **5.2 Testing Transfer in Inspector** page.
+**Placement.** This lab is in **Unit 5: Training and Testing** (Level 4), immediately after **Lab 5.1**. Student-facing instructions for the **graded completion check** and **optional Inspector** steps live on the single **Lab 5.2** guide page (there is no separate Unit 5 “5.2 concept” page).
 
-**Task.** Start your Level 4 bot (e.g. `rasa run` or use the Rasa Inspect tab), open Rasa Inspector, and run through the transfer flow: trigger the transfer intent, provide amount, recipient, and source account when asked, and confirm you see the transfer confirmation from `action_process_transfer`. The completion check verifies that your Level 4 bot has all required pieces in place so the transfer flow can run (domain, action file, flow file, and a trained model).
-
-Run the assessment when you've verified the transfer flow works (or when you've completed the setup).
+**Task.** Students run **Check It!** (completion check) first; it verifies domain, action file, flow file, and model—**without** starting Rasa. **Optional:** Start the bot (`rasa inspect` / `rasa run`), open **Rasa Inspect**, walk through the transfer flow, and confirm `action_process_transfer`. Guide page order: Part 1 = assessment, Part 2–3 = Inspector (optional).
 
 **Codio guide (Chapter 1.4).** The Lab 5.2 page in the Chapter 1.4 guide includes: `{Check It!|assessment}(code-output-compare-401050002)`. Assessment JSON: `.guides/assessments/code-output-compare-401050002.json`.
 
