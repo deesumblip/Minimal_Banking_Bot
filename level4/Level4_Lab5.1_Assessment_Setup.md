@@ -58,7 +58,7 @@ The grader runs from **workspace root** (`/home/codio/workspace`): it verifies t
 4. **Check 4 – Logs** (3 pts): if `level4/logs/logs.out` exists, check for error/exception/failed; if no log file, pass (**PARTIAL** if errors suspected).
 5. **Check 5 – Training completed** (2 pts): confirmation step.
 
-**Total: 12 points.** **Lab 6.2-style:** **` PASS: Lab 4.4 verification complete! Score: 12/12`** and exit **0** only on full score; checks 3–4 may print **⚠️ PARTIAL** (substring `Check N: PASSED` missing → assessment not fully passed).
+**Total: 12 points.** **Lab 6.2-style:** **` PASS: Lab 5.1 verification complete! Score: 12/12`** and exit **0** only on full score; checks 3–4 may print **⚠️ PARTIAL** (substring `Check N: PASSED` missing → assessment not fully passed).
 
 ### Codio configuration (Standard Code Test)
 

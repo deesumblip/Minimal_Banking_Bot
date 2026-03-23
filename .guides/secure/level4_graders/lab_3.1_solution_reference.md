@@ -1,6 +1,6 @@
-# Lab 4.2 – Reference solution for LLM Rubric Autograde
+# Lab 3.1 – Reference solution for LLM Rubric Autograde
 
-Use this file as the **Instructor Provided Solution File** in Codio's LLM Rubric Autograde for Lab 4.2 (Writing the Action That Uses Multiple Slots).
+Use this file as the **Instructor Provided Solution File** in Codio's LLM Rubric Autograde for Lab 3.1 (Writing the Action That Uses Multiple Slots).
 
 ---
 

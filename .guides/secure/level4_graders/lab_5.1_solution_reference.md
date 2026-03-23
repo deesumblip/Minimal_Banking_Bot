@@ -1,6 +1,6 @@
-# Lab 4.4 – Reference solution for Training the Level 4 Bot
+# Lab 5.1 – Reference solution for Training the Level 4 Bot
 
-Use this file as the **Instructor Provided Solution File** for Lab 4.4 if you use an LLM Rubric; otherwise the Standard Code Test (Python grader) is the primary assessment.
+Use this file as the **Instructor Provided Solution File** for Lab 5.1 if you use an LLM Rubric; otherwise the Standard Code Test (Python grader) is the primary assessment.
 
 ---
 
@@ -26,4 +26,4 @@ Use this file as the **Instructor Provided Solution File** for Lab 4.4 if you us
 - **Model:** A `.tar.gz` model file exists in `level4/models/` and is recent (e.g. created within the session).
 - **Logs:** No critical errors in training logs (optional check).
 
-The Python grader (lab_4.4_grader.py) verifies venv, model file existence, model recency, and optional log checks and prints PASS on success.
+The Python grader (`lab_5.1_grader.py`) verifies venv, model file existence, model recency, and optional log checks and prints PASS on success.

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Lab 4.2: Writing the Action That Uses Multiple Slots - Grader Script
+Lab 3.1: Writing the Action That Uses Multiple Slots - Grader Script
 Output format matches Chapter 1.2 Lab 6.2 template (leading space on PASSED lines,
 no emoji on pass; ❌ on fail; ========== summary band; exit 0 only on full score).
 
@@ -19,7 +19,7 @@ ACTION_PATH = WORKSPACE_ROOT / "level4" / "actions" / "action_process_transfer.p
 score = 0
 max_score = 10
 
-print("Running Lab 4.2 Assessment Checks...")
+print("Running Lab 3.1 Assessment Checks...")
 print("")
 
 # Check 1: Action file exists
@@ -113,7 +113,7 @@ print("")
 # Summary
 print("==========================================")
 if score >= max_score:
-    print(f" PASS: Lab 4.2 verification complete! Score: {score}/{max_score}")
+    print(f" PASS: Lab 3.1 verification complete! Score: {score}/{max_score}")
 else:
     print(f"❌ FAIL: Score {score}/{max_score} - Review the failed checks above and try again.")
 print("==========================================")

@@ -38,7 +38,7 @@ This assessment verifies that the student has created `level4/data/basics/transf
 
 ### Option B: Standard Code Test (Python script)
 
-Use a Python grader for faster feedback. **Lab 6.2 / Lab 3.1** output: **Check 1–4**, score band, **` PASS: Lab 4.3 verification complete! Score: 8/8`** on full pass. The script checks `level4/data/basics/transfer_money.yml` for: file exists; valid YAML with top-level `flows:`; flow with `name` and `steps`; collect amount, recipient, account_from; `action: action_process_transfer`.
+Use a Python grader for faster feedback. **Lab 6.2 / Lab 3.1** output: **Check 1–4**, score band, **` PASS: Lab 4.1 verification complete! Score: 8/8`** on full pass. The script checks `level4/data/basics/transfer_money.yml` for: file exists; valid YAML with top-level `flows:`; flow with `name` and `steps`; collect amount, recipient, account_from; `action: action_process_transfer`.
 
 **Grader script location (in repo):**
 

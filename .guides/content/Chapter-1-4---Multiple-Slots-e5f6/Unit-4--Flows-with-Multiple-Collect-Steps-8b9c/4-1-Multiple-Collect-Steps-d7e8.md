@@ -9,7 +9,7 @@ The flow will:
 3. **Collect account_from** — Step with `collect: account_from`. When empty, Rasa uses `utter_ask_account_from`.
 4. **Run the action** — Step with `action: action_process_transfer`, which reads all three slots and sends the confirmation.
 
-Each `collect:` step can optionally include a `description:` for the slot (e.g. for documentation or tools). The important part is that the three collect steps appear in order, followed by the action step.
+Each `collect:` step can include a **`description:`** for the slot. In **Rasa Pro (CALM)**, the LLM **command generator** uses these descriptions when filling slots—short one-line descriptions are often **not enough** for free-text names (multi-word payees). Use **clear, explicit** descriptions (see Lab 4.1 example). The important part is that the three collect steps appear in order, followed by the action step.
 
 ## Example: The transfer_money flow
 
@@ -20,15 +20,17 @@ flows:
   transfer_money:
     name: transfer money
     description: |
-      Demonstrates collecting multiple slots before executing an action.
-      The bot will collect amount, recipient, and source account, then process the transfer.
+      User transfers money in USD. Collect amount, payee (free text), source account; then action.
     steps:
       - collect: amount
-        description: "transfer amount"
+        description: |
+          Dollar amount. Extract the numeric value from "50 dollars", "$50", etc.
       - collect: recipient
-        description: "recipient name or account"
+        description: |
+          Payee as free text; include multi-word names (e.g. "Alice", "George W Bush").
       - collect: account_from
-        description: "source account number"
+        description: |
+          Source account number or label from the user.
       - action: action_process_transfer
 ```
 

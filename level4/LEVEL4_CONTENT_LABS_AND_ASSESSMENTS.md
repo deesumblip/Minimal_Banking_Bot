@@ -17,7 +17,7 @@ This document describes how to create **Level 4** content, labs, and assessment 
 | Unit 5 + Lab 6.1 (train) + Lab 6.2 (test Inspector) | Unit 5 + Lab 5.1 (train) + Lab 5.2 (completion check + optional Inspector) |
 | Unit 6: Walkthrough, summary, Level 4 preview | Unit 6: Complete walkthrough, What you've learned, What's next (6.1, 6.2, 6.3) |
 
-**Lab numbering:** Level 3 uses Labs 3.1, 4.1, 5.1, 6.1, 6.2, 7.1. For Level 4 you can use **Lab 4.1 (domain), 4.2 (action), 4.3 (flow), 4.4 (train), 4.5 (test)** so the “4.x” sequence is self-contained. Alternatively keep a global lab index (e.g. Lab 8.1, 8.2, …) if your course numbers across levels; the structure below uses 4.1–4.5 for clarity.
+**Lab numbering (this course):** Level 4 uses **Lab 2.1** (domain), **3.1** (action), **4.1** (flow), **5.1** (train), **5.2** (completion check + Inspector)—same pattern as Level 3’s chapter lab index, not a single “4.x-only” sequence.
 
 ---
 
@@ -88,7 +88,7 @@ You can add a **fill-in-the-blanks** Codio assessment (like Level 3 Lab 4.1’s 
 
 ### Lab 4.1 — Flow (create transfer_money.yml)
 
-**File:** `level4/Level4_Lab4.3_Content.md`
+**File:** `level4/Level4_Lab4.1_Content.md`
 
 - **Objective:** Create `level4/data/basics/transfer_money.yml` with a flow that has collect: amount, collect: recipient, collect: account_from, then action: action_process_transfer.
 - **Steps:** 1) Create file in level4/data/basics/. 2) Add flows.transfer_money with name, description, steps: three collect steps (with optional description), then action step. 3) Verify path and structure.
@@ -206,7 +206,7 @@ For each graded lab, add a **solution reference** markdown file used as the Inst
 | 1 | Ensure level4 **starter** = Level 3 end state (see LEVEL4_BUILD_FROM_LEVEL3_APPROACH.md). |
 | 2 | Create Level4_Course_Outline.md and all Level4_Unit*_Content_*.md files. |
 | 3 | Create Level4_Lab2.1, 3.1, 4.1, 5.1, 5.2_Content.md with step-by-step and success criteria. |
-| 4 | Create Level4_Lab4.1–4.4_Assessment_Setup.md (Option A + B, rationale, substring match). |
+| 4 | Create `Level4_Lab2.1`, `3.1`, `4.1`, `5.1`, `5.2_Assessment_Setup.md` (Option A + B, rationale, substring match). |
 | 5 | Add .guides/secure/level4_graders/ with lab_2.1, 3.1, 4.1, 5.1, 5.2_grader.py and solution_reference.md files. |
 | 6 | Sync content to Codio; configure assessments; update index/navigation. |
 

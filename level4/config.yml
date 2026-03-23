@@ -3,6 +3,9 @@ language: en
 assistant_id: level4-bot
 
 pipeline:
+  # SearchReady: default for Rasa Pro when using flow retrieval / some RAG setups.
+  # If slot filling is still flaky after domain + flow description fixes, ask your instructor
+  # about switching to CompactLLMCommandGenerator (often recommended when not using RAG).
   - name: SearchReadyLLMCommandGenerator
     llm:
       model_group: gpt-4o-mini

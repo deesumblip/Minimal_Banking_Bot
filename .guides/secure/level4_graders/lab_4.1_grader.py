@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Lab 4.3: Creating the Transfer Flow - Grader Script
+Lab 4.1: Creating the Transfer Flow - Grader Script
 Output format matches Chapter 1.2 Lab 6.2 template.
 
 Checks level4/data/basics/transfer_money.yml for: file exists, valid YAML with flows:,
@@ -24,7 +24,7 @@ except ImportError:
 score = 0
 max_score = 8
 
-print("Running Lab 4.3 Assessment Checks...")
+print("Running Lab 4.1 Assessment Checks...")
 print("")
 
 # Check 1: File exists (2 points)
@@ -118,7 +118,7 @@ print("")
 # Summary
 print("==========================================")
 if score >= max_score:
-    print(f" PASS: Lab 4.3 verification complete! Score: {score}/{max_score}")
+    print(f" PASS: Lab 4.1 verification complete! Score: {score}/{max_score}")
 else:
     print(f"❌ FAIL: Score {score}/{max_score} - Review the failed checks above and try again.")
 print("==========================================")

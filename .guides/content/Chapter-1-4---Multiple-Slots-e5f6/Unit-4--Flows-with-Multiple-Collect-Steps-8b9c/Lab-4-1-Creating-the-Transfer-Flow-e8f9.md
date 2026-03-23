@@ -11,17 +11,23 @@ flows:
   transfer_money:
     name: transfer money
     description: |
-      Demonstrates collecting multiple slots before executing an action.
-      The bot will collect amount, recipient, and source account, then process the transfer.
+      User transfers money in USD. Collect in order: dollar amount, payee (free text),
+      then source account; then run the transfer action.
     steps:
       - collect: amount
-        description: "transfer amount"
+        description: |
+          Dollar amount to send. Extract the numeric value from input like "50 dollars", "$50", or "fifty".
       - collect: recipient
-        description: "recipient name or account"
+        description: |
+          Who receives the money. Map the user's entire message to this slot as plain text,
+          including multi-word names (e.g. "Alice", "John Smith", "George W Bush").
       - collect: account_from
-        description: "source account number"
+        description: |
+          Source account number or label the user gives for the account to transfer from.
       - action: action_process_transfer
 ```
+
+**Why the longer `description` lines?** Rasa Pro’s **LLM command generator** uses these strings when deciding how to **fill slots**. Short phrases like `"recipient name or account"` often fail for multi-word names; richer descriptions match [Rasa’s guidance](https://rasa.com/docs/reference/config/components/llm-command-generators/#customizing-the-prompt) to improve extraction.
 
 3. **Verify.** The file is in `data/basics/`, and the flow has `name`, `description`, and `steps` with the three collect steps and the action step.
 

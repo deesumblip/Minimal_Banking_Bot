@@ -8,7 +8,7 @@ In this chapter you:
 
 3. **Flow (Lab 4.1)** — Created `transfer_money.yml` with three `collect:` steps (amount, recipient, account_from) and one `action:` step (action_process_transfer).
 
-4. **Training and testing (Labs 5.1 and 5.2)** — Trained the Level 4 bot from the `level4` folder and ran the completion check (and optionally tested the transfer flow in Inspector).
+4. **Training and testing (Labs 5.1 and 5.2)** — Trained the Level 4 bot from the `level4` folder (Lab 5.1), then ran the completion check and optionally tested the transfer flow in Inspector (Lab 5.2).
 
 ## Key Ideas
 

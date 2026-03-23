@@ -38,7 +38,7 @@ This assessment verifies that the student has added the slots `amount`, `recipie
 
 ### Option B: Standard Code Test (Python script)
 
-Use a Python grader for faster feedback. Output matches the **Chapter 1.2 Lab 6.2** template (same as **Level 3 Lab 3.1**): **Check 1–4** (1-based), leading space on pass lines (` Check N: PASSED - …`), **==========================================** score band, **` PASS: Lab 4.1 verification complete! Score: 10/10`** on full pass; exit **0** only on **10/10**. The script parses `level4/domain/basics.yml` and checks: file exists; valid YAML; `slots:` contains `amount`, `recipient`, `account_from`; `responses:` has the three ask utterances with text; `action_process_transfer` in `actions:`.
+Use a Python grader for faster feedback. Output matches the **Chapter 1.2 Lab 6.2** template (same as **Level 3 Lab 3.1**): **Check 1–4** (1-based), leading space on pass lines (` Check N: PASSED - …`), **==========================================** score band, **` PASS: Lab 2.1 verification complete! Score: 10/10`** on full pass; exit **0** only on **10/10**. The script parses `level4/domain/basics.yml` and checks: file exists; valid YAML; `slots:` contains `amount`, `recipient`, `account_from`; `responses:` has the three ask utterances with text; `action_process_transfer` in `actions:`.
 
 **Grader script location (in repo):**
 

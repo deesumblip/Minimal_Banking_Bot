@@ -41,7 +41,7 @@ This assessment verifies that the student has created `level4/actions/action_pro
 
 ### Option B: Standard Code Test (Python script)
 
-Use a Python grader for faster feedback. Output matches **Lab 6.2 / Lab 3.1** style: **Check 1–6**, pass lines with leading space, score band, **` PASS: Lab 4.2 verification complete! Score: 10/10`** on full pass; exit **0** only on full score. Verifies: action file exists; imports; class `ActionProcessTransfer(Action)`; `name()`; `run()` reads three slots; `utter_message`.
+Use a Python grader for faster feedback. Output matches **Lab 6.2 / Lab 3.1** style: **Check 1–6**, pass lines with leading space, score band, **` PASS: Lab 3.1 verification complete! Score: 10/10`** on full pass; exit **0** only on full score. Verifies: action file exists; imports; class `ActionProcessTransfer(Action)`; `name()`; `run()` reads three slots; `utter_message`.
 
 **Grader script location (in repo):**
 

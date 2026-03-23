@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Lab 4.4: Training the Level 4 Bot - Grader Script
+Lab 5.1: Training the Level 4 Bot - Grader Script
 Output format matches Chapter 1.2 Lab 6.2 template (⚠️ for partial / stale model / log issues).
 
 Runs from workspace root, verifies venv, then checks level4 for model and logs.
@@ -20,7 +20,7 @@ LOGS_FILE = LEVEL4_DIR / "logs" / "logs.out"
 score = 0
 max_score = 12
 
-print("Running Lab 4.4 Assessment Checks...")
+print("Running Lab 5.1 Assessment Checks...")
 print("")
 
 # Check 1: Virtual environment exists (2 points)
@@ -110,7 +110,7 @@ print("")
 # Summary
 print("==========================================")
 if score >= max_score:
-    print(f" PASS: Lab 4.4 verification complete! Score: {score}/{max_score}")
+    print(f" PASS: Lab 5.1 verification complete! Score: {score}/{max_score}")
 else:
     print(f"❌ FAIL: Score {score}/{max_score} - Review the failed checks above and try again.")
 print("==========================================")

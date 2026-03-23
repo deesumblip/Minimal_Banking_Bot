@@ -1,6 +1,6 @@
-# Lab 4.3 – Reference solution for LLM Rubric Autograde
+# Lab 4.1 – Reference solution for LLM Rubric Autograde
 
-Use this file as the **Instructor Provided Solution File** in Codio's LLM Rubric Autograde for Lab 4.3 (Creating the Transfer Flow with Multiple Collect Steps).
+Use this file as the **Instructor Provided Solution File** in Codio's LLM Rubric Autograde for Lab 4.1 (Creating the Transfer Flow with Multiple Collect Steps).
 
 ---
 
@@ -17,6 +17,8 @@ The file must contain a flow that:
 
 3. **Action step** – At least one step that calls the transfer action: `action: action_process_transfer`.
 
+**Recommended:** Use **detailed `description:`** text on each `collect:` step so the CALM LLM command generator reliably fills slots (especially multi-word recipient names). See example below.
+
 Example:
 
 ```yaml
@@ -24,15 +26,19 @@ flows:
   transfer_money:
     name: transfer money
     description: |
-      Demonstrates collecting multiple slots before executing an action.
-      The bot will collect amount, recipient, and source account, then process the transfer.
+      User transfers money in USD. Collect in order: dollar amount, payee (free text),
+      then source account; then run the transfer action.
     steps:
       - collect: amount
-        description: "transfer amount"
+        description: |
+          Dollar amount to send. Extract the numeric value from input like "50 dollars", "$50", or "fifty".
       - collect: recipient
-        description: "recipient name or account"
+        description: |
+          Who receives the money. Map the user's entire message to this slot as plain text,
+          including multi-word names (e.g. "Alice", "John Smith", "George W Bush").
       - collect: account_from
-        description: "source account number"
+        description: |
+          Source account number or label the user gives for the account to transfer from.
       - action: action_process_transfer
 ```
 

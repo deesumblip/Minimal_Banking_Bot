@@ -31,7 +31,13 @@ From **`level4`** with the virtual environment active:
 5. Confirm the message from `action_process_transfer`.
 6. Optionally try balance / hours to confirm other flows still work.
 
-**Troubleshooting:** If the bot accepts the amount but then says it **cannot understand** you when you enter the recipient (or account), check **`level4/domain/basics.yml`**: for **`utter_ask_amount`**, **`utter_ask_recipient`**, and **`utter_ask_account_from`**, use **`metadata: rephrase: False`**. With `rephrase: True`, Rasa Pro’s LLM layer can fail to fill the next text slot and fall back to a generic error. **Retrain** after changing the domain.
+**Troubleshooting:** If the bot accepts the amount but then says it **cannot understand** you when you enter the recipient (or account):
+
+1. **Domain:** In **`level4/domain/basics.yml`**, set **`metadata: rephrase: False`** on **`utter_ask_amount`**, **`utter_ask_recipient`**, and **`utter_ask_account_from`** (see Lab 2.1).
+
+2. **Flow:** In **`level4/data/basics/transfer_money.yml`**, expand the **`description:`** on each **`collect:`** step—especially **`recipient`**—so CALM knows to map the **entire user message** as free text, including multi-word names. See **Lab 4.1** for a full example.
+
+3. **Retrain** after changing domain or flow: `python -m rasa train` from **`level4`**.
 
 ---
 

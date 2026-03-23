@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Lab 4.1: Adding Multiple Slots in the Domain - Grader Script
+Lab 2.1: Adding Multiple Slots in the Domain - Grader Script
 Output format matches Chapter 1.2 Lab 6.2 template (leading space on PASSED lines,
 no emoji on pass; ❌ on fail; ========== summary band; exit 0 only on full score).
 
@@ -25,7 +25,7 @@ except ImportError:
 score = 0
 max_score = 10
 
-print("Running Lab 4.1 Assessment Checks...")
+print("Running Lab 2.1 Assessment Checks...")
 print("")
 
 # Check 1: Domain file exists
@@ -107,7 +107,7 @@ print("")
 # Summary
 print("==========================================")
 if score >= max_score:
-    print(f" PASS: Lab 4.1 verification complete! Score: {score}/{max_score}")
+    print(f" PASS: Lab 2.1 verification complete! Score: {score}/{max_score}")
 else:
     print(f"❌ FAIL: Score {score}/{max_score} - Review the failed checks above and try again.")
 print("==========================================")
