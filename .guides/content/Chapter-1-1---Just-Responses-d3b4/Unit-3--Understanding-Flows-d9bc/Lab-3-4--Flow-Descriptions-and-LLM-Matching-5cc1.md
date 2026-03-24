@@ -9,9 +9,9 @@
 
 #### Why These Flows?
 
-The `description` field is **critical** because the LLM uses it to match user messages to flows. For example, when a user asks "What are your hours?" or "How do I check my balance?", the LLM reads flow descriptions and triggers the right flow.
+**3.3 Flow Descriptions and LLM Understanding** explains why `description` text matters: the LLM uses it to pick the right flow when users ask things like “What are your hours?” or “How do I check my balance?” Here you practice that on two new flow skeletons (**hours** and **balance**).
 
-You will complete **two fill-in-the-blank** flows (hours and balance) here. In Lab 3.5 you will add the flows and matching responses to your project.
+You will complete **two fill-in-the-blank** exercises here. In Lab 3.5 you will add those flows and matching responses to your project.
 
 ---
 

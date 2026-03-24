@@ -32,4 +32,6 @@ The `description` field is **critical** because the LLM uses it to match user me
 
 **Why**: The LLM understands all these are greetings that start conversations.
 
+**Next:** In **Lab 3.4**, complete the hours and balance flow YAML with fill-in-the-blank practice, then **Lab 3.5** adds those flows and responses to your project.
+
 ---
