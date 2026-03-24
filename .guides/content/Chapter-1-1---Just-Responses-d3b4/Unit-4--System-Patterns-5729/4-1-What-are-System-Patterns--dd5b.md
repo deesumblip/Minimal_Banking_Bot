@@ -3,7 +3,7 @@
 
 **File Location**: `data/system/patterns/patterns.yml`
 
-**Analogy**: System patterns are like the operating system of your bot - they handle the "behind the scenes" stuff.
+**Analogy**: System patterns are like the operating system of your agent - they handle the "behind the scenes" stuff.
 
 #### Two Key Patterns
 

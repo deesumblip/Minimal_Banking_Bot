@@ -4,7 +4,7 @@
 	"source": {
 		"name": "Chapter 1.3 - 2.3 - Test Your Knowledge: collect step behavior",
 		"showName": false,
-		"instructions": "**When a flow has a `collect: account` step and the `account` slot is empty, what does the bot do?**",
+		"instructions": "**When a flow has a `collect: account` step and the `account` slot is empty, what does the agent do?**",
 		"multipleResponse": false,
 		"isRandomized": true,
 		"answers": [
@@ -46,7 +46,7 @@
 		},
 		"bloomsObjectiveLevel": "2",
 		"learningObjectives": "SWBAT identify what happens when a collect step encounters an empty slot",
-		"guidance": "The correct answer is: Asks the user for the value (using the `utter_ask_account` response) and stores it in the slot. The `collect:` step gets the slot value; if empty, the bot asks using `utter_ask_*` and stores the answer. The bot does not skip steps when slots are empty, nor does it delete slot values or simply read from the tracker without prompting for missing information.",
+		"guidance": "The correct answer is: Asks the user for the value (using the `utter_ask_account` response) and stores it in the slot. The `collect:` step gets the slot value; if empty, the agent asks using `utter_ask_*` and stores the answer. The agent does not skip steps when slots are empty, nor does it delete slot values or simply read from the tracker without prompting for missing information.",
 		"showGuidanceAfterResponseOption": {
 			"type": "Attempts",
 			"passedFrom": 1

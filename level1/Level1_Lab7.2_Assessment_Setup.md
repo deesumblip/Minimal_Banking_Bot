@@ -8,7 +8,7 @@
 
 ### Your Task
 
-Add a new feature to your banking bot (new response + new flow):
+Add a new feature to your banking agent (new response + new flow):
 
 1. **Create a new response** in `domain/basics.yml` (e.g. bank hours, branch locations, FAQ). Follow the same pattern as existing responses; include `metadata: rephrase: True` where appropriate.
 2. **Create a new flow** in `data/basics/` (e.g. `hours.yml`). Give it a clear name and description; reference your new response in the steps.

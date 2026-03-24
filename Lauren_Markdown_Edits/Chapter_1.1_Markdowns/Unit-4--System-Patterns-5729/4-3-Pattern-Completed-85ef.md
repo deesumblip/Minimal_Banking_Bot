@@ -21,7 +21,7 @@ flows:
 
 3. **`next: END`**: End the conversation
    - Tells Rasa the conversation is complete
-   - Bot waits for next user message
+   - Agent waits for next user message
 
 #### When It Triggers
 

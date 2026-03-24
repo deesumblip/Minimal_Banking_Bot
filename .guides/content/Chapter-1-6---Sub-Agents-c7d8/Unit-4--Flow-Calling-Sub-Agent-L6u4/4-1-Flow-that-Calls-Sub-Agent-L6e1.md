@@ -2,9 +2,9 @@ To let users "talk to the banking assistant," you need a **flow** that the main 
 
 ## Example: The ask_banking_assistant flow
 
-Below is an example of the flow file. You will create your own version in Lab 4.1 (e.g. with a name and description that fit your bot). The key step is `call: banking_assistant` — the name must match the sub-agent’s `agent.name` in its config.
+Below is an example of the flow file. You will create your own version in Lab 4.1 (e.g. with a name and description that fit your agent). The key step is `call: banking_assistant`, the name must match the sub-agent’s `agent.name` in its config.
 
-```yaml
+
 flows:
   ask_banking_assistant:
     name: ask banking assistant
@@ -14,9 +14,8 @@ flows:
     steps:
       - call: banking_assistant
       - action: utter_help
-```
 
-- **name** and **description** — Help the LLM know when to trigger this flow (e.g. user says they want to talk to the banking assistant).
-- **steps** — First step `call: banking_assistant` runs the sub-agent until it completes; then `action: utter_help` runs so the main bot can offer help again.
+- **name** and **description**, Help the LLM know when to trigger this flow (e.g. user says they want to talk to the banking assistant).
+- **steps**, First step `call: banking_assistant` runs the sub-agent until it completes; then `action: utter_help` runs so the main agent can offer help again.
 
 In **Lab 4.1** you will create the file `level6/data/basics/ask_banking_assistant.yml` with your own version of this flow. When you are done, **in Codio** use **Check It!** for Lab 4.1.

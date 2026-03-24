@@ -4,7 +4,7 @@
 	"source": {
 		"name": "Lab 6.2 - Testing Slot Collection: slot collection behavior",
 		"showName": false,
-		"instructions": "**When you first say \"Check my balance\" (slot empty), what should the bot do?**",
+		"instructions": "**When you first say \"Check my balance\" (slot empty), what should the agent do?**",
 		"multipleResponse": false,
 		"isRandomized": false,
 		"answers": [
@@ -40,8 +40,8 @@
 			"opened": []
 		},
 		"bloomsObjectiveLevel": "2",
-		"learningObjectives": "SWBAT identify correct bot behavior when a required slot is empty",
-		"guidance": "The correct answer is: Ask for your account number, such as \"What is your account number?\"\n\nWhen the slot is empty, the `collect:` step prompts the user via `utter_ask_account` to gather the required information before proceeding with the balance check flow. The bot cannot provide a balance without an account number, and it won't trigger other unrelated flows or errors - it will systematically collect the missing required slot value.",
+		"learningObjectives": "SWBAT identify correct agent behavior when a required slot is empty",
+		"guidance": "The correct answer is: Ask for your account number, such as \"What is your account number?\"\n\nWhen the slot is empty, the `collect:` step prompts the user via `utter_ask_account` to gather the required information before proceeding with the balance check flow. The agent cannot provide a balance without an account number, and it won't trigger other unrelated flows or errors - it will systematically collect the missing required slot value.",
 		"showGuidanceAfterResponseOption": {
 			"type": "Attempts",
 			"passedFrom": 1

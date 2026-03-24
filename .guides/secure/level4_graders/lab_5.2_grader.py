@@ -3,7 +3,7 @@
 Lab 5.2: Completion Check (Transfer Flow) — Grader Script
 Output format matches Chapter 1.2 Lab 6.2 template.
 
-Verifies Level 4 bot is complete: domain (slots + ask responses + action), action file,
+Verifies Level 4 agent is complete: domain (slots + ask responses + action), action file,
 transfer_money.yml flow, and a trained model. Runs from workspace root.
 """
 

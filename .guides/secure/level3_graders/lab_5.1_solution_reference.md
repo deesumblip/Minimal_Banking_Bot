@@ -24,7 +24,7 @@ flows:
     name: check a balance (demo)
     description: |
       Demonstrates a flow with slot collection.
-      The bot will ask for an account number if not provided,
+      The agent will ask for an account number if not provided,
       then call the action to check the balance.
     steps:
       - collect: account

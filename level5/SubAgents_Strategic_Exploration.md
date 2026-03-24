@@ -1,6 +1,6 @@
 # Sub-Agents: Strategic Exploration for Level 5
 
-**Purpose:** Assess whether Rasa’s official **sub-agents** (ReAct and External/A2A) could be integrated into the Level 5 bot, and how, without making any implementation changes yet.
+**Purpose:** Assess whether Rasa’s official **sub-agents** (ReAct and External/A2A) could be integrated into the Level 5 agent, and how, without making any implementation changes yet.
 
 ---
 
@@ -38,7 +38,7 @@
 ### 1.4 External (A2A) Sub-Agent Details
 
 - **Configuration:** `sub_agents/<name>/config.yml` with `protocol: A2A` and an **agent card** (local file or URL). Optional auth (API key, OAuth, token).
-- **Use case:** Integrating agents built by other teams or on other tech stacks. Not for “extending our same bot with another process in the same repo” in the simple sense.
+- **Use case:** Integrating agents built by other teams or on other tech stacks. Not for “extending our same agent with another process in the same repo” in the simple sense.
 
 ---
 
@@ -83,8 +83,8 @@ So sub-agents are a **different pattern** (delegation/orchestration), not a drop
 
 ### 4.2 External (A2A) Sub-Agent
 
-- **Fit for “extend Level 5 bot”:** Low. A2A is for **external** agents (different process/team/stack). You could use Level 5 as the **orchestrator** and call an external “banking service” agent via A2A, but that’s an integration/architecture topic, not a simple extension of the current Level 5 codebase.
-- **Verdict:** Not a natural “integrate into Level 5” feature; more of a “Level 5 bot as orchestrator of external systems” scenario.
+- **Fit for “extend Level 5 agent”:** Low. A2A is for **external** agents (different process/team/stack). You could use Level 5 as the **orchestrator** and call an external “banking service” agent via A2A, but that’s an integration/architecture topic, not a simple extension of the current Level 5 codebase.
+- **Verdict:** Not a natural “integrate into Level 5” feature; more of a “Level 5 agent as orchestrator of external systems” scenario.
 
 ---
 
@@ -134,7 +134,7 @@ So sub-agents are a **different pattern** (delegation/orchestration), not a drop
 
 | Topic | Concept | What the student would need to learn |
 |-------|---------|-------------------------------------|
-| **Orchestration** | Main agent as orchestrator | The Rasa bot can *delegate* a whole task to another “agent” that runs until it’s done, then control returns. |
+| **Orchestration** | Main agent as orchestrator | The Rasa agent can *delegate* a whole task to another “agent” that runs until it’s done, then control returns. |
 | **Autonomous steps** | `call` step | Flow step `- call: agent_name` (and optional `exit_if`) invokes a sub-agent; flow is paused until the sub-agent completes. |
 | **Sub-agent types** | ReAct vs External (A2A) | ReAct = built-in agent with tools (MCP + optional Python). A2A = external service; different stack/team. |
 | **Sub-agent layout** | `sub_agents/` | Each sub-agent has its own directory and `config.yml` (name, protocol, description, configuration). |
@@ -168,7 +168,7 @@ So sub-agents are a **different pattern** (delegation/orchestration), not a drop
 **Yes, with clear boundaries.** Reasons:
 
 1. **Natural progression**  
-   Level 5 = “one agent, dynamic tool use.” Level 6 = “same bot, but some tasks are delegated to another agent.” The step from “LLM chooses tools” to “LLM (orchestrator) chooses when to hand off to an agent that uses tools” is a single, understandable extension.
+   Level 5 = “one agent, dynamic tool use.” Level 6 = “same agent, but some tasks are delegated to another agent.” The step from “LLM chooses tools” to “LLM (orchestrator) chooses when to hand off to an agent that uses tools” is a single, understandable extension.
 
 2. **Conceptual clarity**  
    Keeping sub-agents in a separate level avoids overloading Level 5. Level 5 stays about tools and one-agent behaviour; Level 6 is explicitly about orchestration and the `call` step.
@@ -197,7 +197,7 @@ So sub-agents are a **different pattern** (delegation/orchestration), not a drop
 
 | Question | Answer |
 |----------|--------|
-| Can sub-agents be **easily** integrated into the current Level 5 bot? | **No.** They need a different structure (sub_agents/, MCP or MCP+custom tools, `call` step) and teach a different concept (orchestration). |
+| Can sub-agents be **easily** integrated into the current Level 5 agent? | **No.** They need a different structure (sub_agents/, MCP or MCP+custom tools, `call` step) and teach a different concept (orchestration). |
 | Is the **concept** compatible with Level 5? | **Partially.** ReAct sub-agents are a natural “next step” after “one agent + tools,” but they are a step up in complexity. |
 | Best way to use sub-agents with this course? | Introduce them in a **separate level** (e.g. Level 6) focused on orchestration and ReAct (and optionally A2A), with MCP and 3.14+ clearly stated as requirements. |
 | Should we change Level 5 now? | **No.** Keep Level 5 as single-agent tool calling; plan sub-agents as a later, dedicated level or optional advanced module. |

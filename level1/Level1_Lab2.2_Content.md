@@ -2,7 +2,7 @@
 
 **Objective**: In Unit 2 you saw how responses are structured (e.g. `utter_greet`, `utter_contact`). In this lab you add your own response: `utter_goodbye`.
 
-**Why add goodbye**: A real conversation has a clear end. When a user says "bye" or "that's all," the bot should have a defined way to respond. Adding `utter_goodbye` here gives the bot something to say at the end of a conversation. In the next unit you'll connect it to a flow so the bot knows when to use it.
+**Why add goodbye**: A real conversation has a clear end. When a user says "bye" or "that's all," the agent should have a defined way to respond. Adding `utter_goodbye` here gives the agent something to say at the end of a conversation. In the next unit you'll connect it to a flow so the agent knows when to use it.
 
 #### Before You Begin
 

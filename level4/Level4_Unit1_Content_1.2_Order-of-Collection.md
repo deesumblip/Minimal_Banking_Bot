@@ -1,10 +1,10 @@
-The order in which you list `collect:` steps in the flow is the order in which the bot will ask for values.
+The order in which you list `collect:` steps in the flow is the order in which the agent will ask for values.
 
 ## Flow Steps Define the Order
 
 In `transfer_money.yml` you will add steps like:
 
-1. `collect: amount` — Bot asks for the amount first (using `utter_ask_amount`).
+1. `collect: amount` — Agent asks for the amount first (using `utter_ask_amount`).
 2. `collect: recipient` — Then asks who to send it to (`utter_ask_recipient`).
 3. `collect: account_from` — Then asks which account to use (`utter_ask_account_from`).
 4. `action: action_process_transfer` — Finally runs the action, which reads all three slots.

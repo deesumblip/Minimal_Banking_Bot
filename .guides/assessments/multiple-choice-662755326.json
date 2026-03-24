@@ -31,7 +31,7 @@
 			{
 				"_id": "61924731-384e-4b4b-913e-9f4903517677",
 				"correct": true,
-				"answer": "It allows the bot to initiate the conversation"
+				"answer": "It allows the agent to initiate the conversation"
 			}
 		],
 		"metadata": {
@@ -46,7 +46,7 @@
 		},
 		"bloomsObjectiveLevel": "3",
 		"learningObjectives": "SWBAT identify the key characteristics of the session start pattern in Rasa",
-		"guidance": "The correct answers are:\n\n- It triggers automatically when a new conversation begins: This is the core purpose of the session start pattern.\n- It must include the intent `session_start` in its NLU trigger: This specific intent is required for the pattern to work.\n- It allows the bot to initiate the conversation: This is the key benefit - the bot can greet users without them needing to speak first.\n\nThe incorrect options are:\n- It requires the user to send a greeting message first: The pattern_session_start flow is specifically designed to work without any user input.\n- The flow name can be customized to anything you prefer: The name must be exactly `pattern_session_start` for Rasa to recognize it as the session start pattern.",
+		"guidance": "The correct answers are:\n\n- It triggers automatically when a new conversation begins: This is the core purpose of the session start pattern.\n- It must include the intent `session_start` in its NLU trigger: This specific intent is required for the pattern to work.\n- It allows the agent to initiate the conversation: This is the key benefit - the agent can greet users without them needing to speak first.\n\nThe incorrect options are:\n- It requires the user to send a greeting message first: The pattern_session_start flow is specifically designed to work without any user input.\n- The flow name can be customized to anything you prefer: The name must be exactly `pattern_session_start` for Rasa to recognize it as the session start pattern.",
 		"showGuidanceAfterResponseOption": {
 			"type": "Attempts",
 			"passedFrom": 1

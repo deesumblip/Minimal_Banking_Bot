@@ -2,31 +2,31 @@
 	"type": "multiple-choice",
 	"taskId": "multiple-choice-2551832351",
 	"source": {
-		"name": "Chapter 1.1: 1.4 Test Your Knowledge - Simplest Bot Review",
+		"name": "Chapter 1.1: 1.4 Test Your Knowledge - Simplest Agent Review",
 		"showName": false,
-		"instructions": "**Which of the following statements about simple bots is correct?**",
+		"instructions": "**Which of the following statements about simple agents is correct?**",
 		"multipleResponse": false,
 		"isRandomized": false,
 		"answers": [
 			{
 				"_id": "7f7473ce-a246-a0b4-be04-612df240284b",
 				"correct": true,
-				"answer": "Simple bots can only respond to specific pre-programmed inputs with fixed responses"
+				"answer": "Simple agents can only respond to specific pre-programmed inputs with fixed responses"
 			},
 			{
 				"_id": "9dd55676-d714-434e-ad77-46ddb22cb6dc",
 				"correct": false,
-				"answer": "Simple bots can understand the context of a conversation"
+				"answer": "Simple agents can understand the context of a conversation"
 			},
 			{
 				"_id": "6af06eee-82ee-9ce1-5ecb-49e6454f3358",
 				"correct": false,
-				"answer": "Simple bots use complex neural networks to generate responses"
+				"answer": "Simple agents use complex neural networks to generate responses"
 			},
 			{
 				"_id": "dfe8677c-3b49-fc4a-152e-4e70f6122a16",
 				"correct": false,
-				"answer": "Simple bots can learn from user interactions to improve their responses over time"
+				"answer": "Simple agents can learn from user interactions to improve their responses over time"
 			}
 		],
 		"metadata": {
@@ -40,8 +40,8 @@
 			"opened": []
 		},
 		"bloomsObjectiveLevel": "2",
-		"learningObjectives": "SWBAT identify key concepts about simple bot implementation",
-		"guidance": "The correct answer is that simple bots can only respond to specific pre-programmed inputs with fixed responses. Simple bots operate on basic pattern matching between user input and predefined rules or responses. They cannot understand context, do not use complex neural networks, and cannot learn from interactions to improve over time. These limitations are what make them 'simple' compared to more advanced conversational AI systems.",
+		"learningObjectives": "SWBAT identify key concepts about simple agent implementation",
+		"guidance": "The correct answer is that simple agents can only respond to specific pre-programmed inputs with fixed responses. Simple agents operate on basic pattern matching between user input and predefined rules or responses. They cannot understand context, do not use complex neural networks, and cannot learn from interactions to improve over time. These limitations are what make them 'simple' compared to more advanced conversational AI systems.",
 		"showGuidanceAfterResponseOption": {
 			"type": "Attempts",
 			"passedFrom": 1

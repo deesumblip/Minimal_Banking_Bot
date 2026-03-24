@@ -2,11 +2,10 @@ Slots can have different types. For Level 3, we use the simplest type: `text`.
 
 ## Text Slots
 
-```yaml
+
 slots:
   account:
     type: text
-```
 
 **Text slots**:
 - Store any text value

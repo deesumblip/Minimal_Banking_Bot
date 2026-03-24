@@ -9,14 +9,14 @@
 		"isRandomized": true,
 		"answers": [
 			{"_id": "a0104017-0001-4000-8000-000000000001", "correct": false, "answer": "It doesn't matter; Rasa collects them in any order"},
-			{"_id": "a0104017-0002-4000-8000-000000000002", "correct": true, "answer": "The order determines the order in which the bot asks the user for each value"},
+			{"_id": "a0104017-0002-4000-8000-000000000002", "correct": true, "answer": "The order determines the order in which the agent asks the user for each value"},
 			{"_id": "a0104017-0003-4000-8000-000000000003", "correct": false, "answer": "The first collect step must always be amount"},
 			{"_id": "a0104017-0004-4000-8000-000000000004", "correct": false, "answer": "Only the last collect step is used by the action"}
 		],
 		"metadata": {"tags": [{"name": "Assessment Type", "value": "Multiple Choice"}], "files": [], "opened": []},
 		"bloomsObjectiveLevel": "2",
 		"learningObjectives": "SWBAT explain why collect step order matters",
-		"guidance": "The order of `collect:` steps is the order in which the bot prompts the user for each value.",
+		"guidance": "The order of `collect:` steps is the order in which the agent prompts the user for each value.",
 		"showGuidanceAfterResponseOption": {"type": "Attempts", "passedFrom": 1},
 		"maxAttemptsCount": 1,
 		"showExpectedAnswerOption": {"type": "Always"},

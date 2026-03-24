@@ -1,4 +1,4 @@
-Your goal is to train your Level 3 bot (with slots) and verify it works.
+Your goal is to train your Level 3 agent (with slots) and verify it works.
 
 ## Part 1: In Codio
 
@@ -19,7 +19,7 @@ Your goal is to train your Level 3 bot (with slots) and verify it works.
 Follow the same logic as Part 1, but use your own terminal and OS-specific commands.
 
 1. **Open a terminal** (PowerShell, Command Prompt, or Terminal.app / your Linux terminal).
-2. **Go to the main project folder** (the one that contains `level1`, `level2`, `level3`, and `.guides`). For example `cd C:\Users\You\Minimal_Banking_Bot` or `cd ~/Minimal_Banking_Bot`.
+2. **Go to the main project folder** (the one that contains `level1`, `level2`, `level3`, and `.guides`). For example `cd C:\Users\You\Minimal_Banking_Agent` or `cd ~/Minimal_Banking_Agent`.
 3. **Activate the virtual environment.** The `.venv` folder is in the main project folder. On Windows (PowerShell) use `.venv\Scripts\Activate.ps1`. On Windows (Command Prompt) use `.venv\Scripts\activate.bat`. On macOS or Linux use `source .venv/bin/activate`. Your prompt should show `(.venv)`.
 4. **Navigate to level3.** Go to the `level3` folder with `cd level3` (the one that contains `config.yml`, `domain/`, and `data/`).
 5. **Ensure `.env` exists** in the `level3` folder with `RASA_LICENSE` and `OPENAI_API_KEY`. See **Lab 0.1** in **Chapter 1.1** or your instructor if you need these.

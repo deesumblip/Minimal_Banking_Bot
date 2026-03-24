@@ -2,13 +2,13 @@
 
 **Objective**: Understand configuration files by exploring them.
 
-**Why this lab**: When you train or run the bot, Rasa reads config to know which LLM to use and how to behave. A quick look at the config answers "what language?" and "what model?" so you're not debugging in the dark later. You're not changing anything; you're just building a mental map of where the levers are.
+**Why this lab**: When you train or run the agent, Rasa reads config to know which LLM to use and how to behave. A quick look at the config answers "what language?" and "what model?" so you're not debugging in the dark later. You're not changing anything; you're just building a mental map of where the levers are.
 
 #### Task
 
 Answer these questions by examining the configuration files:
 
-1. What language is the bot configured for?
+1. What language is the agent configured for?
 2. What LLM model is being used?
 3. Where would Rasa look for custom actions?
 4. What does `temperature: 0.3` mean for the LLM?

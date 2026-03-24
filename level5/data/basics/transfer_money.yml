@@ -3,7 +3,7 @@ flows:
     name: transfer money
     description: |
       Demonstrates collecting multiple slots before executing an action.
-      The bot will collect: amount, recipient, and source account.
+      The agent will collect: amount, recipient, and source account.
       Then it will process the transfer.
     steps:
       - collect: amount

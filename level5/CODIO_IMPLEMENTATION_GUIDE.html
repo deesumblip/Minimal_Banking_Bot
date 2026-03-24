@@ -184,7 +184,7 @@
 </ol>
 <hr />
 <h2>Module 0: Recap - What You Built in Level 4</h2>
-<h3>0.1 Your Level 4 Banking Bot</h3>
+<h3>0.1 Your Level 4 Banking Agent</h3>
 <p>Before we add tool calling, let's recap what you've already built in Level 4. <strong>All of this remains unchanged</strong> - Level 5 builds on top of it!</p>
 <h4>What You Have from Level 4</h4>
 <p><strong>Domain File (<code>domain/basics.yml</code>)</strong>:<br />
@@ -202,16 +202,16 @@
 <p><strong>System Patterns</strong>: Unchanged from Level 1</p>
 <p><strong>Configuration Files</strong>: Unchanged from Level 4</p>
 <h4>What Level 4 Couldn't Do</h4>
-<p>Your Level 4 bot could collect multiple pieces of information, but it couldn't:<br />
+<p>Your Level 4 agent could collect multiple pieces of information, but it couldn't:<br />
 - ❌ Let the LLM dynamically choose which operations to perform<br />
 - ❌ Adapt to complex, branching scenarios<br />
 - ❌ Handle flexible operations that vary based on context<br />
 - ❌ Allow the LLM to decide which functions to call</p>
-<p><strong>Example</strong>: If a user asked complex questions like "Check my balance and then transfer $50 if I have enough", your Level 4 bot would need explicit flows for every scenario. It couldn't let the LLM decide to call <code>check_balance</code> first, then conditionally call <code>process_transfer</code>.</p>
+<p><strong>Example</strong>: If a user asked complex questions like "Check my balance and then transfer $50 if I have enough", your Level 4 agent would need explicit flows for every scenario. It couldn't let the LLM decide to call <code>check_balance</code> first, then conditionally call <code>process_transfer</code>.</p>
 <hr />
 <h3>0.2 What Level 5 Adds</h3>
 <p>Level 5 introduces <strong>Tool Calling</strong> - allowing the LLM to dynamically select and call functions based on conversation context.</p>
-<p><strong>Your existing Level 4 bot continues to work</strong> - Level 5 adds dynamic tool calling on top of it!</p>
+<p><strong>Your existing Level 4 agent continues to work</strong> - Level 5 adds dynamic tool calling on top of it!</p>
 <h4>What's New in Level 5</h4>
 <p><strong>New Files</strong>:<br />
 - <code>tools/</code> folder - Contains tool functions<br />
@@ -342,7 +342,7 @@
 <p><strong>Example</strong>: The <code>transfer_money_tools</code> flow uses tools because the LLM can dynamically decide which operations to perform.</p>
 <hr />
 <h3>2.3 Can You Use Both?</h3>
-<p><strong>Yes!</strong> You can use both actions and tools in the same bot:</p>
+<p><strong>Yes!</strong> You can use both actions and tools in the same agent:</p>
 <ul>
 <li><strong>Actions</strong> for structured, predictable workflows</li>
 <li><strong>Tools</strong> for flexible, dynamic operations</li>
@@ -625,7 +625,7 @@
 <span class="w">    </span><span class="err">↓</span>
 <span class="n">LLM</span><span class="w"> </span><span class="n">uses</span><span class="w"> </span><span class="k">tool</span><span class="w"> </span><span class="n">results</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">response</span>
 <span class="w">    </span><span class="err">↓</span>
-<span class="n">Bot</span><span class="w"> </span><span class="n">responds</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">user</span>
+<span class="n">Agent</span><span class="w"> </span><span class="n">responds</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">user</span>
 </code></pre></div>
 
 <p><strong>Key Point</strong>: The LLM makes the decision - you just provide the tools and let the LLM choose when to use them.</p>
@@ -638,7 +638,7 @@
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">transfer money with tools</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
 <span class="w">      </span><span class="no">Demonstrates tool calling in a flow.</span>
-<span class="w">      </span><span class="no">The bot collects the necessary information, then the LLM</span>
+<span class="w">      </span><span class="no">The agent collects the necessary information, then the LLM</span>
 <span class="w">      </span><span class="no">can dynamically decide to call tools (like check_balance</span>
 <span class="w">      </span><span class="no">or process_transfer) based on the conversation context.</span>
 <span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
@@ -721,7 +721,7 @@
 <h4>Basic Testing Workflow</h4>
 <ol>
 <li>
-<p><strong>Train your bot</strong>: <code>python -m rasa train</code></p>
+<p><strong>Train your agent</strong>: <code>python -m rasa train</code></p>
 </li>
 <li>
 <p><strong>Start Inspector</strong>: <br />
@@ -731,15 +731,15 @@
 <li>
 <p><strong>Test tool calling</strong>:<br />
    - Type "Transfer $100 to John from account 1234"<br />
-   - Bot should collect slots<br />
+   - Agent should collect slots<br />
    - LLM may call tools dynamically based on context<br />
-   - Bot should process transfer</p>
+   - Agent should process transfer</p>
 </li>
 <li>
 <p><strong>Test with complex queries</strong>:<br />
    - Type "Check my balance for account 1234 and get account info"<br />
    - LLM should decide to call <code>check_balance</code> and <code>get_account_info</code> tools<br />
-   - Bot should provide results from both tools</p>
+   - Agent should provide results from both tools</p>
 </li>
 <li>
 <p><strong>Verify previous levels still work</strong>:<br />
@@ -779,14 +779,14 @@
 3. Consider if actions might be more appropriate</p>
 <hr />
 <h2>Module 7: Putting It All Together</h2>
-<h3>7.1 Complete Bot Walkthrough</h3>
+<h3>7.1 Complete Agent Walkthrough</h3>
 <p>Let's trace through a complete conversation showing how all levels work together, including tool calling.</p>
 <h4>Conversation Example</h4>
 <div class="codehilite"><pre><span></span><code><span class="k">[User opens chat - new session starts]</span>
 
 <span class="na">1. pattern_session_start triggers (Level 1)</span>
 <span class="w">   </span><span class="na">↓</span>
-<span class="na">Bot</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Hi! I&#39;m a banking assistant. How can I help you today?&quot;</span>
+<span class="na">Agent</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Hi! I&#39;m a banking assistant. How can I help you today?&quot;</span>
 
 <span class="k">[User types: &quot;Check my balance for account 1234 and get the account info&quot;]</span>
 
@@ -802,7 +802,7 @@
 <span class="w">   </span><span class="na">↓</span>
 <span class="w">   </span><span class="na">LLM uses tool results in response</span>
 <span class="w">   </span><span class="na">↓</span>
-<span class="na">Bot</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Balance for account 1234 is $1234.56. Account type: checking, Owner: John Doe, Status: active.&quot;</span>
+<span class="na">Agent</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Balance for account 1234 is $1234.56. Account type: checking, Owner: John Doe, Status: active.&quot;</span>
 
 <span class="k">[User types: &quot;Transfer $100 to John from account 1234&quot;]</span>
 
@@ -816,7 +816,7 @@
 <span class="w">   </span><span class="na">↓</span>
 <span class="w">   </span><span class="na">During conversation, LLM may call process_transfer tool dynamically</span>
 <span class="w">   </span><span class="na">↓</span>
-<span class="na">Bot</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;(Demo with Tools) Transfer of $100 from account 1234 to John has been processed successfully. Tools are available for dynamic operations.&quot;</span>
+<span class="na">Agent</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;(Demo with Tools) Transfer of $100 from account 1234 to John has been processed successfully. Tools are available for dynamic operations.&quot;</span>
 
 <span class="k">[User types: &quot;What are your hours?&quot;]</span>
 
@@ -826,19 +826,19 @@
 <span class="w">   </span><span class="na">↓</span>
 <span class="w">   </span><span class="na">Action</span><span class="o">:</span><span class="w"> </span><span class="s">action_bank_hours</span>
 <span class="w">   </span><span class="na">↓</span>
-<span class="na">Bot</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Our bank hours are Monday-Friday 9am-5pm...&quot;</span>
+<span class="na">Agent</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Our bank hours are Monday-Friday 9am-5pm...&quot;</span>
 </code></pre></div>
 
-<p><strong>Notice</strong>: The bot seamlessly uses:<br />
+<p><strong>Notice</strong>: The agent seamlessly uses:<br />
 - Level 1 responses<br />
 - Level 2 actions<br />
 - Level 3 single slot collection<br />
 - Level 4 multiple slot collection<br />
 - Level 5 tool calling (dynamic function selection)</p>
 <hr />
-<h3>7.2 Your Level 5 Banking Bot: Summary</h3>
-<p>Congratulations! You've completed all five levels and built a comprehensive banking bot!</p>
-<h4>Your Complete Bot Structure</h4>
+<h3>7.2 Your Level 5 Banking Agent: Summary</h3>
+<p>Congratulations! You've completed all five levels and built a comprehensive banking agent!</p>
+<h4>Your Complete Agent Structure</h4>
 <p><strong>Domain (<code>domain/basics.yml</code>)</strong>:<br />
 - ✅ All responses from Levels 1-4<br />
 - ✅ All slots from Levels 3-4<br />
@@ -853,8 +853,8 @@
 - ✅ <code>banking_tools.py</code> with tool functions (Level 5)</p>
 <p><strong>Configuration</strong>:<br />
 - ✅ <code>endpoints.yml</code> with tools registration (Level 5)</p>
-<h4>What Your Bot Can Do Now</h4>
-<p>Your Level 5 banking bot can:<br />
+<h4>What Your Agent Can Do Now</h4>
+<p>Your Level 5 banking agent can:<br />
 - ✅ Everything from Levels 1-4<br />
 - ✅ Dynamically call functions based on conversation context<br />
 - ✅ Handle complex, branching scenarios<br />
@@ -868,7 +868,7 @@
 <li><strong>Level 4</strong>: Multiple slot collection</li>
 <li><strong>Level 5</strong>: Dynamic tool calling</li>
 </ul>
-<p>You now have a fully-featured conversational banking bot!</p>
+<p>You now have a fully-featured conversational banking agent!</p>
 <hr />
 <h3>7.3 Best Practices</h3>
 <h4>Tool Design</h4>
@@ -913,7 +913,7 @@
 <h2>Module 8: Assessment and Next Steps</h2>
 <h3>8.1 Knowledge Check</h3>
 <h4>Question 1: What is a Tool?</h4>
-<p>a) A predefined bot message<br />
+<p>a) A predefined agent message<br />
 b) A Python function the LLM can call dynamically<br />
 c) A memory variable<br />
 d) A conversation script</p>
@@ -957,14 +957,14 @@ d) There's no difference</p>
 <li>✅ Can create tool functions</li>
 <li>✅ Can register tools in endpoints.yml</li>
 <li>✅ Can understand when to use tools vs. actions</li>
-<li>✅ Can build bots with dynamic tool calling</li>
+<li>✅ Can build agents with dynamic tool calling</li>
 <li>✅ Can create comprehensive, flexible conversational interfaces</li>
 </ul>
 <hr />
 <h3>8.3 Course Completion</h3>
 <p>Congratulations! You've completed all five levels of the Rasa Pro + CALM tutorial!</p>
 <h4>What You've Built</h4>
-<p>You now have a complete banking bot that can:<br />
+<p>You now have a complete banking agent that can:<br />
 - ✅ Provide static information (Level 1)<br />
 - ✅ Execute custom Python code (Level 2)<br />
 - ✅ Remember information (Level 3)<br />
@@ -972,7 +972,7 @@ d) There's no difference</p>
 - ✅ Dynamically call functions based on context (Level 5)</p>
 <h4>Your Complete Learning Journey</h4>
 <ul>
-<li><strong>Level 1</strong>: Responses - Predefined bot messages</li>
+<li><strong>Level 1</strong>: Responses - Predefined agent messages</li>
 <li><strong>Level 2</strong>: Actions - Custom Python code</li>
 <li><strong>Level 3</strong>: Slots - Conversation memory</li>
 <li><strong>Level 4</strong>: Multiple Slots - Complex data collection</li>
@@ -984,13 +984,13 @@ d) There's no difference</p>
 <ul>
 <li><strong>Advanced Rasa Features</strong>: Explore more advanced Rasa Pro capabilities</li>
 <li><strong>Custom Integrations</strong>: Integrate with databases, APIs, external services</li>
-<li><strong>Production Deployment</strong>: Learn how to deploy your bot to production</li>
+<li><strong>Production Deployment</strong>: Learn how to deploy your agent to production</li>
 <li><strong>Testing Strategies</strong>: Learn comprehensive testing approaches</li>
-<li><strong>Performance Optimization</strong>: Optimize your bot for scale</li>
+<li><strong>Performance Optimization</strong>: Optimize your agent for scale</li>
 </ul>
 <h4>Practice Projects</h4>
 <ul>
-<li>Build bots for different domains (customer service, e-commerce, etc.)</li>
+<li>Build agents for different domains (customer service, e-commerce, etc.)</li>
 <li>Integrate with real APIs and databases</li>
 <li>Add more sophisticated validation and error handling</li>
 <li>Experiment with different tool and action patterns</li>
@@ -999,22 +999,22 @@ d) There's no difference</p>
 <ul>
 <li>Rasa Documentation: <a href="https://rasa.com/docs">https://rasa.com/docs</a></li>
 <li>Rasa Community: Join forums and discussions</li>
-<li>Rasa Examples: Explore example bots and patterns</li>
+<li>Rasa Examples: Explore example agents and patterns</li>
 <li>Rasa Training: Advanced training courses</li>
 </ul>
 <hr />
 <h3>8.5 Final Checklist</h3>
 <p>You've mastered Rasa Pro + CALM fundamentals if you can:</p>
 <ul>
-<li>[ ] Build bots with responses, actions, slots, and tools</li>
+<li>[ ] Build agents with responses, actions, slots, and tools</li>
 <li>[ ] Understand when to use each approach</li>
 <li>[ ] Create flows that collect information</li>
 <li>[ ] Write actions that use slots</li>
 <li>[ ] Create tools for dynamic operations</li>
-<li>[ ] Debug and test your bots effectively</li>
+<li>[ ] Debug and test your agents effectively</li>
 <li>[ ] Understand that each level builds on previous levels</li>
 </ul>
-<p><strong>You're now ready to build production-ready Rasa bots! 🎉</strong></p>
+<p><strong>You're now ready to build production-ready Rasa agents! 🎉</strong></p>
 <hr />
 <h2>Troubleshooting Guide</h2>
 <h3>Common Issues and Solutions</h3>
@@ -1044,14 +1044,14 @@ d) There's no difference</p>
 <p>Congratulations! You've completed all five levels and have a complete understanding of Rasa Pro + CALM!</p>
 <h3>What You Can Do Now</h3>
 <ul>
-<li>Build comprehensive conversational bots</li>
+<li>Build comprehensive conversational agents</li>
 <li>Use responses, actions, slots, and tools effectively</li>
 <li>Create flexible, context-aware conversations</li>
 <li>Handle complex multi-step interactions</li>
-<li>Deploy production-ready bots</li>
+<li>Deploy production-ready agents</li>
 </ul>
-<h3>Your Complete Banking Bot</h3>
-<p>You've built a banking bot that demonstrates:<br />
+<h3>Your Complete Banking Agent</h3>
+<p>You've built a banking agent that demonstrates:<br />
 - ✅ Static information (Level 1)<br />
 - ✅ Dynamic code execution (Level 2)<br />
 - ✅ Conversation memory (Level 3)<br />
@@ -1059,12 +1059,12 @@ d) There's no difference</p>
 - ✅ Dynamic tool calling (Level 5)</p>
 <h3>Keep Learning</h3>
 <ul>
-<li>Practice by building more bots</li>
+<li>Practice by building more agents</li>
 <li>Experiment with different patterns</li>
 <li>Integrate with real systems</li>
 <li>Read advanced Rasa documentation</li>
 <li>Join the Rasa community</li>
-<li>Share your bots and learn from others</li>
+<li>Share your agents and learn from others</li>
 </ul>
 <p><strong>You're now a Rasa Pro + CALM expert! 🚀</strong></p>
 <p><strong>Happy building!</strong></p>
@@ -1129,7 +1129,7 @@ d) There's no difference</p>
 <p><strong>Recommended auto-grading checks</strong>:<br />
 - Validate YAML files parse successfully and required keys exist (domain + flows + patterns)<br />
 - Validate required new artifacts for Level 5 exist (e.g., new flows/actions/tools)<br />
-- Smoke-test bot starts (<code>rasa inspect</code>) and responds to a small scripted conversation</p>
+- Smoke-test agent starts (<code>rasa inspect</code>) and responds to a small scripted conversation</p>
 <p><strong>Implementation notes</strong>:<br />
 - Prefer deterministic checks (file existence + YAML structure + expected strings) over LLM-output matching.<br />
 - Provide actionable error output (“Expected <code>actions:</code> section in <code>domain/basics.yml</code>”, etc.).</p>

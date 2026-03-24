@@ -1,8 +1,8 @@
 When a flow has a `collect:` step:
 
-- **If slot is empty**: Bot asks for it (using `utter_ask_*` response)
+- **If slot is empty**: Agent asks for it (using `utter_ask_*` response)
 - **If slot has value**: Flow continues immediately (no asking)
-- **User provides value**: Bot stores it in the slot
+- **User provides value**: Agent stores it in the slot
 
 ## Example Flow
 
@@ -15,10 +15,10 @@ steps:
 
 **What happens**:
 1. Flow starts
-2. Bot checks: Does `account` slot have a value?
-   - **No** → Bot asks: "What is your account number?" (using `utter_ask_account`)
+2. Agent checks: Does `account` slot have a value?
+   - **No** → Agent asks: "What is your account number?" (using `utter_ask_account`)
    - **Yes** → Skip to step 2
 3. User provides account number
-4. Bot stores it in `account` slot
+4. Agent stores it in `account` slot
 5. Flow continues to step 2
 6. Action reads `account` slot and uses it

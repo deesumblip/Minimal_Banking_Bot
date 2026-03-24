@@ -48,7 +48,7 @@
 			]
 		},
 		"bloomsObjectiveLevel": "2",
-		"learningObjectives": "SWBAT identify the correct YAML syntax for chatbot responses",
+		"learningObjectives": "SWBAT identify the correct YAML syntax for chat agent responses",
 		"guidance": "The correct syntax for multiple response variations in YAML requires:\n\n1. The response name (utter_greet) properly indented under 'responses:'\n2. Each variation preceded by a dash (-) and the 'text:' property\n3. Metadata aligned with 'text:' (not as a separate variation)\n\nThe first option correctly shows multiple response variations where each text option is preceded by a dash, and the metadata is aligned with the second text variation.",
 		"showGuidanceAfterResponseOption": {
 			"type": "Attempts",

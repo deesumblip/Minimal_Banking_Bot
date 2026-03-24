@@ -1,7 +1,7 @@
 **Objective.** In this lab you will:
 
 - Add the `account` slot and `utter_ask_account` response to your Level 3 domain
-- Register the new action `action_check_balance_simple` so the bot can collect and remember an account number
+- Register the new action `action_check_balance_simple` so the agent can collect and remember an account number
 
 You will add the action **name** to the domain here; you will **create the action file** in Lab 4.1.
 
@@ -13,7 +13,7 @@ You will add the action **name** to the domain here; you will **create the actio
 
 **Step 2.** Add the `slots:` section before `responses:`.
 
-```yaml
+
 version: "3.1"
 
 slots:
@@ -22,7 +22,6 @@ slots:
 
 responses:
   # ... existing responses
-```
 
 - Use 2-space indentation
 - `account:` goes under `slots:`; `type: text` goes under `account:`
@@ -32,12 +31,11 @@ responses:
 - Add `utter_ask_account` under `responses:` with the YAML below
 - Naming convention: `utter_ask_<slot_name>`. For the slot `account`, the response is `utter_ask_account`
 
-```yaml
+
   utter_ask_account:
     - text: "What is your account number?"
       metadata:
         rephrase: True
-```
 
 **Step 4.** Register the new action.
 
@@ -45,12 +43,11 @@ responses:
 
 Your `actions:` block should look like this when you are done:
 
-```yaml
+
 actions:
   - action_bank_hours
   - action_holiday_hours
   - action_check_balance_simple
-```
 
 **Step 5.** Verify. Your domain should have:
 

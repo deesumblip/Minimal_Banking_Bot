@@ -1,7 +1,6 @@
-## Level 2: Responses + Actions
+## Level 2: Responses + Actions (Chapter 1.2 completion)
 #
-# This folder starts as your Level 1 bot (responses only). In Level 2 you will add
-# custom actions (e.g. action_bank_hours) and register them here.
+# Same responses as Level 1, plus registered custom actions and flows that use them.
 
 version: "3.1"
 
@@ -30,3 +29,7 @@ responses:
     - text: "Goodbye! Have a great day!"
       metadata:
         rephrase: True
+
+actions:
+  - action_bank_hours
+  - action_holiday_hours

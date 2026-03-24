@@ -8,11 +8,11 @@ After training succeeds, use **Check It!** below (Codio). Then open **Lab 5.2** 
 
 ## Part 1: In Codio
 
-1. **Terminal** — It should open at `~/workspace` (project root).
-2. **Activate the virtual environment:** `source .venv/bin/activate` — the prompt should show `(.venv)`.
-3. **Go to Level 4:** `cd level4` — run `pwd` and confirm the path ends in `level4`.
+1. **Terminal**. It should open at `~/workspace` (project root).
+2. **Activate the virtual environment:** `source .venv/bin/activate`, the prompt should show `(.venv)`.
+3. **Go to Level 4:** `cd level4`, run `pwd` and confirm the path ends in `level4`.
 4. **Check Rasa:** `python -m rasa --version`. If this fails, confirm the venv is active and Rasa Pro is installed (**Lab 0.1**).
-5. **Train:** `python -m rasa train` — wait until you see **Successfully saved model** (often about 1–3 minutes).
+5. **Train:** `python -m rasa train`, wait until you see **Successfully saved model** (often about 1–3 minutes).
 6. **Verify:** In the file tree, open `level4/models/` and confirm a new `.tar.gz` file is there.
 
 ### If something goes wrong
@@ -23,7 +23,7 @@ After training succeeds, use **Check It!** below (Codio). Then open **Lab 5.2** 
 | Flow or collect-step errors | `level4/data/basics/transfer_money.yml` (**Lab 4.1**) |
 | Action-related errors | `level4/actions/action_process_transfer.py` (**Lab 3.1**) |
 | `No module named 'rasa'` | Activate `.venv` from the **project root**, then `cd level4` again |
-| License or API key errors | `.env` and **Lab 0.1**; ask your instructor if needed |
+| License or API key errors | `.env` and **Lab 0.1**; confirm keys and paths for your workspace |
 
 **Use Check It!** below when the steps above are complete.
 
@@ -36,17 +36,17 @@ After training succeeds, use **Check It!** below (Codio). Then open **Lab 5.2** 
 Same sequence on your machine; only the activate command changes by OS.
 
 1. Open a terminal (PowerShell, Command Prompt, Terminal.app, or Linux shell).
-2. **Project root:** `cd` to the folder that contains `level1`, `level2`, `level3`, `level4`, and `.guides` (for example `C:\Users\You\Minimal_Banking_Bot` or `~/Minimal_Banking_Bot`).
+2. **Project root:** `cd` to the folder that contains `level1`, `level2`, `level3`, `level4`, and `.guides` (for example `C:\Users\You\Minimal_Banking_Agent` or `~/Minimal_Banking_Agent`).
 3. **Activate the virtual environment** (`.venv` lives in the project root):
    - Windows (PowerShell): `.venv\Scripts\Activate.ps1`
    - Windows (Command Prompt): `.venv\Scripts\activate.bat`
    - macOS / Linux: `source .venv/bin/activate`  
    Confirm `(.venv)` appears in the prompt.
 4. **Enter Level 4:** `cd level4` (this folder should contain `config.yml`, `domain/`, and `data/`).
-5. **Environment variables:** Ensure `.env` in the project (or under `level4`) includes `RASA_LICENSE` and `OPENAI_API_KEY` — see **Lab 0.1** if you need help.
+5. **Environment variables:** Ensure `.env` in the project (or under `level4`) includes `RASA_LICENSE` and `OPENAI_API_KEY`, see **Lab 0.1** if you need help.
 6. **Train:** `python -m rasa train` until you see **Successfully saved model**.
 7. **Verify:** A new `.tar.gz` appears under `level4/models/`.
 
 You are done when training completes with no errors and `models/` contains a new model.
 
-**Next:** Open **Lab 5.2** — run the **completion check** (`Check It!`), then **Rasa Inspector** using the **step-by-step turns** in the Lab 5.2 table (transfer: amount → recipient → account → demo confirmation).
+**Next:** Open **Lab 5.2**, run the **completion check** (`Check It!`), then **Rasa Inspector** using the **step-by-step turns** in the Lab 5.2 table (transfer: amount → recipient → account → demo confirmation).

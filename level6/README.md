@@ -10,7 +10,7 @@ This folder is your **Level 6 starter**. It contains everything you need to get 
 - **Tools:** `tools/banking_tools.py` (check_balance, process_transfer, get_account_info), registered in `endpoints.yml`.
 - **MCP server code:** `mcp_server/` is included so you can run the banking MCP server once you have registered it in Lab 3.1.
 
-You can **train and run** this bot from the level6 folder (activate the project-root venv, then `cd level6`, then `rasa train` / `rasa run actions` / `rasa run` or `rasa inspect`).
+You can **train and run** this agent from the level6 folder (activate the project-root venv, then `cd level6`, then `rasa train` / `rasa run actions` / `rasa run` or `rasa inspect`).
 
 ## What you add in the Level 6 labs
 
@@ -19,7 +19,7 @@ You can **train and run** this bot from the level6 folder (activate the project-
 - **Lab 4.1:** Create `data/basics/ask_banking_assistant.yml` (flow that calls the sub-agent).
 - **Labs 5.1–5.2:** Train and run the completion check.
 
-After you complete the labs, the bot will support **orchestration**: when the user asks to talk to the banking assistant, the main agent runs the `ask_banking_assistant` flow, which calls the ReAct sub-agent; the sub-agent uses MCP tools until it signals completion, then control returns to the main flow.
+After you complete the labs, the agent will support **orchestration**: when the user asks to talk to the banking assistant, the main agent runs the `ask_banking_assistant` flow, which calls the ReAct sub-agent; the sub-agent uses MCP tools until it signals completion, then control returns to the main flow.
 
 ## How to run (after the labs)
 

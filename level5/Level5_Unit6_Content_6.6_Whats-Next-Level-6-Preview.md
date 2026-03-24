@@ -1,6 +1,6 @@
-**Important. Building on Your Level 5 Bot**
+**Important. Building on Your Level 5 Agent**
 
-When you move to Level 6, you will continue with the same banking bot. Level 6 doesn't start from scratch. It adds **sub-agents** (and related patterns) on top of your existing responses, flows, actions, slots, and tools.
+When you move to Level 6, you will continue with the same banking agent. Level 6 doesn't start from scratch. It adds **sub-agents** (and related patterns) on top of your existing responses, flows, actions, slots, and tools.
 
 Your Level 5 content stays: all responses, flows, actions, slots, the tools module, and the transfer_money_tools flow. Level 6 adds the ability to use multiple agents (e.g. a main agent that can hand off to a balance agent or a transfer agent) for more structured, multi-step conversations.
 
@@ -24,4 +24,4 @@ In Level 6 you'll see how to define sub-agents and wire them into your project s
 
 Move to Level 6 when you want multiple specialized agents, clearer separation of concerns (e.g. balance vs transfer), or more complex conversation patterns that benefit from sub-agents.
 
-Your Level 5 banking bot is the foundation. Level 6 adds the sub-agent layer on top.
+Your Level 5 banking agent is the foundation. Level 6 adds the sub-agent layer on top.

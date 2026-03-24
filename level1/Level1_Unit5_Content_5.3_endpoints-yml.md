@@ -4,7 +4,7 @@ The `endpoints.yml` file defines **where Rasa can find custom actions**.
 
 **Why it exists**: In Level 2 you'll add Python actions. Rasa needs to know where to find them; this file points to the `actions/` module. In Level 1 you don't use actions, but the file is here so the project is ready when you move on.
 
-**File Location**: `endpoints.yml` (root of your bot folder)
+**File Location**: `endpoints.yml` (root of your agent folder)
 
 #### Key sections
 

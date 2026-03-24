@@ -1,10 +1,10 @@
 ### 5.2 credentials.yml
 
-The `credentials.yml` file defines **how the bot connects to chat interfaces**.
+The `credentials.yml` file defines **how the agent connects to chat interfaces**.
 
 **Why it exists**: Inspector and any other channel (Slack, Teams, etc.) need to know how to talk to Rasa. This file holds that configuration. For Level 1 you usually leave it as-is; when you add channels later, you'll come back here.
 
-**File Location**: `credentials.yml` (root of your bot folder)
+**File Location**: `credentials.yml` (root of your agent folder)
 
 #### Key sections
 

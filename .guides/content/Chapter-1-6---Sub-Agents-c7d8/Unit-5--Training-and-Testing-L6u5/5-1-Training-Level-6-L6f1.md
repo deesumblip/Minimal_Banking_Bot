@@ -1,4 +1,4 @@
-After adding the sub-agent config, MCP registration, and the ask_banking_assistant flow, **train** the Level 6 bot.
+After adding the sub-agent config, MCP registration, and the ask_banking_assistant flow, **train** the Level 6 agent.
 
 From **project root**, activate the venv, then:
 

@@ -2,7 +2,7 @@
 
 The `description` field is **critical** because the LLM uses it to match user messages to flows.
 
-**Why descriptions matter**: Users don't type keywords. They say things like "when are you open?" or "what's your phone number?" The LLM has to decide which flow fits. Your description is the only place you tell it "this flow is for bank hours" or "this flow is for contact info." A clear description means the right flow runs; a vague one means the bot might pick the wrong flow or none at all.
+**Why descriptions matter**: Users don't type keywords. They say things like "when are you open?" or "what's your phone number?" The LLM has to decide which flow fits. Your description is the only place you tell it "this flow is for bank hours" or "this flow is for contact info." A clear description means the right flow runs; a vague one means the agent might pick the wrong flow or none at all.
 
 #### How It Works
 
@@ -16,7 +16,7 @@ The `description` field is **critical** because the LLM uses it to match user me
 ✅ **Good descriptions**:
 - Clear and specific: "Greet the user when they start a conversation"
 - Action-oriented: "Provide contact information for the bank"
-- Context-aware: "Explain what the bot can help with"
+- Context-aware: "Explain what the agent can help with"
 
 ❌ **Bad descriptions**:
 - Too vague: "Help user" (what kind of help?)

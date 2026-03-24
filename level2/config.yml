@@ -1,6 +1,6 @@
 recipe: default.v1
 language: en
-assistant_id: level2-bot
+assistant_id: level2-agent
 
 pipeline:
   - name: SearchReadyLLMCommandGenerator

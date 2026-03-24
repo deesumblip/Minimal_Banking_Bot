@@ -2,7 +2,7 @@
 
 #### Why YAML?
 
-YAML is designed to be easy for humans to read and write, making it perfect for configuration files. All Rasa bot files use YAML format.
+YAML is designed to be easy for humans to read and write, making it perfect for configuration files. All Rasa agent files use YAML format.
 
 #### Basic YAML Rules
 
@@ -41,7 +41,7 @@ YAML is designed to be easy for humans to read and write, making it perfect for 
 
 **CORRECT Examples:**
 
-```yaml
+
 # Simple key-value pair
 version: "3.1"
 
@@ -51,11 +51,10 @@ responses:
     - text: "Hello!"        # ← 4 spaces before '-', 6 before 'text:'
       metadata:              # ← 6 spaces (same level as 'text:')
         rephrase: True       # ← 8 spaces (under 'metadata:')
-```
 
 **WRONG Examples:**
 
-```yaml
+
 # ❌ WRONG: Missing space after colon
 version:"3.1"
 
@@ -73,7 +72,6 @@ responses:
 responses:
   utter_greet:
     text: "Hello!"  # ← Should be: - text: "Hello!"
-```
 
 #### YAML Quick Reference
 

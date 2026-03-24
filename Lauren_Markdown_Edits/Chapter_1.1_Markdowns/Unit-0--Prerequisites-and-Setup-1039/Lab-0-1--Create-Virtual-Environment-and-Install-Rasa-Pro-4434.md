@@ -296,7 +296,7 @@ You should see version information with no errors.
 
 ## Step 6: Check project structure (all environments)
 
-In your file tree, go into `level1` and confirm the bot structure is present. You should see something like this:
+In your file tree, go into `level1` and confirm the agent structure is present. You should see something like this:
 
 ```
 level1/

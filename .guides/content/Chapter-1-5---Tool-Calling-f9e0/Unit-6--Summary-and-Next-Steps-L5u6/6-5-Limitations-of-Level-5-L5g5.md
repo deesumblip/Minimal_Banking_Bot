@@ -12,4 +12,4 @@ Level 5 is a good fit when you want the LLM to dynamically choose and call funct
 
 ## When You Need More
 
-Move to Level 6 when you want sub-agents, multiple specialized agents, or more complex multi-agent conversation patterns. Your Level 5 bot remains the base; Level 6 adds the sub-agent layer on top.
+Move to Level 6 when you want sub-agents, multiple specialized agents, or more complex multi-agent conversation patterns. Your Level 5 agent remains the base; Level 6 adds the sub-agent layer on top.

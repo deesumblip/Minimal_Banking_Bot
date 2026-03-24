@@ -2,7 +2,7 @@
 
 ## Goal
 
-Students should **start from their Level 2 bot as the baseline** and build Level 3 themselves under guidance. Level 3 = Level 2 + slots, new action, and new flow; the student does the adding.
+Students should **start from their Level 2 agent as the baseline** and build Level 3 themselves under guidance. Level 3 = Level 2 + slots, new action, and new flow; the student does the adding.
 
 **Course design (Chapter 1.3):** The **`level3/`** folder is a **ready-to-use Chapter 1.2–equivalent starter**: same Level 1/2 responses and flows, with **`action_bank_hours.py`** and **`action_holiday_hours.py` preloaded** in `actions/` from the first page of the chapter. Students **do not** recreate the holiday action in Level 3. They add `slots:`, `utter_ask_account`, register `action_check_balance_simple`, then create that `.py` file (Lab 4.1) and `check_balance.yml` (Lab 5.1).
 
@@ -15,9 +15,9 @@ Target state when a student **opens** `level3/` at the start of Chapter 1.3:
 - **level3/domain/basics.yml** — Match Level 2: same responses (including `utter_goodbye`), **`actions:`** lists **`action_bank_hours`** and **`action_holiday_hours`** only. The starter should omit `slots:`, `utter_ask_account`, and `action_check_balance_simple` until Lab 3.1; after Lab 3.1 the list includes all three action names.
 - **level3/data/basics/** — Same flow files as Level 2: `greet.yml`, `help.yml`, `contact.yml`, `goodbye.yml`, `hours.yml`, `holiday_hours.yml`. **Do not** ship `check_balance.yml`; the student creates it in Lab 5.1.
 - **level3/actions/** — **Preload** `action_bank_hours.py`, `action_holiday_hours.py` (and `__init__.py`). The student **creates** `action_check_balance_simple.py` in Lab 4.1; they register its name in the domain in Lab 3.1.
-- **level3/config.yml** — Can stay as-is (e.g. `assistant_id: level3-bot`). Student does not edit it.
+- **level3/config.yml** — Can stay as-is (e.g. `assistant_id: level3-agent`). Student does not edit it.
 
-Result: opening `level3/` is “your Level 2 bot” plus **preloaded** custom action implementations. All Level 3–specific domain wiring and new files are added in the labs.
+Result: opening `level3/` is “your Level 2 agent” plus **preloaded** custom action implementations. All Level 3–specific domain wiring and new files are added in the labs.
 
 ---
 
@@ -27,7 +27,7 @@ Result: opening `level3/` is “your Level 2 bot” plus **preloaded** custom ac
 
 **Message:**
 
-- “Level 3 uses the **level3** folder. We’ve set it up as a **copy of your Level 2 bot** (same domain, flows, and actions). Your job in this chapter is to **add** three things: (1) slots and an ask response in the domain, (2) the new action and its registration, (3) the check_balance flow.”
+- “Level 3 uses the **level3** folder. We’ve set it up as a **copy of your Level 2 agent** (same domain, flows, and actions). Your job in this chapter is to **add** three things: (1) slots and an ask response in the domain, (2) the new action and its registration, (3) the check_balance flow.”
 - Optional: “If you built Level 2 in your own repo and have different content (e.g. extra responses), copy your level2 folder to level3 so level3 matches your Level 2, then follow the labs.”
 
 This makes it explicit that Level 3 = Level 2 + guided additions.

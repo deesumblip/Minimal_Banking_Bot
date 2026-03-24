@@ -2,9 +2,9 @@
 	"type": "multiple-choice",
 	"taskId": "multiple-choice-359648370",
 	"source": {
-		"name": "Chapter 1.1: 1.4 Test Your Knowledge - Conversation Bot Definition",
+		"name": "Chapter 1.1: 1.4 Test Your Knowledge - Conversation Agent Definition",
 		"showName": false,
-		"instructions": "**Which of the following best describes a conversational bot?**",
+		"instructions": "**Which of the following best describes a conversational agent?**",
 		"multipleResponse": false,
 		"isRandomized": false,
 		"answers": [
@@ -40,8 +40,8 @@
 			"opened": []
 		},
 		"bloomsObjectiveLevel": "1",
-		"learningObjectives": "SWBAT identify the key characteristics of conversational bots",
-		"guidance": "A conversational bot (also called a chatbot) is a computer program designed to simulate conversation with human users, typically through text or voice interactions. Unlike physical robots that operate in the physical world, conversational bots exist in digital environments. They're also more sophisticated than simple command-response systems, as they can engage in natural-seeming dialogue and aren't limited to fixed responses from a database.",
+		"learningObjectives": "SWBAT identify the key characteristics of conversational agents",
+		"guidance": "A conversational agent (also called a chat agent) is a computer program designed to simulate conversation with human users, typically through text or voice interactions. Unlike physical robots that operate in the physical world, conversational agents exist in digital environments. They're also more sophisticated than simple command-response systems, as they can engage in natural-seeming dialogue and aren't limited to fixed responses from a database.",
 		"showGuidanceAfterResponseOption": {
 			"type": "Attempts",
 			"passedFrom": 1

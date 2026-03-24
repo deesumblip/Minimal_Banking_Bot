@@ -1,12 +1,12 @@
 # 🟢 Level 1: Just Responses
 
-**Goal:** Build the simplest possible bot that only uses predefined responses (no memory, no custom code).
+**Goal:** Build the simplest possible agent that only uses predefined responses (no memory, no custom code).
 
 ## What You'll Learn
 
-- How to define bot responses in the domain
+- How to define agent responses in the domain
 - How to create simple flows that just say things
-- The basic structure of a Rasa bot
+- The basic structure of a Rasa agent
 
 ## Quick Start
 
@@ -47,13 +47,13 @@
 ## What's in This Level
 
 ### Domain (`domain/basics.yml`)
-- **Only `responses:` section** - predefined bot messages
+- **Only `responses:` section** - predefined agent messages
 - No slots (memory)
 - No actions (custom code)
 
 ### Flows (`data/basics/*.yml`)
 - `greet.yml` - Says hello
-- `help.yml` - Lists what the bot can do
+- `help.yml` - Lists what the agent can do
 - `contact.yml` - Provides contact information
 
 All flows are simple: they just call `utter_*` actions (predefined responses).

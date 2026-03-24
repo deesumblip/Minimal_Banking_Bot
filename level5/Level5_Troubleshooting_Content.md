@@ -36,7 +36,7 @@
 
 ### Issue: LLM never calls my tools
 
-**Symptoms**: The transfer_money_tools flow runs but the bot does not seem to call check_balance or process_transfer.
+**Symptoms**: The transfer_money_tools flow runs but the agent does not seem to call check_balance or process_transfer.
 
 **Possible Causes**:
 1. Tools not registered (endpoints.yml) or not in __all__

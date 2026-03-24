@@ -2,7 +2,7 @@
 
 **Goal:** Give Level 3 the same structure and conventions as Level 1 and Level 2, reusing what we’ve learned to keep development time down.
 
-**Current state:** Level 3 has bot code (`level3/`), a long combined tutorial+implementation doc (`CODIO_IMPLEMENTATION_GUIDE.md`), and a short `README.md`. It does **not** yet have: per-unit/content per-lab markdown in `level3/`, assessment setup docs, grader scripts, or a Codio `.guides` chapter.
+**Current state:** Level 3 has agent code (`level3/`), a long combined tutorial+implementation doc (`CODIO_IMPLEMENTATION_GUIDE.md`), and a short `README.md`. It does **not** yet have: per-unit/content per-lab markdown in `level3/`, assessment setup docs, grader scripts, or a Codio `.guides` chapter.
 
 ---
 
@@ -70,7 +70,7 @@
 ### Phase 3: Assessments and Graders
 
 6. **Decide which labs are graded**  
-   - Suggested minimum: one “setup/train” style lab (e.g. Lab 6.1: train Level 3 bot) and optionally one “slot/flow” lab (e.g. add slot + collect flow).  
+   - Suggested minimum: one “setup/train” style lab (e.g. Lab 6.1: train Level 3 agent) and optionally one “slot/flow” lab (e.g. add slot + collect flow).  
    - List them in `Level3_Course_Outline.md` and in `Level3_Implementation_Overview.md`.
 
 7. **Grader scripts**  

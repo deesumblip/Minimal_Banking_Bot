@@ -21,7 +21,7 @@ Lab 4.1 is the next page in this unit. It uses only ideas you have already seen 
 
 **Code you will reuse in Lab 4.1.** The block below is the placeholder branch and the success branch. It matches the fill-in-the-blanks exercise and the grader.
 
-```python
+
 placeholder_values = ["account number", "user_account_number", "<missing>"]
 
 if account.lower() in [p.lower() for p in placeholder_values]:
@@ -30,7 +30,6 @@ if account.lower() in [p.lower() for p in placeholder_values]:
 
 dispatcher.utter_message(text=f"(Demo) Balance for account {account} is $123.45.")
 return []
-```
 
 The condition compares the slot string to each placeholder without caring about letter case. For example, `"Account Number"` still counts as a placeholder.
 

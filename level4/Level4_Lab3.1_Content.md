@@ -4,7 +4,7 @@ Students do **not** need to activate the virtual environment for this lab—**Ch
 
 ---
 
-## Student-facing flow (Codio guide)
+## Lab steps (Codio guide)
 
 1. **Fill in the Blanks** — `{Check It!|assessment}(fill-in-the-blanks-401030010)`  
    - Assessment JSON: `.guides/assessments/fill-in-the-blanks-401030010.json`  
@@ -24,7 +24,7 @@ Students do **not** need to activate the virtual environment for this lab—**Ch
 
 ---
 
-## Instructor reference
+## See also
 
-- Setup and Codio options: `level4/Level4_Lab3.1_Assessment_Setup.md`
-- Full exercise text and blanks live only in `fill-in-the-blanks-401030010.json` (not duplicated here).
+- Assessment setup: `level4/Level4_Lab3.1_Assessment_Setup.md`
+- Fill-in-the-blanks wording lives in `fill-in-the-blanks-401030010.json` (not duplicated here).

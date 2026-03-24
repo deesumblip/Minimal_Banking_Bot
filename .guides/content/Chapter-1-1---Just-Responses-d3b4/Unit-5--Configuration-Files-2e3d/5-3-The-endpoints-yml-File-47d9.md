@@ -2,11 +2,11 @@
 
 The `endpoints.yml` file defines **where Rasa can find actions and how LLM features are configured**.
 
-**File Location**: `endpoints.yml` (root of your bot folder)
+**File Location**: `endpoints.yml` (root of your agent folder)
 
 #### Complete endpoints.yml Breakdown
 
-```yaml
+
 action_endpoint:
   actions_module: "actions"
 
@@ -21,7 +21,6 @@ model_groups:
       - provider: openai
         model: gpt-4o-mini-2024-07-18
         temperature: 0.3
-```
 
 #### Section-by-Section Explanation
 

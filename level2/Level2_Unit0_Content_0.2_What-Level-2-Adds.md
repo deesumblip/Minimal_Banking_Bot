@@ -1,13 +1,13 @@
 ### 0.2 What Level 2 Adds
 
-Level 2 introduces **Actions** - custom Python code that your bot can execute. This enables:
+Level 2 introduces **Actions** - custom Python code that your agent can execute. This enables:
 
 - Dynamic responses based on calculations
 - Data processing and logic
 - Integration with external systems
 - Custom business logic
 
-**Your existing Level 1 bot continues to work** - Level 2 adds actions on top of it!
+**Your existing Level 1 agent continues to work** - Level 2 adds actions on top of it!
 
 #### What's New in Level 2
 

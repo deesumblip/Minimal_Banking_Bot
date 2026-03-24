@@ -9,14 +9,14 @@
 		"isRandomized": true,
 		"answers": [
 			{"_id": "a3020001-0001-4000-8000-000000000001", "correct": false, "answer": "The slot value is stored in a database"},
-			{"_id": "a3020001-0002-4000-8000-000000000002", "correct": true, "answer": "The bot remembers the account number across turns in the same session"},
+			{"_id": "a3020001-0002-4000-8000-000000000002", "correct": true, "answer": "The agent remembers the account number across turns in the same session"},
 			{"_id": "a3020001-0003-4000-8000-000000000003", "correct": false, "answer": "The slot is never cleared"},
-			{"_id": "a3020001-0004-4000-8000-000000000004", "correct": false, "answer": "The bot asks for the account every time"}
+			{"_id": "a3020001-0004-4000-8000-000000000004", "correct": false, "answer": "The agent asks for the account every time"}
 		],
 		"metadata": {"tags": [{"name": "Assessment Type", "value": "Multiple Choice"}], "files": [], "opened": []},
 		"bloomsObjectiveLevel": "2",
 		"learningObjectives": "SWBAT define slot persistence",
-		"guidance": "Slot persistence means the bot keeps the slot value across turns in the same conversation.",
+		"guidance": "Slot persistence means the agent keeps the slot value across turns in the same conversation.",
 		"showGuidanceAfterResponseOption": {"type": "Attempts", "passedFrom": 1},
 		"maxAttemptsCount": 1,
 		"showExpectedAnswerOption": {"type": "Always"},

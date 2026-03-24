@@ -31,11 +31,11 @@ This report compares **content** (`.guides/content/` chapter and unit structure)
 
 For each unit, the `order` array should list page ids that have a matching `.md` and `.json` in that unit folder.
 
-### Spot checks (Chapters 1.1–1.5)
+### Spot checks (sample units)
 
-- **Chapter 1.4 Unit 0:** `order` = `["0-1-Your-Level-3-Banking-Bot-e4f5","0-2-What-Level-4-Adds-f5a6"]`; Unit-0 folder has matching .md and .json for both. Coherent.
+- **Chapter 1.4 Unit 0:** `order` = `["0-1-Your-Level-3-Banking-Agent-e4f5","0-2-What-Level-4-Adds-f5a6"]`; Unit-0 folder has matching .md and .json for both. Coherent.
 - **Chapter 1.4 Unit 1:** order includes 1-1, 1-2, 1-3, 1-4-Test-Your-Knowledge-e4f5; all have .md and .json. Coherent.
-- **Chapter 1.6:** No unit `index.json` files and no page `.json` files; all pages are .md only. Incoherent for Codio expectations.
+- **Chapter 1.6:** Each unit has `index.json`; every listed page stem has matching `.md` and `.json`. Coherent for Codio expectations.
 
 ---
 

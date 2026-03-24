@@ -10,7 +10,7 @@
 
 ## For Students (Full Tutorial Content)
 
-**A Complete Guide to Adding Custom Python Code to Your Banking Bot**
+**A Complete Guide to Adding Custom Python Code to Your Banking Agent**
 
 ---
 
@@ -30,7 +30,7 @@
 
 ## Unit 0: Recap - What You Built in Level 1
 
-### 0.1 Your Level 1 Banking Bot
+### 0.1 Your Level 1 Banking Agent
 
 Before we add actions, let's recap what you've already built in Level 1. **All of this remains unchanged** - Level 2 builds on top of it!
 
@@ -43,7 +43,7 @@ Before we add actions, let's recap what you've already built in Level 1. **All o
 
 **Flows (`data/basics/`)**:
 - `greet.yml` - Greets users when they start a conversation
-- `help.yml` - Explains what the bot can help with
+- `help.yml` - Explains what the agent can help with
 - `contact.yml` - Provides contact information for the bank
 
 **System Patterns (`data/system/patterns/patterns.yml`)**:
@@ -51,33 +51,33 @@ Before we add actions, let's recap what you've already built in Level 1. **All o
 - `pattern_completed` - Handles flow completion
 
 **Configuration Files**:
-- `config.yml` - Bot configuration (pipeline, policies)
+- `config.yml` - Agent configuration (pipeline, policies)
 - `credentials.yml` - Connection settings
 - `endpoints.yml` - Action endpoints and LLM configuration
 
 #### What Level 1 Couldn't Do
 
-Your Level 1 bot was limited to **static responses** - predefined text that never changes. It couldn't:
+Your Level 1 agent was limited to **static responses** - predefined text that never changes. It couldn't:
 - ❌ Execute custom Python code
 - ❌ Perform calculations
 - ❌ Access databases or APIs
 - ❌ Return dynamic responses based on conditions
 - ❌ Process data or make decisions
 
-**Example**: If a user asked "What are your bank hours?", your Level 1 bot would need a static `utter_hours` response. It couldn't check the current day or calculate if the bank is currently open.
+**Example**: If a user asked "What are your bank hours?", your Level 1 agent would need a static `utter_hours` response. It couldn't check the current day or calculate if the bank is currently open.
 
 ---
 
 ### 0.2 What Level 2 Adds
 
-Level 2 introduces **Actions** - custom Python code that your bot can execute. This enables:
+Level 2 introduces **Actions** - custom Python code that your agent can execute. This enables:
 
 - Dynamic responses based on calculations
 - Data processing and logic
 - Integration with external systems
 - Custom business logic
 
-**Your existing Level 1 bot continues to work** - Level 2 adds actions on top of it!
+**Your existing Level 1 agent continues to work** - Level 2 adds actions on top of it!
 
 #### What's New in Level 2
 
@@ -101,7 +101,7 @@ Level 2 introduces **Actions** - custom Python code that your bot can execute. T
 
 ### 1.1 What is an Action?
 
-An **action** is custom Python code that your bot can execute. Actions allow your bot to do more than just say predefined text - they can perform calculations, access databases, call APIs, and execute any Python logic you write.
+An **action** is custom Python code that your agent can execute. Actions allow your agent to do more than just say predefined text - they can perform calculations, access databases, call APIs, and execute any Python logic you write.
 
 #### Actions vs. Responses
 
@@ -169,7 +169,7 @@ Action executes Python code
     ↓
 Action sends message via dispatcher.utter_message()
     ↓
-Bot responds with dynamic message
+Agent responds with dynamic message
 ```
 
 **Key Point**: Actions are Python classes that Rasa calls when needed. You write the logic, Rasa handles the execution.
@@ -353,7 +353,7 @@ For Level 2, we don't use the tracker much - it's mainly for Level 3 when we add
 
 #### Domain
 
-The `domain` contains your bot's configuration:
+The `domain` contains your agent's configuration:
 
 ```python
 # Access domain (rarely needed)
@@ -652,7 +652,7 @@ Training with actions is the same as Level 1, but Rasa now also processes your a
 # Make sure environment variables are loaded
 . .\load_env.ps1
 
-# Train the bot
+# Train the agent
 python -m rasa train
 ```
 
@@ -735,7 +735,7 @@ Error: Action name 'action_bank_hours' in domain doesn't match class name
 
 #### Basic Testing Workflow
 
-1. **Train your bot**: `python -m rasa train`
+1. **Train your agent**: `python -m rasa train`
 
 2. **Start Inspector**: 
    ```powershell
@@ -787,7 +787,7 @@ When testing in Inspector, check the debug panel:
 
 ## Unit 7: Putting It All Together
 
-### 7.1 Complete Bot Walkthrough
+### 7.1 Complete Agent Walkthrough
 
 Let's trace through a complete conversation showing how Level 1 and Level 2 work together.
 
@@ -801,7 +801,7 @@ Let's trace through a complete conversation showing how Level 1 and Level 2 work
    Flow: pattern_session_start
    Step: utter_greet
    ↓
-Bot: "Hi! I'm a banking assistant. How can I help you today?"
+Agent: "Hi! I'm a banking assistant. How can I help you today?"
 
 [User types: "What are your hours?"]
 
@@ -816,7 +816,7 @@ Bot: "Hi! I'm a banking assistant. How can I help you today?"
    Action executes Python code
    dispatcher.utter_message() sends message
    ↓
-Bot: "Our bank hours are Monday-Friday 9am-5pm, Saturday 10am-2pm. We're closed on Sundays."
+Agent: "Our bank hours are Monday-Friday 9am-5pm, Saturday 10am-2pm. We're closed on Sundays."
 
 [User types: "How can I contact you?"]
 
@@ -827,18 +827,18 @@ Bot: "Our bank hours are Monday-Friday 9am-5pm, Saturday 10am-2pm. We're closed 
    Flow: contact
    Step: utter_contact (Level 1 - static response)
    ↓
-Bot: "You can reach us at support@bank.com or call 1-800-BANK-123."
+Agent: "You can reach us at support@bank.com or call 1-800-BANK-123."
 ```
 
-**Notice**: The bot seamlessly uses both Level 1 responses and Level 2 actions!
+**Notice**: The agent seamlessly uses both Level 1 responses and Level 2 actions!
 
 ---
 
-### 7.2 Your Level 2 Banking Bot: Summary
+### 7.2 Your Level 2 Banking Agent: Summary
 
-Congratulations! You've extended your Level 1 banking bot with custom Python code.
+Congratulations! You've extended your Level 1 banking agent with custom Python code.
 
-#### Your Complete Bot Structure
+#### Your Complete Agent Structure
 
 **Domain (`domain/basics.yml`)**:
 - All Level 1 responses (`utter_greet`, `utter_help`, `utter_contact`)
@@ -855,9 +855,9 @@ Congratulations! You've extended your Level 1 banking bot with custom Python cod
 
 **Configuration**: Unchanged from Level 1 (except minor endpoints.yml updates)
 
-#### What Your Bot Can Do Now
+#### What Your Agent Can Do Now
 
-Your Level 2 banking bot can:
+Your Level 2 banking agent can:
 - Everything Level 1 could do (greet, help, contact)
 - Execute custom Python code (actions)
 - Return dynamic responses based on code execution
@@ -865,7 +865,7 @@ Your Level 2 banking bot can:
 
 #### What's Still Missing (Coming in Future Levels)
 
-Your Level 2 bot cannot yet:
+Your Level 2 agent cannot yet:
 - ❌ Remember information from the conversation (Level 3: Slots)
 - ❌ Collect multiple pieces of information (Level 4: Multiple Slots)
 - ❌ Use dynamic tool calling (Level 5: Tools)
@@ -906,14 +906,14 @@ Test your understanding with these questions:
 
 #### Question 1: What is an Action?
 
-a) A predefined bot message  
-b) Custom Python code the bot can execute  
+a) A predefined agent message  
+b) Custom Python code the agent can execute  
 c) A conversation script  
 d) A configuration file
 
-**Answer**: b) Custom Python code the bot can execute
+**Answer**: b) Custom Python code the agent can execute
 
-**Explanation**: Actions are Python classes that execute custom code. They allow the bot to do more than just send static text - they can perform calculations, access databases, and execute any Python logic.
+**Explanation**: Actions are Python classes that execute custom code. They allow the agent to do more than just send static text - they can perform calculations, access databases, and execute any Python logic.
 
 ---
 
@@ -973,7 +973,7 @@ d) They're the same thing
 
 #### Key Concepts
 
-1. **Actions**: Custom Python code that the bot can execute
+1. **Actions**: Custom Python code that the agent can execute
 2. **Action Class**: Python class that inherits from `Action`
 3. **Action Registration**: Telling Rasa about actions in the domain file
 4. **Dispatcher**: Used to send messages from actions
@@ -986,26 +986,26 @@ d) They're the same thing
 - Can call actions from flows
 - Can understand the difference between responses and actions
 - Can debug action-related issues
-- Can extend your Level 1 bot with custom code
+- Can extend your Level 1 agent with custom code
 
 ---
 
 ### 8.3 Limitations of Level 2
 
-Level 2 bots have clear limitations:
+Level 2 agents have clear limitations:
 
 #### What Level 2 Cannot Do
 
-1. **Remember Information**: The bot cannot remember what the user said earlier
-   - Example: User says "My account is 1234" → Bot forgets immediately
+1. **Remember Information**: The agent cannot remember what the user said earlier
+   - Example: User says "My account is 1234" → Agent forgets immediately
    - Solution: Level 3 adds slots (memory)
 
 2. **Use Previous Context**: Actions can't access conversation history effectively
-   - Example: "Check my balance" → Bot doesn't know which account
+   - Example: "Check my balance" → Agent doesn't know which account
    - Solution: Level 3 adds slots to remember account numbers
 
 3. **Collect Multiple Pieces of Information**: Can't gather multiple data points
-   - Example: "Transfer money" → Bot can't collect amount, recipient, and account
+   - Example: "Transfer money" → Agent can't collect amount, recipient, and account
    - Solution: Level 4 adds multiple slot collection
 
 #### When Level 2 is Sufficient
@@ -1027,16 +1027,16 @@ Move to Level 3 when you need:
 
 ### 8.4 What's Next: Level 3 Preview
 
-⚠️ **Important: Building on Your Existing Banking Bot**
+⚠️ **Important: Building on Your Existing Banking Agent**
 
-When you move to Level 3, you will **continue working on the same banking bot** you've built throughout Levels 1 and 2. Level 3 doesn't start from scratch - it builds on what you've already created:
+When you move to Level 3, you will **continue working on the same banking agent** you've built throughout Levels 1 and 2. Level 3 doesn't start from scratch - it builds on what you've already created:
 
 - **Your existing responses** (`utter_greet`, `utter_help`, `utter_contact`) stay
 - **Your existing flows** (`greet`, `help`, `contact`, `hours`) stay
 - **Your existing actions** (`action_bank_hours`) stay
 - **Level 3 adds**: Slots (memory), new responses for asking questions, new actions that use slots, new flows that collect information
 
-**You don't start a new bot** - you extend your existing Level 2 banking bot with memory capabilities!
+**You don't start a new agent** - you extend your existing Level 2 banking agent with memory capabilities!
 
 ---
 
@@ -1046,8 +1046,8 @@ When you move to Level 3, you will **continue working on the same banking bot** 
 
 **Example Scenario**: "Check my balance"
 
-- **Level 2**: Bot can't remember which account the user has
-- **Level 3**: Bot can:
+- **Level 2**: Agent can't remember which account the user has
+- **Level 3**: Agent can:
   - Ask for account number
   - Remember it in a slot
   - Use that slot in actions
@@ -1074,7 +1074,7 @@ Move to Level 3 when you need:
 - Multi-turn conversations with context
 - Personalized responses based on user information
 
-**Your Level 2 banking bot is the foundation** - Level 3 adds memory on top of it!
+**Your Level 2 banking agent is the foundation** - Level 3 adds memory on top of it!
 
 ---
 
@@ -1152,7 +1152,7 @@ If you can check all these boxes, you're ready for Level 3!
 
 #### Exercise 1: Add More Actions
 
-**Task**: Create additional actions for your banking bot:
+**Task**: Create additional actions for your banking agent:
 - `action_account_types.py` - Returns information about account types
 - `action_loan_info.py` - Returns loan information
 
@@ -1183,19 +1183,19 @@ If you can check all these boxes, you're ready for Level 3!
 
 ## Conclusion
 
-Congratulations! You've completed Level 2 and learned how to add custom Python code to your Rasa bot.
+Congratulations! You've completed Level 2 and learned how to add custom Python code to your Rasa agent.
 
 ### What You Can Do Now
 
-- Add custom Python code to your bot
+- Add custom Python code to your agent
 - Create dynamic responses based on logic
 - Process data and perform calculations
 - Integrate with external systems (with proper setup)
-- Extend your Level 1 bot with new capabilities
+- Extend your Level 1 agent with new capabilities
 
 ### What's Coming Next
 
-- **Level 3**: Add memory (slots) so the bot can remember information
+- **Level 3**: Add memory (slots) so the agent can remember information
 - **Level 4**: Collect multiple pieces of information
 - **Level 5**: Enable dynamic tool calling
 
@@ -1282,7 +1282,7 @@ project/
 **Recommended auto-grading checks**:
 - Validate YAML files parse successfully and required keys exist (domain + flows + patterns)
 - Validate required new artifacts for Level 2 exist (e.g., new flows/actions/tools)
-- Smoke-test bot starts (`rasa inspect`) and responds to a small scripted conversation
+- Smoke-test agent starts (`rasa inspect`) and responds to a small scripted conversation
 
 **Implementation notes**:
 - Prefer deterministic checks (file existence + YAML structure + expected strings) over LLM-output matching.

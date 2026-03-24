@@ -67,7 +67,7 @@ Use Option A if you want to avoid extra lab numbers; use Option B if you want a 
 
 ## 3. Short content page before Lab 6.1
 
-Add a short content page (e.g. under Unit 6, before “Lab 6.1: Training Your Bot”) that sets expectations and points back to the bridge.
+Add a short content page (e.g. under Unit 6, before “Lab 6.1: Training Your Agent”) that sets expectations and points back to the bridge.
 
 **Suggested title**: “What training needs” or “Before you run Lab 6.1”.
 

@@ -12,7 +12,7 @@
 
 ## Building on Level 4
 
-⚠️ **Important**: This level builds on your Level 4 banking bot. You don't start from scratch!
+⚠️ **Important**: This level builds on your Level 4 banking agent. You don't start from scratch!
 
 **What stays the same:**
 - All responses from Level 4
@@ -26,7 +26,7 @@
 - New action `action_process_transfer_with_tools`
 - New flow `data/basics/transfer_money_tools.yml`
 
-**Your existing Level 4 banking bot continues to work** - this level adds tool calling, allowing the LLM to dynamically select and call functions!
+**Your existing Level 4 banking agent continues to work** - this level adds tool calling, allowing the LLM to dynamically select and call functions!
 
 ## Quick Start
 
@@ -68,7 +68,7 @@
 
 ## What's New in This Level
 
-**Additions to your Level 4 banking bot:**
+**Additions to your Level 4 banking agent:**
 
 ### Tools Folder (`tools/`)
 - **NEW:** `tools/banking_tools.py` - Contains tool functions

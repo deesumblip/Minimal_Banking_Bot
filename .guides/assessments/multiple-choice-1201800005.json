@@ -11,7 +11,7 @@
 			{
 				"_id": "u8q5-a",
 				"correct": false,
-				"answer": "It compiles them into the model file so the bot runs without the actions server"
+				"answer": "It compiles them into the model file so the agent runs without the actions server"
 			},
 			{
 				"_id": "u8q5-b",
@@ -36,7 +36,7 @@
 		},
 		"bloomsObjectiveLevel": "2",
 		"learningObjectives": "SWBAT describe how training validates actions",
-		"guidance": "During training, Rasa validates that each action registered in the domain has a corresponding action class in the actions/ folder (the action's name() must match). If you register action_holiday_hours in the domain but the file or name() is wrong, training will fail with an error like 'Action X not found'. The model itself does not contain the action code; at runtime the action server loads the .py files when the bot runs.",
+		"guidance": "During training, Rasa validates that each action registered in the domain has a corresponding action class in the actions/ folder (the action's name() must match). If you register action_holiday_hours in the domain but the file or name() is wrong, training will fail with an error like 'Action X not found'. The model itself does not contain the action code; at runtime the action server loads the .py files when the agent runs.",
 		"showGuidanceAfterResponseOption": {"type": "Attempts", "passedFrom": 1},
 		"maxAttemptsCount": 1,
 		"showExpectedAnswerOption": {"type": "Always"},

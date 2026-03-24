@@ -3,9 +3,9 @@
 ## Course Overview
 
 **Title**: Level 6: Sub-Agents  
-**Description**: Adding orchestration with a sub-agent to your Level 5 banking bot  
+**Description**: Adding orchestration with a sub-agent to your Level 5 banking agent  
 **Prerequisites**: Level 1 through Level 5 must be completed  
-**Learning Objective**: Students learn to define a sub-agent (config, MCP registration), add a flow that calls the sub-agent, and train and test the full bot. Labs are ordered: sub-agent config (Lab 2.1) → MCP registration (Lab 3.1) → flow (Lab 4.1) → train and test (Labs 5.1, 5.2).
+**Learning Objective**: Students learn to define a sub-agent (config, MCP registration), add a flow that calls the sub-agent, and train and test the full agent. Labs are ordered: sub-agent config (Lab 2.1) → MCP registration (Lab 3.1) → flow (Lab 4.1) → train and test (Labs 5.1, 5.2).
 
 ---
 
@@ -13,7 +13,7 @@
 
 ### Unit 0: Recap - What You Built in Level 5
 **Type**: Content Page | **Assessment**: None  
-**Sections**: 0.1 Your Level 5 Banking Bot | 0.2 What Level 6 Adds  
+**Sections**: 0.1 Your Level 5 Banking Agent | 0.2 What Level 6 Adds  
 **Key Concepts**: Recap Level 5 (domain, flows, actions, tools); Level 6 adds sub-agent, flow that calls it, MCP registration.
 
 ### Unit 1: Sub-Agents Concept
@@ -43,7 +43,7 @@
 
 ### Unit 6: Summary and Next Steps
 **Type**: Content Page | **Assessment**: None  
-**Sections**: 6.1 Complete Bot Walkthrough | 6.2 What You've Learned | 6.3 What's Next | 6.4 Knowledge Check | 6.5 Limitations of Level 6 | 6.6 What's Next Beyond the Course | 6.7 Course Completion Checklist  
+**Sections**: 6.1 Complete Agent Walkthrough | 6.2 What You've Learned | 6.3 What's Next | 6.4 Knowledge Check | 6.5 Limitations of Level 6 | 6.6 What's Next Beyond the Course | 6.7 Course Completion Checklist  
 **Key Concepts**: Level 6 summary; knowledge check; limitations; beyond course; completion checklist.
 
 ---

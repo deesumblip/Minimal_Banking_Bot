@@ -20,8 +20,8 @@ Level 1 uses **9 units** (0–8): Setup → Domain → Flows → Patterns → Co
 | `Level1_Unit0_Content_0.2_Project-Structure.md` | File structure, level1 folder |
 | `Level1_Unit0_Content_0.3_Understanding-YAML-Syntax.md` | YAML basics |
 | `Level1_Unit0_Content_0.4_Getting-Help.md` | Resources, troubleshooting |
-| `Level1_Unit1_Content_1.1_What-is-a-Conversational-Bot.md` | Bot intro, NLU |
-| `Level1_Unit1_Content_1.2_The-Simplest-Bot-Possible.md` | Minimal bot concept |
+| `Level1_Unit1_Content_1.1_What-is-a-Conversational-Agent.md` | Agent intro, NLU |
+| `Level1_Unit1_Content_1.2_The-Simplest-Agent-Possible.md` | Minimal agent concept |
 | `Level1_Unit1_Content_1.3_Real-World-Use-Cases.md` | Use cases |
 | `Level1_Unit1_Content_1.4_Test-Your-Knowledge.md` | Quiz |
 | `Level1_Unit2_Content_2.1_What-is-a-Domain.md` | Domain, responses section |
@@ -38,12 +38,12 @@ Level 1 uses **9 units** (0–8): Setup → Domain → Flows → Patterns → Co
 | `Level1_Unit5_Content_5.2_credentials-yml.md` | credentials.yml |
 | `Level1_Unit5_Content_5.3_endpoints-yml.md` | endpoints.yml |
 | `Level1_Unit6_Content_6.1_What-is-Training.md` | Training concept |
-| `Level1_Unit6_Content_6.2_How-to-Train-Your-Bot.md` | rasa train |
+| `Level1_Unit6_Content_6.2_How-to-Train-Your-Agent.md` | rasa train |
 | `Level1_Unit6_Content_6.3_Using-Rasa-Inspector.md` | Inspector |
-| `Level1_Unit6_Content_6.4_Testing-Your-Bot.md` | Testing |
-| `Level1_Unit6_Content_6.5_Understanding-Bot-Behavior.md` | Behavior |
-| `Level1_Unit7_Content_7.1_Complete-Bot-Walkthrough.md` | Walkthrough |
-| `Level1_Unit7_Content_7.2_Your-Level-1-Banking-Bot-Summary.md` | Summary |
+| `Level1_Unit6_Content_6.4_Testing-Your-Agent.md` | Testing |
+| `Level1_Unit6_Content_6.5_Understanding-Agent-Behavior.md` | Behavior |
+| `Level1_Unit7_Content_7.1_Complete-Agent-Walkthrough.md` | Walkthrough |
+| `Level1_Unit7_Content_7.2_Your-Level-1-Banking-Agent-Summary.md` | Summary |
 | `Level1_Unit7_Content_7.3_Best-Practices.md` | Best practices |
 | `Level1_Unit8_Content_8.1_Knowledge-Check.md` | Knowledge check |
 | `Level1_Unit8_Content_8.2_What-Youve-Learned.md` | Learned |

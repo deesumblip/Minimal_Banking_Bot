@@ -2,7 +2,7 @@
 	"type": "code-output-compare",
 	"taskId": "code-output-compare-501050001",
 	"source": {
-		"name": "Lab 5.1: Training the Level 5 Bot",
+		"name": "Lab 5.1: Training the Level 5 Agent",
 		"showName": true,
 		"instructions": "To pass, all checks must pass:\n\n• Check 1: .venv with Python exists.\n• Check 2: level5 has domain, config, endpoints, and tools/banking_tools.py.\n• Check 3: Trained .tar.gz model in level5/models/.\n\nFull score: 10/10.",
 		"command": "bash /home/codio/workspace/.guides/scripts/run_python_grader.sh /home/codio/workspace/.guides/secure/level5_graders/lab_5.1_grader.py",

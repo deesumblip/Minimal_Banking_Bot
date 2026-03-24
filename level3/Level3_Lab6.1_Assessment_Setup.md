@@ -8,7 +8,7 @@
 
 ### Your Task (summary)
 
-Activate the virtual environment in the main project folder (root), navigate to `level3`, then train your bot by running:
+Activate the virtual environment in the main project folder (root), navigate to `level3`, then train your agent by running:
 
 ```bash
 cd level3
@@ -40,7 +40,7 @@ After the assessment, open Rasa Inspector (see Unit 6.2). Use the **Rasa Inspect
 
 ## Overview
 
-This assessment verifies that students can successfully train their Level 3 bot and that training completes without errors (model file created, no critical errors in logs). The same conventions as Level 1 and Level 2 apply: venv in workspace root, grader runs from root and `cd`s to `level3` for checks.
+This assessment verifies that students can successfully train their Level 3 agent and that training completes without errors (model file created, no critical errors in logs). The same conventions as Level 1 and Level 2 apply: venv in workspace root, grader runs from root and `cd`s to `level3` for checks.
 
 **Lab workflow**: Students (1) activate venv in project root, (2) `cd level3`, (3) run `python -m rasa train`. The grader script runs from **workspace root**, activates venv, then `cd`s to `level3` for model and log checks.
 

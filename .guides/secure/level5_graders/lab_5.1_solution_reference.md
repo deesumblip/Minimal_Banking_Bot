@@ -1,6 +1,6 @@
 # Lab 5.1 – Reference solution for Code Test
 
-Use this file as reference for the Lab 5.1 code-output-compare grader (Training the Level 5 Bot).
+Use this file as reference for the Lab 5.1 code-output-compare grader (Training the Level 5 Agent).
 
 ---
 

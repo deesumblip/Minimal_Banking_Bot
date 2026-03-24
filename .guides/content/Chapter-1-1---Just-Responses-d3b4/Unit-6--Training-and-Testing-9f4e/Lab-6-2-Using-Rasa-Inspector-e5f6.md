@@ -1,4 +1,4 @@
-**Inspector** is Rasa's built-in testing interface. It lets you chat with your bot in a web page so you can see how it responds. You start it from the **terminal**, then open the chat in your **browser** (or in Codio's Rasa Inspect tab).
+**Inspector** is Rasa's built-in testing interface. It lets you chat with your agent in a web page so you can see how it responds. You start it from the **terminal**, then open the chat in your **browser** (or in Codio's Rasa Inspect tab).
 
 #### Step 1: Activate the virtual environment
 
@@ -14,37 +14,35 @@
 
 From the `level1` folder, create a `logs` directory so the Inspector log can be written:
 
-```bash
+
 mkdir -p logs
-```
 
 #### Step 3: Start Inspector in the terminal
 
 From the `level1` folder, run:
 
-```bash
+
 python -m rasa inspect --debug --log-file logs/logs.out
-```
 
 **What you'll see**: The terminal will show a lot of output, including something like:
-```
+
 Starting Rasa server on http://0.0.0.0:5005
 ...
-```
+
 **Leave this terminal open.** Inspector is running as a server; if you close the terminal, it will stop.
 
 #### Step 4: Open the chat in Codio
 
 In Codio, go to the top menu bar and click the **Rasa Inspect** tab. The chat interface should open.
 
-As a first check, type **hello** and press Enter; the bot should respond. Check the flow/debug panel to see which flow triggered.
+As a first check, type **hello** and press Enter; the agent should respond. Check the flow/debug panel to see which flow triggered.
 
 Try a few more questions, for example:
 - "How do I contact support?"
 - "What can you do?"
 - "Hi!"
 
-At this stage the bot only uses simple responses, so the answers will be straightforward.
+At this stage the agent only uses simple responses, so the answers will be straightforward.
 
 ---
 
@@ -54,26 +52,26 @@ At this stage the bot only uses simple responses, so the answers will be straigh
 
 #### Inspector interface: what you see (beginner guide)
 
-When Inspector opens, you'll see several areas. You don't need to understand every part to use it—here's what matters at Level 1.
+When Inspector opens, you'll see several areas. You don't need to understand every part to use it, here's what matters at Level 1.
 
 1. **Chat area (main part)**
-   - This is where you type and where the bot's replies appear.
-   - Use it like a normal chat: type a message, press Enter, and see what the bot says.
+   - This is where you type and where the agent's replies appear.
+   - Use it like a normal chat: type a message, press Enter, and see what the agent says.
    - Your conversation history stays visible so you can scroll back.
 
 2. **Flow / diagram area**
-   - This shows which **flow** the bot is following right now (e.g. "greet", "help", "contact").
-   - Think of it as "which conversation path the bot chose." When you type "Hi!", you should see something like the greet flow; when you ask for help, the help flow.
+   - This shows which **flow** the agent is following right now (e.g. "greet", "help", "contact").
+   - Think of it as "which conversation path the agent chose." When you type "Hi!", you should see something like the greet flow; when you ask for help, the help flow.
    - If the wrong flow appears for what you said, you can use this to notice and then improve your flow descriptions later.
 
 3. **Debug / technical details**
-   - This area shows more technical information: which flow was triggered, what the bot "thought" your message meant, and so on.
+   - This area shows more technical information: which flow was triggered, what the agent "thought" your message meant, and so on.
    - You can ignore it at first. When something doesn't work as expected, this is where you can look to see why the wrong flow might have run.
 
 4. **Slots**
    - Slots are for "remembering" information in a conversation. **In Level 1 we don't use them**, so this will be empty. You can ignore it until later levels.
 
-**In short**: Use the **chat** to talk to your bot. Use the **flow** and **debug** areas to see which flow ran and to fix things when the bot doesn't do what you want.
+**In short**: Use the **chat** to talk to your agent. Use the **flow** and **debug** areas to see which flow ran and to fix things when the agent doesn't do what you want.
 
 #### Launching Rasa Inspector locally
 
@@ -83,7 +81,7 @@ If you're **not** using Codio and want to run Inspector on your own computer, fo
 
 - Open a terminal (or PowerShell on Windows).
 - Navigate into the `level1` folder (the one that contains `config.yml`, `domain/`, and `data/`).
-- Example: `cd C:\Users\You\Minimal_Banking_Bot\level1` or `cd ~/Minimal_Banking_Bot/level1`.
+- Example: `cd C:\Users\You\Minimal_Banking_Agent\level1` or `cd ~/Minimal_Banking_Agent/level1`.
 
 **2. Create the logs folder**
 
@@ -114,7 +112,7 @@ Leave this terminal window open. When you see something like `Starting Rasa serv
 - Open a web browser (Chrome, Firefox, Edge, etc.).
 - Go to: **http://localhost:5005**  
   If that shows a status page or doesn't open the chat, try: **http://localhost:5005/webhooks/socketio/inspect.html**
-- You should see the Inspector chat interface. Type a message and press Enter to talk to your bot.
+- You should see the Inspector chat interface. Type a message and press Enter to talk to your agent.
 
 **Troubleshooting (local)**
 

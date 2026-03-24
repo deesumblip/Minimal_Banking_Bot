@@ -46,7 +46,7 @@ level1/
 
 ### Generated Files (created automatically)
 
-- **`models/`**: Compiled bot models (created when you run `rasa train`)
+- **`models/`**: Compiled agent models (created when you run `rasa train`)
 - **`logs/`**: Log files for debugging
 
 ---
@@ -62,7 +62,7 @@ data/.yml (ReAct sub-agents and flows define what to do)
 ↓
 domain/basics.yml (responses define what to say)
 ↓
-Bot responds
+Agent responds
 ```
 
 ### Key Relationships

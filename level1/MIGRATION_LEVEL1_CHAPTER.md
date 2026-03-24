@@ -31,7 +31,7 @@ Chapter-1-1---Just-Responses-d3b4 already exists on Codio with full content (Uni
    - Unzip or paste the Codio export so that `Chapter-1-1---Just-Responses-d3b4` contains:
      - `index.json` (chapter order)
      - `Unit-0--Prerequisites-and-Setup-1039/` (and its pages)
-     - `Unit-1--Introduction-to-Rasa-Bots-06a7/`
+     - `Unit-1--Introduction-to-Rasa-Agents-06a7/`
      - … through **Unit-6--Training-and-Testing-6c70** (or the exact unit folder names you see on Codio).
 5. **Commit and push:**
    ```bash

@@ -5,7 +5,7 @@ Before moving to Level 5, ensure you can:
 - Create an action that reads multiple slots, caps **recipient** at **100** characters, handles placeholders, and sends the demo confirmation
 - Create a flow with multiple `collect:` steps in order, then an `action:` step
 - Explain why the order of `collect:` steps matters
-- Train the Level 4 bot from the `level4` folder and run the completion check (and the **scripted transfer** in Inspector from Lab 5.2)
+- Train the Level 4 agent from the `level4` folder and run the completion check (and the **scripted transfer** in Inspector from Lab 5.2)
 - Understand that Level 4 builds on Level 3 and that all Level 3 content remains in `level4/`
 
 If you can do all of the above, you're ready for Level 5!

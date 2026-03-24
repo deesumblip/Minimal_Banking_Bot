@@ -1,4 +1,4 @@
-An **action** is custom Python code that your bot can execute. Actions allow your bot to do more than just say predefined text - they can perform calculations, access databases, call APIs, and execute any Python logic you write.
+An **action** is custom Python code that your agent can execute. Actions allow your agent to do more than just say predefined text - they can perform calculations, access databases, call APIs, and execute any Python logic you write.
 
 #### Actions vs. Responses
 
@@ -32,17 +32,15 @@ An **action** is custom Python code that your bot can execute. Actions allow you
 #### Example: Bank Hours
 
 **Level 1 approach** (static response):
-```yaml
+
 utter_hours:
   - text: "We're open Monday-Friday 9am-5pm, Saturday 10am-2pm."
-```
 
 **Level 2 approach** (dynamic action):
-```python
+
 def run(self, dispatcher, tracker, domain):
     # Check current day
     # Check if it's a holiday
     # Return dynamic message: "We're open today until 5pm" or "We're closed today"
-```
 
 ---

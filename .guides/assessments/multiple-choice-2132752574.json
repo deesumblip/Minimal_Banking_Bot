@@ -21,7 +21,7 @@
 			{
 				"_id": "483a4355-5cb5-7878-4145-551105a6ed94",
 				"correct": false,
-				"answer": "A type of response the bot can say"
+				"answer": "A type of response the agent can say"
 			},
 			{
 				"_id": "14c5cb10-2958-5abc-81fc-f040a89a712e",
@@ -45,8 +45,8 @@
 			]
 		},
 		"bloomsObjectiveLevel": "2",
-		"learningObjectives": "SWBAT define what a slot is in chatbot development",
-		"guidance": "The correct answer is:\n\n* A memory variable that stores information from the conversation\n\nA slot is the bot's memory: it stores information from the conversation. Flow steps are actions the bot takes, responses are what the bot says to users, and Python functions are code that executes, but slots specifically serve as memory storage for conversational data.",
+		"learningObjectives": "SWBAT define what a slot is in chat agent development",
+		"guidance": "The correct answer is:\n\n* A memory variable that stores information from the conversation\n\nA slot is the agent's memory: it stores information from the conversation. Flow steps are actions the agent takes, responses are what the agent says to users, and Python functions are code that executes, but slots specifically serve as memory storage for conversational data.",
 		"showGuidanceAfterResponseOption": {
 			"type": "Attempts",
 			"passedFrom": 1

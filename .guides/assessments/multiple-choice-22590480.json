@@ -2,9 +2,9 @@
 	"type": "multiple-choice",
 	"taskId": "multiple-choice-22590480",
 	"source": {
-		"name": "Identifying Bot Capabilities",
+		"name": "Identifying Agent Capabilities",
 		"showName": true,
-		"instructions": "**Which of these scenarios can be handled by a Level 1 bot that can only handle responses?**",
+		"instructions": "**Which of these scenarios can be handled by a Level 1 agent that can only handle responses?**",
 		"multipleResponse": true,
 		"isRandomized": false,
 		"answers": [
@@ -50,8 +50,8 @@
 			"opened": []
 		},
 		"bloomsObjectiveLevel": "3",
-		"learningObjectives": "SWBAT identify which scenarios can be handled by a Level 1 bot",
-		"guidance": "Level 1 bots can only provide information but cannot remember anything or perform actions. Therefore:\n\n- **Can handle**: Providing company contact information, listing product features, explaining how to use a feature (these only require providing information)\n\n- **Cannot handle**: Checking account balance (requires remembering the account number), processing a payment (requires both memory for details and code to execute the payment), and remembering user preferences (requires memory/slots)",
+		"learningObjectives": "SWBAT identify which scenarios can be handled by a Level 1 agent",
+		"guidance": "Level 1 agents can only provide information but cannot remember anything or perform actions. Therefore:\n\n- **Can handle**: Providing company contact information, listing product features, explaining how to use a feature (these only require providing information)\n\n- **Cannot handle**: Checking account balance (requires remembering the account number), processing a payment (requires both memory for details and code to execute the payment), and remembering user preferences (requires memory/slots)",
 		"showGuidanceAfterResponseOption": {
 			"type": "Attempts",
 			"passedFrom": 1

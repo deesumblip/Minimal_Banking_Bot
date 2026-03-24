@@ -3,9 +3,9 @@
 ## Course Overview
 
 **Title**: Level 2: Simple Actions  
-**Description**: A Complete Guide to Adding Custom Python Code to Your Banking Bot  
+**Description**: A Complete Guide to Adding Custom Python Code to Your Banking Agent  
 **Prerequisites**: Level 1 must be completed  
-**Learning Objective**: Students learn to create custom Python actions that extend their Level 1 bot with dynamic functionality.
+**Learning Objective**: Students learn to create custom Python actions that extend their Level 1 agent with dynamic functionality.
 
 ---
 
@@ -16,7 +16,7 @@
 **Assessment**: None
 
 **Sections**:
-- 0.1 Your Level 1 Banking Bot
+- 0.1 Your Level 1 Banking Agent
   - What you have from Level 1 (domain, flows, patterns, config)
   - What Level 1 couldn't do (limitations)
 - 0.2 What Level 2 Adds
@@ -66,7 +66,7 @@
 - 2.2 Understanding the Parameters
   - Dispatcher (sending messages)
   - Tracker (conversation history - preview for Level 3)
-  - Domain (bot configuration)
+  - Domain (agent configuration)
 
 **Key Concepts**: Action class structure, dispatcher, tracker, domain
 
@@ -191,11 +191,11 @@
 **Assessment**: None
 
 **Sections**:
-- 7.1 Complete Bot Walkthrough
+- 7.1 Complete Agent Walkthrough
   - Full conversation example showing Level 1 + Level 2 working together
-- 7.2 Your Level 2 Banking Bot: Summary
-  - Complete bot structure
-  - What your bot can do now
+- 7.2 Your Level 2 Banking Agent: Summary
+  - Complete agent structure
+  - What your agent can do now
   - What's still missing (preview of future levels)
 - 7.3 Best Practices
   - Organizing actions
@@ -221,7 +221,7 @@
   - When Level 2 is sufficient
   - When you need more (Level 3)
 - 8.4 What's Next: Level 3 Preview
-  - Building on existing bot (not starting from scratch)
+  - Building on existing agent (not starting from scratch)
   - What slots enable
   - Key concepts in Level 3
 - 8.5 Course Completion Checklist

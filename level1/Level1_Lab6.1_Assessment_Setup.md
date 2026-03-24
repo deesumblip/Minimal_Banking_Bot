@@ -1,4 +1,4 @@
-# Lab 6.1: Training Your Bot - Assessment Setup
+# Lab 6.1: Training Your Agent - Assessment Setup
 
 ## Guide Content (For Students)
 
@@ -8,7 +8,7 @@
 
 ### Your Task (summary)
 
-Activate the virtual environment in the main project folder (root), navigate to `level1`, then train your bot by running:
+Activate the virtual environment in the main project folder (root), navigate to `level1`, then train your agent by running:
 
 ```bash
 cd level1
@@ -38,7 +38,7 @@ After the assessment, open Rasa Inspector (see Unit 6.3). Try "hello", "help", a
 
 ## Overview
 
-This assessment verifies that students can successfully train their Level 1 bot and that training completes without errors (model file created, no critical errors in logs).
+This assessment verifies that students can successfully train their Level 1 agent and that training completes without errors (model file created, no critical errors in logs).
 
 **Lab workflow (for implementers)**: The student-facing lab instructs students to (1) use the terminal window, (2) go to the main project folder and activate the venv there, (3) then `cd level1`, (4) then run `python -m rasa train`. The line "Run the assessment when done" appears at the end of Part 1 (Codio) only, not in Part 2 (Running locally). The grader runs from `level1` and checks for model file and logs only; it does not depend on where the venv was activated.
 
@@ -82,7 +82,7 @@ Success = a new `.tar.gz` in `models/` and no errors in the terminal (and option
 
 2. **Add Code Test** – Add Code Test → **Standard Code Test**. Configure:
 
-   **General** – Name: *Lab 6.1: Training Your Bot*. Description: *Verify that the student successfully trained the Level 1 bot*. Points: `12` (when using the repo grader script; it has 5 checks totaling 12). Language: `Bash`.
+   **General** – Name: *Lab 6.1: Training Your Agent*. Description: *Verify that the student successfully trained the Level 1 agent*. Points: `12` (when using the repo grader script; it has 5 checks totaling 12). Language: `Bash`.
 
    **Execution** – COMMAND: `bash /home/codio/workspace/.guides/secure/level1_graders/lab_6.1_grader.sh`. TIMEOUT: `60` seconds. Working Directory: `/home/codio/workspace` (grader script will cd to level1 for model checks; venv is checked in workspace root).
 

@@ -25,5 +25,5 @@ Use this file as the **Instructor Provided Solution File** in Codio's LLM Rubric
 ## Rubric summary for autograde
 
 - **transfer_money_tools.yml** exists, is valid YAML, has a flow with collect and an action step.
-- **action_process_transfer_with_tools.py** exists, defines the action name and run() with slot reads and at least one bot message.
+- **action_process_transfer_with_tools.py** exists, defines the action name and run() with slot reads and at least one agent message.
 - **domain/basics.yml** lists the action in the actions section.

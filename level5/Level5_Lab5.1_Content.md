@@ -1,4 +1,4 @@
-**Objective.** In this lab you will train the Level 5 bot from the `level5` folder so that the model includes your domain, flows, and tool registration.
+**Objective.** In this lab you will train the Level 5 agent from the `level5` folder so that the model includes your domain, flows, and tool registration.
 
 ## Step-by-Step Instructions
 

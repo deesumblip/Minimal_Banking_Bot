@@ -7,7 +7,7 @@
 **Step 2.** Create `sub_agents/banking_assistant/config.yml` with:
 - `agent:` with `name: banking_assistant`, `protocol: RASA`, and a `description:` (e.g. helps with balance, transfers, banking questions using MCP tools).
 - `configuration:` with `llm:` and `model_group:` (e.g. gpt-4o-mini) matching your config.
-- `connections:` with `mcp_servers:` listing the name of the MCP server (e.g. `banking_mcp` — you will register it in Lab 3.1).
+- `connections:` with `mcp_servers:` listing the name of the MCP server (e.g. `banking_mcp`, you will register it in Lab 3.1).
 
 **Step 3.** Verify: the file exists at `level6/sub_agents/banking_assistant/config.yml` and has the required keys. **Use Check It!** below when done (Codio).
 

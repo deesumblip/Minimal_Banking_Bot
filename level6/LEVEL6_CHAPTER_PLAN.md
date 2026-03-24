@@ -68,7 +68,7 @@ This document lists what to do for **Level 6** (Sub-Agents) and **Chapter 1.6** 
   Create `Level6_Lab*.1_Assessment_Setup.md` (and any .2) with task IDs, COMMAND, grader path, and “expected PASS” criteria.
 
 - [ ] **level6/README.md**  
-  Fix current README (it describes Level 5). Replace with Level 6 final bot: contents (sub-agents, MCP, flows), what the bot can do, how to run (MCP server, actions, Rasa).
+  Fix current README (it describes Level 5). Replace with Level 6 final agent: contents (sub-agents, MCP, flows), what the agent can do, how to run (MCP server, actions, Rasa).
 
 - [ ] **RASA_LICENSE / Codio vs local**  
   If Level 6 has setup or env steps, follow the same pattern as Lab 0.1: RASA_LICENSE only where specified; separate Codio vs local instructions; no OPENAI_API_KEY in student-facing Lab 0.1–style steps unless required for that level.
@@ -85,6 +85,6 @@ For Level 6 / Chapter 1.6, do the following **on the basis of what we’ve done 
 4. **TUTORIAL + CONTENT_LABS doc** — level6/TUTORIAL.md and level6/LEVEL6_CONTENT_LABS_AND_ASSESSMENTS.md, following level4/level5.
 5. **Secure graders** — All Level 6 graders under `.guides/secure/level6_graders/`; all references point there.
 6. **Unit 6 bookend** — Full Unit 6 set (6.1–6.7) in both .guides and level6.
-7. **README** — level6/README.md describes the Level 6 final bot and how to run it.
+7. **README** — level6/README.md describes the Level 6 final agent and how to run it.
 
 This keeps Level 6 consistent with the “examples before labs” and “create your own version” approach used in Levels 4 and 5.

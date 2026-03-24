@@ -9,8 +9,8 @@ Add a second step to greet and show help:
 ```yaml
 flows:
   pattern_session_start:
-    description: Start the conversation with a greeting
     name: pattern session start
+    description: Start the conversation with a greeting
     nlu_trigger:
       - intent: session_start
     steps:

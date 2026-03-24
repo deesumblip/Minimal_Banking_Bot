@@ -2,6 +2,10 @@
 
 **Goal:** Learn how to collect multiple pieces of information from the user before performing an action.
 
+**Starting point:** Chapter 1.4 **assumes** you begin from **Chapter 1.3 completion** (your finished agent in **`level3/`**). Labs add transfer slots, **`action_process_transfer`**, and **`transfer_money.yml`**, then training and testing. See **Unit 0** (`Level4_Unit0_Content_0.1` and `0.2`). After **Lab 5.1**, **`level4/models/`** holds your trained model for **Lab 5.2**.
+
+**Repository vs pedagogy:** The **narrative** is always “Chapter 1.3 end state → apply Chapter 1.4 labs in **`level4/`**.” **In this repo**, the **`level4/`** folder is the **completed** Chapter 1.4 agent, checked in so **Codio** and **graders** can be tested end-to-end. It is **not** a minimal starter; **Unit 0** and the labs define the **delta** from **`level3/`**.
+
 ## What You'll Learn
 
 - How to define multiple slots in the domain
@@ -11,17 +15,17 @@
 
 ## Building on Level 3
 
-**Important:** This level builds on your Level 3 banking bot. You don't start from scratch. You use the **same virtual environment** created in Level 1 (in the **project root**). There is no new `.venv` inside `level4/`.
+**Important:** This level builds on your Level 3 banking agent. You don't start from scratch. You use the **same virtual environment** created in Level 1 (in the **project root**). There is no new `.venv` inside `level4/`.
 
 **Pipeline:** Chapter 1.3 (`level3`) still uses **`SearchReadyLLMCommandGenerator`**. Chapter 1.4 (`level4`) uses **`CompactLLMCommandGenerator`** for reliable multi-slot / free-text collection (same `model_group` and `FlowPolicy`). **Level 3 is not modified.** Details: **`PIPELINE_CHAPTER_1_3_AND_4.md`**.
 
-**Full delta (Ch 1.3 end → Ch 1.4 end):** **`Level4_Unit0_Content_0.2_What-Level-4-Adds.md`** (pipeline, labs, summary in one place).
+**Full delta (Ch 1.3 end → Ch 1.4 end):** **`Level4_Unit0_Content_0.2_What-Level-4-Adds.md`** (pipeline, labs, summary in one place). **File checklist:** **`LEVEL3_TO_LEVEL4_FILE_DELTA.md`**.
 
-The **level4** folder is set up as a copy of your Level 3 bot. You add the following in the labs.
+In the labs you **add** the following in **`level4/`** (on top of your Chapter 1.3–complete agent).
 
 **What stays the same:** All Level 3 responses, flows, actions, and the `account` slot remain.
 
-**What you add:** In Lab 2.1 you add slots `amount`, `recipient`, `account_from` and utter_ask_* responses and register `action_process_transfer`. In Lab 3.1 you create the action file. In Lab 4.1 you create the transfer_money flow. Your existing Level 3 banking bot continues to work; Level 4 adds multiple slot collection for the transfer flow.
+**What you add:** In Lab 2.1 you add slots `amount`, `recipient`, `account_from` and utter_ask_* responses and register `action_process_transfer`. In Lab 3.1 you create the action file. In Lab 4.1 you create the transfer_money flow. Your existing Level 3 banking agent continues to work; Level 4 adds multiple slot collection for the transfer flow.
 
 ---
 
@@ -51,17 +55,17 @@ Use your actual project path. Ensure `.env` exists in the project root (or level
 
 ## What's New in This Level
 
-**Additions to your Level 3 banking bot:**
+**Additions to your Level 3 banking agent:**
 
 - **Domain (Lab 2.1):** Slots `amount`, `recipient`, `account_from`; responses `utter_ask_amount`, `utter_ask_recipient`, `utter_ask_account_from`; `action_process_transfer` in the actions list.
 - **Action (Lab 3.1):** `actions/action_process_transfer.py` — reads the three slots and sends a transfer confirmation (and optionally validates placeholders).
 - **Flow (Lab 4.1):** `data/basics/transfer_money.yml` — collect amount, recipient, account_from, then run action_process_transfer.
 
-All Level 3 content (including check_balance flow and action_check_balance_simple) remains unchanged.
+All Chapter 1.3 content (including **`check_balance`**, **`holiday_hours`**, and the existing actions) remains in place; you add the transfer pieces alongside it.
 
 ## Key Concepts
 
-- **Multiple slot collection:** A flow can have several `collect:` steps; the bot asks for each value in order.
+- **Multiple slot collection:** A flow can have several `collect:` steps; the agent asks for each value in order.
 - **Consistent naming:** Slot names and `utter_ask_<slot_name>` in the domain must match the flow and the action's `get_slot(...)` calls.
 - **Validation:** In the action you can check for placeholders or missing values and re-prompt using the appropriate utter_ask_*.
 

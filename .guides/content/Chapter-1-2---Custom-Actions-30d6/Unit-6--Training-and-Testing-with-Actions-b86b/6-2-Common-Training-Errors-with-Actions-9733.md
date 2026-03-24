@@ -1,9 +1,8 @@
 #### Error: Action Not Found
 
 **What you'll see**:
-```
+
 Error: Action 'action_bank_hours' not found
-```
 
 **What this means**: Rasa can't find your action file.
 
@@ -18,9 +17,8 @@ Error: Action 'action_bank_hours' not found
 #### Error: Import Error
 
 **What you'll see**:
-```
+
 ImportError: cannot import name 'Action' from 'rasa_sdk'
-```
 
 **What this means**: Rasa SDK is not installed or wrong version.
 
@@ -34,9 +32,8 @@ ImportError: cannot import name 'Action' from 'rasa_sdk'
 #### Error: Name Mismatch
 
 **What you'll see**:
-```
+
 Error: Action name 'action_bank_hours' in domain doesn't match class name
-```
 
 **What this means**: The action name in domain doesn't match what `name()` returns.
 

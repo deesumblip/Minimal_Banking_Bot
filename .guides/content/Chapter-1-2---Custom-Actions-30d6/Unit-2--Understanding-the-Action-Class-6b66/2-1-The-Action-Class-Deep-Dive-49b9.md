@@ -1,10 +1,10 @@
 Let's examine the actual `action_bank_hours.py` file to understand how actions work.
 
-**Why an action (not an utter)?** This action returns a *different* message depending on the current day—Saturday, Sunday, or weekday. That requires Python logic and `datetime`. A simple `utter_*` response can't change based on when the user asks, so we need an action.
+**Why an action (not an utter)?** This action returns a *different* message depending on the current day, Saturday, Sunday, or weekday. That requires Python logic and `datetime`. A simple `utter_*` response can't change based on when the user asks, so we need an action.
 
 #### Complete Action File
 
-```python
+
 from datetime import datetime
 from typing import Any, Dict, List, Text
 
@@ -15,7 +15,7 @@ from rasa_sdk.executor import CollectingDispatcher
 class ActionBankHours(Action):
     """A custom action that returns bank hours based on the current day.
     
-    Uses datetime to tailor the message—this can't be done with a simple
+    Uses datetime to tailor the message, this can't be done with a simple
     utter response because the message changes depending on when the user asks.
     """
 
@@ -40,9 +40,9 @@ class ActionBankHours(Action):
         weekday = datetime.now().weekday()  # 0=Monday, 5=Saturday, 6=Sunday
 
         if weekday == 6:  # Sunday
-            message = "Today is Sunday—we're closed."
+            message = "Today is Sunday, we're closed."
         elif weekday == 5:  # Saturday
-            message = "Today is Saturday—we're open 10am-2pm."
+            message = "Today is Saturday, we're open 10am-2pm."
         else:  # Monday–Friday
             message = (
                 "Our bank hours are Monday-Friday 9am-5pm, "
@@ -51,7 +51,6 @@ class ActionBankHours(Action):
 
         dispatcher.utter_message(text=message)
         return []
-```
 
 #### Breaking Down Each Component
 

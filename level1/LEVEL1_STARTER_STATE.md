@@ -1,6 +1,6 @@
 # Level 1: Starter State (Before Students Start)
 
-This document describes the Level 1 bot as it should be **before students do any labs**. Use it to reset a workspace or verify the initial state.
+This document describes the Level 1 agent as it should be **before students do any labs**. Use it to reset a workspace or verify the initial state.
 
 ## Domain: `domain/basics.yml`
 

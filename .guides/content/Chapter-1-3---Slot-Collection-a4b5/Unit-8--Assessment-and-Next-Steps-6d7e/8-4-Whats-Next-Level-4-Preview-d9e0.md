@@ -1,10 +1,10 @@
-**Important. Building on Your Existing Banking Bot**
+**Important. Building on Your Existing Banking Agent**
 
-When you move to Level 4, you will continue working on the same banking bot you've built throughout Levels 1, 2, and 3. Level 4 doesn't start from scratch. It builds on what you've already created.
+When you move to Level 4, you will continue working on the same banking agent you've built throughout Levels 1, 2, and 3. Level 4 doesn't start from scratch. It builds on what you've already created.
 
 Your existing responses (all Level 1–3 responses) stay. Your existing flows (all Level 1–3 flows) stay. Your existing actions (all Level 2–3 actions) stay. Your existing account slot stays. Level 4 adds more slots, more ask responses, actions that use multiple slots, and flows that collect multiple slots.
 
-You don't start a new bot. You extend your existing Level 3 banking bot with multiple slot collection.
+You don't start a new agent. You extend your existing Level 3 banking agent with multiple slot collection.
 
 ---
 
@@ -28,4 +28,4 @@ In Level 4 you'll add additional slots (`amount`, `recipient`, `account_from`), 
 
 Move to Level 4 when you need to collect multiple pieces of information before performing an action, handle complex forms or multi-step data collection, or build actions that require multiple data points.
 
-Your Level 3 banking bot is the foundation. Level 4 adds multiple slot collection on top of it.
+Your Level 3 banking agent is the foundation. Level 4 adds multiple slot collection on top of it.

@@ -2,7 +2,7 @@ The banking_assistant sub-agent uses **ReAct** (LLM + tools). In this course the
 
 ## MCP server registration in endpoints.yml
 
-The sub-agent config references an MCP server by **name** (e.g. `banking_mcp`). That name must be defined in the main bot’s `endpoints.yml` under `mcp_servers:`, with a URL and type.
+The sub-agent config references an MCP server by **name** (e.g. `banking_mcp`). That name must be defined in the main agent’s `endpoints.yml` under `mcp_servers:`, with a URL and type.
 
 ## Example: mcp_servers in endpoints.yml
 

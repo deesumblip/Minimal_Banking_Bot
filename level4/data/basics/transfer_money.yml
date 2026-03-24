@@ -1,7 +1,7 @@
 flows:
   transfer_money:
     name: transfer money
-    # Keep this flow in the command-generator prompt whenever the guard passes (small bot: few flows).
+    # Keep this flow in the command-generator prompt whenever the guard passes (small agent: few flows).
     always_include_in_prompt: true
     if: true
     description: |

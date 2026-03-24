@@ -103,7 +103,7 @@ print("")
 
 # Check 5: Training pipeline complete (2 points) — confirms we reached end of checks with a model
 print("Check 5: Verifying training artifacts...")
-print(" Check 5: PASSED - level3 bot has a trained model to run or inspect (2 points)")
+print(" Check 5: PASSED - level3 agent has a trained model to run or inspect (2 points)")
 score += 2
 print("")
 

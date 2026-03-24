@@ -3,7 +3,7 @@
 ## Course Overview
 
 **Title**: Level 5: Tool Calling  
-**Description**: Adding LLM-Driven Tool Selection to Your Banking Bot  
+**Description**: Adding LLM-Driven Tool Selection to Your Banking Agent  
 **Prerequisites**: Level 1, Level 2, Level 3, and Level 4 must be completed  
 **Learning Objective**: Students learn to define tools (functions the LLM can call), register them in endpoints.yml, and use them in a flow so the main agent's LLM dynamically selects and invokes tools based on conversation context. Labs are ordered: tools folder (Lab 2.1) -> register tools (Lab 3.1) -> flow and action (Lab 4.1) -> train and test (Labs 5.1, 5.2).
 
@@ -13,7 +13,7 @@
 
 ### Unit 0: Recap - What You Built in Level 4
 **Type**: Content Page | **Assessment**: None
-**Sections**: 0.1 Your Level 4 Banking Bot | 0.2 What Level 5 Adds
+**Sections**: 0.1 Your Level 4 Banking Agent | 0.2 What Level 5 Adds
 **Key Concepts**: Recap Level 4; level5 folder = Level 4 end state; what Level 5 adds (tools, tools_module, transfer_money_tools flow).
 
 ### Unit 1: Introduction to Tools
@@ -43,7 +43,7 @@
 
 ### Unit 6: Summary and Next Steps
 **Type**: Content Page | **Assessment**: None
-**Sections**: 6.1 Complete Bot Walkthrough | 6.2 What You've Learned | 6.3 What's Next | 6.4 Knowledge Check | 6.5 Limitations of Level 5 | 6.6 What's Next: Level 6 Preview | 6.7 Course Completion Checklist
+**Sections**: 6.1 Complete Agent Walkthrough | 6.2 What You've Learned | 6.3 What's Next | 6.4 Knowledge Check | 6.5 Limitations of Level 5 | 6.6 What's Next: Level 6 Preview | 6.7 Course Completion Checklist
 **Key Concepts**: Level 5 summary; next steps (Level 6 sub-agents); knowledge check; limitations; Level 6 preview; completion checklist.
 
 ---
@@ -82,7 +82,7 @@ Existing: Chapter-1-1 (d3b4), Chapter-1-2 (30d6), Chapter-1-3 (a4b5), Chapter-1-
 
 | Unit | File |
 |------|------|
-| 0.1 | Level5_Unit0_Content_0.1_Your-Level-4-Banking-Bot.md |
+| 0.1 | Level5_Unit0_Content_0.1_Your-Level-4-Banking-Agent.md |
 | 0.2 | Level5_Unit0_Content_0.2_What-Level-5-Adds.md |
 | 1.1 | Level5_Unit1_Content_1.1_Tools-vs-Actions.md |
 | 1.2 | Level5_Unit1_Content_1.2_When-to-Use-Tools.md |
@@ -91,7 +91,7 @@ Existing: Chapter-1-1 (d3b4), Chapter-1-2 (30d6), Chapter-1-3 (a4b5), Chapter-1-
 | 4.1 | Level5_Unit4_Content_4.1_Using-Tools-in-a-Flow.md |
 | 5.1 | Level5_Unit5_Content_5.1_Training-Level-5.md |
 | 5.2 | Level5_Unit5_Content_5.2_Testing-Tool-Calling.md |
-| 6.1 | Level5_Unit6_Content_6.1_Complete-Bot-Walkthrough.md |
+| 6.1 | Level5_Unit6_Content_6.1_Complete-Agent-Walkthrough.md |
 | 6.2 | Level5_Unit6_Content_6.2_What-Youve-Learned.md |
 | 6.3 | Level5_Unit6_Content_6.3_Whats-Next.md |
 

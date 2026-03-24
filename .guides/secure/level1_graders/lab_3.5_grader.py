@@ -87,7 +87,7 @@ print("")
 print("==========================================")
 if score >= max_score:
     print(f"✅ PASS: Lab 3.5 complete! Score: {score}/{max_score}")
-    print("Your bot is ready for training (Lab 6.1).")
+    print("Your agent is ready for training (Lab 6.1).")
     print("==========================================")
     print("PASS")
     sys.exit(0)

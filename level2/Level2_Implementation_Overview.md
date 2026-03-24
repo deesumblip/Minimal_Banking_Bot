@@ -82,7 +82,7 @@ project/
 **Recommended auto-grading checks**:
 - Validate YAML files parse successfully and required keys exist (domain + flows + patterns)
 - Validate required new artifacts for Level 2 exist (e.g., new flows/actions/tools)
-- Smoke-test bot starts (`rasa inspect`) and responds to a small scripted conversation
+- Smoke-test agent starts (`rasa inspect`) and responds to a small scripted conversation
 
 **Implementation notes**:
 - Prefer deterministic checks (file existence + YAML structure + expected strings) over LLM-output matching.

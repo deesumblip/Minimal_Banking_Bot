@@ -1,8 +1,8 @@
 ### 2.3 Response Variations
 
-Having multiple variations of the same response makes your bot feel more natural and less robotic.
+Having multiple variations of the same response makes your agent feel more natural and less robotic.
 
-**Why we use them**: Users notice when a bot repeats the exact same phrase. Variations, plus `rephrase: True` where appropriate, keep the meaning the same but change the wording, so the bot feels more like a person and less like a script.
+**Why we use them**: Users notice when a agent repeats the exact same phrase. Variations, plus `rephrase: True` where appropriate, keep the meaning the same but change the wording, so the agent feels more like a person and less like a script.
 
 #### When to Use Variations
 

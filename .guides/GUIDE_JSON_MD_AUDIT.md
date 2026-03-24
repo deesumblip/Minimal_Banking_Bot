@@ -9,7 +9,7 @@
 - **Malformed `path` in `files` (fixed):** Three page JSONs had `"path": "#terminal: "` (trailing space and colon). Codio may treat this as a special target and call `.content()` on the result, causing the error. **Fixed** by changing to `"path": "#terminal"` in:
   - `Chapter-1-1---Just-Responses-d3b4/Unit-0--Prerequisites-and-Setup-1039/0-2-Project-Structure-c2ed.json`
   - `Chapter-1-1---Just-Responses-d3b4/Unit-0--Prerequisites-and-Setup-1039/Lab-0-1--Create-Virtual-Environment-and-Install-Rasa-Pro-4434.json`
-  - `Chapter-1-1---Just-Responses-d3b4/Unit-6--Training-and-Testing-9f4e/Lab-6-1-Training-Your-Bot-c3d4.json`
+  - `Chapter-1-1---Just-Responses-d3b4/Unit-6--Training-and-Testing-9f4e/Lab-6-1-Training-Your-Agent-c3d4.json`
 
 ## Notes
 

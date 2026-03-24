@@ -1,4 +1,4 @@
-**Objective.** Run a completion check to verify that your Level 6 bot has all required components: sub_agents/banking_assistant config, mcp_servers in endpoints.yml, ask_banking_assistant flow, and (optionally) a trained model.
+**Objective.** Run a completion check to verify that your Level 6 agent has all required components: sub_agents/banking_assistant config, mcp_servers in endpoints.yml, ask_banking_assistant flow, and (optionally) a trained model.
 
 ## Step-by-Step Instructions
 

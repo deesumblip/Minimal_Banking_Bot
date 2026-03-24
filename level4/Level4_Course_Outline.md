@@ -4,7 +4,7 @@
 
 **Title**: Level 4: Multiple Slots  
 **Description**: Adding a Transfer Flow with Multiple Slot Collection  
-**Prerequisites**: Level 1, Level 2, and Level 3 must be completed  
+**Prerequisites**: Level 1, Level 2, and Level 3 must be completed (Chapter 1.4 **assumes** the **Chapter 1.3 completion** baseline described in Unit 0.1)  
 **Learning Objective**: Students learn to add multiple slots, multiple ask responses, one new action that uses all slots, and one flow that collects several slots then runs the action. They also align **`level4/config.yml`** and **`level4/endpoints.yml`** with the Chapter 1.4 pattern (**Unit 0.2**). Labs are ordered: domain (Lab 2.1) → action (Lab 3.1) → flow (Lab 4.1) → train (Lab 5.1) → completion check (Lab 5.2).
 
 ---
@@ -16,7 +16,7 @@
 **Assessment**: None
 
 **Sections**:
-- 0.1 Your Level 3 Banking Bot — `Level4_Unit0_Content_0.1_Your-Level-3-Banking-Bot.md`
+- 0.1 Your Level 3 Banking Agent — `Level4_Unit0_Content_0.1_Your-Level-3-Banking-Agent.md`
 - 0.2 What Level 4 Adds — `Level4_Unit0_Content_0.2_What-Level-4-Adds.md` (includes **full Ch 1.3 end → Ch 1.4 end checklist**: pipeline + labs + summary)
 
 **Key Concepts**: Recap Level 3, **`level4/`** baseline, pipeline + lab delta in **0.2**, transfer flow
@@ -90,7 +90,7 @@
 **Assessment**: None
 
 **Sections**:
-- 6.1 Complete Bot Walkthrough — `Level4_Unit6_Content_6.1_Complete-Bot-Walkthrough.md`
+- 6.1 Complete Agent Walkthrough — `Level4_Unit6_Content_6.1_Complete-Agent-Walkthrough.md`
 - 6.2 What You've Learned — `Level4_Unit6_Content_6.2_What-Youve-Learned.md`
 - 6.3 What's Next — `Level4_Unit6_Content_6.3_Whats-Next.md`
 - 6.4 Knowledge Check — `Level4_Unit6_Content_6.4_Knowledge-Check.md`
@@ -124,7 +124,7 @@ All source files live in **level4/** so you can push to GitHub and sync the same
 
 | Unit | File |
 |------|------|
-| 0.1 | Level4_Unit0_Content_0.1_Your-Level-3-Banking-Bot.md |
+| 0.1 | Level4_Unit0_Content_0.1_Your-Level-3-Banking-Agent.md |
 | 0.2 | Level4_Unit0_Content_0.2_What-Level-4-Adds.md |
 | 1.1 | Level4_Unit1_Content_1.1_Multiple-Slots.md |
 | 1.2 | Level4_Unit1_Content_1.2_Order-of-Collection.md |
@@ -133,7 +133,7 @@ All source files live in **level4/** so you can push to GitHub and sync the same
 | 2.1 | Level4_Unit2_Content_2.1_Adding-Slots-and-Responses.md |
 | 3.1 | Level4_Unit3_Content_3.1_Reading-Multiple-Slots.md |
 | 4.1 | Level4_Unit4_Content_4.1_Multiple-Collect-Steps.md |
-| 6.1 | Level4_Unit6_Content_6.1_Complete-Bot-Walkthrough.md |
+| 6.1 | Level4_Unit6_Content_6.1_Complete-Agent-Walkthrough.md |
 | 6.2 | Level4_Unit6_Content_6.2_What-Youve-Learned.md |
 | 6.3 | Level4_Unit6_Content_6.3_Whats-Next.md |
 | 6.4 | Level4_Unit6_Content_6.4_Knowledge-Check.md |

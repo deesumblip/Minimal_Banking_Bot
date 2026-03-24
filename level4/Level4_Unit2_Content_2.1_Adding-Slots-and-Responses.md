@@ -1,4 +1,4 @@
-In Lab 2.1 you will update the domain so the bot can collect amount, recipient, and account_from for the transfer flow.
+In Lab 2.1 you will update the domain so the agent can collect amount, recipient, and account_from for the transfer flow.
 
 ## What You Will Add
 

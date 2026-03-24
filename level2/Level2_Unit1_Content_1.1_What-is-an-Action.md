@@ -1,6 +1,6 @@
 ### 1.1 What is an Action?
 
-An **action** is custom Python code that your bot can execute. Actions allow your bot to do more than just say predefined text - they can perform calculations, access databases, call APIs, and execute any Python logic you write.
+An **action** is custom Python code that your agent can execute. Actions allow your agent to do more than just say predefined text - they can perform calculations, access databases, call APIs, and execute any Python logic you write.
 
 #### Actions vs. Responses
 

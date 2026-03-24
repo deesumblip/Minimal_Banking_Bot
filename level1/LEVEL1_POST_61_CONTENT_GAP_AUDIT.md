@@ -22,7 +22,7 @@ So after Lab 3.5, students have: greet, help, contact, goodbye, hours, balance (
 
 ---
 
-## Lab 6.1 – Training Your Bot
+## Lab 6.1 – Training Your Agent
 
 - **Assumes**: Lab 3.5 done (domain + hours/balance flows) so `rasa train` passes validation.
 - **Gap?** **No.** Lab 6.1 text says "Before you begin: Complete Lab 3.5 (Adding New Flows)".
@@ -36,7 +36,7 @@ So after Lab 3.5, students have: greet, help, contact, goodbye, hours, balance (
 
 ---
 
-## Lab 6.3 – Testing Your Bot
+## Lab 6.3 – Testing Your Agent
 
 - **Assumes**: greet, help, contact flows (and optionally goodbye).
 - **Gap?** **No.** Greet/help/contact are in the repo; goodbye is created in Lab 3.2. Lab 6.3 says "Test the goodbye flow (if you created it)".
@@ -44,7 +44,7 @@ So after Lab 3.5, students have: greet, help, contact, goodbye, hours, balance (
 
 ---
 
-## Lab 7.1 – Complete Bot Walkthrough
+## Lab 7.1 – Complete Agent Walkthrough
 
 - **Assumes**: Session start → greet; help flow; contact flow; pattern_completed.
 - **Gap?** **No.** All of these are in the starter (patterns + greet/help/contact).

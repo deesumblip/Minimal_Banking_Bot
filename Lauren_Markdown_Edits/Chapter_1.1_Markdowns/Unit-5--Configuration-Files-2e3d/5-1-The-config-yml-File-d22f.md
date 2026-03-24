@@ -1,13 +1,13 @@
-The `config.yml` file tells Rasa **how to build your bot**. It's like the blueprint that defines the bot's architecture.
+The `config.yml` file tells Rasa **how to build your agent**. It's like the blueprint that defines the agent's architecture.
 
-**File Location**: `config.yml` (root of your bot folder)
+**File Location**: `config.yml` (root of your agent folder)
 
 #### Complete config.yml Breakdown
 
 ```yaml
 recipe: default.v1
 language: en
-assistant_id: level1-bot
+assistant_id: level1-agent
 
 pipeline:
   - name: SearchReadyLLMCommandGenerator
@@ -26,14 +26,14 @@ policies:
    - Recipes define the default configuration
 
 2. **`language: en`**
-   - The language your bot speaks
+   - The language your agent speaks
    - `en` = English
    - Change to `es` for Spanish, `fr` for French, etc.
 
-3. **`assistant_id: level1-bot`**
-   - Unique identifier for this bot
+3. **`assistant_id: level1-agent`**
+   - Unique identifier for this agent
    - Used in logs and tracking
-   - Should be unique if you have multiple bots
+   - Should be unique if you have multiple agents
 
 4. **`pipeline:`**
    - Defines how Rasa understands user messages
@@ -48,10 +48,10 @@ policies:
 #### Simplified Mental Model
 
 ```
-config.yml = "How to build this bot"
+config.yml = "How to build this agent"
   ├── recipe: "Use Rasa Pro standard recipe"
   ├── language: "English"
-  ├── assistant_id: "level1-bot (unique name)"
+  ├── assistant_id: "level1-agent (unique name)"
   ├── pipeline: "Use an LLM to start flows"
   └── policies: "Use flows to decide responses"
 ```

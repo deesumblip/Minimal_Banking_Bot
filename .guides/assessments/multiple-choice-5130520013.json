@@ -11,17 +11,17 @@
 			{
 				"_id": "7f2a9c1e-4b30-5d81-9e42-513052001301",
 				"correct": true,
-				"answer": "The bot skips asking and continues to the next step in the flow, using the existing slot value"
+				"answer": "The agent skips asking and continues to the next step in the flow, using the existing slot value"
 			},
 			{
 				"_id": "8e3b0d2f-5c41-6e92-af53-513052001302",
 				"correct": false,
-				"answer": "The bot always asks again for the account number before continuing"
+				"answer": "The agent always asks again for the account number before continuing"
 			},
 			{
 				"_id": "9f4c1e3a-6d52-7fa3-b064-513052001303",
 				"correct": false,
-				"answer": "The bot clears the slot and ends the conversation"
+				"answer": "The agent clears the slot and ends the conversation"
 			},
 			{
 				"_id": "a05d2f4b-7e63-80b4-c175-513052001304",
@@ -46,7 +46,7 @@
 		},
 		"bloomsObjectiveLevel": "2",
 		"learningObjectives": "SWBAT explain collect-step behavior when the target slot is already set",
-		"guidance": "The correct answer is: The bot skips asking and continues to the next step in the flow, using the existing slot value. Rasa only prompts with `utter_ask_account` when the slot is empty. If the user already provided a value earlier, that value persists and the collect step does not re-ask.",
+		"guidance": "The correct answer is: The agent skips asking and continues to the next step in the flow, using the existing slot value. Rasa only prompts with `utter_ask_account` when the slot is empty. If the user already provided a value earlier, that value persists and the collect step does not re-ask.",
 		"showGuidanceAfterResponseOption": {
 			"type": "Attempts",
 			"passedFrom": 1

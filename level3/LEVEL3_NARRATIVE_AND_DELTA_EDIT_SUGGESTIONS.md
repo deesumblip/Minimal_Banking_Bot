@@ -72,7 +72,7 @@ Instead of 5.1 and 5.2 as two pages, merge into one short page, e.g. **5.1 The c
 
 - One sentence: You saw the collect step in Unit 1.3; in Lab 5.1 you'll add it to `check_balance.yml`.
 - Syntax block (collect + description).
-- One line: If the slot is empty the bot asks; if it has a value the flow continues to the action.
+- One line: If the slot is empty the agent asks; if it has a value the flow continues to the action.
 - Point to Lab 5.1.
 
 **Why:** Less redundancy and a single place that "collect" is taught (Unit 1), with Unit 5 as application only.

@@ -1,5 +1,5 @@
 
-Before diving into building your first Rasa bot, let's make sure you have everything set up correctly.
+Before diving into building your first Rasa agent, let's make sure you have everything set up correctly.
 
 **Prerequisites**: Python knowledge, command line familiarity, file editing, **Rasa license**. Plan for 2–3 hours. You can get your free Rasa developer edition license [at this link](https://rasa.com/rasa-pro-developer-edition-license-key-request)
 

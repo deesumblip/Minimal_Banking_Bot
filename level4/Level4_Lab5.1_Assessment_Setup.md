@@ -1,4 +1,4 @@
-# Lab 5.1: Training the Level 4 Bot - Assessment Setup
+# Lab 5.1: Training the Level 4 Agent - Assessment Setup
 
 ## Guide Content (For Students)
 
@@ -10,7 +10,7 @@
 
 ### Your Task (summary)
 
-Activate the virtual environment in the main project folder (root), navigate to `level4`, then train your bot by running:
+Activate the virtual environment in the main project folder (root), navigate to `level4`, then train your agent by running:
 
 ```bash
 cd level4
@@ -34,7 +34,7 @@ Run the assessment when you're done (Part 1 path).
 
 ### Overview
 
-This assessment verifies that students can successfully train their Level 4 bot and that training completes without errors (model file created, no critical errors in logs). Same conventions as Level 3: venv in workspace root, grader runs from root and checks `level4` for model and optional log checks.
+This assessment verifies that students can successfully train their Level 4 agent and that training completes without errors (model file created, no critical errors in logs). Same conventions as Level 3: venv in workspace root, grader runs from root and checks `level4` for model and optional log checks.
 
 **Lab workflow:** Students (1) activate venv in project root, (2) `cd level4`, (3) run `python -m rasa train`. The grader script runs from **workspace root** and checks `level4` for model and optional logs.
 

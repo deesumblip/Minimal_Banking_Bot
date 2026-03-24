@@ -1,8 +1,8 @@
-# Lab 7.1: Complete Bot Walkthrough - Assessment Setup
+# Lab 7.1: Complete Agent Walkthrough - Assessment Setup
 
 ## Guide Content (For Students)
 
-**Placement**: This lab follows Unit 7.1 (Complete Bot Walkthrough).
+**Placement**: This lab follows Unit 7.1 (Complete Agent Walkthrough).
 
 **Task**: Run a full conversation in Inspector that uses slot collection, persistence, and Level 2 flows. No graded assessment.
 

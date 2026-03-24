@@ -1,15 +1,15 @@
 ### 2.1 What is a Domain?
 
-The **domain file** is the bot's knowledge base. It defines everything the bot "knows":
+The **domain file** is the agent's knowledge base. It defines everything the agent "knows":
 - What it can say (responses)
 - What it can remember (slots) - not in Level 1
 - What code it can run (actions) - not in Level 1
 
 **File Location**: `domain/basics.yml`
 
-**Why we care**: Flows don't contain the actual message text; they only say "say this response." The domain is the single place where that text lives. When you add a response here, any flow can use it. When you change the wording, you change it in one place and it updates everywhere. That keeps your bot consistent and easy to maintain.
+**Why we care**: Flows don't contain the actual message text; they only say "say this response." The domain is the single place where that text lives. When you add a response here, any flow can use it. When you change the wording, you change it in one place and it updates everywhere. That keeps your agent consistent and easy to maintain.
 
-**Analogy**: The domain is like a dictionary that defines all the responses the bot can use.
+**Analogy**: The domain is like a dictionary that defines all the responses the agent can use.
 
 #### Domain Structure
 

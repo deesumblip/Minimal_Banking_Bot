@@ -7,7 +7,7 @@ A sub-agent lives in a folder under `sub_agents/<name>/`. Rasa discovers it by n
 
 ## Example: Sub-agent config
 
-Below is an example of a ReAct sub-agent config. You will create your own version in Lab 2.1 (e.g. with a description that fits your bot). The sub-agent uses an LLM and connects to one MCP server named `banking_mcp` (you will register that server in endpoints.yml in Lab 3.1).
+Below is an example of a ReAct sub-agent config. You will create your own version in Lab 2.1 (e.g. with a description that fits your agent). The sub-agent uses an LLM and connects to one MCP server named `banking_mcp` (you will register that server in endpoints.yml in Lab 3.1).
 
 ```yaml
 agent:

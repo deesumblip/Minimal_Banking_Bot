@@ -6,7 +6,7 @@
 
 #### Why YAML?
 
-YAML is designed to be easy for humans to read and write, making it perfect for configuration files. All Rasa bot files use YAML format.
+YAML is designed to be easy for humans to read and write, making it perfect for configuration files. All Rasa agent files use YAML format.
 
 #### Basic YAML Rules
 

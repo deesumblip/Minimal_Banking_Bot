@@ -2,7 +2,7 @@
 
 ### Your Task
 
-Train your bot so that it includes your actions and flows. With your virtual environment activated, run:
+Train your agent so that it includes your actions and flows. With your virtual environment activated, run:
 
 ```bash
 python -m rasa train

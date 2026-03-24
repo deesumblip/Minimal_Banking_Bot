@@ -13,7 +13,7 @@ Each `collect:` step can include a **`description:`** for the slot. In **Rasa Pr
 
 ## Example: The transfer_money flow
 
-Below is an example of the flow file. You will create your own version in Lab 4.1 (e.g. with a name and description that fit your bot).
+Below is an example of the flow file. You will create your own version in Lab 4.1 (e.g. with a name and description that fit your agent).
 
 ```yaml
 flows:

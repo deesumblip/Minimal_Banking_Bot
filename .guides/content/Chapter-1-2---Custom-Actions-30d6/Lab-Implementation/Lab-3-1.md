@@ -8,7 +8,7 @@
 
 ### Your Task
 
-You've learned how actions are structured and how they work. Now create a **new** action: `action_holiday_hours`, which returns the bank's holiday schedule **based on today's date**. If today is a holiday, the action should say we're closed today; otherwise it should return the general holiday schedule. That way the response depends on the current date—so it has to be an action, not a single `utter_*` response. Follow the steps below.
+You've learned how actions are structured and how they work. Now create a **new** action: `action_holiday_hours`, which returns the bank's holiday schedule **based on today's date**. If today is a holiday, the action should say we're closed today; otherwise it should return the general holiday schedule. That way the response depends on the current date, so it has to be an action, not a single `utter_*` response. Follow the steps below.
 
 ---
 
@@ -35,8 +35,8 @@ You can also add `from typing import Any, Dict, List, Text` for type hints.
 **Step 5 – Implement `run()` with date-based logic**  
 - Add the `run()` method with parameters: `dispatcher`, `tracker`, and `domain`.  
 - Get today's date, e.g. `now = datetime.now()` and use `now.month` and `now.day` to check if today is a holiday.  
-- **If today is a holiday** (e.g. New Year's Day Jan 1, Independence Day July 4, or Christmas Dec 25—you can use these or your own list): set a message like *"We're closed today for [holiday name]."*  
-- **Otherwise**: set a message with the general holiday schedule, e.g. *"We're closed on New Year's Day, Independence Day, and Christmas. On other holidays we may have limited hours—please call ahead."*  
+- **If today is a holiday** (e.g. New Year's Day Jan 1, Independence Day July 4, or Christmas Dec 25, you can use these or your own list): set a message like *"We're closed today for [holiday name]."*  
+- **Otherwise**: set a message with the general holiday schedule, e.g. *"We're closed on New Year's Day, Independence Day, and Christmas. On other holidays we may have limited hours, please call ahead."*  
 - Call `dispatcher.utter_message(text=message)` **once** with whichever message you chose.  
 - At the end of `run()`, return `[]` (an empty list).
 
@@ -72,15 +72,14 @@ This assessment verifies that students can create a custom action file (`action_
 ## Grader Script Location
 
 Save the grader script at:
-```
+
 .guides/secure/level2_graders/lab_3.1_grader.sh
-```
 
 ## Grader Script
 
 The grader only checks what is explicitly instructed in the student lab: file location/name, imports, datetime, class, name(), and run().
 
-```bash
+
 #!/bin/bash
 cd /home/codio/workspace/level2
 
@@ -170,13 +169,12 @@ echo "Score: $score/$max_score"
 if [ $score -lt $max_score ]; then
     exit 1
 fi
-```
 
 ### Example student deliverable (for grading reference)
 
 Students should produce a file at `actions/action_holiday_hours.py`. The following is a minimal example that satisfies the grader (exact wording of messages may vary):
 
-```python
+
 from datetime import datetime
 
 from rasa_sdk import Action, Tracker
@@ -198,11 +196,10 @@ class ActionHolidayHours(Action):
         else:
             message = (
                 "We're closed on New Year's Day, Independence Day, and Christmas. "
-                "On other holidays we may have limited hours—please call ahead."
+                "On other holidays we may have limited hours, please call ahead."
             )
         dispatcher.utter_message(text=message)
         return []
-```
 
 ## Assessment Setup and Configuration
 

@@ -32,7 +32,7 @@ For Level 2, we don't use the tracker much - it's mainly for Level 3 when we add
 
 #### Domain
 
-The `domain` contains your bot's configuration:
+The `domain` contains your agent's configuration:
 
 ```python
 # Access domain (rarely needed)

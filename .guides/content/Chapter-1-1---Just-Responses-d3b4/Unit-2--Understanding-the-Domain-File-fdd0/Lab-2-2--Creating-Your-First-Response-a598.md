@@ -1,4 +1,4 @@
-**Objective**: Add a new `utter_goodbye` response to your bot's domain file.
+**Objective**: Add a new `utter_goodbye` response to your agent's domain file.
 
 #### Step-by-Step Tutorial
 
@@ -95,7 +95,7 @@ Before saving, double-check:
 
 Your `responses:` section should now be formatted to look like this:
 
-```yaml
+
 responses:
   utter_greet:
     - text: "Hi! I'm a banking assistant. How can I help you today?"
@@ -121,7 +121,6 @@ responses:
     - text: "Goodbye! Have a great day!"
       metadata:
         rephrase: True
-```
 
 #### Common Mistakes
 
@@ -134,7 +133,7 @@ responses:
 
 ### 2.3 Response Variations
 
-Having multiple variations of the same response makes your bot feel more natural and less robotic.
+Having multiple variations of the same response makes your agent feel more natural and less robotic.
 
 #### When to Use Variations
 
@@ -153,14 +152,13 @@ Having multiple variations of the same response makes your bot feel more natural
 
 #### Example: Multiple Variations
 
-```yaml
+
 utter_greet:
   - text: "Hi! I'm a banking assistant. How can I help you today?"
   - text: "Hello! I'm here to help with your banking needs."
   - text: "Welcome! How can I assist you today?"
     metadata:
       rephrase: True
-```
 
 When `utter_greet` is called, Rasa randomly selects one of these three options.
 

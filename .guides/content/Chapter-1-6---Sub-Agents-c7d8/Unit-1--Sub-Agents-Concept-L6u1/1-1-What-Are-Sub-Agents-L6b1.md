@@ -12,10 +12,9 @@ A **sub-agent** is a separate agent that the main agent can **call** from a flow
 
 In Level 6 you will add a flow whose steps include **calling** a sub-agent. The flow does not list the sub-agent’s internal steps; it has one step that hands off:
 
-```yaml
+
 steps:
   - call: banking_assistant
   - action: utter_help
-```
 
-When the flow reaches `call: banking_assistant`, the **banking_assistant** sub-agent runs (with its own LLM and MCP tools). When the sub-agent finishes, the main flow continues with `action: utter_help`. So the user "talks to the banking assistant" until that agent is done, then the main bot can offer help again.
+When the flow reaches `call: banking_assistant`, the **banking_assistant** sub-agent runs (with its own LLM and MCP tools). When the sub-agent finishes, the main flow continues with `action: utter_help`. So the user "talks to the banking assistant" until that agent is done, then the main agent can offer help again.

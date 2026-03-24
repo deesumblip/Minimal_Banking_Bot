@@ -1,4 +1,4 @@
-**Objective.** In Unit 2.1 you saw an example of a complete tool function (`check_balance`). In this lab you will create your own version: the `tools/` folder and `tools/banking_tools.py` with at least three tool functions that the LLM can call—`check_balance(account)`, `process_transfer(amount, from_account, to_account)`, and `get_account_info(account)`—following the same pattern (docstrings, type hints, return dict, `__all__`).
+**Objective.** In Unit 2.1 you saw an example of a complete tool function (`check_balance`). In this lab you will create your own version: the `tools/` folder and `tools/banking_tools.py` with at least three tool functions that the LLM can call, `check_balance(account)`, `process_transfer(amount, from_account, to_account)`, and `get_account_info(account)`, following the same pattern (docstrings, type hints, return dict, `__all__`).
 
 ## Step-by-Step Instructions
 
@@ -8,9 +8,9 @@
 
 **Step 3.** Create `tools/banking_tools.py`. Define three functions:
 
-- **check_balance(account: str)** — Returns a dict (e.g. with keys such as `account`, `balance`, `currency`). Include a docstring describing that it checks the balance for a bank account.
-- **process_transfer(amount: str, from_account: str, to_account: str)** — Returns a dict (e.g. `success`, `message`). Docstring: process a money transfer from one account to another.
-- **get_account_info(account: str)** — Returns a dict (e.g. account type, status). Docstring: get information for a bank account.
+- **check_balance(account: str)**, Returns a dict (e.g. with keys such as `account`, `balance`, `currency`). Include a docstring describing that it checks the balance for a bank account.
+- **process_transfer(amount: str, from_account: str, to_account: str)**, Returns a dict (e.g. `success`, `message`). Docstring: process a money transfer from one account to another.
+- **get_account_info(account: str)**, Returns a dict (e.g. account type, status). Docstring: get information for a bank account.
 
 **Step 4.** At the top of `banking_tools.py`, add: `__all__ = ["check_balance", "process_transfer", "get_account_info"]` so Rasa can discover these tools.
 

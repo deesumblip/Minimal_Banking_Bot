@@ -1,4 +1,4 @@
-Level 2 **builds on your existing Level 1 bot** (same domain, same flows; no new bot).
+Level 2 **builds on your existing Level 1 agent** (same domain, same flows; no new agent).
 
 **Level 2 adds**: Custom Python actions; new flows that use actions; action registration in the domain (`actions:` section).
 

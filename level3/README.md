@@ -11,13 +11,13 @@
 
 ## Building on Level 2
 
-**Important:** This level builds on your Level 2 banking bot. You don't start from scratch. You use the **same virtual environment** created in Level 1 (in the **project root**). There is no new `.venv` inside `level3/`.
+**Important:** This level builds on your Level 2 banking agent. You don't start from scratch. You use the **same virtual environment** created in Level 1 (in the **project root**). There is no new `.venv` inside `level3/`.
 
-The **level3** folder is set up as a Chapter 1.2–equivalent copy of your Level 2 bot. **`action_bank_hours.py`** and **`action_holiday_hours.py`** are **preloaded** in `level3/actions/` from the start of Chapter 1.3 (you do not recreate the holiday action in this chapter). You add the following in the labs.
+The **level3** folder is set up as a Chapter 1.2–equivalent copy of your Level 2 agent. **`action_bank_hours.py`** and **`action_holiday_hours.py`** are **preloaded** in `level3/actions/` from the start of Chapter 1.3 (you do not recreate the holiday action in this chapter). You add the following in the labs.
 
 **What stays the same:** All Level 1 and Level 2 responses, flows, and the two preloaded custom actions. In Lab 3.1 you extend `actions:` so it lists the existing `action_bank_hours` and `action_holiday_hours` plus the new name.
 
-**What you add:** In Lab 3.1 you add the `slots:` section (with `account` slot), the `utter_ask_account` response, and you register `action_check_balance_simple` in the domain alongside `action_bank_hours` and `action_holiday_hours` (you create the Python file in Lab 4.1). In Lab 4.1 you complete a fill-in-the-blanks exercise for `action_check_balance_simple`, paste it into `level3/actions/`, and pass the code grader. In Lab 5.1 you create the flow `data/basics/check_balance.yml`. Your existing Level 2 banking bot continues to work; Level 3 adds memory (slots) so the bot can remember information.
+**What you add:** In Lab 3.1 you add the `slots:` section (with `account` slot), the `utter_ask_account` response, and you register `action_check_balance_simple` in the domain alongside `action_bank_hours` and `action_holiday_hours` (you create the Python file in Lab 4.1). In Lab 4.1 you complete a fill-in-the-blanks exercise for `action_check_balance_simple`, paste it into `level3/actions/`, and pass the code grader. In Lab 5.1 you create the flow `data/basics/check_balance.yml`. Your existing Level 2 banking agent continues to work; Level 3 adds memory (slots) so the agent can remember information.
 
 ---
 
@@ -40,16 +40,16 @@ The **level3** folder is set up as a Chapter 1.2–equivalent copy of your Level
 - **Windows (Command Prompt):** From project root, run `.venv\Scripts\activate.bat`, then `cd level3`. Same train and inspect commands; open http://localhost:5005 in the browser.
 - **macOS / Linux:** From project root, run `source .venv/bin/activate`, then `cd level3`. Same train and inspect commands; open http://localhost:5005 in the browser.
 
-Use your actual project path (e.g. `C:\Users\You\Minimal_Banking_Bot` or `~/Minimal_Banking_Bot`). Ensure `.env` exists in the `level3` folder with `RASA_LICENSE` and `OPENAI_API_KEY` (see Lab 0.1 / Unit 0 if needed).
+Use your actual project path (e.g. `C:\Users\You\Minimal_Banking_Agent` or `~/Minimal_Banking_Agent`). Ensure `.env` exists in the `level3` folder with `RASA_LICENSE` and `OPENAI_API_KEY` (see Lab 0.1 / Unit 0 if needed).
 
 ---
 
 ## What's New in This Level
 
-**Additions to your Level 2 banking bot:**
+**Additions to your Level 2 banking agent:**
 
 ### Slots (`domain/basics.yml`)
-- **Added `slots:` section** – Defines what the bot remembers
+- **Added `slots:` section** – Defines what the agent remembers
 - `account` slot stores the user's account number
 - Level 1/2 responses stay; **`action_bank_hours`** and **`action_holiday_hours`** stay under `actions:`; you add **`action_check_balance_simple`**
 
@@ -67,9 +67,9 @@ Use your actual project path (e.g. `C:\Users\You\Minimal_Banking_Bot` or `~/Mini
 
 ## Key Concepts
 
-**Slots:** The bot's memory. They store information the user provides and are defined in `domain/basics.yml` under `slots:`.
+**Slots:** The agent's memory. They store information the user provides and are defined in `domain/basics.yml` under `slots:`.
 
-**Collect step:** `collect: account` in a flow means "get this slot value before continuing." If the slot is empty, the bot asks (using `utter_ask_*`); if it has a value, the flow continues.
+**Collect step:** `collect: account` in a flow means "get this slot value before continuing." If the slot is empty, the agent asks (using `utter_ask_*`); if it has a value, the flow continues.
 
 **Reading slots in actions:** Use `tracker.get_slot("slot_name")` to read slot values. Always check for `None` or placeholder values.
 

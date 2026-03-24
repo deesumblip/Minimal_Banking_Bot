@@ -33,7 +33,7 @@ Based on the [Rasa sub-agents overview](https://rasa.com/docs/reference/config/a
 | **Orchestration** | The main agent runs a flow; when it hits an **autonomous step**, it invokes a sub-agent and passes context; the sub-agent runs until it signals completion (or exit conditions) or returns `INPUT_REQUIRED`. So "main agent orchestrates, sub-agent does one task" is the mental model. |
 | **Config and project layout** | Sub-agents live in a `sub_agents/<name>/` directory with their own `config.yml`; MCP servers and LLM are configured there or in `endpoints.yml`. Familiarity with `config.yml` and `endpoints.yml` is needed. |
 
-**In short:** Learners should be able to build a **single-agent** bot that uses **flows**, **prescriptive steps** (action, collect), **slots**, and **tools** (LLM-invoked). Sub-agents then add **autonomous steps** that delegate to a **sub-agent** with its **own tools** (e.g. via MCP) and **completion signalling** (task_completed or exit conditions on slots).
+**In short:** Learners should be able to build a **single-agent** agent that uses **flows**, **prescriptive steps** (action, collect), **slots**, and **tools** (LLM-invoked). Sub-agents then add **autonomous steps** that delegate to a **sub-agent** with its **own tools** (e.g. via MCP) and **completion signalling** (task_completed or exit conditions on slots).
 
 ---
 
@@ -41,19 +41,19 @@ Based on the [Rasa sub-agents overview](https://rasa.com/docs/reference/config/a
 
 ### Content to cover
 - **Unit 0:** Prerequisites and setup; what you need before starting.
-- **Unit 1:** What a conversational bot is; domain, intents, responses, flows.
+- **Unit 1:** What a conversational agent is; domain, intents, responses, flows.
 - **Unit 2:** Domain structure (`domain/basics.yml`): intents, responses, session_config.
 - **Unit 3:** Flows and patterns (flow YAML, steps, `utter_*`, patterns).
 - **Unit 4:** Training data (`data/basics/`, NLU examples, response rules).
 - **Unit 5:** Config and credentials (`config.yml`, `credentials.yml`, `endpoints.yml`).
-- **Unit 6:** Training and running the bot; Rasa Inspector.
-- **Unit 7–8:** Complete bot walkthrough; what you've learned; what's next.
+- **Unit 6:** Training and running the agent; Rasa Inspector.
+- **Unit 7–8:** Complete agent walkthrough; what you've learned; what's next.
 
 ### Examples / artifacts students must have seen or built
 - **Domain:** `intents:`, `responses:`, at least one flow referenced in domain or patterns.
 - **Flows:** At least one flow (e.g. greet, help, contact, hours, goodbye) with `utter_*` steps.
 - **Data:** `data/basics/*.yml` (e.g. greet, help, contact) and system patterns.
-- **Training:** Run `rasa train` from `level1` and run the bot (e.g. Inspector).
+- **Training:** Run `rasa train` from `level1` and run the agent (e.g. Inspector).
 - **Labs (minimum):** Lab 0.1 (venv + Rasa install), Lab 6.1 (training); ideally Lab 7.2 (add response + flow).
 
 ### Concepts that carry forward to sub-agents
@@ -72,7 +72,7 @@ Based on the [Rasa sub-agents overview](https://rasa.com/docs/reference/config/a
 - **Unit 3:** Creating your first action (e.g. bank hours).
 - **Unit 4:** Registering actions in `endpoints.yml` and using them in flows.
 - **Unit 5:** Training and testing with actions.
-- **Unit 6:** Complete bot walkthrough; what you've learned.
+- **Unit 6:** Complete agent walkthrough; what you've learned.
 
 ### Examples / artifacts students must have seen or built
 - **Action class:** At least one custom action (e.g. `action_bank_hours.py`) with `name()` and `run()`.
@@ -82,7 +82,7 @@ Based on the [Rasa sub-agents overview](https://rasa.com/docs/reference/config/a
 - **Labs (minimum):** Lab 3.1 (create first action), Lab 4.1 (register and use in flow), Lab 5.1 (train), Lab 6.1 (integration).
 
 ### Concepts that carry forward to sub-agents
-- **Actions** extend the bot with Python; they are **explicitly** referenced in flows.
+- **Actions** extend the agent with Python; they are **explicitly** referenced in flows.
 - **Orchestration:** The flow decides which action to run; the action runs and returns control.
 
 ---
@@ -119,7 +119,7 @@ Based on the [Rasa sub-agents overview](https://rasa.com/docs/reference/config/a
 - **Unit 3:** Reading multiple slots in one action (`tracker.get_slot` for each).
 - **Unit 4:** Flows with multiple collect steps; one flow that collects several slots then runs one action.
 - **Unit 5:** Training Level 4; testing transfer; completion check.
-- **Unit 6:** Complete bot walkthrough (all flows); what you've learned; what's next.
+- **Unit 6:** Complete agent walkthrough (all flows); what you've learned; what's next.
 
 ### Examples / artifacts students must have seen or built
 - **Domain:** Multiple slots (e.g. `amount`, `recipient`, `account_from`); corresponding `utter_ask_*` responses.
@@ -142,7 +142,7 @@ Based on the [Rasa sub-agents overview](https://rasa.com/docs/reference/config/a
 - **Unit 3:** Registering tools (`endpoints.yml` tools section, `tools_module`).
 - **Unit 4:** Using tools in a flow (e.g. `transfer_money_tools.yml`, `action_process_transfer_with_tools`).
 - **Unit 5:** Training Level 5; testing tool calling; completion check.
-- **Unit 6:** Complete bot walkthrough; what you've learned; what's next (including Level 6 sub-agents).
+- **Unit 6:** Complete agent walkthrough; what you've learned; what's next (including Level 6 sub-agents).
 
 ### Examples / artifacts students must have seen or built
 - **Tools module:** `tools/banking_tools.py` (or equivalent) with at least one tool function; `__all__`; clear docstrings; return value as dict (e.g. for LLM).
@@ -164,7 +164,7 @@ Use this as a strategic checklist before starting Level 6.
 
 ### Environment & project
 - [ ] Single project with level folders (`level1` … `level5`); one venv at project root.
-- [ ] Can activate venv, `cd level5`, run `rasa train` and run the bot (e.g. Inspector).
+- [ ] Can activate venv, `cd level5`, run `rasa train` and run the agent (e.g. Inspector).
 
 ### Level 1–4 (foundation)
 - [ ] **Flows:** Understand flow YAML, steps, `utter_*`, and at least one flow that runs an `action_*`.
@@ -187,8 +187,8 @@ Use this as a strategic checklist before starting Level 6.
 
 ## 8. Optional but helpful before sub-agents
 
-- **NLU:** Refining intents and training data so the bot reliably triggers the right flow (e.g. `transfer_money` vs `transfer_money_tools`).
-- **Channels:** Running the bot on a channel and testing tool calling there.
+- **NLU:** Refining intents and training data so the agent reliably triggers the right flow (e.g. `transfer_money` vs `transfer_money_tools`).
+- **Channels:** Running the agent on a channel and testing tool calling there.
 - **More tools:** Adding extra tool functions (e.g. `close_account`, `list_transactions`) and exporting them in `__all__` — reinforces the "tool as callable" and registration pattern.
 
 ---

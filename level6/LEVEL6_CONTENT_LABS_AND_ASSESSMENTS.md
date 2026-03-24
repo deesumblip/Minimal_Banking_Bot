@@ -8,8 +8,8 @@ This document maps **Level 6** (Chapter 1.6 – Sub-Agents) content files, labs,
 
 | Level 5 | Level 6 equivalent |
 |---------|---------------------|
-| **Starter** = Level 5 end state (level6 folder) | level6 = Level 5 bot + sub-agent layer |
-| Unit 0: Your Level 4 bot / What Level 5 adds | Unit 0: Your Level 5 bot / What Level 6 adds |
+| **Starter** = Level 5 end state (level6 folder) | level6 = Level 5 agent + sub-agent layer |
+| Unit 0: Your Level 4 agent / What Level 5 adds | Unit 0: Your Level 5 agent / What Level 6 adds |
 | Unit 1: Introduction to tools | Unit 1: Sub-agents concept (what they are, when to use) |
 | Unit 2 + Lab 2.1 (tools folder) | Unit 2 + **Lab 2.1** (sub_agents/banking_assistant config) |
 | Unit 3 + Lab 3.1 (endpoints tools) | Unit 3 + **Lab 3.1** (endpoints mcp_servers) |
@@ -25,7 +25,7 @@ This document maps **Level 6** (Chapter 1.6 – Sub-Agents) content files, labs,
 
 | File | Purpose |
 |------|---------|
-| Level6_Unit0_Content_0.1_Your-Level-5-Banking-Bot.md | Recap: level6 = Level 5 bot; what remains. |
+| Level6_Unit0_Content_0.1_Your-Level-5-Banking-Agent.md | Recap: level6 = Level 5 agent; what remains. |
 | Level6_Unit0_Content_0.2_What-Level-6-Adds.md | Level 6 adds: sub-agent, flow that calls it, MCP registration. |
 | Level6_Unit1_Content_1.1_What-Are-Sub-Agents.md | Sub-agents = flow step call: agent_name; hand off, run until done, return. |
 | Level6_Unit1_Content_1.2_When-to-Use-Sub-Agents.md | When to use sub-agents vs tools in main agent. |

@@ -1,4 +1,4 @@
-# Minimal Banking Bot - Rasa Pro + CALM Learning Course
+# Minimal Banking Agent - Rasa Pro + CALM Learning Course
 
 A progressive, hands-on course for learning Rasa Pro + CALM from absolute beginner to advanced tool calling.
 
@@ -7,12 +7,12 @@ A progressive, hands-on course for learning Rasa Pro + CALM from absolute beginn
 This repository contains **5 levels** of increasing complexity, each building on the previous one:
 
 - **🟢 Level 1: Just Responses** - Learn the basics of flows and predefined messages
-- **🟡 Level 2: Simple Actions** - Add custom Python code to your bot
+- **🟡 Level 2: Simple Actions** - Add custom Python code to your agent
 - **🟠 Level 3: Slot Collection** - Store and use information from users
 - **🔴 Level 4: Multiple Slots** - Handle complex multi-step conversations
 - **🟣 Level 5: Tool Calling** - Enable dynamic function selection by the LLM
 
-Each level is a **complete, runnable bot** that you can train and test independently.
+Each level is a **complete, runnable agent** that you can train and test independently.
 
 ---
 
@@ -63,7 +63,7 @@ Each level is a **complete, runnable bot** that you can train and test independe
 
 6. **Open Inspector:**
    - Navigate to: `http://localhost:5005/webhooks/socketio/inspect.html`
-   - Start chatting with your bot!
+   - Start chatting with your agent!
 
 ---
 
@@ -71,12 +71,12 @@ Each level is a **complete, runnable bot** that you can train and test independe
 
 ### Level 1: Just Responses 🟢
 
-**Goal:** Build the simplest possible bot using only predefined responses.
+**Goal:** Build the simplest possible agent using only predefined responses.
 
 **What you'll learn:**
-- How to define bot responses in the domain
+- How to define agent responses in the domain
 - How to create simple flows
-- The basic structure of a Rasa bot
+- The basic structure of a Rasa agent
 
 **Files:**
 - `domain/basics.yml` - Only responses (no slots, no actions)
@@ -88,7 +88,7 @@ Each level is a **complete, runnable bot** that you can train and test independe
 
 ### Level 2: Simple Actions 🟡
 
-**Goal:** Learn how to write custom Python code (actions) that the bot can execute.
+**Goal:** Learn how to write custom Python code (actions) that the agent can execute.
 
 **What you'll learn:**
 - How to create custom actions in Python
@@ -193,7 +193,7 @@ If you encounter permission errors or conflicts:
 4. **Move to the next level** only when you understand the current one
 
 **Each level includes:**
-- ✅ Complete, runnable bot code
+- ✅ Complete, runnable agent code
 - ✅ Detailed README with explanations
 - ✅ Step-by-step setup instructions
 - ✅ Exercises to practice what you learned
@@ -206,7 +206,7 @@ If you encounter permission errors or conflicts:
 | Concept | What It Is | Where It Lives |
 |---------|-----------|----------------|
 | **Flow** | Step-by-step conversation plan | `data/*.yml` |
-| **Response** | Predefined bot message | `domain/basics.yml` → `responses:` |
+| **Response** | Predefined agent message | `domain/basics.yml` → `responses:` |
 | **Action** | Custom Python code | `actions/*.py` |
 | **Slot** | Conversation memory | `domain/basics.yml` → `slots:` |
 | **Tool** | Dynamic function the LLM can call | `tools/*.py` |

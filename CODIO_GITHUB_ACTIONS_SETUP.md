@@ -12,7 +12,7 @@ These steps require **Codio organization admin** rights.
 
 1. In Codio, go to **Organization → Integrations**.
 2. Find **GitHub API** (or similar) and click **Add Integration**.
-3. Give it a name (e.g. `Minimal_Banking_Bot_production`).
+3. Give it a name (e.g. `Minimal_Banking_Agent_production`).
 4. After creation, open the integration and copy:
    - **Client ID**
    - **Secret ID**  
@@ -33,11 +33,11 @@ These steps require **Codio organization admin** rights.
 
 ## Part 2: GitHub (This Repository)
 
-Do this in the **Minimal_Banking_Bot** repo on GitHub (and optionally in your local clone).
+Do this in the **Minimal_Banking_Agent** repo on GitHub (and optionally in your local clone).
 
 ### 2.1 Add Codio credentials as repository secrets
 
-1. On GitHub, open **deesumblip/Minimal_Banking_Bot** (or your fork).
+1. On GitHub, open **deesumblip/Minimal_Banking_Agent** (or your fork).
 2. Go to **Settings → Secrets and variables → Actions**.
 3. Click **New repository secret** and add two secrets:
 
@@ -110,7 +110,7 @@ It runs on every **push to `main`**, checks out the repo, and runs the Codio pub
 If the workflow fails with `404 NOT_FOUND` on the Codio API:
 
 1. **Confirm the IDs from the URL**
-   - In Codio, open **Rasa University** → **Minimal_Banking_Bot** and go to the **Overview** tab.
+   - In Codio, open **Rasa University** → **Minimal_Banking_Agent** and go to the **Overview** tab.
    - Copy the **course-id** and **assignment-id** directly from the browser address bar (they appear in the path; format may be `.../courses/<course-id>/assignments/<assignment-id>/...` or similar).
    - Paste them into `.github/workflows/codio-publish.yml` (replace the existing `course-id` and `assignment-id`). Even one wrong character will cause 404.
 
@@ -121,7 +121,7 @@ If the workflow fails with `404 NOT_FOUND` on the Codio API:
    - If you use **codio.co.uk** (not codio.com), in the workflow set `domain: codio.co.uk`. Wrong domain leads to 404.
 
 4. **Try names instead of IDs**
-   - In the workflow you can use `course-name: Rasa University` and `assignment-name: Minimal_Banking_Bot` instead of `course-id` and `assignment-id` (remove the id lines). Names must match Codio exactly.
+   - In the workflow you can use `course-name: Rasa University` and `assignment-name: Minimal_Banking_Agent` instead of `course-id` and `assignment-id` (remove the id lines). Names must match Codio exactly.
 
 ---
 

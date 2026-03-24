@@ -4,14 +4,14 @@ Test your understanding with these questions:
 
 #### Question 1: What is an Action?
 
-a) A predefined bot message  
-b) Custom Python code the bot can execute  
+a) A predefined agent message  
+b) Custom Python code the agent can execute  
 c) A conversation script  
 d) A configuration file
 
-**Answer**: b) Custom Python code the bot can execute
+**Answer**: b) Custom Python code the agent can execute
 
-**Explanation**: Actions are Python classes that execute custom code. They allow the bot to do more than just send static text - they can perform calculations, access databases, and execute any Python logic.
+**Explanation**: Actions are Python classes that execute custom code. They allow the agent to do more than just send static text - they can perform calculations, access databases, and execute any Python logic.
 
 ---
 

@@ -6,7 +6,7 @@
 
 1. Open your Codio project.
 2. Go to **Tools** → **Guides** → **Edit**.
-3. Find the **Lab 6.1: Training Your Bot** subsection.
+3. Find the **Lab 6.1: Training Your Agent** subsection.
 4. Scroll to the bottom of that subsection (after the student content).
 
 ### Step 2: Create the Code Test Assessment
@@ -141,7 +141,7 @@ Set these fields:
 
 1. Click **Save**.
 2. Test the assessment:
-   - Complete Lab 6.1 steps (create venv, train bot).
+   - Complete Lab 6.1 steps (create venv, train agent).
    - Run the assessment.
    - Verify it passes when training is complete.
 

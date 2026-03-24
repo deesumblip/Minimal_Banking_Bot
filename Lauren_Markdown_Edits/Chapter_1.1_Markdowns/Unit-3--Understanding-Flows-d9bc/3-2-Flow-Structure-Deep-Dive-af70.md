@@ -17,7 +17,7 @@ flows:
 
 2. **`greet:`**: Flow name
    - This is the identifier used to reference the flow
-   - Must be unique within the bot
+   - Must be unique within the agent
    - Convention: lowercase, descriptive
 
 3. **`name: say hello`**: Human-readable name

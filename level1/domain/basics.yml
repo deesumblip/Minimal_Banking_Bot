@@ -1,7 +1,7 @@
 ## Level 1: Just Responses
 #
 # This is the simplest possible domain file.
-# - Only responses (predefined bot messages)
+# - Only responses (predefined agent messages)
 # - No slots (memory)
 # - No actions (custom code)
 

@@ -9,16 +9,15 @@
 4. Save and test
 
 **Expected Result**:
-```yaml
+
 pattern_session_start:
-  description: Start the conversation with a greeting
   name: pattern session start
+  description: Start the conversation with a greeting
   nlu_trigger:
     - intent: session_start
   steps:
     - action: utter_greet
     - action: utter_contact
-```
 
 **What Happens**: New conversations start with greeting, then contact info.
 

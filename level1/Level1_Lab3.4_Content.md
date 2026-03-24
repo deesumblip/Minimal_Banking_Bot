@@ -1,6 +1,6 @@
 **Objective**: In Units 3.1–3.3 you saw flow structure and how descriptions help the LLM match user messages. In this lab you create two new flows (hours, balance) with clear, specific descriptions.
 
-**Why hours and balance**: A banking assistant is expected to answer "when are you open?" and "how do I check my balance?" Adding dedicated flows for these gives the bot clear paths for two very common questions. You write the description so the LLM knows when to trigger each flow, and you add the response or responses in the domain or reference existing ones. In Lab 3.5 you'll align these with the exact content the course expects for assessment.
+**Why hours and balance**: A banking assistant is expected to answer "when are you open?" and "how do I check my balance?" Adding dedicated flows for these gives the agent clear paths for two very common questions. You write the description so the LLM knows when to trigger each flow, and you add the response or responses in the domain or reference existing ones. In Lab 3.5 you'll align these with the exact content the course expects for assessment.
 
 **Before You Begin**: You've completed Lab 3.2; you understand flow structure; you can use `greet.yml` or `goodbye.yml` as templates.
 

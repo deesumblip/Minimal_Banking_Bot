@@ -5,7 +5,7 @@ This folder mirrors the Level 5 content from `level5/` (unit content and lab con
 ## Structure
 
 - **Chapter:** Chapter-1-5---Tool-Calling-f9e0
-- **Units:** Unit 0 (Recap Level 4) through Unit 6 (Summary and Next Steps) — 7 units total. Folder names are **Unit-0--** through **Unit-6--**. Unit 1 has three pages (1.1, 1.2, 1.3 Test Your Knowledge). Unit 6 has seven pages: 6.1 Complete Bot Walkthrough, 6.2 What You've Learned, 6.3 What's Next, 6.4 Knowledge Check, 6.5 Limitations of Level 5, 6.6 What's Next Level 6 Preview, 6.7 Course Completion Checklist.
+- **Units:** Unit 0 (Recap Level 4) through Unit 6 (Summary and Next Steps) — 7 units total. Folder names are **Unit-0--** through **Unit-6--**. Unit 1 has three pages (1.1, 1.2, 1.3 Test Your Knowledge). Unit 6 has seven pages: 6.1 Complete Agent Walkthrough, 6.2 What You've Learned, 6.3 What's Next, 6.4 Knowledge Check, 6.5 Limitations of Level 5, 6.6 What's Next Level 6 Preview, 6.7 Course Completion Checklist.
 - **Labs:** Lab 2.1 (tools folder), Lab 3.1 (endpoints), Lab 4.1 (flow and action), Lab 5.1 (training), Lab 5.2 (completion check)
 
 Each unit has an `index.json` and each page has a `.md` and `.json`. **IDs use the f9e0/L5 suffix** so they do not collide with other chapters.

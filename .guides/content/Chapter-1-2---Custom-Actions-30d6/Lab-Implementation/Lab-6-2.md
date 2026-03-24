@@ -2,9 +2,9 @@
 
 ## Overview
 
-Lab 6.2 reinforces that both actions are registered and verifies that the student has trained the bot. The lab uses the **virtual environment in the main folder** (project root): students go to main folder, activate that venv, then `cd level2` and train/run the Level 2 bot from there so Rasa uses level2's domain, flows, and actions. Steps separate **In Codio** (Linux) from **Running locally** (Windows/macOS/Linux).
+Lab 6.2 reinforces that both actions are registered and verifies that the student has trained the agent. The lab uses the **virtual environment in the main folder** (project root): students go to main folder, activate that venv, then `cd level2` and train/run the Level 2 agent from there so Rasa uses level2's domain, flows, and actions. Steps separate **In Codio** (Linux) from **Running locally** (Windows/macOS/Linux).
 
-**Lab 6.2 has its own graded assessment.** It runs the Lab 4.1 grader (domain registration) and additionally verifies that the student has trained the bot (a model file exists in `level2/models/`). Students run this assessment after completing Lab 4.1 (Unit 4) and Lab 6.1 (training). The lab is placed in Unit 6 right after Lab 6.1.
+**Lab 6.2 has its own graded assessment.** It runs the Lab 4.1 grader (domain registration) and additionally verifies that the student has trained the agent (a model file exists in `level2/models/`). Students run this assessment after completing Lab 4.1 (Unit 4) and Lab 6.1 (training). The lab is placed in Unit 6 right after Lab 6.1.
 
 ### Assessment Type
 

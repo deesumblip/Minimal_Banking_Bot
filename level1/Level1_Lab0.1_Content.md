@@ -1,6 +1,6 @@
 # Lab 0.1: Create Virtual Environment and Install Rasa Pro
 
-**Why this lab**: Every later lab depends on being able to run Rasa from a clean, predictable environment. A virtual environment keeps Rasa and its dependencies separate from the rest of your system so versions don't clash. Setting your Rasa Pro license here means training and running the bot will work when you get to Unit 6. Without this step, nothing that follows will run.
+**Why this lab**: Every later lab depends on being able to run Rasa from a clean, predictable environment. A virtual environment keeps Rasa and its dependencies separate from the rest of your system so versions don't clash. Setting your Rasa Pro license here means training and running the agent will work when you get to Unit 6. Without this step, nothing that follows will run.
 
 In this lab you will create a virtual environment in the **project root**, install Rasa Pro, set up **your own** Rasa Pro license (`RASA_LICENSE`), and verify everything works.
 
@@ -298,7 +298,7 @@ You should see version information with no errors.
 
 ## Step 6: Check project structure (all environments)
 
-In your file tree, go into `level1` and confirm the bot structure is present. You should see something like this:
+In your file tree, go into `level1` and confirm the agent structure is present. You should see something like this:
 
 ```
 level1/

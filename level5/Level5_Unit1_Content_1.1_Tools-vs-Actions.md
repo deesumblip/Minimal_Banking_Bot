@@ -1,4 +1,4 @@
-In Level 4 you used **actions**: steps in a flow explicitly call an action (e.g. `- action: action_process_transfer`). The bot always runs that action when the flow reaches that step.
+In Level 4 you used **actions**: steps in a flow explicitly call an action (e.g. `- action: action_process_transfer`). The agent always runs that action when the flow reaches that step.
 
 **Tools** are different. They are **functions the LLM can choose to call** based on the conversation. The flow does not name a specific tool; instead, the LLM sees the available tools (e.g. check_balance, process_transfer, get_account_info) and decides which to call and when, depending on what the user said.
 
@@ -28,7 +28,7 @@ steps:
   - action: action_process_transfer
 ```
 
-When the flow reaches that last step, the bot **always** runs `action_process_transfer`. There is no choice at runtime.
+When the flow reaches that last step, the agent **always** runs `action_process_transfer`. There is no choice at runtime.
 
 ## Example: What tools look like (Python functions)
 

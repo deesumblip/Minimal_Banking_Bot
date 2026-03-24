@@ -8,7 +8,7 @@
 
 ### Your Task
 
-You've learned how actions are structured and how they work. Now create a **new** action: `action_holiday_hours`, which returns the bank's holiday schedule **based on today's date**. If today is a holiday, the action should say we're closed today; otherwise it should return the general holiday schedule. That way the response depends on the current date—so it has to be an action, not a single `utter_*` response. Follow the steps below.
+You've learned how actions are structured and how they work. Now create a **new** action: `action_holiday_hours`, which returns the bank's holiday schedule **based on today's date**. If today is a holiday, the action should say we're closed today; otherwise it should return the general holiday schedule. That way the response depends on the current date, so it has to be an action, not a single `utter_*` response. Follow the steps below.
 
 ---
 
@@ -40,7 +40,7 @@ You can also add `from typing import Any, Dict, List, Text` for type hints.
   - If `(now.month == 1 and now.day == 1)` → message = *"We're closed today for New Year's Day."*  
   - Else if `(now.month == 7 and now.day == 4)` → message = *"We're closed today for Independence Day."*  
   - Else if `(now.month == 12 and now.day == 25)` → message = *"We're closed today for Christmas."*  
-  - Else → message = *"We're closed on New Year's Day, Independence Day, and Christmas. On other holidays we may have limited hours—please call ahead."*  
+  - Else → message = *"We're closed on New Year's Day, Independence Day, and Christmas. On other holidays we may have limited hours, please call ahead."*  
 - Call `dispatcher.utter_message(text=message)` **once**.  
 - At the end of `run()`, use the **literal** `return []` (type the empty list directly, not a variable) so the autograder passes.
 
@@ -76,15 +76,14 @@ This assessment verifies that students can create a custom action file (`action_
 ## Grader Script Location
 
 Save the grader script at:
-```
+
 .guides/secure/level2_graders/lab_3.2_grader.sh
-```
 
 ## Grader Script
 
 The grader only checks what is explicitly instructed in the student lab: file location/name, imports, datetime, class, name(), and run().
 
-```bash
+
 #!/bin/bash
 cd /home/codio/workspace/level2
 
@@ -174,13 +173,12 @@ echo "Score: $score/$max_score"
 if [ $score -lt $max_score ]; then
     exit 1
 fi
-```
 
 ### Example student deliverable (for grading reference)
 
 Students should produce a file at `actions/action_holiday_hours.py`. The following is a minimal example that satisfies the grader (exact wording of messages may vary):
 
-```python
+
 from datetime import datetime
 
 from rasa_sdk import Action, Tracker
@@ -202,11 +200,10 @@ class ActionHolidayHours(Action):
         else:
             message = (
                 "We're closed on New Year's Day, Independence Day, and Christmas. "
-                "On other holidays we may have limited hours—please call ahead."
+                "On other holidays we may have limited hours, please call ahead."
             )
         dispatcher.utter_message(text=message)
         return []
-```
 
 ## Assessment Setup and Configuration
 

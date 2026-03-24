@@ -1,6 +1,6 @@
 recipe: default.v1
 language: en
-assistant_id: level1-ollama-bot
+assistant_id: level1-ollama-agent
 
 pipeline:
   - name: SearchReadyLLMCommandGenerator

@@ -2,7 +2,7 @@
 
 **Objective**: Explore system patterns and understand their purpose.
 
-**Why this lab**: Before you change session start or pattern completed (Lab 4.2), you need to see where they live and how they're defined. Once you know how they trigger and what steps they run, you can safely add or change steps so the bot behaves the way you want when a conversation starts or ends.
+**Why this lab**: Before you change session start or pattern completed (Lab 4.2), you need to see where they live and how they're defined. Once you know how they trigger and what steps they run, you can safely add or change steps so the agent behaves the way you want when a conversation starts or ends.
 
 #### Steps
 

@@ -10,7 +10,7 @@ You will implement in this order: **tools folder and banking_tools.py** (Lab 2.1
 
 **Lab 4.1 — Flow and action.** You will create the flow `data/basics/transfer_money_tools.yml` (collect amount, recipient, account_from) and the action `action_process_transfer_with_tools`. In that flow, the LLM can call the tools you defined based on what the user says.
 
-**Lab 5.1 — Training.** You will train your Level 5 bot from the `level5` folder.
+**Lab 5.1 — Training.** You will train your Level 5 agent from the `level5` folder.
 
 **Lab 5.2 — Testing.** You will run the completion check and test tool-calling behavior in Rasa Inspector.
 

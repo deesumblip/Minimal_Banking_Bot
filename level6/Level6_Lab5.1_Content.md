@@ -1,4 +1,4 @@
-**Objective.** In Unit 5 you saw how to train the Level 6 bot. In this lab you will train from the level6 folder and run the assessment.
+**Objective.** In Unit 5 you saw how to train the Level 6 agent. In this lab you will train from the level6 folder and run the assessment.
 
 ## Step-by-Step Instructions
 

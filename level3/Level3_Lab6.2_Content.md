@@ -1,4 +1,4 @@
-Your goal is to test your Level 3 bot in Inspector so you see slot collection and persistence in action.
+Your goal is to test your Level 3 agent in Inspector so you see slot collection and persistence in action.
 
 **Prerequisite.** Complete Lab 6.1 (training). A model file must exist in `level3/models/`.
 
@@ -8,9 +8,9 @@ Your goal is to test your Level 3 bot in Inspector so you see slot collection an
 
 1. **Start Inspector.** In the terminal, from `level3` with venv active, run `python -m rasa inspect --debug`. Leave the terminal open. When you see "Starting Worker" in the terminal, open the **Rasa Inspect** tab in the top menu bar (do not use Tools → Ports or port 5005).
 
-2. **Test slot collection.** Type "Check my balance". The bot should ask "What is your account number?" Type "1234". The bot should respond with the balance for account 1234.
+2. **Test slot collection.** Type "Check my balance". The agent should ask "What is your account number?" Type "1234". The agent should respond with the balance for account 1234.
 
-3. **Test slot persistence.** Type "What's my balance?" again. The bot should remember account 1234 (no asking) and respond immediately.
+3. **Test slot persistence.** Type "What's my balance?" again. The agent should remember account 1234 (no asking) and respond immediately.
 
 4. **Verify Level 2 flows still work.** Type "What are your hours?" and the Level 2 flow should work. Type "Hello" and Level 1 should work.
 
@@ -28,7 +28,7 @@ You can use the debug panel in Inspector to see slot values if you want to explo
 
 ## Check Your Knowledge
 
-**1. When you first say "Check my balance" (slot empty), what should the bot do?**
+**1. When you first say "Check my balance" (slot empty), what should the agent do?**
 
 a) Reply with a balance immediately  
 b) Ask for your account number, such as "What is your account number?"  
@@ -37,10 +37,10 @@ d) Return an error
 
 **2. After you give "1234" as your account number, you say "What's my balance?" again. What should happen?**
 
-a) The bot asks for your account number again  
-b) The bot remembers 1234 and replies with the balance without asking  
-c) The bot says "Hello"  
-d) Nothing; the bot ignores the message  
+a) The agent asks for your account number again  
+b) The agent remembers 1234 and replies with the balance without asking  
+c) The agent says "Hello"  
+d) Nothing; the agent ignores the message  
 
 **3. How do you verify that Level 2 flows still work?**
 
@@ -56,5 +56,5 @@ d) Check the debug panel only
 | Q | Answer | Brief explanation |
 |---|--------|-------------------|
 | 1 | **b** | When the slot is empty, the `collect:` step prompts the user via `utter_ask_account`. |
-| 2 | **b** | Slot persistence means the bot remembers the account across turns and does not re-ask. |
+| 2 | **b** | Slot persistence means the agent remembers the account across turns and does not re-ask. |
 | 3 | **b** | "What are your hours?" triggers the Level 2 `hours` flow; if it works, Level 2 is intact. |

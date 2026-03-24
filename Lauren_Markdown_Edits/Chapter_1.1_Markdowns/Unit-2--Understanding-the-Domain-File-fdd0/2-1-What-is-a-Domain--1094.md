@@ -1,12 +1,12 @@
 
-The **domain file** is the bot's knowledge base. It defines everything the bot "knows":
+The **domain file** is the agent's knowledge base. It defines everything the agent "knows":
 - What it can **say** (responses)
 - What it can **remember** (slots) - not in Level 1
 - What code it can **run** (actions) - not in Level 1
 
 **File Location**: `domain/basics.yml`
 
-**Analogy**: The domain is like a dictionary that defines all the words (responses) the bot can use.
+**Analogy**: The domain is like a dictionary that defines all the words (responses) the agent can use.
 
 #### Domain Structure
 

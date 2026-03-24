@@ -1,6 +1,6 @@
 # Level 4: Content, Labs, and Assessment Files — How to Mirror Level 3
 
-This document describes how to create **Level 4** content, labs, and assessment files so they mirror the structure and style of Level 3. The **starting point** for Level 4 is the **end of the Level 3 bot** (level4 folder = Level 3 end state). Students add multiple slots, a new action, and the transfer flow in guided labs.
+This document describes how to create **Level 4** content, labs, and assessment files so they mirror the structure and style of Level 3. **Instructional content** assumes Chapter 1.4 **begins** from **Chapter 1.3 completion** (what the student finished in **`level3/`**); labs **add** transfer domain fields, **`action_process_transfer`**, **`transfer_money.yml`**, then train and test.
 
 ---
 
@@ -8,8 +8,8 @@ This document describes how to create **Level 4** content, labs, and assessment 
 
 | Level 3 | Level 4 equivalent |
 |--------|---------------------|
-| **Starter** = Level 2 end state | **Starter** = Level 3 end state (level4 = level3 after Labs 3.1, 4.1, 5.1) |
-| Unit 0: Your Level 2 bot / What Level 3 adds | Unit 0: Your Level 3 bot / What Level 4 adds |
+| **Starter** = Level 2 end state | **Starter** = Level 3 / Ch. 1.3 **completion** (then **add** transfer work in Chapter 1.4 labs) |
+| Unit 0: Your Level 2 agent / What Level 3 adds | Unit 0: Your Level 3 agent / What Level 4 adds |
 | Unit 1: Slots intro, types, naming | Unit 1: Multiple slots intro, ordering, slot naming (1.1, 1.2, 1.3) |
 | Unit 2 + **Lab 3.1** (domain: account, utter_ask_account, register action) | Unit 2 + **Lab 2.1** (domain: amount, recipient, account_from + utter_ask_* + register action_process_transfer) |
 | Unit 3 + **Lab 4.1** (action file: action_check_balance_simple) | Unit 3 + **Lab 3.1** (action file: action_process_transfer) |
@@ -33,7 +33,7 @@ Create **Level4_Course_Outline.md** in `level4/` with:
 - **Unit 3:** Reading multiple slots in actions → **Lab 3.1** (create action_process_transfer.py) (graded).
 - **Unit 4:** Flows with multiple collect steps → **Lab 4.1** (create transfer_money.yml) (graded).
 - **Unit 5:** Training and testing → **Lab 5.1** (train from level4), **Lab 5.2** (completion check graded + **Rasa Inspector** using a **fixed sequence of user turns** in the Lab 5.2 page—see **Scripted transfer** below). No separate Unit 5 concept-only pages.
-- **Unit 6:** Complete bot walkthrough, summary, what’s next.
+- **Unit 6:** Complete agent walkthrough, summary, what’s next.
 
 **Assessment summary table:** Lab 2.1 (domain), 3.1 (action), 4.1 (flow), 5.1 (train), 5.2 (test); same Codio pattern as Level 3 Lab 3.1 / Chapter 1.2 Lab 6.2: **sequence** of `Check N: PASSED` substring tests (see `code-output-compare-40102*` – `401050002.json`), not a single `PASS` line.
 
@@ -45,15 +45,15 @@ Create one markdown file per section, same naming pattern as Level 3. Paths unde
 
 | File | Purpose |
 |------|--------|
-| `Level4_Unit0_Content_0.1_Your-Level-3-Banking-Bot.md` | Recap: level4 folder = your Level 3 bot; what’s in domain (account slot, utter_ask_account, actions), data/basics (check_balance, hours, …), actions (action_bank_hours, action_check_balance_simple). What Level 3 couldn’t do: collect several pieces of info in one flow (e.g. amount, recipient, account). |
+| `Level4_Unit0_Content_0.1_Your-Level-3-Banking-Agent.md` | Recap: level4 folder = your Level 3 agent; what’s in domain (account slot, utter_ask_account, actions), data/basics (check_balance, hours, …), actions (action_bank_hours, action_check_balance_simple). What Level 3 couldn’t do: collect several pieces of info in one flow (e.g. amount, recipient, account). |
 | `Level4_Unit0_Content_0.2_What-Level-4-Adds.md` | Concept + **authoritative Ch 1.3 end → Ch 1.4 end checklist**: pipeline (**`config.yml`** / **`endpoints.yml`**), lab deliverables, summary table; lab order 2.1 → 3.1 → 4.1 → 5.1 → 5.2. |
-| `Level4_Unit1_Content_1.1_Multiple-Slots.md` | Multiple slots = bot remembers several values in one conversation (e.g. amount, recipient, account_from for a transfer). |
-| `Level4_Unit1_Content_1.2_Order-of-Collection.md` | Order of `collect:` steps in the flow determines the order the bot asks; keep order consistent with the action’s expectations. |
+| `Level4_Unit1_Content_1.1_Multiple-Slots.md` | Multiple slots = agent remembers several values in one conversation (e.g. amount, recipient, account_from for a transfer). |
+| `Level4_Unit1_Content_1.2_Order-of-Collection.md` | Order of `collect:` steps in the flow determines the order the agent asks; keep order consistent with the action’s expectations. |
 | `Level4_Unit1_Content_1.3_Slot-Naming-Multiple.md` | Naming: utter_ask_<slot_name>; slot names used in action must match domain and flow. |
 | `Level4_Unit2_Content_2.1_Adding-Slots-and-Responses.md` | Domain: add slots amount, recipient, account_from (type text); add utter_ask_amount, utter_ask_recipient, utter_ask_account_from; add action_process_transfer to actions. Pointer to Lab 2.1. |
 | `Level4_Unit3_Content_3.1_Reading-Multiple-Slots.md` | In an action, use `tracker.get_slot` for all three slots; cap **recipient** at **100** characters in code to match the flow; validate placeholders; pointer to Lab 3.1. |
 | `Level4_Unit4_Content_4.1_Multiple-Collect-Steps.md` | Flow steps: multiple `collect:` steps (e.g. amount, then recipient, then account_from), then `action: action_process_transfer`. **`collect: recipient`** `description:` should state free text up to **100** chars (course build). Pointer to Lab 4.1. |
-| `Level4_Unit6_Content_6.1_Complete-Bot-Walkthrough.md` | Short recap + same **scripted transfer** turns as Lab 5.2 / Unit 6.1 guide page (optional hands-on). |
+| `Level4_Unit6_Content_6.1_Complete-Agent-Walkthrough.md` | Short recap + same **scripted transfer** turns as Lab 5.2 / Unit 6.1 guide page (optional hands-on). |
 | `Level4_Unit6_Content_6.2_What-Youve-Learned.md` | Summary: multiple slots, multiple collect steps, one action using all slots. |
 | `Level4_Unit6_Content_6.3_Whats-Next.md` | What's next: forms, NLU, channels. |
 
@@ -115,8 +115,8 @@ Students should type **in order** (mirrors **Chapter 1.4** `.guides/.../Lab-5-2-
 | Step | Example user message | What to verify |
 |------|----------------------|----------------|
 | 1 | `Can I transfer some money?` | Transfer flow starts. |
-| 2 | `let's say 300 dollars` | **Amount** collected; bot asks for recipient. |
-| 3 | `Alice` (or any short free-text **recipient**; **≤100** chars in action + flow) | **Recipient** stored; bot asks for source account. |
+| 2 | `let's say 300 dollars` | **Amount** collected; agent asks for recipient. |
+| 3 | `Alice` (or any short free-text **recipient**; **≤100** chars in action + flow) | **Recipient** stored; agent asks for source account. |
 | 4 | `savings` (or e.g. `1234`) | **`action_process_transfer`** runs; confirmation starts with **`(Demo) Transfer of $`** … |
 
 **Expected shape:** `(Demo) Transfer of $300 from account savings to Alice has been processed successfully.` (exact wording may vary slightly with slot values.)
@@ -223,11 +223,11 @@ For each graded lab, add a **solution reference** markdown file used as the Inst
 
 | Step | Action |
 |------|--------|
-| 1 | Ensure level4 **starter** = Level 3 end state (see LEVEL4_BUILD_FROM_LEVEL3_APPROACH.md). |
+| 1 | Align instructional story: Chapter 1.4 **starts** from Chapter 1.3 **completion** (see **LEVEL4_BUILD_FROM_LEVEL3_APPROACH.md**). |
 | 2 | Create Level4_Course_Outline.md and all Level4_Unit*_Content_*.md files. |
 | 3 | Create Level4_Lab2.1, 3.1, 4.1, 5.1, 5.2_Content.md with step-by-step and success criteria. |
 | 4 | Create `Level4_Lab2.1`, `3.1`, `4.1`, `5.1`, `5.2_Assessment_Setup.md` (Option A + B, rationale, substring match). |
 | 5 | Add .guides/secure/level4_graders/ with lab_2.1, 3.1, 4.1, 5.1, 5.2_grader.py and solution_reference.md files. |
 | 6 | Sync content to Codio; configure assessments; update index/navigation. |
 
-This mirrors Level 3: same types of content (units + labs), same assessment pattern (LLM Rubric or Python grader, substring match for **`Check N: PASSED`** on Level 4), and the same “start from previous level’s end state, add only what this level teaches” approach. **Lab 5.2** adds a **scripted Inspector script** (§4, **Scripted transfer**) so students and authors test **multi-slot + free-text recipient** behavior consistently.
+This mirrors Level 3: same types of content (units + labs), same assessment pattern (LLM Rubric or Python grader, substring match for **`Check N: PASSED`** on Level 4), and the same “start from previous level’s end state, add only what this level teaches” approach. **Lab 5.2** adds a **scripted Inspector script** (§4, **Scripted transfer**) so you can exercise **multi-slot + free-text recipient** behavior in a repeatable way.

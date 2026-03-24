@@ -1,6 +1,6 @@
 **Objective.** In Unit 2 you saw an example of the slots, ask responses, and action registration for the transfer flow. In this lab you will add your own version to `level4/domain/basics.yml`:
 
-**Prerequisite:** **`level4/config.yml`** and **`level4/endpoints.yml`** match the Chapter 1.4 course pattern (see **Unit 0.2** — pipeline section). If you only copied files from `level3/` without the pipeline updates, fix those **before** you rely on Inspector for free-text slots.
+**Prerequisite:** **`level4/config.yml`** and **`level4/endpoints.yml`** match the Chapter 1.4 course pattern (see **Unit 0.2**, pipeline section). If you only copied files from `level3/` without the pipeline updates, fix those **before** you rely on Inspector for free-text slots.
 
 - Add the slots `amount`, `recipient`, and `account_from`
 - Add the ask responses `utter_ask_amount`, `utter_ask_recipient`, and `utter_ask_account_from`
@@ -12,7 +12,7 @@
 
 **Step 2.** Add the three new slots under the existing `slots:` section (after `account`):
 
-```yaml
+
 slots:
   account:
     type: text
@@ -22,13 +22,12 @@ slots:
     type: text
   account_from:
     type: text
-```
 
 Use 2-space indentation. Each slot has `type: text`.
 
 **Step 3.** Add the three ask responses under `responses:`:
 
-```yaml
+
   utter_ask_amount:
     - text: "How much would you like to transfer?"
       metadata:
@@ -41,7 +40,6 @@ Use 2-space indentation. Each slot has `type: text`.
     - text: "Which account would you like to transfer from?"
       metadata:
         rephrase: False
-```
 
 Naming: `utter_ask_<slot_name>` for each slot.
 
@@ -49,12 +47,11 @@ Naming: `utter_ask_<slot_name>` for each slot.
 
 **Step 4.** Add `action_process_transfer` to the `actions:` list:
 
-```yaml
+
 actions:
   - action_bank_hours
   - action_check_balance_simple
   - action_process_transfer
-```
 
 You will create the file `action_process_transfer.py` in Lab 3.1; here you only add its name.
 
@@ -69,7 +66,7 @@ You will create the file `action_process_transfer.py` in Lab 3.1; here you only 
 
 ## Part 1: In Codio
 
-You do **not** need to activate the virtual environment for this lab—**Check It!** only checks your saved file.
+You do **not** need to activate the virtual environment for this lab, **Check It!** only checks your saved file.
 
 1. **Open** `level4/domain/basics.yml` in the editor (from the file tree).
 2. **Follow Steps 2–4 above** to add the three slots, the three ask responses, and `action_process_transfer` to the actions list.
@@ -81,7 +78,7 @@ You do **not** need to activate the virtual environment for this lab—**Check I
 
 ## Part 2: Running locally
 
-1. Open your project in an editor. Go to the main project folder and open `level4/domain/basics.yml` (you do not need to activate the virtual environment for this lab—**Check It!** only checks your saved file).
+1. Open your project in an editor. Go to the main project folder and open `level4/domain/basics.yml` (you do not need to activate the virtual environment for this lab, **Check It!** only checks your saved file).
 2. Add the three slots, the three utter_ask_* responses, and `action_process_transfer` to the actions list.
 3. Verify as above.
 

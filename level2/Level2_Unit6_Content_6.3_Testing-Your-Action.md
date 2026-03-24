@@ -1,6 +1,6 @@
 ### 6.3 Testing Your Action
 
-You can use Rasa Inspector as in **Lab 5.1** (optional) or **Lab 6.2** to explore your bot. This section formalizes the testing workflow and provides a complete checklist to verify all your flows and actions work correctly.
+You can use Rasa Inspector as in **Lab 5.1** (optional) or **Lab 6.2** to explore your agent. This section formalizes the testing workflow and provides a complete checklist to verify all your flows and actions work correctly.
 
 **Setup reminder**: If you need to review Inspector setup (go to main folder → activate virtual environment → `cd level2` → train → start Inspector), see **Lab 6.2** for the full step-by-step instructions.
 
@@ -20,7 +20,7 @@ Use these in the Inspector chat to check that the most recent implementations wo
 
 Follow this structured workflow to verify everything works:
 
-1. **Train your bot**: From the `level2` folder (with virtual environment activated), run `python -m rasa train`. Wait for training to complete.
+1. **Train your agent**: From the `level2` folder (with virtual environment activated), run `python -m rasa train`. Wait for training to complete.
 
 2. **Start Inspector**: Run `python -m rasa inspect --debug --log-file logs/logs.out` and leave it running. Open Inspector in your browser (see **Lab 6.2** for Codio port forwarding or local setup details).
 
@@ -41,6 +41,6 @@ Follow this structured workflow to verify everything works:
 
 **Key Point**: All Level 1 functionality remains, and both the example action and the action you created should work. If your new action doesn’t trigger, check that it’s registered in the domain and that its flow has a clear `description`.
 
-**Explore how your modifications show up**: In Inspector you can see which **flow** was matched and which **action** ran for each message. Try "What are your hours?" vs "What are your holiday hours?" and observe how the selected flow and action change—that's your domain registration and flow YAML directly affecting the bot's behavior.
+**Explore how your modifications show up**: In Inspector you can see which **flow** was matched and which **action** ran for each message. Try "What are your hours?" vs "What are your holiday hours?" and observe how the selected flow and action change—that's your domain registration and flow YAML directly affecting the agent's behavior.
 
 ---

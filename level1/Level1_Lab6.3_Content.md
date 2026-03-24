@@ -1,8 +1,8 @@
-# Lab 6.3: Testing Your Bot
+# Lab 6.3: Testing Your Agent
 
-**Objective**: Test your bot thoroughly with multiple variations.
+**Objective**: Test your agent thoroughly with multiple variations.
 
-**Why this lab**: One message per flow isn't enough. Users phrase things differently ("hi", "hello", "hey there"). Testing with several phrasings per flow shows whether your descriptions are broad enough and whether the right flow triggers. Writing down what you said, which flow ran, and what the bot replied builds a habit of systematic testing that you'll use for every bot you build.
+**Why this lab**: One message per flow isn't enough. Users phrase things differently ("hi", "hello", "hey there"). Testing with several phrasings per flow shows whether your descriptions are broad enough and whether the right flow triggers. Writing down what you said, which flow ran, and what the agent replied builds a habit of systematic testing that you'll use for every agent you build.
 
 #### Task
 
@@ -13,6 +13,6 @@
 
 #### Documentation
 
-For each test, note: what you said, which flow triggered, what the bot responded, and whether it matched your expectations.
+For each test, note: what you said, which flow triggered, what the agent responded, and whether it matched your expectations.
 
-**AI Coach**: Ask "Why isn't my flow triggering?" or "How do I test if my bot works correctly?"
+**AI Coach**: Ask "Why isn't my flow triggering?" or "How do I test if my agent works correctly?"

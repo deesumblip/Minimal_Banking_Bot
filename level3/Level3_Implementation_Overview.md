@@ -42,7 +42,7 @@ This document provides implementation guidance for **Level 3: Slot Collection** 
 - `Level3_Lab5.1_Content.md` – Creating a flow with slot collection (graded)
 - `Level3_Lab6.1_Content.md` – Training and testing with slots (graded)
 - `Level3_Lab6.2_Content.md` – Testing slot collection in Inspector (completion-based; MC Check It! on guide page)
-- `Level3_Lab7.1_Content.md` – Complete bot walkthrough (ungraded)
+- `Level3_Lab7.1_Content.md` – Complete agent walkthrough (ungraded)
 
 ### Assessment Setup (Implementers)
 - `Level3_Lab3.1_Assessment_Setup.md` – Lab 3.1 (Code Output Compare or LLM Rubric; taskId: code-output-compare-3187585640)

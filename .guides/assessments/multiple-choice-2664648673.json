@@ -16,7 +16,7 @@
 			{
 				"_id": "a0e9f951-47b6-3602-3b3a-7f0214459038",
 				"correct": false,
-				"answer": "A predefined bot message"
+				"answer": "A predefined agent message"
 			},
 			{
 				"_id": "985cab02-6754-95eb-120f-488767e8e1cc",
@@ -41,7 +41,7 @@
 		},
 		"bloomsObjectiveLevel": "2",
 		"learningObjectives": "SWBAT define what a Flow is in conversational AI systems",
-		"guidance": "The correct answer is 'A conversation script with steps'. A Flow is a structured sequence of steps that defines how a conversation should proceed between a user and a bot. It contains the logic and steps needed to handle a specific conversational scenario, unlike a simple predefined message, Python function, or configuration file.",
+		"guidance": "The correct answer is 'A conversation script with steps'. A Flow is a structured sequence of steps that defines how a conversation should proceed between a user and a agent. It contains the logic and steps needed to handle a specific conversational scenario, unlike a simple predefined message, Python function, or configuration file.",
 		"showGuidanceAfterResponseOption": {
 			"type": "Attempts",
 			"passedFrom": 1

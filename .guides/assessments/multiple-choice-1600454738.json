@@ -2,9 +2,9 @@
 	"type": "multiple-choice",
 	"taskId": "multiple-choice-1600454738",
 	"source": {
-		"name": "Chapter 1.1: 1.4 Test Your Knowledge - Level 1 Bot Understanding",
+		"name": "Chapter 1.1: 1.4 Test Your Knowledge - Level 1 Agent Understanding",
 		"showName": false,
-		"instructions": "**True or False: Level 1 bots can remember previous interactions in a conversation and use that context to perform complex multi-step tasks.**",
+		"instructions": "**True or False: Level 1 agents can remember previous interactions in a conversation and use that context to perform complex multi-step tasks.**",
 		"multipleResponse": false,
 		"isRandomized": false,
 		"answers": [
@@ -30,8 +30,8 @@
 			"opened": []
 		},
 		"bloomsObjectiveLevel": "2",
-		"learningObjectives": "SWBAT identify the appropriate uses and limitations of Level 1 bots",
-		"guidance": "This statement is False. Level 1 bots are designed to provide static information but cannot remember context from previous messages or perform complex actions. They're ideal for simple FAQs, company information, and basic help systems where each interaction is independent. These bots respond to individual queries without maintaining conversation history or performing multi-step processes.",
+		"learningObjectives": "SWBAT identify the appropriate uses and limitations of Level 1 agents",
+		"guidance": "This statement is False. Level 1 agents are designed to provide static information but cannot remember context from previous messages or perform complex actions. They're ideal for simple FAQs, company information, and basic help systems where each interaction is independent. These agents respond to individual queries without maintaining conversation history or performing multi-step processes.",
 		"showGuidanceAfterResponseOption": {
 			"type": "Attempts",
 			"passedFrom": 1

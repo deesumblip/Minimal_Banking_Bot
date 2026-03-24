@@ -46,7 +46,7 @@
 		},
 		"bloomsObjectiveLevel": "1",
 		"learningObjectives": "SWBAT identify where slots are defined in Rasa",
-		"guidance": "Slots are defined in the domain file under the top-level `slots:` section. The domain file contains the bot's vocabulary and configuration, including slot definitions. The other options are incorrect: `data/basics/*.yml` contains training data, `config.yml` contains pipeline configuration, and actions Python files contain custom action code but not slot definitions.",
+		"guidance": "Slots are defined in the domain file under the top-level `slots:` section. The domain file contains the agent's vocabulary and configuration, including slot definitions. The other options are incorrect: `data/basics/*.yml` contains training data, `config.yml` contains pipeline configuration, and actions Python files contain custom action code but not slot definitions.",
 		"showGuidanceAfterResponseOption": {
 			"type": "Attempts",
 			"passedFrom": 1

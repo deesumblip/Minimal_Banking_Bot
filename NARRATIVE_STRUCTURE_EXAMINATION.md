@@ -9,15 +9,15 @@ This document examines the narrative structure of Levels 1–6 (Chapters 1.1–1
 | Level | Unit 0 title | Content |
 |-------|----------------|--------|
 | **1** | Prerequisites and Setup | 0.1 What You Need, 0.2 Environment Setup, 0.3 YAML, 0.4 File Structure, 0.5 Verifying, 0.6 Getting Help — **no “recap previous level”** (first level) |
-| **2** | Recap - What You Built in Level 1 | 0.1 Your Level 1 Bot, 0.2 What Level 2 Adds |
-| **3** | Recap - What You Built in Level 2 | 0.1 Your Level 2 Bot, 0.2 What Level 3 Adds |
-| **4** | Recap - What You Built in Level 3 | 0.1 Your Level 3 Bot, 0.2 What Level 4 Adds |
-| **5** | Recap - What You Built in Level 4 | 0.1 Your Level 4 Bot, 0.2 What Level 5 Adds |
+| **2** | Recap - What You Built in Level 1 | 0.1 Your Level 1 Agent, 0.2 What Level 2 Adds |
+| **3** | Recap - What You Built in Level 2 | 0.1 Your Level 2 Agent, 0.2 What Level 3 Adds |
+| **4** | Recap - What You Built in Level 3 | 0.1 Your Level 3 Agent, 0.2 What Level 4 Adds |
+| **5** | Recap - What You Built in Level 4 | 0.1 Your Level 4 Agent, 0.2 What Level 5 Adds |
 | **6** | Recap - What You Built in Level 5 | 0.1, 0.2 in **unit content**; **TUTORIAL** has only one short paragraph for Unit 0 (no 0.1/0.2) |
 
 **Improvements**
 
-- **Level 6 TUTORIAL:** Add explicit **0.1 Your Level 5 Banking Bot** and **0.2 What Level 6 Adds** subsections (with bullet lists of what remains and what’s added) so Unit 0 matches Level 4/5 and the unit content.
+- **Level 6 TUTORIAL:** Add explicit **0.1 Your Level 5 Banking Agent** and **0.2 What Level 6 Adds** subsections (with bullet lists of what remains and what’s added) so Unit 0 matches Level 4/5 and the unit content.
 
 ---
 
@@ -48,11 +48,11 @@ Level 2 uses 8 units (0–8) with a similar “Putting It All Together” and �
 | **5** | Unit 6 | 6.1–6.7 same |
 | **6** | Unit 6 | 6.1–6.7 (in content); 6.6 = “What’s Next Beyond Course” (no Level 7) |
 
-Levels 4–6 use a **7-part closing** (walkthrough, learned, next, knowledge check, limitations, next-level preview / beyond course, checklist); Levels 1–3 use a **5-part closing** (knowledge check, learned, limitations, next preview, checklist) and put “Complete Bot Walkthrough” and “Summary” in Unit 7.
+Levels 4–6 use a **7-part closing** (walkthrough, learned, next, knowledge check, limitations, next-level preview / beyond course, checklist); Levels 1–3 use a **5-part closing** (knowledge check, learned, limitations, next preview, checklist) and put “Complete Agent Walkthrough” and “Summary” in Unit 7.
 
 **Improvements**
 
-- **Optional:** In Level 1/2/3, add an explicit “Complete Bot Walkthrough” subsection inside the closing block (or point to Unit 7) so the “review what you built” moment is clearly part of the same narrative block as Knowledge Check and Checklist. This is a light wording/pointer change, not a restructure.
+- **Optional:** In Level 1/2/3, add an explicit “Complete Agent Walkthrough” subsection inside the closing block (or point to Unit 7) so the “review what you built” moment is clearly part of the same narrative block as Knowledge Check and Checklist. This is a light wording/pointer change, not a restructure.
 
 ---
 
@@ -95,7 +95,7 @@ Level 2’s narrative assessment already calls out “example vs. yours” (acti
 
 - **Level 2:** LEVEL2_NARRATIVE_STRUCTURE_ASSESSMENT already lists strong handoffs and gaps (Unit 2.2, 3.2, 4.1, 5.1, 6.1, Lab 2.1 in outline). Implementing those one-line bridges would strengthen the narrative.
 - **Levels 4–6:** “In Unit X you saw… In this lab you will…” provides clear forward references; Unit 0 “What Level Y Adds” sets the journey. No major gaps identified.
-- **Level 1:** Prerequisites and Setup (Unit 0) could end with a single sentence: “In the next units you will add responses, flows, and patterns, then train and test your bot.” So the reader sees the full arc up front.
+- **Level 1:** Prerequisites and Setup (Unit 0) could end with a single sentence: “In the next units you will add responses, flows, and patterns, then train and test your agent.” So the reader sees the full arc up front.
 
 **Improvements**
 

@@ -1,1 +1,1 @@
-﻿# Tools module for Level 5+ bot (LLM-discoverable functions)
+﻿# Tools module for Level 5+ agent (LLM-discoverable functions)

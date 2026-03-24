@@ -1,7 +1,7 @@
 ## Level 5: Tool Calling
 #
 # This domain includes everything from previous levels, plus tool calling support.
-# - Responses (predefined bot messages)
+# - Responses (predefined agent messages)
 # - Actions (custom Python code)
 # - Multiple slots (conversation memory)
 # - Tools (dynamic functions the LLM can call)

@@ -30,7 +30,7 @@
 
 ## Unit 0: Recap - What You Built in Level 3
 
-### 0.1 Your Level 3 Banking Bot
+### 0.1 Your Level 3 Banking Agent
 
 Before we add multiple slots, let's recap what you've already built in Level 3. **All of this remains unchanged** - Level 4 builds on top of it!
 
@@ -57,12 +57,12 @@ Before we add multiple slots, let's recap what you've already built in Level 3. 
 
 #### What Level 3 Couldn't Do
 
-Your Level 3 bot could remember one piece of information, but it couldn't:
+Your Level 3 agent could remember one piece of information, but it couldn't:
 - ❌ Collect multiple pieces of information efficiently
 - ❌ Handle complex forms with multiple fields
 - ❌ Process actions that require multiple data points
 
-**Example**: If a user wanted to transfer money, your Level 3 bot couldn't easily collect:
+**Example**: If a user wanted to transfer money, your Level 3 agent couldn't easily collect:
 - Transfer amount
 - Recipient name
 - Source account number
@@ -75,7 +75,7 @@ All in one smooth flow.
 
 Level 4 introduces **Multiple Slot Collection** - the ability to collect several pieces of information in sequence before performing an action.
 
-**Your existing Level 3 bot continues to work** - Level 4 adds multiple slot collection on top of it!
+**Your existing Level 3 agent continues to work** - Level 4 adds multiple slot collection on top of it!
 
 #### What's New in Level 4
 
@@ -157,7 +157,7 @@ steps:
 5. All slots filled → Execute action
 6. Action uses all three slots to process transfer
 
-**Key Point**: The bot collects slots **in order**, asking for each one if it's missing.
+**Key Point**: The agent collects slots **in order**, asking for each one if it's missing.
 
 ---
 
@@ -167,17 +167,17 @@ steps:
 
 ```
 User: "I want to transfer money"
-Bot: "How much would you like to transfer?"
+Agent: "How much would you like to transfer?"
 User: "$100"
-Bot: "Who would you like to transfer money to?"
+Agent: "Who would you like to transfer money to?"
 User: "John Doe"
-Bot: "Which account would you like to transfer from?"
+Agent: "Which account would you like to transfer from?"
 User: "1234"
-Bot: [All slots collected, processes transfer]
-Bot: "(Demo) Transfer of $100 from account 1234 to John Doe has been processed successfully."
+Agent: [All slots collected, processes transfer]
+Agent: "(Demo) Transfer of $100 from account 1234 to John Doe has been processed successfully."
 ```
 
-**Notice**: The bot guides the user through collecting all necessary information step by step.
+**Notice**: The agent guides the user through collecting all necessary information step by step.
 
 #### User Provides Multiple Values at Once
 
@@ -185,10 +185,10 @@ Users might provide multiple pieces of information in one message:
 
 ```
 User: "Transfer $100 to John from account 1234"
-Bot: [LLM extracts all three values]
-Bot: [Stores in slots: amount="100", recipient="John", account_from="1234"]
-Bot: [All slots filled, processes transfer immediately]
-Bot: "(Demo) Transfer of $100 from account 1234 to John has been processed successfully."
+Agent: [LLM extracts all three values]
+Agent: [Stores in slots: amount="100", recipient="John", account_from="1234"]
+Agent: [All slots filled, processes transfer immediately]
+Agent: "(Demo) Transfer of $100 from account 1234 to John has been processed successfully."
 ```
 
 **Key Point**: The LLM can extract multiple values from a single message, making the conversation feel natural!
@@ -355,7 +355,7 @@ flows:
     name: transfer money
     description: |
       Demonstrates collecting multiple slots before executing an action.
-      The bot will collect: amount, recipient, and source account.
+      The agent will collect: amount, recipient, and source account.
       Then it will process the transfer.
     steps:
       - collect: amount
@@ -374,7 +374,7 @@ flows:
     name: transfer money
     description: |
       Demonstrates collecting multiple slots before executing an action.
-      The bot will collect: amount, recipient, and source account.
+      The agent will collect: amount, recipient, and source account.
       Then it will process the transfer.
     steps:
       - collect: amount
@@ -394,20 +394,20 @@ flows:
 1. User says "Transfer money" or "I want to make a transfer"
 2. LLM matches to `transfer_money` flow
 3. Step 1: `collect: amount`
-   - Bot checks: Does `amount` slot have value?
-   - **No** → Bot asks: "How much would you like to transfer?"
+   - Agent checks: Does `amount` slot have value?
+   - **No** → Agent asks: "How much would you like to transfer?"
    - User provides: "$100"
-   - Bot stores "100" in `amount` slot
+   - Agent stores "100" in `amount` slot
 4. Step 2: `collect: recipient`
-   - Bot checks: Does `recipient` slot have value?
-   - **No** → Bot asks: "Who would you like to transfer money to?"
+   - Agent checks: Does `recipient` slot have value?
+   - **No** → Agent asks: "Who would you like to transfer money to?"
    - User provides: "John Doe"
-   - Bot stores "John Doe" in `recipient` slot
+   - Agent stores "John Doe" in `recipient` slot
 5. Step 3: `collect: account_from`
-   - Bot checks: Does `account_from` slot have value?
-   - **No** → Bot asks: "Which account would you like to transfer from?"
+   - Agent checks: Does `account_from` slot have value?
+   - **No** → Agent asks: "Which account would you like to transfer from?"
    - User provides: "1234"
-   - Bot stores "1234" in `account_from` slot
+   - Agent stores "1234" in `account_from` slot
 6. Step 4: `action: action_process_transfer`
    - All slots are filled
    - Action reads all three slots
@@ -417,7 +417,7 @@ flows:
 **If user provides all info at once**:
 - User: "Transfer $100 to John from account 1234"
 - LLM extracts all three values
-- Bot stores them in slots immediately
+- Agent stores them in slots immediately
 - Flow skips asking steps
 - Goes directly to action
 
@@ -436,7 +436,7 @@ Check:
 
 ### 3.2 Collection Order Matters
 
-The order of `collect:` steps determines the order the bot asks for information:
+The order of `collect:` steps determines the order the agent asks for information:
 
 ```yaml
 steps:
@@ -460,16 +460,16 @@ Users might provide some information but not all:
 
 ```
 User: "Transfer $100"
-Bot: [Stores amount="100"]
-Bot: "Who would you like to transfer money to?"
+Agent: [Stores amount="100"]
+Agent: "Who would you like to transfer money to?"
 User: "John"
-Bot: [Stores recipient="John"]
-Bot: "Which account would you like to transfer from?"
+Agent: [Stores recipient="John"]
+Agent: "Which account would you like to transfer from?"
 User: "1234"
-Bot: [Stores account_from="1234", processes transfer]
+Agent: [Stores account_from="1234", processes transfer]
 ```
 
-**Key Point**: The bot only asks for missing information. If the user provides some values, those slots are skipped.
+**Key Point**: The agent only asks for missing information. If the user provides some values, those slots are skipped.
 
 ---
 
@@ -632,28 +632,28 @@ Users might provide information in different orders:
 **Scenario 1: All at once**
 ```
 User: "Transfer $100 to John from account 1234"
-Bot: [Extracts all, processes immediately]
+Agent: [Extracts all, processes immediately]
 ```
 
 **Scenario 2: Partial information**
 ```
 User: "Transfer $100 to John"
-Bot: [Stores amount and recipient]
-Bot: "Which account would you like to transfer from?"
+Agent: [Stores amount and recipient]
+Agent: "Which account would you like to transfer from?"
 User: "1234"
-Bot: [Processes transfer]
+Agent: [Processes transfer]
 ```
 
 **Scenario 3: Out of order**
 ```
 User: "Transfer from account 1234"
-Bot: [Stores account_from]
-Bot: "How much would you like to transfer?"
+Agent: [Stores account_from]
+Agent: "How much would you like to transfer?"
 User: "$100"
-Bot: [Stores amount]
-Bot: "Who would you like to transfer money to?"
+Agent: [Stores amount]
+Agent: "Who would you like to transfer money to?"
 User: "John"
-Bot: [Processes transfer]
+Agent: [Processes transfer]
 ```
 
 **Key Point**: The LLM and slot collection handle all these scenarios automatically!
@@ -666,13 +666,13 @@ Users might want to change information:
 
 ```
 User: "Transfer $100 to John"
-Bot: "Which account would you like to transfer from?"
+Agent: "Which account would you like to transfer from?"
 User: "Actually, make it $200"  # Changing amount
-Bot: [Updates amount slot to "200"]
-Bot: "Which account would you like to transfer from?"
+Agent: [Updates amount slot to "200"]
+Agent: "Which account would you like to transfer from?"
 ```
 
-**How it works**: The LLM can extract updated values and the bot updates the slot.
+**How it works**: The LLM can extract updated values and the agent updates the slot.
 
 ---
 
@@ -683,7 +683,7 @@ Good flow descriptions help the LLM understand when to trigger the flow:
 ```yaml
 description: |
   Demonstrates collecting multiple slots before executing an action.
-  The bot will collect: amount, recipient, and source account.
+  The agent will collect: amount, recipient, and source account.
   Then it will process the transfer.
 ```
 
@@ -727,7 +727,7 @@ Rasa:
 
 #### Basic Testing Workflow
 
-1. **Train your bot**: `python -m rasa train`
+1. **Train your agent**: `python -m rasa train`
 
 2. **Start Inspector**: 
    ```powershell
@@ -736,24 +736,24 @@ Rasa:
 
 3. **Test sequential collection**:
    - Type "Transfer money"
-   - Bot should ask: "How much would you like to transfer?"
+   - Agent should ask: "How much would you like to transfer?"
    - Type "$100"
-   - Bot should ask: "Who would you like to transfer money to?"
+   - Agent should ask: "Who would you like to transfer money to?"
    - Type "John"
-   - Bot should ask: "Which account would you like to transfer from?"
+   - Agent should ask: "Which account would you like to transfer from?"
    - Type "1234"
-   - Bot should process transfer and confirm
+   - Agent should process transfer and confirm
 
 4. **Test all-at-once collection**:
    - Type "Transfer $100 to John from account 1234"
-   - Bot should extract all values
-   - Bot should process transfer immediately (no asking)
+   - Agent should extract all values
+   - Agent should process transfer immediately (no asking)
 
 5. **Test partial information**:
    - Type "Transfer $100"
-   - Bot should ask for recipient and account
+   - Agent should ask for recipient and account
    - Provide them
-   - Bot should process transfer
+   - Agent should process transfer
 
 6. **Verify previous levels still work**:
    - Type "Check my balance" → Should work (Level 3)
@@ -770,7 +770,7 @@ In Inspector debug panel, you can see all slot values:
 - `account_from: "1234"`
 - `account: "1234"` (from Level 3)
 
-**Key Point**: All slots persist throughout the conversation. The bot remembers all collected information.
+**Key Point**: All slots persist throughout the conversation. The agent remembers all collected information.
 
 ---
 
@@ -794,7 +794,7 @@ In Inspector debug panel, you can see all slot values:
 
 #### Issue: Wrong Collection Order
 
-**Symptoms**: Bot asks for information in confusing order
+**Symptoms**: Agent asks for information in confusing order
 
 **Possible Causes**:
 1. `collect:` steps in wrong order
@@ -808,7 +808,7 @@ In Inspector debug panel, you can see all slot values:
 
 ## Unit 7: Putting It All Together
 
-### 7.1 Complete Bot Walkthrough
+### 7.1 Complete Agent Walkthrough
 
 Let's trace through a complete conversation showing how all levels work together.
 
@@ -819,7 +819,7 @@ Let's trace through a complete conversation showing how all levels work together
 
 1. pattern_session_start triggers (Level 1)
    ↓
-Bot: "Hi! I'm a banking assistant. How can I help you today?"
+Agent: "Hi! I'm a banking assistant. How can I help you today?"
 
 [User types: "I want to transfer money"]
 
@@ -828,27 +828,27 @@ Bot: "Hi! I'm a banking assistant. How can I help you today?"
    Flow: transfer_money (Level 4)
    Step 1: collect: amount
    ↓
-   Bot asks: "How much would you like to transfer?"
+   Agent asks: "How much would you like to transfer?"
 
 [User types: "$100"]
 
-3. Bot stores "100" in amount slot
+3. Agent stores "100" in amount slot
    ↓
    Flow continues to Step 2: collect: recipient
    ↓
-   Bot asks: "Who would you like to transfer money to?"
+   Agent asks: "Who would you like to transfer money to?"
 
 [User types: "John Doe"]
 
-4. Bot stores "John Doe" in recipient slot
+4. Agent stores "John Doe" in recipient slot
    ↓
    Flow continues to Step 3: collect: account_from
    ↓
-   Bot asks: "Which account would you like to transfer from?"
+   Agent asks: "Which account would you like to transfer from?"
 
 [User types: "1234"]
 
-5. Bot stores "1234" in account_from slot
+5. Agent stores "1234" in account_from slot
    ↓
    Flow continues to Step 4: action_process_transfer
    ↓
@@ -858,7 +858,7 @@ Bot: "Hi! I'm a banking assistant. How can I help you today?"
    ↓
    Action processes transfer
    ↓
-Bot: "(Demo) Transfer of $100 from account 1234 to John Doe has been processed successfully."
+Agent: "(Demo) Transfer of $100 from account 1234 to John Doe has been processed successfully."
 
 [User types: "Check my balance"]
 
@@ -867,22 +867,22 @@ Bot: "(Demo) Transfer of $100 from account 1234 to John Doe has been processed s
    Flow: check_balance (Level 3)
    Step 1: collect: account
    ↓
-   Bot checks: Does account slot have value? (We have account_from="1234", but not account)
+   Agent checks: Does account slot have value? (We have account_from="1234", but not account)
    ↓
-   Bot asks: "What is your account number?"
+   Agent asks: "What is your account number?"
 
 [User types: "1234"]
 
-7. Bot stores "1234" in account slot
+7. Agent stores "1234" in account slot
    ↓
    Flow continues to action_check_balance_simple
    ↓
    Action reads account slot: "1234"
    ↓
-Bot: "(Demo) Balance for account 1234 is $123.45."
+Agent: "(Demo) Balance for account 1234 is $123.45."
 ```
 
-**Notice**: The bot seamlessly uses:
+**Notice**: The agent seamlessly uses:
 - Level 1 responses (greet)
 - Level 2 actions (hours)
 - Level 3 single slot collection (check_balance)
@@ -890,11 +890,11 @@ Bot: "(Demo) Balance for account 1234 is $123.45."
 
 ---
 
-### 7.2 Your Level 4 Banking Bot: Summary
+### 7.2 Your Level 4 Banking Agent: Summary
 
-Congratulations! You've extended your Level 3 banking bot with multiple slot collection capabilities.
+Congratulations! You've extended your Level 3 banking agent with multiple slot collection capabilities.
 
-#### Your Complete Bot Structure
+#### Your Complete Agent Structure
 
 **Domain (`domain/basics.yml`)**:
 - ✅ All Level 1-3 responses
@@ -911,9 +911,9 @@ Congratulations! You've extended your Level 3 banking bot with multiple slot col
 - ✅ All Level 1-3 actions
 - ✅ New `action_process_transfer` that uses multiple slots
 
-#### What Your Bot Can Do Now
+#### What Your Agent Can Do Now
 
-Your Level 4 banking bot can:
+Your Level 4 banking agent can:
 - ✅ Everything Level 1-3 could do
 - ✅ Collect multiple pieces of information in one flow
 - ✅ Handle complex forms with multiple fields
@@ -922,7 +922,7 @@ Your Level 4 banking bot can:
 
 #### What's Still Missing (Coming in Level 5)
 
-Your Level 4 bot cannot yet:
+Your Level 4 agent cannot yet:
 - ❌ Use dynamic tool calling (Level 5: Tools)
 
 But you now have comprehensive data collection capabilities!
@@ -970,14 +970,14 @@ d) Slots are collected automatically
 
 #### Question 2: What Happens If a User Provides All Information at Once?
 
-a) The bot ignores it and asks anyway  
-b) The bot extracts all values and skips asking  
-c) The bot only uses the first value  
-d) The bot asks for confirmation
+a) The agent ignores it and asks anyway  
+b) The agent extracts all values and skips asking  
+c) The agent only uses the first value  
+d) The agent asks for confirmation
 
-**Answer**: b) The bot extracts all values and skips asking
+**Answer**: b) The agent extracts all values and skips asking
 
-**Explanation**: The LLM can extract multiple values from a single message. If all slots are filled, the bot skips the asking steps and goes directly to the action.
+**Explanation**: The LLM can extract multiple values from a single message. If all slots are filled, the agent skips the asking steps and goes directly to the action.
 
 ---
 
@@ -1040,9 +1040,9 @@ Move to Level 5 when you need:
 
 ### 8.4 What's Next: Level 5 Preview
 
-⚠️ **Important: Building on Your Existing Banking Bot**
+⚠️ **Important: Building on Your Existing Banking Agent**
 
-When you move to Level 5, you will **continue working on the same banking bot** you've built throughout Levels 1-4. Level 5 doesn't start from scratch - it builds on what you've already created:
+When you move to Level 5, you will **continue working on the same banking agent** you've built throughout Levels 1-4. Level 5 doesn't start from scratch - it builds on what you've already created:
 
 - **Your existing responses** (all Level 1-4 responses) stay
 - **Your existing flows** (all Level 1-4 flows) stay
@@ -1050,7 +1050,7 @@ When you move to Level 5, you will **continue working on the same banking bot** 
 - **Your existing slots** (all Level 3-4 slots) stay
 - **Level 5 adds**: Tools (dynamic functions), tools registration, actions that work with tools, flows that use tool calling
 
-**You don't start a new bot** - you extend your existing Level 4 banking bot with dynamic tool calling!
+**You don't start a new agent** - you extend your existing Level 4 banking agent with dynamic tool calling!
 
 ---
 
@@ -1083,7 +1083,7 @@ Move to Level 5 when you need:
 - Flexible, context-aware function calling
 - Complex scenarios where the flow depends on dynamic conditions
 
-**Your Level 4 banking bot is the foundation** - Level 5 adds dynamic tool calling on top of it!
+**Your Level 4 banking agent is the foundation** - Level 5 adds dynamic tool calling on top of it!
 
 ---
 
@@ -1123,7 +1123,7 @@ If you can check all these boxes, you're ready for Level 5!
 
 #### Issue: Wrong Collection Order
 
-**Symptoms**: Bot asks for information in confusing order
+**Symptoms**: Agent asks for information in confusing order
 
 **Possible Causes**:
 1. `collect:` steps in wrong order
@@ -1234,7 +1234,7 @@ project/
 **Recommended auto-grading checks**:
 - Validate YAML files parse successfully and required keys exist (domain + flows + patterns)
 - Validate required new artifacts for Level 4 exist (e.g., new flows/actions/tools)
-- Smoke-test bot starts (`rasa inspect`) and responds to a small scripted conversation
+- Smoke-test agent starts (`rasa inspect`) and responds to a small scripted conversation
 
 **Implementation notes**:
 - Prefer deterministic checks (file existence + YAML structure + expected strings) over LLM-output matching.

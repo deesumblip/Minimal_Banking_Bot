@@ -6,7 +6,7 @@ Answer the following to check your understanding of Level 3 (slots).
 
 a) A flow step that asks the user for information  
 b) A memory variable that stores information from the conversation  
-c) A type of response the bot can say  
+c) A type of response the agent can say  
 d) A Python function that runs during the conversation  
 
 **2. Where are slots defined?**
@@ -39,9 +39,9 @@ d) `slot_<slot_name>_prompt`
 
 **6. A flow reaches `collect: account`, but the `account` slot already has a value from earlier in the conversation. What happens next?**
 
-a) The bot skips asking and continues to the next step in the flow, using the existing slot value  
-b) The bot always asks again for the account number before continuing  
-c) The bot clears the slot and ends the conversation  
+a) The agent skips asking and continues to the next step in the flow, using the existing slot value  
+b) The agent always asks again for the account number before continuing  
+c) The agent clears the slot and ends the conversation  
 d) The flow stops and never runs the action that comes after the collect step  
 
 ---
@@ -50,9 +50,9 @@ d) The flow stops and never runs the action that comes after the collect step
 
 | Question | Answer | Brief explanation |
 |----------|--------|-------------------|
-| 1 | **b** | A slot is the bot's memory: it stores information from the conversation. |
+| 1 | **b** | A slot is the agent's memory: it stores information from the conversation. |
 | 2 | **c** | Slots are defined in the domain file under the top-level `slots:` section. |
-| 3 | **b** | The `collect:` step tells Rasa to get the slot value; if empty, the bot asks (using the `utter_ask_*` response) and stores the answer. |
+| 3 | **b** | The `collect:` step tells Rasa to get the slot value; if empty, the agent asks (using the `utter_ask_*` response) and stores the answer. |
 | 4 | **b** | In an action, you read a slot from the `tracker`: `tracker.get_slot("slot_name")`. |
 | 5 | **b** | The convention is `utter_ask_<slot_name>`; for the `account` slot you use `utter_ask_account`. |
 | 6 | **a** | Rasa only prompts when the slot is empty; if a value is already set, the collect step continues without re-asking. |

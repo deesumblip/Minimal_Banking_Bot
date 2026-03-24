@@ -1,4 +1,4 @@
-After adding the tools folder, endpoints registration, and the transfer_money_tools flow and action, you need to **train** the Level 5 bot.
+After adding the tools folder, endpoints registration, and the transfer_money_tools flow and action, you need to **train** the Level 5 agent.
 
 ## Steps
 

@@ -1,25 +1,24 @@
 
 
-The `credentials.yml` file defines **how the bot connects to chat interfaces**.
+The `credentials.yml` file defines **how the agent connects to chat interfaces**.
 
-**File Location**: `credentials.yml` (root of your bot folder)
+**File Location**: `credentials.yml` (root of your agent folder)
 
 #### Complete credentials.yml Breakdown
 
-```yaml
+
 rest:
 
 socketio:
   bot_message_evt: bot_uttered
   session_persistence: true
   user_message_evt: user_uttered
-```
 
 #### Section-by-Section Explanation
 
 1. **`rest:`** (empty)
    - Enables REST API access
-   - Allows programmatic access to the bot
+   - Allows programmatic access to the agent
    - Empty means "use defaults"
 
 2. **`socketio:`**
@@ -28,7 +27,7 @@ socketio:
    - Required for the web-based testing interface
 
 3. **`bot_message_evt: bot_uttered`**
-   - Event name when bot sends a message
+   - Event name when agent sends a message
    - Technical detail - usually don't need to change
 
 4. **`session_persistence: true`**

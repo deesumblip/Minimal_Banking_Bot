@@ -3,9 +3,9 @@
 ## Course Overview
 
 **Title**: Level 3: Slot Collection  
-**Description**: A Complete Guide to Adding Memory (Slots) to Your Banking Bot  
+**Description**: A Complete Guide to Adding Memory (Slots) to Your Banking Agent  
 **Prerequisites**: Level 1 and Level 2 must be completed  
-**Learning Objective**: Students learn to define slots, read slots in actions, and collect slot values in flows so the bot can remember and use user-provided information. Labs are ordered so that implementation is chronological: domain (Lab 3.1) → action (Lab 4.1) → flow (Lab 5.1).
+**Learning Objective**: Students learn to define slots, read slots in actions, and collect slot values in flows so the agent can remember and use user-provided information. Labs are ordered so that implementation is chronological: domain (Lab 3.1) → action (Lab 4.1) → flow (Lab 5.1).
 
 ---
 
@@ -16,7 +16,7 @@
 **Assessment**: None
 
 **Sections**:
-- 0.1 Your Level 2 Banking Bot
+- 0.1 Your Level 2 Banking Agent
   - What you have from Level 2 (domain, flows, actions)
   - What Level 2 couldn't do (no memory)
 - 0.2 What Level 3 Adds
@@ -35,12 +35,12 @@
 
 **Sections**:
 - 1.1 What is a Slot?
-  - Slots = bot memory
+  - Slots = agent memory
   - Example: account number with vs without slots
 - 1.2 How Slots Work
   - Define in domain, collect in flow, read in action
 - 1.3 Slot Collection
-  - If slot empty → bot asks; if has value → flow continues
+  - If slot empty → agent asks; if has value → flow continues
 
 **Key Concepts**: Slots, memory, collect step
 
@@ -146,11 +146,11 @@
 
 ### Unit 7: Putting It All Together
 **Type**: Content + Lab (no assessment)  
-**Assessment**: None. Lab 7.1 – Complete Bot Walkthrough (ungraded).
+**Assessment**: None. Lab 7.1 – Complete Agent Walkthrough (ungraded).
 
 **Sections**:
-- 7.1 Complete Bot Walkthrough → **Lab 7.1** (guided demo; no assessment)
-- 7.2 Your Level 3 Banking Bot: Summary
+- 7.1 Complete Agent Walkthrough → **Lab 7.1** (guided demo; no assessment)
+- 7.2 Your Level 3 Banking Agent: Summary
 - 7.3 Best Practices
 
 **Key Concepts**: Integration, summary, best practices

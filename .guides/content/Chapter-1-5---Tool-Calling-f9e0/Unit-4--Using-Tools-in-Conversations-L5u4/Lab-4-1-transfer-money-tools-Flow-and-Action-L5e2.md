@@ -2,13 +2,13 @@
 
 ## Step-by-Step Instructions
 
-**Step 1 — Flow file.** Create `level5/data/basics/transfer_money_tools.yml` with a flow that:
-- Has a `name` and `description` (e.g. "transfer money with tools" — the description helps the LLM know when to trigger it).
+**Step 1, Flow file.** Create `level5/data/basics/transfer_money_tools.yml` with a flow that:
+- Has a `name` and `description` (e.g. "transfer money with tools", the description helps the LLM know when to trigger it).
 - **steps:** collect amount (with description), collect recipient (with description), collect account_from (with description), then `action: action_process_transfer_with_tools`.
 
-**Step 2 — Action file.** Create `level5/actions/action_process_transfer_with_tools.py` with a custom action class that inherits from `Action` (rasa_sdk), implements `name()` returning `"action_process_transfer_with_tools"`, and implements `run()` returning a list of events (e.g. `[]`). For this lab the action can be minimal: when this step runs, the LLM will use the registered tools in this flow step; you do not need to call the tools from inside the action. A minimal valid action looks like this:
+**Step 2, Action file.** Create `level5/actions/action_process_transfer_with_tools.py` with a custom action class that inherits from `Action` (rasa_sdk), implements `name()` returning `"action_process_transfer_with_tools"`, and implements `run()` returning a list of events (e.g. `[]`). For this lab the action can be minimal: when this step runs, the LLM will use the registered tools in this flow step; you do not need to call the tools from inside the action. A minimal valid action looks like this:
 
-```python
+
 from typing import Any, Dict, List, Text
 
 from rasa_sdk import Action, Tracker
@@ -27,9 +27,8 @@ class ActionProcessTransferWithTools(Action):
     ) -> List[Dict[Text, Any]]:
         # Optional: send a message, then return. The LLM can use tools in this step.
         return []
-```
 
-**Step 3 — Domain.** Open `level5/domain/basics.yml` and add `action_process_transfer_with_tools` to the `actions:` list (alongside the existing actions).
+**Step 3, Domain.** Open `level5/domain/basics.yml` and add `action_process_transfer_with_tools` to the `actions:` list (alongside the existing actions).
 
 **Step 4.** Verify: the flow file exists and has the correct steps; the action file exists and is registered in the domain.
 

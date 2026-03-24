@@ -8,7 +8,7 @@ This document compares Level 5 (Tool Calling) to Levels 1-4 and lists **addition
 
 | Level | Unit 1 (or early unit) | Test Your Knowledge page |
 |-------|------------------------|--------------------------|
-| 1.1   | Unit 1 Intro to Rasa Bots | 1.4 Test Your Knowledge |
+| 1.1   | Unit 1 Intro to Rasa Agents | 1.4 Test Your Knowledge |
 | 1.2   | Unit 1 Intro to Actions   | 1.4 Test Your Knowledge |
 | 1.3   | Unit 2 Slot Types         | 2.3 Test Your Knowledge |
 | 1.4   | Unit 1 Multiple Slots     | 1.4 Test Your Knowledge |

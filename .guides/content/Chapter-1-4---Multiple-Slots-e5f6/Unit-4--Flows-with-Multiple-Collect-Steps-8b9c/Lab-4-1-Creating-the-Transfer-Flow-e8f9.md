@@ -2,11 +2,11 @@ In Unit 4 you saw an example of the transfer_money flow (YAML with three collect
 
 ## Part 1: In Codio
 
-1. **Create** the file `data/basics/transfer_money.yml` under the `level4` folder (use the file tree / editor—you do not need to activate the virtual environment for this lab; **Check It!** only checks your saved YAML).
+1. **Create** the file `data/basics/transfer_money.yml` under the `level4` folder (use the file tree / editor, you do not need to activate the virtual environment for this lab; **Check It!** only checks your saved YAML).
 
 2. **Add** the following flow:
 
-```yaml
+
 flows:
   transfer_money:
     name: transfer money
@@ -25,7 +25,6 @@ flows:
         description: |
           Source account. Set slot account_from to the user's full message (plain text), up to 120 characters.
       - action: action_process_transfer
-```
 
 **Why these `description` lines?** Rasa Pro’s **LLM command generator** uses them when **filling slots**. For payee and account, a **simple rule** works well: store the **entire user message** as text, **any characters**, within a **fixed length range** (here 1–100 for recipient, 1–120 for account). See also [Rasa’s guidance](https://rasa.com/docs/reference/config/components/llm-command-generators/#customizing-the-prompt).
 

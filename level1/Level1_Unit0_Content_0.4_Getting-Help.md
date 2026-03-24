@@ -1,6 +1,6 @@
 ### 0.4 Getting Help
 
-**Why we list these**: Setup and YAML can trip you up. Knowing where to look, such as docs, troubleshooting, or the AI Coach, gets you unstuck quickly so you can stay focused on building the bot instead of fighting the environment.
+**Why we list these**: Setup and YAML can trip you up. Knowing where to look, such as docs, troubleshooting, or the AI Coach, gets you unstuck quickly so you can stay focused on building the agent instead of fighting the environment.
 
 **Stuck?** Here are resources:
 

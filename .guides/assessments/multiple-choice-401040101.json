@@ -9,14 +9,14 @@
 		"isRandomized": true,
 		"answers": [
 			{"_id": "a0104011-0001-4000-8000-000000000001", "correct": false, "answer": "It doesn't; Rasa ignores the order"},
-			{"_id": "a0104011-0002-4000-8000-000000000002", "correct": true, "answer": "The order is the order in which the bot will ask the user for each value"},
+			{"_id": "a0104011-0002-4000-8000-000000000002", "correct": true, "answer": "The order is the order in which the agent will ask the user for each value"},
 			{"_id": "a0104011-0003-4000-8000-000000000003", "correct": false, "answer": "Only the first collect step runs"},
 			{"_id": "a0104011-0004-4000-8000-000000000004", "correct": false, "answer": "The order must match the alphabetical order of slot names"}
 		],
 		"metadata": {"tags": [{"name": "Assessment Type", "value": "Multiple Choice"}], "files": [], "opened": []},
 		"bloomsObjectiveLevel": "2",
 		"learningObjectives": "SWBAT explain why collect step order matters",
-		"guidance": "The order of `collect:` steps is the order in which the bot prompts for each slot value.",
+		"guidance": "The order of `collect:` steps is the order in which the agent prompts for each slot value.",
 		"showGuidanceAfterResponseOption": {"type": "Attempts", "passedFrom": 1},
 		"maxAttemptsCount": 1,
 		"showExpectedAnswerOption": {"type": "Always"},

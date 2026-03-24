@@ -31,7 +31,7 @@
 - Define tools as Python functions and register them in endpoints.yml
 - Let the LLM choose which tools to call based on conversation context
 - Combine flows (slot collection) with tool calling (action that runs in a tool-calling context)
-- Extend the bot with new tools without changing flow structure
+- Extend the agent with new tools without changing flow structure
 
 ## What's Next
 

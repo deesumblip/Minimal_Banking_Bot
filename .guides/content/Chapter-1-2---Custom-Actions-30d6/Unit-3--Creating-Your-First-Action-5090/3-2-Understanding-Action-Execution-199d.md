@@ -8,7 +8,7 @@ When Rasa executes your action:
 6. **Message is sent**: `dispatcher.utter_message()` sends text to the user
 7. **Action completes**: Returns empty list `[]`
 
-**Key Point**: Rasa handles all the infrastructure—you just write the `run()` method with your logic.
+**Key Point**: Rasa handles all the infrastructure, you just write the `run()` method with your logic.
 
 **Next**: Complete Lab 3.1 to create `action_holiday_hours.py` following the pattern from Unit 3.1.
 

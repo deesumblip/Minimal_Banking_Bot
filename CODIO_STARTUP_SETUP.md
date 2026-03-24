@@ -1,6 +1,6 @@
 # Codio: Setting Up startup.sh for This Project
 
-This document is for the **Codio implementer** (instructor or course author) who is configuring the Minimal_Banking_Bot project on Codio. It explains how to set up the startup script so that **RASA_LICENSE** is loaded in **every terminal** for students (and for you). This course does not require an OpenAI API key.
+This document is for the **Codio implementer** (instructor or course author) who is configuring the Minimal_Banking_Agent project on Codio. It explains how to set up the startup script so that **RASA_LICENSE** is loaded in **every terminal** for students (and for you). This course does not require an OpenAI API key.
 
 ---
 
@@ -17,7 +17,7 @@ This document is for the **Codio implementer** (instructor or course author) who
 In the project workspace on Codio you should have:
 
 ```
-Minimal_Banking_Bot/
+Minimal_Banking_Agent/
 ├── .guides/
 │   ├── startup.sh          ← Script Codio runs on box start (must be here)
 │   └── secure/

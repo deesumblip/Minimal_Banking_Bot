@@ -1,12 +1,12 @@
 # Level 1 (Ollama): Just Responses — Free Local LLM
 
-This is the **Level 1 banking bot** configured to use **Ollama** as the LLM. No OpenAI (or other cloud) API key or sign-up is required; only a **Rasa Pro license** and a local Ollama install are needed.
+This is the **Level 1 banking agent** configured to use **Ollama** as the LLM. No OpenAI (or other cloud) API key or sign-up is required; only a **Rasa Pro license** and a local Ollama install are needed.
 
 ## What This Folder Is
 
 - **Same behavior as Level 1**: responses only (greet, help, contact, goodbye), no slots, no custom actions.
 - **Different LLM**: uses **Ollama** (local, free, no API key) instead of OpenAI.
-- **Use case**: run the bot without providing an OpenAI key; good for labs or air-gapped environments.
+- **Use case**: run the agent without providing an OpenAI key; good for labs or air-gapped environments.
 
 ---
 
@@ -46,7 +46,7 @@ Do this once to create a virtual environment and install everything inside **lev
 cd level1_ollama
 ```
 
-(Use the full path if needed, e.g. `cd c:\Users\YourName\Github\Rasa\Minimal_Banking_Bot\level1_ollama`.)
+(Use the full path if needed, e.g. `cd c:\Users\YourName\Github\Rasa\Minimal_Banking_Agent\level1_ollama`.)
 
 ### 2. Create the virtual environment
 
@@ -94,7 +94,7 @@ RASA_LICENSE=rasaxxx-your-license-here
 
 Replace `rasaxxx-your-license-here` with your actual Rasa Pro license. No quotes, no spaces around `=`.
 
-**Loading the license when you run the bot**
+**Loading the license when you run the agent**
 
 - **Windows (PowerShell):** Before training or running, load the env file (e.g. run from this folder):
   ```powershell
@@ -109,7 +109,7 @@ Replace `rasaxxx-your-license-here` with your actual Rasa Pro license. No quotes
 
 ### 5. Install and run Ollama (one-time)
 
-The bot needs the **Ollama server** (the binary that serves the LLM). There is **no pip install** for the server: the `pip install ollama` package is only a Python client for talking to an already-running Ollama server; it does not run the model. Install the server using one of the options below.
+The agent needs the **Ollama server** (the binary that serves the LLM). There is **no pip install** for the server: the `pip install ollama` package is only a Python client for talking to an already-running Ollama server; it does not run the model. Install the server using one of the options below.
 
 #### Option A: Easiest — Windows or macOS on your own computer (not in Codio)
 
@@ -146,7 +146,7 @@ ollama pull llama3.2
 
 #### After the server is installed (any option above)
 
-- Pull the model used by this bot: `ollama pull llama3.2`
+- Pull the model used by this agent: `ollama pull llama3.2`
 - Ensure the Ollama server is running (default API: `http://localhost:11434/v1`). On Codio, if the server runs on a different host/port, set `api_base` in `endpoints.yml` accordingly (e.g. `http://localhost:11434/v1`).
 
 ---
@@ -161,12 +161,12 @@ Once the venv is created, Rasa Pro is installed, `RASA_LICENSE` is set, and Olla
 
 2. **Load `RASA_LICENSE`** (if not set system-wide), e.g. source your `.env` as in step 4 above.
 
-3. **Train the bot:**
+3. **Train the agent:**
    ```bash
    rasa train
    ```
 
-4. **Run the bot:**
+4. **Run the agent:**
    ```bash
    rasa run
    ```
@@ -220,5 +220,5 @@ You **do** need:
 
 ## Relation to `level1`
 
-- **level1**: Same bot, uses OpenAI (`gpt-4o-mini`); requires `OPENAI_API_KEY` and typically a shared venv at project root.
-- **level1_ollama**: Same bot, uses Ollama; no LLM key. Includes instructions to create a **venv inside this folder** and install prerequisites from scratch.
+- **level1**: Same agent, uses OpenAI (`gpt-4o-mini`); requires `OPENAI_API_KEY` and typically a shared venv at project root.
+- **level1_ollama**: Same agent, uses Ollama; no LLM key. Includes instructions to create a **venv inside this folder** and install prerequisites from scratch.

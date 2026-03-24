@@ -1,8 +1,8 @@
 ### 1.3 Real-World Use Cases
 
-**Why this matters**: Level 1 isn't a toy. Many real bots are exactly this: they answer FAQs, give hours, and provide contact info. Seeing where Level 1 fits in the real world helps you scope your own projects and know when to add Level 2 for actions or Level 3 for memory later.
+**Why this matters**: Level 1 isn't a toy. Many real agents are exactly this: they answer FAQs, give hours, and provide contact info. Seeing where Level 1 fits in the real world helps you scope your own projects and know when to add Level 2 for actions or Level 3 for memory later.
 
-Level 1 bots are perfect for:
+Level 1 agents are perfect for:
 
 - **Company Information**: "What are your hours?", "Where are you located?"
 - **Product FAQs**: "What features does this product have?", "How do I get started?"
@@ -12,19 +12,19 @@ Level 1 bots are perfect for:
 **Example Conversation:**
 ```
 User: "Hello"
-Bot: "Hi! I'm a banking assistant. How can I help you today?"
+Agent: "Hi! I'm a banking assistant. How can I help you today?"
 
 User: "What can you do?"
-Bot: "I can help you with:
+Agent: "I can help you with:
       - Checking your balance
       - Transferring money
       - Bank hours
       - Contact information"
 
 User: "How do I contact you?"
-Bot: "You can reach us at support@bank.com or call 1-800-BANK-123."
+Agent: "You can reach us at support@bank.com or call 1-800-BANK-123."
 ```
 
-Notice: The bot provides information but doesn't remember anything or perform any actions.
+Notice: The agent provides information but doesn't remember anything or perform any actions.
 
 ---

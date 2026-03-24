@@ -1,6 +1,6 @@
 # Course Topics by Level
 
-**Purpose:** A single reference for the topics covered in each level of the Minimal Banking Bot course. Each level builds on the previous one.
+**Purpose:** A single reference for the topics covered in each level of the Minimal Banking Agent course. Each level builds on the previous one.
 
 ---
 
@@ -42,7 +42,7 @@
 
 ### Level 1: Just Responses
 
-**Goal:** Build the simplest possible bot that only uses predefined responses (no memory, no custom code).
+**Goal:** Build the simplest possible agent that only uses predefined responses (no memory, no custom code).
 
 **Core Concept:** Static, predefined responses triggered by flows.
 
@@ -50,7 +50,7 @@
 
 | Topic | What you learn |
 |-------|----------------|
-| **Domain – responses** | How to define bot responses in `domain/basics.yml` under the `responses:` section. Predefined messages only; no slots or actions. |
+| **Domain – responses** | How to define agent responses in `domain/basics.yml` under the `responses:` section. Predefined messages only; no slots or actions. |
 | **Flows** | How to create simple flows in `data/basics/*.yml` that call `utter_*` responses. Flows have `name`, `description`, and `steps`. |
 | **System patterns** | Basic patterns (e.g. `pattern_session_start`, `pattern_completed`) and where they live (`data/system/patterns/patterns.yml`). |
 | **Project structure** | Where domain, flows, config, credentials, and endpoints live. |
@@ -70,15 +70,15 @@
 
 ### Level 2: Simple Actions
 
-**Goal:** Add custom Python code to the bot by creating and using actions.
+**Goal:** Add custom Python code to the agent by creating and using actions.
 
-**Core Concept:** Custom Python code executed by the bot (vs. predefined text responses).
+**Core Concept:** Custom Python code executed by the agent (vs. predefined text responses).
 
 #### Topics Covered
 
 | Topic | What you learn |
 |-------|----------------|
-| **Actions vs. responses** | `utter_*` = predefined text; `action_*` = custom Python code the bot can run. When to use each. |
+| **Actions vs. responses** | `utter_*` = predefined text; `action_*` = custom Python code the agent can run. When to use each. |
 | **Action class structure** | Imports (`Action`, `Tracker`, `CollectingDispatcher`), `name()` method, `run()` method, and sending messages with `dispatcher.utter_message()`. |
 | **Creating an action** | Where to put action files (`actions/`), file naming (`action_bank_hours.py`), and the required class structure. |
 | **Registering actions** | Adding an `actions:` section in `domain/basics.yml` and listing action names. |
@@ -100,7 +100,7 @@
 
 ### Level 3: Slot Collection
 
-**Goal:** Give the bot memory by collecting and using information from the user (slots).
+**Goal:** Give the agent memory by collecting and using information from the user (slots).
 
 **Core Concept:** Conversation memory that persists user-provided data across turns.
 
@@ -109,7 +109,7 @@
 | Topic | What you learn |
 |-------|----------------|
 | **Slots** | What slots are (conversation memory), where they are defined (`domain/basics.yml` under `slots:`), and how they store user-provided data. |
-| **Collect steps** | Using `collect: slot_name` in a flow so the bot asks for that slot (e.g. account number) before continuing. |
+| **Collect steps** | Using `collect: slot_name` in a flow so the agent asks for that slot (e.g. account number) before continuing. |
 | **Ask responses** | `utter_ask_*` responses used when a slot is empty (e.g. `utter_ask_account`). |
 | **Reading slots in actions** | Using `tracker.get_slot("slot_name")` inside an action to use collected information. |
 | **Placeholder handling** | Detecting when the LLM extracted a placeholder instead of a real value and re-prompting the user. |
@@ -139,7 +139,7 @@
 | Topic | What you learn |
 |-------|----------------|
 | **Multiple slots** | Defining several slots in the domain (e.g. `amount`, `recipient`, `account_from`) for one use case (e.g. transfer). |
-| **Multiple collect steps** | Ordering several `collect:` steps in a single flow so the bot gathers amount, recipient, and source account in sequence. |
+| **Multiple collect steps** | Ordering several `collect:` steps in a single flow so the agent gathers amount, recipient, and source account in sequence. |
 | **Multiple ask responses** | `utter_ask_amount`, `utter_ask_recipient`, `utter_ask_account_from` (or custom ask actions). |
 | **Actions that use multiple slots** | Reading and validating several slots in one action (e.g. `action_process_transfer` using `amount`, `recipient`, `account_from`). |
 | **Complex multi-step conversations** | Flows that don't proceed until all required slots are filled; validation and re-prompting. |
@@ -215,4 +215,4 @@
 
 ---
 
-*This guide summarizes topics for the Minimal Banking Bot course. Content may be updated as levels are revised.*
+*This guide summarizes topics for the Minimal Banking Agent course. Content may be updated as levels are revised.*

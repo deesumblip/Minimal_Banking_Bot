@@ -30,9 +30,9 @@ flows:
 2. Both steps start with `- action:`
 3. Both response names exist in your domain file
 4. YAML syntax is correct (no errors when you save)
-5. Try training your bot (Unit 6) - if training succeeds, your flow is correct!
+5. Try training your agent (Unit 6) - if training succeeds, your flow is correct!
 
-**What Happens**: When a user says "hello", the bot will:
+**What Happens**: When a user says "hello", the agent will:
 1. First greet them (`utter_greet`)
 2. Then immediately show the help message (`utter_help`)
 3. Flow completes

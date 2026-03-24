@@ -16,7 +16,7 @@
 		"metadata": {"tags": [{"name": "Assessment Type", "value": "Multiple Choice"}], "files": [], "opened": []},
 		"bloomsObjectiveLevel": "2",
 		"learningObjectives": "SWBAT identify domain requirements for slots",
-		"guidance": "Each slot needs an entry under `slots:` and a matching `utter_ask_<slot_name>` under `responses:` so the bot can ask when the slot is empty.",
+		"guidance": "Each slot needs an entry under `slots:` and a matching `utter_ask_<slot_name>` under `responses:` so the agent can ask when the slot is empty.",
 		"showGuidanceAfterResponseOption": {"type": "Attempts", "passedFrom": 1},
 		"maxAttemptsCount": 1,
 		"showExpectedAnswerOption": {"type": "Always"},

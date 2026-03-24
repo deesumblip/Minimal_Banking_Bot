@@ -4,7 +4,7 @@ Tools are functions that the LLM can dynamically call during conversations.
 Unlike actions (which are explicitly called in flows), tools are selected
 by the LLM based on the conversation context.
 
-This allows the bot to:
+This allows the agent to:
 - Dynamically choose which operations to perform
 - Handle complex, multi-step tasks
 - Adapt to user requests without hardcoding every scenario

@@ -2,7 +2,7 @@
 
 ## Overview
 
-This assessment verifies that students can successfully train their bot with actions and that the training completes without errors.
+This assessment verifies that students can successfully train their agent with actions and that the training completes without errors.
 
 ### Assessment Type
 
@@ -11,15 +11,14 @@ This assessment verifies that students can successfully train their bot with act
 ## Grader Script Location
 
 Save the grader script at:
-```
+
 .guides/secure/level2_graders/lab_6.1_grader.sh
-```
 
 ## Grader Script
 
 The grader checks only what the lab instructs: model file exists under `models/` and training completed without errors (per verification). No check for virtual environment, model recency, or action files.
 
-```bash
+
 #!/bin/bash
 cd /home/codio/workspace/level2
 
@@ -70,15 +69,13 @@ echo "Score: $score/$max_score"
 if [ $score -lt $max_score ]; then
     exit 1
 fi
-```
 
 ### Example student deliverable (for grading reference)
 
 Students do not produce a new script file; they run training so that a model is produced. The grader checks that a model file exists in `models/` and that training completed without errors. Example command the student runs (with venv activated):
 
-```bash
+
 python -m rasa train
-```
 
 A successful run produces a `.tar.gz` model under `models/`; the grader expects at least one model file and no errors in logs.
 
@@ -88,7 +85,7 @@ A successful run produces a `.tar.gz` model under `models/`; the grader expects 
 
 2. **Add Code Test** – Add Code Test → **Standard Code Test**. Configure each tab as follows.
 
-   **General** – Name: *Lab 6.1: Training and Testing with Actions*. Description: *Verify that students can successfully train their bot with actions*. Points: `4`. Language: `Bash`.
+   **General** – Name: *Lab 6.1: Training and Testing with Actions*. Description: *Verify that students can successfully train their agent with actions*. Points: `4`. Language: `Bash`.
 
    **Execution** – COMMAND: `bash /home/codio/workspace/.guides/secure/level2_graders/lab_6.1_grader.sh`. TIMEOUT: `60` seconds. Working Directory: `/home/codio/workspace/level2`.
 

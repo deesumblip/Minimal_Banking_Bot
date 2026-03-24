@@ -18,4 +18,4 @@ steps:
   - action: utter_help
 ```
 
-When the flow reaches `call: banking_assistant`, the **banking_assistant** sub-agent runs (with its own LLM and MCP tools). When the sub-agent finishes, the main flow continues with `action: utter_help`. So the user "talks to the banking assistant" until that agent is done, then the main bot can offer help again.
+When the flow reaches `call: banking_assistant`, the **banking_assistant** sub-agent runs (with its own LLM and MCP tools). When the sub-agent finishes, the main flow continues with `action: utter_help`. So the user "talks to the banking assistant" until that agent is done, then the main agent can offer help again.

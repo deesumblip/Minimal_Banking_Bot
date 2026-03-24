@@ -1,13 +1,12 @@
 Let's examine a real flow from `data/basics/greet.yml`:
 
-```yaml
+
 flows:
   greet:
     name: say hello
     description: Greet the user when they start a conversation.
     steps:
       - action: utter_greet
-```
 
 #### Breaking Down Each Component
 
@@ -17,7 +16,7 @@ flows:
 
 2. **`greet:`**: Flow name
    - This is the identifier used to reference the flow
-   - Must be unique within the bot
+   - Must be unique within the agent
    - Convention: lowercase, descriptive
 
 3. **`name: say hello`**: Human-readable name

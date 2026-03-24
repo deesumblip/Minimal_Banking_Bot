@@ -1,10 +1,10 @@
-**Objective.** In this lab you will run a completion check to verify that your Level 5 bot has all required components: tools folder and banking_tools.py, tools registration in endpoints.yml, transfer_money_tools flow, action_process_transfer_with_tools action and domain registration, and a trained model (or readiness to train).
+**Objective.** In this lab you will run a completion check to verify that your Level 5 agent has all required components: tools folder and banking_tools.py, tools registration in endpoints.yml, transfer_money_tools flow, action_process_transfer_with_tools action and domain registration, and a trained model (or readiness to train).
 
 ## Step-by-Step Instructions
 
 **Step 1.** Ensure you have completed Labs 2.1, 3.1, 4.1, and 5.1: tools folder, endpoints tools section, flow and action, and training.
 
-**Step 2.** Optionally run the assistant: start the action server (`rasa run actions`) in one terminal and Rasa (`rasa run` or `rasa inspect`) in another. Open Inspector and trigger the transfer_money_tools flow; confirm the bot collects slots and that tool calling works (e.g. you get a balance or transfer confirmation).
+**Step 2.** Optionally run the assistant: start the action server (`rasa run actions`) in one terminal and Rasa (`rasa run` or `rasa inspect`) in another. Open Inspector and trigger the transfer_money_tools flow; confirm the agent collects slots and that tool calling works (e.g. you get a balance or transfer confirmation).
 
 **Step 3.** **In Codio**, use **Check It!**.
 

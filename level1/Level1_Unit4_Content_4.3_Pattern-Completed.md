@@ -2,7 +2,7 @@
 
 The `pattern_completed` flow handles what happens when a flow finishes.
 
-**Why it matters**: After the bot has answered, for example with hours or contact info, the conversation needs a clear "we're done with this turn." Pattern completed tells Rasa to end the flow and wait for the next user message. Without it, the bot might not cleanly transition back to listening.
+**Why it matters**: After the agent has answered, for example with hours or contact info, the conversation needs a clear "we're done with this turn." Pattern completed tells Rasa to end the flow and wait for the next user message. Without it, the agent might not cleanly transition back to listening.
 
 ```yaml
 flows:
@@ -15,6 +15,6 @@ flows:
 
 - **`pattern_completed`**: Special name; triggers when a flow completes.
 - **`noop: true`**: No operation – placeholder step.
-- **`next: END`**: Tells Rasa the conversation is complete; bot waits for next user message.
+- **`next: END`**: Tells Rasa the conversation is complete; agent waits for next user message.
 
 ---

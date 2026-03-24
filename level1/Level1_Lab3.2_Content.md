@@ -2,7 +2,7 @@
 
 **Objective**: In Unit 3.2 you saw the structure of a flow (e.g. `greet.yml`). In this lab you create your own flow: `goodbye.yml`, using the `utter_goodbye` response from Lab 2.2.
 
-**Why create a goodbye flow**: You already added the goodbye response in the domain (Lab 2.2). The bot still doesn't know *when* to say it. A flow ties "user is ending the conversation" to "say utter_goodbye." Once this flow exists and has a clear description, the LLM can match phrases like "bye" or "that's all" and the bot will respond with your goodbye message.
+**Why create a goodbye flow**: You already added the goodbye response in the domain (Lab 2.2). The agent still doesn't know *when* to say it. A flow ties "user is ending the conversation" to "say utter_goodbye." Once this flow exists and has a clear description, the LLM can match phrases like "bye" or "that's all" and the agent will respond with your goodbye message.
 
 #### Before You Begin
 

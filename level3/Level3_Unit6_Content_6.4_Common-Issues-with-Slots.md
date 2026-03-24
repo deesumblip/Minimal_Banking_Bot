@@ -1,6 +1,6 @@
 ## Issue. Slot Not Collected
 
-**Symptoms.** The bot doesn't ask for the slot value.
+**Symptoms.** The agent doesn't ask for the slot value.
 
 **Possible causes.** The slot is not defined in the domain. The `collect:` step is missing or incorrect. The `utter_ask_*` response is missing.
 

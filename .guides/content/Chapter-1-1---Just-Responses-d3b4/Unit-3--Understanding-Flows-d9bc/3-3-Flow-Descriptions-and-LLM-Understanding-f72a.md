@@ -12,7 +12,7 @@ The `description` field is **critical** because the LLM uses it to match user me
 **Good descriptions**:
 - Clear and specific: "Greet the user when they start a conversation"
 - Action-oriented: "Provide contact information for the bank"
-- Context-aware: "Explain what the bot can help with"
+- Context-aware: "Explain what the agent can help with"
 
 **Bad descriptions**:
 - Too vague: "Help user" (what kind of help?)

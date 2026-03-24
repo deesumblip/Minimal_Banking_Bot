@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Lab 5.1: Training the Level 4 Bot - Grader Script
+Lab 5.1: Training the Level 4 Agent - Grader Script
 Output format matches Chapter 1.2 Lab 6.2 template (⚠️ for partial / stale model / log issues).
 
 Runs from workspace root, verifies venv, then checks level4 for model and logs.

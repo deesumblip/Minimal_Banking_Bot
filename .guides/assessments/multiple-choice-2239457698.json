@@ -2,9 +2,9 @@
 	"type": "multiple-choice",
 	"taskId": "multiple-choice-2239457698",
 	"source": {
-		"name": "Chapter 1.1:Lab 5.1 - Exploring the Configuration Files - Bot Language",
+		"name": "Chapter 1.1:Lab 5.1 - Exploring the Configuration Files - Agent Language",
 		"showName": false,
-		"instructions": "**What language is the bot configured for?**",
+		"instructions": "**What language is the agent configured for?**",
 		"multipleResponse": false,
 		"isRandomized": true,
 		"answers": [
@@ -40,7 +40,7 @@
 			"opened": []
 		},
 		"bloomsObjectiveLevel": "1",
-		"learningObjectives": "SWBAT identify the language configuration in a bot's configuration file",
+		"learningObjectives": "SWBAT identify the language configuration in a agent's configuration file",
 		"guidance": "The correct answer is English. In the configuration file, the language setting is specified as `language: en`, where 'en' is the language code for English.",
 		"showGuidanceAfterResponseOption": {
 			"type": "Attempts",

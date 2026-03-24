@@ -56,6 +56,6 @@ Run the **Lab 5.1 assessment** when you're done. In Unit 6 you'll train and test
 
 #### Review in Inspector (optional)
 
-Follow the steps in **Lab 6.2** (go to main folder → activate the virtual environment → `cd level2` → train → start Inspector and open the GUI) to see if your bot is working. Then try: **"What are your hours?"** (should trigger `hours` and `action_bank_hours`), **"What are your holiday hours?"** or **"Are you open on Christmas?"** (should trigger `holiday_hours` and `action_holiday_hours`), and **"Hello"** (Level 1 greet). If something doesn't trigger, check the flow's `description` and re-train; see Unit 6.4 for debugging.
+Follow the steps in **Lab 6.2** (go to main folder → activate the virtual environment → `cd level2` → train → start Inspector and open the GUI) to see if your agent is working. Then try: **"What are your hours?"** (should trigger `hours` and `action_bank_hours`), **"What are your holiday hours?"** or **"Are you open on Christmas?"** (should trigger `holiday_hours` and `action_holiday_hours`), and **"Hello"** (Level 1 greet). If something doesn't trigger, check the flow's `description` and re-train; see Unit 6.4 for debugging.
 
 **Optional:** You can edit the `utter_help` response in the domain to include "Holiday hours" so users know they can ask about it.

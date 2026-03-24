@@ -2,7 +2,7 @@
 
 ## Overview
 
-This assessment verifies that students can successfully train their bot with actions and that the training completes without errors.
+This assessment verifies that students can successfully train their agent with actions and that the training completes without errors.
 
 ### Assessment Type
 
@@ -88,7 +88,7 @@ A successful run produces a `.tar.gz` model under `models/`; the grader expects 
 
 2. **Add Code Test** – Add Code Test → **Standard Code Test**. Configure each tab as follows.
 
-   **General** – Name: *Lab 6.1: Training and Testing with Actions*. Description: *Verify that students can successfully train their bot with actions*. Points: `4`. Language: `Bash`.
+   **General** – Name: *Lab 6.1: Training and Testing with Actions*. Description: *Verify that students can successfully train their agent with actions*. Points: `4`. Language: `Bash`.
 
    **Execution** – COMMAND: `bash /home/codio/workspace/.guides/secure/level2_graders/lab_6.1_grader.sh`. TIMEOUT: `60` seconds. Working Directory: `/home/codio/workspace/level2`.
 

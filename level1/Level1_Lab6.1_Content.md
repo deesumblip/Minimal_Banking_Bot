@@ -1,8 +1,8 @@
-# Lab 6.1: Training Your Bot
+# Lab 6.1: Training Your Agent
 
-**Objective**: Train your bot and verify it works.
+**Objective**: Train your agent and verify it works.
 
-**Why this lab**: So far you've only edited YAML. Training is what turns that into a runnable bot. You run one command; Rasa validates your domain and flows and writes a model file. If something is wrong, for example a flow references a response that doesn't exist, training will fail and tell you. Once it succeeds, you have a model you can run in Inspector and test. No training, no bot.
+**Why this lab**: So far you've only edited YAML. Training is what turns that into a runnable agent. You run one command; Rasa validates your domain and flows and writes a model file. If something is wrong, for example a flow references a response that doesn't exist, training will fail and tell you. Once it succeeds, you have a model you can run in Inspector and test. No training, no agent.
 
 **Before you begin**: Complete Lab 3.5 (Adding New Flows) so your domain and flows (hours, balance) are set up; then training will pass validation.
 
@@ -26,7 +26,7 @@ Follow the same logic as Part 1, but use your own terminal and OS-specific comma
 
 1. **Open a terminal**: PowerShell, Command Prompt, or Terminal.app (or your Linux terminal).
 2. **Go to the main project folder**, the one that contains `level1`, `level2`, and `.guides`.  
-   Example: `cd C:\Users\You\Minimal_Banking_Bot` or `cd ~/Minimal_Banking_Bot`.
+   Example: `cd C:\Users\You\Minimal_Banking_Agent` or `cd ~/Minimal_Banking_Agent`.
 3. **Activate the virtual environment** (the `.venv` folder is in the main project folder):
    - **Windows (PowerShell)**: `.venv\Scripts\Activate.ps1`
    - **Windows (Command Prompt)**: `.venv\Scripts\activate.bat`

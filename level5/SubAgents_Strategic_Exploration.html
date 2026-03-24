@@ -32,7 +32,7 @@
 
 <h1>Sub-Agents: Strategic Exploration for Level 5</h1>
 
-<div class="purpose"><strong>Purpose:</strong> Assess whether Rasa's official <strong>sub-agents</strong> (ReAct and External/A2A) could be integrated into the Level 5 bot, and how, without making any implementation changes yet.</div>
+<div class="purpose"><strong>Purpose:</strong> Assess whether Rasa's official <strong>sub-agents</strong> (ReAct and External/A2A) could be integrated into the Level 5 agent, and how, without making any implementation changes yet.</div>
 
 <hr>
 
@@ -86,7 +86,7 @@
 
 <ul>
   <li><strong>Configuration:</strong> <code>sub_agents/&lt;name&gt;/config.yml</code> with <code>protocol: A2A</code> and an <strong>agent card</strong> (local file or URL). Optional auth (API key, OAuth, token).</li>
-  <li><strong>Use case:</strong> Integrating agents built by other teams or on other tech stacks. Not for "extending our same bot with another process in the same repo" in the simple sense.</li>
+  <li><strong>Use case:</strong> Integrating agents built by other teams or on other tech stacks. Not for "extending our same agent with another process in the same repo" in the simple sense.</li>
 </ul>
 
 <hr>
@@ -151,8 +151,8 @@
 <h3>4.2 External (A2A) Sub-Agent</h3>
 
 <ul>
-  <li><strong>Fit for "extend Level 5 bot":</strong> Low. A2A is for <strong>external</strong> agents (different process/team/stack). You could use Level 5 as the <strong>orchestrator</strong> and call an external "banking service" agent via A2A, but that's an integration/architecture topic, not a simple extension of the current Level 5 codebase.</li>
-  <li><strong>Verdict:</strong> Not a natural "integrate into Level 5" feature; more of a "Level 5 bot as orchestrator of external systems" scenario.</li>
+  <li><strong>Fit for "extend Level 5 agent":</strong> Low. A2A is for <strong>external</strong> agents (different process/team/stack). You could use Level 5 as the <strong>orchestrator</strong> and call an external "banking service" agent via A2A, but that's an integration/architecture topic, not a simple extension of the current Level 5 codebase.</li>
+  <li><strong>Verdict:</strong> Not a natural "integrate into Level 5" feature; more of a "Level 5 agent as orchestrator of external systems" scenario.</li>
 </ul>
 
 <hr>
@@ -218,7 +218,7 @@
     <tr><th>Topic</th><th>Concept</th><th>What the student would need to learn</th></tr>
   </thead>
   <tbody>
-    <tr><td><strong>Orchestration</strong></td><td>Main agent as orchestrator</td><td>The Rasa bot can <em>delegate</em> a whole task to another "agent" that runs until it's done, then control returns.</td></tr>
+    <tr><td><strong>Orchestration</strong></td><td>Main agent as orchestrator</td><td>The Rasa agent can <em>delegate</em> a whole task to another "agent" that runs until it's done, then control returns.</td></tr>
     <tr><td><strong>Autonomous steps</strong></td><td><code>call</code> step</td><td>Flow step <code>- call: agent_name</code> (and optional <code>exit_if</code>) invokes a sub-agent; flow is paused until the sub-agent completes.</td></tr>
     <tr><td><strong>Sub-agent types</strong></td><td>ReAct vs External (A2A)</td><td>ReAct = built-in agent with tools (MCP + optional Python). A2A = external service; different stack/team.</td></tr>
     <tr><td><strong>Sub-agent layout</strong></td><td><code>sub_agents/</code></td><td>Each sub-agent has its own directory and <code>config.yml</code> (name, protocol, description, configuration).</td></tr>
@@ -255,7 +255,7 @@
 <p><strong>Yes, with clear boundaries.</strong> Reasons:</p>
 
 <ol>
-  <li><strong>Natural progression</strong><br>Level 5 = "one agent, dynamic tool use." Level 6 = "same bot, but some tasks are delegated to another agent." The step from "LLM chooses tools" to "LLM (orchestrator) chooses when to hand off to an agent that uses tools" is a single, understandable extension.</li>
+  <li><strong>Natural progression</strong><br>Level 5 = "one agent, dynamic tool use." Level 6 = "same agent, but some tasks are delegated to another agent." The step from "LLM chooses tools" to "LLM (orchestrator) chooses when to hand off to an agent that uses tools" is a single, understandable extension.</li>
   <li><strong>Conceptual clarity</strong><br>Keeping sub-agents in a separate level avoids overloading Level 5. Level 5 stays about tools and one-agent behaviour; Level 6 is explicitly about orchestration and the <code>call</code> step.</li>
   <li><strong>Reuse of existing skills</strong><br>Students already have: flows, slots, actions, and tools (Level 5). Level 6 reuses flows and slots and adds: <code>call</code>, sub-agent config, MCP, and completion behaviour. No need to re-teach fundamentals.</li>
   <li><strong>Manageable new load</strong><br>The main new pieces are: (a) orchestration and <code>call</code>, (b) <code>sub_agents/</code> and config, (c) MCP (what it is + one server), (d) ReAct general vs task-specific and exit behaviour. That's one level's worth of content, not two.</li>
@@ -280,7 +280,7 @@
     <tr><th>Question</th><th>Answer</th></tr>
   </thead>
   <tbody>
-    <tr><td>Can sub-agents be <strong>easily</strong> integrated into the current Level 5 bot?</td><td><strong>No.</strong> They need a different structure (sub_agents/, MCP or MCP+custom tools, <code>call</code> step) and teach a different concept (orchestration).</td></tr>
+    <tr><td>Can sub-agents be <strong>easily</strong> integrated into the current Level 5 agent?</td><td><strong>No.</strong> They need a different structure (sub_agents/, MCP or MCP+custom tools, <code>call</code> step) and teach a different concept (orchestration).</td></tr>
     <tr><td>Is the <strong>concept</strong> compatible with Level 5?</td><td><strong>Partially.</strong> ReAct sub-agents are a natural "next step" after "one agent + tools," but they are a step up in complexity.</td></tr>
     <tr><td>Best way to use sub-agents with this course?</td><td>Introduce them in a <strong>separate level</strong> (e.g. Level 6) focused on orchestration and ReAct (and optionally A2A), with MCP and 3.14+ clearly stated as requirements.</td></tr>
     <tr><td>Should we change Level 5 now?</td><td><strong>No.</strong> Keep Level 5 as single-agent tool calling; plan sub-agents as a later, dedicated level or optional advanced module.</td></tr>

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Lab 5.1: Training the Level 5 Bot - Grader Script
+Lab 5.1: Training the Level 5 Agent - Grader Script
 Output format matches Chapter 1.2 Lab 6.2 template.
 
 Runs from workspace root; expects /home/codio/workspace.

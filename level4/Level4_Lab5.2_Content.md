@@ -24,7 +24,7 @@ The grader checks that:
 
 From **`level4`** with the virtual environment active:
 
-1. Start the bot (e.g. `python -m rasa inspect --debug`, or `python -m rasa run` per your course).
+1. Start the agent (e.g. `python -m rasa inspect --debug`, or `python -m rasa run` per your course).
 2. Open **Rasa Inspect** (Codio) or the local URL (e.g. `http://localhost:5005`).
 
 **Scripted transfer (type in order):**
@@ -32,13 +32,13 @@ From **`level4`** with the virtual environment active:
 | Step | You type (example) | What to verify |
 |------|--------------------|----------------|
 | 1 | `Can I transfer some money?` | Transfer flow starts. |
-| 2 | `let's say 300 dollars` | Amount collected; bot asks for recipient. |
-| 3 | `Alice` (or any short free text) | Recipient stored as plain text; bot asks for account. |
+| 2 | `let's say 300 dollars` | Amount collected; agent asks for recipient. |
+| 3 | `Alice` (or any short free text) | Recipient stored as plain text; agent asks for account. |
 | 4 | `savings` (or e.g. `1234`) | Confirmation from **`action_process_transfer`**: `(Demo) Transfer of $…` |
 
 3. Optionally try balance / hours to confirm other flows still work.
 
-**Troubleshooting:** If the bot accepts the amount but then **cannot understand** you on recipient or account:
+**Troubleshooting:** If the agent accepts the amount but then **cannot understand** you on recipient or account:
 
 1. **Domain:** In **`level4/domain/basics.yml`**, set **`metadata: rephrase: False`** on **`utter_ask_amount`**, **`utter_ask_recipient`**, and **`utter_ask_account_from`** (see Lab 2.1).
 

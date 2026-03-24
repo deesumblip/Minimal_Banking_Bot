@@ -39,8 +39,8 @@ This document summarizes gaps and inconsistencies found in Chapter 1.3 (Slot Col
 
 ### 1.4 Duplicate assessment ID in Unit 2 and Unit 5 — fixed
 
-- **2.3** still uses `multiple-choice-3629141196` (when slot is **empty**, bot asks with `utter_ask_account`).
-- **5.2** now uses `multiple-choice-5130520013` (when slot **already has a value**, bot skips asking and continues). Assessment file: `.guides/assessments/multiple-choice-5130520013.json`.
+- **2.3** still uses `multiple-choice-3629141196` (when slot is **empty**, agent asks with `utter_ask_account`).
+- **5.2** now uses `multiple-choice-5130520013` (when slot **already has a value**, agent skips asking and continues). Assessment file: `.guides/assessments/multiple-choice-5130520013.json`.
 
 ---
 
@@ -77,7 +77,7 @@ Conclusion: **Content teaches concepts before labs; labs then have code or knowl
 | Lab 5.1 | Lab 3.1 (slot + action in domain), Lab 4.1 (action file), Unit 5.1–5.3 (collect step) | OK     |
 | Lab 6.1 | Domain + flow + action from 3.1, 4.1, 5.1         | OK (references Lab 0.1 for env) |
 | Lab 6.2 | Lab 6.1 (trained model)                            | OK     |
-| Lab 7.1 | Full bot (all prior labs)                          | OK     |
+| Lab 7.1 | Full agent (all prior labs)                          | OK     |
 
 No missing dependencies; only the Lab 0.1 reference needs clarification (1.3).
 

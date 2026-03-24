@@ -4,7 +4,7 @@ Codio supports running a terminal command when a section is displayed ([docs](ht
 
 ## In Codio Guide Editor
 
-1. Open **Chapter 1.1** → **Unit 6** → **6.3 Testing Your Bot**.
+1. Open **Chapter 1.1** → **Unit 6** → **6.3 Testing Your Agent**.
 2. Click **Layout** (top bar, next to Settings).
 3. Under **Customize tabs within each panel** you should see a row with **TYPE** (e.g. Terminal), **FILENAME** (`#terminal`), **PANEL** (e.g. Panel A).
 4. **Find the command field:**

@@ -1,16 +1,16 @@
 ### 1.4 Test Your Knowledge
 
-**Objective**: Assess your understanding of conversational bots and Level 1 bot capabilities.
+**Objective**: Assess your understanding of conversational agents and Level 1 agent capabilities.
 
 This section contains multiple choice questions to test your knowledge of:
-- What conversational bots are and how they work
+- What conversational agents are and how they work
 - Natural Language Understanding (NLU)
-- Level 1 bot capabilities and limitations
-- Real-world use cases for simple bots
+- Level 1 agent capabilities and limitations
+- Real-world use cases for simple agents
 
-#### Concept Check 1.1: Identifying Bot Capabilities
+#### Concept Check 1.1: Identifying Agent Capabilities
 
-**Question**: Which of these scenarios can be handled by a Level 1 bot (responses only)?
+**Question**: Which of these scenarios can be handled by a Level 1 agent (responses only)?
 
 1. Providing company contact information
 2. Checking account balance (requires account number)

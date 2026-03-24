@@ -68,7 +68,7 @@ def _slug_from_assessment_name(name: str, content: str) -> str:
 
 
 def _page_title_from_content(content: str, fallback: str, prefer_h1: bool = False) -> str:
-    """Prefer first ### (h3) for content pages (e.g. '### 0.1 Your Level 1 Banking Bot'); for Lab/Assessment use first # (e.g. 'Lab 4.1: ...')."""
+    """Prefer first ### (h3) for content pages (e.g. '### 0.1 Your Level 1 Banking Agent'); for Lab/Assessment use first # (e.g. 'Lab 4.1: ...')."""
     first_h1 = None
     first_h3 = None
     first_h2 = None
@@ -285,7 +285,7 @@ def sync():
     if root_index_path.exists():
         root_index = json.loads(root_index_path.read_text(encoding="utf-8"))
     else:
-        root_index = {"title": "Minimal_Banking_Bot", "order": []}
+        root_index = {"title": "Minimal_Banking_Agent", "order": []}
     order = list(root_index.get("order", []))
     if chapter_name not in order:
         order.append(chapter_name)

@@ -2,7 +2,7 @@ Tool functions are plain Python functions that the LLM can call. They live in a 
 
 ## Requirements
 
-- **Location**: Create a `tools/` folder in your bot directory (e.g. `level5/tools/`) with an `__init__.py` and a module file (e.g. `banking_tools.py`).
+- **Location**: Create a `tools/` folder in your agent directory (e.g. `level5/tools/`) with an `__init__.py` and a module file (e.g. `banking_tools.py`).
 - **Signature**: Each tool is a function with a clear name, parameters, and a return value (typically a dict or string). Use type hints and a docstring so the LLM understands what the function does.
 - **Discovery**: Export the functions that should be available as tools via `__all__` in the module (e.g. `__all__ = ["check_balance", "process_transfer", "get_account_info"]`).
 

@@ -1,4 +1,4 @@
-**Objective**: Add a new `utter_goodbye` response to your bot's domain file.
+**Objective**: Add a new `utter_goodbye` response to your agent's domain file.
 
 #### Step-by-Step Tutorial
 
@@ -134,7 +134,7 @@ responses:
 
 ### 2.3 Response Variations
 
-Having multiple variations of the same response makes your bot feel more natural and less robotic.
+Having multiple variations of the same response makes your agent feel more natural and less robotic.
 
 #### When to Use Variations
 

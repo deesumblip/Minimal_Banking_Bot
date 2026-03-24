@@ -2,7 +2,7 @@
 
 **Objective**: Start Inspector and test a simple conversation.
 
-**Why this lab**: You need to see the bot in action. Inspector is the place to do that: you start it, open the chat, and send messages. You'll see which flow runs and what the bot says. That confirms your training worked and gives you a baseline before you add more flows or move to Level 2.
+**Why this lab**: You need to see the agent in action. Inspector is the place to do that: you start it, open the chat, and send messages. You'll see which flow runs and what the agent says. That confirms your training worked and gives you a baseline before you add more flows or move to Level 2.
 
 ---
 
@@ -11,7 +11,7 @@
 1. **Terminal**: From the main project folder, the root where `level1` and `.venv` live, run `source .venv/bin/activate`, then `cd level1`. Your prompt should show `(.venv)` and you should be in `level1`.
 2. **Start Inspector**: Run `python -m rasa inspect --debug --log-file logs/logs.out`. Wait for "Starting Rasa server on http://0.0.0.0:5005". Leave the terminal open.
 3. **Open Inspector**: In the top menu bar, click the **Rasa Inspect** tab. The chat interface opens.
-4. **Test**: In the chat, type **hello** and press Enter. The bot should respond. Check the flow/debug panel to see which flow triggered.
+4. **Test**: In the chat, type **hello** and press Enter. The agent should respond. Check the flow/debug panel to see which flow triggered.
 
 **AI Coach**: Ask "How do I access Inspector in Codio?" or "Why won't Inspector start?"
 
@@ -26,19 +26,19 @@ If you're on your own computer (not Codio), follow the steps below for your oper
 - **Windows (PowerShell)**  
   Open PowerShell, then:
   ```powershell
-  cd path\to\Minimal_Banking_Bot\level1
+  cd path\to\Minimal_Banking_Agent\level1
   ..\.venv\Scripts\Activate.ps1
   ```
 - **Windows (Command Prompt)**  
   Open Command Prompt, then:
   ```cmd
-  cd path\to\Minimal_Banking_Bot\level1
+  cd path\to\Minimal_Banking_Agent\level1
   ..\\.venv\Scripts\activate.bat
   ```
 - **macOS / Linux**  
   Open Terminal, then:
   ```bash
-  cd ~/Minimal_Banking_Bot/level1
+  cd ~/Minimal_Banking_Agent/level1
   source ../.venv/bin/activate
   ```
 
@@ -66,6 +66,6 @@ Wait for "Starting Rasa server on http://0.0.0.0:5005". Leave this terminal open
 
 ### 4. Test
 
-In the Inspector chat, type **hello** and press Enter. The bot should respond.
+In the Inspector chat, type **hello** and press Enter. The agent should respond.
 
 **Troubleshooting (local only):** If you see "Address already in use" or port 5005 is in use, run Inspector on another port: `python -m rasa inspect --debug --port 5006` and open **http://localhost:5006**, or the inspect.html page on port 5006, in your browser.

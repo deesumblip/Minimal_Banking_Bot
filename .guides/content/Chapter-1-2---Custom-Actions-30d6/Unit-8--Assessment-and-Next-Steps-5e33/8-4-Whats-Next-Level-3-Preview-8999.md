@@ -1,13 +1,13 @@
-⚠️ **Important: Building on Your Existing Banking Bot**
+⚠️ **Important: Building on Your Existing Banking Agent**
 
-When you move to Level 3, you will **continue working on the same banking bot** you've built throughout Levels 1 and 2. Level 3 doesn't start from scratch - it builds on what you've already created:
+When you move to Level 3, you will **continue working on the same banking agent** you've built throughout Levels 1 and 2. Level 3 doesn't start from scratch - it builds on what you've already created:
 
 - **Your existing responses** (`utter_greet`, `utter_help`, `utter_contact`) stay
 - **Your existing flows** (`greet`, `help`, `contact`, `hours`) stay
 - **Your existing actions** (`action_bank_hours`) stay
 - **Level 3 adds**: Slots (memory), new responses for asking questions, new actions that use slots, new flows that collect information
 
-**You don't start a new bot** - you extend your existing Level 2 banking bot with memory capabilities!
+**You don't start a new agent** - you extend your existing Level 2 banking agent with memory capabilities!
 
 ---
 
@@ -17,8 +17,8 @@ When you move to Level 3, you will **continue working on the same banking bot** 
 
 **Example Scenario**: "Check my balance"
 
-- **Level 2**: Bot can't remember which account the user has
-- **Level 3**: Bot can:
+- **Level 2**: Agent can't remember which account the user has
+- **Level 3**: Agent can:
   - Ask for account number
   - Remember it in a slot
   - Use that slot in actions
@@ -45,6 +45,6 @@ Move to Level 3 when you need:
 - Multi-turn conversations with context
 - Personalized responses based on user information
 
-**Your Level 2 banking bot is the foundation** - Level 3 adds memory on top of it!
+**Your Level 2 banking agent is the foundation** - Level 3 adds memory on top of it!
 
 ---

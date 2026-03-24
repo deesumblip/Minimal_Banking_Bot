@@ -1,4 +1,4 @@
-## Project Summary: Minimal Banking Bot (Codio + Rasa Pro)
+## Project Summary: Minimal Banking Agent (Codio + Rasa Pro)
 
 This file captures high-level context and recent structural decisions so future collaborators (or AI sessions) can quickly re-orient on this repo, especially around **Chapter 1.2 – Custom Actions** and Codio integration.
 
@@ -6,7 +6,7 @@ This file captures high-level context and recent structural decisions so future 
 
 ### 1. Repository and Codio Overview
 
-- **Repo:** `Minimal_Banking_Bot` – multi-level Rasa Pro + CALM course.
+- **Repo:** `Minimal_Banking_Agent` – multi-level Rasa Pro + CALM course.
 - **Codio guides:** Live under `.guides/content/` with:
   - Root chapter index: `.guides/content/index.json`.
   - Per-chapter folders, e.g. `Chapter-1-2---Custom-Actions-30d6/`.

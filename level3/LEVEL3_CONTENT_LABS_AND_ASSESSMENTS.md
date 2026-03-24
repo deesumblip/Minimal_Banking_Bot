@@ -16,7 +16,7 @@ Level 3 uses **9 units** (0–8): Recap → Slots intro → Slot types → Domai
 
 | File | Purpose |
 |------|---------|
-| `Level3_Unit0_Content_0.1_Your-Level-2-Banking-Bot.md`, `0.2_What-Level-3-Adds.md` | Recap Level 2, What Level 3 adds (slots, check_balance) |
+| `Level3_Unit0_Content_0.1_Your-Level-2-Banking-Agent.md`, `0.2_What-Level-3-Adds.md` | Recap Level 2, What Level 3 adds (slots, check_balance) |
 | `Level3_Unit1_Content_1.1_*.md` … `1.3_*.md` | What is a slot, how slots work, slot collection |
 | `Level3_Unit2_Content_2.1_*.md`, `2.2_*.md`, `2.3_Test-Your-Knowledge.md` | Slot types, naming, quiz |
 | `Level3_Unit3_Content_3.1_The-Slots-Section.md` | Domain slots section, full domain example; Lab 3.1 |

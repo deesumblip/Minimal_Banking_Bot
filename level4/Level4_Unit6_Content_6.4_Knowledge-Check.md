@@ -26,7 +26,7 @@ d) Slots are read automatically from the flow
 **4. Why is the order of `collect:` steps in the flow important?**
 
 a) It doesn't matter; Rasa collects them in any order  
-b) The order determines the order in which the bot asks the user for each value  
+b) The order determines the order in which the agent asks the user for each value  
 c) The first collect step must always be amount  
 d) Only the last collect step is used by the action  
 
@@ -46,5 +46,5 @@ d) Only the response; slots are optional
 | 1 | **b** | Level 4 adds `amount`, `recipient`, and `account_from` for the transfer flow. |
 | 2 | **b** | The flow collects amount, then recipient, then account_from, then runs action_process_transfer. |
 | 3 | **b** | You call `tracker.get_slot("slot_name")` once per slot in the action's `run()` method. |
-| 4 | **b** | The order of `collect:` steps is the order in which the bot prompts the user for each value. |
-| 5 | **b** | Each slot needs an entry under `slots:` and a matching `utter_ask_<slot_name>` under `responses:` so the bot can ask when the slot is empty. |
+| 4 | **b** | The order of `collect:` steps is the order in which the agent prompts the user for each value. |
+| 5 | **b** | Each slot needs an entry under `slots:` and a matching `utter_ask_<slot_name>` under `responses:` so the agent can ask when the slot is empty. |

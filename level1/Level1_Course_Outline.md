@@ -3,9 +3,9 @@
 ## Course Overview
 
 **Title**: Level 1: Just Responses  
-**Description**: A Complete Guide to Building Your First Rasa Bot  
+**Description**: A Complete Guide to Building Your First Rasa Agent  
 **Prerequisites**: Basic Python, command line, text editor  
-**Learning Objective**: Students build a working banking assistant bot that can greet users, provide information, and handle basic conversations using responses and flows only (no actions or slots).
+**Learning Objective**: Students build a working banking assistant agent that can greet users, provide information, and handle basic conversations using responses and flows only (no actions or slots).
 
 ---
 
@@ -26,17 +26,17 @@
 
 ---
 
-### Unit 1: Introduction to Rasa Bots
+### Unit 1: Introduction to Rasa Agents
 **Type**: Content Page  
 **Assessment**: Concept Check (optional)
 
 **Sections**:
-- 1.1 What is a Conversational Bot?
-- 1.2 The Simplest Bot Possible
+- 1.1 What is a Conversational Agent?
+- 1.2 The Simplest Agent Possible
 - 1.3 Real-World Use Cases
 - 1.4 Test Your Knowledge
 
-**Key Concepts**: Conversational bots, NLU, Level 1 scope and limitations
+**Key Concepts**: Conversational agents, NLU, Level 1 scope and limitations
 
 ---
 
@@ -107,17 +107,17 @@
 
 ### Unit 6: Training and Testing
 **Type**: Content + Labs  
-**Assessment**: Lab 6.1 (Training Your Bot)
+**Assessment**: Lab 6.1 (Training Your Agent)
 
 **Sections**:
 - 6.1 What is Training?
-- 6.2 How to Train Your Bot
-- Lab 6.1: Training Your Bot
+- 6.2 How to Train Your Agent
+- Lab 6.1: Training Your Agent
 - 6.3 Using Rasa Inspector
 - Lab 6.2: Using Rasa Inspector
-- 6.4 Testing Your Bot
-- Lab 6.3: Testing Your Bot
-- 6.5 Understanding Bot Behavior
+- 6.4 Testing Your Agent
+- Lab 6.3: Testing Your Agent
+- 6.5 Understanding Agent Behavior
 
 **Key Concepts**: Training, Inspector, testing workflow
 
@@ -128,9 +128,9 @@
 **Assessments**: Lab 7.1, 7.2 (as configured)
 
 **Sections**:
-- 7.1 Complete Bot Walkthrough
-- Lab 7.1: Complete Bot Walkthrough
-- 7.2 Your Level 1 Banking Bot: Summary
+- 7.1 Complete Agent Walkthrough
+- Lab 7.1: Complete Agent Walkthrough
+- 7.2 Your Level 1 Banking Agent: Summary
 - 7.3 Best Practices
 - Lab 7.2: Build Your Own Feature (Project)
 
@@ -157,7 +157,7 @@
 
 ### Content Files (one per numbered subsection)
 - **Unit 0**: `Level1_Unit0_Content_0.1_What-You-Need-Before-Starting.md`, `Level1_Unit0_Content_0.2_Project-Structure.md`, `Level1_Unit0_Content_0.3_Understanding-YAML-Syntax.md`, `Level1_Unit0_Content_0.4_Getting-Help.md`
-- **Unit 1**: `Level1_Unit1_Content_1.1_What-is-a-Conversational-Bot.md` … `Level1_Unit1_Content_1.4_Test-Your-Knowledge.md`
+- **Unit 1**: `Level1_Unit1_Content_1.1_What-is-a-Conversational-Agent.md` … `Level1_Unit1_Content_1.4_Test-Your-Knowledge.md`
 - **Units 2–8**: `Level1_UnitN_Content_N.M_*.md` (see level1 folder for full list)
 
 ### Lab Content (student-facing)
@@ -182,7 +182,7 @@
 ```
 Unit 0: Prerequisites and Setup ✓ Lab 0.1
     ↓
-Unit 1: Introduction to Rasa Bots
+Unit 1: Introduction to Rasa Agents
     ↓
 Unit 2: Understanding the Domain File ✓ Labs 2.1, 2.2, 2.3
     ↓
@@ -205,11 +205,11 @@ Unit 8: Assessment and Next Steps
 
 By the end of Level 1, students should be able to:
 
-1. Explain what a conversational bot is and what Level 1 includes (responses only).
+1. Explain what a conversational agent is and what Level 1 includes (responses only).
 2. Edit the domain file to add and vary responses.
 3. Create and modify flows and understand flow descriptions.
 4. Configure system patterns (session start, pattern completed).
-5. Train the bot and test it using Rasa Inspector.
+5. Train the agent and test it using Rasa Inspector.
 6. Describe limitations of Level 1 and what Level 2 adds.
 
 ---

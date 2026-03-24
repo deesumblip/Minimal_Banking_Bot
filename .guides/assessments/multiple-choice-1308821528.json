@@ -4,7 +4,7 @@
 	"source": {
 		"name": "File Structure Understanding",
 		"showName": true,
-		"instructions": "**Which file would you need to modify to change the text responses that the bot can give to users?**",
+		"instructions": "**Which file would you need to modify to change the text responses that the agent can give to users?**",
 		"multipleResponse": false,
 		"isRandomized": false,
 		"answers": [
@@ -41,7 +41,7 @@
 		},
 		"bloomsObjectiveLevel": "3",
 		"learningObjectives": "SWBAT identify which files serve specific purposes in the Rasa project structure",
-		"guidance": "The correct answer is `domain/basics.yml`. As described in the topic, the domain file serves as \"the bot's knowledge base—defines all responses the bot can say.\" The other files have different purposes: `config.yml` defines how the bot is built, `data/basics/greet.yml` defines conversation flows, and `endpoints.yml` defines where to find custom actions and LLM configurations.",
+		"guidance": "The correct answer is `domain/basics.yml`. As described in the topic, the domain file serves as \"the agent's knowledge base—defines all responses the agent can say.\" The other files have different purposes: `config.yml` defines how the agent is built, `data/basics/greet.yml` defines conversation flows, and `endpoints.yml` defines where to find custom actions and LLM configurations.",
 		"showGuidanceAfterResponseOption": {
 			"type": "Attempts",
 			"passedFrom": 1

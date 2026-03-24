@@ -30,7 +30,7 @@ b) Collects amount, recipient, account_from, then runs the action `action_proces
 c) Only runs tools, no action  
 d) Replaces the Level 4 transfer_money flow  
 
-**5. From where do you train the Level 5 bot?**
+**5. From where do you train the Level 5 agent?**
 
 a) From project root only  
 b) Activate the venv at project root, then `cd level5`, then `rasa train`  

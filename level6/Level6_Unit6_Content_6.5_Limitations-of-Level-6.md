@@ -11,4 +11,4 @@ Level 6 is a good fit when you want one main agent that can delegate a full conv
 
 ## When You Need More
 
-Extend with more sub-agents, task-specific exit conditions, or external agents when your design requires them. Your Level 6 bot is the foundation.
+Extend with more sub-agents, task-specific exit conditions, or external agents when your design requires them. Your Level 6 agent is the foundation.

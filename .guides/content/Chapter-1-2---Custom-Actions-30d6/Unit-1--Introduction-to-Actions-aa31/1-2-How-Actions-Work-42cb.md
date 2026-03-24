@@ -1,6 +1,6 @@
 When a flow calls an action, here's what happens:
 
-```
+
 User sends message: "What are your hours?"
     ↓
 Flow: hours is triggered
@@ -15,8 +15,7 @@ Action executes Python code
     ↓
 Action sends message via dispatcher.utter_message()
     ↓
-Bot responds with dynamic message
-```
+Agent responds with dynamic message
 
 **Key Point**: Actions are Python classes that Rasa calls when needed. You write the logic, Rasa handles the execution.
 

@@ -1,6 +1,6 @@
-Level 3 adds **slots**. A slot is a named place in the domain where Rasa can store something the user said so the bot can use it again later.
+Level 3 adds **slots**. A slot is a named place in the domain where Rasa can store something the user said so the agent can use it again later.
 
-Your Level 2 bot still works. You are only adding memory on top of what you already have.
+Your Level 2 agent still works. You are only adding memory on top of what you already have.
 
 The **level3** starter already includes **`action_bank_hours.py`** and **`action_holiday_hours.py`**. You keep using them as-is. Your new work is the slot, the ask response, registering **`action_check_balance_simple`**, writing that action in Lab 4.1, and adding the **`check_balance`** flow in Lab 5.1.
 
@@ -13,7 +13,7 @@ You will work in a fixed order on purpose. First you change the **domain** so Ra
 You will update `domain/basics.yml` in the `level3` folder.
 
 - Add a `slots:` section with an `account` slot.
-- Add the response `utter_ask_account` so the bot can ask for the account number when the slot is empty.
+- Add the response `utter_ask_account` so the agent can ask for the account number when the slot is empty.
 - Add `action_check_balance_simple` to the `actions:` list alongside `action_bank_hours` and `action_holiday_hours`. You will create the matching Python file in Lab 4.1.
 
 ### Lab 4.1: action

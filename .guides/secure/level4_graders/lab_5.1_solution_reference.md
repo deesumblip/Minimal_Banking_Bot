@@ -1,4 +1,4 @@
-# Lab 5.1 – Reference solution for Training the Level 4 Bot
+# Lab 5.1 – Reference solution for Training the Level 4 Agent
 
 Use this file as the **Instructor Provided Solution File** for Lab 5.1 if you use an LLM Rubric; otherwise the Standard Code Test (Python grader) is the primary assessment.
 

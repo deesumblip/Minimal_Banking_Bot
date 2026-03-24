@@ -16,7 +16,7 @@
 			{
 				"_id": "b3bb18c1-a2d9-c11b-7d45-f66762f38fca",
 				"correct": false,
-				"answer": "A type of response the bot can say"
+				"answer": "A type of response the agent can say"
 			},
 			{
 				"_id": "9ed457e0-6f2f-461e-1bda-b1aa4f4e1e57",
@@ -46,7 +46,7 @@
 		},
 		"bloomsObjectiveLevel": "1",
 		"learningObjectives": "SWBAT define what a slot is in conversational AI",
-		"guidance": "A slot is the bot's memory: it stores information from the conversation. The other options describe different components of a conversational AI system but are not slots. A flow step is part of the conversation flow structure, a response is an output message, and Python functions handle logic but are not slots themselves.",
+		"guidance": "A slot is the agent's memory: it stores information from the conversation. The other options describe different components of a conversational AI system but are not slots. A flow step is part of the conversation flow structure, a response is an output message, and Python functions handle logic but are not slots themselves.",
 		"showGuidanceAfterResponseOption": {
 			"type": "Attempts",
 			"passedFrom": 1

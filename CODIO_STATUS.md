@@ -1,6 +1,6 @@
 # Codio Implementation Status
 
-Tracks which levels of the Minimal Banking Bot course are implemented and live on Codio.
+Tracks which levels of the Minimal Banking Agent course are implemented and live on Codio.
 
 | Level | Name                 | Status        | Notes |
 |-------|----------------------|---------------|--------|
