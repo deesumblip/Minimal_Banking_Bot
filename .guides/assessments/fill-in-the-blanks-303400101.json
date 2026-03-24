@@ -7,7 +7,7 @@
 		"instructions": "**Fill in the blanks to complete the hours flow YAML.** Use the exact structure and naming conventions for Rasa flows.",
 		"showValues": true,
 		"text": "Complete the YAML structure for the hours flow:\n\n```yaml\n<<<flows>>>:\n  <<<hours>>>:\n    <<<name>>>: bank hours\n    <<<description>>>: Provide bank opening hours and schedule.\n    <<<steps>>>:\n      - <<<action>>>: utter_hours\n```",
-		"distractors": "flow\nhour\ntitle\nstep\nresponse\nactions\nutter",
+		"distractors": "flow\ntitle\nstep\nresponse\nactions\nutter",
 		"metadata": {
 			"tags": [
 				{
