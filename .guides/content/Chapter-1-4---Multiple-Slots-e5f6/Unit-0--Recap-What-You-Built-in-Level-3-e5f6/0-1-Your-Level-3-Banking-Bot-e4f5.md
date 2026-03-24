@@ -1,15 +1,10 @@
 Before we add multiple slots for the transfer flow, here is a quick recap of what you built in Level 3. All of this remains unchanged. Level 4 builds on top of it.
 
-## Level 4 Setup
+**Naming in this chapter:** *Level 3* is the outcome of Chapter 1.3. The **`level3/`** folder is that bot; **`level4/`** is the copy where you do Chapter 1.4 work.
 
-The **level4** folder is set up as a copy of your Level 3 bot. In this chapter you will:
+## Where Chapter 1.4 happens
 
-- Add three new slots and three ask responses in the domain (Lab 2.1)
-- Register and create the new action `action_process_transfer` (Labs 2.1 and 3.1)
-- Create the transfer_money flow that collects all three slots (Lab 4.1)
-- Train and test (Labs 5.1 and 5.2)
-
-Everything else is your Level 3 content.
+You add the transfer flow and any Level 4 pipeline changes under **`level4/`** (a copy of your Level 3 tree). The **lab sequence** and the **full checklist**—including required **`config.yml`** / **`endpoints.yml`** differences—are on **0.2 What Level 4 Adds**. Use that page when you set up or verify `level4/`.
 
 ---
 
@@ -36,7 +31,7 @@ Everything else is your Level 3 content.
 
 In **`level3/`**, **`config.yml`** uses **`SearchReadyLLMCommandGenerator`** (Chapter 1.3 pattern). Your **`endpoints.yml`** and **`.env`** supply API keys.
 
-When you move to Chapter 1.4, you work in **`level4/`**. The Level 4 assistant is **not** identical to Level 3 at the pipeline layer: you need **`CompactLLMCommandGenerator`**, **`flow_retrieval`**, and (in this course) an **`endpoints.yml`** **model_groups** profile suited to multi-slot FillSlot—see **0.3 Complete Delta** and **`level4/PIPELINE_CHAPTER_1_3_AND_4.md`**. Do **not** assume only **`assistant_id: level4-bot`** changes.
+**Heads-up when you open `level4/`:** Chapter 1.4 is **not** “same pipeline, new `assistant_id` only.” You will use a different command generator, add **`flow_retrieval`**, and align **`model_groups`** so multi-slot FillSlot works reliably. On **0.2 What Level 4 Adds**, read **§2** (pipeline) when you work in `level4/`; use **`level4/PIPELINE_CHAPTER_1_3_AND_4.md`** for deeper rationale.
 
 ---
 
