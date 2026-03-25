@@ -45,12 +45,12 @@ Create one markdown file per section, same naming pattern as Level 3. Paths unde
 
 | File | Purpose |
 |------|--------|
-| `Level4_Unit0_Content_0.1_Your-Level-3-Banking-Agent.md` | Recap: level4 folder = your Level 3 agent; what’s in domain (account slot, utter_ask_account, actions), data/basics (check_balance, hours, …), actions (action_bank_hours, action_check_balance_simple). What Level 3 couldn’t do: collect several pieces of info in one flow (e.g. amount, recipient, account). |
+| `Level4_Unit0_Content_0.1_Your-Level-3-Banking-Agent.md` | Recap: level4 folder = your Level 3 agent; what’s in domain (account slot, utter_ask_account, actions), data/basics (check_balance, hours, holiday_hours, …), actions (`action_bank_hours`, `action_holiday_hours`, `action_check_balance_simple`). What Level 3 couldn’t do: collect several pieces of info in one flow (e.g. amount, recipient, account). |
 | `Level4_Unit0_Content_0.2_What-Level-4-Adds.md` | Concept + **authoritative Ch 1.3 end → Ch 1.4 end checklist**: pipeline (**`config.yml`** / **`endpoints.yml`**), lab deliverables, summary table; lab order 2.1 → 3.1 → 4.1 → 5.1 → 5.2. |
 | `Level4_Unit1_Content_1.1_Multiple-Slots.md` | Multiple slots = agent remembers several values in one conversation (e.g. amount, recipient, account_from for a transfer). |
 | `Level4_Unit1_Content_1.2_Order-of-Collection.md` | Order of `collect:` steps in the flow determines the order the agent asks; keep order consistent with the action’s expectations. |
 | `Level4_Unit1_Content_1.3_Slot-Naming-Multiple.md` | Naming: utter_ask_<slot_name>; slot names used in action must match domain and flow. |
-| `Level4_Unit2_Content_2.1_Adding-Slots-and-Responses.md` | Domain: add slots amount, recipient, account_from (type text); add utter_ask_amount, utter_ask_recipient, utter_ask_account_from; add action_process_transfer to actions. Pointer to Lab 2.1. |
+| `Level4_Unit2_Content_2.1_Adding-Slots-and-Responses.md` | Domain: add slots amount, recipient, account_from (type text); add utter_ask_amount, utter_ask_recipient, utter_ask_account_from; **append** action_process_transfer to actions **without removing** Level 3 actions. Pointer to Lab 2.1. |
 | `Level4_Unit3_Content_3.1_Reading-Multiple-Slots.md` | In an action, use `tracker.get_slot` for all three slots; cap **recipient** at **100** characters in code to match the flow; validate placeholders; pointer to Lab 3.1. |
 | `Level4_Unit4_Content_4.1_Multiple-Collect-Steps.md` | Flow steps: multiple `collect:` steps (e.g. amount, then recipient, then account_from), then `action: action_process_transfer`. **`collect: recipient`** `description:` should state free text up to **100** chars (course build). Pointer to Lab 4.1. |
 | `Level4_Unit6_Content_6.1_Complete-Agent-Walkthrough.md` | Short recap + same **scripted transfer** turns as Lab 5.2 / Unit 6.1 guide page (optional hands-on). |

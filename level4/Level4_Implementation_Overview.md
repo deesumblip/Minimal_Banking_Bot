@@ -65,14 +65,15 @@ This document provides implementation guidance for **Level 4: Multiple Slots** o
 ```
 level4/
   domain/
-    basics.yml       # slots: account; utter_ask_account; actions: action_bank_hours, action_check_balance_simple
+    basics.yml       # slots: account; utter_ask_account; actions: action_bank_hours, action_holiday_hours, action_check_balance_simple
   data/
     basics/
       greet.yml, help.yml, contact.yml, goodbye.yml, hours.yml
-      check_balance.yml
+      check_balance.yml, holiday_hours.yml
   actions/
     __init__.py
     action_bank_hours.py
+    action_holiday_hours.py
     action_check_balance_simple.py
   config.yml
   credentials.yml

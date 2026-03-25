@@ -11,7 +11,7 @@
 1. In **Codio**, use **Check It!** for Lab 5.2 (`code-output-compare-401050002`).
 
 The grader checks that:
-   - The domain has the three transfer slots, three ask responses, and `action_process_transfer` in the actions list
+   - The domain has the three transfer slots, three ask responses, and `action_process_transfer` in the actions list (keep Level 3 actions listed too so training succeeds—see Lab 2.1)
    - `level4/actions/action_process_transfer.py` exists and reads the three slots
    - `level4/data/basics/transfer_money.yml` exists with the three collect steps and the action step
    - A model file exists in `level4/models/`

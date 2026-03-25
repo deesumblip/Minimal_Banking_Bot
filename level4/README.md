@@ -57,7 +57,7 @@ Use your actual project path. Ensure `.env` exists in the project root (or level
 
 **Additions to your Level 3 banking agent:**
 
-- **Domain (Lab 2.1):** Slots `amount`, `recipient`, `account_from`; responses `utter_ask_amount`, `utter_ask_recipient`, `utter_ask_account_from`; `action_process_transfer` in the actions list.
+- **Domain (Lab 2.1):** Slots `amount`, `recipient`, `account_from`; responses `utter_ask_amount`, `utter_ask_recipient`, `utter_ask_account_from`; **append** `action_process_transfer` to `actions:` **without removing** Level 3 action names (`action_bank_hours`, `action_holiday_hours`, `action_check_balance_simple`).
 - **Action (Lab 3.1):** `actions/action_process_transfer.py` — reads the three slots and sends a transfer confirmation (and optionally validates placeholders).
 - **Flow (Lab 4.1):** `data/basics/transfer_money.yml` — collect amount, recipient, account_from, then run action_process_transfer.
 

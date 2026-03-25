@@ -2,7 +2,7 @@
 
 In this chapter you:
 
-1. **Domain (Lab 2.1)** — Added three slots (`amount`, `recipient`, `account_from`) and three ask responses (`utter_ask_amount`, `utter_ask_recipient`, `utter_ask_account_from`), and registered `action_process_transfer` in the actions list.
+1. **Domain (Lab 2.1)** — Added three slots (`amount`, `recipient`, `account_from`) and three ask responses (`utter_ask_amount`, `utter_ask_recipient`, `utter_ask_account_from`), and registered `action_process_transfer` in the actions list while **keeping** the existing Level 2–3 action names so flows such as `holiday_hours` still train.
 
 2. **Action (Lab 3.1)** — Created `action_process_transfer.py`, which reads the three slots, caps **recipient** at **100** characters, validates placeholders, and sends the demo transfer confirmation.
 

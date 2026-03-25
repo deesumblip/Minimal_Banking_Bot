@@ -13,7 +13,7 @@ In Lab 2.1 you will update the domain so the agent can collect amount, recipient
    - `utter_ask_account_from`, e.g. "Which account would you like to transfer from?"
 
 3. **One new action name** in the `actions:` list:
-   - `action_process_transfer`, You will create the `.py` file in Lab 3.1; here you only register the name so Rasa can call it.
+   - `action_process_transfer` — you will create the `.py` file in Lab 3.1; here you only register the name so Rasa can call it. **Do not remove** the Level 2/3 action names already in the domain; flows such as **`holiday_hours`** still need **`action_holiday_hours`** listed, or **`rasa train`** will fail.
 
 ## Domain Structure (concept)
 
@@ -21,11 +21,11 @@ After Lab 2.1 your domain will have the existing Level 3 content plus:
 
 - Under `slots:`: `account` (from Level 3), and `amount`, `recipient`, `account_from`
 - Under `responses:`: the existing utter_* and `utter_ask_account`, plus `utter_ask_amount`, `utter_ask_recipient`, `utter_ask_account_from`
-- Under `actions:`: `action_bank_hours`, `action_check_balance_simple`, and `action_process_transfer`
+- Under `actions:`: the existing **`action_bank_hours`**, **`action_holiday_hours`**, **`action_check_balance_simple`**, plus **`action_process_transfer`**
 
 ## Example: What you will add to the domain
 
-Below is an example of the **new** pieces you will add. Your existing `slots:` already has `account`; you add the three slots below. Under `responses:` you add the three ask responses. Under `actions:` you add `action_process_transfer` (you will create the `.py` file in Lab 3.1).
+Below is an example of the **new** pieces you will add. Your existing `slots:` already has `account`; you add the three slots below. Under `responses:` you add the three ask responses. Under `actions:` you **append** `action_process_transfer` to the existing list (you will create the `.py` file in Lab 3.1).
 
 **New slots (add under existing slots:):**
 
@@ -53,11 +53,14 @@ Below is an example of the **new** pieces you will add. Your existing `slots:` a
 
 Use **`rephrase: False`** on these three asks so prompts stay stable during slot collection (see Lab 2.1 note, `rephrase: True` here can break CALM slot filling and trigger “unable to understand you”).
 
-**Updated actions list (include the new action):**
+**Updated actions list (include the new action alongside the existing Level 3 actions):**
 
+```yaml
 actions:
   - action_bank_hours
+  - action_holiday_hours
   - action_check_balance_simple
   - action_process_transfer
+```
 
 In **Lab 2.1** you will add your own version of these to `level4/domain/basics.yml`. When you are done, **in Codio** use **Check It!** for Lab 2.1.

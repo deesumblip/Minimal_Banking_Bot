@@ -10,7 +10,7 @@
 ## Part 1: Completion check (Codio)
 
 1. Use **Check It!** below. The grader verifies:
-   - **Domain:** slots `amount`, `recipient`, `account_from`; `utter_ask_amount`, `utter_ask_recipient`, `utter_ask_account_from`; `action_process_transfer` in `actions:`
+   - **Domain:** slots `amount`, `recipient`, `account_from`; `utter_ask_amount`, `utter_ask_recipient`, `utter_ask_account_from`; `action_process_transfer` in `actions:` (keep Level 3 actions listed too so training succeeds—see Lab 2.1)
    - **Action:** `level4/actions/action_process_transfer.py` reads the three slots (via `get_slot`)
    - **Flow:** `level4/data/basics/transfer_money.yml` has the three `collect:` steps and `action: action_process_transfer`
    - **Model:** at least one `.tar.gz` under `level4/models/`
