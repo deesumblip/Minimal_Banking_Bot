@@ -21,13 +21,8 @@ utter_goodbye:
       rephrase: True
 ```
 
-**How to Verify**:
-1. Check that both `- text:` items are at the same indentation level (4 spaces from the left)
-2. Check that `metadata:` is aligned with `text:` (6 spaces from the left)
-3. Check that `rephrase: True` is under `metadata:` (8 spaces from the left)
-4. Try training your agent (we'll learn this in Unit 6) - if training succeeds, your YAML is correct!
+**What This Means**: When `utter_goodbye` is used, Rasa will randomly select one of the two variations, this ensures your agent won't use the same response back to back if it is activated more than once. When the rephraser is added on top, as you can see in the example, the responses will sound more varied. 
 
-**What This Means**: When `utter_goodbye` is used, Rasa will randomly select one of the two variations, making your agent feel more natural.
 
 {Check It!|assessment}(code-output-compare-302300002)
 
