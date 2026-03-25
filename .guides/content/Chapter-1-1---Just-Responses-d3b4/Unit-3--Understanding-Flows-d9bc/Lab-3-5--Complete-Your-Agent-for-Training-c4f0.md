@@ -8,7 +8,7 @@
 
 Open **`level1/domain/basics.yml`**. Under the `responses:` section, add the two blocks below after your last response (e.g. after `utter_goodbye`). Use the same indentation (2 spaces).
 
-
+```yaml
   utter_hours:
     - text: "We're open Monday–Friday 9am–5pm and Saturday 9am–1pm. Closed Sundays."
       metadata:
@@ -18,6 +18,7 @@ Open **`level1/domain/basics.yml`**. Under the `responses:` section, add the two
     - text: "To check your balance, we'll need your account number. You can say 'Check my balance' and have your account number ready."
       metadata:
         rephrase: True
+```
 
 Save the file.
 
@@ -27,13 +28,14 @@ Save the file.
 
 Create **`level1/data/basics/hours.yml`** with this content (same as the flow you completed in Lab 3.4 Part 1):
 
-
+```yaml
 flows:
   hours:
     name: bank hours
     description: Provide bank opening hours and schedule.
     steps:
       - action: utter_hours
+```
 
 Save the file.
 
@@ -43,13 +45,14 @@ Save the file.
 
 Create **`level1/data/basics/balance.yml`** with this content (same as the flow you completed in Lab 3.4 Part 2):
 
-
+```yaml
 flows:
   balance:
     name: account balance help
     description: Explain how to check account balance.
     steps:
       - action: utter_balance
+```
 
 Save the file.
 

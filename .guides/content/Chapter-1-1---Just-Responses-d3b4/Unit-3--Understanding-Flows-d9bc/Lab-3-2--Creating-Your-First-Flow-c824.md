@@ -38,13 +38,14 @@
 1. Open `goodbye.yml` in your editor (it will be empty)
 2. Add this exact structure:
 
-
+```yaml
 flows:
   goodbye:
     name: say goodbye
     description: Farewell the user when they end the conversation.
     steps:
       - action: utter_goodbye
+```
 
 ⚠️ **Pay attention to indentation**:
 - `flows:` is at the start (no indentation)
@@ -104,12 +105,14 @@ Before saving, check:
 
 `data/basics/goodbye.yml`:
 
+```yaml
 flows:
   goodbye:
     name: say goodbye
     description: Farewell the user when they end the conversation.
     steps:
       - action: utter_goodbye
+```
 
 #### How Rasa Finds Flows
 

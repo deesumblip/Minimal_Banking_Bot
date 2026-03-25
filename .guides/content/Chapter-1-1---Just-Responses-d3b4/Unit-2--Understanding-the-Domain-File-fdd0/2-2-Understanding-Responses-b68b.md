@@ -4,11 +4,12 @@ A **response** is a predefined message the agent can send to users. Responses ar
 
 Let's examine a real response from `domain/basics.yml`:
 
-
+```yaml
 utter_greet:
   - text: "Hi! I'm a banking assistant. How can I help you today?"
     metadata:
       rephrase: True
+```
 
 **Breaking it down**:
 
@@ -35,11 +36,12 @@ utter_greet:
 
 Responses are defined as lists because you can have multiple variations:
 
-
+```yaml
 utter_greet:
   - text: "Hi! I'm a banking assistant. How can I help you today?"
   - text: "Hello! How can I help you?"
   - text: "Welcome! I'm here to assist you."
+```
 
 Rasa will randomly select one of these when the response is used, making the agent feel more natural.
 

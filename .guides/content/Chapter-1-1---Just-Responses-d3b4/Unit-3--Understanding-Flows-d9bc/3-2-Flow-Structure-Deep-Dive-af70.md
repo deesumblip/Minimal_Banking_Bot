@@ -1,12 +1,13 @@
 Let's examine a real flow from `data/basics/greet.yml`:
 
-
+```yaml
 flows:
   greet:
     name: say hello
     description: Greet the user when they start a conversation.
     steps:
       - action: utter_greet
+```
 
 #### Breaking Down Each Component
 
@@ -21,7 +22,7 @@ flows:
 
 3. **`name: say hello`**: Human-readable name
    - Used in logs and debugging
-   - Helps humans understand what the flow doesgggh
+   - Helps humans understand what the flow does
    - Can be different from the flow identifier
 
 4. **`description: ...`**: What the flow does

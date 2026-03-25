@@ -11,7 +11,7 @@ A **flow** is a conversation script - a step-by-step plan for how the agent shou
 
 When a flow is triggered, Rasa executes each step in order:
 
-
+```text
 User says "hello"
     ↓
 Flow: greet is triggered
@@ -21,5 +21,6 @@ Step 1: utter_greet
 Agent responds: "Hi! I'm a banking assistant..."
     ↓
 Flow completes
+```
 
 ---

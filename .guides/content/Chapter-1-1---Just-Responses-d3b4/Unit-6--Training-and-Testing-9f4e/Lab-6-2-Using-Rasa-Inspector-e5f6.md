@@ -28,8 +28,10 @@ python -m rasa inspect --debug --log-file logs/logs.out
 
 **What you'll see**: The terminal will show a lot of output, including something like:
 
+```text
 Starting Rasa server on http://0.0.0.0:5005
 ...
+```
 
 **Leave this terminal open.** Inspector is running as a server; if you close the terminal, it will stop.
 

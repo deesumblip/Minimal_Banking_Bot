@@ -14,11 +14,13 @@
 
 **Example Solution**:
 
+```yaml
 utter_goodbye:
   - text: "Goodbye! Have a great day!"
   - text: "See you later! Take care!"
     metadata:
       rephrase: True
+```
 
 **How to Verify**:
 1. Check that both `- text:` items are at the same indentation level (4 spaces from the left)

@@ -16,6 +16,7 @@
 
 **Expected Result**:
 
+```yaml
 flows:
   greet:
     name: say hello
@@ -23,6 +24,7 @@ flows:
     steps:
       - action: utter_greet
       - action: utter_help
+```
 
 **How to Verify**:
 1. Both steps are at the same indentation level (4 spaces from the left)

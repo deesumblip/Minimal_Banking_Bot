@@ -6,7 +6,7 @@ The `endpoints.yml` file defines **where Rasa can find actions and how LLM featu
 
 #### Complete endpoints.yml Breakdown
 
-
+```yaml
 action_endpoint:
   actions_module: "actions"
 
@@ -21,6 +21,7 @@ model_groups:
       - provider: openai
         model: gpt-4o-mini-2024-07-18
         temperature: 0.3
+```
 
 #### Section-by-Section Explanation
 

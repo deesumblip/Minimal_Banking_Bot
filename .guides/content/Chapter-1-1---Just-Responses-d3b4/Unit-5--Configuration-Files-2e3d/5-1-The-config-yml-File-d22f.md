@@ -4,7 +4,7 @@ The `config.yml` file tells Rasa **how to build your agent**. It's like the blue
 
 #### Complete config.yml Breakdown
 
-
+```yaml
 recipe: default.v1
 language: en
 assistant_id: level1-agent
@@ -16,6 +16,7 @@ pipeline:
 
 policies:
   - name: FlowPolicy
+```
 
 #### Section-by-Section Explanation
 
@@ -46,13 +47,14 @@ policies:
 
 #### Simplified Mental Model
 
-
+```text
 config.yml = "How to build this agent"
   ├── recipe: "Use Rasa Pro standard recipe"
   ├── language: "English"
   ├── assistant_id: "level1-agent (unique name)"
   ├── pipeline: "Use an LLM to start flows"
   └── policies: "Use flows to decide responses"
+```
 
 {Check It!|assessment}(multiple-choice-2496482437)
 

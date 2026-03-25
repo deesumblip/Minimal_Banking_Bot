@@ -2,7 +2,7 @@ The `pattern_session_start` flow automatically triggers when a new conversation 
 
 #### How It Works
 
-
+```yaml
 flows:
   pattern_session_start:
     name: pattern session start
@@ -11,6 +11,7 @@ flows:
       - intent: session_start
     steps:
       - action: utter_greet
+```
 
 #### Breaking It Down
 
@@ -29,7 +30,7 @@ flows:
 
 #### Conversation Flow
 
-
+```text
 User opens chat
     ↓
 Rasa detects new session
@@ -39,6 +40,7 @@ pattern_session_start triggers automatically
 Agent says utter_greet
     ↓
 User sees: "Hi! I'm a banking assistant..."
+```
 
 **Key Point**: The user doesn't need to say anything - the agent greets them automatically.
 

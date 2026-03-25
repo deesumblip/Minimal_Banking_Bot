@@ -10,6 +10,7 @@
 
 **Expected Result**:
 
+```yaml
 pattern_session_start:
   name: pattern session start
   description: Start the conversation with a greeting
@@ -18,6 +19,7 @@ pattern_session_start:
   steps:
     - action: utter_greet
     - action: utter_contact
+```
 
 **What Happens**: New conversations start with greeting, then contact info.
 

@@ -4,6 +4,20 @@
 
 ## Part 1: In Codio
 
+Typical command sequence (project root contains `level1`, `level2`, `.guides`, and `.venv` after Lab 0.1):
+
+```bash
+# From project root (e.g. ~/workspace)
+ls -la .venv
+source .venv/bin/activate
+# If .venv is missing: python3.11 -m venv .venv && source .venv/bin/activate
+
+cd level1
+pwd
+python -m rasa --version
+python -m rasa train
+```
+
 1. **Virtual environment**: In the terminal window (it opens at `~/workspace`; your prompt may show `~/workspace$`), go to the main project folder (the one that contains `level1`, `level2`, and `.guides`). Run `ls -la .venv`. If it exists: `source .venv/bin/activate`. If not: `python3.11 -m venv .venv` then `source .venv/bin/activate`. Prompt should show `(.venv)`.
 2. **Navigate to level1**: Go to the `level1` folder: `cd level1`. Confirm with `pwd` (path should end in `level1`).
 3. **Rasa**: Run `python -m rasa --version`. If error, install: `pip install rasa-pro` (with venv active).
@@ -19,6 +33,22 @@
 ## Part 2: Running locally
 
 Follow the same logic as Part 1, but use your own terminal and OS-specific commands.
+
+**macOS / Linux** (after `cd` to your project root):
+
+```bash
+source .venv/bin/activate
+cd level1
+python -m rasa train
+```
+
+**Windows (PowerShell)** (after `cd` to your project root):
+
+```powershell
+.\.venv\Scripts\Activate.ps1
+cd level1
+python -m rasa train
+```
 
 1. **Open a terminal** (PowerShell, Command Prompt, or Terminal.app / your Linux terminal).
 2. **Go to the main project folder** (the one that contains `level1`, `level2`, and `.guides`).  

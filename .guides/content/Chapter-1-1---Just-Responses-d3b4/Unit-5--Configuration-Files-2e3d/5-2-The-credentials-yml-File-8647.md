@@ -6,13 +6,14 @@ The `credentials.yml` file defines **how the agent connects to chat interfaces**
 
 #### Complete credentials.yml Breakdown
 
-
+```yaml
 rest:
 
 socketio:
   bot_message_evt: bot_uttered
   session_persistence: true
   user_message_evt: user_uttered
+```
 
 #### Section-by-Section Explanation
 

@@ -4,7 +4,7 @@ Understanding the file structure will help you navigate the codebase and underst
 
 ## Complete File Tree
 
-
+```text
 level1/
 ├── config.yml # How to build the agent (pipeline, policies)
 ├── credentials.yml # How to connect (REST, Socket.IO)
@@ -21,6 +21,7 @@ level1/
 │ └── patterns/
 │ └── patterns.yml # System patterns (session start, completed)
 └── models/ # Generated during training (don't edit)
+```
 
 **Note for Codio Students**: Credentials are pre-configured via environment variables. The `.env` file may not be visible in your project; that's expected.
 
@@ -52,7 +53,7 @@ level1/
 
 ## How Files Work Together
 
-
+```text
 User sends message
 ↓
 config.yml (defines how to understand it)
@@ -62,6 +63,7 @@ data/.yml (flows define what to do)
 domain/basics.yml (responses define what to say)
 ↓
 Agent responds
+```
 
 ### Key Relationships
 

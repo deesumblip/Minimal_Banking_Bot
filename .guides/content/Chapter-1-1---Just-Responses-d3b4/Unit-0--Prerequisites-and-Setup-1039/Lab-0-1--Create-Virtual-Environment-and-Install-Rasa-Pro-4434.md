@@ -43,9 +43,10 @@ pip --version
 
 You should see Python 3.11.x (or 3.10+) and pip. **If Python is not found,** install it in the terminal (Codio is usually Ubuntu-based):
 
-
+```bash
 sudo apt update
 sudo apt install python3.11 python3.11-venv python3-pip
+```
 
 Then run `python3.11 --version` and `pip --version` again. If your environment doesn't allow `sudo` or the packages aren't available, ask your instructor or course support for how to enable Python 3.11 on your Codio box.
 
@@ -121,8 +122,9 @@ You should see Python 3.11.x (or 3.10+) and pip. **If Python is not found,** ins
 
 **If pip is not found** but Python is installed, bootstrap pip with:
 
-
+```powershell
 py -3.11 -m ensurepip --upgrade
+```
 
 Then run `py -m pip --version` again.
 
@@ -130,16 +132,18 @@ Then run `py -m pip --version` again.
 
 Confirm you're in the project root. Then:
 
-
+```powershell
 py -3.11 -m venv .venv
 .\.venv\Scripts\Activate.ps1
+```
 
 Your prompt should show `(.venv)` at the start.
 
 **3. Install Rasa Pro**
 
-
+```powershell
 pip install --no-cache-dir rasa-pro
+```
 
 Installation takes 2–5 minutes.
 
@@ -147,8 +151,9 @@ Installation takes 2–5 minutes.
 
 Replace `YOUR_LICENSE_KEY` with your actual license:
 
-
+```powershell
 $env:RASA_LICENSE = "YOUR_LICENSE_KEY"
+```
 
 Then run `rasa --version` (step 5). To have it in every new terminal, set the user environment variable (e.g. **System → Environment Variables**) or use a `.env` file and load it in your profile.
 
@@ -244,8 +249,9 @@ You should see Python 3.11.x (or 3.10+). **If Python is not found,** install Pyt
 
 **If pip is not found** but Python 3.11 is installed, install pip with your package manager (`sudo apt install python3-pip` or `sudo dnf install python3-pip`) or bootstrap it:
 
-
+```bash
 python3.11 -m ensurepip --upgrade
+```
 
 Then run `pip --version` again. After any install, close and reopen your terminal, then repeat the version commands from the project root.
 
@@ -253,16 +259,18 @@ Then run `pip --version` again. After any install, close and reopen your termina
 
 Confirm you're in the project root (run `pwd`, the path should **not** end in `level1`). Then:
 
-
+```bash
 python3.11 -m venv .venv
 source .venv/bin/activate
+```
 
 Your prompt should show `(.venv)` at the start.
 
 **3. Install Rasa Pro**
 
-
+```bash
 pip install --no-cache-dir rasa-pro
+```
 
 Installation takes 2–5 minutes.
 
@@ -270,15 +278,17 @@ Installation takes 2–5 minutes.
 
 Replace `YOUR_LICENSE_KEY` with your actual license:
 
-
+```bash
 export RASA_LICENSE=YOUR_LICENSE_KEY
+```
 
 Then run `rasa --version` (step 5). **To have RASA_LICENSE in every new terminal:** Create a `.env` file in the project root with `RASA_LICENSE=your-license`, then at the start of each session run `set -a; source .env; set +a`. Do **not** commit `.env` (it is in `.gitignore`).
 
 **5. Verify installation**
 
-
+```bash
 rasa --version
+```
 
 You should see version information with no errors.
 
@@ -312,8 +322,5 @@ Confirm that the **domain/** and **data/** directories exist and that the three 
 - The `level1` folder has the expected structure (domain, data, config files).
 
 For **later labs**: Use the same `.venv` from the project root for every level. Activate it from the root, ensure `RASA_LICENSE` is loaded, then `cd` into the level folder you're working in (e.g. `cd level1`).
-
----
- level folder you're working in (e.g. `cd level1`).
 
 ---
