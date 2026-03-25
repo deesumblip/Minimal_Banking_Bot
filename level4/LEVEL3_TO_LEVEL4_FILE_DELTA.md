@@ -9,7 +9,7 @@ Chapter 1.4 **starts** from **Chapter 1.3 completion** (your finished agent in *
 | File | Chapter 1.3 (`level3/`) | Chapter 1.4 (`level4/`) |
 |------|-------------------------|-------------------------|
 | `config.yml` | `SearchReadyLLMCommandGenerator`; `assistant_id: level3-agent` | `CompactLLMCommandGenerator`; `flow_retrieval`; `assistant_id: level4-agent` (see **`PIPELINE_CHAPTER_1_3_AND_4.md`**) |
-| `endpoints.yml` | Course Level 3 pattern | Course **`level4/endpoints.yml`** (`model_groups` / `temperature` tuned for multi-slot FillSlot) |
+| `endpoints.yml` | Course Level 3 pattern (often literal mini) | Same **`nlg`** / **`model_groups`** shape; **`gpt-4o-mini`** group id → **`model: gpt-4o-2024-11-20`**, **`temperature: 0.1`** |
 
 ---
 
@@ -25,4 +25,4 @@ Chapter 1.4 **starts** from **Chapter 1.3 completion** (your finished agent in *
 
 ## Lab 5.2
 
-Expects domain + action + flow + **trained model** under **`level4/models/`** after **Lab 5.1**.
+Graded check: domain + action + flow + **trained model** + **`config.yml`** pipeline (**Compact**). **`endpoints.yml`** is not graded; align it with **`level4/endpoints.yml`** for reliable **recipient** in Inspector (**Unit 0.2**).

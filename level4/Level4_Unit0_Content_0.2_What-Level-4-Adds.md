@@ -56,10 +56,29 @@ These differ from Chapter 1.3 **on purpose**. Skipping them often causes **“un
 
 ### `endpoints.yml` (in `level4/`)
 
-- Keep the same **structure** as Level 3 (**`action_endpoint`**, **`nlg`**, **`model_groups`**).
-- For **reliable FillSlot** on free-text names, the course **`level4/endpoints.yml`** points the shared **`gpt-4o-mini`** **group id** at a **capable chat model** (e.g. **`gpt-4o-2024-11-20`**) and uses a **lower `temperature`** (e.g. **0.1**) than a minimal mini-only setup.
+- Keep the same **structure** as Level 3 (**`action_endpoint`**, **`nlg`** with **`type: rephrase`**, **`model_groups`**). Your **`.env`** still supplies API keys.
 
-**What to do:** Compare your file to **`level4/endpoints.yml`** in this repo and align **`model_groups`** / **`temperature`** if your transfer flow mis-fills slots.
+- **`config.yml`** uses **`model_group: gpt-4o-mini`** for the LLM components. That value is the **`id`** under **`model_groups`**—it is a **label**, not a requirement to call OpenAI’s **`gpt-4o-mini`** model literally.
+
+- **What you should set (course pattern):** Under **`model_groups`**, the entry with **`id: gpt-4o-mini`** must use **`model: gpt-4o-2024-11-20`** and **`temperature: 0.1`**. **`nlg.llm.model_group`** stays **`gpt-4o-mini`** so it picks up that same group. Example (matches **`level4/endpoints.yml`** in this repo):
+
+```yaml
+nlg:
+  type: rephrase
+  llm:
+    model_group: gpt-4o-mini
+
+model_groups:
+  - id: gpt-4o-mini
+    models:
+      - provider: openai
+        model: gpt-4o-2024-11-20
+        temperature: 0.1
+```
+
+- **What to avoid:** Using **`model: gpt-4o-mini-2024-07-18`** (or similar) together with a **higher** **`temperature`** (e.g. **0.3**) under that group. That combination often **mis-fills** free-text **recipient** or produces flaky **FillSlot** commands—even when **`config.yml`** is already **`CompactLLMCommandGenerator`**.
+
+- **What to do:** Copy or diff against **`level4/endpoints.yml`** in this repository. After any change, run **`python -m rasa train`** from **`level4/`** before re-testing in Inspector.
 
 ---
 
@@ -82,10 +101,10 @@ These differ from Chapter 1.3 **on purpose**. Skipping them often causes **“un
 | Area | Chapter 1.3 end | Chapter 1.4 end adds / changes |
 |------|-----------------|--------------------------------|
 | **Config** | SearchReady | **CompactLLM** + **flow_retrieval** + **`assistant_id`** for level4 |
-| **Endpoints** | Your mini/keys | Align **model_groups** / **temperature** with course **`level4/endpoints.yml`** if needed |
+| **Endpoints** | NLG + **`model_groups`** (often literal mini) | Same structure, but **`gpt-4o-mini`** group uses **`model: gpt-4o-2024-11-20`**, **`temperature: 0.1`** (see **`level4/endpoints.yml`**) |
 | **Domain** | account + asks + bank / holiday / check_balance actions | **+** three transfer slots, three **`utter_ask_*`**, **`action_process_transfer`** |
 | **Actions (Python)** | bank + holiday + check_balance | **+** **`action_process_transfer.py`** |
 | **Flows** | no transfer | **+** **`transfer_money.yml`** |
 | **Train** | level3 model | **Retrain** from **`level4/`** after domain/data/config changes |
 
-**Done when:** Labs 2.1–5.2 pass, **`level4/config.yml`** and **`level4/endpoints.yml`** match the course pattern, and the **scripted transfer** in Lab 5.2 reaches a **`(Demo) Transfer of $…`** confirmation.
+**Done when:** Labs 2.1–5.2 pass, **`level4/config.yml`** matches the **Compact** pipeline pattern, **`level4/endpoints.yml`** matches the course **`model_groups`** / **`temperature`** ( **`gpt-4o`** model under the **`gpt-4o-mini`** group id—see section 2), and the **scripted transfer** in Lab 5.2 reaches a **`(Demo) Transfer of $…`** confirmation.

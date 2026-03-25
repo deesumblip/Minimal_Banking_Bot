@@ -2,7 +2,7 @@
 
 **Starting point:** Your **`level4/`** folder should be a copy of your **final Chapter 1.3 agent** in **`level3/`** (see **`Level4_Unit0_Content_0.1_Your-Level-3-Banking-Agent.md`**). You are **adding** transfer domain fields on top of that baseline, not replacing the whole project.
 
-**Prerequisite:** **`level4/config.yml`** and **`level4/endpoints.yml`** match the Chapter 1.4 course pattern (see **Unit 0.2** — pipeline section). If you only copied files from `level3/` without the pipeline updates, fix those **before** you rely on Inspector for free-text slots.
+**Prerequisite:** **`level4/config.yml`** and **`level4/endpoints.yml`** match the Chapter 1.4 course pattern (see **Unit 0.2** — pipeline section). In **`endpoints.yml`**, the **`gpt-4o-mini`** **`model_groups`** entry must use **`model: gpt-4o-2024-11-20`** and **`temperature: 0.1`**, not a literal **`gpt-4o-mini-…`** model with high temperature. If you only copied files from `level3/` without those updates, fix **`config.yml`** and **`endpoints.yml`** **before** you rely on Inspector for free-text **recipient** fills.
 
 - Add the slots `amount`, `recipient`, and `account_from`
 - Add the ask responses `utter_ask_amount`, `utter_ask_recipient`, and `utter_ask_account_from`

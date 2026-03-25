@@ -17,7 +17,7 @@
 
 **Important:** This level builds on your Level 3 banking agent. You don't start from scratch. You use the **same virtual environment** created in Level 1 (in the **project root**). There is no new `.venv` inside `level4/`.
 
-**Pipeline:** Chapter 1.3 (`level3`) still uses **`SearchReadyLLMCommandGenerator`**. Chapter 1.4 (`level4`) uses **`CompactLLMCommandGenerator`** for reliable multi-slot / free-text collection (same `model_group` and `FlowPolicy`). **Level 3 is not modified.** Details: **`PIPELINE_CHAPTER_1_3_AND_4.md`**.
+**Pipeline:** Chapter 1.3 (`level3`) still uses **`SearchReadyLLMCommandGenerator`**. Chapter 1.4 (`level4`) uses **`CompactLLMCommandGenerator`** for reliable multi-slot / free-text collection (same **`FlowPolicy`**). **`endpoints.yml`** keeps the **`gpt-4o-mini`** group **id** but maps it to **`gpt-4o-2024-11-20`** at **`temperature: 0.1`** so **FillSlot** on names behaves—see **`level4/endpoints.yml`** and **Unit 0.2**. **Level 3 is not modified.** Details: **`PIPELINE_CHAPTER_1_3_AND_4.md`**.
 
 **Full delta (Ch 1.3 end → Ch 1.4 end):** **`Level4_Unit0_Content_0.2_What-Level-4-Adds.md`** (pipeline, labs, summary in one place). **File checklist:** **`LEVEL3_TO_LEVEL4_FILE_DELTA.md`**.
 

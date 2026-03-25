@@ -35,9 +35,9 @@ The **`recipe`**, **`.env`**, and overall **`endpoints.yml`** layout match Level
 ## What students do
 
 - Finish **Chapter 1.3** in **`level3/`** — no change.
-- In **Chapter 1.4**, work in **`level4/`** and use the **`level4/config.yml`** from this repo (or change **one** line in a copied config: `SearchReady…` → `Compact…` for the transfer flow to behave reliably).
+- In **Chapter 1.4**, work in **`level4/`** and align **`level4/config.yml`** (**`CompactLLMCommandGenerator`**) and **`level4/endpoints.yml`** with this repo: the **`gpt-4o-mini`** model group must point at **`gpt-4o-2024-11-20`** with **`temperature: 0.1`** (see **Unit 0.2**). Copying only **`config.yml`** without **`endpoints.yml`** can still give flaky **recipient** **FillSlot** behavior.
 
-**Domain, flows, and actions** are still where multiple slots are defined; the generator swap is **only** so the LLM can fill those slots consistently.
+**Domain, flows, and actions** are still where multiple slots are defined; the **config + endpoints** alignment is so the LLM can fill those slots consistently.
 
 ---
 

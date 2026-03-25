@@ -2,7 +2,7 @@
 
 **Unit 5, Lab 5.2.** You already **trained** the agent in **Lab 5.1**. This lab has two parts in order:
 
-1. **Completion check (graded)**. Confirms domain, action, flow YAML, and a trained model are in place. The grader **does not** start Rasa or Inspector.
+1. **Completion check (graded)**. Confirms domain, action, flow YAML, trained model, and **`config.yml`** pipeline (**`CompactLLMCommandGenerator`**). The grader **does not** parse **`endpoints.yml`** and **does not** start Rasa or Inspector.
 2. **Rasa Inspector (recommended)**. Run the **transfer** flow and confirm **`action_process_transfer`** fires with the expected demo message (free-text **recipient**, **100-character cap** in code + flow).
 
 **Prerequisite:** **Labs 2.1 → 3.1 → 4.1** done, then **Lab 5.1** so `level4/models/` contains a `.tar.gz` file.
@@ -17,6 +17,8 @@
    - **Flow:** `level4/data/basics/transfer_money.yml` has the three `collect:` steps and `action: action_process_transfer`
    - **Model:** at least one `.tar.gz` under `level4/models/`
    - **Config:** `level4/config.yml` **`pipeline:`** uses **`CompactLLMCommandGenerator`** (not **`SearchReadyLLMCommandGenerator`**)
+
+**Endpoints (hands-on):** The completion check does **not** verify **`endpoints.yml`**. For **Part 2 (Inspector)**, free-text **recipient** stays reliable only if **`level4/endpoints.yml`** matches the course pattern: under **`model_groups`**, **`id: gpt-4o-mini`** uses **`model: gpt-4o-2024-11-20`** and **`temperature: 0.1`** (**Unit 0.2**). A literal **`gpt-4o-mini-…`** model with high **temperature** often mis-fills slots even when **`config.yml`** is correct.
 
 {Check It!|assessment}(code-output-compare-401050002)
 

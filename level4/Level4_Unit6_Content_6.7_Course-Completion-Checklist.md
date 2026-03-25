@@ -2,7 +2,7 @@
 
 Before moving to Level 5, ensure you can:
 
-- Explain the **full delta** from Chapter 1.3 end → Chapter 1.4 end: **`level4/config.yml`** (**`CompactLLMCommandGenerator`**, **`flow_retrieval`**) and **`level4/endpoints.yml`** (**`model_groups`** / temperature), not only domain and labs (**Unit 0.2**)
+- Explain the **full delta** from Chapter 1.3 end → Chapter 1.4 end: **`level4/config.yml`** (**`CompactLLMCommandGenerator`**, **`flow_retrieval`**) and **`level4/endpoints.yml`** (under **`model_groups`**, **`gpt-4o-mini`** → **`model: gpt-4o-2024-11-20`**, **`temperature: 0.1`**), not only domain and labs (**Unit 0.2**)
 - Add multiple slots to the domain and matching `utter_ask_*` responses (with **`rephrase: False`** on transfer asks)
 - Create an action that reads multiple slots, caps **recipient** at **100** characters, handles placeholders, and sends the demo confirmation
 - Create a flow with multiple `collect:` steps in order, then an `action:` step

@@ -1,6 +1,6 @@
 **Starting point:** Chapter 1.4 assumes you began with the **final banking agent at the end of Chapter 1.3** and extended it in **`level4/`** (see **`Level4_Unit0_Content_0.1_Your-Level-3-Banking-Agent.md`**).
 
-**Objective.** After **Lab 5.1** (training), **Lab 5.2** completes Unit 5: (1) a **graded completion check** that your domain (including legacy actions), action, flow, model, and **`level4/config.yml`** pipeline are correct—the grader does **not** start Rasa or Inspector; (2) **hands-on testing** in **Rasa Inspector** to run the transfer flow and confirm **`action_process_transfer`** and the **free-text recipient** behavior (including the **100-character** cap in code + flow).
+**Objective.** After **Lab 5.1** (training), **Lab 5.2** completes Unit 5: (1) a **graded completion check** that your domain (including legacy actions), action, flow, model, and **`level4/config.yml`** pipeline are correct—the grader does **not** read **`endpoints.yml`** and does **not** start Rasa or Inspector; (2) **hands-on testing** in **Rasa Inspector** to run the transfer flow and confirm **`action_process_transfer`** and the **free-text recipient** behavior (including the **100-character** cap in code + flow). For Part 2, **`endpoints.yml`** must still match **Unit 0.2** (see below).
 
 **Recommended order:** Pass the completion check first, then use Inspector with the **scripted turns** below.
 
@@ -19,7 +19,9 @@ The grader checks that:
    - A model file exists in `level4/models/`
    - `level4/config.yml` uses **`CompactLLMCommandGenerator`** in **`pipeline:`** (not **`SearchReadyLLMCommandGenerator`**)
 
-2. If any check fails, fix **Labs 2.1, 3.1, or 4.1** as needed, align **`level4/config.yml`** with Unit 0.2, complete **Lab 5.1** (train), then run the assessment again.
+**Endpoints (not graded):** The completion check does **not** verify **`endpoints.yml`**. For **Part 2**, align **`level4/endpoints.yml`** with this repo: under **`model_groups`**, **`id: gpt-4o-mini`** must use **`model: gpt-4o-2024-11-20`** and **`temperature: 0.1`** (**Unit 0.2**). A literal **`gpt-4o-mini-…`** model with high **temperature** often mis-fills **recipient** even when **`config.yml`** passes the grader.
+
+2. If any check fails, fix **Labs 2.1, 3.1, or 4.1** as needed, align **`level4/config.yml`** and **`level4/endpoints.yml`** with Unit 0.2, complete **Lab 5.1** (train), then run the assessment again.
 
 ---
 
