@@ -2,6 +2,15 @@ Your goal is to train your Level 3 agent (with slots) and verify it works.
 
 ## Part 1: In Codio
 
+Typical command sequence (project root contains `level3`, `.venv`, and `.guides`):
+
+```bash
+source .venv/bin/activate
+cd level3
+python -m rasa --version
+python -m rasa train
+```
+
 1. **Virtual environment.** In the terminal (it opens at `~/workspace`), run `source .venv/bin/activate`. The prompt should show `(.venv)`.
 2. **Navigate to level3.** Run `cd level3`. Confirm with `pwd` (path should end in `level3`).
 3. **Rasa.** Run `python -m rasa --version`. If you see an error, ensure the venv is activated and Rasa Pro is installed. Use **Lab 0.1** in **Chapter 1.1**, *Prerequisites and Setup*, if you need a full environment checklist.

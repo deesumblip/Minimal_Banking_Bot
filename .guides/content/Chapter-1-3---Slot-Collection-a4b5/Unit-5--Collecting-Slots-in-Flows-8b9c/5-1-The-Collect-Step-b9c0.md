@@ -2,10 +2,11 @@ A flow can ask for information before running an action using a **collect step**
 
 ## Syntax
 
-
+```yaml
 steps:
   - collect: account
     description: "account number"
+```
 
 - **`collect: account`**. The slot to collect.
 - **`description:`**. Helps the LLM understand what to extract. Optional, but recommended.

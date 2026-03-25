@@ -1,6 +1,6 @@
 When an action runs, Rasa passes a **tracker** object into `run()`. The tracker holds the conversation state, including any slot values that were collected earlier. You read a slot by calling `tracker.get_slot` with the slot name.
 
-
+```python
 def run(self, dispatcher, tracker, domain):
     account = tracker.get_slot("account")
     if account:
@@ -8,6 +8,7 @@ def run(self, dispatcher, tracker, domain):
     else:
         dispatcher.utter_message(text="I don't have your account number.")
     return []
+```
 
 A slot may be `None` if the user has not given a value yet. Check for that before you use the value in logic or in a message.
 

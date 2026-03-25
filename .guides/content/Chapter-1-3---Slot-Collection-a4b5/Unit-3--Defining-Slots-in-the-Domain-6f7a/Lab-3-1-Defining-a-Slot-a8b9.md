@@ -32,11 +32,12 @@ responses:
 - Add `utter_ask_account` under `responses:` with the YAML below
 - Naming convention: `utter_ask_<slot_name>`. For the slot `account`, the response is `utter_ask_account`
 
-
-  utter_ask_account:
-    - text: "What is your account number?"
-      metadata:
-        rephrase: True
+```yaml
+utter_ask_account:
+  - text: "What is your account number?"
+    metadata:
+      rephrase: True
+```
 
 **Step 4.** Register the new action.
 

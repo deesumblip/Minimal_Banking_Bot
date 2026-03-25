@@ -6,11 +6,12 @@ When a flow has a `collect:` step:
 
 ## Example Flow
 
-
+```yaml
 steps:
   - collect: account        # Step 1: Get account number
     description: "account number"
   - action: action_check_balance_simple  # Step 2: Use it
+```
 
 **What happens**:
 1. Flow starts
