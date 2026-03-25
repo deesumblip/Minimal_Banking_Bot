@@ -5,7 +5,7 @@
 **Title**: Level 4: Multiple Slots  
 **Description**: Adding a Transfer Flow with Multiple Slot Collection  
 **Prerequisites**: Level 1, Level 2, and Level 3 must be completed (Chapter 1.4 **assumes** the **final banking agent at the end of Chapter 1.3** described in Unit 0.1)  
-**Learning Objective**: Students learn to add multiple slots, multiple ask responses, one new action that uses all slots, and one flow that collects several slots then runs the action. They also align **`level4/config.yml`** and **`level4/endpoints.yml`** with the Chapter 1.4 pattern (**Unit 0.2**). Labs are ordered: domain (Lab 2.1) → action (Lab 3.1) → flow (Lab 4.1) → train (Lab 5.1) → completion check (Lab 5.2).
+**Learning Objective**: Students learn to add multiple slots, multiple ask responses, one new action that uses all slots, and one flow that collects several slots then runs the action. They first **build** **`level4/config.yml`** and **`level4/endpoints.yml`** in **Lab 0.1** (fill-in-the-blanks + code test), then align domain and flows in later labs. Lab order: **pipeline (Lab 0.1)** → domain (Lab 2.1) → action (Lab 3.1) → flow (Lab 4.1) → train (Lab 5.1) → completion check (Lab 5.2).
 
 ---
 
@@ -81,7 +81,7 @@
 - Lab 5.1: Training (steps + graded check) — `Level4_Lab5.1_Content.md` / `Level4_Lab5.1_Assessment_Setup.md`
 - Lab 5.2: Completion check + optional Inspector — `Level4_Lab5.2_Content.md` / `Level4_Lab5.2_Assessment_Setup.md`
 
-**Key Concepts**: Train from level4, model in level4/models/, completion check (domain + action + flow + model)
+**Key Concepts**: Train from level4, model in level4/models/, completion check (domain + action + flow + model + config pipeline; **`endpoints.yml`** aligned in **Lab 0.1**)
 
 ---
 
@@ -106,13 +106,14 @@
 
 | Lab   | Points | Type                    | Grader Script / Solution Ref                    |
 |-------|--------|-------------------------|-------------------------------------------------|
+| 0.1   | 15     | Fill-in-the-blanks (5) + Code Test (10) | fill-in-the-blanks-401010010 + lab_0.1_grader.py / lab_0.1_solution_reference.md |
 | 2.1   | 10     | LLM Rubric or Code Test | lab_2.1_grader.py / lab_2.1_solution_reference.md |
 | 3.1   | 10     | LLM Rubric or Code Test | lab_3.1_grader.py / lab_3.1_solution_reference.md |
 | 4.1   | 8      | LLM Rubric or Code Test | lab_4.1_grader.py / lab_4.1_solution_reference.md |
 | 5.1   | 12     | Code Test               | lab_5.1_grader.py / lab_5.1_solution_reference.md |
 | 5.2   | 12     | Code Test (completion)  | lab_5.2_grader.py / lab_5.2_solution_reference.md |
 
-**Total assessment points**: 52. All graders are Python scripts in `.guides/secure/level4_graders/`. Codio: use **substring match** for expected output `PASS`, Working Directory `/home/codio/workspace`, venv Python in COMMAND.
+**Total assessment points**: 67. All graders are Python scripts in `.guides/secure/level4_graders/` (Lab 0.1 includes a fill-in-the-blanks assessment JSON). Codio: use **substring match** for expected output `PASS`, Working Directory `/home/codio/workspace`, venv Python in COMMAND.
 
 ---
 
@@ -147,6 +148,7 @@ All source files live in **level4/** so you can push to GitHub and sync the same
 
 | Lab   | Content File              | Assessment Setup File                 |
 |-------|---------------------------|---------------------------------------|
+| 0.1   | Level4_Lab0.1_Content.md  | Level4_Lab0.1_Assessment_Setup.md     |
 | 2.1   | Level4_Lab2.1_Content.md  | Level4_Lab2.1_Assessment_Setup.md     |
 | 3.1   | Level4_Lab3.1_Content.md  | Level4_Lab3.1_Assessment_Setup.md     |
 | 4.1   | Level4_Lab4.1_Content.md  | Level4_Lab4.1_Assessment_Setup.md     |
@@ -155,8 +157,8 @@ All source files live in **level4/** so you can push to GitHub and sync the same
 
 ### Graders and Solution References (in repo, not student-facing)
 
-- `.guides/secure/level4_graders/lab_2.1_grader.py`, `lab_3.1_grader.py`, `lab_4.1_grader.py`, `lab_5.1_grader.py`, `lab_5.2_grader.py`
-- `.guides/secure/level4_graders/lab_2.1_solution_reference.md` … `lab_5.2_solution_reference.md`
+- `.guides/secure/level4_graders/lab_0.1_grader.py`, `lab_2.1_grader.py`, `lab_3.1_grader.py`, `lab_4.1_grader.py`, `lab_5.1_grader.py`, `lab_5.2_grader.py`
+- `.guides/secure/level4_graders/lab_0.1_solution_reference.md` … `lab_5.2_solution_reference.md`
 
 ---
 

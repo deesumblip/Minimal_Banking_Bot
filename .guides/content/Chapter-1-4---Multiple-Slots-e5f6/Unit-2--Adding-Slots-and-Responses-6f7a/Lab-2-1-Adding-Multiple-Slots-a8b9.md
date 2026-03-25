@@ -2,7 +2,7 @@
 
 **Starting point:** Your **`level4/`** folder should be a copy of your **final Chapter 1.3 agent** in **`level3/`** (see **Unit 0.1**). You are **adding** transfer domain fields on top of that baseline, not replacing the whole project.
 
-**Prerequisite:** **`level4/config.yml`** and **`level4/endpoints.yml`** match the Chapter 1.4 course pattern (see **Unit 0.2**, pipeline section). If you only copied files from `level3/` without the pipeline updates, fix those **before** you rely on Inspector for free-text slots.
+**Prerequisite:** Complete **Lab 0.1** (Unit 0): fill-in-the-blanks, paste into **`level4/config.yml`** and **`level4/endpoints.yml`**, pass the **Code Test**—same pattern as **Lab 3.1** (blanks → paste → assessed file). See **Unit 0.2** for what those files must contain. If you only copied **`level3/` → `level4/`** and skipped Lab 0.1, do it **before** this lab.
 
 - Add the slots `amount`, `recipient`, and `account_from`
 - Add the ask responses `utter_ask_amount`, `utter_ask_recipient`, and `utter_ask_account_from`

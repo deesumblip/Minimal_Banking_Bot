@@ -17,7 +17,7 @@ This document describes how to create **Level 4** content, labs, and assessment 
 | Unit 5 + Lab 6.1 (train) + Lab 6.2 (test Inspector) | Unit 5 + Lab 5.1 (train) + Lab 5.2 (completion check + Inspector with **scripted transfer** table) |
 | Unit 6: Walkthrough, summary, Level 4 preview | Unit 6: Complete walkthrough, What you've learned, What's next (6.1, 6.2, 6.3) |
 
-**Lab numbering (this course):** Level 4 uses **Lab 2.1** (domain), **3.1** (action), **4.1** (flow), **5.1** (train), **5.2** (completion check + Inspector)—same pattern as Level 3’s chapter lab index, not a single “4.x-only” sequence.
+**Lab numbering (this course):** Level 4 uses **Lab 0.1** (pipeline: fill-in-the-blanks + paste **`config.yml`** / **`endpoints.yml`** + code test), then **Lab 2.1** (domain), **3.1** (action), **4.1** (flow), **5.1** (train), **5.2** (completion check + Inspector)—same pattern as Level 3’s chapter lab index, not a single “4.x-only” sequence.
 
 ---
 
@@ -27,7 +27,7 @@ Create **Level4_Course_Outline.md** in `level4/` with:
 
 - **Prerequisites:** Level 1, 2, and 3 completed.
 - **Learning objective:** Add multiple slots, multiple ask responses, one new action, and one flow that collects several slots then runs the action.
-- **Unit 0:** Recap Level 3 (domain with account slot, check_balance flow, action_check_balance_simple). **0.2** includes the **complete delta** (pipeline **`config.yml`** / **`endpoints.yml`** + lab deliverables). Lab adds: slots `amount`, `recipient`, `account_from`; utter_ask_*; action_process_transfer; transfer_money flow.
+- **Unit 0:** Recap Level 3 (domain with account slot, check_balance flow, action_check_balance_simple). **0.2** includes the **complete delta** (pipeline **`config.yml`** / **`endpoints.yml`** + lab deliverables). **Lab 0.1** has students **produce** the pipeline YAML (fill-in-the-blanks → paste → **`lab_0.1_grader.py`**), then later labs add: slots `amount`, `recipient`, `account_from`; utter_ask_*; action_process_transfer; transfer_money flow.
 - **Unit 1:** Concept content only (what are multiple slots, why order matters, slot naming — 1.1, 1.2, 1.3).
 - **Unit 2:** Domain — add three slots, three ask responses, register action_process_transfer → **Lab 2.1** (graded).
 - **Unit 3:** Reading multiple slots in actions → **Lab 3.1** (create action_process_transfer.py) (graded).
@@ -35,7 +35,7 @@ Create **Level4_Course_Outline.md** in `level4/` with:
 - **Unit 5:** Training and testing → **Lab 5.1** (train from level4), **Lab 5.2** (completion check graded + **Rasa Inspector** using a **fixed sequence of user turns** in the Lab 5.2 page—see **Scripted transfer** below). No separate Unit 5 concept-only pages.
 - **Unit 6:** Complete agent walkthrough, summary, what’s next.
 
-**Assessment summary table:** Lab 2.1 (domain), 3.1 (action), 4.1 (flow), 5.1 (train), 5.2 (test); same Codio pattern as Level 3 Lab 3.1 / Chapter 1.2 Lab 6.2: **sequence** of `Check N: PASSED` substring tests (see `code-output-compare-40102*` – `401050002.json`), not a single `PASS` line.
+**Assessment summary table:** Lab 0.1 (pipeline: fill-in-the-blanks + code test), Lab 2.1 (domain), 3.1 (action), 4.1 (flow), 5.1 (train), 5.2 (test); same Codio pattern as Level 3 Lab 3.1 / Chapter 1.2 Lab 6.2: **sequence** of `Check N: PASSED` substring tests (see `code-output-compare-40101*` – `401050002.json`), not a single `PASS` line.
 
 ---
 
@@ -64,6 +64,13 @@ You can add or remove sections within units (e.g. 2.2 Test Your Knowledge, 5.3 C
 ## 4. Lab content files (level4/)
 
 Each lab has one **Content** markdown file that students see. Match the style of Level 3 (objective, step-by-step, Part 1 Codio / Part 2 local, success criteria).
+
+### Lab 0.1 — Pipeline (`config.yml` & `endpoints.yml`)
+
+**File:** `level4/Level4_Lab0.1_Content.md`
+
+- **Objective:** Student-built **`level4/config.yml`** and **`level4/endpoints.yml`** via **fill-in-the-blanks** (`fill-in-the-blanks-401010010.json`), paste, then **code test** (`lab_0.1_grader.py` / `code-output-compare-401010001.json`). Same pattern as Lab 3.1.
+- **Prerequisite:** None. **Before Lab 2.1.**
 
 ### Lab 2.1 — Domain (add slots + ask responses + register action)
 
@@ -129,6 +136,12 @@ Students should type **in order** (mirrors **Chapter 1.4** `.guides/.../Lab-5-2-
 
 For each graded lab, create an **Assessment_Setup** markdown file for implementers. Same structure as Level 3: Guide Content (for students), Assessment Setup (for implementers), Option A (LLM Rubric), Option B (Standard Code Test with Python grader), and any script template/key in “implementers only” section.
 
+### Level4_Lab0.1_Assessment_Setup.md
+
+- **Guide content:** Unit 0, after **0.2**. Task: fill-in-the-blanks for **`config.yml`** + **`endpoints.yml`**, paste into **`level4/`**, run **`lab_0.1_grader.py`**.
+- **Overview:** Fill-in **`fill-in-the-blanks-401010010`**; code test **`code-output-compare-401010001`** (5 checks).
+- **Option B:** Standard Code Test; paired FIAB assessment.
+
 ### Level4_Lab2.1_Assessment_Setup.md
 
 - **Guide content:** Placement after Unit 2. Task: In level4/domain/basics.yml add slots amount, recipient, account_from; add utter_ask_amount, utter_ask_recipient, utter_ask_account_from; add action_process_transfer to actions. Run assessment when done.
@@ -158,7 +171,11 @@ For each graded lab, create an **Assessment_Setup** markdown file for implemente
 
 ## 6. Grader scripts (.guides/secure/level4_graders/)
 
-Create a directory `.guides/secure/level4_graders/` and add Python graders that run from workspace root (`/home/codio/workspace`). Each script should print check results, then a summary line (`PASS: Lab X.X verification complete!` or similar) and exit 0 on full score, or `FAIL` and exit 1. Codio **code-output-compare** assessments use **substring** matches on each **`Check N: PASSED`** line (see `40102*`–`401050002.json`), not a single `PASS` token.
+Create a directory `.guides/secure/level4_graders/` and add Python graders that run from workspace root (`/home/codio/workspace`). Each script should print check results, then a summary line (`PASS: Lab X.X verification complete!` or similar) and exit 0 on full score, or `FAIL` and exit 1. Codio **code-output-compare** assessments use **substring** matches on each **`Check N: PASSED`** line (see `40101*`–`401050002.json`), not a single `PASS` token.
+
+### lab_0.1_grader.py
+
+- **Checks:** `level4/config.yml` has `assistant_id: level4-agent`, **`CompactLLMCommandGenerator`** (not SearchReady), **`flow_retrieval`** (turns_to_embed 5, num_flows 20) and **`minimize_num_calls: false`**; `level4/endpoints.yml` has **`action_endpoint`**, **`nlg`** rephrase, **`model_groups`** with **`gpt-4o-2024-11-20`** at **`temperature: 0.1`**. **`code-output-compare-401010001.json`**. Paired with **`fill-in-the-blanks-401010010`**.
 
 ### lab_2.1_grader.py
 
@@ -189,6 +206,7 @@ Create a directory `.guides/secure/level4_graders/` and add Python graders that 
 
 For each graded lab, add a **solution reference** markdown file used as the Instructor Provided Solution File for LLM Rubric.
 
+- **lab_0.1_solution_reference.md:** Point to canonical `level4/config.yml` and `level4/endpoints.yml`; note fill-in-the-blanks + paste workflow.
 - **lab_2.1_solution_reference.md:** Describe required domain changes: slots amount, recipient, account_from (type text); utter_ask_amount, utter_ask_recipient, utter_ask_account_from with example text; action_process_transfer in actions. Include minimal YAML snippets.
 - **lab_3.1_solution_reference.md:** Describe required action: class name, name() return value, run() reading three slots (recipient capped at **100** chars), placeholder check, demo confirmation. Include minimal code snippets or full reference.
 - **lab_4.1_solution_reference.md:** Describe required flow: flows.transfer_money, steps with collect amount, recipient, account_from and action action_process_transfer. Include full transfer_money.yml reference.
@@ -203,10 +221,10 @@ For each graded lab, add a **solution reference** markdown file used as the Inst
 |----------|------------------|
 | **Outline** | level4/Level4_Course_Outline.md |
 | **Unit content** | Level4_Unit0_Content_0.1_*.md, 0.2_*.md (includes complete delta); Unit1 (1.1, 1.2, 1.3); Unit2 (2.1); Unit3 (3.1); Unit4 (4.1); Unit5 (5.1, 5.2); Unit6 (6.1, 6.2, 6.3). |
-| **Lab content** | Level4_Lab2.1_Content.md, Level4_Lab3.1_Content.md, Level4_Lab4.1_Content.md, Level4_Lab5.1_Content.md, Level4_Lab5.2_Content.md |
-| **Assessment setup** | Level4_Lab2.1_Assessment_Setup.md, Level4_Lab3.1_Assessment_Setup.md, Level4_Lab4.1_Assessment_Setup.md, Level4_Lab5.1_Assessment_Setup.md, Level4_Lab5.2_Assessment_Setup.md |
-| **Graders** | .guides/secure/level4_graders/lab_2.1_grader.py, lab_3.1_grader.py, lab_4.1_grader.py, lab_5.1_grader.py, lab_5.2_grader.py |
-| **Solution refs** | .guides/secure/level4_graders/lab_2.1_solution_reference.md … lab_5.2_solution_reference.md |
+| **Lab content** | Level4_Lab0.1_Content.md, Level4_Lab2.1_Content.md, Level4_Lab3.1_Content.md, Level4_Lab4.1_Content.md, Level4_Lab5.1_Content.md, Level4_Lab5.2_Content.md |
+| **Assessment setup** | Level4_Lab0.1_Assessment_Setup.md, Level4_Lab2.1_Assessment_Setup.md, Level4_Lab3.1_Assessment_Setup.md, Level4_Lab4.1_Assessment_Setup.md, Level4_Lab5.1_Assessment_Setup.md, Level4_Lab5.2_Assessment_Setup.md |
+| **Graders** | .guides/secure/level4_graders/lab_0.1_grader.py, lab_2.1_grader.py, lab_3.1_grader.py, lab_4.1_grader.py, lab_5.1_grader.py, lab_5.2_grader.py |
+| **Solution refs** | .guides/secure/level4_graders/lab_0.1_solution_reference.md … lab_5.2_solution_reference.md |
 
 ---
 
@@ -225,9 +243,9 @@ For each graded lab, add a **solution reference** markdown file used as the Inst
 |------|--------|
 | 1 | Align instructional story: Chapter 1.4 **starts** from Chapter 1.3 **completion** (see **LEVEL4_BUILD_FROM_LEVEL3_APPROACH.md**). |
 | 2 | Create Level4_Course_Outline.md and all Level4_Unit*_Content_*.md files. |
-| 3 | Create Level4_Lab2.1, 3.1, 4.1, 5.1, 5.2_Content.md with step-by-step and success criteria. |
-| 4 | Create `Level4_Lab2.1`, `3.1`, `4.1`, `5.1`, `5.2_Assessment_Setup.md` (Option A + B, rationale, substring match). |
-| 5 | Add .guides/secure/level4_graders/ with lab_2.1, 3.1, 4.1, 5.1, 5.2_grader.py and solution_reference.md files. |
+| 3 | Create Level4_Lab0.1, 2.1, 3.1, 4.1, 5.1, 5.2_Content.md with step-by-step and success criteria. |
+| 4 | Create `Level4_Lab0.1`, `2.1`, `3.1`, `4.1`, `5.1`, `5.2_Assessment_Setup.md` (Option A + B, rationale, substring match). |
+| 5 | Add .guides/secure/level4_graders/ with lab_0.1, 2.1, 3.1, 4.1, 5.1, 5.2_grader.py and solution_reference.md files. |
 | 6 | Sync content to Codio; configure assessments; update index/navigation. |
 
 This mirrors Level 3: same types of content (units + labs), same assessment pattern (LLM Rubric or Python grader, substring match for **`Check N: PASSED`** on Level 4), and the same “start from previous level’s end state, add only what this level teaches” approach. **Lab 5.2** adds a **scripted Inspector script** (§4, **Scripted transfer**) so you can exercise **multi-slot + free-text recipient** behavior in a repeatable way.

@@ -1,0 +1,85 @@
+{
+	"type": "code-output-compare",
+	"taskId": "code-output-compare-401010001",
+	"source": {
+		"name": "Lab 0.1: Chapter 1.4 pipeline (Code Test)",
+		"showName": true,
+		"instructions": "Paste your completed **`config.yml`** and **`endpoints.yml`** from the fill-in-the-blanks exercise into **`level4/`**, save both files, then run this check.\n\n• Check 1: `level4/config.yml` exists; **`assistant_id`** is **`level4-agent`**.\n• Check 2: **`pipeline:`** uses **`CompactLLMCommandGenerator`** (not SearchReady).\n• Check 3: **`minimize_num_calls: false`**; **`flow_retrieval`** has **`turns_to_embed: 5`**, **`num_flows: 20`**.\n• Check 4: **`endpoints.yml`** has **`action_endpoint`**, **`nlg`** rephrase, **`model_group: gpt-4o-mini`**.\n• Check 5: **`model_groups`** for **`gpt-4o-mini`** uses **`model: gpt-4o-2024-11-20`**, **`temperature: 0.1`**.\n\nFull score: 10/10.",
+		"command": "bash /home/codio/workspace/.guides/scripts/run_python_grader.sh /home/codio/workspace/.guides/secure/level4_graders/lab_0.1_grader.py",
+		"preExecuteCommand": "",
+		"options": {
+			"timeout": 60,
+			"ignoreCase": true,
+			"ignoreWhitespaces": true,
+			"ignoreNewline": true,
+			"matchSubstring": true
+		},
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Standard Code Test"
+				}
+			],
+			"files": [
+				".guides/secure/level4_graders/lab_0.1_grader.py"
+			],
+			"opened": [
+				{
+					"type": "terminal",
+					"panelNumber": 1
+				}
+			]
+		},
+		"bloomsObjectiveLevel": "",
+		"learningObjectives": "",
+		"guidance": "Complete the blanks on the previous page, paste into `level4/config.yml` and `level4/endpoints.yml`, save, re-run.",
+		"showGuidanceAfterResponseOption": {
+			"type": "Never"
+		},
+		"maxAttemptsCount": 0,
+		"points": 10,
+		"showExpectedAnswerOption": {
+			"type": "Always"
+		},
+		"arePartialPointsAllowed": true,
+		"useMaximumScore": false,
+		"sequence": [
+			{
+				"arguments": "",
+				"input": "",
+				"output": "Check 1: PASSED",
+				"showFeedback": false,
+				"feedback": ""
+			},
+			{
+				"arguments": "",
+				"input": "",
+				"output": "Check 2: PASSED",
+				"showFeedback": false,
+				"feedback": ""
+			},
+			{
+				"arguments": "",
+				"input": "",
+				"output": "Check 3: PASSED",
+				"showFeedback": false,
+				"feedback": ""
+			},
+			{
+				"arguments": "",
+				"input": "",
+				"output": "Check 4: PASSED",
+				"showFeedback": false,
+				"feedback": ""
+			},
+			{
+				"arguments": "",
+				"input": "",
+				"output": "Check 5: PASSED",
+				"showFeedback": false,
+				"feedback": ""
+			}
+		]
+	}
+}

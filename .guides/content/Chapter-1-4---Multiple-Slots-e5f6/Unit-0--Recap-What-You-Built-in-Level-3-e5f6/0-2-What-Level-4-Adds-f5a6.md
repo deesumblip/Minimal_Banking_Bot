@@ -10,7 +10,7 @@ Level 4 adds **multiple slots** in one flow: the agent will remember several val
 
 Your Level 3 agent behavior stays; you **add** the transfer flow and align **`level4/`** pipeline files so CALM can fill free-text slots reliably. Everything below is the **full checklist** from **Chapter 1.3 end state** through **Chapter 1.4 end state**. Step-by-step instructions for each lab are on the lab pages.
 
-**Implementation order:** domain (Lab 2.1), then action (Lab 3.1), then flow (Lab 4.1), then train and test (Labs 5.1 and 5.2). The table in **section 3** spells out files and changes.
+**Implementation order:** pipeline (**Lab 0.1** — fill-in-the-blanks + paste **`config.yml`** / **`endpoints.yml`**), then domain (Lab 2.1), then action (Lab 3.1), then flow (Lab 4.1), then train and test (Labs 5.1 and 5.2). The table in **section 3** spells out files and changes. **Hands-on pipeline:** see **Lab 0.1** in Unit 0 (same pattern as Lab 3.1: blanks → paste → code test).
 
 **Reference:** **`LEVEL3_TO_LEVEL4_FILE_DELTA.md`**
 
@@ -40,6 +40,8 @@ You do **not** delete that work. Chapter 1.4 **adds** the **transfer** pieces an
 ## 2. Pipeline files (required for reliable CALM)
 
 These differ from Chapter 1.3 **on purpose**. Skipping them often causes **“unable to understand you”** on **recipient** / **account_from** even when domain and flows are correct.
+
+**Do the work yourself:** Complete **Lab 0.1** (Unit 0) **before Lab 2.1**—**fill in the blanks**, paste into **`level4/config.yml`** and **`level4/endpoints.yml`**, then run the **Code Test**. Do not skip straight to “compare with the repo” without doing the exercise; the repo files remain the reference for what correct YAML looks like.
 
 ### `config.yml` (in `level4/`)
 
@@ -86,6 +88,7 @@ model_groups:
 
 | Step | What you change | Where |
 |------|-----------------|-------|
+| **Lab 0.1** | **`config.yml`**: **`CompactLLMCommandGenerator`**, **`flow_retrieval`**, **`assistant_id`**; **`endpoints.yml`**: **`model_groups`** / **`temperature`** (fill-in-the-blanks → paste → code test) | `level4/config.yml`, `level4/endpoints.yml` |
 | **Lab 2.1** | Add slots **`amount`**, **`recipient`**, **`account_from`**; add **`utter_ask_amount`**, **`utter_ask_recipient`**, **`utter_ask_account_from`** with **`metadata: rephrase: False`**; register **`action_process_transfer`** in **`actions:`** | `level4/domain/basics.yml` |
 | **Lab 3.1** | Create **`action_process_transfer.py`** (read three slots, cap **recipient** at **100** characters, placeholders, demo confirmation) | `level4/actions/action_process_transfer.py` |
 | **Lab 4.1** | Create **`transfer_money.yml`** with **`collect:`** steps for amount, then recipient, then account_from (with **`description:`** text for CALM), then **`action: action_process_transfer`** | `level4/data/basics/transfer_money.yml` |
@@ -107,4 +110,4 @@ model_groups:
 | **Flows** | no transfer | **+** **`transfer_money.yml`** |
 | **Train** | level3 model | **Retrain** from **`level4/`** after domain/data/config changes |
 
-**Done when:** Labs 2.1–5.2 pass, **`level4/config.yml`** matches the **Compact** pipeline pattern, **`level4/endpoints.yml`** matches the course **`model_groups`** / **`temperature`** ( **`gpt-4o`** model under the **`gpt-4o-mini`** group id—see section 2), and the **scripted transfer** in Lab 5.2 reaches a **`(Demo) Transfer of $…`** confirmation.
+**Done when:** **Lab 0.1** (pipeline YAML) and Labs 2.1–5.2 pass, **`level4/config.yml`** matches the **Compact** pipeline pattern, **`level4/endpoints.yml`** matches the course **`model_groups`** / **`temperature`** ( **`gpt-4o`** model under the **`gpt-4o-mini`** group id—see section 2), and the **scripted transfer** in Lab 5.2 reaches a **`(Demo) Transfer of $…`** confirmation.

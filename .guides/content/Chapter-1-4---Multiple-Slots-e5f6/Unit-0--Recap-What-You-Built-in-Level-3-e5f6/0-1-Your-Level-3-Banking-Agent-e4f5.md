@@ -1,6 +1,6 @@
 **Chapter 1.4 starting point:** Everything in this chapter assumes you **begin from the final banking agent at the end of Chapter 1.3**—the agent you finished in **`level3/`** after Chapter 1.3 labs. You are **not** starting from scratch. **`level4/`** is the folder where you do Chapter 1.4 work (typically a copy of your Level 3 tree).
 
-**Repository note:** The *learning path* is always **Chapter 1.3 end → add Level 4 pieces in labs** (domain, action, flow, train). **In this Git repository**, the **`level4/`** folder is checked in as the **fully built Chapter 1.4 agent** so **Codio** and **assessment scripts** can be validated against a known-complete tree. That is **not** a “blank starter” for learners—the Units and labs still describe the **delta** from **`level3/`** to the Chapter 1.4 end state. Use **`level3/`** as the baseline when you compare “before vs after.”
+**Repository note:** The *learning path* is always **Chapter 1.3 end → add Level 4 pieces in labs** (pipeline, domain, action, flow, train). **In this Git repository**, the **`level4/`** folder is checked in as the **fully built Chapter 1.4 agent** so **Codio** and **assessment scripts** can be validated against a known-complete tree. You still **complete each lab yourself**—for example **Lab 0.1** has you **fill in the blanks** and **paste** into **`config.yml`** / **`endpoints.yml`** (then the code test), even if those files already exist in the clone. Use **`level3/`** as the baseline when you compare “before vs after.”
 
 ---
 

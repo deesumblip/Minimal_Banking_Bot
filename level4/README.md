@@ -4,7 +4,7 @@
 
 **Starting point:** Chapter 1.4 **assumes** you begin from the **final banking agent at the end of Chapter 1.3** (your finished agent in **`level3/`**). Labs add transfer slots, **`action_process_transfer`**, and **`transfer_money.yml`**, then training and testing. See **Unit 0** (`Level4_Unit0_Content_0.1` and `0.2`). After **Lab 5.1**, **`level4/models/`** holds your trained model for **Lab 5.2**.
 
-**Repository vs pedagogy:** The **narrative** is always “Chapter 1.3 end state → apply Chapter 1.4 labs in **`level4/`**.” **In this repo**, the **`level4/`** folder is the **completed** Chapter 1.4 agent, checked in so **Codio** and **graders** can be tested end-to-end. It is **not** a minimal starter; **Unit 0** and the labs define the **delta** from **`level3/`**.
+**Repository vs pedagogy:** The **narrative** is always “Chapter 1.3 end state → apply Chapter 1.4 labs in **`level4/`**.” **In this repo**, the **`level4/`** folder is the **completed** Chapter 1.4 agent, checked in so **Codio** and **graders** can be tested end-to-end. Students still **produce** each artifact in order—**Lab 0.1** (fill-in-the-blanks + paste **`config.yml`** / **`endpoints.yml`** + code test) comes before **Lab 2.1**, mirroring **Lab 3.1**’s blanks → paste → grader pattern. **Unit 0** and the labs define the **delta** from **`level3/`**.
 
 ## What You'll Learn
 

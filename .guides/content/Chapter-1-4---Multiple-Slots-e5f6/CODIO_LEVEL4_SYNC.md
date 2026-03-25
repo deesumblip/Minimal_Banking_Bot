@@ -7,8 +7,8 @@ This folder mirrors the Level 4 content from `level4/` (unit content and lab con
 ## Structure
 
 - **Chapter:** Chapter-1-4---Multiple-Slots-e5f6
-- **Units:** Unit 0 (Recap Level 3) through Unit 6 (Summary and Next Steps) — 7 units total. Folder names are **Unit-0--** through **Unit-6--** so the table of contents shows in order. **Unit 0** has **two** pages: **0.1** (Your Level 3 agent), **0.2** (What Level 4 adds — includes full Ch 1.3 → 1.4 checklist). Unit 1 has four pages (1.1–1.4, including Test Your Knowledge); Unit 6 has seven pages (6.1–6.7, including Knowledge Check, Limitations, Level 5 Preview, Course Completion Checklist).
-- **Labs:** Lab 2.1 (domain), Lab 3.1 (action), Lab 4.1 (flow), Lab 5.1 (training), Lab 5.2 (completion check + optional Inspector testing — no separate Unit 5 “5.1” or “5.2” concept pages)
+- **Units:** Unit 0 (Recap Level 3) through Unit 6 (Summary and Next Steps) — 7 units total. Folder names are **Unit-0--** through **Unit-6--** so the table of contents shows in order. **Unit 0** has **0.1** (Your Level 3 agent), **0.2** (What Level 4 adds — includes full Ch 1.3 → 1.4 checklist), and **Lab 0.1** (pipeline: fill-in-the-blanks + paste `config.yml` / `endpoints.yml` + code test). Unit 1 has four pages (1.1–1.4, including Test Your Knowledge); Unit 6 has seven pages (6.1–6.7, including Knowledge Check, Limitations, Level 5 Preview, Course Completion Checklist).
+- **Labs:** Lab 0.1 (pipeline), Lab 2.1 (domain), Lab 3.1 (action), Lab 4.1 (flow), Lab 5.1 (training), Lab 5.2 (completion check + optional Inspector testing — no separate Unit 5 “5.1” or “5.2” concept pages)
 
 Each unit has an `index.json` (section title and order of pages) and each page has a `.md` (content) and `.json` (page metadata: title, type page, contentType markdown).
 
@@ -26,7 +26,7 @@ The main guide index at `.guides/content/index.json` includes `Chapter-1-4---Mul
 
 ## Assessments
 
-Graders and solution references live in `.guides/secure/level4_graders/` (lab_2.1_grader.py, lab_3.1_grader.py, lab_4.1_grader.py, lab_5.1_grader.py, lab_5.2_grader.py and corresponding solution_reference.md files). Assessment JSONs live in `.guides/assessments/` (e.g. **Lab 3.1** uses `fill-in-the-blanks-401030010` then `code-output-compare-401030001`, mirroring Chapter 1.3 Lab 4.1). Configure each lab in Codio using the Level4_Lab*_Assessment_Setup.md files in `level4/` (Option A: LLM Rubric, Option B: Standard Code Test with substring match for PASS).
+Graders and solution references live in `.guides/secure/level4_graders/` (lab_0.1_grader.py, lab_2.1_grader.py, lab_3.1_grader.py, lab_4.1_grader.py, lab_5.1_grader.py, lab_5.2_grader.py and corresponding solution_reference.md files). Assessment JSONs live in `.guides/assessments/` (e.g. **Lab 0.1** uses `fill-in-the-blanks-401010010` then `code-output-compare-401010001`; **Lab 3.1** uses `fill-in-the-blanks-401030010` then `code-output-compare-401030001`, mirroring Chapter 1.3 Lab 4.1). Configure each lab in Codio using the Level4_Lab*_Assessment_Setup.md files in `level4/` (Option A: LLM Rubric, Option B: Standard Code Test with substring match for PASS).
 
 ## Re-import from Git
 
