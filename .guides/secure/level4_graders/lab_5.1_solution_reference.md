@@ -17,6 +17,8 @@ Use this file as the **Instructor Provided Solution File** for Lab 5.1 if you us
 
 3. **Outcome** – Training completes without critical errors, and a model file (`.tar.gz`) is created in `level4/models/`.
 
+4. **Pipeline** – `level4/config.yml` lists **`CompactLLMCommandGenerator`** in **`pipeline:`** (Chapter 1.4). **`SearchReadyLLMCommandGenerator`** must not be used here; it can bake wrong slot command names into the trained model.
+
 ---
 
 ## Rubric summary (if using LLM Rubric)
@@ -25,5 +27,6 @@ Use this file as the **Instructor Provided Solution File** for Lab 5.1 if you us
 - **Training:** Student ran `python -m rasa train` from the `level4` folder.
 - **Model:** A `.tar.gz` model file exists in `level4/models/` and is recent (e.g. created within the session).
 - **Logs:** No critical errors in training logs (optional check).
+- **Config:** `level4/config.yml` pipeline uses **Compact** LLM command generation (not SearchReady).
 
-The Python grader (`lab_5.1_grader.py`) verifies venv, model file existence, model recency, and optional log checks and prints PASS on success.
+The Python grader (`lab_5.1_grader.py`) verifies venv, model file existence, model recency, optional log checks, and the pipeline step names in `config.yml`, then prints PASS on full score.

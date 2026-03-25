@@ -110,9 +110,9 @@
 | 3.1   | 10     | LLM Rubric or Code Test | lab_3.1_grader.py / lab_3.1_solution_reference.md |
 | 4.1   | 8      | LLM Rubric or Code Test | lab_4.1_grader.py / lab_4.1_solution_reference.md |
 | 5.1   | 12     | Code Test               | lab_5.1_grader.py / lab_5.1_solution_reference.md |
-| 5.2   | 10     | Code Test (completion)  | lab_5.2_grader.py / lab_5.2_solution_reference.md |
+| 5.2   | 12     | Code Test (completion)  | lab_5.2_grader.py / lab_5.2_solution_reference.md |
 
-**Total assessment points**: 50. All graders are Python scripts in `.guides/secure/level4_graders/`. Codio: use **substring match** for expected output `PASS`, Working Directory `/home/codio/workspace`, venv Python in COMMAND.
+**Total assessment points**: 52. All graders are Python scripts in `.guides/secure/level4_graders/`. Codio: use **substring match** for expected output `PASS`, Working Directory `/home/codio/workspace`, venv Python in COMMAND.
 
 ---
 

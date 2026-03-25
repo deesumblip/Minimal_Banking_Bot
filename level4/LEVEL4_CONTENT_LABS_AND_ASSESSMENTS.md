@@ -105,7 +105,7 @@ Use the **fill-in-the-blanks** assessment **`fill-in-the-blanks-401030010.json`*
 
 **File:** `level4/Level4_Lab5.2_Content.md`
 
-- **Part 1:** Graded **completion check** (`lab_5.2_grader.py`) — domain, action, flow, and model present. Does not run Rasa.
+- **Part 1:** Graded **completion check** (`lab_5.2_grader.py`) — domain (including legacy actions), action, flow, model, and **`level4/config.yml`** pipeline present. Does not run Rasa.
 - **Parts 2–3:** **Rasa Inspector** (Codio or local): start `rasa inspect` / `rasa run`, then follow the **scripted transfer** on the lab page. Spot-check other flows (balance, hours) if time. Same page as the check (no separate Unit 5 “5.2 concept” file).
 
 #### Scripted transfer (Inspector) — canonical user turns
@@ -181,7 +181,7 @@ Create a directory `.guides/secure/level4_graders/` and add Python graders that 
 
 ### lab_5.2_grader.py
 
-- **Checks:** Composite “completion”: domain (three transfer slots + three `utter_ask_*` + `action_process_transfer` in actions); `action_process_transfer.py` reads amount, recipient, account_from; `transfer_money.yml` has the three `collect:` steps and `action: action_process_transfer`; `level4/models/*.tar.gz` exists. Prints **`Check N: PASSED`** sequence for Codio **code-output-compare** (`401050002.json`). Does **not** run Inspector—the **scripted transfer** table is manual QA (documented in Lab 5.2 content and this file §4).
+- **Checks:** Composite “completion”: domain (three transfer slots + three `utter_ask_*` + legacy actions `action_bank_hours`, `action_holiday_hours`, `action_check_balance_simple` + `action_process_transfer` in actions); `action_process_transfer.py` reads amount, recipient, account_from; `transfer_money.yml` has the three `collect:` steps and `action: action_process_transfer`; `level4/models/*.tar.gz` exists; **`level4/config.yml`** pipeline uses **`CompactLLMCommandGenerator`** (not **`SearchReadyLLMCommandGenerator`**). Prints **`Check N: PASSED`** sequence for Codio **code-output-compare** (`401050002.json`). Does **not** run Inspector—the **scripted transfer** table is manual QA (documented in Lab 5.2 content and this file §4).
 
 ---
 

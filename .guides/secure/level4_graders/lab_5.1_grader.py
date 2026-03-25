@@ -3,7 +3,8 @@
 Lab 5.1: Training the Level 4 Agent - Grader Script
 Output format matches Chapter 1.2 Lab 6.2 template (⚠️ for partial / stale model / log issues).
 
-Runs from workspace root, verifies venv, then checks level4 for model and logs.
+Runs from workspace root, verifies venv, then checks level4 for model, logs, and
+CompactLLMCommandGenerator (not SearchReady) in config.yml pipeline.
 """
 
 import os
@@ -11,11 +12,19 @@ import sys
 import time
 from pathlib import Path
 
+try:
+    import yaml
+except ImportError:
+    print("FAIL")
+    print("Hint: PyYAML required. Use project venv Python.")
+    sys.exit(1)
+
 WORKSPACE_ROOT = Path("/home/codio/workspace")
 LEVEL4_DIR = WORKSPACE_ROOT / "level4"
 VENV_DIR = WORKSPACE_ROOT / ".venv"
 MODELS_DIR = LEVEL4_DIR / "models"
 LOGS_FILE = LEVEL4_DIR / "logs" / "logs.out"
+CONFIG_PATH = LEVEL4_DIR / "config.yml"
 
 score = 0
 max_score = 12
@@ -101,10 +110,38 @@ else:
     score += 3
 print("")
 
-# Check 5: Training completed (2 points)
-print("Check 5: Verifying training completed successfully...")
-print(" Check 5: PASSED - Training completed successfully (2 points)")
-score += 2
+# Check 5: Chapter 1.4 pipeline in config.yml (2 points) — SearchReady bakes wrong slot commands into the model
+print("Check 5: Verifying level4/config.yml uses CompactLLMCommandGenerator...")
+if not CONFIG_PATH.exists():
+    print("❌ Check 5: FAILED - level4/config.yml not found (0 points)")
+    print("Hint: Ensure you are working in the course level4 folder with config.yml present.")
+else:
+    try:
+        with open(CONFIG_PATH, encoding="utf-8") as f:
+            cfg = yaml.safe_load(f)
+        pipeline = (cfg or {}).get("pipeline") or []
+        names = []
+        for step in pipeline:
+            if isinstance(step, dict) and step.get("name"):
+                names.append(step["name"])
+        has_compact = "CompactLLMCommandGenerator" in names
+        has_search_ready = "SearchReadyLLMCommandGenerator" in names
+        if has_compact and not has_search_ready:
+            print(
+                " Check 5: PASSED - pipeline uses CompactLLMCommandGenerator (not SearchReady) (2 points)"
+            )
+            score += 2
+        elif has_search_ready:
+            print("❌ Check 5: FAILED - config uses SearchReadyLLMCommandGenerator (0 points)")
+            print(
+                "Hint: Chapter 1.4 requires CompactLLMCommandGenerator in level4/config.yml (see Unit 0.2). "
+                "Then run: python -m rasa train from level4."
+            )
+        else:
+            print("❌ Check 5: FAILED - pipeline must include CompactLLMCommandGenerator (0 points)")
+            print("Hint: See level4/config.yml in this repo or Unit 0.2 — What Level 4 Adds.")
+    except Exception as e:
+        print(f"❌ Check 5: FAILED - could not parse config.yml: {e} (0 points)")
 print("")
 
 # Summary
@@ -117,7 +154,7 @@ print("==========================================")
 print("")
 print(
     "Summary: Check 1 (venv) | Check 2 (model file) | Check 3 (recent model) | "
-    "Check 4 (logs) | Check 5 (training)"
+    "Check 4 (logs) | Check 5 (config pipeline)"
 )
 print(f"Score: {score}/{max_score}")
 

@@ -12,14 +12,15 @@
 ## Part 1: Completion check (Codio)
 
 1. Use **Check It!** below. The grader verifies:
-   - **Domain:** slots `amount`, `recipient`, `account_from`; `utter_ask_amount`, `utter_ask_recipient`, `utter_ask_account_from`; `action_process_transfer` in `actions:` (keep Level 3 actions listed too so training succeeds—see Lab 2.1)
+   - **Domain:** slots `amount`, `recipient`, `account_from`; `utter_ask_amount`, `utter_ask_recipient`, `utter_ask_account_from`; `action_bank_hours`, `action_holiday_hours`, `action_check_balance_simple`, and `action_process_transfer` in `actions:` (see Lab 2.1)
    - **Action:** `level4/actions/action_process_transfer.py` reads the three slots (via `get_slot`)
    - **Flow:** `level4/data/basics/transfer_money.yml` has the three `collect:` steps and `action: action_process_transfer`
    - **Model:** at least one `.tar.gz` under `level4/models/`
+   - **Config:** `level4/config.yml` **`pipeline:`** uses **`CompactLLMCommandGenerator`** (not **`SearchReadyLLMCommandGenerator`**)
 
 {Check It!|assessment}(code-output-compare-401050002)
 
-2. If a check fails, fix the matching lab (**2.1** domain, **3.1** action, **4.1** flow, **5.1** train), then run **Check It!** again.
+2. If a check fails, fix the matching lab (**2.1** domain, **3.1** action, **4.1** flow, **5.1** train / config), then run **Check It!** again.
 
 ---
 

@@ -4,7 +4,7 @@
 	"source": {
 		"name": "Lab 5.2: Completion Check (Transfer Flow)",
 		"showName": true,
-		"instructions": "Completion check — all must pass:\n\n• Check 1: Domain has three slots, three ask responses, and action_process_transfer.\n• Check 2: action_process_transfer.py reads all three slots.\n• Check 3: transfer_money.yml has the collect steps and action step.\n• Check 4: Trained model exists in level4/models/.\n\nFull score: 10/10.",
+		"instructions": "Completion check — all must pass:\n\n• Check 1: Domain has three slots, three ask responses, Level 2–3 actions (bank hours, holiday hours, check balance), and action_process_transfer.\n• Check 2: action_process_transfer.py reads all three slots.\n• Check 3: transfer_money.yml has the collect steps and action step.\n• Check 4: Trained model exists in level4/models/.\n• Check 5: level4/config.yml pipeline uses CompactLLMCommandGenerator (not SearchReadyLLMCommandGenerator).\n\nFull score: 12/12.",
 		"command": "bash /home/codio/workspace/.guides/scripts/run_python_grader.sh /home/codio/workspace/.guides/secure/level4_graders/lab_5.2_grader.py",
 		"preExecuteCommand": "",
 		"options": {
@@ -38,7 +38,7 @@
 			"type": "Never"
 		},
 		"maxAttemptsCount": 0,
-		"points": 10,
+		"points": 12,
 		"showExpectedAnswerOption": {
 			"type": "Always"
 		},
@@ -70,6 +70,13 @@
 				"arguments": "",
 				"input": "",
 				"output": "Check 4: PASSED",
+				"showFeedback": false,
+				"feedback": ""
+			},
+			{
+				"arguments": "",
+				"input": "",
+				"output": "Check 5: PASSED",
 				"showFeedback": false,
 				"feedback": ""
 			}

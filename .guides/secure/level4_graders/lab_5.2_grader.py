@@ -3,8 +3,9 @@
 Lab 5.2: Completion Check (Transfer Flow) — Grader Script
 Output format matches Chapter 1.2 Lab 6.2 template.
 
-Verifies Level 4 agent is complete: domain (slots + ask responses + action), action file,
-transfer_money.yml flow, and a trained model. Runs from workspace root.
+Verifies Level 4 agent is complete: domain (slots + ask responses + legacy actions + action),
+action file, transfer_money.yml flow, trained model, and CompactLLMCommandGenerator in config.
+Runs from workspace root.
 """
 
 import sys
@@ -16,6 +17,13 @@ DOMAIN_PATH = LEVEL4 / "domain" / "basics.yml"
 ACTION_PATH = LEVEL4 / "actions" / "action_process_transfer.py"
 FLOW_PATH = LEVEL4 / "data" / "basics" / "transfer_money.yml"
 MODELS_DIR = LEVEL4 / "models"
+CONFIG_PATH = LEVEL4 / "config.yml"
+
+REQUIRED_LEGACY_ACTIONS = (
+    "action_bank_hours",
+    "action_holiday_hours",
+    "action_check_balance_simple",
+)
 
 try:
     import yaml
@@ -30,8 +38,8 @@ max_score = 10
 print("Running Lab 5.2 completion check...")
 print("")
 
-# Check 1: Domain (3 points)
-print("Check 1: Verifying domain has transfer slots, ask responses, and action...")
+# Check 1: Domain (3 points) — include Level 2–3 custom actions (students often replace the whole actions list)
+print("Check 1: Verifying domain has transfer slots, ask responses, legacy actions, and action_process_transfer...")
 if not DOMAIN_PATH.exists():
     print("❌ Check 1: FAILED - level4/domain/basics.yml not found (0 points)")
 else:
@@ -46,8 +54,11 @@ else:
             r in responses for r in ["utter_ask_amount", "utter_ask_recipient", "utter_ask_account_from"]
         )
         has_action = "action_process_transfer" in actions
-        if has_slots and has_asks and has_action:
-            print(" Check 1: PASSED - Domain has transfer slots, ask responses, action_process_transfer (3 points)")
+        has_legacy = all(a in actions for a in REQUIRED_LEGACY_ACTIONS)
+        if has_slots and has_asks and has_action and has_legacy:
+            print(
+                " Check 1: PASSED - Domain has transfer pieces, legacy actions, action_process_transfer (3 points)"
+            )
             score += 3
         else:
             missing = []
@@ -57,6 +68,10 @@ else:
                 missing.append("utter_ask_amount/recipient/account_from")
             if not has_action:
                 missing.append("action_process_transfer in actions")
+            if not has_legacy:
+                missing.append(
+                    "action_bank_hours, action_holiday_hours, action_check_balance_simple in actions"
+                )
             print(f"❌ Check 1: FAILED - Domain missing: {missing} (0 points)")
     except Exception as e:
         print(f"❌ Check 1: FAILED - Could not parse domain: {e} (0 points)")
@@ -125,15 +140,48 @@ else:
     score += 2
 print("")
 
+# Check 5: Chapter 1.4 pipeline in config.yml (2 points)
+print("Check 5: Verifying level4/config.yml uses CompactLLMCommandGenerator...")
+if not CONFIG_PATH.exists():
+    print("❌ Check 5: FAILED - level4/config.yml not found (0 points)")
+else:
+    try:
+        with open(CONFIG_PATH, encoding="utf-8") as f:
+            cfg = yaml.safe_load(f)
+        pipeline = (cfg or {}).get("pipeline") or []
+        names = []
+        for step in pipeline:
+            if isinstance(step, dict) and step.get("name"):
+                names.append(step["name"])
+        has_compact = "CompactLLMCommandGenerator" in names
+        has_search_ready = "SearchReadyLLMCommandGenerator" in names
+        if has_compact and not has_search_ready:
+            print(
+                " Check 5: PASSED - pipeline uses CompactLLMCommandGenerator (not SearchReady) (2 points)"
+            )
+            score += 2
+        elif has_search_ready:
+            print("❌ Check 5: FAILED - config uses SearchReadyLLMCommandGenerator (0 points)")
+            print(
+                "Hint: Chapter 1.4 requires CompactLLMCommandGenerator. Edit level4/config.yml, then retrain."
+            )
+        else:
+            print("❌ Check 5: FAILED - pipeline must include CompactLLMCommandGenerator (0 points)")
+    except Exception as e:
+        print(f"❌ Check 5: FAILED - could not parse config.yml: {e} (0 points)")
+print("")
+
 # Summary
 print("==========================================")
 if score >= max_score:
     print(f" PASS: Lab 5.2 completion check passed! Score: {score}/{max_score}")
 else:
-    print(f"❌ FAIL: Score {score}/{max_score}. Fix Labs 2.1, 3.1, or 4.1 as needed; complete Lab 5.1 (train), then re-run.")
+    print(f"❌ FAIL: Score {score}/{max_score}. Fix Labs 2.1, 3.1, 4.1, or 5.1 as needed; then re-run.")
 print("==========================================")
 print("")
-print("Summary: Check 1 (domain) | Check 2 (action) | Check 3 (flow) | Check 4 (model)")
+print(
+    "Summary: Check 1 (domain) | Check 2 (action) | Check 3 (flow) | Check 4 (model) | Check 5 (config pipeline)"
+)
 print(f"Score: {score}/{max_score}")
 
 if score >= max_score:
