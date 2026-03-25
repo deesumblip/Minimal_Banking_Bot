@@ -29,7 +29,7 @@
 
 **Where:** From **`level4`** with the project **virtual environment** active (same as Lab 5.1).
 
-1. **Start the assistant**, e.g. `python -m rasa inspect --debug` (your environment may use `python -m rasa run` instead). Leave the process running.
+1. **Start the assistant** from **`level4`** (same shell as Lab 5.1 after `cd level4`), e.g. `python -m rasa inspect --debug --log-file logs/logs.out`. That matches **`level4/README.md`** and writes logs under **`level4/logs/`** for debugging. If your setup prefers chat-only, `python -m rasa run` from **`level4`** is fine—always use the venv’s **`python -m rasa …`**, not a global `rasa` binary, so you pick up the right install. Leave the process running.
 2. **Open the UI**. On **Codio**, open the **Rasa Inspect** tab when the terminal shows the server is up. **Locally**, use the URL shown (often `http://localhost:5005`).
 3. **Run the scripted transfer**. Type the turns **in order** so you exercise **amount → recipient → account_from → confirmation**:
 
@@ -55,7 +55,7 @@
 
 ## Part 3: Running locally (optional)
 
-Same as Part 2: activate `.venv` at the **project root**, `cd level4`, run Inspect or `rasa run`, open the UI, then use the **same table** as in Part 2.
+Same as Part 2: activate `.venv` at the **project root**, `cd level4`, run `python -m rasa inspect --debug --log-file logs/logs.out` (or `python -m rasa run`), open the UI, then use the **same table** as in Part 2.
 
 ---
 

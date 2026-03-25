@@ -17,6 +17,8 @@ logs/
 !level4/logs/
 !level4/logs/.gitkeep
 level4/logs/*.out
+# ad-hoc debug dumps (e.g. copied Inspector logs)
+level4/logs/*.txt
 
 # editor / OS
 .vscode/

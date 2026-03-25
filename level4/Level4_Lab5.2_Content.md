@@ -26,7 +26,7 @@ The grader checks that:
 
 From **`level4`** with the virtual environment active:
 
-1. Start the agent (e.g. `python -m rasa inspect --debug`, or `python -m rasa run` per your course).
+1. Start the agent from **`level4`** (after `cd level4`), e.g. `python -m rasa inspect --debug --log-file logs/logs.out` (see **`level4/README.md`**). Use **`python -m rasa …`**, not a global `rasa` binary. Alternatively `python -m rasa run` from **`level4`**.
 2. Open **Rasa Inspect** (Codio) or the local URL (e.g. `http://localhost:5005`).
 
 **Scripted transfer (type in order):**
@@ -46,13 +46,13 @@ From **`level4`** with the virtual environment active:
 
 2. **Flow:** In **`level4/data/basics/transfer_money.yml`**, ensure **`collect: recipient`** and **`account_from`** **`description:`** lines tell the command generator to store the **full user message** as text with a **clear length range** (Lab 4.1: **1–100** chars for recipient, **1–120** for account). **Retrain** after edits.
 
-3. **Pipeline:** The **`level4`** repo uses **`CompactLLMCommandGenerator`** (Chapter 1.3 / **`level3`** stays **`SearchReadyLLMCommandGenerator`**). Confirm **`level4/config.yml`** and **`python -m rasa train`** from **`level4`**. See **`PIPELINE_CHAPTER_1_3_AND_4.md`**.
+3. **Pipeline:** The **`level4`** repo uses **`CompactLLMCommandGenerator`** (Chapter 1.3 / **`level3`** stays **`SearchReadyLLMCommandGenerator`**). Confirm **`level4/config.yml`**, **`python -m rasa train`** from **`level4`**, then **restart** Inspector so it loads the **new** model. See **`PIPELINE_CHAPTER_1_3_AND_4.md`**.
 
 ---
 
 ## Part 3: Running locally (optional)
 
-Same as Part 2: activate `.venv` at the project root, `cd level4`, start Inspect or run, then use the **same table** as above.
+Same as Part 2: activate `.venv` at the project root, `cd level4`, `python -m rasa inspect --debug --log-file logs/logs.out` (or `python -m rasa run`), then use the **same table** as above.
 
 ---
 

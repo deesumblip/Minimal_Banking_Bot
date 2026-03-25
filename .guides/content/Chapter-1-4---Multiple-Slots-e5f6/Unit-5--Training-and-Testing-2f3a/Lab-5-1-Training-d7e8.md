@@ -14,8 +14,9 @@ After training succeeds, use **Check It!** below (Codio). Then open **Lab 5.2** 
 2. **Activate the virtual environment:** `source .venv/bin/activate`, the prompt should show `(.venv)`.
 3. **Go to Level 4:** `cd level4`, run `pwd` and confirm the path ends in `level4`.
 4. **Check Rasa:** `python -m rasa --version`. If this fails, confirm the venv is active and Rasa Pro is installed (**Lab 0.1**).
-5. **Train:** `python -m rasa train`, wait until you see **Successfully saved model** (often about 1–3 minutes).
-6. **Verify:** In the file tree, open `level4/models/` and confirm a new `.tar.gz` file is there.
+5. **Pipeline check (important):** Open **`config.yml`** in this same **`level4/`** folder. It must use **`CompactLLMCommandGenerator`** for Chapter 1.4 (not **`SearchReadyLLMCommandGenerator`** from Chapter 1.3). If you copied **`level3/` → `level4/`** and have not applied **Unit 0.2** yet, fix **`config.yml`** and **`endpoints.yml`** first—otherwise training will **bake the wrong command generator into the model**, and you can see odd slot behavior or *“unable to understand you”* in Inspector even when domain and flows look correct. Compare with this repo’s **`level4/config.yml`** if unsure.
+6. **Train:** `python -m rasa train`, wait until you see **Successfully saved model** (often about 1–3 minutes).
+7. **Verify:** In the file tree, open **`models/`** (under **`level4`**) and confirm a new `.tar.gz` file is there.
 
 ### If something goes wrong
 
@@ -26,6 +27,7 @@ After training succeeds, use **Check It!** below (Codio). Then open **Lab 5.2** 
 | Action-related errors | `level4/actions/action_process_transfer.py` (**Lab 3.1**) |
 | `No module named 'rasa'` | Activate `.venv` from the **project root**, then `cd level4` again |
 | License or API key errors | `.env` and **Lab 0.1**; confirm keys and paths for your workspace |
+| Transfer slots mis-fill; *unable to understand you* on recipient/account; log shows **`SearchReadyLLMCommandGenerator`** | **`level4/config.yml`** must use **`CompactLLMCommandGenerator`** (**Unit 0.2**). Fix config, then **`python -m rasa train`** again from **`level4`** so the **new** model embeds the right pipeline (**Lab 5.2** troubleshooting, **`PIPELINE_CHAPTER_1_3_AND_4.md`**) |
 
 **Use Check It!** below when the steps above are complete.
 
@@ -45,9 +47,10 @@ Same sequence on your machine; only the activate command changes by OS.
    - macOS / Linux: `source .venv/bin/activate`  
    Confirm `(.venv)` appears in the prompt.
 4. **Enter Level 4:** `cd level4` (this folder should contain `config.yml`, `domain/`, and `data/`).
-5. **Environment variables:** Ensure `.env` in the project (or under `level4`) includes `RASA_LICENSE` and `OPENAI_API_KEY`, see **Lab 0.1** if you need help.
-6. **Train:** `python -m rasa train` until you see **Successfully saved model**.
-7. **Verify:** A new `.tar.gz` appears under `level4/models/`.
+5. **Pipeline check:** Same as Part 1 step 5—confirm **`level4/config.yml`** uses **`CompactLLMCommandGenerator`** before training.
+6. **Environment variables:** Ensure `.env` in the project (or under `level4`) includes `RASA_LICENSE` and `OPENAI_API_KEY`, see **Lab 0.1** if you need help.
+7. **Train:** `python -m rasa train` until you see **Successfully saved model**.
+8. **Verify:** A new `.tar.gz` appears under `level4/models/`.
 
 You are done when training completes with no errors and `models/` contains a new model.
 
