@@ -30,7 +30,7 @@ Save the grader script at:
 
 The grader checks only what the lab instructs: hours.yml exists with hours flow and action_bank_hours; holiday_hours.yml exists with flow holiday_hours, name/description (explicit for holiday_hours only), and action_holiday_hours. No check for virtual environment; no name/description required for the hours flow.
 
-
+```bash
 #!/bin/bash
 cd /home/codio/workspace/level2
 
@@ -130,6 +130,7 @@ echo "Score: $score/$max_score"
 if [ $score -lt $max_score ]; then
     exit 1
 fi
+```
 
 ### Example student deliverable (for grading reference)
 
@@ -137,23 +138,25 @@ Students should ensure `data/basics/hours.yml` exists and create `data/basics/ho
 
 **`data/basics/hours.yml`** (example flow; starter may already include this):
 
-
+```yaml
 flows:
   hours:
     name: bank hours
     description: Tell the user when the bank is open.
     steps:
       - action: action_bank_hours
+```
 
 **`data/basics/holiday_hours.yml`** (student-created flow):
 
-
+```yaml
 flows:
   holiday_hours:
     name: holiday hours
     description: Tell the user about holiday schedule and whether we're closed today.
     steps:
       - action: action_holiday_hours
+```
 
 ## Assessment Setup and Configuration
 

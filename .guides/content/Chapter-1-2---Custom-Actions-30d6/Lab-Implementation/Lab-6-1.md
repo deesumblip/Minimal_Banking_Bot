@@ -18,7 +18,7 @@ Save the grader script at:
 
 The grader checks only what the lab instructs: model file exists under `models/` and training completed without errors (per verification). No check for virtual environment, model recency, or action files.
 
-
+```bash
 #!/bin/bash
 cd /home/codio/workspace/level2
 
@@ -69,6 +69,7 @@ echo "Score: $score/$max_score"
 if [ $score -lt $max_score ]; then
     exit 1
 fi
+```
 
 ### Example student deliverable (for grading reference)
 

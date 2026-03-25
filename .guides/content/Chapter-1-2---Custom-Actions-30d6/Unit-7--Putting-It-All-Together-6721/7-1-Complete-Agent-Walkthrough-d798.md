@@ -2,7 +2,7 @@ Let's trace through a complete conversation showing how Level 1 and Level 2 work
 
 #### Conversation Example
 
-
+```text
 [User opens chat - new session starts]
 
 1. pattern_session_start triggers automatically (Level 1)
@@ -50,6 +50,7 @@ Agent: [Dynamic message, e.g. "We're closed today for Christmas." or the general
    Step: utter_contact (Level 1 - static response)
    ↓
 Agent: "You can reach us at support@bank.com or call 1-800-BANK-123."
+```
 
 **Notice**: The agent uses Level 1 responses, the example action (`action_bank_hours`), and the action you built (`action_holiday_hours`). You can replay this same conversation in Rasa Inspector and see which flow and action run for each message, that's how your modifications (domain, flows, actions) show up in the GUI.
 

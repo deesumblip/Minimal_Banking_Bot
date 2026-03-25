@@ -83,7 +83,7 @@ Save the grader script at:
 
 The grader only checks what is explicitly instructed in the student lab: file location/name, imports, datetime, class, name(), and run().
 
-
+```bash
 #!/bin/bash
 cd /home/codio/workspace/level2
 
@@ -173,6 +173,7 @@ echo "Score: $score/$max_score"
 if [ $score -lt $max_score ]; then
     exit 1
 fi
+```
 
 ### Example student deliverable (for grading reference)
 

@@ -2,23 +2,25 @@ Now that your actions are registered in the domain (Lab 4.1), you need flows tha
 
 #### Level 1 Flow (Response)
 
-
+```yaml
 flows:
   greet:
     name: say hello
     description: Greet the user when they start a conversation.
     steps:
       - action: utter_greet  # ← Uses a response
+```
 
 #### Level 2 Flow (Action)
 
-
+```yaml
 flows:
   hours:
     name: bank hours
     description: Tell the user when the bank is open.
     steps:
       - action: action_bank_hours  # ← Uses an action
+```
 
 **Key Difference**: 
 - `utter_*` = Predefined text (response)

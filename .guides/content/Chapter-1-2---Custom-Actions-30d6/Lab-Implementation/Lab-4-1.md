@@ -55,7 +55,7 @@ Save the grader script at:
 
 The grader checks only what the lab instructs: domain file exists, `actions:` section, both `action_bank_hours` and `action_holiday_hours` registered, correct YAML list syntax (indented list under `actions:` is accepted), and valid YAML. It accepts the Level 2 domain layout (e.g. `version`, `responses`, then `actions:` with list items indented). No check for virtual environment.
 
-
+```bash
 #!/bin/bash
 cd /home/codio/workspace/level2
 
@@ -155,12 +155,13 @@ echo "Score: $score/$max_score"
 if [ $score -lt $max_score ]; then
     exit 1
 fi
+```
 
 ### Example student deliverable (for grading reference)
 
 Students add or edit the `actions:` section in `domain/basics.yml` so it lists both actions. The Level 2 domain typically has `version`, `responses`, then `actions:` with list items indented (comments are optional). Example:
 
-
+```yaml
 version: "3.1"
 
 responses:
@@ -172,6 +173,7 @@ actions:
   # List all custom actions here; name must match name() in actions/*.py
   - action_bank_hours
   - action_holiday_hours
+```
 
 ## Assessment Setup and Configuration
 
