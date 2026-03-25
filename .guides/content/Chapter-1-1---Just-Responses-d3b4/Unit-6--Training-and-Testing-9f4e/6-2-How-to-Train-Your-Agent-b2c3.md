@@ -2,6 +2,8 @@
 
 **Command** (from the `level1` folder with venv active):
 
+```bash
 python -m rasa train
+```
 
 **Success**: You should see "Successfully saved model to 'models/...'" and a new `.tar.gz` file in `models/`.

@@ -13,7 +13,7 @@ You will add the action **name** to the domain here; you will **create the actio
 
 **Step 2.** Add the `slots:` section before `responses:`.
 
-
+```yaml
 version: "3.1"
 
 slots:
@@ -22,6 +22,7 @@ slots:
 
 responses:
   # ... existing responses
+```
 
 - Use 2-space indentation
 - `account:` goes under `slots:`; `type: text` goes under `account:`
@@ -43,11 +44,12 @@ responses:
 
 Your `actions:` block should look like this when you are done:
 
-
+```yaml
 actions:
   - action_bank_hours
   - action_holiday_hours
   - action_check_balance_simple
+```
 
 **Step 5.** Verify. Your domain should have:
 

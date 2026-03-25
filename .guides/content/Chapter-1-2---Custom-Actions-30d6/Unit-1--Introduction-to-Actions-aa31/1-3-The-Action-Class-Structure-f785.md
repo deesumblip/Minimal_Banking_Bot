@@ -1,6 +1,6 @@
 Every action is a Python class that inherits from `Action`. Here's the basic structure:
 
-
+```python
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 
@@ -12,6 +12,7 @@ class ActionBankHours(Action):
         # Your custom code here
         dispatcher.utter_message("Your message here")
         return []
+```
 
 **Required Methods**:
 1. **`name()`** - Returns the action name (must match what's in domain)

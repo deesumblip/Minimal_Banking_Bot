@@ -74,8 +74,9 @@ fi
 
 Students do not produce a new script file; they run training so that a model is produced. The grader checks that a model file exists in `models/` and that training completed without errors. Example command the student runs (with venv activated):
 
-
+```bash
 python -m rasa train
+```
 
 A successful run produces a `.tar.gz` model under `models/`; the grader expects at least one model file and no errors in logs.
 

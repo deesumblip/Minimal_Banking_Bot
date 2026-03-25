@@ -8,7 +8,7 @@
 
 **Step 2, Action file.** Create `level5/actions/action_process_transfer_with_tools.py` with a custom action class that inherits from `Action` (rasa_sdk), implements `name()` returning `"action_process_transfer_with_tools"`, and implements `run()` returning a list of events (e.g. `[]`). For this lab the action can be minimal: when this step runs, the LLM will use the registered tools in this flow step; you do not need to call the tools from inside the action. A minimal valid action looks like this:
 
-
+```python
 from typing import Any, Dict, List, Text
 
 from rasa_sdk import Action, Tracker
@@ -27,6 +27,7 @@ class ActionProcessTransferWithTools(Action):
     ) -> List[Dict[Text, Any]]:
         # Optional: send a message, then return. The LLM can use tools in this step.
         return []
+```
 
 **Step 3, Domain.** Open `level5/domain/basics.yml` and add `action_process_transfer_with_tools` to the `actions:` list (alongside the existing actions).
 
@@ -36,10 +37,23 @@ class ActionProcessTransferWithTools(Action):
 
 ## In Codio
 
-From project root activate venv, `cd level5`. Create the flow and action files and update the domain. **Use Check It!** below when done (Codio).
+From the project root, activate the venv, then go into `level5`:
+
+```bash
+source .venv/bin/activate   # Linux / macOS / Codio
+cd level5
+```
+
+Create the flow and action files and update the domain. **Use Check It!** below when done (Codio).
 
 {Check It!|assessment}(code-output-compare-501040001)
 
 ## Running locally
 
-From project root, `cd level5`. Create the flow and action files and update the domain.
+From the project root, activate the venv, then:
+
+```bash
+cd level5
+```
+
+Create the flow and action files and update the domain. (On Windows PowerShell, use `.\.venv\Scripts\Activate.ps1` before `cd level5`.)

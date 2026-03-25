@@ -14,15 +14,17 @@
 
 From the `level1` folder, create a `logs` directory so the Inspector log can be written:
 
-
+```bash
 mkdir -p logs
+```
 
 #### Step 3: Start Inspector in the terminal
 
 From the `level1` folder, run:
 
-
+```bash
 python -m rasa inspect --debug --log-file logs/logs.out
+```
 
 **What you'll see**: The terminal will show a lot of output, including something like:
 

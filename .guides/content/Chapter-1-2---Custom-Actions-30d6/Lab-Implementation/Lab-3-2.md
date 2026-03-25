@@ -178,7 +178,7 @@ fi
 
 Students should produce a file at `actions/action_holiday_hours.py`. The following is a minimal example that satisfies the grader (exact wording of messages may vary):
 
-
+```python
 from datetime import datetime
 
 from rasa_sdk import Action, Tracker
@@ -204,6 +204,7 @@ class ActionHolidayHours(Action):
             )
         dispatcher.utter_message(text=message)
         return []
+```
 
 ## Assessment Setup and Configuration
 

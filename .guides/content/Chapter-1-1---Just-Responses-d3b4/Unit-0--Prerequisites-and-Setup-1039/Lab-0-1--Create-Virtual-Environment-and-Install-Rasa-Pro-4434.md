@@ -36,9 +36,10 @@ Follow these steps from the **project root** (e.g. `~/workspace`). You do **not*
 
 **1. Check Python and pip**
 
-
+```bash
 python --version
 pip --version
+```
 
 You should see Python 3.11.x (or 3.10+) and pip. **If Python is not found,** install it in the terminal (Codio is usually Ubuntu-based):
 
@@ -50,8 +51,9 @@ Then run `python3.11 --version` and `pip --version` again. If your environment d
 
 **If pip is not found** but Python is, install pip with:
 
-
+```bash
 python3.11 -m ensurepip --upgrade
+```
 
 (or use `python -m ensurepip --upgrade` if `python` points to 3.11). Then run `pip --version` again.
 
@@ -59,16 +61,18 @@ python3.11 -m ensurepip --upgrade
 
 Confirm you're in the project root (run `pwd`, the path should **not** end in `level1`). Then:
 
-
+```bash
 python3.11 -m venv .venv
 source .venv/bin/activate
+```
 
 Your prompt should show `(.venv)` at the start.
 
 **3. Install Rasa Pro**
 
-
+```bash
 pip install --no-cache-dir rasa-pro
+```
 
 Installation takes 2–5 minutes.
 
@@ -76,8 +80,9 @@ Installation takes 2–5 minutes.
 
 Replace `YOUR_LICENSE_KEY` with your actual Rasa Pro license key:
 
-
+```bash
 export RASA_LICENSE=YOUR_LICENSE_KEY
+```
 
 Then run `rasa --version` (step 5).
 
@@ -85,8 +90,9 @@ Then run `rasa --version` (step 5).
 
 **5. Verify installation**
 
-
+```bash
 rasa --version
+```
 
 You should see version information with no errors.
 
@@ -102,9 +108,10 @@ Follow these steps from the **project root** in **PowerShell**.
 
 **1. Check Python and pip**
 
-
+```powershell
 py -3.11 --version
 py -m pip --version
+```
 
 You should see Python 3.11.x (or 3.10+) and pip. **If Python is not found,** install Python 3.11 (or 3.10+):
 
@@ -147,8 +154,9 @@ Then run `rasa --version` (step 5). To have it in every new terminal, set the us
 
 **5. Verify installation**
 
-
+```powershell
 rasa --version
+```
 
 You should see version information with no errors.
 
@@ -160,9 +168,10 @@ Follow these steps from the **project root** in Terminal.
 
 **1. Check Python and pip**
 
-
+```bash
 python3.11 --version
 pip --version
+```
 
 (If needed, try `python --version` or `python3 --version`.) You should see Python 3.11.x (or 3.10+). **If Python is not found,** install Python 3.11 (or 3.10+):
 
@@ -171,8 +180,9 @@ pip --version
 
 **If pip is not found** but Python is installed, install pip with:
 
-
+```bash
 python3.11 -m ensurepip --upgrade
+```
 
 Then run `pip --version` (or `pip3 --version`) again. After any install, close and reopen your terminal, then repeat the version commands from the project root.
 
@@ -180,16 +190,18 @@ Then run `pip --version` (or `pip3 --version`) again. After any install, close a
 
 Confirm you're in the project root (run `pwd`, the path should **not** end in `level1`). Then:
 
-
+```bash
 python3.11 -m venv .venv
 source .venv/bin/activate
+```
 
 Your prompt should show `(.venv)` at the start.
 
 **3. Install Rasa Pro**
 
-
+```bash
 pip install --no-cache-dir rasa-pro
+```
 
 Installation takes 2–5 minutes.
 
@@ -197,15 +209,17 @@ Installation takes 2–5 minutes.
 
 Replace `YOUR_LICENSE_KEY` with your actual license:
 
-
+```bash
 export RASA_LICENSE=YOUR_LICENSE_KEY
+```
 
 Then run `rasa --version` (step 5). **To have RASA_LICENSE in every new terminal:** Create a `.env` file in the project root with `RASA_LICENSE=your-license`, then at the start of each session run `set -a; source .env; set +a`. Do **not** commit `.env` (it is in `.gitignore`).
 
 **5. Verify installation**
 
-
+```bash
 rasa --version
+```
 
 You should see version information with no errors.
 
@@ -217,9 +231,10 @@ Follow these steps from the **project root** in your terminal.
 
 **1. Check Python and pip**
 
-
+```bash
 python3.11 --version
 pip --version
+```
 
 You should see Python 3.11.x (or 3.10+). **If Python is not found,** install Python 3.11 (or 3.10+):
 
@@ -273,7 +288,7 @@ You should see version information with no errors.
 
 In your file tree, go into `level1` and confirm the agent structure is present. You should see something like this:
 
-
+```text
 level1/
 ├── config.yml
 ├── credentials.yml
@@ -285,6 +300,7 @@ level1/
         ├── greet.yml
         ├── help.yml
         └── contact.yml
+```
 
 Confirm that the **domain/** and **data/** directories exist and that the three config files (`config.yml`, `credentials.yml`, `endpoints.yml`) are present in `level1`.
 
@@ -296,5 +312,8 @@ Confirm that the **domain/** and **data/** directories exist and that the three 
 - The `level1` folder has the expected structure (domain, data, config files).
 
 For **later labs**: Use the same `.venv` from the project root for every level. Activate it from the root, ensure `RASA_LICENSE` is loaded, then `cd` into the level folder you're working in (e.g. `cd level1`).
+
+---
+ level folder you're working in (e.g. `cd level1`).
 
 ---

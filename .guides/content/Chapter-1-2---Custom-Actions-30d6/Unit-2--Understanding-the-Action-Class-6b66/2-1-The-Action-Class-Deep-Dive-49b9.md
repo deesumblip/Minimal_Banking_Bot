@@ -4,7 +4,7 @@ Let's examine the actual `action_bank_hours.py` file to understand how actions w
 
 #### Complete Action File
 
-
+```python
 from datetime import datetime
 from typing import Any, Dict, List, Text
 
@@ -51,6 +51,7 @@ class ActionBankHours(Action):
 
         dispatcher.utter_message(text=message)
         return []
+```
 
 #### Breaking Down Each Component
 

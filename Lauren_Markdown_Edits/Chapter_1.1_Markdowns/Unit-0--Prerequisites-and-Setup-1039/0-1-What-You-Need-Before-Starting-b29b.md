@@ -7,8 +7,8 @@ Before diving into building your first Rasa agent, let's make sure you have ever
 
 **Note for Local Setup**: If you are repeating this exercise on your own machine (not in Codio), set **RASA_LICENSE** (e.g. create a `.env` file in your **project root** with):
 
-   ```
-   RASA_LICENSE=rasaxxx-your-license-here
-   ```
+```text
+RASA_LICENSE=rasaxxx-your-license-here
+```
 Replace the placeholder with your actual Rasa license. Load it (e.g. `source .env` from project root) before running Rasa.  
 **Never commit `.env` to version control.**

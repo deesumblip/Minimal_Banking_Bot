@@ -37,6 +37,15 @@ class ActionProcessTransferWithTools(Action):
 
 ## In Codio / Locally
 
-From project root activate venv, `cd level5`. Create the flow and action files and update the domain. Run the assessment when done.
+From the project root, activate the venv, then work in `level5`:
+
+```bash
+source .venv/bin/activate   # Linux / macOS / Codio
+cd level5
+```
+
+On Windows PowerShell, use `.\.venv\Scripts\Activate.ps1` before `cd level5`.
+
+Create the flow and action files and update the domain. Run the assessment when done.
 
 {Check It!|assessment}(code-output-compare-501040001)

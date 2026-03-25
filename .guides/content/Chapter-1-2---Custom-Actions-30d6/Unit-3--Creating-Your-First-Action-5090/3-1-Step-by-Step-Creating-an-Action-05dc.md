@@ -10,7 +10,7 @@ You've seen `action_bank_hours.py`, it uses `datetime` and conditional logic to 
 
 **For reference, here's the structure of `action_bank_hours`** (the file already exists in your project):
 
-
+```python
 from datetime import datetime
 from typing import Any, Dict, List, Text
 
@@ -44,6 +44,7 @@ class ActionBankHours(Action):
 
         dispatcher.utter_message(text=message)
         return []
+```
 
 **Next**: Complete **Lab 3.1** to create `action_holiday_hours.py` following this pattern. After that, you'll register it in the domain (Unit 4 / Lab 4.1) and add a flow for it (Unit 5 / Lab 5.1).
 

@@ -15,7 +15,8 @@ ROOT = Path(__file__).resolve().parents[1] / "content"
 
 
 def split_fences(text: str) -> list[tuple[bool, str]]:
-    fence = re.compile(r"^```[\w]*\s*$", re.MULTILINE)
+    # Match fenced blocks even when indented (list items, etc.)
+    fence = re.compile(r"^\s*```[\w]*\s*$", re.MULTILINE)
     parts: list[tuple[bool, str]] = []
     pos = 0
     in_code = False
