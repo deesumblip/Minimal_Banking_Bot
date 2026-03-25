@@ -15,6 +15,8 @@ Use this file as the **Instructor Provided Solution File** in Codio's LLM Rubric
 
 3. **action_process_transfer in actions** – Under `actions:`, add `action_process_transfer` to the list. The student will create the `.py` file in Lab 3.1.
 
+4. **Do not remove Level 2/3 actions** – Flows such as `holiday_hours.yml` still call `action_holiday_hours`. If it is removed from the domain, `rasa train` fails. Keep `action_bank_hours`, `action_holiday_hours`, and `action_check_balance_simple` alongside `action_process_transfer`.
+
 Example (additions only):
 
 ```yaml
@@ -57,5 +59,5 @@ Prefer **`rephrase: False`** on these three `utter_ask_*` responses: with CALM +
 
 - **Slots:** amount, recipient, account_from present under slots: with valid type (e.g. text).
 - **Ask responses:** utter_ask_amount, utter_ask_recipient, utter_ask_account_from present under responses: with at least one message each.
-- **Actions:** action_process_transfer appears in the actions: list.
+- **Actions:** action_process_transfer appears in the actions: list, and action_bank_hours, action_holiday_hours, action_check_balance_simple remain listed.
 - **Validity:** File is valid YAML and existing Level 3 content (e.g. account slot, utter_ask_account, other actions) is preserved.

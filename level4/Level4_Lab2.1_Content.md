@@ -47,11 +47,14 @@ Use **`rephrase: False`** for these three `utter_ask_*` responses. With Rasa Pro
 
 Naming: `utter_ask_<slot_name>` for each slot.
 
-**Step 4.** Add `action_process_transfer` to the `actions:` list:
+**Step 4.** Add `action_process_transfer` to the `actions:` list.
+
+**Important:** Keep **every** action your Level 3 flows still use. The `holiday_hours` flow calls `action_holiday_hours`; if you remove it from the domain, `rasa train` will fail. Include all of the following:
 
 ```yaml
 actions:
   - action_bank_hours
+  - action_holiday_hours
   - action_check_balance_simple
   - action_process_transfer
 ```
@@ -62,7 +65,7 @@ You will create the file `action_process_transfer.py` in Lab 3.1; here you only 
 
 - `slots:` with `account`, `amount`, `recipient`, `account_from`
 - `utter_ask_amount`, `utter_ask_recipient`, `utter_ask_account_from` under `responses:`
-- `action_process_transfer` in the `actions:` list
+- `action_process_transfer` in the `actions:` list **together with** `action_bank_hours`, `action_holiday_hours`, and `action_check_balance_simple`
 - Valid YAML and all Level 3 content unchanged
 
 ---
@@ -72,7 +75,7 @@ You will create the file `action_process_transfer.py` in Lab 3.1; here you only 
 You do **not** need to activate the virtual environment for this lab—**Check It!** only checks your saved file.
 
 1. **Open** `level4/domain/basics.yml` in the editor (from the file tree).
-2. **Follow Steps 2–4 above** to add the three slots, the three ask responses, and `action_process_transfer` to the actions list.
+2. **Follow Steps 2–4 above** to add the three slots, the three ask responses, and `action_process_transfer` to the actions list **without removing** `action_bank_hours`, `action_holiday_hours`, or `action_check_balance_simple`.
 3. **Verify** as in Step 5.
 
 Run the assessment when done.
@@ -82,11 +85,11 @@ Run the assessment when done.
 ## Part 2: Running locally
 
 1. Open your project in an editor. Go to the main project folder and open `level4/domain/basics.yml` (you do not need to activate the virtual environment for this lab—**Check It!** only checks your saved file).
-2. Add the three slots, the three utter_ask_* responses, and `action_process_transfer` to the actions list.
+2. Add the three slots, the three utter_ask_* responses, and `action_process_transfer` to the actions list **without removing** `action_bank_hours`, `action_holiday_hours`, or `action_check_balance_simple`.
 3. Verify as above. Run the assessment when done if your environment supports it.
 
 **Success criteria.** `domain/basics.yml` must contain:
 
 - Slots: `amount`, `recipient`, `account_from` (each type text)
 - Responses: `utter_ask_amount`, `utter_ask_recipient`, `utter_ask_account_from`
-- `action_process_transfer` in the `actions:` list
+- Under `actions:`: `action_process_transfer` plus `action_bank_hours`, `action_holiday_hours`, and `action_check_balance_simple`

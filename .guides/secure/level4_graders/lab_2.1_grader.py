@@ -5,7 +5,9 @@ Output format matches Chapter 1.2 Lab 6.2 template (leading space on PASSED line
 no emoji on pass; ❌ on fail; ========== summary band; exit 0 only on full score).
 
 Checks level4/domain/basics.yml for: slots amount, recipient, account_from;
-utter_ask_amount, utter_ask_recipient, utter_ask_account_from; action_process_transfer in actions.
+utter_ask_amount, utter_ask_recipient, utter_ask_account_from; action_process_transfer in actions;
+and Level 3 actions preserved (action_bank_hours, action_holiday_hours, action_check_balance_simple)
+so training does not fail when holiday_hours.yml references action_holiday_hours.
 Runs from workspace root; expects /home/codio/workspace.
 """
 
@@ -23,7 +25,7 @@ except ImportError:
     sys.exit(1)
 
 score = 0
-max_score = 10
+max_score = 12
 
 print("Running Lab 2.1 Assessment Checks...")
 print("")
@@ -94,14 +96,34 @@ else:
     )
 print("")
 
-# Check 4: action_process_transfer in actions (3 points)
+# Check 4: action_process_transfer in actions (2 points)
 print("Check 4: Verifying action_process_transfer in actions...")
 if "action_process_transfer" in actions:
-    print(" Check 4: PASSED - action_process_transfer registered (3 points)")
-    score += 3
+    print(" Check 4: PASSED - action_process_transfer registered (2 points)")
+    score += 2
 else:
     print("❌ Check 4: FAILED - action_process_transfer not in actions list (0 points)")
     print("Hint: Add - action_process_transfer under the actions: section")
+print("")
+
+# Check 5: Level 2/3 actions still registered (3 points) — flows still reference these
+print("Check 5: Verifying Level 2/3 actions still in domain...")
+required_legacy = [
+    "action_bank_hours",
+    "action_holiday_hours",
+    "action_check_balance_simple",
+]
+missing_legacy = [a for a in required_legacy if a not in actions]
+if not missing_legacy:
+    print(" Check 5: PASSED - action_bank_hours, action_holiday_hours, action_check_balance_simple present (3 points)")
+    score += 3
+else:
+    print(f"❌ Check 5: FAILED - missing actions: {missing_legacy} (0 points)")
+    print(
+        "Hint: Do not replace the whole actions: list when adding action_process_transfer. "
+        "Keep action_bank_hours, action_holiday_hours, and action_check_balance_simple "
+        "(see Lab 2.1 Step 4)."
+    )
 print("")
 
 # Summary
@@ -114,7 +136,8 @@ print("==========================================")
 print("")
 print(
     "Summary: Check 1 (domain file) | Check 2 (slots) | "
-    "Check 3 (ask responses) | Check 4 (action_process_transfer in actions)"
+    "Check 3 (ask responses) | Check 4 (action_process_transfer) | "
+    "Check 5 (Level 2/3 actions preserved)"
 )
 print(f"Score: {score}/{max_score}")
 

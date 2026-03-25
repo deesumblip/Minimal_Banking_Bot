@@ -45,13 +45,17 @@ Naming: `utter_ask_<slot_name>` for each slot.
 
 **Why `rephrase: False` here?** With **Rasa Pro** (CALM), **slot collection** works best when these ask prompts stay **fixed**. If `rephrase: True`, the model may reword the question while collecting slots; the command generator can then fail to map your reply (e.g. free-text **recipient** or **account_from**) and you may see *“I’m sorry I am unable to understand you…”*. **Level 4** uses **`CompactLLMCommandGenerator`** in `level4/config.yml` (Chapter 1.3 / **`level3`** may still use **`SearchReadyLLMCommandGenerator`**). Either way, keep **`rephrase: False`** on these three `utter_ask_*` responses; keep `rephrase: True` on greetings and help text if you want.
 
-**Step 4.** Add `action_process_transfer` to the `actions:` list:
+**Step 4.** Add `action_process_transfer` to the `actions:` list.
 
+**Important:** Keep **every** action your Level 3 flows still use. The `holiday_hours` flow calls `action_holiday_hours`; if you drop it from the domain, `rasa train` will fail with *action … is not listed in the domain*. Your `actions:` list should include the Level 2–3 actions **and** the new transfer action, for example:
 
+```yaml
 actions:
   - action_bank_hours
+  - action_holiday_hours
   - action_check_balance_simple
   - action_process_transfer
+```
 
 You will create the file `action_process_transfer.py` in Lab 3.1; here you only add its name.
 
@@ -59,7 +63,7 @@ You will create the file `action_process_transfer.py` in Lab 3.1; here you only 
 
 - `slots:` with `account`, `amount`, `recipient`, `account_from`
 - `utter_ask_amount`, `utter_ask_recipient`, `utter_ask_account_from` under `responses:`
-- `action_process_transfer` in the `actions:` list
+- `action_process_transfer` in the `actions:` list, **without removing** `action_bank_hours`, `action_holiday_hours`, or `action_check_balance_simple`
 - Valid YAML and all Level 3 content unchanged
 
 ---
@@ -79,11 +83,11 @@ You do **not** need to activate the virtual environment for this lab, **Check It
 ## Part 2: Running locally
 
 1. Open your project in an editor. Go to the main project folder and open `level4/domain/basics.yml` (you do not need to activate the virtual environment for this lab, **Check It!** only checks your saved file).
-2. Add the three slots, the three utter_ask_* responses, and `action_process_transfer` to the actions list.
+2. Add the three slots, the three utter_ask_* responses, and `action_process_transfer` to the actions list **without removing** `action_bank_hours`, `action_holiday_hours`, or `action_check_balance_simple`.
 3. Verify as above.
 
 **Success criteria.** `domain/basics.yml` must contain:
 
 - Slots: `amount`, `recipient`, `account_from` (each type text)
 - Responses: `utter_ask_amount`, `utter_ask_recipient`, `utter_ask_account_from`
-- `action_process_transfer` in the `actions:` list
+- Under `actions:`: `action_process_transfer` plus the existing Level 3 actions (`action_bank_hours`, `action_holiday_hours`, `action_check_balance_simple`)

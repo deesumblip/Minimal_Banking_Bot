@@ -14,7 +14,7 @@
 
 ### Overview
 
-This assessment verifies that the student has added the slots `amount`, `recipient`, and `account_from` to the `slots:` section, the three ask responses under `responses:`, and `action_process_transfer` in the `actions:` list in `level4/domain/basics.yml`.
+This assessment verifies that the student has added the slots `amount`, `recipient`, and `account_from` to the `slots:` section, the three ask responses under `responses:`, and `action_process_transfer` in the `actions:` list in `level4/domain/basics.yml`, and that **Level 2/3 actions** (`action_bank_hours`, `action_holiday_hours`, `action_check_balance_simple`) were **not removed** when adding the transfer action (otherwise `rasa train` fails because flows still reference them).
 
 ### Assessment Type
 
@@ -38,7 +38,7 @@ This assessment verifies that the student has added the slots `amount`, `recipie
 
 ### Option B: Standard Code Test (Python script)
 
-Use a Python grader for faster feedback. Output matches the **Chapter 1.2 Lab 6.2** template (same as **Level 3 Lab 3.1**): **Check 1–4** (1-based), leading space on pass lines (` Check N: PASSED - …`), **==========================================** score band, **` PASS: Lab 2.1 verification complete! Score: 10/10`** on full pass; exit **0** only on **10/10**. The script parses `level4/domain/basics.yml` and checks: file exists; valid YAML; `slots:` contains `amount`, `recipient`, `account_from`; `responses:` has the three ask utterances with text; `action_process_transfer` in `actions:`.
+Use a Python grader for faster feedback. Output matches the **Chapter 1.2 Lab 6.2** template (same as **Level 3 Lab 3.1**): **Check 1–5** (1-based), leading space on pass lines (` Check N: PASSED - …`), **==========================================** score band, **` PASS: Lab 2.1 verification complete! Score: 12/12`** on full pass; exit **0** only on **12/12**. The script parses `level4/domain/basics.yml` and checks: file exists; valid YAML; `slots:` contains `amount`, `recipient`, `account_from`; `responses:` has the three ask utterances with text; `action_process_transfer` in `actions:`; **Level 3 actions** `action_bank_hours`, `action_holiday_hours`, `action_check_balance_simple` still in `actions:`.
 
 **Grader script location (in repo):**
 
@@ -55,10 +55,10 @@ Use a Python grader for faster feedback. Output matches the **Chapter 1.2 Lab 6.
    - **Working Directory:** `/home/codio/workspace`
    - **Timeout:** `60` seconds
 3. **Grading** tab:
-   - **Points:** Set to **10**. Enable **Allow partial points** if desired.
-   - **Sequence:** Re-import from `.guides/assessments/code-output-compare-401020001.json`: four substring matches `Check 1: PASSED` … `Check 4: PASSED`, each **`showFeedback`: false**. **`matchSubstring`: true**. **`showGuidanceAfterResponseOption`:** **Never**; **`showExpectedAnswerOption`:** **Always** (matches Lab 3.1 / Lab 6.2).
+   - **Points:** Set to **12**. Enable **Allow partial points** if desired.
+   - **Sequence:** Re-import from `.guides/assessments/code-output-compare-401020001.json`: five substring matches `Check 1: PASSED` … `Check 5: PASSED`, each **`showFeedback`: false**. **`matchSubstring`: true**. **`showGuidanceAfterResponseOption`:** **Never**; **`showExpectedAnswerOption`:** **Always** (matches Lab 3.1 / Lab 6.2).
    - **SHOW RATIONALE TO STUDENT:** **AFTER [1] ATTEMPTS** (or **ALWAYS**).
-   - **RATIONALE:** The grader checks that `level4/domain/basics.yml` exists, is valid YAML, and contains: **slots:** with **amount**, **recipient**, **account_from** (type text), the **utter_ask_amount**, **utter_ask_recipient**, **utter_ask_account_from** responses with at least one message each, and **action_process_transfer** in the **actions:** list. Review the script output for which check failed.
+   - **RATIONALE:** The grader checks that `level4/domain/basics.yml` exists, is valid YAML, and contains: **slots:** with **amount**, **recipient**, **account_from** (type text), the **utter_ask_amount**, **utter_ask_recipient**, **utter_ask_account_from** responses with at least one message each, **action_process_transfer** in the **actions:** list, and **action_bank_hours**, **action_holiday_hours**, **action_check_balance_simple** still listed under **actions:**. Review the script output for which check failed.
 4. **Files.** Script at `.guides/secure/level4_graders/lab_2.1_grader.py`; run from workspace so `git pull` keeps it in sync.
 
 ---
