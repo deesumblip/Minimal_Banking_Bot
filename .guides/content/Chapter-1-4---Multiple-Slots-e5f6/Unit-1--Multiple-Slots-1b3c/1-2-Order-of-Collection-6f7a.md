@@ -1,3 +1,5 @@
+**Starting point:** Chapter 1.4 assumes you begin with the **final banking agent at the end of Chapter 1.3** (your **`level3/`** project). You **add** work in **`level4/`**—see **Unit 0.1** and **Unit 0.2**.
+
 The order in which you list `collect:` steps in the flow is the order in which the agent will ask for values.
 
 ## Flow Steps Define the Order

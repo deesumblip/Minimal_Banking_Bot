@@ -1,3 +1,5 @@
+**Starting point:** Chapter 1.4 assumes you began with the **final banking agent at the end of Chapter 1.3** and extended it in **`level4/`** (see **Unit 0.1**).
+
 Before moving to Level 5, ensure you can:
 
 - Explain the **full delta** from Chapter 1.3 end → Chapter 1.4 end: **`level4/config.yml`** (**`CompactLLMCommandGenerator`**, **`flow_retrieval`**) and **`level4/endpoints.yml`** (**`model_groups`** / temperature), not only domain and labs (**Unit 0.2**)

@@ -2,6 +2,8 @@
 
 This folder mirrors the Level 4 content from `level4/` (unit content and lab content) so it can be synced to Codio the same way as Chapter 1.3 (Slot Collection).
 
+**Pedagogy:** Chapter 1.4 content assumes students **start from the final banking agent at the end of Chapter 1.3** (`level3/`) and **add** work under `level4/` (see Unit 0.1 / Unit 0.2 in the guides).
+
 ## Structure
 
 - **Chapter:** Chapter-1-4---Multiple-Slots-e5f6

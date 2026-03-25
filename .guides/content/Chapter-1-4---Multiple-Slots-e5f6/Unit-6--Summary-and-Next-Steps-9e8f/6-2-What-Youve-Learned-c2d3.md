@@ -1,3 +1,5 @@
+**Starting point:** Chapter 1.4 assumed you began with the **final banking agent at the end of Chapter 1.3**; the summary below is what you **added** on top of that baseline in **`level4/`** (see **Unit 0.1**).
+
 ## Level 4 Summary
 
 In this chapter you:

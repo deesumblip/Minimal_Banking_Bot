@@ -1,3 +1,5 @@
+**Starting point:** Chapter 1.4 assumes you began with the **final banking agent at the end of Chapter 1.3** and extended it in **`level4/`** (see **`Level4_Unit0_Content_0.1_Your-Level-3-Banking-Agent.md`**).
+
 **Objective.** After **Lab 5.1** (training), **Lab 5.2** completes Unit 5: (1) a **graded completion check** that your domain, action, flow, and model are present—the grader does **not** start Rasa or Inspector; (2) **hands-on testing** in **Rasa Inspector** to run the transfer flow and confirm **`action_process_transfer`** and the **free-text recipient** behavior (including the **100-character** cap in code + flow).
 
 **Recommended order:** Pass the completion check first, then use Inspector with the **scripted turns** below.

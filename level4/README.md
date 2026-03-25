@@ -2,7 +2,7 @@
 
 **Goal:** Learn how to collect multiple pieces of information from the user before performing an action.
 
-**Starting point:** Chapter 1.4 **assumes** you begin from **Chapter 1.3 completion** (your finished agent in **`level3/`**). Labs add transfer slots, **`action_process_transfer`**, and **`transfer_money.yml`**, then training and testing. See **Unit 0** (`Level4_Unit0_Content_0.1` and `0.2`). After **Lab 5.1**, **`level4/models/`** holds your trained model for **Lab 5.2**.
+**Starting point:** Chapter 1.4 **assumes** you begin from the **final banking agent at the end of Chapter 1.3** (your finished agent in **`level3/`**). Labs add transfer slots, **`action_process_transfer`**, and **`transfer_money.yml`**, then training and testing. See **Unit 0** (`Level4_Unit0_Content_0.1` and `0.2`). After **Lab 5.1**, **`level4/models/`** holds your trained model for **Lab 5.2**.
 
 **Repository vs pedagogy:** The **narrative** is always “Chapter 1.3 end state → apply Chapter 1.4 labs in **`level4/`**.” **In this repo**, the **`level4/`** folder is the **completed** Chapter 1.4 agent, checked in so **Codio** and **graders** can be tested end-to-end. It is **not** a minimal starter; **Unit 0** and the labs define the **delta** from **`level3/`**.
 
@@ -21,7 +21,7 @@
 
 **Full delta (Ch 1.3 end → Ch 1.4 end):** **`Level4_Unit0_Content_0.2_What-Level-4-Adds.md`** (pipeline, labs, summary in one place). **File checklist:** **`LEVEL3_TO_LEVEL4_FILE_DELTA.md`**.
 
-In the labs you **add** the following in **`level4/`** (on top of your Chapter 1.3–complete agent).
+In the labs you **add** the following in **`level4/`** (on top of the **final banking agent at the end of Chapter 1.3**—your **`level3/`** project).
 
 **What stays the same:** All Level 3 responses, flows, actions, and the `account` slot remain.
 

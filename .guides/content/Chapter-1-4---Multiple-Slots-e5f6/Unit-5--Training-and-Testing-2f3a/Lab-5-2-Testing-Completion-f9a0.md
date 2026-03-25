@@ -1,3 +1,5 @@
+**Starting point:** Chapter 1.4 assumes you began with the **final banking agent at the end of Chapter 1.3** and extended it in **`level4/`** (see **Unit 0.1**).
+
 **Unit 5, Lab 5.2.** You already **trained** the agent in **Lab 5.1**. This lab has two parts in order:
 
 1. **Completion check (graded)**. Confirms domain, action, flow YAML, and a trained model are in place. The grader **does not** start Rasa or Inspector.

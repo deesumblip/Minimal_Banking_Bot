@@ -1,5 +1,7 @@
 **Objective.** In Unit 2 you saw an example of the slots, ask responses, and action registration for the transfer flow. In this lab you will add your own version to `level4/domain/basics.yml`:
 
+**Starting point:** Your **`level4/`** folder should be a copy of your **final Chapter 1.3 agent** in **`level3/`** (see **`Level4_Unit0_Content_0.1_Your-Level-3-Banking-Agent.md`**). You are **adding** transfer domain fields on top of that baseline, not replacing the whole project.
+
 **Prerequisite:** **`level4/config.yml`** and **`level4/endpoints.yml`** match the Chapter 1.4 course pattern (see **Unit 0.2** — pipeline section). If you only copied files from `level3/` without the pipeline updates, fix those **before** you rely on Inspector for free-text slots.
 
 - Add the slots `amount`, `recipient`, and `account_from`

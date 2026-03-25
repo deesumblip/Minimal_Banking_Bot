@@ -1,3 +1,5 @@
+Chapter 1.4 builds on the **final agent at the end of Chapter 1.3** (see **`Level4_Unit0_Content_0.1_Your-Level-3-Banking-Agent.md`**).
+
 Level 4 adds **multiple slots** in one flow: the agent will remember several values in a single conversation and use them together in one action.
 
 **How to read this page**

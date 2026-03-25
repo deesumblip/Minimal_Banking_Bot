@@ -1,3 +1,5 @@
+**Starting point:** Chapter 1.4 assumes you began with the **final banking agent at the end of Chapter 1.3** and added transfer pieces in **`level4/`** (see **Unit 0.1**).
+
 Train your Level 4 assistant from the **`level4`** folder. The workflow matches **Level 3**: activate the virtual environment at the **project root**, then `cd level4` and run Rasa.
 
 **What training uses:** Rasa loads your **domain** (slots and `utter_ask_*` responses), your **flows** (including `transfer_money`), and your **actions** (including `action_process_transfer`). Errors during training usually point back to files you edited in **Labs 2.1** (domain), **3.1** (action), or **4.1** (flow).

@@ -1,3 +1,5 @@
+**Starting point:** Chapter 1.4 assumes you began with the **final banking agent at the end of Chapter 1.3** and are extending **`level4/`** (see **`Level4_Unit0_Content_0.1_Your-Level-3-Banking-Agent.md`**).
+
 **Objective.** Create `action_process_transfer` that reads `amount`, `recipient`, and `account_from`, re-prompts on placeholders, and sends a demo confirmation. This lab follows the **same two-step pattern as Chapter 1.3 Lab 4.1** (*Exploring Actions with Slots*): complete the **Fill in the Blanks** assessment first, then paste the full script and run the **code** assessment.
 
 Students do **not** need to activate the virtual environment for this lab—**Check It!** only checks the saved file.

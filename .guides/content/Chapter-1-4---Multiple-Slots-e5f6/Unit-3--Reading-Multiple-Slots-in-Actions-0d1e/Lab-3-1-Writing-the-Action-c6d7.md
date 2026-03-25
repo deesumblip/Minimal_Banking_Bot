@@ -1,3 +1,5 @@
+**Starting point:** Chapter 1.4 assumes you began with the **final banking agent at the end of Chapter 1.3** and are extending **`level4/`** (see **Unit 0.1**).
+
 In this lab you finish the action that **Lab 2.1** already registered in the domain. You will create `action_process_transfer.py`. The action reads the `amount`, `recipient`, and `account_from` slots and handles placeholder values, as you saw in **Unit 3.1** (*Example: Complete action class*).
 
 You do **not** need to activate the virtual environment for this lab, **Check It!** only checks your saved file on disk.

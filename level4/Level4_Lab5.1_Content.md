@@ -1,3 +1,5 @@
+**Starting point:** Chapter 1.4 assumes you began with the **final banking agent at the end of Chapter 1.3** and added transfer pieces in **`level4/`** (see **`Level4_Unit0_Content_0.1_Your-Level-3-Banking-Agent.md`**).
+
 **Objective.** Train your Level 4 agent from the **`level4`** folder using the same pattern as Level 3: activate the virtual environment at the **project root**, then `cd level4` and run Rasa.
 
 **What training uses:** Rasa reads your **domain** (slots and `utter_ask_*` responses), your **flows** (including `transfer_money`), and your **actions** (including `action_process_transfer`). If training fails, the messages usually point to **Lab 2.1** (domain), **Lab 3.1** (action), or **Lab 4.1** (flow).

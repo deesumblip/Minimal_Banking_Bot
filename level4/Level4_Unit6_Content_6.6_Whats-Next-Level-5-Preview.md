@@ -1,3 +1,5 @@
+**Starting point:** Chapter 1.4 assumed you began with the **final banking agent at the end of Chapter 1.3**; you then **added** the transfer flow in **`level4/`** (see **`Level4_Unit0_Content_0.1_Your-Level-3-Banking-Agent.md`**).
+
 **Important. Building on Your Existing Banking Agent**
 
 When you move to Level 5, you will continue working on the same banking agent you've built throughout Levels 1–4. Level 5 doesn't start from scratch. It adds **tool calling** on top of your existing responses, flows, actions, and slots.

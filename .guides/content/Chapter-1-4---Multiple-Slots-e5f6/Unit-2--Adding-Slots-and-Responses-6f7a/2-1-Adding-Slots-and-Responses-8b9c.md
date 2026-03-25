@@ -1,3 +1,5 @@
+**Starting point:** Chapter 1.4 assumes you begin with the **final banking agent at the end of Chapter 1.3** (your **`level3/`** project). You **add** work in **`level4/`**—see **Unit 0.1** and **Unit 0.2**.
+
 In Lab 2.1 you will update the domain so the agent can collect amount, recipient, and account_from for the transfer flow.
 
 ## What You Will Add
