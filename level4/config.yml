@@ -1,22 +1,11 @@
 recipe: default.v1
 language: en
-assistant_id: level4-agent
+assistant_id: level3-agent
 
-# Chapter 1.3 (level3) keeps SearchReadyLLMCommandGenerator.
-# For Chapter 1.4 multi-slot + free-text collection, Rasa recommends CompactLLMCommandGenerator
-# when not using Enterprise Search / RAG—SearchReady often fails on names like "MC Hammer" / "JFK".
-# Level 3 / Chapter 1.3 files are unchanged; only level4/config.yml differs here.
 pipeline:
-  - name: CompactLLMCommandGenerator
+  - name: SearchReadyLLMCommandGenerator
     llm:
       model_group: gpt-4o-mini
-    # With turns_to_embed: 1 (default), only the *latest* user message is embedded. Isolated
-    # phrases ("How about 90 dollars?", "MC Hammer") then retrieve the wrong flows or miss context.
-    # Use several turns so "transfer money" + amount/name stay in the retrieval context.
-    minimize_num_calls: false
-    flow_retrieval:
-      turns_to_embed: 5
-      num_flows: 20
 
 policies:
   - name: FlowPolicy

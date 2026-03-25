@@ -1,18 +1,15 @@
-## Level 4: Multiple Slots — domain (Chapter 1.3 baseline + transfer)
+## Level 4 starter: Chapter 1.3 completion (same agent as finished `level3/`)
 #
-# Chapter 1.3: account slot, check_balance, holiday_hours, bank hours.
-# Chapter 1.4: transfer slots, action_process_transfer, data/basics/transfer_money.yml.
+# This file matches the end of Chapter 1.3: `account` slot, `utter_ask_account`, Level 1–2–3
+# actions and responses. No transfer fields yet.
+#
+# Chapter 1.4 labs add (in order): Lab 0.1 pipeline → Lab 2.1 domain (amount, recipient,
+# account_from + utter_ask_* + action_process_transfer) → Lab 3.1 action → Lab 4.1 flow.
 
 version: "3.1"
 
 slots:
   account:
-    type: text
-  amount:
-    type: text
-  recipient:
-    type: text
-  account_from:
     type: text
 
 responses:
@@ -46,23 +43,7 @@ responses:
       metadata:
         rephrase: True
 
-  utter_ask_amount:
-    - text: "How much would you like to transfer?"
-      metadata:
-        rephrase: False
-
-  utter_ask_recipient:
-    - text: "Who would you like to transfer money to?"
-      metadata:
-        rephrase: False
-
-  utter_ask_account_from:
-    - text: "Which account would you like to transfer from?"
-      metadata:
-        rephrase: False
-
 actions:
   - action_bank_hours
   - action_holiday_hours
   - action_check_balance_simple
-  - action_process_transfer

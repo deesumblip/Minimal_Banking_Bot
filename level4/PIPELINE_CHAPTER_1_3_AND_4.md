@@ -2,9 +2,11 @@
 
 **Chapter 1.3 (Level 3) is unchanged:** `level3/config.yml` uses **`SearchReadyLLMCommandGenerator`** + **`FlowPolicy`**, same as before.
 
+**Starter `level4/` in this repo:** The checked-in **`level4/config.yml`** and **`level4/endpoints.yml`** match **`level3/`** so you start Chapter 1.4 from the **same** Chapter 1.3 completion state. **Lab 0.1** is where you switch to **`CompactLLMCommandGenerator`** and the Chapter 1.4 **`endpoints.yml`** settings below.
+
 ---
 
-## Why Level 4’s `config.yml` differs (only here)
+## Why Level 4’s `config.yml` differs after Lab 0.1
 
 **Chapter 1.4 multi-slot flows** (amount → recipient → account_from) need reliable **free-text slot fills**. With **`SearchReadyLLMCommandGenerator`**, it is common to see:
 
@@ -15,14 +17,15 @@ That is a **known limitation** of the retrieval-oriented generator when you are 
 
 **Log signature:** If **`logs.out`** shows **`SetSlotCommand(name='transfer_money_amount', …)`** or **`transfer_money_recipient`** but your domain only has **`amount`**, **`recipient`**, **`account_from`**, the LLM is emitting **flow-prefixed** slot names that **are not in the domain**. You will see **`skip_command_slot_not_in_domain`** and **`CannotHandleCommand(reason='The slot predicted by the LLM is not defined in the domain.')`**. **Switch to `CompactLLMCommandGenerator`** in **`level4/config.yml`** and **retrain**—do not rename domain slots to `transfer_money_*`.
 
-**`level4/config.yml`** therefore uses **`CompactLLMCommandGenerator`** (same `model_group: gpt-4o-mini`, same `FlowPolicy`). Rasa documents this as a good fit for **plain CALM** assistants without RAG.
+After **Lab 0.1**, **`level4/config.yml`** uses **`CompactLLMCommandGenerator`** (same `model_group: gpt-4o-mini`, same `FlowPolicy`). Rasa documents this as a good fit for **plain CALM** assistants without RAG.
 
-| Folder | Command generator |
+| State | Command generator |
 |--------|-------------------|
 | `level3/` (Ch. 1.3) | `SearchReadyLLMCommandGenerator` |
-| `level4/` (Ch. 1.4) | `CompactLLMCommandGenerator` |
+| `level4/` starter (before Lab 0.1) | `SearchReadyLLMCommandGenerator` (same as Level 3) |
+| `level4/` after Lab 0.1 | `CompactLLMCommandGenerator` |
 
-The **`recipe`**, **`.env`**, and overall **`endpoints.yml`** layout match Level 3; the **`model_groups`** entry for command generation is **tuned in `level4/endpoints.yml`** (model + temperature)—see **Unit 0.2** in Chapter 1.4 for the full Chapter 1.3 → 1.4 checklist.
+The **`recipe`**, **`.env`**, and overall **`endpoints.yml`** layout match Level 3 at the **starter**; after Lab 0.1, the **`model_groups`** entry for command generation is **tuned in `level4/endpoints.yml`** (model + temperature)—see **Unit 0.2** in Chapter 1.4 for the full Chapter 1.3 → 1.4 checklist.
 
 **`endpoints.yml` model** — The **`gpt-4o-mini`** *group id* still points Rasa at **`model: gpt-4o-2024-11-20`** for Level 4. **`gpt-4o-mini`** alone often mis-generates **FillSlot** commands for **recipient** names; **`gpt-4o`** is more reliable for CALM command DSL (higher API cost). NLG rephrase uses the same group.
 
