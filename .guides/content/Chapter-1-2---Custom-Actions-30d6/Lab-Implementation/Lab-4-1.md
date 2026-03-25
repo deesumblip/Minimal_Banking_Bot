@@ -27,6 +27,8 @@ Before submitting, confirm:
 
 Run the assessment when you’re done.
 
+{Check It!|assessment}(code-output-compare-1451983168)
+
 ---
 
 #### Review in Inspector (optional)

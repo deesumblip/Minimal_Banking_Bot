@@ -1,0 +1,48 @@
+{
+	"type": "multiple-choice",
+	"taskId": "multiple-choice-1208100003",
+	"source": {
+		"name": "Chapter 1.2: 8.1 Knowledge Check - Required Action Method",
+		"showName": false,
+		"instructions": "**What method must every action have?**",
+		"multipleResponse": false,
+		"isRandomized": false,
+		"answers": [
+			{
+				"_id": "e8a1b2c3-d4e5-4f60-a1b2-c3d4e5f60901",
+				"correct": false,
+				"answer": "`execute()`"
+			},
+			{
+				"_id": "e8a1b2c3-d4e5-4f60-a1b2-c3d4e5f60902",
+				"correct": true,
+				"answer": "`run()`"
+			},
+			{
+				"_id": "e8a1b2c3-d4e5-4f60-a1b2-c3d4e5f60903",
+				"correct": false,
+				"answer": "`perform()`"
+			},
+			{
+				"_id": "e8a1b2c3-d4e5-4f60-a1b2-c3d4e5f60904",
+				"correct": false,
+				"answer": "`do()`"
+			}
+		],
+		"metadata": {
+			"tags": [{"name": "Assessment Type", "value": "Multiple Choice"}],
+			"files": [],
+			"opened": []
+		},
+		"bloomsObjectiveLevel": "1",
+		"learningObjectives": "SWBAT name the method Rasa calls to execute an action",
+		"guidance": "Rasa calls your action's `run()` method. You also implement `name()` so the action id matches the domain.",
+		"showGuidanceAfterResponseOption": {"type": "Attempts", "passedFrom": 1},
+		"maxAttemptsCount": 1,
+		"showExpectedAnswerOption": {"type": "Always"},
+		"points": 5,
+		"incorrectPoints": 0,
+		"arePartialPointsAllowed": false,
+		"useMaximumScore": false
+	}
+}

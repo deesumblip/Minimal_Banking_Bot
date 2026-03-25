@@ -1,0 +1,48 @@
+{
+	"type": "multiple-choice",
+	"taskId": "multiple-choice-1208100004",
+	"source": {
+		"name": "Chapter 1.2: 8.1 Knowledge Check - Sending a Message from an Action",
+		"showName": false,
+		"instructions": "**How do you send a message from an action?**",
+		"multipleResponse": false,
+		"isRandomized": false,
+		"answers": [
+			{
+				"_id": "e8a1b2c3-d4e5-4f60-a1b2-c3d4e5f60a01",
+				"correct": false,
+				"answer": "`print(\"message\")`"
+			},
+			{
+				"_id": "e8a1b2c3-d4e5-4f60-a1b2-c3d4e5f60a02",
+				"correct": true,
+				"answer": "`dispatcher.utter_message(text=\"message\")`"
+			},
+			{
+				"_id": "e8a1b2c3-d4e5-4f60-a1b2-c3d4e5f60a03",
+				"correct": false,
+				"answer": "`return \"message\"`"
+			},
+			{
+				"_id": "e8a1b2c3-d4e5-4f60-a1b2-c3d4e5f60a04",
+				"correct": false,
+				"answer": "`send_message(\"message\")`"
+			}
+		],
+		"metadata": {
+			"tags": [{"name": "Assessment Type", "value": "Multiple Choice"}],
+			"files": [],
+			"opened": []
+		},
+		"bloomsObjectiveLevel": "1",
+		"learningObjectives": "SWBAT send user-visible text from a custom action",
+		"guidance": "Use the `dispatcher` passed into `run()`—typically `dispatcher.utter_message(text=\"...\")` for plain text.",
+		"showGuidanceAfterResponseOption": {"type": "Attempts", "passedFrom": 1},
+		"maxAttemptsCount": 1,
+		"showExpectedAnswerOption": {"type": "Always"},
+		"points": 5,
+		"incorrectPoints": 0,
+		"arePartialPointsAllowed": false,
+		"useMaximumScore": false
+	}
+}

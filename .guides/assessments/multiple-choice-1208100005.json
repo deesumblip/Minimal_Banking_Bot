@@ -1,0 +1,48 @@
+{
+	"type": "multiple-choice",
+	"taskId": "multiple-choice-1208100005",
+	"source": {
+		"name": "Chapter 1.2: 8.1 Knowledge Check - utter_* vs action_*",
+		"showName": false,
+		"instructions": "**What's the difference between `utter_*` and `action_*`?**",
+		"multipleResponse": false,
+		"isRandomized": false,
+		"answers": [
+			{
+				"_id": "e8a1b2c3-d4e5-4f60-a1b2-c3d4e5f60b01",
+				"correct": false,
+				"answer": "There's no difference"
+			},
+			{
+				"_id": "e8a1b2c3-d4e5-4f60-a1b2-c3d4e5f60b02",
+				"correct": true,
+				"answer": "`utter_*` are responses (static text), `action_*` are actions (custom code)"
+			},
+			{
+				"_id": "e8a1b2c3-d4e5-4f60-a1b2-c3d4e5f60b03",
+				"correct": false,
+				"answer": "`utter_*` are actions, `action_*` are responses"
+			},
+			{
+				"_id": "e8a1b2c3-d4e5-4f60-a1b2-c3d4e5f60b04",
+				"correct": false,
+				"answer": "They're the same thing"
+			}
+		],
+		"metadata": {
+			"tags": [{"name": "Assessment Type", "value": "Multiple Choice"}],
+			"files": [],
+			"opened": []
+		},
+		"bloomsObjectiveLevel": "1",
+		"learningObjectives": "SWBAT contrast responses and custom actions",
+		"guidance": "`utter_*` entries are predefined messages in the domain. `action_*` names refer to Python classes in `actions/` that run your logic.",
+		"showGuidanceAfterResponseOption": {"type": "Attempts", "passedFrom": 1},
+		"maxAttemptsCount": 1,
+		"showExpectedAnswerOption": {"type": "Always"},
+		"points": 5,
+		"incorrectPoints": 0,
+		"arePartialPointsAllowed": false,
+		"useMaximumScore": false
+	}
+}

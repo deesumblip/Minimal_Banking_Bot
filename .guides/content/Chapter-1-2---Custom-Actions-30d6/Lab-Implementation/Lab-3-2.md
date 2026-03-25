@@ -61,6 +61,8 @@ Before submitting, confirm:
 
 **In Codio**, use **Check It!** when you're done.
 
+{Check It!|assessment}(code-output-compare-2266471391)
+
 ---
 
 ## Assessment Setup (For Implementers)
