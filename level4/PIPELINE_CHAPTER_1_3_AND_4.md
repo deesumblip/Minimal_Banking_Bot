@@ -13,6 +13,8 @@
 
 That is a **known limitation** of the retrieval-oriented generator when you are **not** using Enterprise Search / RAG the way Rasa expects.
 
+**Log signature:** If **`logs.out`** shows **`SetSlotCommand(name='transfer_money_amount', …)`** or **`transfer_money_recipient`** but your domain only has **`amount`**, **`recipient`**, **`account_from`**, the LLM is emitting **flow-prefixed** slot names that **are not in the domain**. You will see **`skip_command_slot_not_in_domain`** and **`CannotHandleCommand(reason='The slot predicted by the LLM is not defined in the domain.')`**. **Switch to `CompactLLMCommandGenerator`** in **`level4/config.yml`** and **retrain**—do not rename domain slots to `transfer_money_*`.
+
 **`level4/config.yml`** therefore uses **`CompactLLMCommandGenerator`** (same `model_group: gpt-4o-mini`, same `FlowPolicy`). Rasa documents this as a good fit for **plain CALM** assistants without RAG.
 
 | Folder | Command generator |

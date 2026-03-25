@@ -40,13 +40,13 @@ From **`level4`** with the virtual environment active:
 
 3. Optionally try balance / hours to confirm other flows still work.
 
-**Troubleshooting:** If the agent accepts the amount but then **cannot understand** you on recipient or account:
+**Troubleshooting:** If the agent says *unable to understand you* during **amount**, **recipient**, or **account** collection:
 
 1. **Domain:** In **`level4/domain/basics.yml`**, set **`metadata: rephrase: False`** on **`utter_ask_amount`**, **`utter_ask_recipient`**, and **`utter_ask_account_from`** (see Lab 2.1).
 
-2. **Flow:** In **`level4/data/basics/transfer_money.yml`**, ensure **`collect: recipient`** and **`account_from`** **`description:`** lines tell the command generator to store the **full user message** as text with a **clear length range** (Lab 4.1: **1–100** chars for recipient, **1–120** for account). **Retrain** after edits.
+2. **Flow:** In **`level4/data/basics/transfer_money.yml`**, ensure each **`collect:`** has a clear **`description:`** (Lab 4.1). **Retrain** after edits.
 
-3. **Pipeline:** The **`level4`** repo uses **`CompactLLMCommandGenerator`** (Chapter 1.3 / **`level3`** stays **`SearchReadyLLMCommandGenerator`**). Confirm **`level4/config.yml`**, **`python -m rasa train`** from **`level4`**, then **restart** Inspector so it loads the **new** model. See **`PIPELINE_CHAPTER_1_3_AND_4.md`**.
+3. **Pipeline:** The **`level4`** repo uses **`CompactLLMCommandGenerator`**. **`SearchReadyLLMCommandGenerator`** (Chapter 1.3) can produce commands like **`set slot transfer_money_amount …`** while your domain only defines **`amount`**—Rasa then rejects the command and you see *unable to understand you*. Confirm **`level4/config.yml`**, **`python -m rasa train`** from **`level4`**, **restart** Inspector. Check logs for **`skip_command_slot_not_in_domain`** with **`transfer_money_*`** vs **`amount`** / **`recipient`**. See **`PIPELINE_CHAPTER_1_3_AND_4.md`**.
 
 ---
 

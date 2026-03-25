@@ -45,11 +45,12 @@
 
 ---
 
-### If the agent says “unable to understand you” on recipient or account
+### If the agent says “unable to understand you” during transfer (amount, recipient, or account)
 
 1. **Domain:** In **`level4/domain/basics.yml`**, use **`metadata: rephrase: False`** on **`utter_ask_amount`**, **`utter_ask_recipient`**, and **`utter_ask_account_from`** (see Lab 2.1).
-2. **Flow:** In **`level4/data/basics/transfer_money.yml`**, ensure **`collect: recipient`** and **`collect: account_from`** have clear **`description:`** text (full user message as text; **1–100** chars for recipient, **1–120** for account in Lab 4.1). **Retrain** after edits.
-3. **Pipeline:** Use this repo’s **`level4/config.yml`** (**`CompactLLMCommandGenerator`**). Chapter 1.3 **`level3`** keeps **`SearchReadyLLMCommandGenerator`**. After any config or YAML change: **`python -m rasa train`** from **`level4`**. See **`level4/PIPELINE_CHAPTER_1_3_AND_4.md`**.
+2. **Flow:** In **`level4/data/basics/transfer_money.yml`**, ensure each **`collect:`** step has a clear **`description:`** (Lab 4.1: amount, **1–100** chars for recipient, **1–120** for account_from). **Retrain** after edits.
+3. **Pipeline (most common fix for repeated failures):** Use this repo’s **`level4/config.yml`** with **`CompactLLMCommandGenerator`**. Chapter 1.3 **`level3`** uses **`SearchReadyLLMCommandGenerator`**, whose prompts can teach **`set slot transfer_money_amount …`** or **`set slot transfer_money_recipient …`**—but your domain slots are named **`amount`**, **`recipient`**, and **`account_from`** only. The command processor then **drops** those commands (`skip_command_slot_not_in_domain` in logs) and you get *unable to understand you*. **Fix:** align **`level4/config.yml`** with this repo, run **`python -m rasa train`** from **`level4`**, **restart** Inspector so it loads the **new** `.tar.gz`. See **`level4/PIPELINE_CHAPTER_1_3_AND_4.md`**.
+4. **Confirm in logs (optional):** If you see **`SetSlotCommand(name='transfer_money_amount', …)`** or **`transfer_money_recipient`** while the domain defines **`amount`** / **`recipient`**, you are hitting the naming mismatch above—**retrain** with **`CompactLLMCommandGenerator`**, not a domain rename.
 
 ---
 
