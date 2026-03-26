@@ -6,7 +6,7 @@ This document provides implementation guidance for **Level 4: Multiple Slots** o
 
 **Key goals**:
 - Use the **same conventions** as Level 1-3 (venv in project root, Codio vs local, Rasa Inspect tab)
-- **Storyline**: Chapter 1.4 **starts** from **Chapter 1.3 completion**; content describes copying that baseline into **`level4/`** and **adding** transfer domain, action, and flow in labs; **Lab 5.1** produces **`level4/models/`** for **Lab 5.2**
+- **Storyline**: Chapter 1.4 **starts** from **Chapter 1.3 completion**; **`level4/`** in the repo is that baseline by default; labs **add** transfer domain, action, and flow in **`level4/`**; **Lab 5.1** produces **`level4/models/`** for **Lab 5.2**
 - Preserve student tutorial content in separate unit and lab mirrors under **`level4/`**
 - Support auto-grading for Labs 2.1, 3.1, 4.1, 5.1 (and completion check 5.2) via Python grader scripts
 - Single source of truth: content lives under **`level4/`**; Codio **`.guides`** content is copied from there

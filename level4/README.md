@@ -6,7 +6,7 @@
 
 **What you build in Chapter 1.4:** **Lab 0.1** (pipeline YAML) → **Lab 2.1** (transfer slots + asks + register action) → **Lab 3.1** (action file) → **Lab 4.1** (`transfer_money.yml`) → **Labs 5.1–5.2** (train + completion check). See **Unit 0.1** and **Unit 0.2** in the Chapter 1.4 guide. After **Lab 5.1**, **`level4/models/`** holds your trained model for **Lab 5.2**.
 
-**Repository note:** Graders in **`.guides/secure/level4_graders/`** expect the **finished** Chapter 1.4 tree when run for assessment validation; your workspace should match that **after** you complete the labs (or use a separate copy for grading). The **committed** **`level4/`** bot is the **starter** so you can see exactly what Chapter 1.3 leaves you with.
+**Repository note:** Graders in **`.guides/secure/level4_graders/`** expect the **finished** Chapter 1.4 tree when run for assessment validation; your workspace should match that **after** you complete the labs (or use a separate workspace or branch for grading). The **committed** **`level4/`** bot is the **starter** so you can see exactly what Chapter 1.3 leaves you with.
 
 ## What You'll Learn
 

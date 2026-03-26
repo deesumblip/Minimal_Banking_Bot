@@ -6,7 +6,7 @@ How **Chapter 1.4** relates to **Chapter 1.3** when you set up or teach the cour
 
 ## Goal
 
-Students **start from Chapter 1.3 completion**—the same agent they finished in **`level3/`**—and **add** Level 4 content (transfer slots, `action_process_transfer`, `transfer_money.yml`) in guided labs, then align **`level4/`** pipeline files, train, and test.
+Students **start from Chapter 1.3 completion** ( **`level3/`** is the reference agent; **`level4/`** is the Chapter 1.4 workspace, already at that baseline in this repo) and **add** Level 4 content (transfer slots, `action_process_transfer`, `transfer_money.yml`) in guided labs, then align **`level4/`** pipeline files, train, and test.
 
 **Chapter 1.4 instructional markdown** assumes that baseline everywhere (Unit 0, labs, guides).
 

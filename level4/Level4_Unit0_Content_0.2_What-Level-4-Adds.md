@@ -4,9 +4,7 @@ Level 4 adds **multiple slots** in one flow: the agent remembers several values 
 
 **How to read this page**
 
-- Your **starting point** is always **Chapter 1.3 completion** (see **Unit 0.1** and **Chapter 1.3 end state** below). From there you **add** transfer-related domain fields, a new action, and a new flow, then align pipeline files in **`level4/`**, train, and test.
-- **If you copied `level3/` → `level4/` yourself:** Work through **section 2** (pipeline), then **section 3** (lab deliverables), and use **section 4** as a final check.
-- **If you are using this course repository:** **`level4/`** starts as the **Chapter 1.3 completion** snapshot (see **Unit 0.1**). You still complete every lab so *you* produce the pipeline files, domain, action, and flow. When you are done, your tree should match the **Chapter 1.4 end state** described here.
+- Your **starting point** is always **Chapter 1.3 completion** (see **Unit 0.1** and **Chapter 1.3 end state** below). In this course repo, **`level4/`** is already that baseline—you **add** transfer-related domain fields, a new action, and a new flow, then align pipeline files in **`level4/`**, train, and test. You still complete every lab so *you* produce the pipeline files, domain, action, and flow. When you are done, your tree should match the **Chapter 1.4 end state** described here. Work through **section 2** (pipeline), then **section 3** (lab deliverables), and use **section 4** as a final check.
 
 Your Level 3 behavior stays in place; you **add** the transfer flow and align **`level4/`** pipeline files so CALM can fill free-text slots reliably. The sections below are the **full checklist** from **Chapter 1.3 end** through **Chapter 1.4 end**. Step-by-step instructions live on each lab page.
 
@@ -30,8 +28,7 @@ You do **not** delete that work. Chapter 1.4 **adds** the **transfer** pieces an
 
 ## 1. Use the `level4/` folder
 
-- Do all Chapter 1.4 work under **`level4/`** (a copy of your Chapter 1.3–complete tree). Keep **`level3/`** as your Chapter 1.3 reference.
-- If you copy **`level3/` → `level4/`** yourself, preserve **all** Chapter 1.3 files, then apply the **pipeline** and **lab** sections below.
+- Do all Chapter 1.4 work under **`level4/`**. By default (this repository), **`level4/`** already matches **Chapter 1.3 completion**—see **Unit 0.1**. Keep **`level3/`** as your Chapter 1.3 reference; do **not** modify it for Chapter 1.4.
 
 ---
 
@@ -50,7 +47,7 @@ These differ from Chapter 1.3 **on purpose**. Skipping them often causes **“un
 | **`minimize_num_calls`** | *(default / omitted)* | **`false`** (as in course repo) |
 | **`flow_retrieval`** | *(often omitted)* | **`turns_to_embed: 5`**, **`num_flows: 20`** (keeps short turns in context) |
 
-**What to do:** Align your copied **`level4/`** with the **`level4/config.yml`** in this repo, or edit your config to match the table. Further rationale for pipeline behavior is in **section 2** above on this page.
+**What to do:** Match **`level4/config.yml`** to the course repo version, or edit your config to match the table. Further rationale for pipeline behavior is in **section 2** above on this page.
 
 **After any `config.yml` change:** `python -m rasa train` from **`level4/`**.
 

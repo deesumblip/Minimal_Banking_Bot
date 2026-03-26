@@ -1,6 +1,6 @@
 # Chapter 1.3 completion → Chapter 1.4 completion (reference)
 
-Chapter 1.4 **starts** from **Chapter 1.3 completion** (your finished agent in **`level3/`**). Labs **add** transfer domain fields, **`action_process_transfer.py`**, **`transfer_money.yml`**, then training and testing. Unit 0 pages spell this out. **Lab 5.1** produces **`level4/models/*.tar.gz`** for **Lab 5.2**.
+Chapter 1.4 **starts** from **Chapter 1.3 completion**. The **`level3/`** folder is that reference agent; **`level4/`** in this repository begins at the **same** baseline (students do not assemble it by copying **`level3/`** into **`level4/`**). Labs **add** transfer domain fields, **`action_process_transfer.py`**, **`transfer_money.yml`**, then training and testing. Unit 0 pages spell this out. **Lab 5.1** produces **`level4/models/*.tar.gz`** for **Lab 5.2**.
 
 ---
 
