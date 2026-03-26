@@ -4,25 +4,41 @@ Lab 0.1: Pipeline config and endpoints — grader script
 Output format matches Chapter 1.2 Lab 6.2 / Lab 2.1 template.
 
 Runs from workspace root; checks level4/config.yml and level4/endpoints.yml.
+
+Uses only stdlib (no PyYAML) so it runs on Codio even when the assessment uses
+plain python3 — same idea as Level 1 Lab 2.2 (lab_2.2_grader.py).
+Workspace resolution matches Level 4 Lab 2.1 (path from script + CODIO_WORKSPACE).
 """
 
+import os
+import re
 import sys
 from pathlib import Path
 
-try:
-    import yaml
-except ImportError:
-    print("FAIL")
-    print("Hint: PyYAML required. Use project venv Python.")
-    sys.exit(1)
+if hasattr(sys.stdout, "reconfigure"):
+    try:
+        sys.stdout.reconfigure(encoding="utf-8")
+    except Exception:
+        pass
 
-WORKSPACE_ROOT = Path("/home/codio/workspace")
+# Same pattern as level4 lab_2.1_grader.py
+_env = os.environ.get("CODIO_WORKSPACE", "").strip()
+WORKSPACE_ROOT = Path(_env).expanduser() if _env else Path(__file__).resolve().parent.parent.parent.parent
+if not WORKSPACE_ROOT.is_dir():
+    WORKSPACE_ROOT = Path(__file__).resolve().parent.parent.parent.parent
+
 LEVEL4 = WORKSPACE_ROOT / "level4"
 CONFIG_PATH = LEVEL4 / "config.yml"
 ENDPOINTS_PATH = LEVEL4 / "endpoints.yml"
 
 score = 0
 max_score = 10
+
+
+def _read_text(path: Path) -> str:
+    with open(path, encoding="utf-8") as f:
+        return f.read().replace("\r\n", "\n").replace("\r", "\n")
+
 
 print("Running Lab 0.1 pipeline checks...")
 print("")
@@ -35,59 +51,42 @@ if not CONFIG_PATH.exists():
     print("FAIL")
     sys.exit(1)
 try:
-    with open(CONFIG_PATH, encoding="utf-8") as f:
-        cfg = yaml.safe_load(f)
-    aid = (cfg or {}).get("assistant_id")
-    if aid == "level4-agent":
-        print(" Check 1: PASSED - config.yml present; assistant_id is level4-agent (2 points)")
-        score += 2
-    else:
-        print(f"❌ Check 1: FAILED - assistant_id should be level4-agent, got {aid!r} (0 points)")
+    cfg_text = _read_text(CONFIG_PATH)
 except Exception as e:
-    print(f"❌ Check 1: FAILED - could not parse config.yml: {e} (0 points)")
+    print(f"❌ Check 1: FAILED - could not read config.yml: {e} (0 points)")
+    print("FAIL")
+    sys.exit(1)
+
+if not re.search(r"^\s*assistant_id:\s*[\"']?level4-agent[\"']?\s*$", cfg_text, re.MULTILINE):
+    print(f"❌ Check 1: FAILED - assistant_id should be level4-agent (0 points)")
+else:
+    print(" Check 1: PASSED - config.yml present; assistant_id is level4-agent (2 points)")
+    score += 2
 print("")
 
 # Check 2: CompactLLMCommandGenerator, not SearchReady (2 points)
 print("Check 2: Verifying command generator in pipeline...")
-try:
-    with open(CONFIG_PATH, encoding="utf-8") as f:
-        cfg = yaml.safe_load(f)
-    pipeline = (cfg or {}).get("pipeline") or []
-    names = [s.get("name") for s in pipeline if isinstance(s, dict)]
-    has_compact = "CompactLLMCommandGenerator" in names
-    has_search = "SearchReadyLLMCommandGenerator" in names
-    if has_compact and not has_search:
-        print(" Check 2: PASSED - pipeline uses CompactLLMCommandGenerator (not SearchReady) (2 points)")
-        score += 2
-    else:
-        print("❌ Check 2: FAILED - pipeline must include CompactLLMCommandGenerator only (0 points)")
-except Exception as e:
-    print(f"❌ Check 2: FAILED - {e} (0 points)")
+if "SearchReadyLLMCommandGenerator" in cfg_text:
+    print("❌ Check 2: FAILED - pipeline must include CompactLLMCommandGenerator only (0 points)")
+elif re.search(r"name:\s*CompactLLMCommandGenerator\b", cfg_text):
+    print(" Check 2: PASSED - pipeline uses CompactLLMCommandGenerator (not SearchReady) (2 points)")
+    score += 2
+else:
+    print("❌ Check 2: FAILED - pipeline must include CompactLLMCommandGenerator only (0 points)")
 print("")
 
 # Check 3: flow_retrieval and minimize_num_calls (2 points)
 print("Check 3: Verifying flow_retrieval and minimize_num_calls...")
-try:
-    with open(CONFIG_PATH, encoding="utf-8") as f:
-        cfg = yaml.safe_load(f)
-    pipeline = (cfg or {}).get("pipeline") or []
-    ok = False
-    for step in pipeline:
-        if not isinstance(step, dict):
-            continue
-        if step.get("name") != "CompactLLMCommandGenerator":
-            continue
-        fr = step.get("flow_retrieval") or {}
-        if step.get("minimize_num_calls") is False and fr.get("turns_to_embed") == 5 and fr.get("num_flows") == 20:
-            ok = True
-        break
-    if ok:
-        print(" Check 3: PASSED - minimize_num_calls false; flow_retrieval 5 / 20 (2 points)")
-        score += 2
-    else:
-        print("❌ Check 3: FAILED - expected minimize_num_calls: false, turns_to_embed: 5, num_flows: 20 (0 points)")
-except Exception as e:
-    print(f"❌ Check 3: FAILED - {e} (0 points)")
+ok3 = (
+    re.search(r"^\s*minimize_num_calls:\s*false\s*$", cfg_text, re.MULTILINE)
+    and re.search(r"^\s*turns_to_embed:\s*5\s*$", cfg_text, re.MULTILINE)
+    and re.search(r"^\s*num_flows:\s*20\s*$", cfg_text, re.MULTILINE)
+)
+if ok3:
+    print(" Check 3: PASSED - minimize_num_calls false; flow_retrieval 5 / 20 (2 points)")
+    score += 2
+else:
+    print("❌ Check 3: FAILED - expected minimize_num_calls: false, turns_to_embed: 5, num_flows: 20 (0 points)")
 print("")
 
 # Check 4: endpoints.yml structure and NLG (2 points)
@@ -96,15 +95,11 @@ if not ENDPOINTS_PATH.exists():
     print("❌ Check 4: FAILED - level4/endpoints.yml not found (0 points)")
 else:
     try:
-        with open(ENDPOINTS_PATH, encoding="utf-8") as f:
-            ep = yaml.safe_load(f)
-        ae = (ep or {}).get("action_endpoint") or {}
-        nlg = (ep or {}).get("nlg") or {}
-        llm = nlg.get("llm") or {}
+        ep_text = _read_text(ENDPOINTS_PATH)
         if (
-            ae.get("actions_module") == "actions"
-            and nlg.get("type") == "rephrase"
-            and llm.get("model_group") == "gpt-4o-mini"
+            re.search(r"^\s*actions_module:\s*[\"']?actions[\"']?\s*$", ep_text, re.MULTILINE)
+            and re.search(r"^\s*type:\s*[\"']?rephrase[\"']?\s*$", ep_text, re.MULTILINE)
+            and re.search(r"^\s*model_group:\s*[\"']?gpt-4o-mini[\"']?\s*$", ep_text, re.MULTILINE)
         ):
             print(" Check 4: PASSED - action_endpoint, nlg rephrase, model_group (2 points)")
             score += 2
@@ -120,17 +115,12 @@ if not ENDPOINTS_PATH.exists():
     print("❌ Check 5: FAILED - level4/endpoints.yml not found (0 points)")
 else:
     try:
-        with open(ENDPOINTS_PATH, encoding="utf-8") as f:
-            ep = yaml.safe_load(f)
-        groups = (ep or {}).get("model_groups") or []
-        found = None
-        for g in groups:
-            if isinstance(g, dict) and g.get("id") == "gpt-4o-mini":
-                models = g.get("models") or []
-                if models and isinstance(models[0], dict):
-                    found = models[0]
-                break
-        if found and found.get("model") == "gpt-4o-2024-11-20" and found.get("temperature") == 0.1:
+        ep_text = _read_text(ENDPOINTS_PATH)
+        if (
+            re.search(r"^\s*-\s*id:\s*[\"']?gpt-4o-mini[\"']?\s*$", ep_text, re.MULTILINE)
+            and re.search(r"^\s*model:\s*[\"']?gpt-4o-2024-11-20[\"']?\s*$", ep_text, re.MULTILINE)
+            and re.search(r"^\s*temperature:\s*[\"']?0\.1[\"']?\s*$", ep_text, re.MULTILINE)
+        ):
             print(" Check 5: PASSED - gpt-4o-2024-11-20 at temperature 0.1 (2 points)")
             score += 2
         else:
