@@ -28,35 +28,55 @@ The grader checks that:
 
 ## Part 2: Rasa Inspector (recommended)
 
-From **`level4`** with the virtual environment active:
+**When:** After the completion check passes (or whenever you want to see the agent live).
 
-1. Start the agent from **`level4`** (after `cd level4`), e.g. `python -m rasa inspect --debug --log-file logs/logs.out` (same pattern as **Lab 5.1**). Use **`python -m rasa …`**, not a global `rasa` binary. Alternatively `python -m rasa run` from **`level4`**.
-2. Open **Rasa Inspect** (Codio) or the local URL (e.g. `http://localhost:5005`).
+**Where:** From **`level4`** with the project **virtual environment** active (same as Lab 5.1).
 
-**Scripted transfer (type in order):**
+### Start the assistant
+
+- `cd` to **`level4`**, then start Rasa, for example:
+  - `python -m rasa inspect --debug --log-file logs/logs.out` — logs under **`level4/logs/`** (same pattern as **Lab 5.1**).
+  - Or chat-only: `python -m rasa run` from **`level4`**.
+- Always use **`python -m rasa …`** from the **venv**, not a global `rasa` binary.
+- **Leave the process running** while you use the UI below.
+
+### Open the UI
+
+| Environment | What to do |
+|---------------|------------|
+| **Codio** | When the terminal shows the server is up, open the **Rasa Inspect** tab. |
+| **Local** | Open the URL in the terminal output (often `http://localhost:5005`). |
+
+### Scripted transfer (type in order)
+
+Goal: exercise **amount → recipient → account_from → confirmation** in one thread.
 
 | Step | You type (example) | What to verify |
 |------|--------------------|----------------|
-| 1 | `Can I transfer some money?` | Transfer flow starts. |
-| 2 | `let's say 300 dollars` | Amount collected; agent asks for recipient. |
-| 3 | `Alice` (or any short free text) | Recipient stored as plain text; agent asks for account. |
-| 4 | `savings` (or e.g. `1234`) | Confirmation from **`action_process_transfer`**: `(Demo) Transfer of $…` |
+| 1 | `Can I transfer some money?` | Transfer flow starts (may greet first). |
+| 2 | `let's say 300 dollars` | **Amount** collected; agent asks for recipient. |
+| 3 | `Alice` *(or any short free text, e.g. `MC hammer`)* | **Recipient** as plain text (up to **100** chars); agent asks for source account. |
+| 4 | `savings` *(or e.g. `1234`)* | **account_from** filled; **`action_process_transfer`** runs. |
+| 5 | *(read only)* | Confirmation matches **`(Demo) Transfer of $… from account … to … has been processed successfully.`** |
 
-3. Optionally try balance / hours to confirm other flows still work.
+### Optional: other flows
 
-**Troubleshooting:** If the agent says *unable to understand you* during **amount**, **recipient**, or **account** collection:
+Try **“What’s my balance?”** or **“What are your hours?”** to confirm **check_balance** and **hours** still work.
 
-1. **Domain:** In **`level4/domain/basics.yml`**, set **`metadata: rephrase: False`** on **`utter_ask_amount`**, **`utter_ask_recipient`**, and **`utter_ask_account_from`** (see Lab 2.1).
+### If you see “unable to understand you” during transfer
 
-2. **Flow:** In **`level4/data/basics/transfer_money.yml`**, ensure each **`collect:`** has a clear **`description:`** (Lab 4.1). **Retrain** after edits.
+Work through these in order (domain → flow → pipeline):
 
-3. **Pipeline:** The **`level4`** repo uses **`CompactLLMCommandGenerator`**. A **`SearchReadyLLMCommandGenerator`** setup can produce commands like **`set slot transfer_money_amount …`** while your domain only defines **`amount`**—Rasa then rejects the command and you see *unable to understand you*. Confirm **`level4/config.yml`**, **`python -m rasa train`** from **`level4`**, **restart** Inspector. Check logs for **`skip_command_slot_not_in_domain`** with **`transfer_money_*`** vs **`amount`** / **`recipient`**. Background is in **Unit 0.2** (section 2) in Chapter 1.4.
+1. **Domain** — In **`level4/domain/basics.yml`**, set **`metadata: rephrase: False`** on **`utter_ask_amount`**, **`utter_ask_recipient`**, and **`utter_ask_account_from`** (Lab 2.1).
+2. **Flow** — In **`level4/data/basics/transfer_money.yml`**, each **`collect:`** needs a clear **`description:`** (Lab 4.1). **Retrain** after edits.
+3. **Pipeline** *(most common for repeated failures)* — Use **`level4/config.yml`** with **`CompactLLMCommandGenerator`** (Lab 0.1 pattern). **`SearchReadyLLMCommandGenerator`** can emit **`transfer_money_*`** slot names while your domain uses **`amount`** / **`recipient`** / **`account_from`**—Rasa drops those commands (*unable to understand you*). Align **`config.yml`**, **`python -m rasa train`** from **`level4`**, **restart** Inspector. See **Unit 0.2** (section 2).
+4. **Logs (optional)** — **`skip_command_slot_not_in_domain`** or **`SetSlotCommand(name='transfer_money_amount', …)`** with **`transfer_money_recipient`** point to the pipeline mismatch above—**retrain** with **Compact**, not a domain rename.
 
 ---
 
 ## Part 3: Running locally (optional)
 
-Same as Part 2: activate `.venv` at the project root, `cd level4`, `python -m rasa inspect --debug --log-file logs/logs.out` (or `python -m rasa run`), then use the **same table** as above.
+Same as Part 2: activate `.venv` at the project root, `cd level4`, `python -m rasa inspect --debug --log-file logs/logs.out` (or `python -m rasa run`), open the UI, then follow the **Scripted transfer** table in Part 2.
 
 ---
 
