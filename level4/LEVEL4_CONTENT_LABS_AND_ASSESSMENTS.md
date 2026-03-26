@@ -70,6 +70,7 @@ Each lab has one **Content** markdown file that students see. Match the style of
 **File:** `level4/Level4_Lab0.1_Content.md`
 
 - **Objective:** Student-built **`level4/config.yml`** and **`level4/endpoints.yml`** via **fill-in-the-blanks** (`fill-in-the-blanks-401010010.json`), paste, then **code test** (`lab_0.1_grader.py` / `code-output-compare-401010001.json`). Same pattern as Lab 3.1.
+- **Codio JSON:** In `tokens.text`, use literal `0` for each blank (sequential blanks), not `0..n` indices—same as Chapter 1.3 Lab 4.1 (`fill-in-the-blanks-2346557111.json`).
 - **Prerequisite:** None. **Before Lab 2.1.**
 
 ### Lab 2.1 — Domain (add slots + ask responses + register action)
@@ -91,7 +92,7 @@ Each lab has one **Content** markdown file that students see. Match the style of
 - **Part 1 / Part 2:** Same Codio vs local pattern. Run assessment when done.
 - **Success criteria:** File exists; has correct name; run() reads all three slots and sends a message.
 
-Use the **fill-in-the-blanks** assessment **`fill-in-the-blanks-401030010.json`** (twelve blanks, aligned with the repo action); regenerate via `.guides/scripts/regen_fill_401030010.py` if the canonical action changes.
+Use the **fill-in-the-blanks** assessment **`fill-in-the-blanks-401030010.json`** (twelve blanks, aligned with the repo action); regenerate via `.guides/scripts/regen_fill_401030010.py` if the canonical action changes. **Codio JSON:** same `tokens.text` pattern as Lab 0.1 and Chapter 1.3 Lab 4.1 (repeated `0` per blank).
 
 ### Lab 4.1 — Flow (create transfer_money.yml)
 
