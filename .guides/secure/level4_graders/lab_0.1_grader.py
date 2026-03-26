@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Lab 0.1: Chapter 1.4 pipeline (config.yml & endpoints.yml) — Grader Script
+Lab 0.1: Pipeline config and endpoints — grader script
 Output format matches Chapter 1.2 Lab 6.2 / Lab 2.1 template.
 
 Runs from workspace root; checks level4/config.yml and level4/endpoints.yml.

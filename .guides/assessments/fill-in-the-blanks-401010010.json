@@ -2,7 +2,7 @@
 	"type": "fill-in-the-blanks",
 	"taskId": "fill-in-the-blanks-401010010",
 	"source": {
-		"name": "Lab 0.1: Chapter 1.4 pipeline (config.yml & endpoints.yml)",
+		"name": "Lab 0.1: Pipeline Config and Endpoints",
 		"showName": false,
 		"instructions": "**Fill in the blanks** for the two files that differ from Chapter 1.3 (`level3/`). This matches **Unit 0.2** and the course **`level4/`** tree. When every blank is correct, **copy Part A** into `level4/config.yml` and **Part B** into `level4/endpoints.yml` (create or replace those files), **save**, then run the **Code Test** below.",
 		"showValues": true,

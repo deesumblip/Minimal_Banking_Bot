@@ -1,4 +1,4 @@
-# Lab 0.1: Chapter 1.4 pipeline (`config.yml` & `endpoints.yml`) — Assessment Setup
+# Lab 0.1: Pipeline Config and Endpoints — Assessment Setup
 
 ## Guide Content (For Students)
 

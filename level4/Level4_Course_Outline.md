@@ -17,7 +17,7 @@
 
 **Sections**:
 - 0.1 Your Level 3 Banking Agent — `Level4_Unit0_Content_0.1_Your-Level-3-Banking-Agent.md`
-- 0.2 What Level 4 Adds — `Level4_Unit0_Content_0.2_What-Level-4-Adds.md` (includes **full Ch 1.3 end → Ch 1.4 end checklist**: pipeline + labs + summary)
+- 0.2 What Level 4 Adds — `Level4_Unit0_Content_0.2_What-Level-4-Adds.md` — full Chapter 1.3 end → Chapter 1.4 end checklist, pipeline, labs, and summary
 
 **Key Concepts**: Recap Level 3, **`level4/`** baseline, pipeline + lab delta in **0.2**, transfer flow
 
