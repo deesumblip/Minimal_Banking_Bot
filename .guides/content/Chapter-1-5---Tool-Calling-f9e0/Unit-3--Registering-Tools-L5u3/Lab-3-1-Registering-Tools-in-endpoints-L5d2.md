@@ -1,4 +1,6 @@
-**Objective.** In Unit 3.1 you saw the example of the `tools:` section in endpoints.yml. In this lab you will add your own version to `level5/endpoints.yml` so Rasa can discover and use the tool functions you created in Lab 2.1.
+**Starting point:** Work in **`level5/`** with **Lab 2.1** complete (**`tools/banking_tools.py`** and **`__all__`**).
+
+**Objective.** In **Unit 3.1** you saw the **`tools:`** section in **`endpoints.yml`**. In this lab you add it to **`level5/endpoints.yml`** so Rasa can discover the tool functions from **Lab 2.1**.
 
 ## Step-by-Step Instructions
 

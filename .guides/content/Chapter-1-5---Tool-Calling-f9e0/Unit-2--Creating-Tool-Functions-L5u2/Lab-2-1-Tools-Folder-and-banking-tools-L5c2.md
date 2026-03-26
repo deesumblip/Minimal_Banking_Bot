@@ -1,4 +1,6 @@
-**Objective.** In Unit 2.1 you saw an example of a complete tool function (`check_balance`). In this lab you will create your own version: the `tools/` folder and `tools/banking_tools.py` with at least three tool functions that the LLM can call, `check_balance(account)`, `process_transfer(amount, from_account, to_account)`, and `get_account_info(account)`, following the same pattern (docstrings, type hints, return dict, `__all__`).
+**Starting point:** Work in **`level5/`** (Chapter 1.4 completion in **Unit 0.1**).
+
+**Objective.** In **Unit 2.1** you saw a complete **`check_balance`** example. In this lab you create your own **`tools/`** folder and **`tools/banking_tools.py`** with at least three tool functions—**`check_balance(account)`**, **`process_transfer(amount, from_account, to_account)`**, and **`get_account_info(account)`**—following the same pattern (docstrings, type hints, return dict, **`__all__`**).
 
 ## Step-by-Step Instructions
 

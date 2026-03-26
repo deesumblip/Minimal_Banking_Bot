@@ -1,17 +1,27 @@
-﻿Level 5 adds **tool calling**: the LLM can dynamically select and invoke functions (tools) based on the conversation context.
+Chapter 1.5 builds on the **final agent at the end of Chapter 1.4** (see **Unit 0.1**).
 
-You will implement in this order: **tools folder and banking_tools.py** (Lab 2.1), then **register tools in endpoints.yml** (Lab 3.1), then **the flow and action that use tools** (Lab 4.1), then **train and test** (Labs 5.1 and 5.2).
+Level 5 adds **tool calling**: the LLM can dynamically select and invoke **tools** (Python functions you register) based on conversation context—not only the fixed **action** steps named in your flows.
 
-## What You'll Add
+**How to read this page**
 
-**Lab 2.1 — Tools folder.** You will create the `tools/` folder and `tools/banking_tools.py` with at least three tool functions: `check_balance(account)`, `process_transfer(amount, from_account, to_account)`, and `get_account_info(account)`. Each returns a dict; you will export them via `__all__`.
+- Your **starting point** is always **Chapter 1.4 completion** (see **Unit 0.1**). In this course repo, **`level5/`** is already that baseline—you **add** the **`tools/`** module, **`tools:`** in **`endpoints.yml`**, the **`transfer_money_tools`** flow, and **`action_process_transfer_with_tools`**, then train and test. Complete every lab so *you* produce those files; when you are done, your tree should match the **Chapter 1.5 end state** described in this chapter and in **Unit 6**.
 
-**Lab 3.1 — Register tools.** You will add a `tools:` section to `endpoints.yml` with `tools_module: "tools"` so Rasa can discover the tool functions.
+Your Chapter 1.4 flows and actions stay in place; you **add** tools and the new flow so the LLM can call **`check_balance`**, **`process_transfer`**, **`get_account_info`**, and similar functions where the lab expects them.
 
-**Lab 4.1 — Flow and action.** You will create the flow `data/basics/transfer_money_tools.yml` (collect amount, recipient, account_from) and the action `action_process_transfer_with_tools`. In that flow, the LLM can call the tools you defined based on what the user says.
+**Implementation order:** **Lab 2.1** (tools folder + **`banking_tools.py`**) → **Lab 3.1** (register **`tools:`** in **`endpoints.yml`**) → **Lab 4.1** (flow + action) → **Labs 5.1–5.2** (train, completion check, Inspector). Step-by-step instructions live on each lab page.
 
-**Lab 5.1 — Training.** You will train your Level 5 agent from the `level5` folder.
+---
 
-**Lab 5.2 — Testing.** You will run the completion check and test tool-calling behavior in Rasa Inspector.
+## What you'll add (by lab)
 
-**Unchanged.** All your Level 4 responses, flows, and actions stay as they are. You build Level 5 by adding these pieces.
+**Lab 2.1 — Tools folder.** You create **`tools/`** and **`tools/banking_tools.py`** with at least three tool functions—**`check_balance(account)`**, **`process_transfer(amount, from_account, to_account)`**, and **`get_account_info(account)`**. Each returns a dict; you export them via **`__all__`**.
+
+**Lab 3.1 — Register tools.** You add a **`tools:`** section to **`endpoints.yml`** with **`tools_module: "tools"`** so Rasa can load the module and expose those functions to the LLM.
+
+**Lab 4.1 — Flow and action.** You create **`data/basics/transfer_money_tools.yml`** (collect **amount**, **recipient**, **account_from**, then **`action_process_transfer_with_tools`**) and **`actions/action_process_transfer_with_tools.py`**. In that flow step, the LLM can call the tools you defined, according to what the user said.
+
+**Lab 5.1 — Training.** You train the Chapter 1.5 agent from **`level5/`** so the model includes domain, flows, tools registration, and the new action.
+
+**Lab 5.2 — Testing.** You run the **completion check** and, in **Rasa Inspector**, exercise tool-calling behavior end-to-end.
+
+**Unchanged in spirit.** All Chapter 1.4 responses, flows, and actions remain in **`level5/`**; you **add** the tools layer and the **`transfer_money_tools`** path described above.

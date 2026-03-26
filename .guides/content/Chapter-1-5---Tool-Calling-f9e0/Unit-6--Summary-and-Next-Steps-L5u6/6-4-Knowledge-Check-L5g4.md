@@ -1,4 +1,6 @@
-Answer the following to check your understanding of Level 5 (tool calling).
+**Starting point:** Work in **`level5/`** (see **Units 0.1–0.2**).
+
+Answer the following to check your understanding of Chapter 1.5 (tool calling).
 
 {Check It!|assessment}(multiple-choice-501030105)
 

@@ -1,12 +1,14 @@
-**Objective.** In this lab you will train the Level 5 agent from the `level5` folder so that the model includes your domain, flows, and tool registration.
+**Starting point:** Work in **`level5/`** with **Labs 2.1–4.1** complete.
+
+**Objective.** Train the Chapter 1.5 agent from **`level5/`** so the model includes your domain, flows, tools registration, and **`action_process_transfer_with_tools`**.
 
 ## Step-by-Step Instructions
 
 **Step 1.** From **project root**, activate the virtual environment (`source .venv/bin/activate` on Linux/macOS or `.\.venv\Scripts\Activate.ps1` on Windows).
 
-**Step 2.** Change to the level5 folder: `cd level5`.
+**Step 2.** Change to the **`level5`** folder: **`cd level5`**.
 
-**Step 3.** Run: `rasa train`.
+**Step 3.** Run: **`python -m rasa train`**.
 
 **Step 4.** Confirm that training completes without errors and that a model is written to `level5/models/` (or the configured output path).
 
