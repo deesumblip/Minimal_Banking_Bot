@@ -118,7 +118,7 @@ Use the **fill-in-the-blanks** assessment **`fill-in-the-blanks-401030010.json`*
 
 #### Scripted transfer (Inspector) — canonical user turns
 
-Students should type **in order** (mirrors **Chapter 1.4** `.guides/.../Lab-5-2-Testing-Completion-f9a0.md` and `level4/README.md`):
+Students should type **in order** (mirrors the **Lab 5.2** page in the Chapter 1.4 guide and the project’s **`level4/README.md`** *—repository Markdown; not a guide page*):
 
 | Step | Example user message | What to verify |
 |------|----------------------|----------------|
@@ -129,7 +129,7 @@ Students should type **in order** (mirrors **Chapter 1.4** `.guides/.../Lab-5-2-
 
 **Expected shape:** `(Demo) Transfer of $300 from account savings to Alice has been processed successfully.` (exact wording may vary slightly with slot values.)
 
-**Troubleshooting** (if “unable to understand you” on names): `rephrase: False` on `utter_ask_*` in domain; clear `description:` on `collect: recipient` / `account_from` in flow; **`level4/config.yml`** uses **`CompactLLMCommandGenerator`**; retrain from `level4`. See `PIPELINE_CHAPTER_1_3_AND_4.md`.
+**Troubleshooting** (if “unable to understand you” on names): `rephrase: False` on `utter_ask_*` in domain; clear `description:` on `collect: recipient` / `account_from` in flow; **`level4/config.yml`** uses **`CompactLLMCommandGenerator`**; retrain from `level4`. See **`PIPELINE_CHAPTER_1_3_AND_4.md`** *—repository Markdown; not a guide page*.
 
 ---
 

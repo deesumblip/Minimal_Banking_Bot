@@ -38,9 +38,9 @@ You add the transfer flow and Chapter 1.4 pipeline settings under **`level4/`**.
 
 In **`level3/`**, **`config.yml`** uses **`SearchReadyLLMCommandGenerator`** (Chapter 1.3 pattern). Your **`endpoints.yml`** and **`.env`** supply API keys.
 
-**Heads-up when you configure `level4/`:** Chapter 1.4 is **not** “same pipeline, new `assistant_id` only.” You will use a different command generator, add **`flow_retrieval`**, and align **`model_groups`** so multi-slot FillSlot works reliably. On **Unit 0.2 What Level 4 Adds**, read **section 2** (pipeline). Use **`level4/PIPELINE_CHAPTER_1_3_AND_4.md`** for rationale.
+**Heads-up when you configure `level4/`:** Chapter 1.4 is **not** “same pipeline, new `assistant_id` only.” You will use a different command generator, add **`flow_retrieval`**, and align **`model_groups`** so multi-slot FillSlot works reliably. On **Unit 0.2 What Level 4 Adds**, read **section 2** (pipeline). Use **`level4/PIPELINE_CHAPTER_1_3_AND_4.md`** *—repository Markdown; not a guide page* for rationale.
 
-**File-level reference:** **`LEVEL3_TO_LEVEL4_FILE_DELTA.md`**
+**File-level reference:** **`LEVEL3_TO_LEVEL4_FILE_DELTA.md`** *—repository Markdown; not a guide page*
 
 ---
 

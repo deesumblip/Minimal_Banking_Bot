@@ -12,7 +12,7 @@ Your Level 3 behavior stays in place; you **add** the transfer flow and align **
 
 **Implementation order:** pipeline (**Lab 0.1** — fill-in-the-blanks + paste **`config.yml`** / **`endpoints.yml`**), then domain (Lab 2.1), then action (Lab 3.1), then flow (Lab 4.1), then train and test (Labs 5.1 and 5.2). The table in **section 3** spells out files and changes. **Hands-on pipeline:** see **Lab 0.1** in Unit 0 (same pattern as Lab 3.1: blanks → paste → code test).
 
-**Reference:** **`LEVEL3_TO_LEVEL4_FILE_DELTA.md`**
+**Reference:** **`LEVEL3_TO_LEVEL4_FILE_DELTA.md`** *—repository Markdown; not a guide page*
 
 ---
 
@@ -52,7 +52,7 @@ These differ from Chapter 1.3 **on purpose**. Skipping them often causes **“un
 | **`minimize_num_calls`** | *(default / omitted)* | **`false`** (as in course repo) |
 | **`flow_retrieval`** | *(often omitted)* | **`turns_to_embed: 5`**, **`num_flows: 20`** (keeps short turns in context) |
 
-**What to do:** Align your copied **`level4/`** with the **`level4/config.yml`** in this repo, or edit your config to match the table. Details and rationale: **`level4/PIPELINE_CHAPTER_1_3_AND_4.md`**.
+**What to do:** Align your copied **`level4/`** with the **`level4/config.yml`** in this repo, or edit your config to match the table. Details and rationale: **`level4/PIPELINE_CHAPTER_1_3_AND_4.md`** *—repository Markdown; not a guide page*
 
 **After any `config.yml` change:** `python -m rasa train` from **`level4/`**.
 

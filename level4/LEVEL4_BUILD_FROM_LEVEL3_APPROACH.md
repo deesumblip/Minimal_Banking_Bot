@@ -25,7 +25,7 @@ If you need a **minimal** `level4/` tree so students add every transfer file the
 
 ## 2. Pipeline files (Chapter 1.4)
 
-See **Unit 0.2** and **`PIPELINE_CHAPTER_1_3_AND_4.md`**. **`level4/config.yml`** uses **`CompactLLMCommandGenerator`**, **`flow_retrieval`**, etc.; **`level4/endpoints.yml`** aligns **`model_groups`** / **`temperature`** for FillSlot reliability.
+See **Unit 0.2** and **`PIPELINE_CHAPTER_1_3_AND_4.md`** *—repository Markdown; not a Codio guide page*. **`level4/config.yml`** uses **`CompactLLMCommandGenerator`**, **`flow_retrieval`**, etc.; **`level4/endpoints.yml`** aligns **`model_groups`** / **`temperature`** for FillSlot reliability.
 
 ---
 
