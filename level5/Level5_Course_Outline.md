@@ -14,7 +14,7 @@
 ### Unit 0: Recap - What You Built in Level 4
 **Type**: Content Page | **Assessment**: None
 **Sections**: 0.1 Your Level 4 Banking Agent | 0.2 What Level 5 Adds
-**Key Concepts**: Recap Level 4; level5 folder = Level 4 end state; what Level 5 adds (tools, tools_module, transfer_money_tools flow).
+**Key Concepts**: Chapter 1.5 starts from **Chapter 1.4 completion** (final Level 4 bot); **`level5/`** is that baseline in the repo; what Level 5 adds (tools, `tools_module`, `transfer_money_tools` flow).
 
 ### Unit 1: Introduction to Tools
 **Type**: Content Page | **Assessment**: None

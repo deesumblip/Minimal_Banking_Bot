@@ -10,15 +10,17 @@
 - How the LLM dynamically chooses which tools to call
 - When to use tools vs. actions
 
-## Building on Level 4
+## Building on Level 4 (Chapter 1.4 completion)
 
-⚠️ **Important**: This level builds on your Level 4 banking agent. You don't start from scratch!
+**Important:** Chapter 1.5 assumes you **finished Chapter 1.4**—the banking agent with **multiple slots**, **`transfer_money`**, **`action_process_transfer`**, and the **Compact** pipeline from **Lab 0.1**. You do not start from scratch.
 
-**What stays the same:**
-- All responses from Level 4
-- All flows from Level 4 (`greet`, `help`, `contact`, `hours`, `check_balance`, `transfer_money`)
-- All actions from Level 4 (`action_bank_hours`, `action_check_balance_simple`, `action_process_transfer`)
-- All slots from Level 4 (`account`, `amount`, `recipient`, `account_from`)
+**Repository note:** In this course repo, **`level5/`** is aligned with that **final Chapter 1.4 bot** (same domain shape and flows as **`level4/`** after the Chapter 1.4 labs, including **`goodbye`** and **`holiday_hours`**). **Do Chapter 1.5 work in `level5/`**; keep **`level4/`** as the Chapter 1.4 reference. You do **not** need to copy **`level4/`** into **`level5/`** yourself.
+
+**What stays the same from Chapter 1.4:**
+- Responses (including **`utter_goodbye`** and transfer **`utter_ask_*`**)
+- Flows: `greet`, `help`, `contact`, `goodbye`, `hours`, `holiday_hours`, `check_balance`, `transfer_money`
+- Actions: `action_bank_hours`, `action_holiday_hours`, `action_check_balance_simple`, `action_process_transfer`
+- Slots: `account`, `amount`, `recipient`, `account_from`
 
 **What this level adds:**
 - `tools/` folder with `banking_tools.py`

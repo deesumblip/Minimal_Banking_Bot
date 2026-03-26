@@ -8,8 +8,8 @@ This document maps **Level 5** (Chapter 1.5 – Tool Calling) content files, lab
 
 | Level 4 | Level 5 equivalent |
 |---------|---------------------|
-| **Starter** = Level 3 end state (level4 folder) | **Starter** = Level 4 end state (level5 folder) |
-| Unit 0: Your Level 3 agent / What Level 4 adds | Unit 0: Your Level 4 agent / What Level 5 adds |
+| **Starter** = Level 3 end state (`level4/`) | **Starter** = Chapter 1.4 completion / final Level 4 bot (`level5/` as default baseline in repo) |
+| Unit 0: Your Level 3 agent / What Level 4 adds | Unit 0: Chapter 1.4 recap / What Level 5 adds |
 | Unit 1: Multiple slots (1.1, 1.2, 1.3) | Unit 1: Introduction to tools (1.1, 1.2, 1.3 Test Your Knowledge) |
 | Unit 2 + Lab 2.1 (domain: slots + utter_ask_* + action) | Unit 2 + **Lab 2.1** (tools folder + banking_tools.py + __all__) |
 | Unit 3 + Lab 3.1 (action_process_transfer) | Unit 3 + **Lab 3.1** (endpoints.yml tools section) |
@@ -25,7 +25,7 @@ This document maps **Level 5** (Chapter 1.5 – Tool Calling) content files, lab
 
 | File | Purpose |
 |------|---------|
-| `Level5_Unit0_Content_0.1_Your-Level-4-Banking-Agent.md` | Recap: level5 = Level 4 agent; what's in domain, flows, actions. |
+| `Level5_Unit0_Content_0.1_Your-Level-4-Banking-Agent.md` | Recap: Chapter 1.4 completion → `level5/` baseline; domain, flows (incl. goodbye, holiday_hours), actions. |
 | `Level5_Unit0_Content_0.2_What-Level-5-Adds.md` | Level 5 adds: tools module, endpoints tools section, transfer_money_tools flow and action. |
 | `Level5_Unit1_Content_1.1_Tools-vs-Actions.md` | Tools = LLM selects at runtime; actions = explicit in flow steps. |
 | `Level5_Unit1_Content_1.2_When-to-Use-Tools.md` | When to use tools (dynamic selection) vs actions. |

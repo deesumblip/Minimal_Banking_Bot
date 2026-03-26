@@ -32,19 +32,21 @@
 
 ### 0.1 Your Level 4 Banking Agent
 
-Before we add tool calling, let's recap what you've already built in Level 4. **All of this remains unchanged** - Level 5 builds on top of it!
+**Chapter 1.5 starting point:** This chapter assumes **Chapter 1.4 completion**—your final Level 4 banking agent (Compact pipeline, transfer flow, **`action_process_transfer`**). In this course repository, **`level5/`** is maintained as that baseline; you **add** tool calling in the labs below. **`level4/`** remains the Chapter 1.4 reference.
+
+Before we add tool calling, let's recap what you've already built in Level 4. **All of this remains unchanged**—Level 5 builds on top of it!
 
 #### What You Have from Level 4
 
 **Domain File (`domain/basics.yml`)**:
-- ✅ All Level 1-3 responses
+- ✅ All Level 1–4 responses (including **`utter_goodbye`** and transfer **`utter_ask_*`**)
 - ✅ All ask responses: `utter_ask_account`, `utter_ask_amount`, `utter_ask_recipient`, `utter_ask_account_from`
 - ✅ All slots: `account`, `amount`, `recipient`, `account_from`
-- ✅ All Level 1-3 actions
+- ✅ All Level 1–4 actions (including **`action_holiday_hours`** alongside **`action_bank_hours`** and **`action_check_balance_simple`**)
 - ✅ `action_process_transfer` action (Level 4)
 
 **Flows (`data/basics/`)**:
-- ✅ All Level 1-3 flows
+- ✅ All Level 1–4 flows (including **`goodbye`**, **`holiday_hours`**, **`check_balance`**)
 - ✅ `transfer_money` flow with multiple slot collection (Level 4)
 
 **Actions (`actions/`)**:
