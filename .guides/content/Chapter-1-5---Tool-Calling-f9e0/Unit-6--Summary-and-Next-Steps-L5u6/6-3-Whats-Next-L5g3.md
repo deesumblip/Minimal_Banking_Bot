@@ -1,4 +1,4 @@
-**Starting point:** Work in **`level5/`** (see **Unit 0.1**).
+**Starting point:** Work in **`level5/`** with your Chapter 1.5 agent (the Chapter 1.4 baseline plus the labs you completed in this chapter).
 
 Chapter 1.5 completes **tool calling** for the main agent. Possible next steps (depending on your course):
 

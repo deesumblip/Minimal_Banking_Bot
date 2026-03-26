@@ -1,4 +1,4 @@
-**Chapter 1.5 starting point:** This chapter assumes you **begin from the banking agent you finished at the end of Chapter 1.4**—the one reflected in **`level4/`** after those labs: multiple slots, **`transfer_money`**, **`action_process_transfer`**, and the Chapter 1.4 pipeline (**`CompactLLMCommandGenerator`**, **`endpoints.yml`** aligned with Chapter 1.4 **Unit 0.2**). You are not starting from scratch.
+**Chapter 1.5 starting point:** This chapter assumes you **begin from the banking agent you finished at the end of Chapter 1.4**—the one reflected in **`level4/`** after those labs: multiple slots, **`transfer_money`**, **`action_process_transfer`**, and the Chapter 1.4 pipeline (**`CompactLLMCommandGenerator`**, **`endpoints.yml`** with **`action_endpoint`**, **`nlg`**, and **`model_groups`** as in the finished **`level4/`** agent). You are not starting from scratch.
 
 **Repository note:** In this course repository, **`level5/`** is checked in as that **Chapter 1.4 completion** baseline (same general shape as the finished **`level4/`** agent: domain, flows—including **`goodbye`**, **`holiday_hours`**, **`check_balance`**, **`transfer_money`**—and **Level 2–4** actions). You still **build** Chapter 1.5 in the labs (tools folder, **`tools:`** in **`endpoints.yml`**, **`transfer_money_tools`**, **`action_process_transfer_with_tools`**). Use **`level4/`** as the reference for “Chapter 1.4 end” and **`level5/`** for “work in progress” as you add tool calling.
 
@@ -10,7 +10,7 @@ Before we add tool calling, here is a quick recap of what you have at **Chapter 
 
 ## Where Chapter 1.5 happens
 
-You add the **`tools/`** module, **`endpoints.yml`** registration, the **`transfer_money_tools`** flow, and **`action_process_transfer_with_tools`** under **`level5/`**. The **lab sequence** and expectations are summarized in **Unit 0.2 What Level 5 Adds**.
+You add the **`tools/`** module, **`endpoints.yml`** registration, the **`transfer_money_tools`** flow, and **`action_process_transfer_with_tools`** under **`level5/`**. The **next page** summarizes the lab sequence and what you will add in each step.
 
 Use the **same virtual environment** as in Chapter 1.4 (project root); there is no new venv inside **`level5/`**.
 
@@ -36,7 +36,7 @@ Use the **same virtual environment** as in Chapter 1.4 (project root); there is 
 
 - **`config.yml`**, **`credentials.yml`**, **`endpoints.yml`** (no **`tools:`** section until **Lab 3.1**). Config uses **`assistant_id: level5-agent`** so this assistant is distinct from **`level4-agent`**.
 
-**Heads-up:** Until you register tools, your **`endpoints.yml`** matches the Chapter 1.4 pattern ( **`action_endpoint`**, **`nlg`**, **`model_groups`** ). The **Lab 3.1** page shows exactly how to add **`tools:`** without breaking existing sections.
+**Heads-up:** Until you register tools, your **`endpoints.yml`** matches the Chapter 1.4 pattern ( **`action_endpoint`**, **`nlg`**, **`model_groups`** ). When you reach the lab that registers tools, you will add a **`tools:`** block without removing or renaming those sections.
 
 ---
 

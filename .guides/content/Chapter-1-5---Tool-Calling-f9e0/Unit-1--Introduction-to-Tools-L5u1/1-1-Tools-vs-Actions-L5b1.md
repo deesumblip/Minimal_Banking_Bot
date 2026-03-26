@@ -1,4 +1,4 @@
-**Starting point:** Work in **`level5/`** (Chapter 1.4 completion in **Unit 0.1**; what Chapter 1.5 adds in **Unit 0.2**).
+**Starting point:** Work in **`level5/`** with the Chapter 1.4 completion baseline from the start of this chapter.
 
 In Chapter 1.4 you used **actions**: a flow step names an action (for example **`- action: action_process_transfer`**). When the flow reaches that step, the agent **always** runs that action.
 
@@ -42,4 +42,4 @@ def check_balance(account: str) -> dict:
     return {"account": account, "balance": 1234.56, "currency": "USD"}
 ```
 
-The flow does **not** list this function. The LLM chooses to call it when the user’s message matches the tool’s intent. In the next units you will create a full **`tools`** module and register it in **`endpoints.yml`**, then use it from a flow in **Lab 4.1**.
+The flow does **not** list this function. The LLM chooses to call it when the user’s message matches the tool’s intent. Later in this chapter you will create the **`tools`** module, register it in **`endpoints.yml`**, and connect it to a flow.

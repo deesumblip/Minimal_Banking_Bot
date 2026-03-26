@@ -1,6 +1,6 @@
-**Starting point:** Work in **`level5/`** (Chapter 1.4 completion in **Unit 0.1**).
+**Starting point:** Work in **`level5/`** with the Chapter 1.4 completion baseline from the start of this chapter.
 
-**Objective.** In **Unit 2.1** you saw a complete **`check_balance`** example. In this lab you create your own **`tools/`** folder and **`tools/banking_tools.py`** with at least three tool functions—**`check_balance(account)`**, **`process_transfer(amount, from_account, to_account)`**, and **`get_account_info(account)`**—following the same pattern (docstrings, type hints, return dict, **`__all__`**).
+**Objective.** The **previous page** showed a complete **`check_balance`** example. In this lab you create your own **`tools/`** folder and **`tools/banking_tools.py`** with at least three tool functions—**`check_balance(account)`**, **`process_transfer(amount, from_account, to_account)`**, and **`get_account_info(account)`**—following the same pattern (docstrings, type hints, return dict, **`__all__`**).
 
 ## Step-by-Step Instructions
 
@@ -31,4 +31,4 @@
 ## Running locally
 
 1. Open the project, activate the venv, `cd level5`.
-2. Create the `tools` folder and files as above.
+2. Create the `tools` folder and files as described in the steps above.

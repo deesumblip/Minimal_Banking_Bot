@@ -1,6 +1,6 @@
 **Starting point:** Work in **`level5/`** with **Labs 2.1–3.1** complete ( **`tools/`** and **`tools:`** in **`endpoints.yml`** ).
 
-**Objective.** In **Unit 4.1** you saw **`transfer_money_tools`** (YAML) and **`action_process_transfer_with_tools`** (Python). In this lab you create your own flow and action files, register **`action_process_transfer_with_tools`** in the domain, and confirm the LLM can call your tools in this flow.
+**Objective.** The **previous page** showed **`transfer_money_tools`** (YAML) and **`action_process_transfer_with_tools`** (Python). In this lab you create your own flow and action files, register **`action_process_transfer_with_tools`** in the domain, and confirm the LLM can call your tools in this flow.
 
 ## Step-by-Step Instructions
 

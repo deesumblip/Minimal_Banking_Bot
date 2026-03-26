@@ -1,4 +1,4 @@
-**Starting point:** Work in **`level5/`** (see **Units 0.1–0.2**). This page is a rule-of-thumb for when to model behavior as a **tool** versus an **action**.
+**Starting point:** Work in **`level5/`** with the Chapter 1.4 completion baseline and the Chapter 1.5 overview you just read. This page is a rule-of-thumb for when to model behavior as a **tool** versus an **action**.
 
 ## When to use tools
 

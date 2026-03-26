@@ -4,11 +4,11 @@ You now have a Chapter 1.5 agent that extends **Chapter 1.4 completion** with **
 
 ## What your agent can do
 
-- **Chapter 1.1:** Greet, help, contact, goodbye (responses).
-- **Chapter 1.2:** Bank hours (**`action_bank_hours`**); holiday hours (**`action_holiday_hours`**).
-- **Chapter 1.3:** Check balance (collect **`account`**, **`action_check_balance_simple`**).
-- **Chapter 1.4:** Transfer money (collect **amount**, **recipient**, **account_from**, **`action_process_transfer`**).
-- **Chapter 1.5:** **`transfer_money_tools`**—same collects, then **`action_process_transfer_with_tools`**; the LLM may call **`check_balance`**, **`process_transfer`**, **`get_account_info`**, … from the conversation.
+- **Responses and flows:** Greet, help, contact, goodbye (responses).
+- **Hours:** Bank hours (**`action_bank_hours`**); holiday hours (**`action_holiday_hours`**).
+- **Check balance:** Collect **`account`**, **`action_check_balance_simple`**.
+- **Transfer (classic flow):** Collect **amount**, **recipient**, **account_from**, **`action_process_transfer`**.
+- **Transfer with tools:** **`transfer_money_tools`**—same collects, then **`action_process_transfer_with_tools`**; the LLM may call **`check_balance`**, **`process_transfer`**, **`get_account_info`**, … from the conversation.
 
 ## Flow Summary
 

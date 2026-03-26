@@ -1,4 +1,4 @@
-**Starting point:** Work in **`level5/`** after **Lab 5.1** (a model under **`level5/models/`** ).
+**Starting point:** Work in **`level5/`** after **Lab 5.1** in this unit—you should have a trained model under **`level5/models/`**.
 
 After training, run the assistant and test tool calling.
 
@@ -10,4 +10,4 @@ After training, run the assistant and test tool calling.
 
 ## Test
 
-Trigger the flow that uses tools (for example, ask to transfer money or check a balance in a way that reaches **`transfer_money_tools`**). Confirm that the agent collects the slots and that the LLM can call the tools (you should see balance or transfer-related behavior from your tool functions). **Lab 5.2** adds a **completion check** that verifies required files and configuration.
+Trigger the flow that uses tools (for example, ask to transfer money or check a balance in a way that reaches **`transfer_money_tools`**). Confirm that the agent collects the slots and that the LLM can call the tools (you should see balance or transfer-related behavior from your tool functions). The **next lab** in this unit runs a **completion check** that verifies required files and configuration.

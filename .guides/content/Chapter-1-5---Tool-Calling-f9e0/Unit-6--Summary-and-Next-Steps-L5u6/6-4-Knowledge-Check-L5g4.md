@@ -1,4 +1,4 @@
-**Starting point:** Work in **`level5/`** (see **Units 0.1–0.2**).
+**Starting point:** Work in **`level5/`** with the baseline from the start of this chapter and the concepts through the training and testing material.
 
 Answer the following to check your understanding of Chapter 1.5 (tool calling).
 

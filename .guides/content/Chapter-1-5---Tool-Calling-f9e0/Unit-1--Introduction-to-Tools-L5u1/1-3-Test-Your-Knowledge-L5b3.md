@@ -1,6 +1,6 @@
-**Starting point:** Work in **`level5/`** (Chapter 1.4 completion in **Unit 0.1**).
+**Starting point:** Work in **`level5/`** with the Chapter 1.4 completion baseline from the start of this chapter.
 
-Answer the questions below to check your understanding of Chapter 1.5 so far (Units 0–1).
+Answer the questions below to check your understanding of the material so far in this chapter (recap and introduction to tools).
 
 {Check It!|assessment}(multiple-choice-501030100)
 

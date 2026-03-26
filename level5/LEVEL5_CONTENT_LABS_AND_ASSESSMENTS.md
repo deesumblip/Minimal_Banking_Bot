@@ -14,7 +14,7 @@ This document maps **Level 5** (Chapter 1.5 – Tool Calling) content files, lab
 | Unit 2 + Lab 2.1 (domain: slots + utter_ask_* + action) | Unit 2 + **Lab 2.1** (tools folder + banking_tools.py + __all__) |
 | Unit 3 + Lab 3.1 (action_process_transfer) | Unit 3 + **Lab 3.1** (endpoints.yml tools section) |
 | Unit 4 + Lab 4.1 (transfer_money flow) | Unit 4 + **Lab 4.1** (transfer_money_tools flow + action_process_transfer_with_tools) |
-| Unit 5 + Lab 5.1 (train) + Lab 5.2 (test) | Unit 5 + **Lab 5.1** (train from level5) + **Lab 5.2** (completion check) |
+| Unit 5 + Lab 5.1 (train) + Lab 5.2 (test) | Unit 5: **5.1** → **Lab 5.1** → **5.2** → **Lab 5.2** (linear: each concept page followed by its lab) |
 | Unit 6: Walkthrough, summary, limitations, checklist | Unit 6: 6.1–6.7 (walkthrough, learned, next, knowledge check, limitations, Level 6 preview, checklist) |
 
 **Lab numbering:** Level 5 uses Labs 2.1, 3.1, 4.1, 5.1, 5.2. Each is graded (10 points, 50 total).

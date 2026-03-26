@@ -1,12 +1,14 @@
-﻿You now have a Level 5 agent that extends Level 4 with tool calling.
+**Starting point:** Work in **`level5/`** after **Labs 2.1–5.1** (trained model optional for read-only walkthrough).
+
+You now have a Level 5 agent that extends Level 4 with tool calling.
 
 ## What Your Agent Can Do
 
-- **Level 1:** Greet, help, contact, goodbye (responses only).
-- **Level 2:** Bank hours (action_bank_hours).
-- **Level 3:** Check balance (collect account, action_check_balance_simple).
-- **Level 4:** Transfer money (collect amount, recipient, account_from, action_process_transfer).
-- **Level 5:** Transfer with tools — collect amount, recipient, account_from, then run action_process_transfer_with_tools; the LLM can call check_balance, process_transfer, get_account_info based on the conversation.
+- **Responses and flows:** Greet, help, contact, goodbye (responses).
+- **Hours:** Bank hours (`action_bank_hours`); holiday hours (`action_holiday_hours`).
+- **Check balance:** Collect `account`, `action_check_balance_simple`.
+- **Transfer (classic flow):** Collect amount, recipient, account_from, `action_process_transfer`.
+- **Transfer with tools:** `transfer_money_tools` — same collects, then `action_process_transfer_with_tools`; the LLM may call `check_balance`, `process_transfer`, `get_account_info`, … from the conversation.
 
 ## Flow Summary
 

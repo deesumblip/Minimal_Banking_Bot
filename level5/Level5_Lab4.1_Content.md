@@ -1,4 +1,4 @@
-**Objective.** In Unit 4.1 you saw examples of the transfer_money_tools flow (YAML) and the action_process_transfer_with_tools action (Python). In this lab you will create your own version: the flow file and action file following those patterns, and register the action in the domain so the LLM can call tools during this flow.
+**Objective.** The **previous page** showed examples of the transfer_money_tools flow (YAML) and the action_process_transfer_with_tools action (Python). In this lab you will create your own version: the flow file and action file following those patterns, and register the action in the domain so the LLM can call tools during this flow.
 
 ## Step-by-Step Instructions
 

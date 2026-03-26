@@ -1,10 +1,10 @@
-Chapter 1.5 builds on the **final agent at the end of Chapter 1.4** (see **Unit 0.1**).
+Chapter 1.5 builds on the **final agent at the end of Chapter 1.4** described on the **previous page**.
 
 Level 5 adds **tool calling**: the LLM can dynamically select and invoke **tools** (Python functions you register) based on conversation context—not only the fixed **action** steps named in your flows.
 
 **How to read this page**
 
-- Your **starting point** is always **Chapter 1.4 completion** (see **Unit 0.1**). In this course repo, **`level5/`** is already that baseline—you **add** the **`tools/`** module, **`tools:`** in **`endpoints.yml`**, the **`transfer_money_tools`** flow, and **`action_process_transfer_with_tools`**, then train and test. Complete every lab so *you* produce those files; when you are done, your tree should match the **Chapter 1.5 end state** described in this chapter and in **Unit 6**.
+- Your **starting point** is **Chapter 1.4 completion** in **`level5/`**. In this course repo, **`level5/`** is already that baseline—you **add** the **`tools/`** module, **`tools:`** in **`endpoints.yml`**, the **`transfer_money_tools`** flow, and **`action_process_transfer_with_tools`**, then train and test. Complete every lab so *you* produce those files; when you are done, your tree should match the **Chapter 1.5 end state** summarized again at the **end of this chapter**.
 
 Your Chapter 1.4 flows and actions stay in place; you **add** tools and the new flow so the LLM can call **`check_balance`**, **`process_transfer`**, **`get_account_info`**, and similar functions where the lab expects them.
 

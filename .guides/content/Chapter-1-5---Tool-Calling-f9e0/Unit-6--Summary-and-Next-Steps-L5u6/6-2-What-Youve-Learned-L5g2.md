@@ -1,4 +1,4 @@
-**Starting point:** Work in **`level5/`** (see **Unit 0.1**). The summary below is what you **added** on top of the Chapter 1.4 completion baseline.
+**Starting point:** Work in **`level5/`** with the Chapter 1.4 completion baseline plus the additions you made in this chapter’s labs. The summary below lists what you **added** on top of that baseline.
 
 ## Chapter 1.5 summary
 

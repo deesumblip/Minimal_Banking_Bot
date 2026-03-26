@@ -1,4 +1,4 @@
-**Starting point:** Work in **`level5/`** after Chapter 1.5 (see **Unit 0.1**).
+**Starting point:** After completing this chapter’s labs in **`level5/`**, you are ready to preview the next chapter.
 
 **Building on your Chapter 1.5 agent**
 

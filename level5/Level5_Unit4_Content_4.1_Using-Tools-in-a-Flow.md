@@ -1,3 +1,5 @@
+**Starting point:** Work in **`level5/`** with **`tools/`** in place and **`tools:`** registered in **`endpoints.yml`** (the work from the previous two units). This page explains how a **flow** reaches a step where the LLM may call your tools; the **lab that follows** is where you implement it.
+
 To use tools in a conversation, you need a **flow** that brings the user to a point where the LLM can call them. In Level 5 we do that with:
 
 1. A **flow** that collects the same slots as the transfer flow (amount, recipient, account_from) so the agent has context.
@@ -7,7 +9,7 @@ The flow does not list individual tools; it lists one action. That action runs i
 
 ## Example: The transfer_money_tools flow
 
-Below is an example of the flow file. You will create your own version in Lab 4.1 (e.g. with a description that fits your agent). The structure is: collect the three slots, then run the action that enables tool calling.
+Below is an example of the flow file. The **lab that follows** has you create your own version (e.g. with a description that fits your agent). The structure is: collect the three slots, then run the action that enables tool calling.
 
 ```yaml
 flows:
@@ -29,7 +31,7 @@ flows:
 
 ## Example: The action_process_transfer_with_tools action
 
-The flow’s last step runs an **action** (not the tools directly). That action runs in a context where the LLM can call your registered tools. Below is a minimal action class. You will create your own action file in Lab 4.1 following this pattern and register it in the domain.
+The flow’s last step runs an **action** (not the tools directly). That action runs in a context where the LLM can call your registered tools. Below is a minimal action class. The **lab that follows** has you create your own action file following this pattern and register it in the domain.
 
 ```python
 from typing import Any, Dict, List, Text
@@ -52,4 +54,4 @@ class ActionProcessTransferWithTools(Action):
         return []
 ```
 
-In Lab 4.1 you will create the flow file and the action file (your own version of the examples above), and add `action_process_transfer_with_tools` to the domain `actions:` list.
+In the **lab that follows**, you create the flow file and the action file (your own version of the examples above), and add `action_process_transfer_with_tools` to the domain `actions:` list.

@@ -40,4 +40,4 @@ def check_balance(account: str) -> dict:
     return {"account": account, "balance": 1234.56, "currency": "USD"}
 ```
 
-The flow does **not** list this function. The LLM chooses to call it when the user asks for a balance. In the next units you will see how to create a full tools module and how to use it in a flow.
+The flow does **not** list this function. The LLM chooses to call it when the user asks for a balance. Later in this chapter you will create the **`tools`** module, register it in **`endpoints.yml`**, and connect it to a flow.

@@ -38,7 +38,7 @@
 
 ### Unit 5: Training and Testing
 **Type**: Content + Labs | **Assessment**: Lab 5.1, Lab 5.2
-**Sections**: 5.1 Training Level 5 | 5.2 Testing Tool Calling + Labs 5.1, 5.2
+**Sections**: 5.1 Training Level 5 | Lab 5.1 | 5.2 Testing Tool Calling | Lab 5.2 (linear: concept, lab, concept, lab)
 **Key Concepts**: Train from level5; completion check.
 
 ### Unit 6: Summary and Next Steps
