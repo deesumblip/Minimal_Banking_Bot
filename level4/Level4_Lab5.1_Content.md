@@ -1,6 +1,6 @@
-**Starting point:** Chapter 1.4 assumes you began with the **final banking agent at the end of Chapter 1.3** and added transfer pieces in **`level4/`** (see **Unit 0.1**).
+**Starting point:** Work in **`level4/`** with transfer pieces in place (see **Unit 0.1**).
 
-**Objective.** Train your Level 4 agent from the **`level4`** folder using the same pattern as Level 3: activate the virtual environment at the **project root**, then `cd level4` and run Rasa.
+**Objective.** Train your Level 4 agent from the **`level4`** folder. Activate the virtual environment at the **project root**, then `cd level4` and run Rasa (same pattern as earlier levels in this course).
 
 **What training uses:** Rasa reads your **domain** (slots and `utter_ask_*` responses), your **flows** (including `transfer_money`), and your **actions** (including `action_process_transfer`). If training fails, the messages usually point to **Lab 2.1** (domain), **Lab 3.1** (action), or **Lab 4.1** (flow).
 
@@ -14,7 +14,7 @@ After training succeeds, use **Check It!** in Codio (**Lab 5.1** assessment). Th
 2. Run `source .venv/bin/activate` — prompt should show `(.venv)`.
 3. Run `cd level4` — confirm with `pwd` that the path ends in `level4`.
 4. Run `python -m rasa --version`. If it fails, check the venv and Rasa Pro (**Lab 0.1**).
-5. **Pipeline check (important):** Open **`config.yml`** in this **`level4/`** folder. It must use **`CompactLLMCommandGenerator`** for Chapter 1.4 (not **`SearchReadyLLMCommandGenerator`** from Chapter 1.3). If you copied **`level3/` → `level4/`** without **Unit 0.2** pipeline updates, fix **`config.yml`** and **`endpoints.yml`** first—otherwise training **bakes the wrong command generator** into the model and you can see *“unable to understand you”* on transfer slots. Compare with this repo’s **`level4/config.yml`** if unsure.
+5. **Pipeline check (important):** Open **`config.yml`** in this **`level4/`** folder. It must use **`CompactLLMCommandGenerator`** for this chapter (not **`SearchReadyLLMCommandGenerator`**). If you have not completed **Lab 0.1** / **Unit 0.2** yet, fix **`config.yml`** and **`endpoints.yml`** first—otherwise training **bakes the wrong command generator** into the model and you can see *“unable to understand you”* on transfer slots. Compare with this repo’s **`level4/config.yml`** if unsure.
 6. **Endpoints check:** Open **`endpoints.yml`**. Under **`model_groups`**, the group with **`id: gpt-4o-mini`** must use **`model: gpt-4o-2024-11-20`** and **`temperature: 0.1`** (see **Unit 0.2** section 2). Do **not** leave **`model: gpt-4o-mini-…`** with a high **`temperature`** here—free-text **recipient** often fails to fill reliably. Match this repo’s **`level4/endpoints.yml`**.
 7. Run `python -m rasa train` — wait for **Successfully saved model** (about 1–3 minutes).
 8. In the file tree, confirm **`models/`** (under **`level4`**) has a new `.tar.gz` file.

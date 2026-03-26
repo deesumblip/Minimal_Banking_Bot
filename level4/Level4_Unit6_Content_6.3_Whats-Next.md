@@ -1,4 +1,4 @@
-**Starting point:** Chapter 1.4 assumed you began with the **final banking agent at the end of Chapter 1.3**; you extended it in **`level4/`** (see **Unit 0.1**).
+**Starting point:** Work in **`level4/`** (see **Unit 0.1**).
 
 Level 4 completes the multi-slot transfer flow. Depending on your course, you might explore:
 

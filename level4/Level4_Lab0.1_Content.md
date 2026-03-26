@@ -1,8 +1,8 @@
-**Starting point:** Chapter 1.3 completion is in **`level3/`** (see **Unit 0.1**). Chapter 1.4 work is under **`level4/`**—typically a copy of your Level 3 tree.
+**Starting point:** Before **Lab 2.1**, align **`level4/config.yml`** and **`level4/endpoints.yml`** with **Unit 0.2** (section 2). The baseline agent is summarized in **Unit 0.1**—all work is under **`level4/`**.
 
-**Objective.** Before **Lab 2.1**, align **`level4/config.yml`** and **`level4/endpoints.yml`** with the Chapter 1.4 pipeline (**Unit 0.2** section 2). This lab follows the **same two-step pattern as Lab 3.1** and Chapter 1.3 Lab 4.1: **Fill in the Blanks** first, paste into files, then **Code Test**.
+**Objective.** Fill in the blanks for the pipeline files, paste into **`level4/`**, then run the **Code Test** (fill-in-the-blanks → paste → code test).
 
-**Repository note:** In the course repo, **`level4/`** may ship with Chapter 1.3–style pipeline files until you replace them. You still **complete this lab**: use the fill-in-the-blanks exercise, then paste your completed YAML into **`level4/config.yml`** and **`level4/endpoints.yml`** (same pattern as Chapter 1.3 **Lab 3.1**: blanks → paste → code test).
+**Repository note:** The checked-in **`level4/`** starter may still use the **SearchReady** pipeline until you replace it here. Use the fill-in-the-blanks, then paste into **`level4/config.yml`** and **`level4/endpoints.yml`**.
 
 Students do **not** need the virtual environment for this lab—**Check It!** only reads saved files.
 

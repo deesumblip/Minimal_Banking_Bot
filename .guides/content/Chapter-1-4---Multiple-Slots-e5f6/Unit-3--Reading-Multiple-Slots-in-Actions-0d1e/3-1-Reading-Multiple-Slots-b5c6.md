@@ -1,6 +1,6 @@
-**Starting point:** Chapter 1.4 assumes you begin with the **final banking agent at the end of Chapter 1.3** (your **`level3/`** project). You **add** work in **`level4/`**—see **Unit 0.1** and **Unit 0.2**.
+**Starting point:** Work in **`level4/`** (starter agent in **Unit 0.1**; pipeline in **Unit 0.2**).
 
-In Level 3 you read one slot in `action_check_balance_simple` with `tracker.get_slot("account")`. In Level 4 you will read **three** slots in `action_process_transfer`.
+In `action_check_balance_simple` you read one slot with `tracker.get_slot("account")`. In **`action_process_transfer`** you will read **three** slots.
 
 ## Reading Multiple Slots in the Action
 

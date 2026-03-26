@@ -1,4 +1,4 @@
-**Starting point:** Chapter 1.4 assumes you began with the **final banking agent at the end of Chapter 1.3** and extended it in **`level4/`** (see **Unit 0.1**).
+**Starting point:** Work in **`level4/`** (see **Unit 0.1**).
 
 ## What Level 4 Cannot Do
 
@@ -10,7 +10,7 @@
 
 ## When Level 4 is Sufficient
 
-Level 4 is a good fit when you need to collect several pieces of information in one conversation (e.g. amount, recipient, account for a transfer), run one action that uses all of them, and keep the same venv and project structure as Level 3.
+Level 4 is a good fit when you need to collect several pieces of information in one conversation (e.g. amount, recipient, account for a transfer), run one action that uses all of them, and keep the same venv and project structure as in earlier levels.
 
 ## When You Need More
 

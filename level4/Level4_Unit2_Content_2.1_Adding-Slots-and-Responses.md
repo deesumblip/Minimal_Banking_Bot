@@ -1,4 +1,4 @@
-**Starting point:** Chapter 1.4 assumes you begin with the **final banking agent at the end of Chapter 1.3** (your **`level3/`** project). You **add** work in **`level4/`**—see **Unit 0.1** and **Unit 0.2**.
+**Starting point:** Work in **`level4/`** (starter agent in **Unit 0.1**; pipeline in **Unit 0.2**).
 
 In Lab 2.1 you will update the domain so the agent can collect amount, recipient, and account_from for the transfer flow.
 
@@ -19,7 +19,7 @@ In Lab 2.1 you will update the domain so the agent can collect amount, recipient
 
 ## Domain Structure (concept)
 
-After Lab 2.1 your domain will have the existing Level 3 content plus:
+After Lab 2.1 your domain will have the existing banking content plus:
 
 - Under `slots:`: `account` (from Level 3), and `amount`, `recipient`, `account_from`
 - Under `responses:`: the existing utter_* and `utter_ask_account`, plus `utter_ask_amount`, `utter_ask_recipient`, `utter_ask_account_from`
@@ -57,7 +57,7 @@ Below is an example of the **new** pieces you will add. Your existing `slots:` a
 
 Use **`rephrase: False`** on these three asks so CALM slot collection stays stable (see Lab 2.1).
 
-**Updated actions list (include the new action alongside the existing Level 3 actions):**
+**Updated actions list (include the new action alongside the existing actions):**
 ```yaml
 actions:
   - action_bank_hours

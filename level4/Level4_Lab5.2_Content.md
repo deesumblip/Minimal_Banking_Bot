@@ -1,4 +1,4 @@
-**Starting point:** Chapter 1.4 assumes you began with the **final banking agent at the end of Chapter 1.3** and extended it in **`level4/`** (see **Unit 0.1**).
+**Starting point:** Work in **`level4/`** with transfer pieces in place (see **Unit 0.1**).
 
 **Objective.** After **Lab 5.1** (training), **Lab 5.2** completes Unit 5: (1) a **graded completion check** that your domain (including legacy actions), action, flow, model, **`level4/config.yml`** pipeline, and **`level4/endpoints.yml`** **`model_groups`** (Lab 0.1 pattern) are correct—the grader does **not** start Rasa or Inspector; (2) **hands-on testing** in **Rasa Inspector** to run the transfer flow and confirm **`action_process_transfer`** and the **free-text recipient** behavior (including the **100-character** cap in code + flow).
 
@@ -50,7 +50,7 @@ From **`level4`** with the virtual environment active:
 
 2. **Flow:** In **`level4/data/basics/transfer_money.yml`**, ensure each **`collect:`** has a clear **`description:`** (Lab 4.1). **Retrain** after edits.
 
-3. **Pipeline:** The **`level4`** repo uses **`CompactLLMCommandGenerator`**. **`SearchReadyLLMCommandGenerator`** (Chapter 1.3) can produce commands like **`set slot transfer_money_amount …`** while your domain only defines **`amount`**—Rasa then rejects the command and you see *unable to understand you*. Confirm **`level4/config.yml`**, **`python -m rasa train`** from **`level4`**, **restart** Inspector. Check logs for **`skip_command_slot_not_in_domain`** with **`transfer_money_*`** vs **`amount`** / **`recipient`**. Background is in **Unit 0.2** (section 2) in Chapter 1.4.
+3. **Pipeline:** The **`level4`** repo uses **`CompactLLMCommandGenerator`**. A **`SearchReadyLLMCommandGenerator`** setup can produce commands like **`set slot transfer_money_amount …`** while your domain only defines **`amount`**—Rasa then rejects the command and you see *unable to understand you*. Confirm **`level4/config.yml`**, **`python -m rasa train`** from **`level4`**, **restart** Inspector. Check logs for **`skip_command_slot_not_in_domain`** with **`transfer_money_*`** vs **`amount`** / **`recipient`**. Background is in **Unit 0.2** (section 2) in Chapter 1.4.
 
 ---
 

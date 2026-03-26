@@ -1,8 +1,8 @@
-**Starting point:** Chapter 1.4 assumes you began with the **final banking agent at the end of Chapter 1.3** and extended it in **`level4/`** (see **Unit 0.1**).
+**Starting point:** Work in **`level4/`** with transfer pieces in place (see **Unit 0.1**).
 
 **Unit 5, Lab 5.2.** You already **trained** the agent in **Lab 5.1**. This lab has two parts in order:
 
-1. **Completion check (graded)**. Confirms domain (including Level 3 **`account`** / **`utter_ask_account`**), action, flow YAML, trained model, **`config.yml`** pipeline (**`CompactLLMCommandGenerator`**), and **`endpoints.yml`** **`model_groups`** (same pattern as Lab 0.1). The grader **does not** start Rasa or Inspector.
+1. **Completion check (graded)**. Confirms domain (including legacy **`account`** / **`utter_ask_account`**), action, flow YAML, trained model, **`config.yml`** pipeline (**`CompactLLMCommandGenerator`**), and **`endpoints.yml`** **`model_groups`** (same pattern as Lab 0.1). The grader **does not** start Rasa or Inspector.
 2. **Rasa Inspector (recommended)**. Run the **transfer** flow and confirm **`action_process_transfer`** fires with the expected demo message (free-text **recipient**, **100-character cap** in code + flow).
 
 **Prerequisite:** **Labs 2.1 → 3.1 → 4.1** done, then **Lab 5.1** so `level4/models/` contains a `.tar.gz` file.
@@ -45,7 +45,7 @@
 | 4 | `savings` *(or e.g. `1234`)* | **account_from** filled; agent runs **`action_process_transfer`**. |
 | 5 | *(read only)* | Final line should match the demo pattern: **`(Demo) Transfer of $… from account … to … has been processed successfully.`** |
 
-4. **Optional sanity checks**. Try **“What’s my balance?”** / **“What are your hours?”** to confirm Level 3 / Level 2 flows still work from the same `level4` model.
+4. **Optional sanity checks**. Try **“What’s my balance?”** / **“What are your hours?”** to confirm **check_balance** and **hours** still work from the same `level4` model.
 
 ---
 
@@ -53,7 +53,7 @@
 
 1. **Domain:** In **`level4/domain/basics.yml`**, use **`metadata: rephrase: False`** on **`utter_ask_amount`**, **`utter_ask_recipient`**, and **`utter_ask_account_from`** (see Lab 2.1).
 2. **Flow:** In **`level4/data/basics/transfer_money.yml`**, ensure each **`collect:`** step has a clear **`description:`** (Lab 4.1: amount, **1–100** chars for recipient, **1–120** for account_from). **Retrain** after edits.
-3. **Pipeline (most common fix for repeated failures):** Use this repo’s **`level4/config.yml`** with **`CompactLLMCommandGenerator`**. Chapter 1.3 **`level3`** uses **`SearchReadyLLMCommandGenerator`**, whose prompts can teach **`set slot transfer_money_amount …`** or **`set slot transfer_money_recipient …`**—but your domain slots are named **`amount`**, **`recipient`**, and **`account_from`** only. The command processor then **drops** those commands (`skip_command_slot_not_in_domain` in logs) and you get *unable to understand you*. **Fix:** align **`level4/config.yml`** with this repo, run **`python -m rasa train`** from **`level4`**, **restart** Inspector so it loads the **new** `.tar.gz`. Background is in **Unit 0.2** (section 2) in this chapter.
+3. **Pipeline (most common fix for repeated failures):** Use this repo’s **`level4/config.yml`** with **`CompactLLMCommandGenerator`**. A **`SearchReadyLLMCommandGenerator`** setup can teach **`set slot transfer_money_amount …`** or **`set slot transfer_money_recipient …`**—but your domain slots are named **`amount`**, **`recipient`**, and **`account_from`** only. The command processor then **drops** those commands (`skip_command_slot_not_in_domain` in logs) and you get *unable to understand you*. **Fix:** align **`level4/config.yml`** with this repo, run **`python -m rasa train`** from **`level4`**, **restart** Inspector so it loads the **new** `.tar.gz`. Background is in **Unit 0.2** (section 2) in this chapter.
 4. **Confirm in logs (optional):** If you see **`SetSlotCommand(name='transfer_money_amount', …)`** or **`transfer_money_recipient`** while the domain defines **`amount`** / **`recipient`**, you are hitting the naming mismatch above—**retrain** with **`CompactLLMCommandGenerator`**, not a domain rename.
 
 ---

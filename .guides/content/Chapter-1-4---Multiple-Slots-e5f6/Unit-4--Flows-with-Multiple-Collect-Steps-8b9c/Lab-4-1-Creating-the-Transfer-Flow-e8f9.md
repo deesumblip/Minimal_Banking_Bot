@@ -1,4 +1,4 @@
-**Starting point:** Chapter 1.4 assumes you began with the **final banking agent at the end of Chapter 1.3** and are extending **`level4/`** (see **Unit 0.1**).
+**Starting point:** Work in **`level4/`** (see **Unit 0.1**).
 
 In Unit 4 you saw an example `transfer_money` flow: YAML with three `collect:` steps and one `action:` step. You already added the slots and ask responses in the domain (**Lab 2.1**) and created the action (**Lab 3.1**). In this lab you add the flow file: `level4/data/basics/transfer_money.yml`, ending with `action_process_transfer`.
 

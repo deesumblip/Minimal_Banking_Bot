@@ -1,8 +1,8 @@
 **Objective.** In Unit 2 you saw an example of the slots, ask responses, and action registration for the transfer flow. In this lab you will add your own version to `level4/domain/basics.yml`:
 
-**Starting point:** Your **`level4/`** folder should be a copy of your **final Chapter 1.3 agent** in **`level3/`** (see **Unit 0.1**). You are **adding** transfer domain fields on top of that baseline, not replacing the whole project.
+**Starting point:** Your **`level4/`** folder should already include the baseline banking agent (**Unit 0.1**). You are **adding** transfer domain fields on top of that baseline, not replacing the whole project.
 
-**Prerequisite:** Complete **Lab 0.1**: fill-in-the-blanks for **`config.yml`** and **`endpoints.yml`**, paste into **`level4/`**, pass the **Code Test** (Chapter 1.4 Unit 0). See **Unit 0.2** for the full pipeline checklist. If you only copied **`level3/` → `level4/`** without Lab 0.1, do that lab **before** this one.
+**Prerequisite:** Complete **Lab 0.1**: fill-in-the-blanks for **`config.yml`** and **`endpoints.yml`**, paste into **`level4/`**, pass the **Code Test** (Chapter 1.4 Unit 0). See **Unit 0.2** for the full pipeline checklist. If you **skipped Lab 0.1**, do that lab **before** this one.
 
 - Add the slots `amount`, `recipient`, and `account_from`
 - Add the ask responses `utter_ask_amount`, `utter_ask_recipient`, and `utter_ask_account_from`
@@ -10,7 +10,7 @@
 
 ## Step-by-Step Instructions
 
-**Step 1.** Open `domain/basics.yml` in the `level4` folder. You should see your Level 3 content (slots with account, responses, actions).
+**Step 1.** Open `domain/basics.yml` in the `level4` folder. You should see your existing content (slots with `account`, responses, actions).
 
 **Step 2.** Add the three new slots under the existing `slots:` section (after `account`):
 
@@ -45,13 +45,13 @@ Use 2-space indentation. Each slot has `type: text`.
         rephrase: False
 ```
 
-**Why `rephrase: False` here?** With Rasa Pro (CALM), slot collection works best when these ask prompts stay fixed. If `rephrase: True` on `utter_ask_*` during collection, the model may reword the question; the command generator can then mis-map the user’s reply (especially free-text **recipient** or **account_from**) and respond with *“I’m sorry I am unable to understand you…”*. Chapter 1.4 uses **`CompactLLMCommandGenerator`** in `level4/config.yml` (while **`level3/`** may still use **`SearchReadyLLMCommandGenerator`**). Either way, keep **`rephrase: False`** on these three responses. You can leave `rephrase: True` on greetings and help text if you prefer.
+**Why `rephrase: False` here?** With Rasa Pro (CALM), slot collection works best when these ask prompts stay fixed. If `rephrase: True` on `utter_ask_*` during collection, the model may reword the question; the command generator can then mis-map the user’s reply (especially free-text **recipient** or **account_from**) and respond with *“I’m sorry I am unable to understand you…”*. **`level4/config.yml`** must use **`CompactLLMCommandGenerator`** for this chapter (**Unit 0.2**). Keep **`rephrase: False`** on these three responses. You can leave `rephrase: True` on greetings and help text if you prefer.
 
 Naming: `utter_ask_<slot_name>` for each slot.
 
 **Step 4.** Add `action_process_transfer` to the `actions:` list.
 
-**Important:** Keep **every** action your Level 3 flows still use. The `holiday_hours` flow calls `action_holiday_hours`; if you remove it from the domain, `rasa train` will fail. Include all of the following:
+**Important:** Keep **every** action your existing flows still use. The `holiday_hours` flow calls `action_holiday_hours`; if you remove it from the domain, `rasa train` will fail. Include all of the following:
 
 ```yaml
 actions:
@@ -68,7 +68,7 @@ You will create the file `action_process_transfer.py` in Lab 3.1; here you only 
 - `slots:` with `account`, `amount`, `recipient`, `account_from`
 - `utter_ask_amount`, `utter_ask_recipient`, `utter_ask_account_from` under `responses:`
 - `action_process_transfer` in the `actions:` list **together with** `action_bank_hours`, `action_holiday_hours`, and `action_check_balance_simple`
-- Valid YAML and all Level 3 content unchanged
+- Valid YAML and all existing non-transfer content unchanged
 
 ---
 

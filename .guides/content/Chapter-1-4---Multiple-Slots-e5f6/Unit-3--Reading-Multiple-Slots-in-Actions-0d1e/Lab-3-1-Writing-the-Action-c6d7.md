@@ -1,4 +1,4 @@
-**Starting point:** Chapter 1.4 assumes you began with the **final banking agent at the end of Chapter 1.3** and are extending **`level4/`** (see **Unit 0.1**).
+**Starting point:** Work in **`level4/`** (see **Unit 0.1**).
 
 In this lab you finish the action that **Lab 2.1** already registered in the domain. You will create `action_process_transfer.py`. The action reads the `amount`, `recipient`, and `account_from` slots and handles placeholder values, as you saw in **Unit 3.1** (*Example: Complete action class*).
 
@@ -8,7 +8,7 @@ You do **not** need to activate the virtual environment for this lab, **Check It
 
 #### Complete the action file (fill in the blanks)
 
-The exercise uses the same pieces you saw in Level 2 (*The Action Class Deep Dive*), Chapter 1.3 **Lab 4.1** (`action_check_balance_simple`), and **Unit 3.1** (`tracker.get_slot`, placeholders, **100-character** cap on `recipient`). **Twelve blanks** cover imports, class, `name()`, return type, three slot reads (including **`[:100]`** on recipient), the placeholder `if`, messages, and `return []`. Complete every blank, then **copy the full script** into `level4/actions/action_process_transfer.py`. Run the **Code Test** when the file is saved.
+The exercise uses the same pieces you saw in *The Action Class Deep Dive*, the **check-balance** action pattern (`action_check_balance_simple`), and **Unit 3.1** (`tracker.get_slot`, placeholders, **100-character** cap on `recipient`). **Twelve blanks** cover imports, class, `name()`, return type, three slot reads (including **`[:100]`** on recipient), the placeholder `if`, messages, and `return []`. Complete every blank, then **copy the full script** into `level4/actions/action_process_transfer.py`. Run the **Code Test** when the file is saved.
 
 {Check It!|assessment}(fill-in-the-blanks-401030010)
 
