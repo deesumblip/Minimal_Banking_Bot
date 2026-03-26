@@ -1,18 +1,16 @@
-Chapter 1.4 builds on the **final agent at the end of Chapter 1.3** (see **`Level4_Unit0_Content_0.1_Your-Level-3-Banking-Agent.md`**).
+Chapter 1.4 builds on the **final agent at the end of Chapter 1.3** (see **Unit 0.1**).
 
 Level 4 adds **multiple slots** in one flow: the agent remembers several values in a single conversation and uses them together in one action.
 
 **How to read this page**
 
-- Your **starting point** is always **Chapter 1.3 completion** (see **`Level4_Unit0_Content_0.1_Your-Level-3-Banking-Agent.md`** and **Chapter 1.3 end state** below). From there you **add** transfer-related domain fields, a new action, and a new flow, then align pipeline files in **`level4/`**, train, and test.
+- Your **starting point** is always **Chapter 1.3 completion** (see **Unit 0.1** and **Chapter 1.3 end state** below). From there you **add** transfer-related domain fields, a new action, and a new flow, then align pipeline files in **`level4/`**, train, and test.
 - **If you copied `level3/` → `level4/` yourself:** Work through **section 2** (pipeline), then **section 3** (lab deliverables), and use **section 4** as a final check.
-- **If you are using this course repository:** **`level4/`** starts as the **Chapter 1.3 completion** snapshot (see **`Level4_Unit0_Content_0.1_Your-Level-3-Banking-Agent.md`**). You still complete every lab so *you* produce the pipeline files, domain, action, and flow. When you are done, your tree should match the **Chapter 1.4 end state** described here.
+- **If you are using this course repository:** **`level4/`** starts as the **Chapter 1.3 completion** snapshot (see **Unit 0.1**). You still complete every lab so *you* produce the pipeline files, domain, action, and flow. When you are done, your tree should match the **Chapter 1.4 end state** described here.
 
 Your Level 3 behavior stays in place; you **add** the transfer flow and align **`level4/`** pipeline files so CALM can fill free-text slots reliably. The sections below are the **full checklist** from **Chapter 1.3 end** through **Chapter 1.4 end**. Step-by-step instructions live on each lab page.
 
 **Implementation order:** pipeline (**Lab 0.1** — fill-in-the-blanks + paste **`config.yml`** / **`endpoints.yml`**), then domain (Lab 2.1), then action (Lab 3.1), then flow (Lab 4.1), then train and test (Labs 5.1 and 5.2). The table in **section 3** spells out files and changes. **Hands-on pipeline:** see **Lab 0.1** in Unit 0 (same pattern as Lab 3.1: blanks → paste → code test).
-
-**Reference:** **`LEVEL3_TO_LEVEL4_FILE_DELTA.md`** *—repository Markdown; not a guide page*
 
 ---
 
@@ -52,7 +50,7 @@ These differ from Chapter 1.3 **on purpose**. Skipping them often causes **“un
 | **`minimize_num_calls`** | *(default / omitted)* | **`false`** (as in course repo) |
 | **`flow_retrieval`** | *(often omitted)* | **`turns_to_embed: 5`**, **`num_flows: 20`** (keeps short turns in context) |
 
-**What to do:** Align your copied **`level4/`** with the **`level4/config.yml`** in this repo, or edit your config to match the table. Details and rationale: **`level4/PIPELINE_CHAPTER_1_3_AND_4.md`** *—repository Markdown; not a guide page*
+**What to do:** Align your copied **`level4/`** with the **`level4/config.yml`** in this repo, or edit your config to match the table. Further rationale for pipeline behavior is in **section 2** above on this page.
 
 **After any `config.yml` change:** `python -m rasa train` from **`level4/`**.
 

@@ -31,7 +31,7 @@ This assessment verifies that the student has created `level4/actions/action_pro
 
 2. **Add LLM Rubric Assessment** – Add assessment → **LLM Rubric** / **Autograde**.
 
-3. **Configure** – Use the **Instructor Provided Solution File**: `.guides/secure/level4_graders/lab_3.1_solution_reference.md`. Define rubric criteria for: file location and name; imports; class and `name()`; `run()` reading all three slots; confirmation message (and optional placeholder handling); returning `[]`. Suggested total points: 10. **Show Rationale to Student:** After 1 attempt (or Always).
+3. **Configure** – Use the **Instructor Provided Solution File** from **`.guides/secure/level4_graders/`** (lab 3.1 solution reference, next to **`lab_3.1_grader.py`**). Define rubric criteria for: file location and name; imports; class and `name()`; `run()` reading all three slots; confirmation message (and optional placeholder handling); returning `[]`. Suggested total points: 10. **Show Rationale to Student:** After 1 attempt (or Always).
 
 4. **Files tab** – Ensure the LLM can read: `/home/codio/workspace/level4/actions/action_process_transfer.py`
 
@@ -68,7 +68,7 @@ Use a Python grader for faster feedback. Output matches **Lab 6.2 / Lab 3.1** st
 
 ## Reference for rubric / grading
 
-- **Solution reference:** `.guides/secure/level4_graders/lab_3.1_solution_reference.md`
+- **Solution reference:** **`.guides/secure/level4_graders/`** (lab 3.1, alongside **`lab_3.1_grader.py`**)
 
 ### Script template (implementers only)
 

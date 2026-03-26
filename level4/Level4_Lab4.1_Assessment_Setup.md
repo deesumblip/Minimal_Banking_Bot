@@ -28,7 +28,7 @@ This assessment verifies that the student has created `level4/data/basics/transf
 
 2. **Add LLM Rubric Assessment** – Add assessment → **LLM Rubric** / **Autograde**.
 
-3. **Configure** – Use the **Instructor Provided Solution File**: `.guides/secure/level4_graders/lab_4.1_solution_reference.md`. Define rubric criteria for: file exists in level4/data/basics/; valid YAML with flows: and at least one flow with name, description, steps; steps include collect: amount, collect: recipient, collect: account_from; steps include action: action_process_transfer. Suggested total points: 8. **Show Rationale to Student:** After 1 attempt (or Always).
+3. **Configure** – Use the **Instructor Provided Solution File** from **`.guides/secure/level4_graders/`** (lab 4.1 solution reference, next to **`lab_4.1_grader.py`**). Define rubric criteria for: file exists in level4/data/basics/; valid YAML with flows: and at least one flow with name, description, steps; steps include collect: amount, collect: recipient, collect: account_from; steps include action: action_process_transfer. Suggested total points: 8. **Show Rationale to Student:** After 1 attempt (or Always).
 
 4. **Files tab** – Ensure the LLM can read: `/home/codio/workspace/level4/data/basics/transfer_money.yml`
 
@@ -65,4 +65,4 @@ Use a Python grader for faster feedback. **Lab 6.2 / Lab 3.1** output: **Check 1
 
 ## Reference for rubric / grading
 
-- **Solution reference:** `.guides/secure/level4_graders/lab_4.1_solution_reference.md`
+- **Solution reference:** **`.guides/secure/level4_graders/`** (lab 4.1, alongside **`lab_4.1_grader.py`**)

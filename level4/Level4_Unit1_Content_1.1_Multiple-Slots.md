@@ -1,4 +1,4 @@
-**Starting point:** Chapter 1.4 assumes you begin with the **final banking agent at the end of Chapter 1.3** (your **`level3/`** project). You **add** work in **`level4/`**—see **`Level4_Unit0_Content_0.1_Your-Level-3-Banking-Agent.md`** and **`Level4_Unit0_Content_0.2_What-Level-4-Adds.md`**.
+**Starting point:** Chapter 1.4 assumes you begin with the **final banking agent at the end of Chapter 1.3** (your **`level3/`** project). You **add** work in **`level4/`**—see **Unit 0.1** and **Unit 0.2**.
 
 In Level 3 you used one slot (`account`) so the agent could remember an account number for the balance check. In Level 4 you will use **multiple slots** in a single flow so the agent can remember several values at once.
 

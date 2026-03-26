@@ -28,7 +28,7 @@ After training succeeds, use **Check It!** below (Codio). Then open **Lab 5.2** 
 | Action-related errors | `level4/actions/action_process_transfer.py` (**Lab 3.1**) |
 | `No module named 'rasa'` | Activate `.venv` from the **project root**, then `cd level4` again |
 | License or API key errors | `.env` and **Lab 0.1**; confirm keys and paths for your workspace |
-| Transfer slots mis-fill; *unable to understand you* on recipient/account; log shows **`SearchReadyLLMCommandGenerator`** | **`level4/config.yml`** must use **`CompactLLMCommandGenerator`** (**Unit 0.2**). Fix config, then **`python -m rasa train`** again from **`level4`** so the **new** model embeds the right pipeline (**Lab 5.2** troubleshooting, **`PIPELINE_CHAPTER_1_3_AND_4.md`** *—repository Markdown; not a guide page*) |
+| Transfer slots mis-fill; *unable to understand you* on recipient/account; log shows **`SearchReadyLLMCommandGenerator`** | **`level4/config.yml`** must use **`CompactLLMCommandGenerator`** (**Unit 0.2**). Fix config, then **`python -m rasa train`** again from **`level4`** so the **new** model embeds the right pipeline (**Lab 5.2** troubleshooting and **Unit 0.2** section 2) |
 
 **Use Check It!** below when the steps above are complete.
 

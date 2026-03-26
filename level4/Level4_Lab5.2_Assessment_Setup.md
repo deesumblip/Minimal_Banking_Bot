@@ -58,4 +58,4 @@ The grader runs from **workspace root** (resolved from the script path). It perf
 
 ## Reference for rubric / grading
 
-- **Solution reference:** `.guides/secure/level4_graders/lab_5.2_solution_reference.md` (describes what “completion” means for each check).
+- **Solution reference:** **`.guides/secure/level4_graders/`** (lab 5.2, alongside **`lab_5.2_grader.py`** — describes what “completion” means for each check).

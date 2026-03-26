@@ -1,4 +1,4 @@
-**Starting point:** Chapter 1.4 assumes you began with the **final banking agent at the end of Chapter 1.3** and are extending **`level4/`** (see **`Level4_Unit0_Content_0.1_Your-Level-3-Banking-Agent.md`**).
+**Starting point:** Chapter 1.4 assumes you began with the **final banking agent at the end of Chapter 1.3** and are extending **`level4/`** (see **Unit 0.1**).
 
 In Unit 4 you saw an example of the transfer_money flow (YAML with three collect steps and the action step). You have already defined the slots and ask responses in the domain (Lab 2.1) and created the action (Lab 3.1). In this lab you will create your own version of the flow: `level4/data/basics/transfer_money.yml` with three collect steps and then `action_process_transfer`.
 
@@ -31,7 +31,7 @@ flows:
       - action: action_process_transfer
 ```
 
-**`always_include_in_prompt`** / **`if`** help keep this flow visible to the command generator (see **`PIPELINE_CHAPTER_1_3_AND_4.md`** *—repository Markdown; not a guide page*). Each **`collect:`** **`description:`** should stay **short** and clear. **Retrain** after saving.
+**`always_include_in_prompt`** / **`if`** help keep this flow visible to the command generator (see **Unit 0.2** section 2 in Chapter 1.4). Each **`collect:`** **`description:`** should stay **short** and clear. **Retrain** after saving.
 
 3. **Verify.** The file is in `data/basics/`, and the flow has `name`, `description`, and `steps` with the three collect steps and the action step.
 

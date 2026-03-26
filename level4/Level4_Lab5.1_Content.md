@@ -1,4 +1,4 @@
-**Starting point:** Chapter 1.4 assumes you began with the **final banking agent at the end of Chapter 1.3** and added transfer pieces in **`level4/`** (see **`Level4_Unit0_Content_0.1_Your-Level-3-Banking-Agent.md`**).
+**Starting point:** Chapter 1.4 assumes you began with the **final banking agent at the end of Chapter 1.3** and added transfer pieces in **`level4/`** (see **Unit 0.1**).
 
 **Objective.** Train your Level 4 agent from the **`level4`** folder using the same pattern as Level 3: activate the virtual environment at the **project root**, then `cd level4` and run Rasa.
 
@@ -28,7 +28,7 @@ After training succeeds, use **Check It!** in Codio (**Lab 5.1** assessment). Th
 | Action errors | `level4/actions/action_process_transfer.py` (Lab 3.1) |
 | `No module named 'rasa'` | Activate `.venv` from project root, then `cd level4` again |
 | License / API key | `.env` and Lab 0.1 |
-| Transfer slots mis-fill; *unable to understand you*; logs show **`SearchReadyLLMCommandGenerator`** | **`level4/config.yml`** must use **`CompactLLMCommandGenerator`**. Fix config, **`python -m rasa train`** again from **`level4`**, restart Inspector (**Lab 5.2**, **`PIPELINE_CHAPTER_1_3_AND_4.md`** *—repository Markdown; not a guide page*) |
+| Transfer slots mis-fill; *unable to understand you*; logs show **`SearchReadyLLMCommandGenerator`** | **`level4/config.yml`** must use **`CompactLLMCommandGenerator`**. Fix config, **`python -m rasa train`** again from **`level4`**, restart Inspector (**Lab 5.2** troubleshooting and **Unit 0.2** section 2) |
 | **Recipient** name skips or wrong; **FillSlot** flaky; **`config.yml`** already uses **Compact** | **`level4/endpoints.yml`**: **`model_groups`** for **`gpt-4o-mini`** should use **`gpt-4o-2024-11-20`** and **`temperature: 0.1`** (**Unit 0.2**). Retrain from **`level4/`** |
 
 When steps are complete, run **Check It!** for Lab 5.1 in Codio.

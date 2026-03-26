@@ -1,8 +1,8 @@
 **Objective.** In Unit 2 you saw an example of the slots, ask responses, and action registration for the transfer flow. In this lab you will add your own version to `level4/domain/basics.yml`:
 
-**Starting point:** Your **`level4/`** folder should be a copy of your **final Chapter 1.3 agent** in **`level3/`** (see **`Level4_Unit0_Content_0.1_Your-Level-3-Banking-Agent.md`**). You are **adding** transfer domain fields on top of that baseline, not replacing the whole project.
+**Starting point:** Your **`level4/`** folder should be a copy of your **final Chapter 1.3 agent** in **`level3/`** (see **Unit 0.1**). You are **adding** transfer domain fields on top of that baseline, not replacing the whole project.
 
-**Prerequisite:** Complete **`Level4_Lab0.1_Content.md`** (**Lab 0.1**): fill-in-the-blanks for **`config.yml`** and **`endpoints.yml`**, paste into **`level4/`**, pass the **Code Test** (Chapter 1.4 Unit 0). See **`Level4_Unit0_Content_0.2_What-Level-4-Adds.md`** for the full pipeline checklist. If you only copied **`level3/` → `level4/`** without Lab 0.1, do that lab **before** this one.
+**Prerequisite:** Complete **Lab 0.1**: fill-in-the-blanks for **`config.yml`** and **`endpoints.yml`**, paste into **`level4/`**, pass the **Code Test** (Chapter 1.4 Unit 0). See **Unit 0.2** for the full pipeline checklist. If you only copied **`level3/` → `level4/`** without Lab 0.1, do that lab **before** this one.
 
 - Add the slots `amount`, `recipient`, and `account_from`
 - Add the ask responses `utter_ask_amount`, `utter_ask_recipient`, and `utter_ask_account_from`

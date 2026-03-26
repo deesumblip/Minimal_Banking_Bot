@@ -7,4 +7,4 @@ Students produce **`level4/config.yml`** and **`level4/endpoints.yml`** via **fi
 - `level4/config.yml`
 - `level4/endpoints.yml`
 
-Details and rationale: **`level4/PIPELINE_CHAPTER_1_3_AND_4.md`**, **Unit 0.2** (`Level4_Unit0_Content_0.2_What-Level-4-Adds.md`).
+Details and rationale: **Unit 0.2** in the Chapter 1.4 guide (pipeline section).

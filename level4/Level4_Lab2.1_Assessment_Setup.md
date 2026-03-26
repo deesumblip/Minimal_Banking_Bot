@@ -28,7 +28,7 @@ This assessment verifies that the student has added the slots `amount`, `recipie
 
 2. **Add LLM Rubric Assessment.** Add assessment, then **LLM Rubric** / **Autograde**.
 
-3. **Configure** – Use the **Instructor Provided Solution File**: `.guides/secure/level4_graders/lab_2.1_solution_reference.md` (or `/home/codio/workspace/.guides/secure/level4_graders/lab_2.1_solution_reference.md`). Define rubric criteria for: slots section with amount, recipient, account_from; utter_ask_amount, utter_ask_recipient, utter_ask_account_from with at least one text each; action_process_transfer in actions; valid YAML and Level 3 content preserved. Suggested total points: 10. **Show Rationale to Student:** After 1 attempt (or Always).
+3. **Configure** – Use the **Instructor Provided Solution File** from **`.guides/secure/level4_graders/`** (lab 2.1 solution reference, next to **`lab_2.1_grader.py`**). Define rubric criteria for: slots section with amount, recipient, account_from; utter_ask_amount, utter_ask_recipient, utter_ask_account_from with at least one text each; action_process_transfer in actions; valid YAML and Level 3 content preserved. Suggested total points: 10. **Show Rationale to Student:** After 1 attempt (or Always).
 
 4. **Files tab** – Ensure the LLM can read: `/home/codio/workspace/level4/domain/basics.yml`
 
@@ -65,4 +65,4 @@ Use a Python grader for faster feedback. Output matches the **Chapter 1.2 Lab 6.
 
 ## Reference for rubric / grading
 
-- **Solution reference:** `.guides/secure/level4_graders/lab_2.1_solution_reference.md`
+- **Solution reference:** **`.guides/secure/level4_graders/`** (lab 2.1, alongside **`lab_2.1_grader.py`**)

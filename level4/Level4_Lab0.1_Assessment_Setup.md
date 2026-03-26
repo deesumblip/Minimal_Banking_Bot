@@ -4,7 +4,7 @@
 
 **Placement.** **Unit 0** (Level 4 / Chapter 1.4), after **0.2 What Level 4 Adds**. Students complete **fill-in-the-blanks**, paste into **`level4/config.yml`** and **`level4/endpoints.yml`**, then run the **Code Test**. Same pattern as **Lab 3.1** (blanks → paste → grader).
 
-**Codio guide.** `Lab-0-1-Pipeline-config-and-endpoints-c0d1.md` includes `{Check It!|assessment}(fill-in-the-blanks-401010010)` and `{Check It!|assessment}(code-output-compare-401010001)`.
+**Codio guide.** The **Lab 0.1** page (Unit 0 in Chapter 1.4) includes `{Check It!|assessment}(fill-in-the-blanks-401010010)` and `{Check It!|assessment}(code-output-compare-401010001)`.
 
 ---
 
@@ -30,4 +30,4 @@ Two assessments: **Fill in the Blanks** (5 points), then **Standard Code Test** 
 
 ### Reference
 
-- **Solution reference:** `.guides/secure/level4_graders/lab_0.1_solution_reference.md`
+- **Solution reference:** instructor rubric input alongside **`lab_0.1_grader.py`** in **`.guides/secure/level4_graders/`**

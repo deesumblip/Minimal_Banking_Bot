@@ -4,7 +4,7 @@
 
 **Starting point:** The **`level4/`** folder in this repository is initialized to the **Chapter 1.3 completion** state: same **`config.yml`** / **`endpoints.yml`** pattern as **`level3/`** (SearchReady + Level 3 endpoints), same domain ( **`account`** slot, **`utter_ask_account`**, Level 2–3 actions), **`check_balance.yml`**, and **`action_check_balance_simple.py`**. There is **no** transfer flow or **`action_process_transfer`** until you complete the Chapter 1.4 labs.
 
-**What you build in Chapter 1.4:** **Lab 0.1** (pipeline YAML) → **Lab 2.1** (transfer slots + asks + register action) → **Lab 3.1** (action file) → **Lab 4.1** (`transfer_money.yml`) → **Labs 5.1–5.2** (train + completion check). See **Unit 0** (`Level4_Unit0_Content_0.1` and `0.2`). After **Lab 5.1**, **`level4/models/`** holds your trained model for **Lab 5.2**.
+**What you build in Chapter 1.4:** **Lab 0.1** (pipeline YAML) → **Lab 2.1** (transfer slots + asks + register action) → **Lab 3.1** (action file) → **Lab 4.1** (`transfer_money.yml`) → **Labs 5.1–5.2** (train + completion check). See **Unit 0.1** and **Unit 0.2** in the Chapter 1.4 guide. After **Lab 5.1**, **`level4/models/`** holds your trained model for **Lab 5.2**.
 
 **Repository note:** Graders in **`.guides/secure/level4_graders/`** expect the **finished** Chapter 1.4 tree when run for assessment validation; your workspace should match that **after** you complete the labs (or use a separate copy for grading). The **committed** **`level4/`** bot is the **starter** so you can see exactly what Chapter 1.3 leaves you with.
 
@@ -19,9 +19,9 @@
 
 **Important:** This level builds on your Level 3 banking agent. You don't start from scratch. You use the **same virtual environment** created in Level 1 (in the **project root**). There is no new `.venv` inside `level4/`.
 
-**Pipeline:** The checked-in **`level4/`** starter matches **`level3/`** (**`SearchReadyLLMCommandGenerator`** + Level 3-style **`endpoints.yml`**). **Lab 0.1** switches **`level4/`** to **`CompactLLMCommandGenerator`** and the Chapter 1.4 **`endpoints.yml`** (same **`gpt-4o-mini`** group **id**, **`gpt-4o-2024-11-20`**, **`temperature: 0.1`**) so multi-slot / free-text collection behaves—see **`PIPELINE_CHAPTER_1_3_AND_4.md`** and **Unit 0.2**. **Level 3 is not modified.**
+**Pipeline:** The checked-in **`level4/`** starter matches **`level3/`** (**`SearchReadyLLMCommandGenerator`** + Level 3-style **`endpoints.yml`**). **Lab 0.1** switches **`level4/`** to **`CompactLLMCommandGenerator`** and the Chapter 1.4 **`endpoints.yml`** (same **`gpt-4o-mini`** group **id**, **`gpt-4o-2024-11-20`**, **`temperature: 0.1`**) so multi-slot / free-text collection behaves—see **Unit 0.2** (section 2) in the Chapter 1.4 guide. **Level 3 is not modified.**
 
-**Full delta (Ch 1.3 end → Ch 1.4 end):** **`Level4_Unit0_Content_0.2_What-Level-4-Adds.md`** (pipeline, labs, summary in one place). **File checklist:** **`LEVEL3_TO_LEVEL4_FILE_DELTA.md`**.
+**Full delta (Ch 1.3 end → Ch 1.4 end):** **Unit 0.2** in the Chapter 1.4 guide (pipeline, labs, summary tables in one place).
 
 In the labs you **add** the following in **`level4/`** (on top of the **final banking agent at the end of Chapter 1.3**—your **`level3/`** project).
 

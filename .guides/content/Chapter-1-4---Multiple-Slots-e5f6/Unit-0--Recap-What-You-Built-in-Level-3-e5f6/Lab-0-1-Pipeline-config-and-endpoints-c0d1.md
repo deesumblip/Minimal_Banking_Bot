@@ -10,7 +10,7 @@ You do **not** need to activate the virtual environment for the fill-in or code 
 
 #### Part 1 — Fill in the blanks
 
-The exercise has **Part A** (`config.yml`) and **Part B** (`endpoints.yml`). It matches **Unit 0.2** and (for extra depth) **`level4/PIPELINE_CHAPTER_1_3_AND_4.md`** *—repository Markdown; not a guide page*.
+The exercise has **Part A** (`config.yml`) and **Part B** (`endpoints.yml`). It matches **Unit 0.2** (pipeline and endpoints).
 
 {Check It!|assessment}(fill-in-the-blanks-401010010)
 

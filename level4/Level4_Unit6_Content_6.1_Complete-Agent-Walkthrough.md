@@ -1,4 +1,4 @@
-**Starting point:** Chapter 1.4 assumed you began with the **final banking agent at the end of Chapter 1.3**; you then **added** the transfer flow in **`level4/`** (see **`Level4_Unit0_Content_0.1_Your-Level-3-Banking-Agent.md`**).
+**Starting point:** Chapter 1.4 assumed you began with the **final banking agent at the end of Chapter 1.3**; you then **added** the transfer flow in **`level4/`** (see **Unit 0.1**).
 
 You now have a **Level 4** assistant: same **Level 3** behavior, plus a **transfer** flow that collects **three** slots and runs **`action_process_transfer`**.
 
