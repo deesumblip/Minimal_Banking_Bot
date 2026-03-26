@@ -46,14 +46,14 @@
 				"5",
 				"20",
 				"FlowPolicy",
-				"\"actions\"",
+				"actions",
 				"rephrase",
 				"openai",
 				"gpt-4o-2024-11-20",
 				"0.1"
 			],
 			"text": [
-				"Complete the Chapter 1.4 pipeline files.\n\n**Part A — `level4/config.yml`**\n\n```yaml\nrecipe: default.v1\nlanguage: en\nassistant_id: ",
+				"Complete the Chapter 1.4 pipeline files.\n\n**Part A — config.yml** (save as `level4/config.yml`)\n\n```yaml\nrecipe: default.v1\nlanguage: en\nassistant_id: ",
 				0,
 				"\n\npipeline:\n  - name: ",
 				1,
