@@ -6,9 +6,9 @@ Use this file as the **Instructor Provided Solution File** in Codio's LLM Rubric
 
 ## Required changes in level4/domain/basics.yml
 
-1. **slots: section** – Must contain (in addition to any existing slots such as `account`) the three transfer slots: `amount`, `recipient`, `account_from`, each with `type: text` (or equivalent).
+1. **slots: section** – Must contain the **`account`** slot (Level 3) and the three transfer slots: `amount`, `recipient`, `account_from`, each with `type: text` (or equivalent).
 
-2. **Ask responses** – Under `responses:`, add:
+2. **Ask responses** – Under `responses:`, keep **`utter_ask_account`** (Level 3) and add:
    - `utter_ask_amount` with at least one text (e.g. "How much would you like to transfer?")
    - `utter_ask_recipient` with at least one text (e.g. "Who would you like to transfer money to?")
    - `utter_ask_account_from` with at least one text (e.g. "Which account would you like to transfer from?")

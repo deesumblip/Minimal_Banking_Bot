@@ -2,7 +2,7 @@
 
 **Unit 5, Lab 5.2.** You already **trained** the agent in **Lab 5.1**. This lab has two parts in order:
 
-1. **Completion check (graded)**. Confirms domain, action, flow YAML, trained model, and **`config.yml`** pipeline (**`CompactLLMCommandGenerator`**). The grader **does not** parse **`endpoints.yml`** and **does not** start Rasa or Inspector.
+1. **Completion check (graded)**. Confirms domain (including Level 3 **`account`** / **`utter_ask_account`**), action, flow YAML, trained model, **`config.yml`** pipeline (**`CompactLLMCommandGenerator`**), and **`endpoints.yml`** **`model_groups`** (same pattern as Lab 0.1). The grader **does not** start Rasa or Inspector.
 2. **Rasa Inspector (recommended)**. Run the **transfer** flow and confirm **`action_process_transfer`** fires with the expected demo message (free-text **recipient**, **100-character cap** in code + flow).
 
 **Prerequisite:** **Labs 2.1 → 3.1 → 4.1** done, then **Lab 5.1** so `level4/models/` contains a `.tar.gz` file.
@@ -12,13 +12,14 @@
 ## Part 1: Completion check (Codio)
 
 1. Use **Check It!** below. The grader verifies:
-   - **Domain:** slots `amount`, `recipient`, `account_from`; `utter_ask_amount`, `utter_ask_recipient`, `utter_ask_account_from`; `action_bank_hours`, `action_holiday_hours`, `action_check_balance_simple`, and `action_process_transfer` in `actions:` (see Lab 2.1)
-   - **Action:** `level4/actions/action_process_transfer.py` reads the three slots (via `get_slot`)
+   - **Domain:** slots `amount`, `recipient`, `account_from`, `account`; `utter_ask_amount`, `utter_ask_recipient`, `utter_ask_account_from`, `utter_ask_account`; `action_bank_hours`, `action_holiday_hours`, `action_check_balance_simple`, and `action_process_transfer` in `actions:` (see Lab 2.1)
+   - **Action:** `level4/actions/action_process_transfer.py` reads the three transfer slots (via `get_slot`)
    - **Flow:** `level4/data/basics/transfer_money.yml` has the three `collect:` steps and `action: action_process_transfer`
    - **Model:** at least one `.tar.gz` under `level4/models/`
    - **Config:** `level4/config.yml` **`pipeline:`** uses **`CompactLLMCommandGenerator`** (not **`SearchReadyLLMCommandGenerator`**)
+   - **Endpoints:** `level4/endpoints.yml` — under **`model_groups`**, **`id: gpt-4o-mini`** uses **`model: gpt-4o-2024-11-20`** and **`temperature: 0.1`** (**Unit 0.2** / Lab 0.1)
 
-**Endpoints (hands-on):** The completion check does **not** verify **`endpoints.yml`**. For **Part 2 (Inspector)**, free-text **recipient** stays reliable only if **`level4/endpoints.yml`** matches the course pattern: under **`model_groups`**, **`id: gpt-4o-mini`** uses **`model: gpt-4o-2024-11-20`** and **`temperature: 0.1`** (**Unit 0.2**). A literal **`gpt-4o-mini-…`** model with high **temperature** often mis-fills slots even when **`config.yml`** is correct.
+**Inspector:** If the completion check passes but **Part 2** still mis-fills **recipient**, double-check **`endpoints.yml`** and **`config.yml`** against **Unit 0.2** and retrain from **`level4/`**.
 
 {Check It!|assessment}(code-output-compare-401050002)
 

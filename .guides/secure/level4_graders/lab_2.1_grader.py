@@ -4,17 +4,23 @@ Lab 2.1: Adding Multiple Slots in the Domain - Grader Script
 Output format matches Chapter 1.2 Lab 6.2 template (leading space on PASSED lines,
 no emoji on pass; ❌ on fail; ========== summary band; exit 0 only on full score).
 
-Checks level4/domain/basics.yml for: slots amount, recipient, account_from;
-utter_ask_amount, utter_ask_recipient, utter_ask_account_from; action_process_transfer in actions;
+Checks level4/domain/basics.yml for: slots amount, recipient, account_from, account (Level 3);
+utter_ask_amount, utter_ask_recipient, utter_ask_account_from, utter_ask_account; action_process_transfer in actions;
 and Level 3 actions preserved (action_bank_hours, action_holiday_hours, action_check_balance_simple)
 so training does not fail when holiday_hours.yml references action_holiday_hours.
-Runs from workspace root; expects /home/codio/workspace.
+Runs from repo root (workspace); path resolved from this script location.
 """
 
 import sys
 from pathlib import Path
 
-WORKSPACE_ROOT = Path("/home/codio/workspace")
+if hasattr(sys.stdout, "reconfigure"):
+    try:
+        sys.stdout.reconfigure(encoding="utf-8")
+    except Exception:
+        pass
+
+WORKSPACE_ROOT = Path(__file__).resolve().parent.parent.parent.parent
 DOMAIN_PATH = WORKSPACE_ROOT / "level4" / "domain" / "basics.yml"
 
 try:
@@ -61,21 +67,29 @@ actions = data.get("actions")
 if not isinstance(actions, list):
     actions = []
 
-# Check 2: slots amount, recipient, account_from (3 points)
-print("Check 2: Verifying slots amount, recipient, account_from...")
-required_slots = ["amount", "recipient", "account_from"]
+# Check 2: slots amount, recipient, account_from, account (3 points) — account preserves check_balance flow
+print("Check 2: Verifying slots amount, recipient, account_from, account...")
+required_slots = ["amount", "recipient", "account_from", "account"]
 missing_slots = [s for s in required_slots if s not in slots]
 if not missing_slots:
-    print(" Check 2: PASSED - all three slots present (3 points)")
+    print(" Check 2: PASSED - transfer slots and account slot present (3 points)")
     score += 3
 else:
     print(f"❌ Check 2: FAILED - missing slots: {missing_slots} (0 points)")
-    print("Hint: Add amount, recipient, account_from under slots: with type: text")
+    print(
+        "Hint: Add amount, recipient, account_from, account under slots: with type: text "
+        "(keep account from Level 3 for check_balance)"
+    )
 print("")
 
-# Check 3: utter_ask_amount, utter_ask_recipient, utter_ask_account_from (3 points)
+# Check 3: transfer asks + utter_ask_account (3 points)
 print("Check 3: Verifying ask responses...")
-required_asks = ["utter_ask_amount", "utter_ask_recipient", "utter_ask_account_from"]
+required_asks = [
+    "utter_ask_amount",
+    "utter_ask_recipient",
+    "utter_ask_account_from",
+    "utter_ask_account",
+]
 missing_asks = []
 for r in required_asks:
     if r not in responses:
@@ -86,12 +100,12 @@ for r in required_asks:
         if not has_text:
             missing_asks.append(r)
 if not missing_asks:
-    print(" Check 3: PASSED - all three ask responses present (3 points)")
+    print(" Check 3: PASSED - transfer asks and utter_ask_account present (3 points)")
     score += 3
 else:
     print(f"❌ Check 3: FAILED - missing or empty ask responses: {missing_asks} (0 points)")
     print(
-        "Hint: Add utter_ask_amount, utter_ask_recipient, utter_ask_account_from "
+        "Hint: Add utter_ask_amount, utter_ask_recipient, utter_ask_account_from, utter_ask_account "
         "under responses: with - text: '...'"
     )
 print("")

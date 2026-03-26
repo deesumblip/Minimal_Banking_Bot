@@ -4,7 +4,7 @@
 
 **Placement.** This lab follows Unit 3: Adding Slots and Responses for Transfer (Level 4).
 
-**Task.** In `domain/basics.yml` in the `level4` folder, add the slots `amount`, `recipient`, and `account_from` (each type text), the responses `utter_ask_amount`, `utter_ask_recipient`, and `utter_ask_account_from`, and register `action_process_transfer` in the `actions:` list. You will create the action file in Lab 3.1. Run the assessment when done.
+**Task.** In `domain/basics.yml` in the `level4` folder, add the slots `amount`, `recipient`, and `account_from` (each type text), keep the Level 3 **`account`** slot and **`utter_ask_account`** response, add `utter_ask_amount`, `utter_ask_recipient`, and `utter_ask_account_from`, and register `action_process_transfer` in the `actions:` list. You will create the action file in Lab 3.1. Run the assessment when done.
 
 **Codio guide (Chapter 1.4).** The Lab 2.1 page in the Chapter 1.4 guide includes: `{Check It!|assessment}(code-output-compare-401020001)`. Assessment JSON: `.guides/assessments/code-output-compare-401020001.json`.
 
@@ -14,7 +14,7 @@
 
 ### Overview
 
-This assessment verifies that the student has added the slots `amount`, `recipient`, and `account_from` to the `slots:` section, the three ask responses under `responses:`, and `action_process_transfer` in the `actions:` list in `level4/domain/basics.yml`, and that **Level 2/3 actions** (`action_bank_hours`, `action_holiday_hours`, `action_check_balance_simple`) were **not removed** when adding the transfer action (otherwise `rasa train` fails because flows still reference them).
+This assessment verifies that the student has added the slots `amount`, `recipient`, and `account_from` to the `slots:` section (and kept **`account`**), the four ask responses (`utter_ask_amount`, `utter_ask_recipient`, `utter_ask_account_from`, **`utter_ask_account`**) under `responses:`, and `action_process_transfer` in the `actions:` list in `level4/domain/basics.yml`, and that **Level 2/3 actions** (`action_bank_hours`, `action_holiday_hours`, `action_check_balance_simple`) were **not removed** when adding the transfer action (otherwise `rasa train` fails because flows still reference them).
 
 ### Assessment Type
 
@@ -38,7 +38,7 @@ This assessment verifies that the student has added the slots `amount`, `recipie
 
 ### Option B: Standard Code Test (Python script)
 
-Use a Python grader for faster feedback. Output matches the **Chapter 1.2 Lab 6.2** template (same as **Level 3 Lab 3.1**): **Check 1–5** (1-based), leading space on pass lines (` Check N: PASSED - …`), **==========================================** score band, **` PASS: Lab 2.1 verification complete! Score: 12/12`** on full pass; exit **0** only on **12/12**. The script parses `level4/domain/basics.yml` and checks: file exists; valid YAML; `slots:` contains `amount`, `recipient`, `account_from`; `responses:` has the three ask utterances with text; `action_process_transfer` in `actions:`; **Level 3 actions** `action_bank_hours`, `action_holiday_hours`, `action_check_balance_simple` still in `actions:`.
+Use a Python grader for faster feedback. Output matches the **Chapter 1.2 Lab 6.2** template (same as **Level 3 Lab 3.1**): **Check 1–5** (1-based), leading space on pass lines (` Check N: PASSED - …`), **==========================================** score band, **` PASS: Lab 2.1 verification complete! Score: 12/12`** on full pass; exit **0** only on **12/12**. The script parses `level4/domain/basics.yml` and checks: file exists; valid YAML; `slots:` contains `amount`, `recipient`, `account_from`, and **`account`**; `responses:` has the four ask utterances (including **`utter_ask_account`**) with text; `action_process_transfer` in `actions:`; **Level 3 actions** `action_bank_hours`, `action_holiday_hours`, `action_check_balance_simple` still in `actions:`.
 
 **Grader script location (in repo):**
 
