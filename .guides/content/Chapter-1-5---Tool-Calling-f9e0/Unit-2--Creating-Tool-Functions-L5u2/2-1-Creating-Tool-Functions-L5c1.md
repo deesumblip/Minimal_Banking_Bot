@@ -14,7 +14,7 @@ Below is one full example. The LLM uses the **function name** and **docstring** 
 
 In **`tools/banking_tools.py`** you might define:
 
-
+```python
 __all__ = ["check_balance", "process_transfer", "get_account_info"]
 
 
@@ -36,5 +36,6 @@ def check_balance(account: str):
         "currency": "USD",
         "status": "active"
     }
+```
 
 You will add two more functions following the same pattern: **`process_transfer(amount, from_account, to_account)`** (returns a dict with success/message) and **`get_account_info(account)`** (returns a dict with account details). Each needs a clear docstring so the LLM knows when to call it. The **`__all__`** list at the top tells Rasa which functions to expose as tools. In **Lab 2.1** you will create the **`tools/`** folder and **`banking_tools.py`** with all three tools and **`__all__`**.

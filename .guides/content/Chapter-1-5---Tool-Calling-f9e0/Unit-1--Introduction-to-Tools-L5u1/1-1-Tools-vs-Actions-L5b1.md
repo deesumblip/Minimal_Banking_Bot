@@ -19,7 +19,7 @@ In Chapter 1.5 you add **tools** alongside your existing actions. The **`transfe
 
 In Chapter 1.4 a flow step explicitly calls an action. For example, in a transfer flow you might see:
 
-
+```yaml
 steps:
   - collect: amount
     description: "amount to transfer"
@@ -28,6 +28,7 @@ steps:
   - collect: account_from
     description: "source account"
   - action: action_process_transfer
+```
 
 When the flow reaches that last step, the agent **always** runs `action_process_transfer`. There is no choice at runtime.
 
@@ -35,9 +36,10 @@ When the flow reaches that last step, the agent **always** runs `action_process_
 
 Tools are plain Python functions in a `tools/` module. The LLM sees their names and docstrings and decides when to call them. For example, in `tools/banking_tools.py` you will have functions like:
 
-
+```python
 def check_balance(account: str) -> dict:
     """Check the balance for a given account."""
     return {"account": account, "balance": 1234.56, "currency": "USD"}
+```
 
 The flow does **not** list this function. The LLM chooses to call it when the user’s message matches the tool’s intent. In the next units you will create a full **`tools`** module and register it in **`endpoints.yml`**, then use it from a flow in **Lab 4.1**.

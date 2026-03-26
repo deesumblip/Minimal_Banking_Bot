@@ -6,9 +6,10 @@ Once you have a **`tools/`** module with tool functions, you must **register** i
 
 Add a **`tools`** section to **`endpoints.yml`**:
 
-
+```yaml
 tools:
   tools_module: "tools"
+```
 
 This tells Rasa to load the Python module named **`tools`** (the **`tools/`** folder with **`__init__.py`** and **`banking_tools.py`**). Rasa discovers any functions listed in **`__all__`** in that module and makes them available to the LLM.
 

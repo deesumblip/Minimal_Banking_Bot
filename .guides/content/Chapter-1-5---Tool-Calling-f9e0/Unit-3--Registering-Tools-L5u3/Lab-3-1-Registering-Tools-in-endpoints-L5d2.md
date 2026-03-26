@@ -8,9 +8,10 @@
 
 **Step 2.** Add a new section **tools** (e.g. after the action_endpoint or before model_groups):
 
-
+```yaml
 tools:
   tools_module: "tools"
+```
 
 Use 2-space indentation. The value `"tools"` is the name of the Python module (the `tools/` folder).
 
