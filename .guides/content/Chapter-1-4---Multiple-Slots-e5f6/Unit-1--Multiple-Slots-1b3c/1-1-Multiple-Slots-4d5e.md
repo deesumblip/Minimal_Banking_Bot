@@ -1,8 +1,8 @@
 **Starting point:** Chapter 1.4 assumes you begin with the **final banking agent at the end of Chapter 1.3** (your **`level3/`** project). You **add** work in **`level4/`**—see **Unit 0.1** and **Unit 0.2**.
 
-In Level 3 you used one slot, `account`, so the agent could remember an account number for the balance check. In Level 4 you will use **multiple slots** in a single flow so the agent can remember several values at once.
+In Level 3 you used one slot (`account`) so the agent could remember an account number for the balance check. In Level 4 you will use **multiple slots** in a single flow so the agent can remember several values at once.
 
-## Multiple Slots = Several Values in One Flow
+## Multiple slots: several values in one flow
 
 Think of the transfer flow:
 
@@ -14,22 +14,26 @@ So **multiple slots** means the agent keeps several named values in memory for t
 
 ## Example: Transfer
 
-**With one slot (Level 3 check_balance):**
+**One slot (Level 3 `check_balance`):**
 
-User: "Check my balance"
+```text
+User:  "Check my balance"
 Agent: "What is your account number?"
-User: "1234"
-Agent: [Stores 1234 in account slot] → action_check_balance_simple reads account → "Balance for 1234 is $123.45"
+User:  "1234"
+Agent: [Stores 1234 in the account slot] → action_check_balance_simple → "Balance for 1234 is $123.45"
+```
 
-**With multiple slots (Level 4 transfer_money):**
+**Multiple slots (Level 4 `transfer_money`):**
 
-User: "I want to transfer money"
+```text
+User:  "I want to transfer money"
 Agent: "How much would you like to transfer?"
-User: "50"
-Agent: [Stores 50 in amount slot] "Who would you like to transfer money to?"
-User: "Alice"
-Agent: [Stores Alice in recipient slot] "Which account would you like to transfer from?"
-User: "1234"
-Agent: [Stores 1234 in account_from slot] → action_process_transfer reads amount, recipient, account_from → "Transfer of $50 from account 1234 to Alice processed."
+User:  "50"
+Agent: [Stores 50 in the amount slot] "Who would you like to transfer money to?"
+User:  "Alice"
+Agent: [Stores Alice in the recipient slot] "Which account would you like to transfer from?"
+User:  "1234"
+Agent: [Stores 1234 in the account_from slot] → action_process_transfer → "Transfer of $50 from account 1234 to Alice processed."
+```
 
-You will define the three slots and three ask responses in the domain, then create the action and the flow that collect and use them.
+You will define the three slots and three ask responses in the domain, then add the action and the flow that collect and use them.

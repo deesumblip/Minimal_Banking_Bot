@@ -1,6 +1,6 @@
 **Starting point:** Chapter 1.4 assumes you began with the **final banking agent at the end of Chapter 1.3** and are extending **`level4/`** (see **Unit 0.1**).
 
-In Unit 4 you saw an example of the transfer_money flow (YAML with three collect steps and the action step). You have already defined the slots and ask responses in the domain (Lab 2.1) and created the action (Lab 3.1). In this lab you will create your own version of the flow: `level4/data/basics/transfer_money.yml` with three collect steps and then `action_process_transfer`.
+In Unit 4 you saw an example `transfer_money` flow: YAML with three `collect:` steps and one `action:` step. You already added the slots and ask responses in the domain (**Lab 2.1**) and created the action (**Lab 3.1**). In this lab you add the flow file: `level4/data/basics/transfer_money.yml`, ending with `action_process_transfer`.
 
 ## Part 1: In Codio
 
@@ -8,7 +8,7 @@ In Unit 4 you saw an example of the transfer_money flow (YAML with three collect
 
 2. **Add** the following flow:
 
-
+```yaml
 flows:
   transfer_money:
     name: transfer money
@@ -27,8 +27,9 @@ flows:
         description: |
           Source account. Set slot account_from to the user's full message (plain text), up to 120 characters.
       - action: action_process_transfer
+```
 
-**Why these `description` lines?** Rasa Pro’s **LLM command generator** uses them when **filling slots**. For payee and account, a **simple rule** works well: store the **entire user message** as text, **any characters**, within a **fixed length range** (here 1–100 for recipient, 1–120 for account). See also [Rasa’s guidance](https://rasa.com/docs/reference/config/components/llm-command-generators/#customizing-the-prompt).
+**Why these `description` lines?** Rasa Pro’s **LLM command generator** uses them when filling slots. For payee and account, a practical pattern is to store the **entire user message** as plain text within a **length range** (here up to 100 characters for recipient and 120 for account). See [Rasa’s guidance on customizing the prompt](https://rasa.com/docs/reference/config/components/llm-command-generators/#customizing-the-prompt).
 
 3. **Verify.** The file is in `data/basics/`, and the flow has `name`, `description`, and `steps` with the three collect steps and the action step.
 

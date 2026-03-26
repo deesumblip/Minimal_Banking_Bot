@@ -14,7 +14,7 @@
 
 **Step 2.** Add the three new slots under the existing `slots:` section (after `account`):
 
-
+```yaml
 slots:
   account:
     type: text
@@ -24,12 +24,13 @@ slots:
     type: text
   account_from:
     type: text
+```
 
-Use 2-space indentation. Each slot has `type: text`.
+Use two-space indentation. Each slot uses `type: text`.
 
 **Step 3.** Add the three ask responses under `responses:`:
 
-
+```yaml
   utter_ask_amount:
     - text: "How much would you like to transfer?"
       metadata:
@@ -42,10 +43,11 @@ Use 2-space indentation. Each slot has `type: text`.
     - text: "Which account would you like to transfer from?"
       metadata:
         rephrase: False
+```
 
 Naming: `utter_ask_<slot_name>` for each slot.
 
-**Why `rephrase: False` here?** With **Rasa Pro** (CALM), **slot collection** works best when these ask prompts stay **fixed**. If `rephrase: True`, the model may reword the question while collecting slots; the command generator can then fail to map your reply (e.g. free-text **recipient** or **account_from**) and you may see *“I’m sorry I am unable to understand you…”*. **Level 4** uses **`CompactLLMCommandGenerator`** in `level4/config.yml` (Chapter 1.3 / **`level3`** may still use **`SearchReadyLLMCommandGenerator`**). Either way, keep **`rephrase: False`** on these three `utter_ask_*` responses; keep `rephrase: True` on greetings and help text if you want.
+**Why `rephrase: False` here?** With Rasa Pro (CALM), slot collection works best when these ask prompts stay fixed. If `rephrase: True` on `utter_ask_*` during collection, the model may reword the question; the command generator can then mis-map the user’s reply (especially free-text **recipient** or **account_from**) and respond with *“I’m sorry I am unable to understand you…”*. Chapter 1.4 uses **`CompactLLMCommandGenerator`** in `level4/config.yml` (while **`level3/`** may still use **`SearchReadyLLMCommandGenerator`**). Either way, keep **`rephrase: False`** on these three responses. You can leave `rephrase: True` on greetings and help text if you prefer.
 
 **Step 4.** Add `action_process_transfer` to the `actions:` list.
 
@@ -72,7 +74,7 @@ You will create the file `action_process_transfer.py` in Lab 3.1; here you only 
 
 ## Part 1: In Codio
 
-You do **not** need to activate the virtual environment for this lab, **Check It!** only checks your saved file.
+You do **not** need to activate the virtual environment for this lab — **Check It!** only checks your saved file.
 
 1. **Open** `level4/domain/basics.yml` in the editor (from the file tree).
 2. **Follow Steps 2–4 above** to add the three slots, the three ask responses, and `action_process_transfer` to the actions list.

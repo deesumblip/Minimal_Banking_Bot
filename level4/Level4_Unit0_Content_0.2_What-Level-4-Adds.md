@@ -1,14 +1,14 @@
 Chapter 1.4 builds on the **final agent at the end of Chapter 1.3** (see **`Level4_Unit0_Content_0.1_Your-Level-3-Banking-Agent.md`**).
 
-Level 4 adds **multiple slots** in one flow: the agent will remember several values in a single conversation and use them together in one action.
+Level 4 adds **multiple slots** in one flow: the agent remembers several values in a single conversation and uses them together in one action.
 
 **How to read this page**
 
-- Your **starting point** is always **Chapter 1.3 completion** (see **Unit 0.1** and the **Chapter 1.3 end state** subsection below). From that baseline you **add** transfer-related domain fields, a new action, and a new flow in the labs. Then you align pipeline files in **`level4/`**, train, and test.
-- **If you copied `level3/` to `level4/` yourself:** Apply **section 2** (pipeline) and **section 3** (lab deliverables) on this page, then use **section 4** as a final check.
-- **If you are using this course repository:** Read the **Repository note** at the top of **Unit 0.1**. The checked-in **`level4/`** tree is the **finished** Chapter 1.4 project for tooling; the storyline is still “start from Chapter 1.3 completion, then apply the labs.”
+- Your **starting point** is always **Chapter 1.3 completion** (see **`Level4_Unit0_Content_0.1_Your-Level-3-Banking-Agent.md`** and **Chapter 1.3 end state** below). From there you **add** transfer-related domain fields, a new action, and a new flow, then align pipeline files in **`level4/`**, train, and test.
+- **If you copied `level3/` → `level4/` yourself:** Work through **section 2** (pipeline), then **section 3** (lab deliverables), and use **section 4** as a final check.
+- **If you are using this course repository:** **`level4/`** starts as the **Chapter 1.3 completion** snapshot (see **`Level4_Unit0_Content_0.1_Your-Level-3-Banking-Agent.md`**). You still complete every lab so *you* produce the pipeline files, domain, action, and flow. When you are done, your tree should match the **Chapter 1.4 end state** described here.
 
-Your Level 3 agent behavior stays; you **add** the transfer flow and align **`level4/`** pipeline files so CALM can fill free-text slots reliably. Everything below is the **full checklist** from **Chapter 1.3 end state** through **Chapter 1.4 end state**. Step-by-step instructions for each lab are on the lab pages.
+Your Level 3 behavior stays in place; you **add** the transfer flow and align **`level4/`** pipeline files so CALM can fill free-text slots reliably. The sections below are the **full checklist** from **Chapter 1.3 end** through **Chapter 1.4 end**. Step-by-step instructions live on each lab page.
 
 **Implementation order:** pipeline (**Lab 0.1** — fill-in-the-blanks + paste **`config.yml`** / **`endpoints.yml`**), then domain (Lab 2.1), then action (Lab 3.1), then flow (Lab 4.1), then train and test (Labs 5.1 and 5.2). The table in **section 3** spells out files and changes. **Hands-on pipeline:** see **Lab 0.1** in Unit 0 (same pattern as Lab 3.1: blanks → paste → code test).
 
@@ -41,7 +41,7 @@ You do **not** delete that work. Chapter 1.4 **adds** the **transfer** pieces an
 
 These differ from Chapter 1.3 **on purpose**. Skipping them often causes **“unable to understand you”** on **recipient** / **account_from** even when domain and flows are correct.
 
-**Do the work yourself:** Complete **Lab 0.1** (Unit 0) **before Lab 2.1**—**fill in the blanks**, paste into **`level4/config.yml`** and **`level4/endpoints.yml`**, then run the **Code Test**. Do not skip straight to “compare with the repo” without doing the exercise; the repo files remain the reference for what correct YAML looks like.
+**Do the work yourself:** Finish **Lab 0.1** (Unit 0) **before Lab 2.1**. Fill in the blanks, paste into **`level4/config.yml`** and **`level4/endpoints.yml`**, then pass the **Code Test**. Skipping the exercise and only diffing against the repo shortchanges the learning; treat the repo as a reference for correct YAML, not a substitute for doing the work yourself.
 
 ### `config.yml` (in `level4/`)
 

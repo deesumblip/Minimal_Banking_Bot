@@ -1,6 +1,6 @@
 **Starting point:** You have the **Chapter 1.3–complete** agent in **`level3/`** (see **Unit 0.1**). Chapter 1.4 work lives under **`level4/`**—usually a **copy** of that tree. Before you add transfer slots in **Lab 2.1**, you must align the **pipeline** files so CALM can fill free-text slots reliably (**Unit 0.2**, section 2).
 
-**Repository note:** If you are using **this course repository**, **`level4/config.yml`** and **`level4/endpoints.yml`** may already match the solution. You still **complete this lab**: use the **fill-in-the-blanks** exercise, then **paste your completed YAML** into those paths so *you* produce the files (same pattern as **Lab 3.1**—blanks, then paste, then code test).
+**Repository note:** In the course repo, **`level4/`** may ship with Chapter 1.3–style pipeline files until you replace them. You still **complete this lab**: use the fill-in-the-blanks exercise, then paste your completed YAML into **`level4/config.yml`** and **`level4/endpoints.yml`** (same pattern as Chapter 1.3 **Lab 3.1**: blanks → paste → code test).
 
 **Objective.** Build **`level4/config.yml`** and **`level4/endpoints.yml`** yourself using the blanks exercise, then verify with **Check It!**
 

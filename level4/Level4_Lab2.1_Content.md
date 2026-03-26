@@ -45,7 +45,7 @@ Use 2-space indentation. Each slot has `type: text`.
         rephrase: False
 ```
 
-Use **`rephrase: False`** for these three `utter_ask_*` responses. With Rasa Pro CALM, **`rephrase: True` on `utter_ask_*` during slot collection** can cause the command generator to miss-map the user’s reply (especially free-text **recipient** or **account_from**) and reply with *“I’m sorry I am unable to understand you…”*. **Level 4** uses **`CompactLLMCommandGenerator`** in `level4/config.yml` (Chapter 1.3 / `level3` may still use **`SearchReadyLLMCommandGenerator`**); either way, fixed ask text helps. Keep `rephrase: True` on greetings/help if you like.
+**Why `rephrase: False` here?** With Rasa Pro (CALM), slot collection works best when these ask prompts stay fixed. If `rephrase: True` on `utter_ask_*` during collection, the model may reword the question; the command generator can then mis-map the user’s reply (especially free-text **recipient** or **account_from**) and respond with *“I’m sorry I am unable to understand you…”*. Chapter 1.4 uses **`CompactLLMCommandGenerator`** in `level4/config.yml` (while **`level3/`** may still use **`SearchReadyLLMCommandGenerator`**). Either way, keep **`rephrase: False`** on these three responses. You can leave `rephrase: True` on greetings and help text if you prefer.
 
 Naming: `utter_ask_<slot_name>` for each slot.
 

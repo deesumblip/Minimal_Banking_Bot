@@ -1,29 +1,29 @@
 **Starting point:** Chapter 1.4 assumed you began with the **final banking agent at the end of Chapter 1.3**; you then **added** the transfer flow in **`level4/`** (see **Unit 0.1**).
 
-**Important. Building on Your Existing Banking Agent**
+### Building on your existing banking agent
 
-When you move to Level 5, you will continue working on the same banking agent you've built throughout Levels 1–4. Level 5 doesn't start from scratch. It adds **tool calling** on top of your existing responses, flows, actions, and slots.
+When you move to Level 5, you keep working on the same banking agent you built in Levels 1–4. Level 5 does not start from scratch. It adds **tool calling** on top of your existing responses, flows, actions, and slots.
 
 Your existing Level 4 content stays: all responses, flows, actions, and slots (including the transfer flow). Level 5 adds a tools module, registration in endpoints, and flows/actions that use those tools so the LLM can invoke them.
 
 ---
 
-**Level 5: Tool Calling** lets the assistant call functions (tools) based on the conversation.
+## Level 5: Tool calling
 
-## What Tool Calling Enables
+Tool calling lets the assistant invoke registered functions based on the conversation.
 
-**Example.** Instead of only running a fixed action that reads slots, the assistant can call tools such as `check_balance(account)` or `process_transfer(amount, from_account, to_account)`. You define these as Python functions; Rasa discovers them and the LLM can choose when to call them.
+### What tool calling enables
 
-In Level 5 you'll add a `tools/` folder with tool functions, register them in `endpoints.yml`, and create a flow and action that use tool calling. Your Level 4 transfer flow and actions remain; Level 5 adds the tool-calling layer.
+Instead of only running a fixed action that reads slots, the assistant can call tools such as `check_balance(account)` or `process_transfer(amount, from_account, to_account)`. You define these as Python functions; Rasa discovers them and the LLM can choose when to call them.
 
-## Key Concepts in Level 5
+In Level 5 you add a `tools/` folder with tool functions, register them in `endpoints.yml`, and add flows or actions that use tool calling. Your Level 4 transfer flow and actions stay in place; Level 5 adds the tool-calling layer on top.
 
-1. **Tools module**. Python functions that the assistant can invoke.
-2. **Registration**. Tools are registered so Rasa and the LLM know they exist.
-3. **Flow and action**. A flow can collect slots and an action can call tools based on context.
+### Key ideas
 
-## When to Move to Level 5
+1. **Tools module** — Python functions the assistant can invoke.
+2. **Registration** — Tools are registered so Rasa and the LLM know they exist.
+3. **Flow and action** — A flow can collect slots; an action can call tools based on context.
 
-Move to Level 5 when you want the assistant to dynamically call functions (tools) based on what the user said, or when you want to structure banking operations as reusable tools.
+### When to move to Level 5
 
-Your Level 4 banking agent is the foundation. Level 5 adds tool calling on top of it.
+Move on when you want the assistant to choose and run functions dynamically from what the user said, or when you want banking operations structured as reusable tools. Your Level 4 agent remains the foundation.

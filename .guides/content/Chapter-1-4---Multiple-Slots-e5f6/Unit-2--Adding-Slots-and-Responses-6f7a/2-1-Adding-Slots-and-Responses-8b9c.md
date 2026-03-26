@@ -29,17 +29,20 @@ After Lab 2.1 your domain will have the existing Level 3 content plus:
 
 Below is an example of the **new** pieces you will add. Your existing `slots:` already has `account`; you add the three slots below. Under `responses:` you add the three ask responses. Under `actions:` you **append** `action_process_transfer` to the existing list (you will create the `.py` file in Lab 3.1).
 
-**New slots (add under existing slots:):**
+**New slots** (add under the existing `slots:` block):
 
+```yaml
   amount:
     type: text
   recipient:
     type: text
   account_from:
     type: text
+```
 
-**New ask responses (add under responses:):**
+**New ask responses** (add under `responses:`):
 
+```yaml
   utter_ask_amount:
     - text: "How much would you like to transfer?"
       metadata:
@@ -52,8 +55,9 @@ Below is an example of the **new** pieces you will add. Your existing `slots:` a
     - text: "Which account would you like to transfer from?"
       metadata:
         rephrase: False
+```
 
-Use **`rephrase: False`** on these three asks so prompts stay stable during slot collection (see Lab 2.1 note, `rephrase: True` here can break CALM slot filling and trigger “unable to understand you”).
+Use **`rephrase: False`** on these three asks so prompts stay stable during slot collection. **`rephrase: True`** on these lines can break CALM slot filling and trigger “unable to understand you.”
 
 **Updated actions list (include the new action alongside the existing Level 3 actions):**
 

@@ -15,13 +15,15 @@ Train **once** from **`level4`**; one model serves all flows.
 
 ## Quick verification (same as Lab 5.2)
 
-In **Rasa Inspector**, use the **scripted transfer** from **Lab 5.2** to see **multi-slot collection** and **free-text recipient** (capped at **100** characters in code and flow):
+In **Rasa Inspector**, repeat the **scripted transfer** from **Lab 5.2** to see multi-slot collection and free-text **recipient** (capped at **100** characters in the action and flow). Example turns:
 
-1. `Can I transfer some money?`
-2. `let's say 300 dollars`
-3. `Alice` (or any short free-text label)
-4. `savings`
+```text
+1. Can I transfer some money?
+2. let's say 300 dollars
+3. Alice
+4. savings
+```
 
-Expect: **`(Demo) Transfer of $300 from account savings to Alice has been processed successfully.`**
+You should see a final line like **`(Demo) Transfer of $300 from account savings to Alice has been processed successfully.`**
 
-For the completion grader and full troubleshooting steps, see **Lab 5.2**.
+For graded checks and troubleshooting, see **Lab 5.2**.

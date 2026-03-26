@@ -2,7 +2,7 @@
 
 **Objective.** Before **Lab 2.1**, align **`level4/config.yml`** and **`level4/endpoints.yml`** with the Chapter 1.4 pipeline (**Unit 0.2** section 2). This lab follows the **same two-step pattern as Lab 3.1** and Chapter 1.3 Lab 4.1: **Fill in the Blanks** first, paste into files, then **Code Test**.
 
-**Repository note:** This repo may already contain correct pipeline files. You still **complete the exercise** and **paste** your YAML into **`level4/`** so you produce the files yourself.
+**Repository note:** In the course repo, **`level4/`** may ship with Chapter 1.3–style pipeline files until you replace them. You still **complete this lab**: use the fill-in-the-blanks exercise, then paste your completed YAML into **`level4/config.yml`** and **`level4/endpoints.yml`** (same pattern as Chapter 1.3 **Lab 3.1**: blanks → paste → code test).
 
 Students do **not** need the virtual environment for this lab—**Check It!** only reads saved files.
 

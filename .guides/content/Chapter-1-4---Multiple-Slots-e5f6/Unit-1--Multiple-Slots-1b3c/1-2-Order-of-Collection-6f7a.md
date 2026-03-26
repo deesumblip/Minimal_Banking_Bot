@@ -1,17 +1,20 @@
 **Starting point:** Chapter 1.4 assumes you begin with the **final banking agent at the end of Chapter 1.3** (your **`level3/`** project). You **add** work in **`level4/`**—see **Unit 0.1** and **Unit 0.2**.
 
-The order in which you list `collect:` steps in the flow is the order in which the agent will ask for values.
+The order of `collect:` steps in the flow is the order in which the agent asks for values when a slot is still empty.
 
-## Flow Steps Define the Order
+## Flow steps define the order
 
-In `transfer_money.yml` you will add steps like:
+In `transfer_money.yml` you will add steps like this:
 
-1. `collect: amount`, Agent asks for the amount first (using `utter_ask_amount`).
-2. `collect: recipient`, Then asks who to send it to (`utter_ask_recipient`).
-3. `collect: account_from`, Then asks which account to use (`utter_ask_account_from`).
-4. `action: action_process_transfer`, Finally runs the action, which reads all three slots.
+```yaml
+steps:
+  - collect: amount        # asks first (utter_ask_amount)
+  - collect: recipient     # then utter_ask_recipient
+  - collect: account_from  # then utter_ask_account_from
+  - action: action_process_transfer
+```
 
-Rasa uses the **order of steps** to decide which slot to ask for next when one is still empty. So the order of your `collect:` steps should match what makes sense for the user (e.g. amount → recipient → source account) and match what your action expects (amount, recipient, account_from).
+Rasa walks the list in order. Match the sequence to what makes sense for the user (for example amount → recipient → source account) and to what your action reads (`amount`, `recipient`, `account_from`).
 
 ## Same Convention as Level 3
 

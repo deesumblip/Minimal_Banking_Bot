@@ -15,9 +15,9 @@ Each `collect:` step can include a **`description:`** for the slot. In **Rasa Pr
 
 ## Example: The transfer_money flow
 
-Below is an example of the flow file. You will create your own version in Lab 4.1 (e.g. with a name and description that fit your agent).
+Below is an example flow file. In Lab 4.1 you will create your own version (you may tune `name` and `description` to fit your agent).
 
-
+```yaml
 flows:
   transfer_money:
     name: transfer money
@@ -36,5 +36,6 @@ flows:
         description: |
           Source account. Set slot account_from to the user's full message (plain text), up to 120 characters.
       - action: action_process_transfer
+```
 
-In **Lab 4.1** you will create the file `level4/data/basics/transfer_money.yml` with your own version of this flow. When you are done, **in Codio** use **Check It!** for Lab 4.1.
+In **Lab 4.1** you will save this as `level4/data/basics/transfer_money.yml`. When you are done, use **Check It!** for Lab 4.1 (Codio).
