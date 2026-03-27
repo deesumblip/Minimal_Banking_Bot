@@ -8,7 +8,7 @@ You do **not** need to activate the virtual environment for this lab; **Check It
 
 #### Complete the `banking_tools` module (fill in the blanks)
 
-The exercise uses the same ideas as **Unit 2.1**: a **`str`** type hint on **`account`**, docstrings that tell the LLM **when** to call each tool, and **return dict keys** like the **`check_balance`** example on the previous page. The **`__all__`** line is **shown in full** (no blanks there). **Nine blanks** cover **`str`**, the three docstrings, and the keys **`balance`**, **`currency`**, **`status`**, **`success`**, and **`message`**. Demo numbers and strings in the return dicts are **not** blanked. Complete every blank, then **copy the full script** into **`level5/tools/banking_tools.py`**. Run the **Code Test** when the file is saved.
+The exercise uses the same ideas as **Unit 2.1**: **`str`** type hints on **`account`**, docstrings that tell the LLM **when** to call each tool, and **return dict keys** like the **`check_balance`** example on the previous page. The **`__all__`** line is **shown in full** (no blanks there). **Twelve blanks** cover **`str`** (for **`check_balance`** and **`get_account_info`**), the three docstrings, and the keys **`balance`**, **`currency`**, **`status`** (first **`return`**), **`success`**, **`message`**, **`account_type`**, and **`status`** (second **`return`**). Demo numbers and strings in the return dicts are **not** blanked. Complete every blank, then **copy the full script** into **`level5/tools/banking_tools.py`**. Run the **Code Test** when the file is saved.
 
 {Check It!|assessment}(fill-in-the-blanks-501020010)
 
