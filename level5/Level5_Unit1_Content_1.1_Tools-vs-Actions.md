@@ -1,3 +1,5 @@
+**Work in \`level5/\`:** This chapter’s agent lives in **`level5/`**; **`level4/`** refers to the prior level’s workspace.
+
 In Level 4 you used **actions**: steps in a flow explicitly call an action (e.g. `- action: action_process_transfer`). The agent always runs that action when the flow reaches that step.
 
 **Tools** are different. They are **functions the LLM can choose to call** based on the conversation. The flow does not name a specific tool; instead, the LLM sees the available tools (e.g. check_balance, process_transfer, get_account_info) and decides which to call and when, depending on what the user said.

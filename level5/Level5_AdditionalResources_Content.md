@@ -1,4 +1,6 @@
-﻿# Level 5 Additional Resources
+# Level 5 Additional Resources
+
+**Open in \`level5/\`:** Run these exercises from the **`level5/`** directory (paths below are relative to **`level5/`** unless noted).
 
 ## Extension Exercises
 

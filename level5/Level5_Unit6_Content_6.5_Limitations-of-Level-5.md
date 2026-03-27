@@ -1,3 +1,5 @@
+**Work in \`level5/\`:** These limits apply to the **`level5/`** banking agent.
+
 ## What Level 5 Cannot Do (Yet)
 
 1. **Sub-agents and multi-agent flows.** Level 5 has one main agent that can call tools. It does not yet use sub-agents or hand off to specialized agents (e.g. separate balance vs transfer agents). Level 6 adds sub-agents so you can structure more complex conversations with multiple agents.

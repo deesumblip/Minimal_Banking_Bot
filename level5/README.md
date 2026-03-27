@@ -1,5 +1,7 @@
 # 🟣 Level 5: Tool Calling
 
+**Open in \`level5/\`:** This level’s agent code and all **`python -m rasa …`** commands use **`level5/`** as the working directory (after **`cd level5`** from project root).
+
 **Goal:** Learn how to use tool calling, where the LLM dynamically selects and calls functions based on conversation context.
 
 ## What You'll Learn

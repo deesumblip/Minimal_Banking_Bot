@@ -1,4 +1,6 @@
-﻿Level 5 completes tool calling for the main agent. Possible next steps (depending on your course):
+**Work in \`level5/\`:** Next steps below assume your assistant lives under **`level5/`**.
+
+Level 5 completes tool calling for the main agent. Possible next steps (depending on your course):
 
 - **Level 6: Sub-agents** — Delegate whole tasks to a separate agent (ReAct sub-agent) that uses its own tools (e.g. via MCP). The main agent orchestrates; the sub-agent runs until it signals completion.
 - **More tools** — Add more tool functions (e.g. close_account, list_transactions) and export them in `__all__`.

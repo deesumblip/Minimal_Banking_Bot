@@ -2,6 +2,8 @@
 
 **Repository note:** In this course repository, **`level5/`** is checked in as that **Chapter 1.4 completion** baseline (same general shape as the finished **`level4/`** agent: domain, flows—including **`goodbye`**, **`holiday_hours`**, **`check_balance`**, **`transfer_money`**—and **Level 2–4** actions). You still **build** Chapter 1.5 in the labs (tools folder, **`tools:`** in **`endpoints.yml`**, **`transfer_money_tools`**, **`action_process_transfer_with_tools`**). Use **`level4/`** as the reference for “Chapter 1.4 end” and **`level5/`** for “work in progress” as you add tool calling.
 
+**Open in \`level5/\`:** Do **not** edit **`level4/`** for this chapter. Every file you change and every **`python -m rasa …`** command in Chapter 1.5 assumes your shell’s working directory is **`level5/`** (activate the venv at **project root**, then **`cd level5`**).
+
 ---
 
 Before we add tool calling, here is a quick recap of what you have at **Chapter 1.4 completion**. All of that behavior stays in place; Chapter 1.5 **adds** tools on top.

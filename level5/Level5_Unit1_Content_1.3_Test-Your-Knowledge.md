@@ -1,3 +1,5 @@
+**Work in \`level5/\`:** This chapter assumes you are building the **`level5/`** agent.
+
 Answer the following to check your understanding of Level 5 so far (Units 0-1).
 
 ---

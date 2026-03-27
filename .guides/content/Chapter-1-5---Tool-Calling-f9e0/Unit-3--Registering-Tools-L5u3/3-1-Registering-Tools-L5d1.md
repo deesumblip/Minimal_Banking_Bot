@@ -2,9 +2,9 @@
 
 Once you have a **`tools/`** module with tool functions, you must **register** it with Rasa so the assistant can discover and call them.
 
-## endpoints.yml
+## `level5/endpoints.yml`
 
-Add a **`tools`** section to **`endpoints.yml`**:
+Add a **`tools`** section to **`level5/endpoints.yml`**:
 
 ```yaml
 tools:

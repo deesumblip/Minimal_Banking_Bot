@@ -1,3 +1,5 @@
+**Work in \`level5/\`:** Chapter 1.6 continues from the agent in **`level5/`**.
+
 **Important. Building on Your Level 5 Agent**
 
 When you move to Level 6, you will continue with the same banking agent. Level 6 doesn't start from scratch. It adds **sub-agents** (and related patterns) on top of your existing responses, flows, actions, slots, and tools.

@@ -17,6 +17,6 @@ Use 2-space indentation. The value `"tools"` is the name of the Python module (t
 
 **Step 3.** Save the file. Verify that the YAML is valid and that no other sections were removed or broken.
 
-**Step 4.** **In Codio**, use **Check It!** below. The grader will check that `endpoints.yml` contains a `tools:` key and `tools_module: "tools"`.
+**Step 4.** **In Codio**, use **Check It!** below. The grader will check that **`level5/endpoints.yml`** contains a `tools:` key and `tools_module: "tools"`.
 
 {Check It!|assessment}(code-output-compare-501030001)

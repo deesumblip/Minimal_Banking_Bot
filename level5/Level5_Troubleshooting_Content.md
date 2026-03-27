@@ -1,4 +1,6 @@
-﻿# Level 5 Troubleshooting Guide
+# Level 5 Troubleshooting Guide
+
+**Open in \`level5/\`:** All paths and commands below refer to the **`level5/`** agent directory.
 
 ## Common Issues and Solutions
 

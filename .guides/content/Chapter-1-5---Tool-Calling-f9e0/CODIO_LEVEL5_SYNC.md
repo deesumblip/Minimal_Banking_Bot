@@ -2,6 +2,8 @@
 
 This folder mirrors the Level 5 content from `level5/` (unit content and lab content) so it can be synced to Codio the same way as Chapter 1.4 (Multiple Slots).
 
+**Student working directory:** All Chapter 1.5 student steps assume the agent project lives under **`level5/`** in the workspace. Activate the venv at **project root**, then **`cd level5`** before **`python -m rasa …`** or editing domain, flows, actions, tools, and **`endpoints.yml`**.
+
 ## Structure
 
 - **Chapter:** Chapter-1-5---Tool-Calling-f9e0
