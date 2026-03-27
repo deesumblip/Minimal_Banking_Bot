@@ -24,7 +24,7 @@
 
 **Task ID:** `fill-in-the-blanks-501020010`  
 **Points:** 5  
-**Pattern:** Same as Chapter 1.4 Lab 3.1 (`fill-in-the-blanks-401030010`): intro paragraph plus a **fenced** ` ```python ` block in the **`text`** field; **`__all__`** is a **complete line** (no blanks). **`tokens.text`** and **`tokens.blank`** hold **12** ordered blanks: **`str`** for **`check_balance`** and **`get_account_info`**, three docstrings, dict keys including **`account_type`** / **`status`** for **`get_account_info`** (no arbitrary demo literals).
+**Pattern:** **`instructions`** = short task line + copy/**Code Test** note. **`text`** = **only** a **fenced** ` ```python ` block (no long scaffolding; teaching stays on the Lab 2.1 guide page). **`__all__`** is a **complete line** (no blanks). **`tokens.text`** / **`tokens.blank`:** **12** blanks (**`str`** twice, three docstrings, dict keys as above).
 
 ### Code test (student Part 3)
 
