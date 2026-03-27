@@ -4,6 +4,8 @@ This folder mirrors the Level 5 content from `level5/` (unit content and lab con
 
 **Student working directory:** All Chapter 1.5 student steps assume the agent project lives under **`level5/`** in the workspace. Activate the venv at **project root**, then **`cd level5`** before **`python -m rasa …`** or editing domain, flows, actions, tools, and **`endpoints.yml`**.
 
+**Guide page JSON (`*.json` next to each `.md`):** Each page sets **`"path": ["level5"]`** (and **`"layout": "2-panels-tree-guides-left"`** where applicable) so the Codio / IDE **file tree** focuses on the **`level5/`** folder, matching the Chapter 1.4 pattern for **`level4/`**.
+
 ## Structure
 
 - **Chapter:** Chapter-1-5---Tool-Calling-f9e0

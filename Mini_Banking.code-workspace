@@ -1,6 +1,11 @@
 {
 	"folders": [
 		{
+			"name": "Level 5 agent (Chapter 1.5)",
+			"path": "level5"
+		},
+		{
+			"name": "Repository root",
 			"path": "."
 		}
 	],
