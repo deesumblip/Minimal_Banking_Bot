@@ -17,7 +17,7 @@ This document maps **Level 5** (Chapter 1.5 – Tool Calling) content files, lab
 | Unit 5 + Lab 5.1 (train) + Lab 5.2 (test) | Unit 5: **5.1** → **Lab 5.1** → **5.2** → **Lab 5.2** (linear: each concept page followed by its lab) |
 | Unit 6: Walkthrough, summary, limitations, checklist | Unit 6: 6.1–6.7 (walkthrough, learned, next, knowledge check, limitations, Level 6 preview, checklist) |
 
-**Lab numbering:** Level 5 uses Labs 2.1, 3.1, 4.1, 5.1, 5.2. Each is graded (10 points, 50 total).
+**Lab numbering:** Level 5 uses Labs 2.1, 3.1, 4.1, 5.1, 5.2. **Lab 2.1** uses a **fill-in-the-blanks** exercise (5 points) plus the **code test** (10 points), matching the Chapter 1.4 Lab 0.1 pattern. Labs 3.1–5.2 use code tests only (10 points each). **Total graded points:** 55.
 
 ---
 
@@ -49,13 +49,13 @@ This document maps **Level 5** (Chapter 1.5 – Tool Calling) content files, lab
 
 | Lab | Content File | Assessment Setup File | Task ID (Codio) | Grader / Solution Ref |
 |-----|--------------|------------------------|-----------------|------------------------|
-| 2.1 | Level5_Lab2.1_Content.md | Level5_Lab2.1_Assessment_Setup.md | code-output-compare-501020001 | .guides/secure/level5_graders/lab_2.1_grader.py, lab_2.1_solution_reference.md |
+| 2.1 | Level5_Lab2.1_Content.md | Level5_Lab2.1_Assessment_Setup.md | **fill-in-the-blanks-501020010** (5 pts) + **code-output-compare-501020001** (10 pts) | `.guides/assessments/fill-in-the-blanks-501020010.json`; grader: lab_2.1_grader.py, lab_2.1_solution_reference.md |
 | 3.1 | Level5_Lab3.1_Content.md | Level5_Lab3.1_Assessment_Setup.md | code-output-compare-501030001 | lab_3.1_grader.py, lab_3.1_solution_reference.md |
 | 4.1 | Level5_Lab4.1_Content.md | Level5_Lab4.1_Assessment_Setup.md | code-output-compare-501040001 | lab_4.1_grader.py, lab_4.1_solution_reference.md |
 | 5.1 | Level5_Lab5.1_Content.md | Level5_Lab5.1_Assessment_Setup.md | code-output-compare-501050001 | lab_5.1_grader.py, lab_5.1_solution_reference.md |
 | 5.2 | Level5_Lab5.2_Content.md | Level5_Lab5.2_Assessment_Setup.md | code-output-compare-501050002 | lab_5.2_grader.py, lab_5.2_solution_reference.md |
 
-**Assessment JSONs:** `.guides/assessments/code-output-compare-501020001.json` through `code-output-compare-501050002.json`. Each COMMAND uses venv Python and `.guides/secure/level5_graders/lab_X.X_grader.py`. Working Directory: `/home/codio/workspace`. Grading uses a **sequence** of `Check N: PASSED` substring matches (Lab 6.2 / Lab 3.1 style), **`showGuidanceAfterResponseOption`: Never**, **`showExpectedAnswerOption`: Always**.
+**Assessment JSONs:** `.guides/assessments/fill-in-the-blanks-501020010.json` (Lab 2.1 only); `.guides/assessments/code-output-compare-501020001.json` through `code-output-compare-501050002.json`. Code tests use venv Python and `.guides/secure/level5_graders/lab_X.X_grader.py`. Working Directory: `/home/codio/workspace`. Code grading uses a **sequence** of `Check N: PASSED` substring matches, **`showGuidanceAfterResponseOption`: Never**, **`showExpectedAnswerOption`: Always** (where applicable).
 
 ---
 
@@ -63,7 +63,7 @@ This document maps **Level 5** (Chapter 1.5 – Tool Calling) content files, lab
 
 - **Chapter ID:** Chapter-1-5---Tool-Calling-f9e0
 - **Content path:** `.guides/content/Chapter-1-5---Tool-Calling-f9e0/`
-- **Lab pages** in the guide include `{Check It!|assessment}(code-output-compare-50XXXXXX)` with the task IDs above.
+- **Lab pages** include `{Check It!|assessment}(fill-in-the-blanks-501020010)` and `{Check It!|assessment}(code-output-compare-501020001)` for Lab 2.1; other labs use `code-output-compare-50XXXXXX` as above.
 - **Graders:** All in `.guides/secure/level5_graders/`. No grader scripts live under `.guides/assessments/`.
 
 ---
@@ -74,8 +74,8 @@ This document maps **Level 5** (Chapter 1.5 – Tool Calling) content files, lab
 |------|------------------|
 | Chapter | Chapter-1-5---Tool-Calling-f9e0 |
 | Units | 0–6 (7 units) |
-| Graded labs | 2.1, 3.1, 4.1, 5.1, 5.2 (10 points each, 50 total) |
-| Task IDs | 501020001, 501030001, 501040001, 501050001, 501050002 |
+| Graded labs | 2.1 (5 + 10), 3.1–5.2 (10 each); **55 total** |
+| Task IDs | **501020010** + 501020001 (Lab 2.1); 501030001, 501040001, 501050001, 501050002 |
 | Graders | .guides/secure/level5_graders/lab_2.1_grader.py … lab_5.2_grader.py |
 | Solution refs | .guides/secure/level5_graders/lab_*_solution_reference.md |
 | Source content | level5/Level5_Unit*_Content_*.md, level5/Level5_Lab*_Content.md |

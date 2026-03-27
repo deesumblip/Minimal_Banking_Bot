@@ -1,34 +1,41 @@
 **Starting point:** Work in **`level5/`** with the Chapter 1.4 completion baseline from the start of this chapter.
 
-**Objective.** The **previous page** showed a complete **`check_balance`** example. In this lab you create your own **`tools/`** folder and **`tools/banking_tools.py`** with at least three tool functions—**`check_balance(account)`**, **`process_transfer(amount, from_account, to_account)`**, and **`get_account_info(account)`**—following the same pattern (docstrings, type hints, return dict, **`__all__`**).
+**Objective.** The **previous page** showed a complete **`check_balance`** example. In this lab you complete a **fill-in-the-blanks** version of **`banking_tools.py`**, then **create** **`level5/tools/`** and save the **finished script** as **`level5/tools/banking_tools.py`**. The module must define **`check_balance`**, **`process_transfer`**, and **`get_account_info`**, export them in **`__all__`**, and return **dicts** with type hints and docstrings.
 
-## Step-by-Step Instructions
-
-**Step 1.** In the `level5` folder, create a directory named `tools` (if it does not exist).
-
-**Step 2.** Create `tools/__init__.py` (can be empty or a short comment that this is the tools module).
-
-**Step 3.** Create `tools/banking_tools.py`. Define three functions:
-
-- **check_balance(account: str)**, Returns a dict (e.g. with keys such as `account`, `balance`, `currency`). Include a docstring describing that it checks the balance for a bank account.
-- **process_transfer(amount: str, from_account: str, to_account: str)**, Returns a dict (e.g. `success`, `message`). Docstring: process a money transfer from one account to another.
-- **get_account_info(account: str)**, Returns a dict (e.g. account type, status). Docstring: get information for a bank account.
-
-**Step 4.** At the top of `banking_tools.py`, add: `__all__ = ["check_balance", "process_transfer", "get_account_info"]` so Rasa can discover these tools.
-
-**Step 5.** Verify: the `tools/` folder exists, `banking_tools.py` has the three functions with docstrings and type hints, and `__all__` lists them.
+You do **not** need to activate the virtual environment for the fill-in exercise or the code test (the grader only reads your saved files).
 
 ---
 
-## In Codio
+#### Part 1 — Fill in the blanks
 
-1. From project root run `source .venv/bin/activate`, then `cd level5`.
-2. Create `level5/tools/` and `level5/tools/__init__.py`, then `level5/tools/banking_tools.py` with the three functions and `__all__`.
-3. **Use Check It!** below when done (Codio).
+Complete the **`banking_tools.py`** script below. **Part A** matches **Unit 2.1** (three tools, **`__all__`**, demo return dicts). Distractors include similar-but-wrong names and values—pick the choice that matches the **`def`** lines and the patterns you learned.
+
+{Check It!|assessment}(fill-in-the-blanks-501020010)
+
+---
+
+#### Part 2 — Create files in **`level5/`**
+
+1. In **`level5/`**, create a directory named **`tools`** (if it does not exist).
+2. Create **`level5/tools/__init__.py`** (can be empty or a short comment that this is the tools module).
+3. Open **`level5/tools/banking_tools.py`** (create the file if needed).
+4. **Paste** the **full** Python module from **Part 1** with **every blank filled**—the file on disk must match your completed exercise (same function names, **`__all__`**, docstrings, and return dicts).
+5. **Save** the file.
+
+---
+
+#### Part 3 — Code test
 
 {Check It!|assessment}(code-output-compare-501020001)
 
+---
+
+**Success criteria.** Code test passes (**10/10**). Then continue to **Lab 3.1** (register **`tools:`** in **`endpoints.yml`**).
+
+---
+
 ## Running locally
 
-1. Open the project, activate the venv, `cd level5`.
-2. Create the `tools` folder and files as described in the steps above.
+1. Open the project and **`cd level5`**.
+2. Complete **Part 1** in the fill-in-the-blanks exercise, then create **`tools/`**, **`tools/__init__.py`**, and **`tools/banking_tools.py`** with the completed script (same as **Part 2**).
+3. Run the **Code Test** when your files match the exercise.

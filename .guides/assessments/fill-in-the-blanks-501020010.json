@@ -1,0 +1,88 @@
+{
+	"type": "fill-in-the-blanks",
+	"taskId": "fill-in-the-blanks-501020010",
+	"source": {
+		"name": "Lab 2.1: banking_tools.py (fill-in-the-blanks)",
+		"showName": false,
+		"instructions": "**Fill in the blanks** to complete **`banking_tools.py`**. This is the same module you will copy into **`level5/tools/banking_tools.py`** for the **Code Test**. The three names in **`__all__`** must match the three **`def`** names. Use demo numbers and strings in the return dicts.",
+		"showValues": true,
+		"text": "Complete the **`level5/tools/banking_tools.py`** module. Fill every blank so the three tool names in **`__all__`** match the three **`def`** names, each function has a short docstring, and each returns a **dict** with the keys shown (demo values are fine).\n\n**Part A \u2014 banking_tools.py** (you will save this as **`level5/tools/banking_tools.py`** in the next part)\n\n```python\n__all__ = [\"<<<check_balance>>>\", \"<<<process_transfer>>>\", \"<<<get_account_info>>>\"]\n\n\ndef check_balance(account: str):\n    \"\"\"<<<Check the balance for a given bank account. Use when the user asks about balance.>>>\"\"\"\n    return {\n        \"account\": account,\n        \"balance\": <<<1234.56>>>,\n        \"currency\": \"<<<USD>>>\",\n        \"status\": \"<<<active>>>\",\n    }\n\n\ndef process_transfer(amount: str, from_account: str, to_account: str):\n    \"\"\"<<<Process a money transfer from one account to another.>>>\"\"\"\n    return {\n        \"success\": <<<True>>>,\n        \"message\": \"<<<Transfer processed (demo).>>>\",\n    }\n\n\ndef get_account_info(account: str):\n    \"\"\"<<<Return details for a bank account.>>>\"\"\"\n    return {\n        \"account\": account,\n        \"account_type\": \"<<<checking>>>\",\n        \"status\": \"<<<active>>>\",\n    }\n```",
+		"distractors": "check_balances\nprocess_transfers\nget_info\nCheck balance.\n1234\n1234.57\nEUR\nGBP\ninactive\npending\nProcess a withdrawal between accounts.\nFalse\nTransfer failed (demo).\nReturn the user's password.\nsavings\nclosed",
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Fill in the Blanks"
+				}
+			],
+			"files": [],
+			"opened": [
+				{
+					"type": "terminal",
+					"panelNumber": 1
+				}
+			]
+		},
+		"bloomsObjectiveLevel": "",
+		"learningObjectives": "",
+		"guidance": "**Exports:** The three strings in **`__all__`** must match the three **`def`** names exactly (Unit 2.1).\n\n**Docstrings:** Each tool needs a line the LLM can use—balance vs transfer vs account details.\n\n**Returns:** Use dicts with string keys; **`balance`** is a number; **`success`** is a Python boolean; reuse **`active`** where it fits account status.\n\n**After you pass:** Create **`level5/tools/`** and **`level5/tools/__init__.py`**, paste your **completed** script into **`level5/tools/banking_tools.py`**, save, then run the **Code Test**.",
+		"showGuidanceAfterResponseOption": {
+			"type": "Attempts",
+			"passedFrom": 1
+		},
+		"maxAttemptsCount": 1,
+		"showExpectedAnswerOption": {
+			"type": "Always"
+		},
+		"points": 5,
+		"arePartialPointsAllowed": false,
+		"useMaximumScore": false,
+		"tokens": {
+			"blank": [
+				"check_balance",
+				"process_transfer",
+				"get_account_info",
+				"Check the balance for a given bank account. Use when the user asks about balance.",
+				"1234.56",
+				"USD",
+				"active",
+				"Process a money transfer from one account to another.",
+				"True",
+				"Transfer processed (demo).",
+				"Return details for a bank account.",
+				"checking",
+				"active"
+			],
+			"text": [
+				"__all__ = [\"",
+				0,
+				"\", \"",
+				0,
+				"\", \"",
+				0,
+				"\"]\n\n\ndef check_balance(account: str):\n    \"\"\"",
+				0,
+				"\"\"\"\n    return {\n        \"account\": account,\n        \"balance\": ",
+				0,
+				",\n        \"currency\": \"",
+				0,
+				"\",\n        \"status\": \"",
+				0,
+				"\",\n    }\n\n\ndef process_transfer(amount: str, from_account: str, to_account: str):\n    \"\"\"",
+				0,
+				"\"\"\"\n    return {\n        \"success\": ",
+				0,
+				",\n        \"message\": \"",
+				0,
+				"\",\n    }\n\n\ndef get_account_info(account: str):\n    \"\"\"",
+				0,
+				"\"\"\"\n    return {\n        \"account\": account,\n        \"account_type\": \"",
+				0,
+				"\",\n        \"status\": \"",
+				0,
+				"\",\n    }\n"
+			],
+			"regexPositions": []
+		}
+	}
+}

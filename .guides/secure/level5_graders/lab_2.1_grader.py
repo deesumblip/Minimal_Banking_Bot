@@ -17,7 +17,7 @@ BANKING_TOOLS = TOOLS_DIR / "banking_tools.py"
 score = 0
 max_score = 10
 
-print("Running Lab 5.2 Assessment Checks...")
+print("Running Lab 2.1 Assessment Checks...")
 print("")
 
 # Check 1: tools/ folder exists

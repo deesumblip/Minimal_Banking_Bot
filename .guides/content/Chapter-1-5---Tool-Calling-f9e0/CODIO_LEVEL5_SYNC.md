@@ -2,7 +2,7 @@
 
 This folder mirrors the Level 5 content from `level5/` (unit content and lab content) so it can be synced to Codio the same way as Chapter 1.4 (Multiple Slots).
 
-**Student working directory:** All Chapter 1.5 student steps assume the agent project lives under **`level5/`** in the workspace. Activate the venv at **project root**, then **`cd level5`** before **`python -m rasa …`** or editing domain, flows, actions, tools, and **`endpoints.yml`**.
+**Student working directory:** All Chapter 1.5 student steps assume the agent project lives under **`level5/`** in the workspace. For **training and local runs**, activate the venv at **project root**, then **`cd level5`** before **`python -m rasa …`**. **Graded labs** use file-based assessments (fill-in-the-blanks and code tests read `level5/` files); students do not need the venv active to pass the Lab 2.1 checks.
 
 **Guide page JSON (`*.json` next to each `.md`):** Each page sets **`"path": ["level5"]`** (and **`"layout": "2-panels-tree-guides-left"`** where applicable) so the Codio / IDE **file tree** focuses on the **`level5/`** folder, matching the Chapter 1.4 pattern for **`level4/`**.
 
@@ -20,12 +20,12 @@ The main guide index at `.guides/content/index.json` includes `Chapter-1-5---Too
 
 ## Assessments
 
-- **Task IDs:** code-output-compare-501020001 (Lab 2.1), 501030001 (Lab 3.1), 501040001 (Lab 4.1), 501050001 (Lab 5.1), 501050002 (Lab 5.2).
-- **Assessment JSONs:** `.guides/assessments/code-output-compare-501020001.json` through `code-output-compare-501050002.json`.
+- **Task IDs:** **fill-in-the-blanks-501020010** + **code-output-compare-501020001** (Lab 2.1); 501030001 (Lab 3.1); 501040001 (Lab 4.1); 501050001 (Lab 5.1); 501050002 (Lab 5.2).
+- **Assessment JSONs:** `.guides/assessments/fill-in-the-blanks-501020010.json`; `code-output-compare-501020001.json` through `code-output-compare-501050002.json`.
 - **Graders:** `.guides/secure/level5_graders/` (lab_2.1_grader.py … lab_5.2_grader.py; lab_*_solution_reference.md for LLM Rubric).
 - **Working directory:** `/home/codio/workspace`. Command uses venv Python and grader path, e.g. `/home/codio/workspace/.venv/bin/python3 /home/codio/workspace/.guides/secure/level5_graders/lab_2.1_grader.py`. Expect output contains `PASS` (substring match).
 
-Lab pages in this chapter include `{Check It!|assessment}(code-output-compare-50XXXXXX)` with the taskId above.
+Lab 2.1 includes `{Check It!|assessment}(fill-in-the-blanks-501020010)` then `{Check It!|assessment}(code-output-compare-501020001)`. Other lab pages use `{Check It!|assessment}(code-output-compare-50XXXXXX)` with the task IDs above.
 
 ## Re-import from Git
 
