@@ -24,7 +24,7 @@
 
 **Task ID:** `fill-in-the-blanks-501020010`  
 **Points:** 5  
-**Pattern:** Same as Chapter 1.4 Lab 0.1 (`fill-in-the-blanks-401010010`): the **student-facing** `text` field uses `<<<placeholder>>>` markers in the fenced code block; **`tokens.text`** and **`tokens.blank`** hold the ordered blanks (13 values) for Codio grading.
+**Pattern:** Same as Chapter 1.4 Lab 3.1 (`fill-in-the-blanks-401030010`): intro paragraph plus a **fenced** ` ```python ` block in the **`text`** field; **`tokens.text`** and **`tokens.blank`** hold **12** ordered blanks (exports, **`str`**, docstrings, return dict keys—no arbitrary demo literals).
 
 ### Code test (student Part 3)
 

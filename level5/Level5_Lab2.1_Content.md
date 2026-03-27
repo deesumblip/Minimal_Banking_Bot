@@ -1,38 +1,43 @@
-**Objective.** The **previous page** showed an example of a complete tool function (`check_balance`). In this lab you complete a **fill-in-the-blanks** version of `banking_tools.py`, then create `level5/tools/` and save the finished script as `level5/tools/banking_tools.py` with `check_balance`, `process_transfer`, `get_account_info`, and `__all__`.
+**Starting point:** Work in **`level5/`** with the Chapter 1.4 completion baseline from the start of this chapter.
 
-You do **not** need to activate the virtual environment for the fill-in exercise or the code test (the grader only reads your saved files).
+In this lab you complete **`banking_tools.py`** in the fill-in-the-blanks exercise, then create **`level5/tools/`** and save the same module as **`level5/tools/banking_tools.py`**. The module must define **`check_balance`**, **`process_transfer`**, and **`get_account_info`**, export them in **`__all__`**, and use the patterns from **Unit 2.1** (type hints, docstrings, return dicts).
+
+You do **not** need to activate the virtual environment for this lab; **Check It!** only checks your saved files on disk.
 
 ---
 
-#### Part 1 — Fill in the blanks
+#### Complete the `banking_tools` module (fill in the blanks)
 
-Complete the **`banking_tools.py`** script in the exercise. **Part A** matches Unit 2.1 (three tools, `__all__`, demo return dicts).
+The exercise uses the same ideas as **Unit 2.1**: the **`__all__`** list, a **`str`** type hint on **`account`**, docstrings that tell the LLM **when** to call each tool, and **return dict keys** like the **`check_balance`** example on the previous page. **Twelve blanks** cover exports, **`str`**, the three docstrings, and the keys **`balance`**, **`currency`**, **`status`**, **`success`**, and **`message`**. Demo numbers and strings in the return dicts are **not** blanked. Complete every blank, then **copy the full script** into **`level5/tools/banking_tools.py`**. Run the **Code Test** when the file is saved.
 
 {Check It!|assessment}(fill-in-the-blanks-501020010)
 
 ---
 
-#### Part 2 — Create files in `level5/`
+### After you complete the blanks
 
-1. In `level5/`, create a directory named `tools` (if it does not exist).
-2. Create `level5/tools/__init__.py` (can be empty or a short comment).
-3. Create `level5/tools/banking_tools.py` and **paste** the **full** module from **Part 1** with every blank filled.
-4. **Save** the file.
+1. In **`level5/`**, create a directory named **`tools`** (if it does not exist).
+2. Create **`level5/tools/__init__.py`** (can be empty or a short comment).
+3. **Open** **`level5/tools/banking_tools.py`** in the file tree (create the file if needed).
+4. **Paste** your completed script from the exercise above so the file matches your answers (all blanks filled).
+5. **Save** the file.
 
 ---
 
-#### Part 3 — Code test
+### Run the code assessment
+
+The grader checks that **`level5/tools/`** exists, **`banking_tools.py`** is present, **`check_balance`**, **`process_transfer`**, and **`get_account_info`** appear in the file, and **`__all__`** is defined.
 
 {Check It!|assessment}(code-output-compare-501020001)
 
 ---
 
-**Success criteria.** Code test passes (10/10). Then continue to Lab 3.1.
+**Success criteria.** Code test passes (**10/10**). Then continue to **Lab 3.1**.
 
 ---
 
 ## Running locally
 
 1. `cd level5`.
-2. Complete **Part 1**, then create `tools/`, `tools/__init__.py`, and `tools/banking_tools.py` as in **Part 2**.
-3. Run the **Code Test**.
+2. Complete the **fill-in-the-blanks** exercise, then create **`tools/`**, **`tools/__init__.py`**, and **`tools/banking_tools.py`** with the completed script.
+3. Run the **Code Test** when your files match the exercise.
