@@ -1,6 +1,6 @@
-**Starting point:** Work in **`level5/`** after **Lab 5.1** in this unit—you should have a trained model under **`level5/models/`**. (Training assumes **Labs 2.0–4.1** are complete, including **`prompt_template`** and **`data/prompts/`** from **Lab 2.0**.)
+**Starting point:** Work in **`level5/`** after **Lab 5.1**—you should have a trained model under **`level5/models/`**. (Training assumes **Labs 2.0–4.1**, including **Lab 2.0** **`prompt_template`** and **`data/prompts/`**.)
 
-After training, run the assistant and test tool calling.
+Run the assistant and exercise tool calling.
 
 ## Run
 
@@ -10,4 +10,4 @@ After training, run the assistant and test tool calling.
 
 ## Test
 
-Trigger the flow that uses tools (for example, ask to **transfer money using tools** so the assistant selects **`transfer_money_tools`**). Complete **amount**, **recipient**, and **account_from** when prompted. You should see a confirmation that matches your **`action_process_transfer_with_tools`** message (in the course reference, that includes **“(Demo with Tools)”**). To compare paths, run **`transfer_money`** in a **new conversation** and confirm the classic **`action_process_transfer`** message differs. The **next lab** in this unit runs a **completion check** that verifies required files and configuration.
+Trigger the tool-enabled flow (for example ask to **transfer money using tools** so the assistant picks **`transfer_money_tools`**). Supply **amount**, **recipient**, and **account_from** when asked. The reply should match your **`action_process_transfer_with_tools`** text (the reference includes **“(Demo with Tools)”**). In a **new conversation**, run **`transfer_money`** and confirm the classic **`action_process_transfer`** wording differs. **Lab 5.2** next runs an automated **completion check** on files and config.

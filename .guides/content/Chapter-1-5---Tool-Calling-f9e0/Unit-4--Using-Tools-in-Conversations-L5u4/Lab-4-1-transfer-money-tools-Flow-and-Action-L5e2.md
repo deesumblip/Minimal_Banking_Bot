@@ -1,20 +1,20 @@
-**Starting point:** Work in **`level5/`** with **Labs 2.0–3.1** complete (**`prompt_template`** + **`data/prompts/`**, **`tools/banking_tools.py`**, **`tools:`** in **`endpoints.yml`**).
+**Starting point:** Work in **`level5/`** with **Labs 2.0–3.1** complete (**`prompt_template`**, **`data/prompts/`**, **`tools/banking_tools.py`**, **`tools:`** in **`endpoints.yml`**).
 
-**Objective.** Add the **`transfer_money_tools`** flow, the **`action_process_transfer_with_tools`** custom action, and the **domain** updates so the LLM can fill **`amount`**, **`recipient`**, and **`account_from`** when that flow is active, then run the action step. Nothing in this lab appears without you creating or editing it: you will use a **fill-in-the-blanks** exercise for the **domain slot conditions**, paste **structured YAML** for the **flow**, and paste **Python** for the **action** (you may type it yourself if you prefer, as long as it matches the grader).
+**Objective.** Add the **`transfer_money_tools`** flow, the **`action_process_transfer_with_tools`** custom action, and **domain** updates so the LLM can fill **`amount`**, **`recipient`**, and **`account_from`** while that flow runs, then execute the action step. You create every artifact: a **fill-in-the-blanks** exercise for **domain slot conditions**, pasted **YAML** for the **flow**, and **Python** for the **action** (or your own equivalent that satisfies the grader).
 
-You do **not** need the virtual environment for the **fill-in-the-blanks** exercise; you need it for **training** later in the chapter.
+You do **not** need the venv for the fill-in-the-blanks; you need it when you **train** later in the chapter.
 
 ---
 
 ## Why the domain step matters
 
-Chapter 1.4 already maps **`amount`**, **`recipient`**, and **`account_from`** when the active flow is **`transfer_money`**. The new flow **`transfer_money_tools`** uses the **same** slot names. For **`from_llm`** mappings with **`conditions`**, each of those three slots must also list **`active_flow: transfer_money_tools`**. Without that line, the assistant may not set slots correctly while the new flow is running.
+Chapter 1.4 already maps **`amount`**, **`recipient`**, and **`account_from`** when **`transfer_money`** is active. **`transfer_money_tools`** reuses those slot names. Each **`from_llm`** mapping needs a **`conditions`** entry with **`active_flow: transfer_money_tools`** as well. Without it, slot updates can fail while **`transfer_money_tools`** is running.
 
 ---
 
 ## Part A — Domain slot conditions (fill in the blanks)
 
-Complete the exercise below. Then open **`level5/domain/basics.yml`** and ensure the **`slots`** section for **`amount`**, **`recipient`**, and **`account_from`** matches your answers (merge or replace those three blocks so **`transfer_money`** and **`transfer_money_tools`** both appear under **`conditions`**). If your file already matched the completed exercise, you only need to confirm it.
+Complete the exercise, then open **`level5/domain/basics.yml`** and align the **`amount`**, **`recipient`**, and **`account_from`** blocks with your answers (so **`transfer_money`** and **`transfer_money_tools`** both appear under **`conditions`**). If the file already matches, skim to confirm.
 
 {Check It!|assessment}(fill-in-the-blanks-501040010)
 
@@ -22,7 +22,7 @@ Complete the exercise below. Then open **`level5/domain/basics.yml`** and ensure
 
 ## Part B — Register the action name in the domain
 
-In **`level5/domain/basics.yml`**, under **`actions:`**, add **`action_process_transfer_with_tools`** if it is not already listed (keep every existing action in the list).
+In **`level5/domain/basics.yml`**, under **`actions:`**, add **`action_process_transfer_with_tools`** if it is missing—keep all existing action names.
 
 ---
 
@@ -56,7 +56,7 @@ flows:
       - action: action_process_transfer_with_tools
 ```
 
-Save the file. (Tools remain registered in **`endpoints.yml`**; the flow does not list tool names—only the action step.)
+Save the file. Tools stay registered in **`endpoints.yml`**; the flow lists only the **action** step, not individual tool names.
 
 ---
 
@@ -119,7 +119,7 @@ Save the file.
 
 ## Part E — Run the code assessment
 
-**In Codio**, use **Check It!** below when Parts A–D are saved. The grader checks the flow YAML, the action implementation, the domain **`actions:`** list, and the **`from_llm`** slot conditions for **`transfer_money_tools`**.
+**In Codio**, run **Check It!** below when Parts A–D are saved. The grader checks flow YAML, the action, the domain **`actions:`** list, and **`from_llm`** conditions for **`transfer_money_tools`**.
 
 {Check It!|assessment}(code-output-compare-501040001)
 
@@ -127,8 +127,8 @@ Save the file.
 
 ## Running locally
 
-From the project root, activate the venv, then **`cd level5`**. Complete Parts A–D, then run **`python -m rasa train`** when you reach **Lab 5.1**. (On Windows PowerShell, use **`.\.venv\Scripts\Activate.ps1`** before **`cd level5`**.)
+From project root, activate the venv, then **`cd level5`**. After Parts A–D, run **`python -m rasa train`** in **Lab 5.1**. On Windows PowerShell, use **`.\.venv\Scripts\Activate.ps1`** before **`cd level5`**.
 
 ---
 
-**Success criteria.** Fill-in-the-blanks passed, code test **10/10**, then continue to **Unit 5** (training and testing).
+**Success criteria.** Fill-in-the-blanks passed, code test **10/10**, then go to **Unit 5** (training and testing).

@@ -1,14 +1,14 @@
-**Starting point:** Work in **`level5/`** with a completed Chapter 1.5 agent (all labs in this chapter done).
+**Starting point:** Work in **`level5/`** with every lab in this chapter complete.
 
-Before moving to **Chapter 1.6** (or beyond), ensure you can:
+Before **Chapter 1.6** (or further work on this bot), you should be able to:
 
-- Explain the difference between **tools** (LLM selects at runtime) and **actions** (explicitly called in flows)
+- Explain how **tools** (model-chosen at runtime) differ from **actions** (named in the flow)
 - Add **`data/prompts/command_prompt_v3_slot_names.jinja2`** and **`prompt_template`** in **`config.yml`** (**Lab 2.0**) so the command generator uses domain slot names
-- Create a **`tools/`** module with Python functions and export them via **`__all__`**
-- Add a **`tools:`** section to **`endpoints.yml`** with **`tools_module: "tools"`**
-- Create a flow that collects slots and runs an action in a context where the LLM can call tools, and extend **`from_llm`** slot mappings so **`transfer_money_tools`** can fill **amount**, **recipient**, and **account_from**
-- Create an action class with **`name()`** and **`run()`** that reads slots with **`tracker.get_slot`**, sends **`dispatcher.utter_message`**, and returns events (and understand that the LLM can invoke tools in that context)
-- **Train** from **`level5/`** with the venv activated at **project root** (**`python -m rasa train`**) and pass the **completion check** in the **last lab** of the training and testing unit
-- Optionally **test** **`transfer_money_tools`** in **Rasa Inspector** and confirm tool-calling behavior
+- Build a **`tools/`** module, export tool functions in **`__all__`**
+- Add **`tools:`** to **`endpoints.yml`** with **`tools_module: "tools"`**
+- Author a flow that collects slots, runs an action in a tool-calling context, and extend **`from_llm`** so **`transfer_money_tools`** fills **amount**, **recipient**, and **account_from**
+- Implement an action with **`name()`** and **`run()`** that reads slots via **`tracker.get_slot`**, calls **`dispatcher.utter_message`**, returns events, and know the LLM may still call tools in that step
+- **Train** from **`level5/`** with the venv at project root (**`python -m rasa train`**) and pass the **completion check** (**Lab 5.2**)
+- Optionally exercise **`transfer_money_tools`** in **Rasa Inspector** and observe tool behavior
 
-If you can do all of the above, you are ready for Chapter 1.6 or for extending your agent with more tools and flows.
+When that list feels comfortable, you are ready for Chapter 1.6 or for adding more tools and flows on your own.

@@ -1,8 +1,8 @@
-**Starting point:** Work in **`level5/`** with the Chapter 1.4 completion baseline from the start of this chapter.
+**Starting point:** Work in **`level5/`** from the Chapter 1.4 completion baseline described at the start of this chapter.
 
-In Chapter 1.4 you used **actions**: a flow step names an action (for example **`- action: action_process_transfer`**). When the flow reaches that step, the agent **always** runs that action.
+In Chapter 1.4, **actions** are what the flow names: for example **`- action: action_process_transfer`**. When execution reaches that step, that action **always** runs.
 
-**Tools** are different. They are **functions the LLM may choose to call** at runtime. The flow does not list a tool by name; the LLM sees the registered tools (for example **check_balance**, **process_transfer**, **get_account_info**) and decides which to call and when, from what the user said.
+**Tools** work differently. They are **functions the LLM may call** at runtime. The flow never lists a tool by name; the model sees the registered tools (for example **check_balance**, **process_transfer**, **get_account_info**) and chooses which to invoke from the user’s wording.
 
 ## Comparison
 
@@ -13,9 +13,9 @@ In Chapter 1.4 you used **actions**: a flow step names an action (for example **
 | **Definition** | Python class in `actions/`, registered in domain | Python functions in `tools/`, registered in endpoints.yml |
 | **Use case** | Predictable, required steps (e.g. "always run transfer after collecting slots") | Flexible operations (e.g. "user asked for balance? call check_balance") |
 
-In Chapter 1.5 you add **tools** alongside your existing actions. The **`transfer_money_tools`** flow still collects slots, then runs one **action** (`action_process_transfer_with_tools`). Inside that step’s context, the **LLM** can call your **tools** (`check_balance`, `process_transfer`, `get_account_info`, …) as needed.
+Chapter 1.5 adds **tools** next to your existing actions. The **`transfer_money_tools`** flow still collects slots, then runs one **action** (`action_process_transfer_with_tools`). In that step’s context, the **LLM** may call your **tools** (`check_balance`, `process_transfer`, `get_account_info`, …) as needed.
 
-## Example: What you already have (actions)
+## Example: Actions in a flow
 
 In Chapter 1.4 a flow step explicitly calls an action. For example, in a transfer flow you might see:
 
@@ -42,4 +42,4 @@ def check_balance(account: str) -> dict:
     return {"account": account, "balance": 1234.56, "currency": "USD"}
 ```
 
-The flow does **not** list this function. The LLM chooses to call it when the user’s message matches the tool’s intent. Later in this chapter you will create the **`tools`** module, register it in **`endpoints.yml`**, and connect it to a flow.
+The flow does **not** list this function. The LLM calls it when the user’s message fits the tool’s intent. Later in this chapter you create the **`tools`** module, register it in **`endpoints.yml`**, and tie it to a flow.

@@ -1,14 +1,14 @@
-**Starting point:** Work in **`level5/`** with **Labs 2.0 and 2.1** complete (**`data/prompts/`** + **`prompt_template`**, **`tools/banking_tools.py`**, and **`__all__`**).
+**Starting point:** Work in **`level5/`** with **Labs 2.0 and 2.1** complete (**`data/prompts/`**, **`prompt_template`**, **`tools/banking_tools.py`**, **`__all__`**).
 
-**Objective.** The **previous page** showed the **`tools:`** section in **`endpoints.yml`**. In this lab you add it to **`level5/endpoints.yml`** so Rasa can discover the tool functions you created in the **previous unit’s lab**.
+**Objective.** The prior page showed the **`tools:`** block for **`endpoints.yml`**. Here you add it to **`level5/endpoints.yml`** so Rasa loads the tools from **Lab 2.1**.
 
 ## Step-by-Step Instructions
 
-**Step 1.** Confirm **`level5/tools/__init__.py`** exists (Lab 2.1). Rasa loads **`tools`** as a Python package; without **`__init__.py`**, registration can fail.
+**Step 1.** Confirm **`level5/tools/__init__.py`** exists (from Lab 2.1). Rasa imports **`tools`** as a package; missing **`__init__.py`** can break registration.
 
-**Step 2.** Open `level5/endpoints.yml`. Ensure existing sections (action_endpoint, nlg, model_groups) are unchanged.
+**Step 2.** Open **`level5/endpoints.yml`**. Leave **`action_endpoint`**, **`nlg`**, and **`model_groups`** intact.
 
-**Step 3.** Add a new section **tools** (e.g. after the action_endpoint or before model_groups):
+**Step 3.** Add a **`tools`** section (for example after **`action_endpoint`** or before **`model_groups`**):
 
 ```yaml
 tools:
@@ -17,8 +17,8 @@ tools:
 
 Use 2-space indentation. The value `"tools"` is the name of the Python module (the `tools/` folder).
 
-**Step 4.** Save the file. Verify that the YAML is valid and that no other sections were removed or broken.
+**Step 4.** Save. Confirm the file is valid YAML and other sections are untouched.
 
-**Step 5.** **In Codio**, use **Check It!** below. The grader will check that **`level5/endpoints.yml`** contains a `tools:` key and `tools_module: "tools"`.
+**Step 5.** **In Codio**, run **Check It!** below. The grader expects a top-level **`tools:`** with **`tools_module: "tools"`**.
 
 {Check It!|assessment}(code-output-compare-501030001)

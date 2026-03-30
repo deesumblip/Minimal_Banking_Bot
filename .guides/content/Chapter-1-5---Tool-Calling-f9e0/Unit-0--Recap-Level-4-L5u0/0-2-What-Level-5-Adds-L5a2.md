@@ -1,16 +1,16 @@
-**Open in \`level5/\`:** All labs and paths in this chapter are under **`level5/`** in the repository.
+**Work in `level5/`:** Every lab path in this chapter sits under **`level5/`** in the repo.
 
-Chapter 1.5 builds on the **final agent at the end of Chapter 1.4** described on the **previous page**.
+Chapter 1.5 extends the **Chapter 1.4 completion** agent from the **previous page**.
 
-Level 5 adds **tool calling**: the LLM can dynamically select and invoke **tools** (Python functions you register) based on conversation context—not only the fixed **action** steps named in your flows.
+**Tool calling** is the new layer: the LLM can choose and run **tools**—Python functions you register—based on context, instead of only following **action** steps named in your flows.
 
 **How to read this page**
 
-- Your **starting point** is **Chapter 1.4 completion** in **`level5/`**: **no** command-generator **`prompt_template`**, **no** **`tools/`** module, **no** **`tools:`** in **`endpoints.yml`**, **no** **`transfer_money_tools`** flow file, **no** **`action_process_transfer_with_tools`**. You **build** the full delta in the labs. When you are done, your **`level5/`** tree matches the **Chapter 1.5 end state** summarized at the **end of this chapter**.
+- You start from **Chapter 1.4 completion** in **`level5/`** with **no** **`prompt_template`**, **no** **`tools/`** module, **no** **`tools:`** in **`endpoints.yml`**, **no** **`transfer_money_tools`** flow file, and **no** **`action_process_transfer_with_tools`**. The labs walk you from that baseline to the finished Chapter 1.5 layout (summarized again in Unit 6).
 
-Your Chapter 1.4 flows and actions stay in place; you **add** the prompt file, **tools**, **`endpoints`** registration, the new flow and action, and domain slot conditions so the LLM can call **`check_balance`**, **`process_transfer`**, **`get_account_info`**, and similar functions where the lab expects them.
+Existing flows and responses stay; you **add** the command-generator prompt, the **tools** package, **`endpoints`** registration, the new flow and action, and domain slot conditions so the model can call **`check_balance`**, **`process_transfer`**, **`get_account_info`**, and the other tools as the labs specify.
 
-**Implementation order:** **Lab 2.0** ( **`data/prompts/`** + **`prompt_template`** in **`config.yml`** ) → **Lab 2.1** (fill-in-the-blanks + **`tools/banking_tools.py`**) → **Lab 3.1** (register **`tools:`** in **`endpoints.yml`**) → **Lab 4.1** (fill-in-the-blanks for **domain slot conditions**, add **`action_process_transfer_with_tools`** to **`actions:`**, then **flow YAML**, then **custom action** Python) → **Labs 5.1–5.2** (train, completion check, Inspector). Step-by-step instructions live on each lab page.
+**Implementation order:** **Lab 2.0** (**`data/prompts/`** + **`prompt_template`** in **`config.yml`**) → **Lab 2.1** (fill-in-the-blanks + **`tools/banking_tools.py`**) → **Lab 3.1** (register **`tools:`** in **`endpoints.yml`**) → **Lab 4.1** (fill-in-the-blanks for **domain slot conditions**, add **`action_process_transfer_with_tools`** to **`actions:`**, then **flow YAML**, then **custom action** Python) → **Labs 5.1–5.2** (train, completion check, optional Inspector). Each lab page has the detailed steps.
 
 ---
 
@@ -28,4 +28,4 @@ Your Chapter 1.4 flows and actions stay in place; you **add** the prompt file, *
 
 **Lab 5.2 — Testing.** You run the **completion check** and, in **Rasa Inspector**, exercise tool-calling behavior end-to-end.
 
-**Unchanged in spirit.** All Chapter 1.4 responses, flows, and actions remain in **`level5/`**; you **add** the layers above and the **`transfer_money_tools`** path described here.
+**What stays the same.** Chapter 1.4 responses, flows, and actions remain in **`level5/`**; you **add** the layers above, including the **`transfer_money_tools`** path.

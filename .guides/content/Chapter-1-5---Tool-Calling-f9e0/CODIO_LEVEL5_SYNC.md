@@ -1,18 +1,18 @@
 # Chapter 1.5 - Tool Calling: Codio Sync
 
-This folder mirrors the Level 5 content from `level5/` (unit content and lab content) so it can be synced to Codio the same way as Chapter 1.4 (Multiple Slots).
+This folder mirrors Level 5 teaching content (aligned with `level5/`) for Codio sync, same pattern as Chapter 1.4.
 
-**Student working directory:** All Chapter 1.5 student steps assume the agent project lives under **`level5/`** in the workspace. For **training and local runs**, activate the venv at **project root**, then **`cd level5`** before **`python -m rasa …`**. **Graded labs** use file-based assessments (fill-in-the-blanks and code tests read `level5/` files); students do not need the venv active to pass the Lab 2.1 checks.
+**Student working directory:** All steps assume the agent under **`level5/`**. For training and CLI runs, activate the venv at **project root**, then **`cd level5`** before **`python -m rasa …`**. Graded labs use on-disk checks (fill-in-the-blanks and code tests read `level5/`); the venv is **not** required to pass Lab 2.1 file checks.
 
-**Linear lab order (build the delta from Chapter 1.4 completion):** **Lab 2.0** (copy **`command_prompt_v3_slot_names.jinja2`** from **`.guides/content/Chapter-1-5---Tool-Calling-f9e0/resources/`** into **`level5/data/prompts/`**, add **`prompt_template`** in **`config.yml`**) → **Lab 2.1** (tools) → **Lab 3.1** (endpoints) → **Lab 4.1** (flow + action) → **Lab 5.1** (train) → **Lab 5.2** (completion check). **Lab 2.0** has **no** dedicated task ID; the **`prompt_template`** file and **`config.yml`** wiring are **checked by the Lab 5.1 and Lab 5.2 graders** (Check 3 in each).
+**Lab order (from Chapter 1.4 completion to Chapter 1.5 done):** **Lab 2.0** — copy **`command_prompt_v3_slot_names.jinja2`** from **`.guides/content/Chapter-1-5---Tool-Calling-f9e0/resources/`** to **`level5/data/prompts/`**, set **`prompt_template`** in **`config.yml`** → **Lab 2.1** (tools) → **Lab 3.1** (endpoints) → **Lab 4.1** (flow + action) → **Lab 5.1** (train) → **Lab 5.2** (completion check). **Lab 2.0** has no separate assessment ID; **Lab 5.1** and **Lab 5.2** graders include **Check 3** for the prompt file and **`prompt_template`**.
 
-**Guide page JSON (`*.json` next to each `.md`):** Each page sets **`"path": ["level5"]`** (and **`"layout": "2-panels-tree-guides-left"`** where applicable) so the Codio / IDE **file tree** focuses on the **`level5/`** folder, matching the Chapter 1.4 pattern for **`level4/`**.
+**Guide page JSON (`*.json` next to each `.md`):** Pages use **`"path": ["level5"]`** (and **`"layout": "2-panels-tree-guides-left"`** where set) so the IDE tree highlights **`level5/`**, like **`level4/`** in Chapter 1.4.
 
 ## Structure
 
 - **Chapter:** Chapter-1-5---Tool-Calling-f9e0
 - **Units:** Unit 0 (Recap Level 4) through Unit 6 (Summary and Next Steps) — 7 units total. Folder names are **Unit-0--** through **Unit-6--**. Unit 1 has three pages (1.1, 1.2, 1.3 Test Your Knowledge). Unit 6 has seven pages: 6.1 Complete Agent Walkthrough, 6.2 What You've Learned, 6.3 What's Next, 6.4 Knowledge Check, 6.5 Limitations of Level 5, 6.6 What's Next Level 6 Preview, 6.7 Course Completion Checklist.
-- **Labs:** Lab 2.1 (tools folder), Lab 3.1 (endpoints), Lab 4.1 (flow and action), Lab 5.1 (training), Lab 5.2 (completion check). **Unit 5 order (linear):** 5.1 Training → Lab 5.1 → 5.2 Testing → Lab 5.2 (concept then lab, then concept then lab).
+- **Labs:** Lab 2.0 (command prompt), Lab 2.1 (tools folder), Lab 3.1 (endpoints), Lab 4.1 (flow and action), Lab 5.1 (training), Lab 5.2 (completion check). **Unit 5 (linear):** page 5.1 → Lab 5.1 → page 5.2 → Lab 5.2.
 
 Each unit has an `index.json` and each page has a `.md` and `.json`. **IDs use the f9e0/L5 suffix** so they do not collide with other chapters.
 
@@ -31,4 +31,4 @@ Lab 2.1 includes `{Check It!|assessment}(fill-in-the-blanks-501020010)` then `{C
 
 ## Re-import from Git
 
-To refresh the guide in Codio (including Chapter 1.5), re-import or update the project from Git so Codio loads the current `.guides/content/` tree.
+Re-import or pull the project so Codio picks up the latest `.guides/content/` tree.

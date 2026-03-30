@@ -1,8 +1,8 @@
-**Starting point:** Work in **`level5/`** with the **Chapter 1.4 completion** baseline described in **Unit 0.1**. At the **start** of Chapter 1.5, your **`level5/config.yml`** should **not** yet set **`prompt_template`**, and there should be **no** **`level5/data/prompts/`** folder. This lab is the **first** build step in Unit 2: you add the **command-generator prompt** before you define Python tools in **Lab 2.1**.
+**Starting point:** Work in **`level5/`** with the **Chapter 1.4 completion** baseline from **Unit 0.1**. Before this lab, **`level5/config.yml`** should **not** yet define **`prompt_template`**, and there should be **no** **`level5/data/prompts/`** folder. This is Unit 2’s **first** build step: add the **command-generator prompt** before **Lab 2.1** (Python tools).
 
-**Why this lab exists.** Rasa’s **`SearchReadyLLMCommandGenerator`** learns from the **examples in its prompt**. The stock template can bias the model toward **non-domain slot names** (for example `transfer_money_amount` instead of **`amount`**). That produces commands Rasa **skips** (`skip_command_slot_not_in_domain` in debug logs). This chapter ships a **custom Jinja2 prompt** that tells the model to use **exact domain slot names** (`amount`, `recipient`, `account_from`, `account`). You **add** that file and wire it in **`config.yml`** here so slot filling stays reliable for **Labs 2.1–5.2**.
+**Why this lab exists.** **`SearchReadyLLMCommandGenerator`** follows **examples in its prompt**. The default template can steer the model toward **slot names that are not in your domain** (for example `transfer_money_amount` instead of **`amount`**). Rasa then **skips** those commands (`skip_command_slot_not_in_domain` in debug logs). This course provides a **custom Jinja2 prompt** that anchors **`set slot`** on real domain names (`amount`, `recipient`, `account_from`, `account`). You copy that file here and point **`config.yml`** at it so slot filling stays reliable through **Labs 2.1–5.2**.
 
-You do **not** need the virtual environment for copying files; you need it when you run **`rasa train`** later.
+You do **not** need the virtual environment to copy files; you need it when you run **`rasa train`**.
 
 ---
 
@@ -10,9 +10,9 @@ You do **not** need the virtual environment for copying files; you need it when 
 
 1. In **`level5/`**, create a folder named **`data/prompts/`** if it does not exist.
 
-2. Copy the template into place **with the exact filename** **`command_prompt_v3_slot_names.jinja2`**:
-   - **From the course repository:** copy **`.guides/content/Chapter-1-5---Tool-Calling-f9e0/resources/command_prompt_v3_slot_names.jinja2`** to **`level5/data/prompts/command_prompt_v3_slot_names.jinja2`** (same folder layout in your clone: project root → `.guides/...` → `resources/...`).
-   - If your environment only shows the **`level5/`** tree, use the **full repository** view or ask your instructor for this file; it must match the **`resources`** copy byte-for-byte.
+2. Copy the template **using the exact filename** **`command_prompt_v3_slot_names.jinja2`**:
+   - **From the course repo:** **`.guides/content/Chapter-1-5---Tool-Calling-f9e0/resources/command_prompt_v3_slot_names.jinja2`** → **`level5/data/prompts/command_prompt_v3_slot_names.jinja2`** (project root → `.guides/...` → `resources/...`).
+   - If your IDE only shows **`level5/`**, open the full repo tree or ask your instructor; the file must match the **`resources`** copy.
 
 3. Save. You should have **`level5/data/prompts/command_prompt_v3_slot_names.jinja2`**.
 
@@ -41,10 +41,10 @@ pipeline:
 
 ## Part C — Quick check (optional)
 
-From **project root**, activate the venv, **`cd level5`**, and run **`python -m rasa train`**. Training should complete; if the prompt path is wrong, training or the next step will error.
+From **project root**, activate the venv, **`cd level5`**, and run **`python -m rasa train`**. Training should finish; a bad **`prompt_template`** path usually surfaces here or on the next train.
 
 ---
 
-**Success criteria.** **`level5/data/prompts/command_prompt_v3_slot_names.jinja2`** exists and **`config.yml`** references **`prompt_template: data/prompts/command_prompt_v3_slot_names.jinja2`**. Then continue to **Unit 2.1** (concept) and **Lab 2.1** ( **`tools/banking_tools.py`** ).
+**Success criteria.** **`level5/data/prompts/command_prompt_v3_slot_names.jinja2`** exists and **`config.yml`** sets **`prompt_template: data/prompts/command_prompt_v3_slot_names.jinja2`**. Then continue to **Unit 2.1** (concept) and **Lab 2.1** (**`tools/banking_tools.py`**).
 
-There is **no** separate Check It! for this page; **`config.yml`** and **`data/prompts/`** are verified indirectly when you run **Lab 5.1** and train the full agent.
+There is **no** separate Check It! on this page; **Labs 5.1 and 5.2** include a grader check (**Check 3**) for this file and **`prompt_template`** after you train.

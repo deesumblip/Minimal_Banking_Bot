@@ -1,14 +1,14 @@
-**Chapter 1.5 starting point:** This chapter assumes you **begin from the banking agent you finished at the end of Chapter 1.4**—the one reflected in **`level4/`** after those labs: multiple slots, **`transfer_money`**, **`action_process_transfer`**, and the Chapter 1.4 pipeline (**`SearchReadyLLMCommandGenerator`**, **`endpoints.yml`** with **`action_endpoint`**, **`nlg`**, and **`model_groups`** as in the finished **`level4/`** agent in this repository). You are not starting from scratch.
+**Chapter 1.5 starting point:** You continue from the **banking agent you completed in Chapter 1.4**—the same design you see in **`level4/`** after those labs: multiple slots, **`transfer_money`**, **`action_process_transfer`**, and the Chapter 1.4 stack (**`SearchReadyLLMCommandGenerator`**, **`endpoints.yml`** with **`action_endpoint`**, **`nlg`**, and **`model_groups`**). This is not a greenfield project.
 
-**Repository note:** In this course repository, **`level5/`** is the **Chapter 1.4 completion** baseline **before** any Chapter 1.5 lab work: same general shape as the finished **`level4/`** agent (domain, flows—including **`goodbye`**, **`holiday_hours`**, **`check_balance`**, **`transfer_money`**—and **Level 2–4** actions). **Before Lab 2.0**, **`level5/`** does **not** yet contain **`data/prompts/`**, a **`prompt_template`** line in **`config.yml`**, a **`tools/`** package, **`tools:`** in **`endpoints.yml`**, **`transfer_money_tools.yml`**, or **`action_process_transfer_with_tools`**. You **add** those in the labs below. Use **`level4/`** as the reference for “Chapter 1.4 end” and **`level5/`** for “work in progress” as you complete each step.
+**Repository note:** Here, **`level5/`** matches that **Chapter 1.4 completion** snapshot **before** any Chapter 1.5 labs: same overall shape as finished **`level4/`** (domain, flows such as **`goodbye`**, **`holiday_hours`**, **`check_balance`**, and **`transfer_money`**, plus your earlier custom actions). Until you work through the labs, **`level5/`** will **not** yet include **`data/prompts/`**, a **`prompt_template`** entry in **`config.yml`**, a **`tools/`** package, **`tools:`** in **`endpoints.yml`**, **`transfer_money_tools.yml`**, or **`action_process_transfer_with_tools`**—you add each of those in order. Treat **`level4/`** as the frozen “end of 1.4” reference and **`level5/`** as where you build Chapter 1.5.
 
-**Open in \`level5/\`:** Do **not** edit **`level4/`** for this chapter. Every file you change and every **`python -m rasa …`** command in Chapter 1.5 assumes your shell’s working directory is **`level5/`** (activate the venv at **project root**, then **`cd level5`**).
+**Work in `level5/`:** Do **not** edit **`level4/`** in this chapter. Every change and every **`python -m rasa …`** command assumes you activate the venv at **project root**, then **`cd level5`**.
 
 ---
 
 Before we add tool calling, here is a quick recap of what you have at **Chapter 1.4 completion**. All of that behavior stays in place; Chapter 1.5 **adds** tools on top.
 
-**Naming:** *Level 5* means the outcome of Chapter 1.5. The **`level5/`** folder is where Chapter 1.5 changes go; it continues from the same agent you completed in **`level4/`**.
+**Naming:** *Level 5* is the skill outcome of Chapter 1.5. The **`level5/`** folder is where those changes live—it extends the same agent you finished in **`level4/`**.
 
 ## Where Chapter 1.5 happens
 
@@ -56,6 +56,6 @@ In order, you will:
 
 ---
 
-## What Level 4 could not do
+## What Chapter 1.4 did not cover
 
-Your Chapter 1.4 agent used **actions** that flows call by name. It could not let the **LLM decide at runtime** which operations to run (for example, balance check versus transfer) based on free-form dialogue alone. Chapter 1.5 adds **tools**: functions the LLM can discover and call dynamically so the agent can adapt to the conversation.
+In Chapter 1.4, **actions** are whatever the flow names at each step—the runtime does not pick between them. The **LLM** does not freely choose “balance check now” versus “transfer” from raw dialogue alone. Chapter 1.5 adds **tools**: functions the model can select and call as the conversation unfolds.

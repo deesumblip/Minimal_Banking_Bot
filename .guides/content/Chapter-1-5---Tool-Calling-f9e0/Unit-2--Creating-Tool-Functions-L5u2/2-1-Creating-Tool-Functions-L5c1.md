@@ -1,6 +1,6 @@
-**Starting point:** Work in **`level5/`** with **Lab 2.0** complete (**`data/prompts/command_prompt_v3_slot_names.jinja2`** and **`prompt_template`** in **`config.yml`**). The **next lab** in this unit has you add **`tools/banking_tools.py`** (**Lab 2.1**); this page explains the pattern first.
+**Starting point:** Work in **`level5/`** with **Lab 2.0** done (**`data/prompts/command_prompt_v3_slot_names.jinja2`** and **`prompt_template`** in **`config.yml`**). **Lab 2.1** next adds **`tools/banking_tools.py`**; this page covers the pattern.
 
-Tool functions are plain Python functions that the LLM can call. They live in a **`tools`** module (for example **`tools/banking_tools.py`**).
+Tool functions are ordinary Python functions the LLM can call. They live in a **`tools`** module (for example **`tools/banking_tools.py`**).
 
 ## Requirements
 
@@ -38,4 +38,4 @@ def check_balance(account: str):
     }
 ```
 
-You will add two more functions following the same pattern: **`process_transfer(amount, from_account, to_account)`** (returns a dict with success/message) and **`get_account_info(account)`** (returns a dict with account details). Each needs a clear docstring so the LLM knows when to call it. The **`__all__`** list at the top tells Rasa which functions to expose as tools. The **lab at the end of this unit** has you create the **`tools/`** folder and **`banking_tools.py`** with all three tools and **`__all__`**.
+Add two more functions in the same style: **`process_transfer(amount, from_account, to_account)`** (dict with success/message) and **`get_account_info(account)`** (dict with account details). Each needs a docstring that tells the model when to use it. The **`__all__`** list names the functions Rasa exposes as tools. **Lab 2.1** has you create **`tools/`** and **`banking_tools.py`** with all three functions and **`__all__`**.

@@ -1,6 +1,6 @@
 **Starting point:** Work in **`level5/`** with **Labs 2.0–5.1** complete (**`prompt_template`** + **`data/prompts/`**, **`tools/`**, **`endpoints.yml`**, flow + action, **trained model**).
 
-**Objective.** Run the **completion check** to verify **`level5/`** has **tools/**, **`banking_tools.py`**, **`tools:`** in **`endpoints.yml`**, **`transfer_money_tools.yml`**, **`action_process_transfer_with_tools`** (file + domain), and a model under **`level5/models/`** (or readiness to train).
+**Objective.** Run the **completion check** to confirm **`level5/`** contains **tools/**, **`banking_tools.py`**, **`tools:`** in **`endpoints.yml`**, **`transfer_money_tools.yml`**, **`action_process_transfer_with_tools`** (file and domain), and a model under **`level5/models/`** (partial credit if you have not trained yet).
 
 ## Step-by-Step Instructions
 
@@ -12,4 +12,4 @@
 
 {Check It!|assessment}(code-output-compare-501050002)
 
-The grader checks **`level5/tools/`**, **`level5/tools/banking_tools.py`** with **`__all__`**, **`level5/endpoints.yml`** with a **`tools:`** section, **Lab 2.0** (**`data/prompts/command_prompt_v3_slot_names.jinja2`** and **`prompt_template`** in **`config.yml`**), **`level5/data/basics/transfer_money_tools.yml`**, **`level5/actions/action_process_transfer_with_tools.py`**, **`level5/domain/basics.yml`** listing **`action_process_transfer_with_tools`**, and **`level5/models/`** (partial score if the domain is correct but you have not trained yet). **Lab 4.1** (code test) additionally verifies **`from_llm`** slot conditions for **`transfer_money_tools`** and a complete **`run()`** on **`action_process_transfer_with_tools`**; keep those in sync with **Lab 5.2**.
+The grader inspects **`level5/tools/`**, **`banking_tools.py`** (with **`__all__`**), **`endpoints.yml`** (**`tools:`**), **Lab 2.0** files (**`data/prompts/command_prompt_v3_slot_names.jinja2`**, **`prompt_template`** in **`config.yml`**), **`transfer_money_tools.yml`**, **`action_process_transfer_with_tools.py`**, **`domain/basics.yml`** (action listed), and **`level5/models/`** (partial if domain passes but no model). **Lab 4.1** already enforced **`from_llm`** conditions for **`transfer_money_tools`** and a real **`run()`**—keep that work aligned when you run **Lab 5.2**.
