@@ -7,9 +7,16 @@ flows:
       Then it will process the transfer.
     steps:
       - collect: amount
-        description: "transfer amount"
+        description: |
+          The transfer amount in dollars. Extract from this message if the user already said it
+          (same turn as starting the flow). Accept digits with or without $; commas may appear;
+          phrases like "hundred" or "twenty dollars" are acceptable.
       - collect: recipient
-        description: "recipient name or account"
+        description: |
+          Name or account identifier of who receives the money. Short reply (e.g. "Jamie" or an account number).
+          Extract from this turn if they already named the recipient.
       - collect: account_from
-        description: "source account number"
+        description: |
+          Source account number or ID the money is sent from. Digits or short label;
+          extract from this turn if the user already gave the source account.
       - action: action_process_transfer

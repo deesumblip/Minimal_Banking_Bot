@@ -1,15 +1,16 @@
-**Starting point:** Work in **`level5/`** with **`tools/`** in place and **`tools:`** registered in **`endpoints.yml`** (the work from the previous two units). This page explains how a **flow** reaches a step where the LLM may call your tools; the **lab that follows** is where you implement it.
+**Starting point:** Work in **`level5/`** with **`tools/`** in place and **`tools:`** registered in **`endpoints.yml`** (Labs 2.1 and 3.1).
 
 To use tools in a conversation, you need a **flow** that brings the user to a point where the LLM can call them. In Chapter 1.5 we do that with:
 
 1. A **flow** that collects the same slots as **`transfer_money`** (**amount**, **recipient**, **account_from**) so the agent has context.
 2. A **step** that runs one **action** (`action_process_transfer_with_tools`) in a context where the LLM can invoke tools.
+3. **Domain** updates so **`from_llm`** slot mappings include **`active_flow: transfer_money_tools`** for those three slots—otherwise the new flow cannot fill them reliably. You will complete that edit in the **fill-in-the-blanks** exercise in **Lab 4.1**.
 
 The flow does **not** list individual tools; it lists one action. That action runs in an environment where the LLM can call the registered tools (**`check_balance`**, **`process_transfer`**, **`get_account_info`**, …) based on the conversation.
 
 ## Example: The transfer_money_tools flow
 
-Below is an example of the flow file. The **lab that follows** has you create your own version (for example with a **description** that fits your agent). The structure is: collect the three slots, then run the action that enables tool calling.
+Below is the flow structure you will create in **Lab 4.1**. The **`transfer_money_tools`** key is the **flow id**; it must match **`active_flow`** in the domain for the transfer slots.
 
 ```yaml
 flows:
@@ -21,37 +22,27 @@ flows:
       based on what the user says.
     steps:
       - collect: amount
-        description: "transfer amount"
+        description: |
+          The transfer amount in dollars. Extract from this message if the user already said it
+          (same turn as starting the flow). Accept digits with or without $; commas may appear;
+          phrases like "hundred" or "twenty dollars" are acceptable.
       - collect: recipient
-        description: "recipient name or account"
+        description: |
+          Name or account identifier of who receives the money. Short reply (e.g. "Jamie" or an account number).
+          Extract from this turn if they already named the recipient.
       - collect: account_from
-        description: "source account number"
+        description: |
+          Source account number or ID the money is sent from. Digits or short label;
+          extract from this turn if the user already gave the source account.
       - action: action_process_transfer_with_tools
 ```
 
 ## Example: The action_process_transfer_with_tools action
 
-The flow’s last step runs an **action** (not the tools directly). That action runs in a context where the LLM can call your registered tools. Below is a minimal action class. The **lab that follows** has you create your own action file following this pattern and register it in the domain.
+The flow’s last step runs an **action** (not the tools directly). That action should read the collected slots and send a clear user message so you can tell this path from the classic **`action_process_transfer`** demo. **Lab 4.1** provides a full reference **`run()`** implementation (with **`tracker.get_slot`** and **`dispatcher.utter_message`**); the automated check expects that pattern, not an empty **`return []`** stub.
 
-```python
-from typing import Any, Dict, List, Text
+You also add **`action_process_transfer_with_tools`** to the domain **`actions:`** list in the same lab.
 
-from rasa_sdk import Action, Tracker
-from rasa_sdk.executor import CollectingDispatcher
+## Baseline files you do not recreate in this chapter
 
-
-class ActionProcessTransferWithTools(Action):
-    def name(self) -> Text:
-        return "action_process_transfer_with_tools"
-
-    def run(
-        self,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: Dict[Text, Any],
-    ) -> List[Dict[Text, Any]]:
-        # Optional: send a message. The LLM can call tools in this step.
-        return []
-```
-
-In the **lab that follows**, you create the flow file and the action file (your own version of the examples above), and add **`action_process_transfer_with_tools`** to the domain **`actions:`** list.
+Your **`level5/config.yml`** points **`SearchReadyLLMCommandGenerator`** at **`data/prompts/command_prompt_v3_slot_names.jinja2`**. That prompt template ships with the checked-in **`level5/`** tree in this repository (it is not introduced in Labs 2.1–4.1): it nudges the LLM to use **domain slot names** (**`amount`**, **`recipient`**, …) instead of prefixed names that do not exist in your domain. **Do not** remove or replace it during Chapter 1.5 unless you are deliberately customizing the command generator (outside the scope of these labs).

@@ -1,6 +1,6 @@
 recipe: default.v1
 language: en
-assistant_id: level3-agent
+assistant_id: level4-agent
 
 pipeline:
   - name: SearchReadyLLMCommandGenerator

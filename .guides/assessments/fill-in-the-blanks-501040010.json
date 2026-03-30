@@ -1,0 +1,58 @@
+{
+	"type": "fill-in-the-blanks",
+	"taskId": "fill-in-the-blanks-501040010",
+	"source": {
+		"name": "Lab 4.1: Domain slot conditions for transfer_money_tools",
+		"showName": false,
+		"instructions": "**Fill in the blanks** so each slot’s `from_llm` mapping allows the **`transfer_money_tools`** flow to fill **`amount`**, **`recipient`**, and **`account_from`**. Then merge the completed YAML into **`level5/domain/basics.yml`** (or confirm your file already matches) before the **Code Test**.",
+		"showValues": true,
+		"text": "```yaml\n  amount:\n    type: text\n    mappings:\n      - type: from_llm\n        conditions:\n          - active_flow: transfer_money\n          - active_flow: <<<transfer_money_tools>>>\n\n  recipient:\n    type: text\n    mappings:\n      - type: from_llm\n        conditions:\n          - active_flow: transfer_money\n          - active_flow: <<<transfer_money_tools>>>\n\n  account_from:\n    type: text\n    mappings:\n      - type: from_llm\n        conditions:\n          - active_flow: transfer_money\n          - active_flow: <<<transfer_money_tools>>>\n```",
+		"distractors": "transfer_money\ncheck_balance\ntools_flow\ntransfer_with_tools\namount_tools",
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Fill in the Blanks"
+				}
+			],
+			"files": [],
+			"opened": [
+				{
+					"type": "terminal",
+					"panelNumber": 1
+				}
+			]
+		},
+		"bloomsObjectiveLevel": "",
+		"learningObjectives": "",
+		"guidance": "The flow **id** in **`data/basics/transfer_money_tools.yml`** is **`transfer_money_tools`**—that string must match **`active_flow`** here. **Do not** remove **`active_flow: transfer_money`**; you are **adding** a second condition. After you pass, open **`level5/domain/basics.yml`**, find **`amount`**, **`recipient`**, and **`account_from`**, and ensure each **`conditions`** list matches your completed exercise (then run the **Code Test**).",
+		"showGuidanceAfterResponseOption": {
+			"type": "Attempts",
+			"passedFrom": 1
+		},
+		"maxAttemptsCount": 1,
+		"showExpectedAnswerOption": {
+			"type": "Always"
+		},
+		"points": 5,
+		"arePartialPointsAllowed": false,
+		"useMaximumScore": false,
+		"tokens": {
+			"blank": [
+				"transfer_money_tools",
+				"transfer_money_tools",
+				"transfer_money_tools"
+			],
+			"text": [
+				"```yaml\n  amount:\n    type: text\n    mappings:\n      - type: from_llm\n        conditions:\n          - active_flow: transfer_money\n          - active_flow: ",
+				0,
+				"\n\n  recipient:\n    type: text\n    mappings:\n      - type: from_llm\n        conditions:\n          - active_flow: transfer_money\n          - active_flow: ",
+				1,
+				"\n\n  account_from:\n    type: text\n    mappings:\n      - type: from_llm\n        conditions:\n          - active_flow: transfer_money\n          - active_flow: ",
+				2,
+				"\n```"
+			],
+			"regexPositions": []
+		}
+	}
+}

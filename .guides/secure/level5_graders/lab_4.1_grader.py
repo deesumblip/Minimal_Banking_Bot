@@ -4,7 +4,8 @@ Lab 4.1: Creating the transfer_money_tools Flow and Action - Grader Script (Leve
 Output format matches Chapter 1.2 Lab 6.2 template.
 
 Checks level5/data/basics/transfer_money_tools.yml, action_process_transfer_with_tools.py,
-and domain actions. Runs from workspace root; expects /home/codio/workspace.
+domain actions, and from_llm slot conditions for transfer_money_tools. Runs from workspace root;
+expects /home/codio/workspace.
 """
 
 import sys
@@ -22,6 +23,22 @@ except ImportError:
     print("FAIL")
     print("Hint: PyYAML is required. Use the project venv Python.")
     sys.exit(1)
+
+
+def slot_has_active_flow(domain_data: dict, slot_name: str, flow_id: str) -> bool:
+    """True if a from_llm mapping on slot_name includes active_flow: flow_id."""
+    slots = domain_data.get("slots") or {}
+    slot_def = slots.get(slot_name)
+    if not isinstance(slot_def, dict):
+        return False
+    for m in slot_def.get("mappings") or []:
+        if not isinstance(m, dict) or m.get("type") != "from_llm":
+            continue
+        for cond in m.get("conditions") or []:
+            if isinstance(cond, dict) and cond.get("active_flow") == flow_id:
+                return True
+    return False
+
 
 score = 0
 max_score = 10
@@ -73,22 +90,31 @@ else:
     )
 print("")
 
-# Check 3: Action file exists and name() (3 points)
+# Check 3: Action file, name(), and user-visible confirmation (2 points)
 print("Check 3: Verifying action_process_transfer_with_tools.py...")
 if not ACTION_PATH.exists():
     print("❌ Check 3: FAILED - level5/actions/action_process_transfer_with_tools.py not found (0 points)")
 else:
     action_content = ACTION_PATH.read_text(encoding="utf-8")
     has_name = "action_process_transfer_with_tools" in action_content and "def name" in action_content.lower()
-    if has_name:
-        print(" Check 3: PASSED - action file with correct name (3 points)")
-        score += 3
+    has_run = "def run" in action_content.lower()
+    uses_slots = "get_slot" in action_content and all(
+        s in action_content for s in ("amount", "recipient", "account_from")
+    )
+    confirms = "utter_message" in action_content
+    if has_name and has_run and uses_slots and confirms:
+        print(" Check 3: PASSED - action with name(), run(), slot reads, utter_message (2 points)")
+        score += 2
     else:
-        print("❌ Check 3: FAILED - action must define name() returning 'action_process_transfer_with_tools' (0 points)")
+        print(
+            "❌ Check 3: FAILED - action must implement run(), read amount/recipient/account_from "
+            "via tracker.get_slot, and send at least one utter_message (0 points)"
+        )
 print("")
 
-# Check 4: Domain lists action (2 points)
+# Check 4: Domain lists action (1 point)
 print("Check 4: Verifying domain actions list...")
+domain_data = None
 if not DOMAIN_PATH.exists():
     print("❌ Check 4: FAILED - level5/domain/basics.yml not found (0 points)")
 else:
@@ -97,12 +123,35 @@ else:
             domain_data = yaml.safe_load(f)
         actions = domain_data.get("actions") or []
         if "action_process_transfer_with_tools" in actions:
-            print(" Check 4: PASSED - action in domain (2 points)")
-            score += 2
+            print(" Check 4: PASSED - action in domain (1 point)")
+            score += 1
         else:
             print("❌ Check 4: FAILED - Add action_process_transfer_with_tools to domain actions (0 points)")
     except Exception as e:
         print(f"❌ Check 4: FAILED - Could not parse domain: {e} (0 points)")
+print("")
+
+# Check 5: Domain slots allow transfer_money_tools flow (2 points)
+print("Check 5: Verifying from_llm conditions include active_flow: transfer_money_tools...")
+if domain_data is None:
+    print("❌ Check 5: FAILED - domain not loaded (0 points)")
+else:
+    ok = True
+    for slot_name in ("amount", "recipient", "account_from"):
+        if not slot_has_active_flow(domain_data, slot_name, "transfer_money_tools"):
+            ok = False
+            break
+    if ok:
+        print(
+            " Check 5: PASSED - amount, recipient, account_from map from_llm for "
+            "transfer_money_tools (2 points)"
+        )
+        score += 2
+    else:
+        print(
+            "❌ Check 5: FAILED - Each of amount, recipient, account_from needs "
+            "from_llm conditions including active_flow: transfer_money_tools (0 points)"
+        )
 print("")
 
 # Summary
@@ -113,7 +162,10 @@ else:
     print(f"❌ FAIL: Score {score}/{max_score} - Review the failed checks above and try again.")
 print("==========================================")
 print("")
-print("Summary: Check 1 (flow file) | Check 2 (flow steps) | Check 3 (action py) | Check 4 (domain)")
+print(
+    "Summary: Check 1 (flow file) | Check 2 (flow steps) | Check 3 (action) | "
+    "Check 4 (domain actions) | Check 5 (domain slot conditions)"
+)
 print(f"Score: {score}/{max_score}")
 
 if score >= max_score:

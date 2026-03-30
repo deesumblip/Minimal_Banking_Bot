@@ -20,12 +20,12 @@ The main guide index at `.guides/content/index.json` includes `Chapter-1-5---Too
 
 ## Assessments
 
-- **Task IDs:** **fill-in-the-blanks-501020010** + **code-output-compare-501020001** (Lab 2.1); 501030001 (Lab 3.1); 501040001 (Lab 4.1); 501050001 (Lab 5.1); 501050002 (Lab 5.2).
-- **Assessment JSONs:** `.guides/assessments/fill-in-the-blanks-501020010.json`; `code-output-compare-501020001.json` through `code-output-compare-501050002.json`.
+- **Task IDs:** **fill-in-the-blanks-501020010** + **code-output-compare-501020001** (Lab 2.1); 501030001 (Lab 3.1); **fill-in-the-blanks-501040010** + **code-output-compare-501040001** (Lab 4.1); 501050001 (Lab 5.1); 501050002 (Lab 5.2).
+- **Assessment JSONs:** `.guides/assessments/fill-in-the-blanks-501020010.json`, `fill-in-the-blanks-501040010.json`; `code-output-compare-501020001.json` through `code-output-compare-501050002.json`.
 - **Graders:** `.guides/secure/level5_graders/` (lab_2.1_grader.py … lab_5.2_grader.py; lab_*_solution_reference.md for LLM Rubric).
 - **Working directory:** `/home/codio/workspace`. Command uses venv Python and grader path, e.g. `/home/codio/workspace/.venv/bin/python3 /home/codio/workspace/.guides/secure/level5_graders/lab_2.1_grader.py`. Expect output contains `PASS` (substring match).
 
-Lab 2.1 includes `{Check It!|assessment}(fill-in-the-blanks-501020010)` then `{Check It!|assessment}(code-output-compare-501020001)`. Other lab pages use `{Check It!|assessment}(code-output-compare-50XXXXXX)` with the task IDs above.
+Lab 2.1 includes `{Check It!|assessment}(fill-in-the-blanks-501020010)` then `{Check It!|assessment}(code-output-compare-501020001)`. Lab 4.1 includes `{Check It!|assessment}(fill-in-the-blanks-501040010)` then `{Check It!|assessment}(code-output-compare-501040001)`. Other lab pages use `{Check It!|assessment}(code-output-compare-50XXXXXX)` with the task IDs above.
 
 ## Re-import from Git
 

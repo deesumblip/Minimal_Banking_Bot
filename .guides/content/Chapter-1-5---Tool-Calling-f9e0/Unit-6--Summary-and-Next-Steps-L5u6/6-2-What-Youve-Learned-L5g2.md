@@ -8,7 +8,7 @@ In this chapter you:
 
 2. **Register tools (Lab 3.1).** Added a **`tools:`** section to **`endpoints.yml`** with **`tools_module: "tools"`** so Rasa discovers the tools.
 
-3. **Flow and action (Lab 4.1).** Created **`transfer_money_tools.yml`** (collect **amount**, **recipient**, **account_from**, then **`action_process_transfer_with_tools`**) and **`action_process_transfer_with_tools.py`**, and registered the action in the domain.
+3. **Flow and action (Lab 4.1).** Completed the **fill-in-the-blanks** exercise for **`from_llm`** slot conditions (**`active_flow: transfer_money_tools`** on **amount**, **recipient**, **account_from**), created **`transfer_money_tools.yml`**, created **`action_process_transfer_with_tools.py`** (with **`run()`**, slot reads, and **`utter_message`**), and registered the action in the domain.
 
 4. **Training and testing (Labs 5.1 and 5.2).** Trained from **`level5/`**, ran the **completion check**, and tested tool calling in **Rasa Inspector**.
 

@@ -60,3 +60,32 @@
 1. Check that `banking_tools.py` has no syntax errors and that all three functions are defined with correct signatures
 2. Ensure `__all__` is a list of strings matching the function names
 3. Run `python -c "from tools.banking_tools import check_balance, process_transfer, get_account_info"` from level5 to test the module
+
+---
+
+### Issue: Slot filling fails or fallback during collect flows
+
+**Symptoms**: The bot asks for a slot but then fails to accept your reply, shows a generic “unable to understand” style response, or ignores a value you gave in the **same message** as starting the flow.
+
+**Tips**:
+1. When the bot asks for a slot, answer with a **short, literal** value for that slot (for example `100` or `100 dollars` for amount; account numbers as plain digits).
+2. In **CALM**, slot values often come from **LLM-based extraction**; informal or noisy phrasing can be missed. Plain numbers and simple names usually work best.
+3. A **`$`** in amounts can be unreliable in some setups; if extraction fails, try **`100`** or **`100 dollars`** without the symbol.
+
+**After changing flow YAML** (including `description` on `collect:` steps), run **`rasa train`** from `level5/` again so the updated guidance is loaded.
+
+**Digits after another flow:** If you just finished **check balance** (which uses the **`account`** slot) and then start **transfer**, a short reply like **`50`** can be mis-attributed to **`account`** instead of **`amount`** because both are free-text slots filled by the LLM. The Level 5 **`domain/basics.yml`** ties each slot’s **`from_llm`** mapping to the correct **`active_flow`** so digits go to **`amount`** during **`transfer_money`** / **`transfer_money_tools`**, and to **`account`** only during **`check_balance`**. Retrain after domain changes.
+
+**“Unable to understand” when replying to a collect step (e.g. amount):** In debug logs, look for **`skip_command_slot_not_in_domain`** and a **`SetSlotCommand`** whose **`name`** is not in your domain (for example **`transfer_money_amount`**). The stock command prompt’s example used **`set slot transfer_money_recipient`**-style names, which are **not** valid domain slots (`amount`, `recipient`, `account_from`, `account`). Level 5 overrides this with **`prompt_template`** in **`config.yml`** pointing at **`data/prompts/command_prompt_v3_slot_names.jinja2`**. Retrain after changing the prompt.
+
+---
+
+### Logging: Inspector does not write logs by default
+
+**`rasa inspect`** only prints to the terminal unless you pass logging flags. From **`level5/`**, for example:
+
+```bash
+rasa inspect --debug --log-file logs/inspect.log
+```
+
+On Windows PowerShell, use the same path. Use **`--log-file`** (and optionally **`--debug`**) to capture **`command_processor`** lines such as **`slot_not_in_domain`** and the LLM’s **`set slot ...`** output.

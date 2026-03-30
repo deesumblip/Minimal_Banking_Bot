@@ -4,7 +4,7 @@
 	"source": {
 		"name": "Lab 4.1: Creating the transfer_money_tools Flow and Action",
 		"showName": true,
-		"instructions": "To pass, all checks must pass:\n\n• Check 1: transfer_money_tools.yml exists.\n• Check 2: Flow has collect amount/recipient/account_from and action_process_transfer_with_tools.\n• Check 3: action_process_transfer_with_tools.py with correct name().\n• Check 4: Domain actions list includes action_process_transfer_with_tools.\n\nFull score: 10/10.",
+		"instructions": "To pass, all checks must pass:\n\n• Check 1: transfer_money_tools.yml exists.\n• Check 2: Flow has collect amount/recipient/account_from and action_process_transfer_with_tools.\n• Check 3: action_process_transfer_with_tools.py implements run(), reads slots with tracker.get_slot, and sends utter_message.\n• Check 4: Domain actions list includes action_process_transfer_with_tools.\n• Check 5: Domain slots amount, recipient, and account_from each include active_flow: transfer_money_tools under from_llm.\n\nFull score: 10/10.",
 		"command": "bash /home/codio/workspace/.guides/scripts/run_python_grader.sh /home/codio/workspace/.guides/secure/level5_graders/lab_4.1_grader.py",
 		"preExecuteCommand": "",
 		"options": {
@@ -33,7 +33,7 @@
 		},
 		"bloomsObjectiveLevel": "",
 		"learningObjectives": "",
-		"guidance": "Align flow YAML, custom action, and domain per the first failing check.",
+		"guidance": "Complete the fill-in-the-blanks exercise first, merge domain YAML, then add the flow and action files. Align with the first failing check.",
 		"showGuidanceAfterResponseOption": {
 			"type": "Never"
 		},
@@ -70,6 +70,13 @@
 				"arguments": "",
 				"input": "",
 				"output": "Check 4: PASSED",
+				"showFeedback": false,
+				"feedback": ""
+			},
+			{
+				"arguments": "",
+				"input": "",
+				"output": "Check 5: PASSED",
 				"showFeedback": false,
 				"feedback": ""
 			}

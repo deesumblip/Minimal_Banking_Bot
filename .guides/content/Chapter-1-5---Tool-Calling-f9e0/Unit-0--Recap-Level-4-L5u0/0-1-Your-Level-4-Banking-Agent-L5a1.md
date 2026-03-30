@@ -1,4 +1,4 @@
-**Chapter 1.5 starting point:** This chapter assumes you **begin from the banking agent you finished at the end of Chapter 1.4**—the one reflected in **`level4/`** after those labs: multiple slots, **`transfer_money`**, **`action_process_transfer`**, and the Chapter 1.4 pipeline (**`CompactLLMCommandGenerator`**, **`endpoints.yml`** with **`action_endpoint`**, **`nlg`**, and **`model_groups`** as in the finished **`level4/`** agent). You are not starting from scratch.
+**Chapter 1.5 starting point:** This chapter assumes you **begin from the banking agent you finished at the end of Chapter 1.4**—the one reflected in **`level4/`** after those labs: multiple slots, **`transfer_money`**, **`action_process_transfer`**, and the Chapter 1.4 pipeline (**`SearchReadyLLMCommandGenerator`**, **`endpoints.yml`** with **`action_endpoint`**, **`nlg`**, and **`model_groups`** as in the finished **`level4/`** agent in this repository). You are not starting from scratch.
 
 **Repository note:** In this course repository, **`level5/`** is checked in as that **Chapter 1.4 completion** baseline (same general shape as the finished **`level4/`** agent: domain, flows—including **`goodbye`**, **`holiday_hours`**, **`check_balance`**, **`transfer_money`**—and **Level 2–4** actions). You still **build** Chapter 1.5 in the labs (tools folder, **`tools:`** in **`endpoints.yml`**, **`transfer_money_tools`**, **`action_process_transfer_with_tools`**). Use **`level4/`** as the reference for “Chapter 1.4 end” and **`level5/`** for “work in progress” as you add tool calling.
 
@@ -36,9 +36,10 @@ Use the **same virtual environment** as in Chapter 1.4 (project root); there is 
 
 ### Config
 
-- **`config.yml`**, **`credentials.yml`**, **`endpoints.yml`** (no **`tools:`** section until **Lab 3.1**). Config uses **`assistant_id: level5-agent`** so this assistant is distinct from **`level4-agent`**.
+- **`config.yml`**, **`credentials.yml`**, **`endpoints.yml`** (no **`tools:`** section until **Lab 3.1**). The **`level5/`** project sets **`assistant_id: level5-agent`** so it does not collide with the **`level4/`** assistant id (**`level4-agent`** in this repository’s **`level4/config.yml`**).
+- **`level5/config.yml`** also sets **`prompt_template`** for **`SearchReadyLLMCommandGenerator`** (for example **`data/prompts/command_prompt_v3_slot_names.jinja2`**). That **`.jinja2`** file exists under **`level5/data/prompts/`** in this repository; **`level4/`** here does **not** ship the same prompt override. The template keeps the LLM aligned with **domain slot names**. You **do not** author it in the Chapter 1.5 labs below; leave it in place unless your course assigns prompt customization elsewhere.
 
-**Heads-up:** Until you register tools, your **`endpoints.yml`** matches the Chapter 1.4 pattern ( **`action_endpoint`**, **`nlg`**, **`model_groups`** ). When you reach the lab that registers tools, you will add a **`tools:`** block without removing or renaming those sections.
+**Heads-up:** Until you register tools, your **`endpoints.yml`** matches the Chapter 1.4 pattern (**`action_endpoint`**, **`nlg`**, **`model_groups`**). When you reach **Lab 3.1**, you will **add** a **`tools:`** block without removing or renaming those sections.
 
 ---
 

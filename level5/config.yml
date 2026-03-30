@@ -4,6 +4,10 @@ assistant_id: level5-agent
 
 pipeline:
   - name: SearchReadyLLMCommandGenerator
+    # Default Rasa prompt example used `set slot transfer_money_recipient ...`, which
+    # trains the LLM to emit non-domain slot names (e.g. transfer_money_amount). Use
+    # domain slot names (amount, recipient, account_from, account) in examples instead.
+    prompt_template: data/prompts/command_prompt_v3_slot_names.jinja2
     llm:
       model_group: gpt-4o-mini
 

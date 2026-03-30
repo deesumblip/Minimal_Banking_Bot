@@ -12,4 +12,4 @@
 
 {Check It!|assessment}(code-output-compare-501050002)
 
-The grader checks **`level5/tools/`**, **`level5/tools/banking_tools.py`** with **`__all__`**, **`level5/endpoints.yml`** with a **`tools:`** section, **`level5/data/basics/transfer_money_tools.yml`**, **`level5/actions/action_process_transfer_with_tools.py`**, **`level5/domain/basics.yml`** listing **`action_process_transfer_with_tools`**, and **`level5/models/`** (or equivalent training readiness).
+The grader checks **`level5/tools/`**, **`level5/tools/banking_tools.py`** with **`__all__`**, **`level5/endpoints.yml`** with a **`tools:`** section, **`level5/data/basics/transfer_money_tools.yml`**, **`level5/actions/action_process_transfer_with_tools.py`**, **`level5/domain/basics.yml`** listing **`action_process_transfer_with_tools`**, and **`level5/models/`** (or equivalent training readiness). **Lab 4.1** (code test) additionally verifies **`from_llm`** slot conditions for **`transfer_money_tools`** and a complete **`run()`** on **`action_process_transfer_with_tools`**; keep those in sync with **Lab 5.2**.

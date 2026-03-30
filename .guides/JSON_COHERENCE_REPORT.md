@@ -51,10 +51,12 @@ Assessments are wired by **content**: markdown pages use `{Check It!|assessment}
 | 1.2 | 1597644299, 1451983168, 2266471391, 389374509, 1070925386 | Present | Yes |
 | 1.3 | 3187585640, 2346557111, 2346557110, 1235165472, 1029038275 | Present | Yes |
 | 1.4 | fill-in-the-blanks-401010010, 401010001, 401020001, fill-in-the-blanks-401030010, 401030001, 401040001, 401050001, 401050002 | Present | Yes |
-| 1.5 | 501020001, 501030001, 501040001, 501050001, 501050002 | Present | Yes |
+| 1.5 | fill-in-the-blanks-501020010, 501020001, 501030001, fill-in-the-blanks-501040010, 501040001, 501050001, 501050002 | Present | Yes |
 | 1.6 | 501060001, 501060002, 501060003, 501060004, 501060005 | Present | Yes |
 
 **Chapter 1.4:** Lab .md files under `Chapter-1-4---Multiple-Slots-e5f6/` include `{Check It!|assessment}(code-output-compare-40XXXXXX)` for Labs 2.1, 4.1, 5.1, 5.2; **Lab 0.1** uses `fill-in-the-blanks-401010010` then `code-output-compare-401010001`; **Lab 3.1** also includes `fill-in-the-blanks-401030010` before the code test. Both fill-in-the-blanks JSONs use the **Chapter 1.3 Lab 4.1** `tokens.text` pattern (literal `0` for each blank, sequential). Coherent.
+
+**Chapter 1.5:** **Lab 2.1** uses `fill-in-the-blanks-501020010` then `code-output-compare-501020001`; **Lab 4.1** uses `fill-in-the-blanks-501040010` (domain slot conditions for `transfer_money_tools`) then `code-output-compare-501040001`. Coherent.
 
 ---
 

@@ -18,4 +18,6 @@ You now have a Chapter 1.5 agent that extends **Chapter 1.4 completion** with **
 | transfer_money       | amount, recipient, account_from | action_process_transfer |
 | transfer_money_tools | amount, recipient, account_from | action_process_transfer_with_tools (LLM can call tools) |
 
-All flows and actions live under **`level5/`**. You train once from **`level5`** and run one assistant. Use **Rasa Inspector** to try each flow and confirm tool calling in **`transfer_money_tools`**.
+All flows and actions live under **`level5/`**. The **`transfer_money_tools`** flow shares the transfer slots with **`transfer_money`**; your domain **`from_llm`** mappings (including **`active_flow: transfer_money_tools`**) are what let the assistant fill those slots in the right flow—see **Lab 4.1**.
+
+You train once from **`level5`** and run one assistant. Use **Rasa Inspector** to try each flow: run **`transfer_money`** and **`transfer_money_tools`** in **separate conversations** (for example **New conversation**) if you want a clean comparison between the classic transfer action and the tool-enabled path.

@@ -6,24 +6,24 @@ Use this file as the **Instructor Provided Solution File** in Codio's LLM Rubric
 
 ## Required artifacts
 
-### 1. level5/data/basics/transfer_money_tools.yml
+### 1. `level5/domain/basics.yml`
 
-- **flows:** section with at least one flow (e.g. transfer_money_tools).
-- Flow must use **collect:** to gather slots (e.g. amount, recipient, account_from) and include an **action** step that runs `action_process_transfer_with_tools` (or equivalent name registered in the domain).
+- **`actions:`** includes **`action_process_transfer_with_tools`**.
+- **`slots:`** For **`amount`**, **`recipient`**, and **`account_from`**, each **`from_llm`** mapping lists **`conditions`** that include **both** **`active_flow: transfer_money`** and **`active_flow: transfer_money_tools`** (students complete this in **fill-in-the-blanks-501040010**).
 
-### 2. level5/actions/action_process_transfer_with_tools.py
+### 2. `level5/data/basics/transfer_money_tools.yml`
 
-- Action class with **name()** returning the action name (e.g. `"action_process_transfer_with_tools"`).
-- **run()** method that reads slots (amount, recipient, account_from), optionally validates, and returns at least one message (e.g. confirmation). Returns a list of events (e.g. `[SlotSet(...), BotMessage(...)]`).
+- **`flows:`** contains **`transfer_money_tools`** with **`collect:`** for **amount**, **recipient**, **account_from**, and **`action: action_process_transfer_with_tools`**.
 
-### 3. level5/domain/basics.yml
+### 3. `level5/actions/action_process_transfer_with_tools.py`
 
-- **actions:** list must include `action_process_transfer_with_tools` (so the flow can invoke it).
+- Action class with **`name()`** returning **`"action_process_transfer_with_tools"`**.
+- **`run()`** uses **`tracker.get_slot`** for **amount**, **recipient**, and **account_from**, and calls **`dispatcher.utter_message`** at least once (demo confirmation).
 
 ---
 
 ## Rubric summary for autograde
 
-- **transfer_money_tools.yml** exists, is valid YAML, has a flow with collect and an action step.
-- **action_process_transfer_with_tools.py** exists, defines the action name and run() with slot reads and at least one agent message.
-- **domain/basics.yml** lists the action in the actions section.
+- Flow file exists; flow collects the three slots and runs **`action_process_transfer_with_tools`**.
+- Action file implements **`run()`** with slot reads and **`utter_message`**.
+- Domain lists the action and maps **`from_llm`** for the three slots when **`transfer_money_tools`** is active.

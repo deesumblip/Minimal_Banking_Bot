@@ -9,15 +9,34 @@ version: "3.1"
 slots:
   account:
     type: text
-  
+    mappings:
+      - type: from_llm
+        conditions:
+          - active_flow: check_balance
+
   amount:
     type: text
-  
+    mappings:
+      - type: from_llm
+        conditions:
+          - active_flow: transfer_money
+          - active_flow: transfer_money_tools
+
   recipient:
     type: text
-  
+    mappings:
+      - type: from_llm
+        conditions:
+          - active_flow: transfer_money
+          - active_flow: transfer_money_tools
+
   account_from:
     type: text
+    mappings:
+      - type: from_llm
+        conditions:
+          - active_flow: transfer_money
+          - active_flow: transfer_money_tools
 
 responses:
   utter_greet:

@@ -10,7 +10,9 @@ Level 5 adds **tool calling**: the LLM can dynamically select and invoke **tools
 
 Your Chapter 1.4 flows and actions stay in place; you **add** tools and the new flow so the LLM can call **`check_balance`**, **`process_transfer`**, **`get_account_info`**, and similar functions where the lab expects them.
 
-**Implementation order:** **Lab 2.1** (tools folder + **`banking_tools.py`**) → **Lab 3.1** (register **`tools:`** in **`endpoints.yml`**) → **Lab 4.1** (flow + action) → **Labs 5.1–5.2** (train, completion check, Inspector). Step-by-step instructions live on each lab page.
+**Implementation order:** **Lab 2.1** (fill-in-the-blanks + **`tools/banking_tools.py`**) → **Lab 3.1** (register **`tools:`** in **`endpoints.yml`**) → **Lab 4.1** (fill-in-the-blanks for **domain slot conditions**, add **`action_process_transfer_with_tools`** to **`actions:`**, then **flow YAML**, then **custom action** Python) → **Labs 5.1–5.2** (train, completion check, Inspector). Step-by-step instructions live on each lab page.
+
+**What you do not reimplement in Chapter 1.5:** The **LLM command-generator prompt** (**`config.yml`** → **`prompt_template`**) and the **`.jinja2`** file under **`level5/data/prompts/`** are **already** in the checked-in **`level5/`** tree (this repo’s **`level4/`** does not duplicate that prompt file). The labs focus on **tools**, **endpoints**, **flows**, **actions**, and **domain** edits for **`transfer_money_tools`**.
 
 ---
 
@@ -20,7 +22,7 @@ Your Chapter 1.4 flows and actions stay in place; you **add** tools and the new 
 
 **Lab 3.1 — Register tools.** You add a **`tools:`** section to **`endpoints.yml`** with **`tools_module: "tools"`** so Rasa can load the module and expose those functions to the LLM.
 
-**Lab 4.1 — Flow and action.** You create **`data/basics/transfer_money_tools.yml`** (collect **amount**, **recipient**, **account_from**, then **`action_process_transfer_with_tools`**) and **`actions/action_process_transfer_with_tools.py`**. In that flow step, the LLM can call the tools you defined, according to what the user said.
+**Lab 4.1 — Flow, action, and domain slots.** You complete the **fill-in-the-blanks** exercise for **`from_llm`** conditions (**`active_flow: transfer_money_tools`** on **amount**, **recipient**, **account_from**), create **`data/basics/transfer_money_tools.yml`**, create **`actions/action_process_transfer_with_tools.py`**, and register the action in the domain. In that flow step, the LLM can call the tools you defined, according to what the user said.
 
 **Lab 5.1 — Training.** You train the Chapter 1.5 agent from **`level5/`** so the model includes domain, flows, tools registration, and the new action.
 
