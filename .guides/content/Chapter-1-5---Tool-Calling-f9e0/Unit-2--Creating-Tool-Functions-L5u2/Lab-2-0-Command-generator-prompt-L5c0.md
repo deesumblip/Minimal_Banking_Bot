@@ -45,7 +45,7 @@ pipeline:
 
 - Open a terminal at **project root** (the folder that contains `level5/` and `.venv/`).
 - Activate the virtual environment:
-  - Linux / macOS: `source .venv/bin/activate`
+  - Codio / Linux / macOS: `source .venv/bin/activate`
   - Windows (PowerShell): `.\.venv\Scripts\Activate.ps1`
 - Change into the agent folder: `cd level5`
 - Run: `python -m rasa train`
