@@ -1,21 +1,37 @@
-**Starting point:** Work in `level5/` from the Chapter 1.4 completion baseline (Unit 0.1). The template `level5/resources/command_prompt_v3_slot_names.jinja2` is already in the repo. For this lab, `config.yml` should not yet set `prompt_template`, and you should not yet have `data/prompts/command_prompt_v3_slot_names.jinja2` (or a `data/prompts/` folder). This is Unit 2’s first build step—install the command-generator prompt before Lab 2.1 (Python tools).
+**Starting point:** Work in `level5/` from the Chapter 1.4 completion baseline (Unit 0.1). The course template already lives in the repo at `level5/resources/command_prompt_v3_slot_names.jinja2`.
 
-**Why this lab exists.** `SearchReadyLLMCommandGenerator` follows examples in its prompt. The default can push slot names that are not in your domain (for example `transfer_money_amount` instead of `amount`). Rasa then skips those commands—see `skip_command_slot_not_in_domain` in debug logs. The course ships a custom Jinja2 prompt under `level5/resources/` that keeps `set slot` aligned with real domain slots (`amount`, `recipient`, `account_from`, `account`). Copy it into `data/prompts/` and wire `config.yml` so slot filling stays reliable through Labs 2.1–5.2.
+**Before you change anything for this lab**, your tree should still match the usual “pre–Lab 2.0” state:
 
-You do not need the virtual environment to copy files; use it when you run `rasa train`.
+- `config.yml` does **not** set `prompt_template` yet.
+- You do **not** have `data/prompts/command_prompt_v3_slot_names.jinja2` yet (and you may not have a `data/prompts/` folder at all).
+
+This is Unit 2’s first build step: install the command-generator prompt, then continue to Lab 2.1 (Python tools).
+
+---
+
+**Why this lab exists**
+
+`SearchReadyLLMCommandGenerator` follows examples in its prompt. The stock behavior can favor slot names that are **not** in your domain—for example `transfer_money_amount` instead of `amount`. Rasa then skips those commands; in debug logs you may see `skip_command_slot_not_in_domain`.
+
+We ship a custom Jinja2 prompt under `level5/resources/` so `set slot` lines up with real domain slots (`amount`, `recipient`, `account_from`, `account`). You will copy that file into `data/prompts/` and point `config.yml` at it so slot filling stays reliable through Labs 2.1–5.2.
+
+Copying files does **not** require the virtual environment. Activate the venv when you run `rasa train` (for example in Part C).
 
 ---
 
 ## Part A — Add the prompt file
 
-1. Under `level5/`, create `data/prompts/` if it does not exist.
+1. **Create the folder** (if needed): under `level5/`, ensure `data/prompts/` exists.
 
-2. Copy the file using the exact name `command_prompt_v3_slot_names.jinja2`:
-   - **Source:** `level5/resources/command_prompt_v3_slot_names.jinja2`
-   - **Destination:** `level5/data/prompts/command_prompt_v3_slot_names.jinja2`
-   - From `level5/`, for example: `cp resources/command_prompt_v3_slot_names.jinja2 data/prompts/` (Linux/macOS) or `Copy-Item resources\command_prompt_v3_slot_names.jinja2 data\prompts\` (Windows PowerShell).
+2. **Copy the template** using the exact filename `command_prompt_v3_slot_names.jinja2`:
+   - From: `level5/resources/command_prompt_v3_slot_names.jinja2`
+   - To: `level5/data/prompts/command_prompt_v3_slot_names.jinja2`
 
-3. Confirm: `level5/data/prompts/command_prompt_v3_slot_names.jinja2` exists. Rasa reads the copy under `data/prompts/` at runtime; `resources/` stays the repo template you copied from.
+3. **Run the copy from `level5/`**, for example:
+   - Linux / macOS: `cp resources/command_prompt_v3_slot_names.jinja2 data/prompts/`
+   - Windows (PowerShell): `Copy-Item resources\command_prompt_v3_slot_names.jinja2 data\prompts\`
+
+4. **Confirm:** `level5/data/prompts/command_prompt_v3_slot_names.jinja2` exists. Rasa reads the prompt from `data/prompts/` at runtime; `level5/resources/` holds the copy that ships with the repo.
 
 ---
 
