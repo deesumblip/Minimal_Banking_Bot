@@ -4,7 +4,7 @@ This folder mirrors Level 5 teaching content (aligned with `level5/`) for Codio 
 
 **Student working directory:** All steps assume the agent under **`level5/`**. For training and CLI runs, activate the venv at **project root**, then **`cd level5`** before **`python -m rasa …`**. Graded labs use on-disk checks (fill-in-the-blanks and code tests read `level5/`); the venv is **not** required to pass Lab 2.1 file checks.
 
-**Lab order (from Chapter 1.4 completion to Chapter 1.5 done):** **Lab 2.0** — copy **`command_prompt_v3_slot_names.jinja2`** from **`.guides/content/Chapter-1-5---Tool-Calling-f9e0/resources/`** to **`level5/data/prompts/`**, set **`prompt_template`** in **`config.yml`** → **Lab 2.1** (tools) → **Lab 3.1** (endpoints) → **Lab 4.1** (flow + action) → **Lab 5.1** (train) → **Lab 5.2** (completion check). **Lab 2.0** has no separate assessment ID; **Lab 5.1** and **Lab 5.2** graders include **Check 3** for the prompt file and **`prompt_template`**.
+**Lab order (from Chapter 1.4 completion to Chapter 1.5 done):** **Lab 2.0** — copy **`command_prompt_v3_slot_names.jinja2`** from **`level5/resources/`** to **`level5/data/prompts/`**, set **`prompt_template`** in **`config.yml`** → **Lab 2.1** (tools) → **Lab 3.1** (endpoints) → **Lab 4.1** (flow + action) → **Lab 5.1** (train) → **Lab 5.2** (completion check). **Lab 2.0** uses **`code-output-compare-501020000`**; **Lab 5.1** and **Lab 5.2** graders still include **Check 3** for the same prompt file and **`prompt_template`**.
 
 **Guide page JSON (`*.json` next to each `.md`):** Pages use **`"path": ["level5"]`** (and **`"layout": "2-panels-tree-guides-left"`** where set) so the IDE tree highlights **`level5/`**, like **`level4/`** in Chapter 1.4.
 
@@ -22,12 +22,12 @@ The main guide index at `.guides/content/index.json` includes `Chapter-1-5---Too
 
 ## Assessments
 
-- **Task IDs:** **fill-in-the-blanks-501020010** + **code-output-compare-501020001** (Lab 2.1); 501030001 (Lab 3.1); **fill-in-the-blanks-501040010** + **code-output-compare-501040001** (Lab 4.1); 501050001 (Lab 5.1); 501050002 (Lab 5.2). **Lab 2.0** has no separate task ID; **501050001** / **501050002** graders include a **Lab 2.0** check (prompt file + **`prompt_template`**).
-- **Assessment JSONs:** `.guides/assessments/fill-in-the-blanks-501020010.json`, `fill-in-the-blanks-501040010.json`; `code-output-compare-501020001.json` through `code-output-compare-501050002.json`.
-- **Graders:** `.guides/secure/level5_graders/` (lab_2.1_grader.py … lab_5.2_grader.py; lab_*_solution_reference.md for LLM Rubric).
+- **Task IDs:** **code-output-compare-501020000** (Lab 2.0); **fill-in-the-blanks-501020010** + **code-output-compare-501020001** (Lab 2.1); 501030001 (Lab 3.1); **fill-in-the-blanks-501040010** + **code-output-compare-501040001** (Lab 4.1); 501050001 (Lab 5.1); 501050002 (Lab 5.2). **501050001** / **501050002** graders still include a **Lab 2.0** check (prompt file + **`prompt_template`**).
+- **Assessment JSONs:** `.guides/assessments/fill-in-the-blanks-501020010.json`, `fill-in-the-blanks-501040010.json`; `code-output-compare-501020000.json` through `code-output-compare-501050002.json`.
+- **Graders:** `.guides/secure/level5_graders/` (lab_2.0_grader.py, lab_2.1_grader.py … lab_5.2_grader.py; lab_*_solution_reference.md for LLM Rubric).
 - **Working directory:** `/home/codio/workspace`. Command uses venv Python and grader path, e.g. `/home/codio/workspace/.venv/bin/python3 /home/codio/workspace/.guides/secure/level5_graders/lab_2.1_grader.py`. Expect output contains `PASS` (substring match).
 
-Lab 2.1 includes `{Check It!|assessment}(fill-in-the-blanks-501020010)` then `{Check It!|assessment}(code-output-compare-501020001)`. Lab 4.1 includes `{Check It!|assessment}(fill-in-the-blanks-501040010)` then `{Check It!|assessment}(code-output-compare-501040001)`. Other lab pages use `{Check It!|assessment}(code-output-compare-50XXXXXX)` with the task IDs above.
+Lab 2.0 includes `{Check It!|assessment}(code-output-compare-501020000)`. Lab 2.1 includes `{Check It!|assessment}(fill-in-the-blanks-501020010)` then `{Check It!|assessment}(code-output-compare-501020001)`. Lab 4.1 includes `{Check It!|assessment}(fill-in-the-blanks-501040010)` then `{Check It!|assessment}(code-output-compare-501040001)`. Other lab pages use `{Check It!|assessment}(code-output-compare-50XXXXXX)` with the task IDs above.
 
 ## Re-import from Git
 

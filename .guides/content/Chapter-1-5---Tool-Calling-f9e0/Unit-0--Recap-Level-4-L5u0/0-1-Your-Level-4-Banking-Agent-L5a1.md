@@ -1,6 +1,6 @@
 **Starting point:** Chapter 1.5 extends the **banking agent you finished in Chapter 1.4**—same idea as **`level4/`** (CALM stack with **`SearchReadyLLMCommandGenerator`**, **`endpoints.yml`** with **`action_endpoint`**, **`nlg`**, **`model_groups`**, slots, **`transfer_money`**, and related flows). You are **not** starting from scratch.
 
-**Where to work:** Edit **`level5/`** only; leave **`level4/`** as the “Chapter 1.4 done” reference. Activate the venv at **project root**, then **`cd level5`** for every command (**`python -m rasa …`**).
+**Where to work:** Activate the venv at **project root**, then **`cd level5`** for every command (**`python -m rasa …`**).
 
 **What you add in 1.5:** In order, the labs have you add **`prompt_template`** / **`data/prompts/`**, **`tools/`**, **`tools:`** in **`endpoints.yml`**, **`transfer_money_tools`**, and **`action_process_transfer_with_tools`**. *Level 5* names the Chapter 1.5 skill; **`level5/`** is where those files live.
 
@@ -35,7 +35,7 @@ Use the **same virtual environment** as in Chapter 1.4 (project root); there is 
 ### Config (at Chapter 1.5 **start**)
 
 - **`config.yml`**, **`credentials.yml`**, **`endpoints.yml`**. The **`level5/`** project sets **`assistant_id: level5-agent`** so it does not collide with the **`level4/`** assistant id (**`level4-agent`** in this repository’s **`level4/config.yml`**).
-- **`SearchReadyLLMCommandGenerator`** is already in **`pipeline`** (same idea as Chapter 1.4). At the **start** of Chapter 1.5 there is **no** **`prompt_template`** line yet—you **add** **`data/prompts/command_prompt_v3_slot_names.jinja2`** and wire **`prompt_template`** in **`config.yml`** in **Lab 2.0** (first lab in Unit 2).
+- **`SearchReadyLLMCommandGenerator`** is already in **`pipeline`** (same idea as Chapter 1.4). The canonical command prompt template ships as **`resources/command_prompt_v3_slot_names.jinja2`**; before **Lab 2.0** you have **no** **`prompt_template`** in **`config.yml`** and **no** copy under **`data/prompts/`**—**Lab 2.0** has you copy from **`resources/`** into **`data/prompts/`** and set **`prompt_template`** in **`config.yml`** (first lab in Unit 2).
 - **`endpoints.yml`** matches the Chapter 1.4 pattern (**`action_endpoint`**, **`nlg`**, **`model_groups`**) and has **no** **`tools:`** section until **Lab 3.1**.
 
 **Heads-up:** When you reach **Lab 3.1**, you will **add** a **`tools:`** block without removing or renaming **`action_endpoint`**, **`nlg`**, or **`model_groups`**.
@@ -46,7 +46,7 @@ Use the **same virtual environment** as in Chapter 1.4 (project root); there is 
 
 In order, you will:
 
-- Add **`data/prompts/command_prompt_v3_slot_names.jinja2`** and **`prompt_template`** in **`config.yml`** (**Lab 2.0**)
+- Copy the command prompt from **`resources/`** into **`data/prompts/`** and set **`prompt_template`** in **`config.yml`** (**Lab 2.0**)
 - Create the **`tools/`** folder and **`banking_tools.py`** (**Lab 2.1**)
 - Register tools in **`endpoints.yml`** (**Lab 3.1**)
 - Add **`action_process_transfer_with_tools`**, **`transfer_money_tools.yml`**, and the **`from_llm`** domain conditions for **`transfer_money_tools`** (**Lab 4.1**)

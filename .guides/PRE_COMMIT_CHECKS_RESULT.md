@@ -28,7 +28,7 @@ Run date: (generated when checks were run)
 
 ## 4. Level 5 assessment JSONs
 
-- **Check:** Five assessment JSONs exist: code-output-compare-501020001 through 501050002.
+- **Check:** Level 5 code-output assessments exist: `code-output-compare-501020000.json` through `code-output-compare-501050002.json`.
 - **Result:** **PASS** – All 5 files present in `.guides/assessments/`. Commands point to `.guides/secure/level5_graders/lab_*.py`.
 
 ---
