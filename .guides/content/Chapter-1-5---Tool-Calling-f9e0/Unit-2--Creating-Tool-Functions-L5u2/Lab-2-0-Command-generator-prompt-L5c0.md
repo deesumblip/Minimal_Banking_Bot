@@ -1,21 +1,10 @@
-**Starting point:** Work in `level5/` from the Chapter 1.4 completion baseline (Unit 0.1). The course template already lives in the repo at `level5/resources/command_prompt_v3_slot_names.jinja2`.
+**Starting point:** Work in `level5/` from the Chapter 1.4 completion baseline (Unit 0.1).
 
-**Before you change anything for this lab**, your tree should still match the usual “pre–Lab 2.0” state:
+Rasa’s **`SearchReadyLLMCommandGenerator`** turns model output into commands, including **`set slot`**. It takes cues from **examples in its prompt**. If those examples don’t line up with your **domain slot names**—for instance the model emits `transfer_money_amount` instead of **`amount`**—Rasa **ignores** the command. In debug logs you may see **`skip_command_slot_not_in_domain`**, and slot collection in your flows stops working as expected.
 
-- `config.yml` does **not** set `prompt_template` yet.
-- You do **not** have `data/prompts/command_prompt_v3_slot_names.jinja2` yet (and you may not have a `data/prompts/` folder at all).
+This lab fixes that alignment: the repo ships a **Jinja2 command prompt** at **`level5/resources/command_prompt_v3_slot_names.jinja2`** that teaches the model to use your real slots (`amount`, `recipient`, `account_from`, `account`). You will place a copy under **`data/prompts/`** and set **`prompt_template`** on **`SearchReadyLLMCommandGenerator`** in **`config.yml`** so **`set slot`** stays trustworthy for the rest of Chapter 1.5 (through Labs 2.1–5.2).
 
-This is Unit 2’s first build step: install the command-generator prompt, then continue to Lab 2.1 (Python tools).
-
----
-
-**Why this lab exists**
-
-`SearchReadyLLMCommandGenerator` follows examples in its prompt. The stock behavior can favor slot names that are **not** in your domain—for example `transfer_money_amount` instead of `amount`. Rasa then skips those commands; in debug logs you may see `skip_command_slot_not_in_domain`.
-
-We ship a custom Jinja2 prompt under `level5/resources/` so `set slot` lines up with real domain slots (`amount`, `recipient`, `account_from`, `account`). You will copy that file into `data/prompts/` and point `config.yml` at it so slot filling stays reliable through Labs 2.1–5.2.
-
-Copying files does **not** require the virtual environment. Activate the venv when you run `rasa train` (for example in Part C).
+This is **Unit 2’s first lab**—do it before **Lab 2.1** (the `tools/` module). Copying files does not require the virtual environment; activate the venv when you run **`rasa train`** (for example in Part C).
 
 ---
 
