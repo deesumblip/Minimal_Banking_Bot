@@ -1,4 +1,4 @@
-**Starting point:** Work in **`level5/`** after **Lab 5.1** in this unit—you should have a trained model under **`level5/models/`**.
+**Starting point:** Work in **`level5/`** after **Lab 5.1** in this unit—you should have a trained model under **`level5/models/`**. (Training assumes **Labs 2.0–4.1** are complete, including **`prompt_template`** and **`data/prompts/`** from **Lab 2.0**.)
 
 After training, run the assistant and test tool calling.
 

@@ -1,8 +1,8 @@
-## Level 5 baseline: Chapter 1.4 completion + Chapter 1.5 (Tool Calling) work
+## Level 5 starter: Chapter 1.4 completion (before Chapter 1.5 labs)
 #
-# Domain matches the **final Chapter 1.4 banking agent** (transfer slots, asks, and actions),
-# with Level 5 additions (e.g. `action_process_transfer_with_tools` when you complete Lab 4.1).
-# Keep Level 1–4 responses and actions (including `action_holiday_hours`) so flows stay valid.
+# Same banking agent as the end of Chapter 1.4: transfer slots, flows, and actions.
+# Chapter 1.5 labs add: tools/, tools: in endpoints.yml, transfer_money_tools flow,
+# action_process_transfer_with_tools, and domain updates for transfer_money_tools.
 
 version: "3.1"
 
@@ -20,7 +20,6 @@ slots:
       - type: from_llm
         conditions:
           - active_flow: transfer_money
-          - active_flow: transfer_money_tools
 
   recipient:
     type: text
@@ -28,7 +27,6 @@ slots:
       - type: from_llm
         conditions:
           - active_flow: transfer_money
-          - active_flow: transfer_money_tools
 
   account_from:
     type: text
@@ -36,7 +34,6 @@ slots:
       - type: from_llm
         conditions:
           - active_flow: transfer_money
-          - active_flow: transfer_money_tools
 
 responses:
   utter_greet:
@@ -89,4 +86,3 @@ actions:
   - action_holiday_hours
   - action_check_balance_simple
   - action_process_transfer
-  - action_process_transfer_with_tools

@@ -4,6 +4,8 @@ This folder mirrors the Level 5 content from `level5/` (unit content and lab con
 
 **Student working directory:** All Chapter 1.5 student steps assume the agent project lives under **`level5/`** in the workspace. For **training and local runs**, activate the venv at **project root**, then **`cd level5`** before **`python -m rasa …`**. **Graded labs** use file-based assessments (fill-in-the-blanks and code tests read `level5/` files); students do not need the venv active to pass the Lab 2.1 checks.
 
+**Linear lab order (build the delta from Chapter 1.4 completion):** **Lab 2.0** (copy **`command_prompt_v3_slot_names.jinja2`** from **`.guides/content/Chapter-1-5---Tool-Calling-f9e0/resources/`** into **`level5/data/prompts/`**, add **`prompt_template`** in **`config.yml`**) → **Lab 2.1** (tools) → **Lab 3.1** (endpoints) → **Lab 4.1** (flow + action) → **Lab 5.1** (train) → **Lab 5.2** (completion check). **Lab 2.0** has **no** dedicated task ID; the **`prompt_template`** file and **`config.yml`** wiring are **checked by the Lab 5.1 and Lab 5.2 graders** (Check 3 in each).
+
 **Guide page JSON (`*.json` next to each `.md`):** Each page sets **`"path": ["level5"]`** (and **`"layout": "2-panels-tree-guides-left"`** where applicable) so the Codio / IDE **file tree** focuses on the **`level5/`** folder, matching the Chapter 1.4 pattern for **`level4/`**.
 
 ## Structure
@@ -20,7 +22,7 @@ The main guide index at `.guides/content/index.json` includes `Chapter-1-5---Too
 
 ## Assessments
 
-- **Task IDs:** **fill-in-the-blanks-501020010** + **code-output-compare-501020001** (Lab 2.1); 501030001 (Lab 3.1); **fill-in-the-blanks-501040010** + **code-output-compare-501040001** (Lab 4.1); 501050001 (Lab 5.1); 501050002 (Lab 5.2).
+- **Task IDs:** **fill-in-the-blanks-501020010** + **code-output-compare-501020001** (Lab 2.1); 501030001 (Lab 3.1); **fill-in-the-blanks-501040010** + **code-output-compare-501040001** (Lab 4.1); 501050001 (Lab 5.1); 501050002 (Lab 5.2). **Lab 2.0** has no separate task ID; **501050001** / **501050002** graders include a **Lab 2.0** check (prompt file + **`prompt_template`**).
 - **Assessment JSONs:** `.guides/assessments/fill-in-the-blanks-501020010.json`, `fill-in-the-blanks-501040010.json`; `code-output-compare-501020001.json` through `code-output-compare-501050002.json`.
 - **Graders:** `.guides/secure/level5_graders/` (lab_2.1_grader.py … lab_5.2_grader.py; lab_*_solution_reference.md for LLM Rubric).
 - **Working directory:** `/home/codio/workspace`. Command uses venv Python and grader path, e.g. `/home/codio/workspace/.venv/bin/python3 /home/codio/workspace/.guides/secure/level5_graders/lab_2.1_grader.py`. Expect output contains `PASS` (substring match).

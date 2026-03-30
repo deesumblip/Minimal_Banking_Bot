@@ -1,4 +1,4 @@
-**Starting point:** Work in **`level5/`** with **`tools/`** in place and **`tools:`** registered in **`endpoints.yml`** (Labs 2.1 and 3.1).
+**Starting point:** Work in **`level5/`** with **Labs 2.0, 2.1, and 3.1** complete (**`prompt_template`**, **`tools/`**, and **`tools:`** in **`endpoints.yml`**).
 
 To use tools in a conversation, you need a **flow** that brings the user to a point where the LLM can call them. In Chapter 1.5 we do that with:
 
@@ -43,6 +43,6 @@ The flow’s last step runs an **action** (not the tools directly). That action 
 
 You also add **`action_process_transfer_with_tools`** to the domain **`actions:`** list in the same lab.
 
-## Baseline files you do not recreate in this chapter
+## Command-generator prompt (Lab 2.0)
 
-Your **`level5/config.yml`** points **`SearchReadyLLMCommandGenerator`** at **`data/prompts/command_prompt_v3_slot_names.jinja2`**. That prompt template ships with the checked-in **`level5/`** tree in this repository (it is not introduced in Labs 2.1–4.1): it nudges the LLM to use **domain slot names** (**`amount`**, **`recipient`**, …) instead of prefixed names that do not exist in your domain. **Do not** remove or replace it during Chapter 1.5 unless you are deliberately customizing the command generator (outside the scope of these labs).
+You already added **`data/prompts/command_prompt_v3_slot_names.jinja2`** and **`prompt_template`** in **`config.yml`** in **Lab 2.0**. That template nudges the LLM to use **domain slot names** (**`amount`**, **`recipient`**, …) instead of prefixed names that do not exist in your domain. **Do not** remove or replace it while you complete **Labs 2.1–5.2** unless you are deliberately customizing the command generator (outside the scope of these labs).

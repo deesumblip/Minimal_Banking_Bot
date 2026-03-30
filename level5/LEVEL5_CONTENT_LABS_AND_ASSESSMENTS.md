@@ -11,13 +11,13 @@ This document maps **Level 5** (Chapter 1.5 – Tool Calling) content files, lab
 | **Starter** = Level 3 end state (`level4/`) | **Starter** = Chapter 1.4 completion / final Level 4 bot (`level5/` as default baseline in repo) |
 | Unit 0: Your Level 3 agent / What Level 4 adds | Unit 0: Chapter 1.4 recap / What Level 5 adds |
 | Unit 1: Multiple slots (1.1, 1.2, 1.3) | Unit 1: Introduction to tools (1.1, 1.2, 1.3 Test Your Knowledge) |
-| Unit 2 + Lab 2.1 (domain: slots + utter_ask_* + action) | Unit 2 + **Lab 2.1** (tools folder + banking_tools.py + __all__) |
+| Unit 2 + Lab 2.1 (domain: slots + utter_ask_* + action) | Unit 2 + **Lab 2.0** (prompt file + config) + **Lab 2.1** (tools folder + banking_tools.py + __all__) |
 | Unit 3 + Lab 3.1 (action_process_transfer) | Unit 3 + **Lab 3.1** (endpoints.yml tools section) |
 | Unit 4 + Lab 4.1 (transfer_money flow) | Unit 4 + **Lab 4.1** (transfer_money_tools flow + action_process_transfer_with_tools) |
 | Unit 5 + Lab 5.1 (train) + Lab 5.2 (test) | Unit 5: **5.1** → **Lab 5.1** → **5.2** → **Lab 5.2** (linear: each concept page followed by its lab) |
 | Unit 6: Walkthrough, summary, limitations, checklist | Unit 6: 6.1–6.7 (walkthrough, learned, next, knowledge check, limitations, Level 6 preview, checklist) |
 
-**Lab numbering:** Level 5 uses Labs 2.1, 3.1, 4.1, 5.1, 5.2. **Lab 2.1** uses a **fill-in-the-blanks** exercise (5 points) plus the **code test** (10 points), matching the Chapter 1.4 Lab 0.1 pattern. Labs 3.1–5.2 use code tests only (10 points each). **Total graded points:** 55.
+**Lab numbering:** Level 5 uses **Lab 2.0** (command-generator prompt; wiring enforced in **5.1 / 5.2** graders), then Labs 2.1, 3.1, 4.1, 5.1, 5.2. **Lab 2.1** uses a **fill-in-the-blanks** exercise (5 points) plus the **code test** (10 points), matching the Chapter 1.4 Lab 0.1 pattern. Labs 3.1–5.2 use code tests only (10 points each). **Total graded points:** 55.
 
 ---
 
@@ -30,7 +30,7 @@ This document maps **Level 5** (Chapter 1.5 – Tool Calling) content files, lab
 | `Level5_Unit1_Content_1.1_Tools-vs-Actions.md` | Tools = LLM selects at runtime; actions = explicit in flow steps. |
 | `Level5_Unit1_Content_1.2_When-to-Use-Tools.md` | When to use tools (dynamic selection) vs actions. |
 | `Level5_Unit1_Content_1.3_Test-Your-Knowledge.md` | Quiz on Units 0–1 (tools vs actions, registration, __all__). |
-| `Level5_Unit2_Content_2.1_Creating-Tool-Functions.md` | tools/ folder, banking_tools.py, __all__. Pointer to Lab 2.1. |
+| `Level5_Unit2_Content_2.1_Creating-Tool-Functions.md` | tools/ folder, banking_tools.py, __all__. Pointer to Lab 2.1. **Lab 2.0** (prompt) precedes Lab 2.1 in the Codio guide. |
 | `Level5_Unit3_Content_3.1_Registering-Tools.md` | endpoints.yml tools section, tools_module. Pointer to Lab 3.1. |
 | `Level5_Unit4_Content_4.1_Using-Tools-in-a-Flow.md` | transfer_money_tools flow and action. Pointer to Lab 4.1. |
 | `Level5_Unit5_Content_5.1_Training-Level-5.md` | Train from level5. Lab 5.1. |
@@ -49,6 +49,7 @@ This document maps **Level 5** (Chapter 1.5 – Tool Calling) content files, lab
 
 | Lab | Content File | Assessment Setup File | Task ID (Codio) | Grader / Solution Ref |
 |-----|--------------|------------------------|-----------------|------------------------|
+| 2.0 | Codio: `Lab-2-0-Command-generator-prompt-L5c0.md` | — | *(none)* | Prompt verified in **501050001** / **501050002** (Check 3) |
 | 2.1 | Level5_Lab2.1_Content.md | Level5_Lab2.1_Assessment_Setup.md | **fill-in-the-blanks-501020010** (5 pts) + **code-output-compare-501020001** (10 pts) | `.guides/assessments/fill-in-the-blanks-501020010.json`; grader: lab_2.1_grader.py, lab_2.1_solution_reference.md |
 | 3.1 | Level5_Lab3.1_Content.md | Level5_Lab3.1_Assessment_Setup.md | code-output-compare-501030001 | lab_3.1_grader.py, lab_3.1_solution_reference.md |
 | 4.1 | Level5_Lab4.1_Content.md | Level5_Lab4.1_Assessment_Setup.md | code-output-compare-501040001 | lab_4.1_grader.py, lab_4.1_solution_reference.md |
@@ -63,7 +64,7 @@ This document maps **Level 5** (Chapter 1.5 – Tool Calling) content files, lab
 
 - **Chapter ID:** Chapter-1-5---Tool-Calling-f9e0
 - **Content path:** `.guides/content/Chapter-1-5---Tool-Calling-f9e0/`
-- **Lab pages** include `{Check It!|assessment}(fill-in-the-blanks-501020010)` and `{Check It!|assessment}(code-output-compare-501020001)` for Lab 2.1; other labs use `code-output-compare-50XXXXXX` as above.
+- **Lab 2.0** has no dedicated `{Check It!|assessment}`; **`prompt_template`** wiring is checked in **501050001** and **501050002** (grader Check 3). **Lab pages** include `{Check It!|assessment}(fill-in-the-blanks-501020010)` and `{Check It!|assessment}(code-output-compare-501020001)` for Lab 2.1; other labs use `code-output-compare-50XXXXXX` as above.
 - **Graders:** All in `.guides/secure/level5_graders/`. No grader scripts live under `.guides/assessments/`.
 
 ---

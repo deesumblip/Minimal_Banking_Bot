@@ -1,4 +1,4 @@
-**Starting point:** Work in **`level5/`** after **Labs 2.1–5.1** (trained model optional for read-only walkthrough).
+**Starting point:** Work in **`level5/`** after **Labs 2.0–5.1** (trained model optional for read-only walkthrough).
 
 You now have a Chapter 1.5 agent that extends **Chapter 1.4 completion** with **tool calling**.
 

@@ -3,6 +3,7 @@
 Before moving to **Chapter 1.6** (or beyond), ensure you can:
 
 - Explain the difference between **tools** (LLM selects at runtime) and **actions** (explicitly called in flows)
+- Add **`data/prompts/command_prompt_v3_slot_names.jinja2`** and **`prompt_template`** in **`config.yml`** (**Lab 2.0**) so the command generator uses domain slot names
 - Create a **`tools/`** module with Python functions and export them via **`__all__`**
 - Add a **`tools:`** section to **`endpoints.yml`** with **`tools_module: "tools"`**
 - Create a flow that collects slots and runs an action in a context where the LLM can call tools, and extend **`from_llm`** slot mappings so **`transfer_money_tools`** can fill **amount**, **recipient**, and **account_from**

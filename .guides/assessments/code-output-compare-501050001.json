@@ -4,7 +4,7 @@
 	"source": {
 		"name": "Lab 5.1: Training the Level 5 Agent",
 		"showName": true,
-		"instructions": "To pass, all checks must pass:\n\n• Check 1: .venv with Python exists.\n• Check 2: level5 has domain, config, endpoints, and tools/banking_tools.py.\n• Check 3: Trained .tar.gz model in level5/models/.\n\nFull score: 10/10.",
+		"instructions": "To pass, all checks must pass:\n\n• Check 1: .venv with Python exists.\n• Check 2: level5 has domain, config, endpoints, and tools/banking_tools.py.\n• Check 3: Lab 2.0 — data/prompts/command_prompt_v3_slot_names.jinja2 exists and config.yml sets prompt_template on SearchReadyLLMCommandGenerator.\n• Check 4: Trained .tar.gz model in level5/models/.\n\nFull score: 10/10.",
 		"command": "bash /home/codio/workspace/.guides/scripts/run_python_grader.sh /home/codio/workspace/.guides/secure/level5_graders/lab_5.1_grader.py",
 		"preExecuteCommand": "",
 		"options": {
@@ -63,6 +63,13 @@
 				"arguments": "",
 				"input": "",
 				"output": "Check 3: PASSED",
+				"showFeedback": false,
+				"feedback": ""
+			},
+			{
+				"arguments": "",
+				"input": "",
+				"output": "Check 4: PASSED",
 				"showFeedback": false,
 				"feedback": ""
 			}

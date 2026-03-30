@@ -22,4 +22,4 @@ Verifies that the student can train from level5 (or that required files are pres
 
 ### Code Test
 
-Grader: `.guides/secure/level5_graders/lab_5.1_grader.py`. **Check 1–3**, Lab 6.2-style; **` PASS: Lab 5.1 verification complete! Score: 10/10`**. Verifies venv, level5 structure, model. COMMAND: venv Python + grader. Sequence: `code-output-compare-501050001.json`.
+Grader: `.guides/secure/level5_graders/lab_5.1_grader.py`. **Check 1–4**, Lab 6.2-style; **` PASS: Lab 5.1 verification complete! Score: 10/10`**. Verifies venv, level5 structure, **Lab 2.0** prompt file + `prompt_template` in `config.yml`, and trained model. COMMAND: venv Python + grader. Sequence: `code-output-compare-501050001.json`.

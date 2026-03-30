@@ -4,13 +4,15 @@
 
 In this chapter you:
 
-1. **Tools folder (Lab 2.1).** Created **`tools/`** and **`tools/banking_tools.py`** with tool functions (for example **`check_balance`**, **`process_transfer`**, **`get_account_info`**) and exported them via **`__all__`**.
+1. **Command-generator prompt (Lab 2.0).** Added **`data/prompts/command_prompt_v3_slot_names.jinja2`** and **`prompt_template`** in **`config.yml`** so the LLM uses domain slot names in **`set slot`** commands.
 
-2. **Register tools (Lab 3.1).** Added a **`tools:`** section to **`endpoints.yml`** with **`tools_module: "tools"`** so Rasa discovers the tools.
+2. **Tools folder (Lab 2.1).** Created **`tools/`** and **`tools/banking_tools.py`** with tool functions (for example **`check_balance`**, **`process_transfer`**, **`get_account_info`**) and exported them via **`__all__`**.
 
-3. **Flow and action (Lab 4.1).** Completed the **fill-in-the-blanks** exercise for **`from_llm`** slot conditions (**`active_flow: transfer_money_tools`** on **amount**, **recipient**, **account_from**), created **`transfer_money_tools.yml`**, created **`action_process_transfer_with_tools.py`** (with **`run()`**, slot reads, and **`utter_message`**), and registered the action in the domain.
+3. **Register tools (Lab 3.1).** Added a **`tools:`** section to **`endpoints.yml`** with **`tools_module: "tools"`** so Rasa discovers the tools.
 
-4. **Training and testing (Labs 5.1 and 5.2).** Trained from **`level5/`**, ran the **completion check**, and tested tool calling in **Rasa Inspector**.
+4. **Flow and action (Lab 4.1).** Completed the **fill-in-the-blanks** exercise for **`from_llm`** slot conditions (**`active_flow: transfer_money_tools`** on **amount**, **recipient**, **account_from**), created **`transfer_money_tools.yml`**, created **`action_process_transfer_with_tools.py`** (with **`run()`**, slot reads, and **`utter_message`**), and registered the action in the domain.
+
+5. **Training and testing (Labs 5.1 and 5.2).** Trained from **`level5/`**, ran the **completion check**, and tested tool calling in **Rasa Inspector**.
 
 ## Key ideas
 

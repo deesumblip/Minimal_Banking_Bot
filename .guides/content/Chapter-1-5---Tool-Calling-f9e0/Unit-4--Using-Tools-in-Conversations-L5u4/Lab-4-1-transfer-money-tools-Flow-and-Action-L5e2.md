@@ -1,4 +1,4 @@
-**Starting point:** Work in **`level5/`** with **Labs 2.1–3.1** complete (**`tools/banking_tools.py`**, **`tools:`** in **`endpoints.yml`**).
+**Starting point:** Work in **`level5/`** with **Labs 2.0–3.1** complete (**`prompt_template`** + **`data/prompts/`**, **`tools/banking_tools.py`**, **`tools:`** in **`endpoints.yml`**).
 
 **Objective.** Add the **`transfer_money_tools`** flow, the **`action_process_transfer_with_tools`** custom action, and the **domain** updates so the LLM can fill **`amount`**, **`recipient`**, and **`account_from`** when that flow is active, then run the action step. Nothing in this lab appears without you creating or editing it: you will use a **fill-in-the-blanks** exercise for the **domain slot conditions**, paste **structured YAML** for the **flow**, and paste **Python** for the **action** (you may type it yourself if you prefer, as long as it matches the grader).
 

@@ -4,7 +4,7 @@
 	"source": {
 		"name": "Lab 5.2: Testing Tool Calling / Completion Check",
 		"showName": true,
-		"instructions": "Completion check — all must pass for full Codio score:\n\n• Check 1: tools/ and banking_tools.py with __all__ and tool functions.\n• Check 2: endpoints.yml tools_module: \"tools\".\n• Check 3: transfer_money_tools flow and action_process_transfer_with_tools.py.\n• Check 4: Domain lists the action and model exists (PARTIAL if domain OK but no model).\n\nFull score: 10/10.",
+		"instructions": "Completion check — all must pass for full Codio score:\n\n• Check 1: tools/ and banking_tools.py with __all__ and tool functions.\n• Check 2: endpoints.yml tools_module: \"tools\".\n• Check 3: Lab 2.0 — data/prompts/command_prompt_v3_slot_names.jinja2 and prompt_template in config.yml.\n• Check 4: transfer_money_tools flow and action_process_transfer_with_tools.py.\n• Check 5: Domain lists the action and model exists (PARTIAL if domain OK but no model).\n\nFull score: 10/10.",
 		"command": "bash /home/codio/workspace/.guides/scripts/run_python_grader.sh /home/codio/workspace/.guides/secure/level5_graders/lab_5.2_grader.py",
 		"preExecuteCommand": "",
 		"options": {
@@ -33,7 +33,7 @@
 		},
 		"bloomsObjectiveLevel": "",
 		"learningObjectives": "",
-		"guidance": "Train from level5 if Check 4 is partial; full pass requires Check 4: PASSED.",
+		"guidance": "Complete Lab 2.0 if Check 3 fails. Train from level5 if Check 5 is partial; full pass requires Check 5: PASSED.",
 		"showGuidanceAfterResponseOption": {
 			"type": "Never"
 		},
@@ -70,6 +70,13 @@
 				"arguments": "",
 				"input": "",
 				"output": "Check 4: PASSED",
+				"showFeedback": false,
+				"feedback": ""
+			},
+			{
+				"arguments": "",
+				"input": "",
+				"output": "Check 5: PASSED",
 				"showFeedback": false,
 				"feedback": ""
 			}

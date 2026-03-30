@@ -10,6 +10,6 @@
 
 **Step 4.** Confirm that training completes without errors and that a model is written to `level5/models/` (or the configured output path).
 
-**Step 5.** Run the assessment. The grader will check that training can be run from level5 (or that the required files and config are present so training would succeed).
+**Step 5.** Run the assessment. The grader checks the venv, **`level5/`** structure, **Lab 2.0** (**`data/prompts/command_prompt_v3_slot_names.jinja2`** and **`prompt_template`** in **`config.yml`**), and a trained model under **`level5/models/`**.
 
 {Check It!|assessment}(code-output-compare-501050001)

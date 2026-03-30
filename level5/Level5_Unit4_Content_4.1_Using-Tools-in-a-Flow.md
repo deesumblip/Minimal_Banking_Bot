@@ -1,4 +1,4 @@
-**Starting point:** Work in **`level5/`** with **`tools/`** in place and **`tools:`** registered in **`endpoints.yml`** (the work from the previous two units). This page explains how a **flow** reaches a step where the LLM may call your tools; the **lab that follows** is where you implement it.
+**Starting point:** Work in **`level5/`** with **Labs 2.0, 2.1, and 3.1** complete (**`prompt_template`** + **`data/prompts/`**, **`tools/`**, and **`tools:`** in **`endpoints.yml`**). This page explains how a **flow** reaches a step where the LLM may call your tools; the **lab that follows** is where you implement it.
 
 To use tools in a conversation, you need a **flow** that brings the user to a point where the LLM can call them. In Level 5 we do that with:
 

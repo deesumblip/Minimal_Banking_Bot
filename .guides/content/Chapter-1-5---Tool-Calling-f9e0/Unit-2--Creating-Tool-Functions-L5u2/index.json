@@ -3,6 +3,7 @@
   "type": "section",
   "title": "Unit 2: Creating Tool Functions",
   "order": [
+    "Lab-2-0-Command-generator-prompt-L5c0",
     "2-1-Creating-Tool-Functions-L5c1",
     "Lab-2-1-Tools-Folder-and-banking-tools-L5c2"
   ],

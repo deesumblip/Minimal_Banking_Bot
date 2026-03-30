@@ -6,13 +6,9 @@ nlg:
   llm:
     model_group: gpt-4o-mini
 
-# Tools registration - NEW in Level 5
-tools:
-  tools_module: "tools"
-
 model_groups:
   - id: gpt-4o-mini
     models:
       - provider: openai
-        model: gpt-4o-mini-2024-07-18
-        temperature: 0.3
+        model: gpt-4o-2024-11-20
+        temperature: 0.1

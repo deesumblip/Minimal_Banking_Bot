@@ -1,4 +1,4 @@
-**Starting point:** Work in **`level5/`** after **Lab 2.1** ( **`tools/banking_tools.py`** and **`__all__`** ). This page shows how to **register** that module in **`endpoints.yml`**; the **lab that follows** this page is where you apply it.
+**Starting point:** Work in **`level5/`** after **Labs 2.0 and 2.1** (**`prompt_template`** + **`tools/banking_tools.py`** and **`__all__`**). This page shows how to **register** the tools module in **`endpoints.yml`**; the **lab that follows** this page is where you apply it.
 
 Once you have a **`tools/`** module with tool functions, you must **register** it with Rasa so the assistant can discover and call them.
 

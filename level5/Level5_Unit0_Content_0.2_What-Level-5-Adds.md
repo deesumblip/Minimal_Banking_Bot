@@ -6,7 +6,7 @@ Level 5 adds **tool calling**: the LLM can dynamically select and invoke **tools
 
 **How to read this page**
 
-- Your **starting point** is **Chapter 1.4 completion** in **`level5/`**. In this course repo, **`level5/`** is already that baseline—you **add** the **`tools/`** module, **`tools:`** in **`level5/endpoints.yml`**, the **`transfer_money_tools`** flow, and **`action_process_transfer_with_tools`**, then train and test. Complete every lab so *you* produce those files; when you are done, your tree should match the **Chapter 1.5 end state** summarized again at the **end of this chapter**.
+- Your **starting point** is **Chapter 1.4 completion** in **`level5/`**. In this course repo, **`level5/`** matches that baseline (no **`tools/`**, no **`tools:`** in **`endpoints.yml`**, no **`transfer_money_tools`** flow or **`action_process_transfer_with_tools`** yet, and no **`prompt_template`** / **`data/prompts/`** until you add them). You **add** the command-generator prompt (**Lab 2.0**), then the **`tools/`** module, **`tools:`** in **`level5/endpoints.yml`**, the **`transfer_money_tools`** flow, and **`action_process_transfer_with_tools`**, then train and test. Complete every lab so *you* produce those files; when you are done, your tree should match the **Chapter 1.5 end state** summarized again at the **end of this chapter**.
 
 Your Chapter 1.4 flows and actions stay in place; you **add** tools and the new flow so the LLM can call **`check_balance`**, **`process_transfer`**, **`get_account_info`**, and similar functions where the lab expects them.
 
@@ -15,6 +15,8 @@ Your Chapter 1.4 flows and actions stay in place; you **add** tools and the new 
 ---
 
 ## What you'll add (by lab)
+
+**Lab 2.0 — Command-generator prompt.** You copy **`command_prompt_v3_slot_names.jinja2`** from **`.guides/content/Chapter-1-5---Tool-Calling-f9e0/resources/`** into **`level5/data/prompts/`**, then set **`prompt_template`** on **`SearchReadyLLMCommandGenerator`** in **`config.yml`** so **`set slot`** commands use domain slot names.
 
 **Lab 2.1 — Tools folder.** You create **`tools/`** and **`tools/banking_tools.py`** with at least three tool functions—**`check_balance(account)`**, **`process_transfer(amount, from_account, to_account)`**, and **`get_account_info(account)`**. Each returns a dict; you export them via **`__all__`**.
 

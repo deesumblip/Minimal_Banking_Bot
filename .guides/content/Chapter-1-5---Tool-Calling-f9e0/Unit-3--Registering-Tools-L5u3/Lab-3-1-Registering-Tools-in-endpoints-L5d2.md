@@ -1,4 +1,4 @@
-**Starting point:** Work in **`level5/`** with **Lab 2.1** complete (**`tools/banking_tools.py`** and **`__all__`**).
+**Starting point:** Work in **`level5/`** with **Labs 2.0 and 2.1** complete (**`data/prompts/`** + **`prompt_template`**, **`tools/banking_tools.py`**, and **`__all__`**).
 
 **Objective.** The **previous page** showed the **`tools:`** section in **`endpoints.yml`**. In this lab you add it to **`level5/endpoints.yml`** so Rasa can discover the tool functions you created in the **previous unit’s lab**.
 

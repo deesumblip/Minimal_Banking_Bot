@@ -1,4 +1,4 @@
-**Starting point:** Work in **`level5/`** with the Chapter 1.4 completion baseline from the start of this chapter (see **Unit 0.1** if you need a refresher).
+**Starting point:** Work in **`level5/`** with **Lab 2.0** complete (**command-generator prompt** in **`data/prompts/`** and **`config.yml`**). See **Unit 0.1** if you need a refresher on the Chapter 1.4 baseline.
 
 In this lab you complete **`banking_tools.py`** in the fill-in-the-blanks exercise, then create **`level5/tools/`** and save the same module as **`level5/tools/banking_tools.py`**. The module must define **`check_balance`**, **`process_transfer`**, and **`get_account_info`**, export them in **`__all__`**, and use the patterns from **Unit 2.1** (type hints, docstrings, return dicts).
 
@@ -32,7 +32,7 @@ The grader checks that **`level5/tools/`** exists, **`banking_tools.py`** is pre
 
 ---
 
-**Success criteria.** Code test passes (**10/10**). Then continue to **Lab 3.1** (register **`tools:`** in **`endpoints.yml`**).
+**Success criteria.** Code test passes (**10/10**). Then continue to **Lab 3.1** (register **`tools:`** in **`endpoints.yml`**). (If you skipped **Lab 2.0**, go back and add the **prompt template** first—**Lab 3.1** assumes **Lab 2.0** and **Lab 2.1** are done.)
 
 ---
 
