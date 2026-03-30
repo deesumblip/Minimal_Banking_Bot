@@ -16,11 +16,7 @@ This is **Unit 2’s first lab**—do it before **Lab 2.1** (the `tools/` module
    - From: `level5/resources/command_prompt_v3_slot_names.jinja2`
    - To: `level5/data/prompts/command_prompt_v3_slot_names.jinja2`
 
-3. **Run the copy from `level5/`**, for example:
-   - Linux / macOS: `cp resources/command_prompt_v3_slot_names.jinja2 data/prompts/`
-   - Windows (PowerShell): `Copy-Item resources\command_prompt_v3_slot_names.jinja2 data\prompts\`
-
-4. **Confirm:** `level5/data/prompts/command_prompt_v3_slot_names.jinja2` exists. Rasa reads the prompt from `data/prompts/` at runtime; `level5/resources/` holds the copy that ships with the repo.
+3. **Confirm:** `level5/data/prompts/command_prompt_v3_slot_names.jinja2` exists. Rasa reads the prompt from `data/prompts/` at runtime; `level5/resources/` holds the copy that ships with the repo.
 
 ---
 
@@ -45,9 +41,16 @@ pipeline:
 
 ---
 
-## Part C — Quick check (optional)
+## Part C
 
-From project root, activate the venv, `cd level5`, and run `python -m rasa train`. Training should finish; a bad `prompt_template` path usually shows up here or on the next train.
+- Open a terminal at **project root** (the folder that contains `level5/` and `.venv/`).
+- Activate the virtual environment:
+  - Linux / macOS: `source .venv/bin/activate`
+  - Windows (PowerShell): `.\.venv\Scripts\Activate.ps1`
+- Change into the agent folder: `cd level5`
+- Run: `python -m rasa train`
+
+Training should finish; a bad `prompt_template` path usually shows up here or on the next train.
 
 ---
 
