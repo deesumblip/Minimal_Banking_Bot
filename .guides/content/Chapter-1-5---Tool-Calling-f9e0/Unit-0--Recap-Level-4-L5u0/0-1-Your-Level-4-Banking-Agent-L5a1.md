@@ -1,20 +1,18 @@
-**Chapter 1.5 starting point:** You continue from the **banking agent you completed in Chapter 1.4**—the same design you see in **`level4/`** after those labs: multiple slots, **`transfer_money`**, **`action_process_transfer`**, and the Chapter 1.4 stack (**`SearchReadyLLMCommandGenerator`**, **`endpoints.yml`** with **`action_endpoint`**, **`nlg`**, and **`model_groups`**). This is not a greenfield project.
+**Starting point:** Chapter 1.5 extends the **banking agent you finished in Chapter 1.4**—same idea as **`level4/`** (CALM stack with **`SearchReadyLLMCommandGenerator`**, **`endpoints.yml`** with **`action_endpoint`**, **`nlg`**, **`model_groups`**, slots, **`transfer_money`**, and related flows). You are **not** starting from scratch.
 
-**Repository note:** Here, **`level5/`** matches that **Chapter 1.4 completion** snapshot **before** any Chapter 1.5 labs: same overall shape as finished **`level4/`** (domain, flows such as **`goodbye`**, **`holiday_hours`**, **`check_balance`**, and **`transfer_money`**, plus your earlier custom actions). Until you work through the labs, **`level5/`** will **not** yet include **`data/prompts/`**, a **`prompt_template`** entry in **`config.yml`**, a **`tools/`** package, **`tools:`** in **`endpoints.yml`**, **`transfer_money_tools.yml`**, or **`action_process_transfer_with_tools`**—you add each of those in order. Treat **`level4/`** as the frozen “end of 1.4” reference and **`level5/`** as where you build Chapter 1.5.
+**Where to work:** Edit **`level5/`** only; leave **`level4/`** as the “Chapter 1.4 done” reference. Activate the venv at **project root**, then **`cd level5`** for every command (**`python -m rasa …`**).
 
-**Work in `level5/`:** Do **not** edit **`level4/`** in this chapter. Every change and every **`python -m rasa …`** command assumes you activate the venv at **project root**, then **`cd level5`**.
+**What you add in 1.5:** In order, the labs have you add **`prompt_template`** / **`data/prompts/`**, **`tools/`**, **`tools:`** in **`endpoints.yml`**, **`transfer_money_tools`**, and **`action_process_transfer_with_tools`**. *Level 5* names the Chapter 1.5 skill; **`level5/`** is where those files live.
 
 ---
 
-Before we add tool calling, here is a quick recap of what you have at **Chapter 1.4 completion**. All of that behavior stays in place; Chapter 1.5 **adds** tools on top.
-
-**Naming:** *Level 5* is the skill outcome of Chapter 1.5. The **`level5/`** folder is where those changes live—it extends the same agent you finished in **`level4/`**.
+What follows is a **quick recap of Chapter 1.4 completion**. That behavior stays; Chapter 1.5 **adds** tool calling on top.
 
 ## Where Chapter 1.5 happens
 
-You add the **`tools/`** module, **`endpoints.yml`** registration, the **`transfer_money_tools`** flow, and **`action_process_transfer_with_tools`** under **`level5/`**. The **next page** summarizes the lab sequence and what you will add in each step.
+All of the above lives under **`level5/`** as you work through the labs. The **next page** spells out the lab order step by step.
 
-Use the **same virtual environment** as in Chapter 1.4 (project root); there is no new venv inside **`level5/`**.
+Use the **same virtual environment** as in Chapter 1.4 (project root); there is no separate venv inside **`level5/`**.
 
 ---
 
