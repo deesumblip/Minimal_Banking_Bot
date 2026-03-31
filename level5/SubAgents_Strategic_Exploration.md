@@ -117,7 +117,7 @@ So sub-agents are a **different pattern** (delegation/orchestration), not a drop
 
 | Module | Concept | What the student learns |
 |--------|---------|--------------------------|
-| 0 | Recap Level 4 | Level 4 = multiple slots, transfer flow, action_process_transfer; Level 5 builds on it. |
+| 0 | Recap - What you built in Level 4 | Level 4 = multiple slots, transfer flow, action_process_transfer; Level 5 builds on it. |
 | 1 | Introduction to Tools | Tools = functions the LLM can call dynamically; tools vs actions (explicit vs dynamic). |
 | 2 | Tools vs. Actions | When to use tools (flexible, LLM-driven) vs actions (predictable, flow-driven). |
 | 3 | Creating Tool Functions | Python functions in `tools/`, docstrings, typing, return dicts; `__all__` for discovery. |

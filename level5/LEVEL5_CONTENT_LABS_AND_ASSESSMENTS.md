@@ -9,7 +9,7 @@ This document maps **Level 5** (Chapter 1.5 – Tool Calling) content files, lab
 | Level 4 | Level 5 equivalent |
 |---------|---------------------|
 | **Starter** = Level 3 end state (`level4/`) | **Starter** = Chapter 1.4 completion / final Level 4 bot (`level5/` as default baseline in repo) |
-| Unit 0: Your Level 3 agent / What Level 4 adds | Unit 0: Picking up where Chapter 1.4 left off / What Level 5 adds |
+| Unit 0: Recap - What you built in Level 3 / What Level 4 adds | Unit 0: Recap - What you built in Level 4 / What Level 5 adds |
 | Unit 1: Multiple slots (1.1, 1.2, 1.3) | Unit 1: Introduction to tools (1.1, 1.2, 1.3 Test Your Knowledge) |
 | Unit 2 + Lab 2.1 (domain: slots + utter_ask_* + action) | Unit 2 + **Lab 2.0** (prompt file + config) + **Lab 2.1** (tools folder + banking_tools.py + __all__) |
 | Unit 3 + Lab 3.1 (action_process_transfer) | Unit 3 + **Lab 3.1** (endpoints.yml tools section) |

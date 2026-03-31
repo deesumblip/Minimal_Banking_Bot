@@ -16,7 +16,7 @@
 
 ## Table of Contents
 
-0. [Recap: What You Built in Level 1](#unit-0-recap-what-you-built-in-level-1)
+0. [Recap - What you built in Level 1](#unit-0-recap-what-you-built-in-level-1)
 1. [Introduction to Actions](#unit-1-introduction-to-actions)
 2. [Understanding the Action Class](#unit-2-understanding-the-action-class)
 3. [Creating Your First Action](#unit-3-creating-your-first-action)
@@ -28,7 +28,7 @@
 
 ---
 
-## Unit 0: Recap - What You Built in Level 1
+## Unit 0: Recap - What you built in Level 1
 
 ### 0.1 Your Level 1 Banking Agent
 

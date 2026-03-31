@@ -11,7 +11,7 @@
 
 ## Course Structure
 
-### Unit 0: Recap - What You Built in Level 1
+### Unit 0: Recap - What you built in Level 1
 **Type**: Content Page  
 **Assessment**: None
 
@@ -301,7 +301,7 @@ Content is split by subsection (one file per numbered subsection). Examples:
 ## Learning Path
 
 ```
-Unit 0: Recap
+Unit 0: Recap - What you built in Level 1
     ↓
 Unit 1: Introduction to Actions (Conceptual)
     ↓

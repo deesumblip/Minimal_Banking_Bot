@@ -11,10 +11,10 @@
 
 ## Course Structure (7 units: 0-6)
 
-### Unit 0: Picking up where Chapter 1.4 left off
+### Unit 0: Recap - What you built in Level 4
 **Type**: Content Page | **Assessment**: None
 **Sections**: 0.1 Your Level 4 Banking Agent | 0.2 What Level 5 Adds
-**Key Concepts**: Continuity from Chapter 1.4; **`level5/`** as the working tree; how git **`level4/`** relates to **`level5/`** (page 0.1); what Chapter 1.5 adds (tools, `tools_module`, `transfer_money_tools` flow).
+**Key Concepts**: Recap of Level 4 / Chapter 1.4 completion; **`level5/`** as the working tree; how git **`level4/`** relates to **`level5/`** (page 0.1); what Chapter 1.5 adds (tools, `tools_module`, `transfer_money_tools` flow).
 
 ### Unit 1: Introduction to Tools
 **Type**: Content Page | **Assessment**: None

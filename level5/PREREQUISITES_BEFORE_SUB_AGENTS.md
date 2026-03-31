@@ -66,7 +66,7 @@ Based on the [Rasa sub-agents overview](https://rasa.com/docs/reference/config/a
 ## 3. Level 2: Custom Actions — Content & Examples
 
 ### Content to cover
-- **Unit 0:** Recap Level 1; what Level 2 adds (actions).
+- **Unit 0:** Recap - What you built in Level 1; what Level 2 adds (actions).
 - **Unit 1:** What an action is; actions vs responses; when to use actions.
 - **Unit 2:** Action class structure (`name()`, `run()`); dispatcher, tracker, domain.
 - **Unit 3:** Creating your first action (e.g. bank hours).
@@ -90,7 +90,7 @@ Based on the [Rasa sub-agents overview](https://rasa.com/docs/reference/config/a
 ## 4. Level 3: Slot Collection — Content & Examples
 
 ### Content to cover
-- **Unit 0:** Recap Level 2; what Level 3 adds (slots = memory).
+- **Unit 0:** Recap - What you built in Level 2; what Level 3 adds (slots = memory).
 - **Unit 1:** What a slot is; how slots work; slot collection (ask when empty).
 - **Unit 2:** Slot types (e.g. text); slot naming conventions.
 - **Unit 3:** Defining slots in the domain (`slots:`, `utter_ask_<slot>`).
@@ -113,7 +113,7 @@ Based on the [Rasa sub-agents overview](https://rasa.com/docs/reference/config/a
 ## 5. Level 4: Multiple Slots — Content & Examples
 
 ### Content to cover
-- **Unit 0:** Recap Level 3; what Level 4 adds (transfer flow, multiple slots).
+- **Unit 0:** Recap - What you built in Level 3; what Level 4 adds (transfer flow, multiple slots).
 - **Unit 1:** Multiple slots in one flow; order of collection; slot naming with multiple slots.
 - **Unit 2:** Adding slots and responses (e.g. amount, recipient, account_from); domain and utter_ask_*.
 - **Unit 3:** Reading multiple slots in one action (`tracker.get_slot` for each).
@@ -136,7 +136,7 @@ Based on the [Rasa sub-agents overview](https://rasa.com/docs/reference/config/a
 ## 6. Level 5: Tool Calling — Content & Examples (Critical for Sub-Agents)
 
 ### Content to cover
-- **Unit 0:** Picking up where Chapter 1.4 left off; what Level 5 adds (tools, tools_module, transfer_money_tools flow).
+- **Unit 0:** Recap - What you built in Level 4; what Level 5 adds (tools, tools_module, transfer_money_tools flow).
 - **Unit 1:** Tools vs actions (tools = LLM-selected at runtime; actions = explicit in flow).
 - **Unit 2:** Creating tool functions (`tools/` folder, `banking_tools.py`, `__all__`, docstrings, return dicts).
 - **Unit 3:** Registering tools (`endpoints.yml` tools section, `tools_module`).

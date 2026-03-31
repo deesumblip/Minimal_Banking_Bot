@@ -16,7 +16,7 @@
 
 ## Table of Contents
 
-0. [Picking up where Chapter 1.4 left off](#unit-0-picking-up-where-chapter-14-left-off)
+0. [Recap - What you built in Level 4](#unit-0-recap-what-you-built-in-level-4)
 1. [Introduction to Tools](#unit-1-introduction-to-tools)
 2. [Understanding Tools vs. Actions](#unit-2-understanding-tools-vs-actions)
 3. [Creating Tool Functions](#unit-3-creating-tool-functions)
@@ -28,7 +28,7 @@
 
 ---
 
-## Unit 0: Picking up where Chapter 1.4 left off
+## Unit 0: Recap - What you built in Level 4
 
 ### 0.1 Your Level 4 Banking Agent
 

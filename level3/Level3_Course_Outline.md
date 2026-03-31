@@ -11,7 +11,7 @@
 
 ## Course Structure
 
-### Unit 0: Recap - What You Built in Level 2
+### Unit 0: Recap - What you built in Level 2
 **Type**: Content Page  
 **Assessment**: None
 

@@ -11,7 +11,7 @@
 
 ## Course Structure (7 units: 0–6)
 
-### Unit 0: Recap - What You Built in Level 3
+### Unit 0: Recap - What you built in Level 3
 **Type**: Content Page  
 **Assessment**: None
 

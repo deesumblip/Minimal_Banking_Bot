@@ -9,7 +9,7 @@ This document maps **Level 6** (Chapter 1.6 – Sub-Agents) content files, labs,
 | Level 5 | Level 6 equivalent |
 |---------|---------------------|
 | **Starter** = Level 5 end state (level6 folder) | level6 = Level 5 agent + sub-agent layer |
-| Unit 0: Your Level 4 agent / What Level 5 adds | Unit 0: Your Level 5 agent / What Level 6 adds |
+| Unit 0: Recap - What you built in Level 4 / What Level 5 adds | Unit 0: Recap - What you built in Level 5 / What Level 6 adds |
 | Unit 1: Introduction to tools | Unit 1: Sub-agents concept (what they are, when to use) |
 | Unit 2 + Lab 2.1 (tools folder) | Unit 2 + **Lab 2.1** (sub_agents/banking_assistant config) |
 | Unit 3 + Lab 3.1 (endpoints tools) | Unit 3 + **Lab 3.1** (endpoints mcp_servers) |

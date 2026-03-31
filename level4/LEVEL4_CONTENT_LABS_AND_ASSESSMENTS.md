@@ -9,7 +9,7 @@ This document describes how to create **Level 4** content, labs, and assessment 
 | Level 3 | Level 4 equivalent |
 |--------|---------------------|
 | **Starter** = Level 2 end state | **Starter** = Level 3 / Ch. 1.3 **completion** (then **add** transfer work in Chapter 1.4 labs) |
-| Unit 0: Your Level 2 agent / What Level 3 adds | Unit 0: Your Level 3 agent / What Level 4 adds |
+| Unit 0: Your Level 2 agent / What Level 3 adds | Unit 0: Recap - What you built in Level 3 / What Level 4 adds |
 | Unit 1: Slots intro, types, naming | Unit 1: Multiple slots intro, ordering, slot naming (1.1, 1.2, 1.3) |
 | Unit 2 + **Lab 3.1** (domain: account, utter_ask_account, register action) | Unit 2 + **Lab 2.1** (domain: amount, recipient, account_from + utter_ask_* + register action_process_transfer) |
 | Unit 3 + **Lab 4.1** (action file: action_check_balance_simple) | Unit 3 + **Lab 3.1** (action file: action_process_transfer) |

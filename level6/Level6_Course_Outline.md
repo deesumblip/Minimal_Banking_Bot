@@ -11,7 +11,7 @@
 
 ## Course Structure (7 units: 0–6)
 
-### Unit 0: Recap - What You Built in Level 5
+### Unit 0: Recap - What you built in Level 5
 **Type**: Content Page | **Assessment**: None  
 **Sections**: 0.1 Your Level 5 Banking Agent | 0.2 What Level 6 Adds  
 **Key Concepts**: Recap Level 5 (domain, flows, actions, tools); Level 6 adds sub-agent, flow that calls it, MCP registration.

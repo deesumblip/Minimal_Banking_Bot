@@ -16,7 +16,7 @@
 
 ## Table of Contents
 
-0. [Recap: What You Built in Level 3](#unit-0-recap-what-you-built-in-level-3)
+0. [Recap - What you built in Level 3](#unit-0-recap-what-you-built-in-level-3)
 1. [Introduction to Multiple Slots](#unit-1-introduction-to-multiple-slots)
 2. [Defining Multiple Slots](#unit-2-defining-multiple-slots)
 3. [Collecting Multiple Slots in Flows](#unit-3-collecting-multiple-slots-in-flows)
@@ -28,7 +28,7 @@
 
 ---
 
-## Unit 0: Recap - What You Built in Level 3
+## Unit 0: Recap - What you built in Level 3
 
 ### 0.1 Your Level 3 Banking Agent
 
