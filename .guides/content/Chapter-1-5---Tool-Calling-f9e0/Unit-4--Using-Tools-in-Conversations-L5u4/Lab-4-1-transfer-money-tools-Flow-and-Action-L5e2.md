@@ -1,6 +1,12 @@
 **Starting point:** Work in **`level5/`** with **Labs 2.0–3.1** complete (**`prompt_template`**, **`data/prompts/`**, **`tools/banking_tools.py`**, **`tools:`** in **`endpoints.yml`**).
 
-**Objective.** Add the **`transfer_money_tools`** flow, the **`action_process_transfer_with_tools`** custom action, and **domain** updates so the LLM can fill **`amount`**, **`recipient`**, and **`account_from`** while that flow runs, then execute the action step. You create every artifact: a **fill-in-the-blanks** exercise for **domain slot conditions**, pasted **YAML** for the **flow**, and **Python** for the **action** (or your own equivalent that satisfies the grader).
+**Objective.** Add the **`transfer_money_tools`** flow, the **`action_process_transfer_with_tools`** custom action, and **domain** updates so the LLM can fill **`amount`**, **`recipient`**, and **`account_from`** while that flow runs, then run the action step.
+
+You will create:
+
+- A **fill-in-the-blanks** exercise for **domain slot conditions**
+- **YAML** for the **flow** (paste as specified)
+- **Python** for the **action** (or an equivalent that satisfies the grader)
 
 You do **not** need the venv for the fill-in-the-blanks; you need it when you **train** later in the chapter.
 
@@ -8,7 +14,9 @@ You do **not** need the venv for the fill-in-the-blanks; you need it when you **
 
 ## Why the domain step matters
 
-Chapter 1.4 already maps **`amount`**, **`recipient`**, and **`account_from`** when **`transfer_money`** is active (in this repo’s **`level5/`** baseline, that means **`from_llm`** + **`active_flow: transfer_money`**—see **`level5/domain/basics.yml`** if your hand-built **`level4/`** domain used only plain **`type: text`** slots). **`transfer_money_tools`** reuses those slot names. Each **`from_llm`** mapping needs a **`conditions`** entry with **`active_flow: transfer_money_tools`** as well. Without it, slot updates can fail while **`transfer_money_tools`** is running.
+Chapter 1.4 already maps **`amount`**, **`recipient`**, and **`account_from`** when **`transfer_money`** is active. In this repo’s **`level5/`** baseline, that means **`from_llm`** plus **`active_flow: transfer_money`** (see **`level5/domain/basics.yml`** if your hand-built **`level4/`** domain used only plain **`type: text`** slots).
+
+**`transfer_money_tools`** reuses those slot names. Each **`from_llm`** mapping also needs **`conditions`** with **`active_flow: transfer_money_tools`**. Without that, slot updates can fail while **`transfer_money_tools`** is running.
 
 ---
 

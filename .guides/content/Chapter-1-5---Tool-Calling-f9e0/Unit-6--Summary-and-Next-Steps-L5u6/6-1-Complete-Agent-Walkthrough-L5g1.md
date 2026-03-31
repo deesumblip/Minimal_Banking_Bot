@@ -18,6 +18,6 @@ Your Chapter 1.5 agent extends **Chapter 1.4 completion** with **tool calling**.
 | transfer_money       | amount, recipient, account_from | action_process_transfer |
 | transfer_money_tools | amount, recipient, account_from | action_process_transfer_with_tools (LLM can call tools) |
 
-Everything lives under **`level5/`**. **`transfer_money_tools`** reuses the transfer slots from **`transfer_money`**; domain **`from_llm`** mappings (including **`active_flow: transfer_money_tools`**) route slot updates to the right flow—see **Lab 4.1**.
+Everything lives under **`level5/`**. **`transfer_money_tools`** reuses the transfer slots from **`transfer_money`**. Domain **`from_llm`** mappings—including **`active_flow: transfer_money_tools`**—route slot updates to the right flow (see **Lab 4.1**).
 
-You train once from **`level5`** and run a single assistant. In **Rasa Inspector**, use **separate conversations** (for example **New conversation**) when comparing **`transfer_money`** with **`transfer_money_tools`**.
+You train once from **`level5/`** and run a single assistant. In **Rasa Inspector**, use **separate conversations** (for example **New conversation**) when comparing **`transfer_money`** with **`transfer_money_tools`**.

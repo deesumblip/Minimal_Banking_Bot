@@ -10,7 +10,7 @@ In this chapter you:
 
 3. **Register tools (Lab 3.1).** Added **`tools:`** to **`endpoints.yml`** with **`tools_module: "tools"`** so Rasa loads the package.
 
-4. **Flow and action (Lab 4.1).** Finished the fill-in-the-blanks for **`from_llm`** (**`active_flow: transfer_money_tools`** on **amount**, **recipient**, **account_from**), added **`transfer_money_tools.yml`**, **`action_process_transfer_with_tools.py`** (**`run()`**, slot reads, **`utter_message`**), and listed the action in the domain.
+4. **Flow and action (Lab 4.1).** Finished the fill-in-the-blanks for **`from_llm`** (**`active_flow: transfer_money_tools`** on **amount**, **recipient**, **account_from**). Added **`transfer_money_tools.yml`**, **`action_process_transfer_with_tools.py`** (**`run()`**, slot reads, **`utter_message`**), and listed the action in the domain.
 
 5. **Training and testing (Labs 5.1 and 5.2).** Trained from **`level5/`**, passed the **completion check**, and tried tool calling in **Rasa Inspector**.
 

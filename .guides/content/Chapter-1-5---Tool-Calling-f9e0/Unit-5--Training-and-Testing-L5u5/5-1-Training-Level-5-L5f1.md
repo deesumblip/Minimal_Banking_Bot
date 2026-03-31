@@ -9,4 +9,9 @@ With tools, endpoints, flow, and action in place, **train** the Chapter 1.5 agen
 3. Run: **`python -m rasa train`** (use the venv’s Python from the project root so you use the same Rasa install as in earlier chapters).
 4. The model is written under **`level5/models/`**. The bundle includes your domain, flows, and tool registration so the LLM can use tools when **`action_process_transfer_with_tools`** runs.
 
-If training fails, verify: (1) **`domain/basics.yml`** lists **`action_process_transfer_with_tools`** and **`amount`**, **`recipient`**, **`account_from`** each include **`active_flow: transfer_money_tools`** under **`from_llm`** (**Lab 4.1**); (2) **`endpoints.yml`** has **`tools:`** with **`tools_module: "tools"`**; (3) **`tools/banking_tools.py`** is valid Python with **`__all__`**; (4) **`config.yml`** still points **`prompt_template`** at **`data/prompts/command_prompt_v3_slot_names.jinja2`** and that file exists (**Lab 2.0**).
+If training fails, check:
+
+1. **`domain/basics.yml`** — lists **`action_process_transfer_with_tools`**; **`amount`**, **`recipient`**, and **`account_from`** each include **`active_flow: transfer_money_tools`** under **`from_llm`** (**Lab 4.1**).
+2. **`endpoints.yml`** — has **`tools:`** with **`tools_module: "tools"`**.
+3. **`tools/banking_tools.py`** — valid Python with **`__all__`**.
+4. **`config.yml`** and **`data/prompts/`** — **`prompt_template`** points at **`data/prompts/command_prompt_v3_slot_names.jinja2`** and the file exists (**Lab 2.0**).

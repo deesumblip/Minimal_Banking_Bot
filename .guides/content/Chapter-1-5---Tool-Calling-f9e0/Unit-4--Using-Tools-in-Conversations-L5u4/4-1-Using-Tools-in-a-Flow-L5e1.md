@@ -4,9 +4,11 @@ To use tools in dialogue, you need a **flow** that reaches a step where the LLM 
 
 1. A **flow** that collects the same slots as **`transfer_money`** (**amount**, **recipient**, **account_from**) so context is available.
 2. A **step** that runs one **action** (`action_process_transfer_with_tools`) in a tool-calling context.
-3. **Domain** updates so **`from_llm`** mappings include **`active_flow: transfer_money_tools`** for those three slots—without that, the new flow will not fill slots reliably. **Lab 4.1** includes the fill-in-the-blanks for those conditions.
+3. **Domain** updates: **`from_llm`** mappings must include **`active_flow: transfer_money_tools`** for **amount**, **recipient**, and **account_from**. Without that, the new flow will not fill slots reliably. **Lab 4.1** includes the fill-in-the-blanks for those conditions.
 
-The flow never names individual tools; it names one **action**. That action runs where the LLM can still call registered tools (**`check_balance`**, **`process_transfer`**, **`get_account_info`**, …) as the conversation unfolds.
+The flow never names individual tools. It names one **action**.
+
+That action runs in a context where the LLM can still call registered tools (**`check_balance`**, **`process_transfer`**, **`get_account_info`**, …) as the conversation unfolds.
 
 ## Example: The transfer_money_tools flow
 
@@ -39,7 +41,9 @@ flows:
 
 ## Example: The action_process_transfer_with_tools action
 
-The last step runs an **action**, not the tools directly. That action should read the collected slots and **utter** something distinct from the classic **`action_process_transfer`** path. **Lab 4.1** gives a reference **`run()`** using **`tracker.get_slot`** and **`dispatcher.utter_message`**; the grader expects that style, not an empty **`return []`** stub.
+The last step runs an **action**, not the tools directly. That action should read the collected slots and **utter** something distinct from the classic **`action_process_transfer`** path.
+
+**Lab 4.1** gives a reference **`run()`** using **`tracker.get_slot`** and **`dispatcher.utter_message`**. The grader expects that style, not an empty **`return []`** stub.
 
 You also list **`action_process_transfer_with_tools`** under domain **`actions:`** in the same lab.
 

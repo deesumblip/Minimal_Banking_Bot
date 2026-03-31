@@ -10,4 +10,8 @@ Choose **actions** when you need a **fixed step**: after **amount**, **recipient
 
 ## How Chapter 1.5 combines both
 
-This chapter uses **both**. The **flow** collects slots, then runs one **action** (`action_process_transfer_with_tools`). Inside that action’s context, the **LLM** may call one or more **tools** (`check_balance`, `process_transfer`, `get_account_info`, …) depending on the dialogue. The **flow** stays predictable (collect, then action); **flexibility** sits in that action step—which tools run and when.
+This chapter uses **both**. The **flow** collects slots, then runs one **action** (`action_process_transfer_with_tools`).
+
+Inside that action’s context, the **LLM** may call one or more **tools** (`check_balance`, `process_transfer`, `get_account_info`, …), depending on the dialogue.
+
+The **flow** stays predictable: collect, then action. **Flexibility** sits in that action step—which tools run, and when.

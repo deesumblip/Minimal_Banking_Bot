@@ -1,8 +1,10 @@
 **Starting point:** Work in **`level5/`** from the Chapter 1.4 completion baseline described at the start of this chapter.
 
-In Chapter 1.4, **custom actions** are what the flow names at an **`action:`** step: for example **`- action: action_process_transfer`**. When execution reaches that step, that action **always** runs. **Collect** steps still use **`utter_ask_*`** responses (for example **`utter_ask_amount`**); those names also appear under **`actions:`** in the domain, while **`action:`** steps point at **Python** classes in **`actions/`**.
+In Chapter 1.4, **custom actions** are what the flow names at an **`action:`** step—for example **`- action: action_process_transfer`**. When execution reaches that step, that action **always** runs.
 
-**Tools** work differently. They are **functions the LLM may call** at runtime. The flow never lists a tool by name; the model sees the registered tools (for example **check_balance**, **process_transfer**, **get_account_info**) and chooses which to invoke from the user’s wording.
+**Collect** steps use **`utter_ask_*`** responses (for example **`utter_ask_amount`**). Those names appear under **`actions:`** in the domain. **`action:`** steps point at **Python** classes in **`actions/`**.
+
+**Tools** work differently. They are **functions the LLM may call** at runtime. The flow never lists a tool by name. The model sees registered tools (for example **check_balance**, **process_transfer**, **get_account_info**) and chooses which to invoke from the user’s wording.
 
 ## Comparison
 
@@ -13,7 +15,9 @@ In Chapter 1.4, **custom actions** are what the flow names at an **`action:`** s
 | **Definition** | Python class in `actions/`, registered in domain | Python functions in `tools/`, registered in endpoints.yml |
 | **Use case** | Predictable, required steps (e.g. "always run transfer after collecting slots") | Flexible operations (e.g. "user asked for balance? call check_balance") |
 
-Chapter 1.5 adds **tools** next to your existing actions. The **`transfer_money_tools`** flow still collects slots, then runs one **action** (`action_process_transfer_with_tools`). In that step’s context, the **LLM** may call your **tools** (`check_balance`, `process_transfer`, `get_account_info`, …) as needed.
+Chapter 1.5 adds **tools** next to your existing actions. The **`transfer_money_tools`** flow still collects slots, then runs one **action** (`action_process_transfer_with_tools`).
+
+In that step’s context, the **LLM** may call your **tools** (`check_balance`, `process_transfer`, `get_account_info`, …) as needed.
 
 ## Example: Actions in a flow
 

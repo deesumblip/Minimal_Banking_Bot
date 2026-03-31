@@ -7,7 +7,8 @@ Before **Chapter 1.6** (or further work on this bot), you should be able to:
 - Build a **`tools/`** module, export tool functions in **`__all__`**
 - Add **`tools:`** to **`endpoints.yml`** with **`tools_module: "tools"`**
 - Author a flow that collects slots, runs an action in a tool-calling context, and extend **`from_llm`** so **`transfer_money_tools`** fills **amount**, **recipient**, and **account_from**
-- Implement an action with **`name()`** and **`run()`** that reads slots via **`tracker.get_slot`**, calls **`dispatcher.utter_message`**, returns events, and know the LLM may still call tools in that step
+- Implement an action with **`name()`** and **`run()`** that reads slots via **`tracker.get_slot`**, calls **`dispatcher.utter_message`**, and returns events
+- Recognize that in that action step the LLM may still call tools
 - **Train** from **`level5/`** with the venv at project root (**`python -m rasa train`**) and pass the **completion check** (**Lab 5.2**)
 - Optionally exercise **`transfer_money_tools`** in **Rasa Inspector** and observe tool behavior
 

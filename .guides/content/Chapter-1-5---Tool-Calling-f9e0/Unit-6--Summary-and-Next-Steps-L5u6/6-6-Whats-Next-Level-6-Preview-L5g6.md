@@ -4,7 +4,9 @@
 
 **Chapter 1.6** continues the **same** banking project. It does **not** reset the repo. It layers **sub-agents** on your current responses, flows, actions, slots, and tools.
 
-You keep everything you built: responses, flows, actions, slots, **`tools/`**, and **`transfer_money_tools`**. Chapter 1.6 adds **multiple agents**—for example a main assistant that can hand off to a balance-focused or transfer-focused agent—for clearer, longer-running dialogue.
+You keep everything you built: responses, flows, actions, slots, **`tools/`**, and **`transfer_money_tools`**.
+
+Chapter 1.6 adds **multiple agents**—for example a main assistant that hands off to a balance-focused or transfer-focused agent—so longer dialogues stay clearer.
 
 ---
 

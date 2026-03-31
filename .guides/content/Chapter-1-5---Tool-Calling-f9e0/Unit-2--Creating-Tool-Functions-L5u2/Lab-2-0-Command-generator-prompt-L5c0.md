@@ -1,10 +1,12 @@
 **Starting point:** Work in `level5/` from the Chapter 1.4 completion baseline (Unit 0.1).
 
-Rasa’s **`SearchReadyLLMCommandGenerator`** turns model output into commands, including **`set slot`**. It takes cues from **examples in its prompt**. If those examples don’t line up with your **domain slot names**—for instance the model emits `transfer_money_amount` instead of **`amount`**—Rasa **ignores** the command. In debug logs you may see **`skip_command_slot_not_in_domain`**, and slot collection in your flows stops working as expected.
+Rasa’s **`SearchReadyLLMCommandGenerator`** turns model output into commands, including **`set slot`**. It follows **examples in its prompt**.
 
-This lab fixes that alignment: the repo ships a **Jinja2 command prompt** at **`level5/resources/command_prompt_v3_slot_names.jinja2`** that teaches the model to use your real slots (`amount`, `recipient`, `account_from`, `account`). You will place a copy under **`data/prompts/`** and set **`prompt_template`** on **`SearchReadyLLMCommandGenerator`** in **`config.yml`** so **`set slot`** stays trustworthy for the rest of Chapter 1.5 (through Labs 2.1–5.2).
+If those examples don’t match your **domain slot names**—for example the model emits `transfer_money_amount` instead of **`amount`**—Rasa **ignores** the command. Debug logs may show **`skip_command_slot_not_in_domain`**, and slot collection stops working as expected.
 
-This is **Unit 2’s first lab**—do it before **Lab 2.1** (the `tools/` module). Copying files does not require the virtual environment; activate the venv when you run **`rasa train`** (for example in Part C).
+**This lab** aligns prompt examples with your slots. The repo ships **`level5/resources/command_prompt_v3_slot_names.jinja2`**, which teaches the model to use real slot names (`amount`, `recipient`, `account_from`, `account`). You copy it under **`data/prompts/`** and set **`prompt_template`** on **`SearchReadyLLMCommandGenerator`** in **`config.yml`** so **`set slot`** stays reliable through Labs **2.1–5.2**.
+
+Do this lab **before Lab 2.1** (the **`tools/`** module). Copying files does not need the venv; activate it when you run **`rasa train`** (Part C).
 
 ---
 

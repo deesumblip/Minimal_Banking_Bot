@@ -4,15 +4,25 @@ This folder mirrors Level 5 teaching content (aligned with `level5/`) for Codio 
 
 **Student working directory:** All steps assume the agent under **`level5/`**. For training and CLI runs, activate the venv at **project root**, then **`cd level5`** before **`python -m rasa …`**. Graded labs use on-disk checks (fill-in-the-blanks and code tests read `level5/`); the venv is **not** required to pass Lab 2.1 file checks.
 
-**Lab order (from Chapter 1.4 completion to Chapter 1.5 done):** **Lab 2.0** — copy **`command_prompt_v3_slot_names.jinja2`** from **`level5/resources/`** to **`level5/data/prompts/`**, set **`prompt_template`** in **`config.yml`** → **Lab 2.1** (tools) → **Lab 3.1** (endpoints) → **Lab 4.1** (flow + action) → **Lab 5.1** (train) → **Lab 5.2** (completion check). **Lab 2.0** uses **`code-output-compare-501020000`**; **Lab 5.1** and **Lab 5.2** graders still include **Check 3** for the same prompt file and **`prompt_template`**.
+**Lab order** (Chapter 1.4 completion → Chapter 1.5 done):
+
+1. **Lab 2.0** — Copy **`command_prompt_v3_slot_names.jinja2`** from **`level5/resources/`** to **`level5/data/prompts/`**; set **`prompt_template`** in **`config.yml`**.
+2. **Lab 2.1** — Tools package (**`tools/`**, **`banking_tools.py`**).
+3. **Lab 3.1** — Register **`tools:`** in **`endpoints.yml`**.
+4. **Lab 4.1** — Flow, custom action, domain conditions.
+5. **Lab 5.1** — Train.
+6. **Lab 5.2** — Completion check.
+
+**Graders:** **Lab 2.0** uses task **`code-output-compare-501020000`**. **Lab 5.1** and **Lab 5.2** still include a **Lab 2.0** check (prompt file + **`prompt_template`**).
 
 **Guide page JSON (`*.json` next to each `.md`):** Pages use **`"path": ["level5"]`** (and **`"layout": "2-panels-tree-guides-left"`** where set) so the IDE tree highlights **`level5/`**, like **`level4/`** in Chapter 1.4.
 
 ## Structure
 
-- **Chapter:** Chapter-1-5---Tool-Calling-f9e0
-- **Units:** Unit 0 (*Recap - What you built in Level 4*) through Unit 6 (Summary and Next Steps) — 7 units total. Folder names are **Unit-0--** through **Unit-6--**. Unit 1 has three pages (1.1, 1.2, 1.3 Test Your Knowledge). Unit 6 has seven pages: 6.1 Complete Agent Walkthrough, 6.2 What You've Learned, 6.3 What's Next, 6.4 Knowledge Check, 6.5 Limitations of Level 5, 6.6 What's Next Level 6 Preview, 6.7 Course Completion Checklist.
-- **Labs:** Lab 2.0 (command prompt), Lab 2.1 (tools folder), Lab 3.1 (endpoints), Lab 4.1 (flow and action), Lab 5.1 (training), Lab 5.2 (completion check). **Unit 5 (linear):** page 5.1 → Lab 5.1 → page 5.2 → Lab 5.2.
+- **Chapter:** `Chapter-1-5---Tool-Calling-f9e0`
+- **Units:** **Unit-0--** through **Unit-6--** (seven units). Unit 0: recap. Unit 1: introduction to tools (pages 1.1, 1.2, 1.3 quiz). Unit 6: summary track (6.1 walkthrough through 6.7 checklist).
+- **Labs:** 2.0 (command prompt), 2.1 (tools folder), 3.1 (endpoints), 4.1 (flow + action), 5.1 (train), 5.2 (completion check).
+- **Unit 5 sequence:** theory 5.1 → Lab 5.1 → theory 5.2 → Lab 5.2.
 
 Each unit has an `index.json` and each page has a `.md` and `.json`. **IDs use the f9e0/L5 suffix** so they do not collide with other chapters.
 

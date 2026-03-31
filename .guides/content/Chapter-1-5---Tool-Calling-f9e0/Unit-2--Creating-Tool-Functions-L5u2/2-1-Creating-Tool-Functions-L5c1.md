@@ -38,4 +38,9 @@ def check_balance(account: str):
     }
 ```
 
-Add two more functions in the same style: **`process_transfer(amount, from_account, to_account)`** (dict with success/message) and **`get_account_info(account)`** (dict with account details). Each needs a docstring that tells the model when to use it. The **`__all__`** list names the functions Rasa exposes as tools. **Lab 2.1** has you create **`tools/`** and **`banking_tools.py`** with all three functions and **`__all__`**.
+Add two more functions in the same style:
+
+- **`process_transfer(amount, from_account, to_account)`** — return a dict with success/message-style fields.
+- **`get_account_info(account)`** — return a dict with account details.
+
+Each needs a docstring that tells the model when to use it. The **`__all__`** list names the functions Rasa exposes as tools. **Lab 2.1** has you create **`tools/`** and **`banking_tools.py`** with all three functions and **`__all__`**.

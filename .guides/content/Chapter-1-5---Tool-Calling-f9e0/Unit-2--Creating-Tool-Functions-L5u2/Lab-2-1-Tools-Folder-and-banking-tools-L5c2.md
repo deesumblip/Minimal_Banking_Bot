@@ -1,6 +1,8 @@
 **Starting point:** Work in **`level5/`** with **Lab 2.0** complete (command-generator prompt in **`data/prompts/`** and **`config.yml`**). See **Unit 0.1** for the Chapter 1.4 baseline if needed.
 
-You finish **`banking_tools.py`** in the fill-in-the-blanks exercise, then create **`level5/tools/`** and save the same module as **`level5/tools/banking_tools.py`**. The module must define **`check_balance`**, **`process_transfer`**, and **`get_account_info`**, list them in **`__all__`**, and follow **Unit 2.1** (type hints, docstrings, return dicts).
+You finish **`banking_tools.py`** in the fill-in-the-blanks exercise. Then you create **`level5/tools/`** and save the completed module as **`level5/tools/banking_tools.py`**.
+
+The module must define **`check_balance`**, **`process_transfer`**, and **`get_account_info`**, list them in **`__all__`**, and match **Unit 2.1** (type hints, docstrings, return dicts).
 
 You do **not** need the virtual environment for this lab; **Check It!** reads your saved files only.
 
@@ -8,7 +10,16 @@ You do **not** need the virtual environment for this lab; **Check It!** reads yo
 
 #### Complete the `banking_tools` module (fill in the blanks)
 
-The exercise matches **Unit 2.1**: **`str`** hints on **`account`**, docstrings that say **when** to call each tool, and **return dict keys** like the **`check_balance`** example on the previous page. The **`__all__`** line is **printed in full** (no blanks). **Twelve blanks** cover **`str`** twice (**`check_balance`** and **`get_account_info`**), the three docstrings, and keys **`balance`**, **`currency`**, **`status`** (first **`return`**), then **`success`**, **`message`**, **`account_type`**, **`status`** (second **`return`**). Demo values in the return dicts stay visible. Fill every blank, **paste the full script** into **`level5/tools/banking_tools.py`**, then run the **Code Test**.
+The exercise matches **Unit 2.1**: **`str`** hints on **`account`**, docstrings that say **when** to call each tool, and **return dict keys** like the **`check_balance`** example on the previous page. The **`__all__`** line is **printed in full** (no blanks).
+
+There are **twelve blanks** in total:
+
+- **`str`** type hints: twice (**`check_balance`** and **`get_account_info`**)
+- The **three** function docstrings
+- First **`return`** dict: keys **`balance`**, **`currency`**, **`status`**
+- Second **`return`** dict: keys **`success`**, **`message`**, **`account_type`**, **`status`**
+
+Demo values in the return dicts stay visible. Fill every blank, **paste the full script** into **`level5/tools/banking_tools.py`**, then run the **Code Test**.
 
 {Check It!|assessment}(fill-in-the-blanks-501020010)
 

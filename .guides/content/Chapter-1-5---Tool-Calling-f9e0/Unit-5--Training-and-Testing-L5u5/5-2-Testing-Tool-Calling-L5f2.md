@@ -10,4 +10,10 @@ Run the assistant and exercise tool calling.
 
 ## Test
 
-Trigger the tool-enabled flow (for example ask to **transfer money using tools** so the assistant picks **`transfer_money_tools`**). Supply **amount**, **recipient**, and **account_from** when asked. The reply should match your **`action_process_transfer_with_tools`** text (the reference includes **“(Demo with Tools)”**). In a **new conversation**, run **`transfer_money`** and confirm the classic **`action_process_transfer`** wording differs. **Lab 5.2** next runs an automated **completion check** on files and config.
+Trigger the tool-enabled flow—for example, ask to **transfer money using tools** so the assistant picks **`transfer_money_tools`**. Supply **amount**, **recipient**, and **account_from** when asked.
+
+The reply should match your **`action_process_transfer_with_tools`** text (the reference includes **“(Demo with Tools)”**).
+
+In a **new conversation**, run **`transfer_money`** and confirm the classic **`action_process_transfer`** wording differs.
+
+**Lab 5.2** next runs an automated **completion check** on files and config.
