@@ -136,7 +136,7 @@ Based on the [Rasa sub-agents overview](https://rasa.com/docs/reference/config/a
 ## 6. Level 5: Tool Calling — Content & Examples (Critical for Sub-Agents)
 
 ### Content to cover
-- **Unit 0:** Recap Level 4; what Level 5 adds (tools, tools_module, transfer_money_tools flow).
+- **Unit 0:** Picking up where Chapter 1.4 left off; what Level 5 adds (tools, tools_module, transfer_money_tools flow).
 - **Unit 1:** Tools vs actions (tools = LLM-selected at runtime; actions = explicit in flow).
 - **Unit 2:** Creating tool functions (`tools/` folder, `banking_tools.py`, `__all__`, docstrings, return dicts).
 - **Unit 3:** Registering tools (`endpoints.yml` tools section, `tools_module`).
