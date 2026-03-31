@@ -11,10 +11,10 @@
 
 ## Course Structure (7 units: 0-6)
 
-### Unit 0: Recap - What You Built in Level 4
+### Unit 0: Chapter 1.4 baseline in level5/ (repo: level4/ vs level5/)
 **Type**: Content Page | **Assessment**: None
 **Sections**: 0.1 Your Level 4 Banking Agent | 0.2 What Level 5 Adds
-**Key Concepts**: Chapter 1.5 starts from **Chapter 1.4 completion** (final Level 4 bot); **`level5/`** is that baseline in the repo; what Level 5 adds (tools, `tools_module`, `transfer_money_tools` flow).
+**Key Concepts**: “Level 4” here means Chapter **1.4 outcomes**, not the git **`level4/`** folder (Chapter 1.3 snapshot); **`level5/`** is the Chapter **1.4 completion** starter for tool calling; what Chapter 1.5 adds (tools, `tools_module`, `transfer_money_tools` flow).
 
 ### Unit 1: Introduction to Tools
 **Type**: Content Page | **Assessment**: None

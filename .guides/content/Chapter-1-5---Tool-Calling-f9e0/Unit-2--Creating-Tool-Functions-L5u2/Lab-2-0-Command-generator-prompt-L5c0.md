@@ -35,7 +35,7 @@ pipeline:
       model_group: gpt-4o-mini
 ```
 
-3. Do not change `assistant_id`, `policy`, or `recipe` unless you intend to.
+3. Do not change `assistant_id`, the **`policies:`** list (keep **`FlowPolicy`**), `recipe`, or the rest of the **`pipeline`** step unless you intend to.
 
 4. Save `config.yml`.
 

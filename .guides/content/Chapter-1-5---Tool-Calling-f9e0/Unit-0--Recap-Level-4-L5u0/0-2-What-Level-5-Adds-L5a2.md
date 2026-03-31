@@ -23,7 +23,7 @@ Existing flows and responses stay; you **add** the command-generator prompt, the
 
 ## What you'll add (by lab)
 
-**Lab 2.0 — Command-generator prompt.** Copy **`command_prompt_v3_slot_names.jinja2`** from **`level5/resources/`** to **`level5/data/prompts/`**, then set **`prompt_template`** on **`SearchReadyLLMCommandGenerator`** in **`config.yml`**. That keeps **`set slot`** aligned with **domain slot names**.
+**Lab 2.0 — Command-generator prompt.** Copy **`command_prompt_v3_slot_names.jinja2`** from **`level5/resources/`** to **`level5/data/prompts/`**, then set **`prompt_template`** on **`SearchReadyLLMCommandGenerator`** in **`config.yml`**. That keeps **`set slot`** aligned with **domain slot names**. **Unit 0.1** explains why **`level5/`** uses **SearchReady** here while **`level4/`** after Chapter 1.4 Lab 0.1 uses **Compact**—read **`level5/config.yml`** header if you merge your own **`level4/`** tree.
 
 **Lab 2.1 — Tools folder.** You create **`tools/`** and **`tools/banking_tools.py`** with at least three tool functions—**`check_balance(account)`**, **`process_transfer(amount, from_account, to_account)`**, and **`get_account_info(account)`**. Each returns a dict; you export them via **`__all__`**.
 

@@ -8,7 +8,7 @@ You do **not** need the venv for the fill-in-the-blanks; you need it when you **
 
 ## Why the domain step matters
 
-Chapter 1.4 already maps **`amount`**, **`recipient`**, and **`account_from`** when **`transfer_money`** is active. **`transfer_money_tools`** reuses those slot names. Each **`from_llm`** mapping needs a **`conditions`** entry with **`active_flow: transfer_money_tools`** as well. Without it, slot updates can fail while **`transfer_money_tools`** is running.
+Chapter 1.4 already maps **`amount`**, **`recipient`**, and **`account_from`** when **`transfer_money`** is active (in this repo’s **`level5/`** baseline, that means **`from_llm`** + **`active_flow: transfer_money`**—see **`level5/domain/basics.yml`** if your hand-built **`level4/`** domain used only plain **`type: text`** slots). **`transfer_money_tools`** reuses those slot names. Each **`from_llm`** mapping needs a **`conditions`** entry with **`active_flow: transfer_money_tools`** as well. Without it, slot updates can fail while **`transfer_money_tools`** is running.
 
 ---
 

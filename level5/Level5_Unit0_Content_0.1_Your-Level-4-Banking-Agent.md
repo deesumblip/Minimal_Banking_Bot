@@ -1,8 +1,6 @@
-**Chapter 1.5 starting point:** This chapter assumes you **begin from the banking agent you finished at the end of Chapter 1.4**—the one reflected in **`level4/`** after those labs: multiple slots, **`transfer_money`**, **`action_process_transfer`**, and the Chapter 1.4 pipeline (**`CompactLLMCommandGenerator`**, **`endpoints.yml`** with **`action_endpoint`**, **`nlg`**, and **`model_groups`** as in the finished **`level4/`** agent). You are not starting from scratch.
+**Starting point:** Chapter 1.5 adds **tool calling** on top of your **Chapter 1.4 banking agent**—multiple slots, **`transfer_money`**, **`action_process_transfer`**, and **`endpoints.yml`** (**`action_endpoint`**, **`nlg`**, **`model_groups`**). You are not starting from scratch. Do **not** edit **`level4/`** for this chapter; activate the venv at **project root**, then **`cd level5`** for every change and every **`python -m rasa …`**.
 
-**Repository note:** In this course repository, **`level5/`** is checked in as that **Chapter 1.4 completion** baseline (same general shape as the finished **`level4/`** agent: domain, flows—including **`goodbye`**, **`holiday_hours`**, **`check_balance`**, **`transfer_money`**—and **Level 2–4** actions). You still **build** Chapter 1.5 in the labs (tools folder, **`tools:`** in **`endpoints.yml`**, **`transfer_money_tools`**, **`action_process_transfer_with_tools`**). Use **`level4/`** as the reference for “Chapter 1.4 end” and **`level5/`** for “work in progress” as you add tool calling.
-
-**Open in \`level5/\`:** Do **not** edit **`level4/`** for this chapter. Every file you change and every **`python -m rasa …`** command in Chapter 1.5 assumes your shell’s working directory is **`level5/`** (activate the venv at **project root**, then **`cd level5`**).
+**Repository layout:** The unit title “Level 4” means **Chapter 1.4 skills**, not the **`level4/`** folder in git (that snapshot is **Chapter 1.3**). **`level5/`** is the **Chapter 1.4–complete** baseline here. If **`level5/`** differs from files you saved in **`level4/`**, see the comment headers in **`level5/config.yml`**, **`level5/domain/basics.yml`**, and **`level5/data/basics/check_balance.yml`**. You still complete Chapter 1.5 in the labs (**`tools/`**, **`tools:`** in **`endpoints.yml`**, **`transfer_money_tools`**, **`action_process_transfer_with_tools`**).
 
 ---
 
@@ -36,7 +34,7 @@ Use the **same virtual environment** as in Chapter 1.4 (project root); there is 
 
 ### Config
 
-- **`config.yml`**, **`credentials.yml`**, **`endpoints.yml`** (no **`tools:`** section until **Lab 3.1**). Config uses **`assistant_id: level5-agent`** so this assistant is distinct from **`level4-agent`**.
+- **`config.yml`**, **`credentials.yml`**, **`endpoints.yml`** (no **`tools:`** section until **Lab 3.1**). **`assistant_id`** is **`level5-agent`** ( **`level4-agent`** after Chapter 1.4 Lab 0.1 in **`level4/`** ). **`level5/config.yml`** uses **`SearchReadyLLMCommandGenerator`** so **Lab 2.0** can attach **`prompt_template`** where graders expect; **Chapter 1.4** has you finish **`level4/`** with **`CompactLLMCommandGenerator`**—see the top of **`level5/config.yml`**.
 
 **Heads-up:** Until you register tools, your **`endpoints.yml`** matches the Chapter 1.4 pattern ( **`action_endpoint`**, **`nlg`**, **`model_groups`** ). When you reach the lab that registers tools, you will add a **`tools:`** block without removing or renaming those sections.
 
@@ -46,6 +44,7 @@ Use the **same virtual environment** as in Chapter 1.4 (project root); there is 
 
 In order, you will:
 
+- Copy the command prompt into **`data/prompts/`** and set **`prompt_template`** in **`config.yml`** (**Lab 2.0**)
 - Create the **`tools/`** folder and **`banking_tools.py`** (**Lab 2.1**)
 - Register tools in **`endpoints.yml`** (**Lab 3.1**)
 - Add **`action_process_transfer_with_tools`** and **`transfer_money_tools.yml`** (**Lab 4.1**)
@@ -53,6 +52,6 @@ In order, you will:
 
 ---
 
-## What Level 4 could not do
+## What Chapter 1.5 adds beyond Chapter 1.4
 
-Your Chapter 1.4 agent used **actions** that flows call by name. It could not let the **LLM decide at runtime** which operations to run (for example, balance check versus transfer) based on free-form dialogue alone. Chapter 1.5 adds **tools**: functions the LLM can discover and call dynamically so the agent can adapt to the conversation.
+Chapter 1.4 already uses an **LLM command generator** (after Lab 0.1, **`CompactLLMCommandGenerator`** in **`level4/config.yml`**) for **CALM commands**—flows, **FillSlot**, and **actions** named in YAML. Chapter 1.5 uses **`SearchReadyLLMCommandGenerator`** and **`prompt_template`** in **`level5/`** (**Lab 2.0**) and adds **tools**: Python functions the model may **invoke by name** (registered in **`endpoints.yml`**), especially in steps such as **`action_process_transfer_with_tools`**. See the top of **`level5/config.yml`** for how this differs from your finished **`level4/`** pipeline.

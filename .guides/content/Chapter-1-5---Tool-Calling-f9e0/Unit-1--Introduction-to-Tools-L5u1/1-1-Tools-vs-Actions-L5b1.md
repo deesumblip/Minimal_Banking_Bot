@@ -1,6 +1,6 @@
 **Starting point:** Work in **`level5/`** from the Chapter 1.4 completion baseline described at the start of this chapter.
 
-In Chapter 1.4, **actions** are what the flow names: for example **`- action: action_process_transfer`**. When execution reaches that step, that action **always** runs.
+In Chapter 1.4, **custom actions** are what the flow names at an **`action:`** step: for example **`- action: action_process_transfer`**. When execution reaches that step, that action **always** runs. **Collect** steps still use **`utter_ask_*`** responses (for example **`utter_ask_amount`**); those names also appear under **`actions:`** in the domain, while **`action:`** steps point at **Python** classes in **`actions/`**.
 
 **Tools** work differently. They are **functions the LLM may call** at runtime. The flow never lists a tool by name; the model sees the registered tools (for example **check_balance**, **process_transfer**, **get_account_info**) and chooses which to invoke from the user’s wording.
 

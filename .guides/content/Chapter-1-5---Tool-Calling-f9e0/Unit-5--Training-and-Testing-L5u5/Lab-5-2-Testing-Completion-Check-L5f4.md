@@ -12,7 +12,8 @@
 - In **Terminal A**, start the action server:
   - `python -m rasa run actions`
 - In **Terminal B**, create a logs folder (if it does not exist yet):
-  - `mkdir -p logs`
+  - Linux / macOS / Codio: `mkdir -p logs`
+  - Windows (PowerShell): `if (-not (Test-Path logs)) { New-Item -ItemType Directory -Path logs }`
 - In **Terminal B**, start Inspector **with debug logging enabled**:
   - `python -m rasa inspect --debug --log-file logs/inspect.log`
 

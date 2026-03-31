@@ -16,7 +16,7 @@
 
 ## Table of Contents
 
-0. [Recap: What You Built in Level 4](#unit-0-recap-what-you-built-in-level-4)
+0. [Chapter 1.4 baseline in level5/ (repo note)](#unit-0-chapter-14-baseline-in-level5-repo-note)
 1. [Introduction to Tools](#unit-1-introduction-to-tools)
 2. [Understanding Tools vs. Actions](#unit-2-understanding-tools-vs-actions)
 3. [Creating Tool Functions](#unit-3-creating-tool-functions)
@@ -28,11 +28,11 @@
 
 ---
 
-## Unit 0: Recap - What You Built in Level 4
+## Unit 0: Chapter 1.4 baseline in level5/ (repo note)
 
 ### 0.1 Your Level 4 Banking Agent
 
-**Chapter 1.5 starting point:** This chapter assumes **Chapter 1.4 completion**—your final Level 4 banking agent (Compact pipeline, transfer flow, **`action_process_transfer`**). In this course repository, **`level5/`** is maintained as that baseline; you **add** tool calling in the labs below. **`level4/`** remains the Chapter 1.4 reference.
+**Chapter 1.5 starting point:** This chapter assumes **Chapter 1.4 completion**—transfer flow, **`action_process_transfer`**, and **`endpoints.yml`** as you finished in **`level4/`** (typically **`CompactLLMCommandGenerator`** after Lab 0.1). In this repository, **`level5/`** is maintained as that **feature-complete** baseline for Chapter 1.5; **`level5/config.yml`** uses **`SearchReadyLLMCommandGenerator`** so **Lab 2.0** can set **`prompt_template`** where graders expect—see **`level5/config.yml`** and Codio **Unit 0.1**. Checked-in **`level4/`** is the Chapter **1.3** snapshot; you **add** tool calling in the labs under **`level5/`**.
 
 Before we add tool calling, let's recap what you've already built in Level 4. **All of this remains unchanged**—Level 5 builds on top of it!
 
