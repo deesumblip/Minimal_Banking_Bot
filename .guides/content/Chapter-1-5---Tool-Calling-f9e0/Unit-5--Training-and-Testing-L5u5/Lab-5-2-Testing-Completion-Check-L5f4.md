@@ -20,11 +20,10 @@ Then open Inspector in your browser and run a quick tool-calling smoke test.
 
 ### Optional: Tool-calling smoke test (Inspector)
 
-Try these conversations and confirm the bot behaves sensibly. (You can also open `logs/inspect.log` and look for the tool function names.)
+Use prompts that reliably exercise the course setup. (You can also open `logs/inspect.log` and look for tool-related lines.)
 
-- **Balance tool**: “What’s my balance for account 123?” → should call `check_balance`.
-- **Account info tool**: “What type of account is 123?” → should call `get_account_info`.
-- **Transfer tool (flow + tool)**: “Transfer 25 dollars to Alex from account 111.” → should collect missing slots if needed, then proceed and (via your flow/action) trigger the transfer logic (tool calling via `process_transfer`).
+- **Balance (`check_balance`)** — Ask: *“What’s my balance for account 123?”* You should get a short demo-style balance reply (this path is stable in Inspector).
+- **`transfer_money_tools` flow** — Start with: *“Transfer 25 dollars to Alex from account 111.”* The assistant may still ask you to confirm **amount**, **recipient**, and **account_from** one at a time; answer plainly (e.g. *“25 dollars”*, *“Alex”*, then your **from** account when asked). You should end with a **demo transfer processed** message. That end-to-end path is what this lab expects you to verify—not that every slot is filled from the first user turn.
 
 **Step 3.** **In Codio**, use **Check It!**.
 
