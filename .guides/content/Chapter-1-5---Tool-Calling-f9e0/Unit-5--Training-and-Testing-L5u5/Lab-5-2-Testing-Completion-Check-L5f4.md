@@ -9,7 +9,7 @@
 
 ## Step-by-Step Instructions
 
-**Step 1.** Ensure **Labs 2.0–5.1** are done: **`prompt_template`** + **`data/prompts/`**, **`tools/`**, **`endpoints.yml`** **`tools:`**, flow and action, **training**.
+**Step 1.** Ensure you meet the **Objective** above (same artifacts as **Labs 2.0–5.1**).
 
 **Step 2.** Optionally run the assistant in **Inspector** (recommended) so you can sanity-check tool calling end-to-end.
 

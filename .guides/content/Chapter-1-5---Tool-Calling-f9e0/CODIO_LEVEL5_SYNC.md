@@ -1,8 +1,10 @@
 # Chapter 1.5 - Tool Calling: Codio Sync
 
-This folder mirrors Level 5 teaching content (aligned with `level5/`) for Codio sync, same pattern as Chapter 1.4.
+This folder mirrors Level 5 teaching content (aligned with **`level5/`**) for Codio sync, same pattern as Chapter 1.4.
 
-**Student working directory:** All steps assume the agent under **`level5/`**. For training and CLI runs, activate the venv at **project root**, then **`cd level5`** before **`python -m rasa …`**. Graded labs use on-disk checks (fill-in-the-blanks and code tests read `level5/`); the venv is **not** required to pass Lab 2.1 file checks.
+**Pedagogy:** Chapter 1.5 content assumes students **extend the Chapter 1.4–complete agent** under **`level5/`** (see **Unit 0.1** and **Unit 0.2** in the guides).
+
+**Student working directory:** All steps assume the agent under **`level5/`**. For training and CLI runs, activate the venv at **project root**, then **`cd level5`** before **`python -m rasa …`**. Graded labs use on-disk checks (fill-in-the-blanks and code tests read **`level5/`**); the venv is **not** required to pass Lab 2.1 file checks.
 
 **Lab order** (Chapter 1.4 completion → Chapter 1.5 done):
 

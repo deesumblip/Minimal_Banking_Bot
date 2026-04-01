@@ -1,6 +1,6 @@
 **Starting point:** Work in **`level5/`** with your finished Chapter 1.5 agent.
 
-Chapter 1.5 adds **tool calling** to the main assistant. What you do next depends on your course; common paths include:
+What you do next depends on your course; common paths include:
 
 - **Chapter 1.6 (Level 6): Sub-agents.** Hand off whole tasks to another agent (for example a ReAct sub-agent with its own tools, including via MCP). The main agent coordinates; the sub-agent runs until it finishes.
 - **More tools.** Add functions such as **`close_account`** or **`list_transactions`** and list them in **`__all__`**.

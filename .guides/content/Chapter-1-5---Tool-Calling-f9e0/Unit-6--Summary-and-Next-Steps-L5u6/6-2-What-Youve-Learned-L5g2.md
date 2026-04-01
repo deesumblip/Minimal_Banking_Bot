@@ -1,4 +1,4 @@
-**Starting point:** Work in **`level5/`** with the Chapter 1.4 baseline plus the labs you completed here. The list below is what you **added** on top of that baseline.
+**Starting point:** Work in **`level5/`** with the Chapter 1.4 baseline (**Unit 0.1**) plus the labs you completed in this chapter. The numbered list below is what you **added** on top of that baseline.
 
 ## Chapter 1.5 summary
 
@@ -16,8 +16,8 @@ In this chapter you:
 
 ## Key ideas
 
-- **Tools** are functions the LLM may call at runtime; **actions** are what the flow names at each step.
-- Tools live in a Python module (for example **`tools/banking_tools.py`**) and are registered in **`endpoints.yml`**.
-- A flow can run one **action** while the LLM still invokes **tools**; the flow does not enumerate tools—the model chooses.
+- **Tools** vs **actions** — **Unit 1.1** and **Unit 1.2**.
+- **Where tools live** — Python module under **`tools/`**, registered in **`endpoints.yml`** (**Lab 3.1**).
+- **Flow + action + tools** — One **`action:`** step can run while the LLM still invokes tools; the flow does not list tool names.
 
 Your assistant keeps every earlier flow and adds **`transfer_money_tools`** for dynamic tool use.

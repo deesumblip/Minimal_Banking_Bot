@@ -1,4 +1,4 @@
-**Starting point:** Work in **`level5/`** after **Labs 2.0 and 2.1** (**`prompt_template`**, **`tools/banking_tools.py`**, **`__all__`**). This page explains how to **register** the tools module in **`endpoints.yml`**; **Lab 3.1** applies it.
+**Starting point:** Work in **`level5/`** after **Labs 2.0 and 2.1** (**`prompt_template`**, **`tools/banking_tools.py`**, **`__all__`**). This page explains how to **register** the tools module in **`endpoints.yml`** (**Lab 3.1**).
 
 With a **`tools/`** module in place, **register** it so Rasa can load and expose those functions to the LLM.
 

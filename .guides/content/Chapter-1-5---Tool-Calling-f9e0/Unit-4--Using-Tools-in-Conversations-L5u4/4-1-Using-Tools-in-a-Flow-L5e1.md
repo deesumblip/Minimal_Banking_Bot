@@ -1,4 +1,4 @@
-**Starting point:** Work in **`level5/`** with **Labs 2.0, 2.1, and 3.1** done (**`prompt_template`**, **`tools/`**, **`tools:`** in **`endpoints.yml`**).
+**Starting point:** Work in **`level5/`** with **Labs 2.0, 2.1, and 3.1** complete (**`prompt_template`**, **`tools/`**, **`tools:`** in **`endpoints.yml`**). **Unit 0.1** describes the Chapter 1.4 baseline if you need context.
 
 To use tools in dialogue, you need a **flow** that reaches a step where the LLM may call them. In Chapter 1.5 that means:
 
@@ -47,6 +47,4 @@ The last step runs an **action**, not the tools directly. That action should rea
 
 You also list **`action_process_transfer_with_tools`** under domain **`actions:`** in the same lab.
 
-## Command-generator prompt (Lab 2.0)
-
-**Lab 2.0** added **`data/prompts/command_prompt_v3_slot_names.jinja2`** and **`prompt_template`** in **`config.yml`**. That keeps **`set slot`** aligned with real domain names (**`amount`**, **`recipient`**, …) instead of invented prefixes. Keep it in place through **Labs 2.1–5.2** unless you are intentionally customizing the command generator (beyond this course).
+**Reminder:** **Lab 2.0** prompt wiring must stay in place through **Labs 5.2** so **`set slot`** matches domain names—see **Unit 0.1** (Config) if you need to verify **`data/prompts/`** and **`prompt_template`**.

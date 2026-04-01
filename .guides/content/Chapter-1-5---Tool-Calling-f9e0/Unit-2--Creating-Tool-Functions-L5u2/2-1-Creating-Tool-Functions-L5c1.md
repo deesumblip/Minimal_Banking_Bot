@@ -1,4 +1,4 @@
-**Starting point:** Work in **`level5/`** with **Lab 2.0** done (**`data/prompts/command_prompt_v3_slot_names.jinja2`** and **`prompt_template`** in **`config.yml`**). **Lab 2.1** next adds **`tools/banking_tools.py`**; this page covers the pattern.
+**Starting point:** Work in **`level5/`** with **Lab 2.0** done (**`data/prompts/command_prompt_v3_slot_names.jinja2`** and **`prompt_template`** in **`config.yml`**). **Lab 2.1** next adds **`tools/banking_tools.py`**; this page covers the pattern. See **Unit 0.1** for the Chapter 1.4 baseline if needed.
 
 Tool functions are ordinary Python functions the LLM can call. They live in a **`tools`** module (for example **`tools/banking_tools.py`**).
 

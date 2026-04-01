@@ -1,6 +1,6 @@
 **Starting point:** Work in **`level5/`** with the ideas from this chapter through Unit 5.
 
-These items stress **integration**—domain slot conditions, flow shape, the **`tools`** package, the command-generator prompt, and training. They do **not** repeat the **Unit 1.3** quiz on basic definitions.
+These items stress **integration**—domain slot conditions, flow shape, the **`tools`** package, the command-generator prompt, and training. They do **not** repeat the **Unit 1** (Test Your Knowledge) quiz on basic definitions.
 
 Answer the following to solidify Chapter 1.5 (tool calling).
 

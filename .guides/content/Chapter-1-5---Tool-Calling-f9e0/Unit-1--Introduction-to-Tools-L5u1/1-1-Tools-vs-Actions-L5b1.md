@@ -1,4 +1,4 @@
-**Starting point:** Work in **`level5/`** from the Chapter 1.4 completion baseline described at the start of this chapter.
+**Starting point:** Work in **`level5/`** from the Chapter 1.4 completion baseline (**Unit 0.1**).
 
 In Chapter 1.4, **custom actions** are what the flow names at an **`action:`** step—for example **`- action: action_process_transfer`**. When execution reaches that step, that action **always** runs.
 
@@ -46,4 +46,4 @@ def check_balance(account: str) -> dict:
     return {"account": account, "balance": 1234.56, "currency": "USD"}
 ```
 
-The flow does **not** list this function. The LLM calls it when the user’s message fits the tool’s intent. Later in this chapter you create the **`tools`** module, register it in **`endpoints.yml`**, and tie it to a flow.
+The flow does **not** list this function. The LLM calls it when the user’s message fits the tool’s intent. You implement and register tools in **Labs 2.1** and **3.1**, then use them from the flow in **Lab 4.1**.

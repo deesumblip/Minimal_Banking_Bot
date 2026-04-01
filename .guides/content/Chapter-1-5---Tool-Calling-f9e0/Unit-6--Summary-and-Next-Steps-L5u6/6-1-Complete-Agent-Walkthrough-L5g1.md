@@ -1,6 +1,6 @@
 **Starting point:** Work in **`level5/`** after **Labs 2.0–5.1** (a trained model helps but is optional for this read-only tour).
 
-Your Chapter 1.5 agent extends **Chapter 1.4 completion** with **tool calling**.
+Your Chapter 1.5 agent extends **Chapter 1.4 completion** with **tool calling**. See **Unit 0.1** for the full Chapter 1.4 inventory.
 
 ## What your agent can do
 

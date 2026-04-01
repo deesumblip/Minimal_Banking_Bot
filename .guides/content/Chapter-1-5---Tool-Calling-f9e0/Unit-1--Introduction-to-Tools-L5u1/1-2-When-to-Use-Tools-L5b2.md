@@ -1,4 +1,4 @@
-**Starting point:** Work in **`level5/`** with the Chapter 1.4 baseline and the Chapter 1.5 overview on the previous pages. This page is a practical rule of thumb for **tool** versus **action**.
+**Starting point:** Work in **`level5/`** with the Chapter 1.4 baseline (**Unit 0.1**) and **Unit 0.2** (overview). This page is a short rule of thumb for **tool** versus **action**.
 
 ## When to use tools
 
