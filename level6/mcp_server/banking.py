@@ -23,7 +23,8 @@ STREAMABLE_PATH = "/mcp"
 mcp = FastMCP(
     "Banking",
     instructions="Demo banking tools for the Level 6 sub-agent lab.",
-    host="127.0.0.1",
+    # Listen on all interfaces so local clients using 127.0.0.1 or localhost match.
+    host="0.0.0.0",
     port=PORT,
     streamable_http_path=STREAMABLE_PATH,
 )
@@ -66,7 +67,8 @@ def get_account_info(account: str) -> str:
 
 async def _run() -> None:
     print(
-        f"Banking MCP (Streamable HTTP) at http://127.0.0.1:{PORT}{STREAMABLE_PATH}",
+        f"Banking MCP (Streamable HTTP) — Rasa must use this URL in endpoints.yml:\n"
+        f"  http://127.0.0.1:{PORT}{STREAMABLE_PATH}",
         flush=True,
     )
     await mcp.run_streamable_http_async()
