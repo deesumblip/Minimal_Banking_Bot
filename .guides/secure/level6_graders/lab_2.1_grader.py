@@ -3,7 +3,8 @@
 Lab 2.1: Sub-Agent Config - Grader (Level 6 / Chapter 1.6)
 Output format matches Chapter 1.2 Lab 6.2 template.
 
-Checks level6/sub_agents/banking_assistant/config.yml exists and has agent name, protocol, mcp_servers.
+Checks level6/sub_agents/banking_assistant/config.yml exists and has agent name, protocol,
+mcp_servers, and configuration.module for BankingAssistantLiteAgent (course / tutorial LLM).
 """
 
 import sys
@@ -57,7 +58,7 @@ print(" Check 3: PASSED - protocol present (3 points)")
 score += 3
 print("")
 
-# Check 4: mcp_servers (2 remaining points → 2 points)
+# Check 4: mcp_servers (2 points)
 print("Check 4: Verifying mcp_servers under connections...")
 if "mcp_servers" not in content:
     print("❌ Check 4: FAILED - config.yml should contain mcp_servers (under connections) (0 points)")
@@ -65,6 +66,18 @@ if "mcp_servers" not in content:
     sys.exit(1)
 print(" Check 4: PASSED - mcp_servers present (2 points)")
 score += 2
+print("")
+
+# Check 5: configuration.module + Lite agent (required for tutorial LLM)
+print("Check 5: Verifying configuration.module (BankingAssistantLiteAgent)...")
+if "module" not in content or "BankingAssistantLiteAgent" not in content:
+    print(
+        "❌ Check 5: FAILED - config.yml should set configuration.module to "
+        "actions.banking_assistant_lite_agent.BankingAssistantLiteAgent (0 points)"
+    )
+    print("FAIL")
+    sys.exit(1)
+print(" Check 5: PASSED - configuration.module includes BankingAssistantLiteAgent")
 print("")
 
 # Summary
@@ -75,7 +88,10 @@ else:
     print(f"❌ FAIL: Score {score}/{max_score} - Review the failed checks above and try again.")
 print("==========================================")
 print("")
-print("Summary: Check 1 (config file) | Check 2 (banking_assistant) | Check 3 (protocol) | Check 4 (mcp_servers)")
+print(
+    "Summary: Check 1 (config file) | Check 2 (banking_assistant) | Check 3 (protocol) | "
+    "Check 4 (mcp_servers) | Check 5 (module / BankingAssistantLiteAgent)"
+)
 print(f"Score: {score}/{max_score}")
 
 if score >= max_score:

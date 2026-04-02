@@ -1,0 +1,28 @@
+{
+	"type": "multiple-choice",
+	"taskId": "multiple-choice-501060105",
+	"source": {
+		"name": "Chapter 1.6: 1.3 Test Your Knowledge - BankingAssistantLiteAgent",
+		"showName": false,
+		"instructions": "**Why does this course set `configuration.module` to `BankingAssistantLiteAgent` in the sub-agent `config.yml`?**",
+		"multipleResponse": false,
+		"isRandomized": true,
+		"answers": [
+			{"_id": "a5010602-0001-4000-8000-000000000001", "correct": false, "answer": "Because MCP requires a Lite agent in all Rasa projects"},
+			{"_id": "a5010602-0002-4000-8000-000000000002", "correct": true, "answer": "Because the Rasa tutorial LLM host does not support the default ReAct tool-calling API shape; the Lite agent routes to MCP tools with a compatible pattern"},
+			{"_id": "a5010602-0003-4000-8000-000000000003", "correct": false, "answer": "To disable the sub-agent and run only main-agent tools"},
+			{"_id": "a5010602-0004-4000-8000-000000000004", "correct": false, "answer": "To replace `connections.mcp_servers` in the config"}
+		],
+		"metadata": {"tags": [{"name": "Assessment Type", "value": "Multiple Choice"}], "files": [], "opened": []},
+		"bloomsObjectiveLevel": "2",
+		"learningObjectives": "SWBAT explain why configuration.module is set for the tutorial host",
+		"guidance": "The stock ReAct sub-agent sends tool definitions on every LLM call; the hosted tutorial model used with `RASA_LICENSE` only is not compatible. `BankingAssistantLiteAgent` is the course-provided alternative.",
+		"showGuidanceAfterResponseOption": {"type": "Attempts", "passedFrom": 1},
+		"maxAttemptsCount": 1,
+		"showExpectedAnswerOption": {"type": "Always"},
+		"points": 5,
+		"incorrectPoints": 0,
+		"arePartialPointsAllowed": false,
+		"useMaximumScore": false
+	}
+}

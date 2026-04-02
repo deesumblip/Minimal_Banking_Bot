@@ -28,9 +28,9 @@ This document lists what to do for **Level 6** (Sub-Agents) and **Chapter 1.6** 
 |------|---------|---------------|----------------------------------------|
 | 0 | Recap Level 5; what Level 6 adds (sub-agents, handoff, `call: agent_name`) | — | Optional: one diagram or snippet of “main flow calls sub-agent.” |
 | 1 | Sub-agents concept: what they are, when to use vs tools in main agent | — | Short example: flow step `- call: banking_assistant` and one sentence on what the sub-agent does. |
-| 2 | Sub-agent layout and config (e.g. `sub_agents/<name>/config.yml`, protocol, description) | Lab 2.1 | **Full example** of one sub-agent config (e.g. `sub_agents/banking_assistant/config.yml`) so students create a variant. |
+| 2 | Sub-agent layout and config (e.g. `sub_agents/<name>/config.yml`, protocol, description) | Lab 2.1 | Students **write** `sub_agents/banking_assistant/config.yml`; guide describes required keys (no committed solution file in starter). |
 | 3 | MCP / ReAct: why ReAct needs MCP, endpoints and sub-agent config | Lab 3.1 | **Full example** of `mcp_servers` in endpoints and (if applicable) sub-agent MCP config so students add their own. |
-| 4 | Flow that calls sub-agent (`ask_banking_assistant`, `call: banking_assistant`, exit) | Lab 4.1 | **Full example** of `ask_banking_assistant` flow YAML so students create their own version. |
+| 4 | Flow that calls sub-agent (`ask_banking_assistant`, `call: banking_assistant`, exit) | Lab 4.1 | Students **write** `ask_banking_assistant.yml`; guide describes shape only. |
 | 5 | Training and testing Level 6 (run MCP server, actions, Rasa; Inspector) | Lab 5.1, 5.2 | Commands and optional Inspector check; no “create” — examples of how to run/verify. |
 | 6 | Walkthrough, What You’ve Learned, What’s Next, Knowledge Check, Limitations, Completion Checklist | — | — |
 

@@ -40,15 +40,15 @@ This document maps **Level 6** (Chapter 1.6 – Sub-Agents) content files, labs,
 
 ## 3. Lab content and assessment task IDs
 
-| Lab | Content File | Assessment Setup File | Task ID (Codio) | Grader |
-|-----|--------------|------------------------|-----------------|--------|
-| 2.1 | Level6_Lab2.1_Content.md | Level6_Lab2.1_Assessment_Setup.md | code-output-compare-501060001 | .guides/secure/level6_graders/lab_2.1_grader.py |
-| 3.1 | Level6_Lab3.1_Content.md | Level6_Lab3.1_Assessment_Setup.md | code-output-compare-501060002 | lab_3.1_grader.py |
-| 4.1 | Level6_Lab4.1_Content.md | Level6_Lab4.1_Assessment_Setup.md | code-output-compare-501060003 | lab_4.1_grader.py |
+| Lab | Content File | Assessment Setup File | Task IDs (Codio) | Grader |
+|-----|--------------|------------------------|------------------|--------|
+| 2.1 | Level6_Lab2.1_Content.md | Level6_Lab2.1_Assessment_Setup.md | fill-in-the-blanks-501060111 → code-output-compare-501060001 | lab_2.1_grader.py (code test) |
+| 3.1 | Level6_Lab3.1_Content.md | Level6_Lab3.1_Assessment_Setup.md | fill-in-the-blanks-501060112 → code-output-compare-501060002 | lab_3.1_grader.py |
+| 4.1 | Level6_Lab4.1_Content.md | Level6_Lab4.1_Assessment_Setup.md | fill-in-the-blanks-501060110 → code-output-compare-501060003 | lab_4.1_grader.py |
 | 5.1 | Level6_Lab5.1_Content.md | Level6_Lab5.1_Assessment_Setup.md | code-output-compare-501060004 | lab_5.1_grader.py |
 | 5.2 | Level6_Lab5.2_Content.md | Level6_Lab5.2_Assessment_Setup.md | code-output-compare-501060005 | lab_5.2_grader.py |
 
-**Assessment JSONs:** `.guides/assessments/code-output-compare-501060001.json` through `501060005.json`. COMMAND uses `.guides/secure/level6_graders/lab_*.py`. Working Directory: `/home/codio/workspace`. **Sequence:** `Check 1: PASSED` … (per lab), Lab 6.2 / Lab 3.1 style; **`showGuidanceAfterResponseOption`: Never**; **`showExpectedAnswerOption`: Always**.
+**Assessment JSONs:** **Fill-in:** `fill-in-the-blanks-501060110.json`, `501060111.json`, `501060112.json`. **Code tests:** `code-output-compare-501060001.json` through `501060005.json`. COMMAND uses `.guides/secure/level6_graders/lab_*.py`. Working Directory: `/home/codio/workspace`. Labs 2.1–4.1: **fill-in first**, copy YAML into `level6/`, then **code test** (Chapter 1.5 pattern).
 
 ---
 

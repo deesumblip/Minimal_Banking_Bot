@@ -1,0 +1,64 @@
+{
+	"type": "fill-in-the-blanks",
+	"taskId": "fill-in-the-blanks-501060111",
+	"source": {
+		"name": "Lab 2.1: sub_agents/banking_assistant/config.yml (fill-in-the-blanks)",
+		"showName": false,
+		"instructions": "**Fill in the blanks** to complete the sub-agent config. **After you pass:** save the completed YAML as **`level6/sub_agents/banking_assistant/config.yml`** (create the folder if needed), then run the **Code Test** (the next assessment).",
+		"showValues": true,
+		"text": "```yaml\nagent:\n  name: <<<banking_assistant>>>\n  protocol: <<<RASA>>>\n  description: \"Helps users with balance checks, transfers, and banking questions using MCP tools.\"\n\nconfiguration:\n  llm:\n    model_group: <<<gpt-4o-mini>>>\n  module: actions.banking_assistant_lite_agent.<<<BankingAssistantLiteAgent>>>\n\nconnections:\n  mcp_servers:\n    - name: <<<banking_mcp>>>\n```",
+		"distractors": "banking_mcp\nmain_agent\nOPENAI\nopenai\nreact\nBankingMainAgent\nMCPOpenAgent\nrasa/command-generator\n8080\ngpt-4o\nbanking_tools",
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Fill in the Blanks"
+				}
+			],
+			"files": [],
+			"opened": [
+				{
+					"type": "terminal",
+					"panelNumber": 1
+				}
+			]
+		},
+		"bloomsObjectiveLevel": "",
+		"learningObjectives": "",
+		"guidance": "**`agent.name`** must be **`banking_assistant`** (matches **`call: banking_assistant`** in Lab 4.1). **`protocol`** is **`RASA`**. **`model_group`** must match **`endpoints.yml`** (**`gpt-4o-mini`**). **`module`** ends with **`BankingAssistantLiteAgent`** (provided in **`actions/`**). **`mcp_servers`** name **`banking_mcp`** must match what you register in **`endpoints.yml`** (Lab 3.1). Indentation: two spaces per level. **After you pass,** save as **`level6/sub_agents/banking_assistant/config.yml`**, then run the **Code Test**.",
+		"showGuidanceAfterResponseOption": {
+			"type": "Attempts",
+			"passedFrom": 1
+		},
+		"maxAttemptsCount": 1,
+		"showExpectedAnswerOption": {
+			"type": "Always"
+		},
+		"points": 5,
+		"arePartialPointsAllowed": false,
+		"useMaximumScore": false,
+		"tokens": {
+			"blank": [
+				"banking_assistant",
+				"RASA",
+				"gpt-4o-mini",
+				"BankingAssistantLiteAgent",
+				"banking_mcp"
+			],
+			"text": [
+				"```yaml\nagent:\n  name: ",
+				0,
+				"\n  protocol: ",
+				1,
+				"\n  description: \"Helps users with balance checks, transfers, and banking questions using MCP tools.\"\n\nconfiguration:\n  llm:\n    model_group: ",
+				2,
+				"\n  module: actions.banking_assistant_lite_agent.",
+				3,
+				"\n\nconnections:\n  mcp_servers:\n    - name: ",
+				4,
+				"\n```"
+			],
+			"regexPositions": []
+		}
+	}
+}

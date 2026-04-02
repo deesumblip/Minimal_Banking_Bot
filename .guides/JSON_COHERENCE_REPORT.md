@@ -52,11 +52,13 @@ Assessments are wired by **content**: markdown pages use `{Check It!|assessment}
 | 1.3 | 3187585640, 2346557111, 2346557110, 1235165472, 1029038275 | Present | Yes |
 | 1.4 | fill-in-the-blanks-401010010, 401010001, 401020001, fill-in-the-blanks-401030010, 401030001, 401040001, 401050001, 401050002 | Present | Yes |
 | 1.5 | 501020000, fill-in-the-blanks-501020010, 501020001, 501030001, fill-in-the-blanks-501040010, 501040001, 501050001, 501050002 | Present | Yes |
-| 1.6 | 501060001, 501060002, 501060003, 501060004, 501060005 | Present | Yes |
+| 1.6 | fill-in-the-blanks-501060110–501060112; code-output-compare-501060001–501060005; multiple-choice-501060100–501060107 | Present | Yes |
 
 **Chapter 1.4:** Lab .md files under `Chapter-1-4---Multiple-Slots-e5f6/` include `{Check It!|assessment}(code-output-compare-40XXXXXX)` for Labs 2.1, 4.1, 5.1, 5.2; **Lab 0.1** uses `fill-in-the-blanks-401010010` then `code-output-compare-401010001`; **Lab 3.1** also includes `fill-in-the-blanks-401030010` before the code test. Both fill-in-the-blanks JSONs use the **Chapter 1.3 Lab 4.1** `tokens.text` pattern (literal `0` for each blank, sequential). Coherent.
 
 **Chapter 1.5:** **Lab 2.0** (command-generator prompt) uses **`code-output-compare-501020000`** (`lab_2.0_grader.py`); **`prompt_template`** and the prompt file are **also checked by Lab 5.1 and Lab 5.2** (`501050001`, `501050002`, grader Check 3). **Lab 2.1** uses `fill-in-the-blanks-501020010` then `code-output-compare-501020001`; **Lab 4.1** uses `fill-in-the-blanks-501040010` (domain slot conditions for `transfer_money_tools`) then `code-output-compare-501040001`. Coherent.
+
+**Chapter 1.6:** **Unit 1.3** uses `multiple-choice-501060105`–`501060107`. **Unit 6.4** uses `multiple-choice-501060100`–`501060104`. **Labs 2.1–4.1** each use **fill-in-the-blanks** then **code-output-compare**, mirroring Chapter 1.5: **`501060111`** (sub-agent `config.yml`) → **`501060001`**; **`501060112`** (`mcp_servers`) → **`501060002`**; **`501060110`** (full `ask_banking_assistant` flow) → **`501060003`**.
 
 ---
 

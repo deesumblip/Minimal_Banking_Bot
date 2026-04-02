@@ -2,31 +2,18 @@ A sub-agent lives in a folder under `sub_agents/<name>/`. Rasa discovers it by n
 
 ## Layout
 
-- **Folder:** `level6/sub_agents/banking_assistant/`
-- **Config file:** `sub_agents/banking_assistant/config.yml`, defines the agent’s name, protocol (e.g. RASA for ReAct), description, LLM configuration, and which MCP server(s) it uses.
+- **Folder:** `level6/sub_agents/banking_assistant/` (you create this in Lab 2.1; the starter repo may ship an empty folder with **`.gitkeep`** only).
+- **Config file:** `sub_agents/banking_assistant/config.yml` — defines the agent’s name, protocol (e.g. RASA), description, LLM **`model_group`**, **`configuration.module`**, and which MCP server name(s) it uses under **`connections.mcp_servers`**.
 
-## Example: Sub-agent config
+## What goes in `config.yml` (Lab 2.1)
 
-Below is an example of a ReAct sub-agent config. You will create your own version in Lab 2.1 (e.g. with a description that fits your agent). The sub-agent uses an LLM and connects to one MCP server named `banking_mcp` (you will register that server in endpoints.yml in Lab 3.1).
+You **author** this file in the lab; it is not copy-pasted from the starter tree. It must include:
 
+- **`agent`:** `name` (must match `call:` in the flow), `protocol`, `description`.
+- **`configuration.llm`:** `model_group` matching **`endpoints.yml`** (e.g. `gpt-4o-mini`).
+- **`configuration.module`:** **`actions.banking_assistant_lite_agent.BankingAssistantLiteAgent`** — required in this course so the **Rasa tutorial LLM** works without a separate vendor API key. The class **`BankingAssistantLiteAgent`** is **provided** under **`actions/`**; you reference it, you do not reimplement it in the lab.
+- **`connections.mcp_servers`:** at least one **name** (e.g. `banking_mcp`) that you will register in **`endpoints.yml`** in Lab 3.1.
 
-agent:
-  name: banking_assistant
-  protocol: RASA
-  description: "Helps users with balance checks, transfers, and general banking questions using MCP tools."
+**Why `module`:** The default ReAct sub-agent sends **tool definitions** on every LLM call; the tutorial host does not support that API shape. The **Lite** agent routes user text to MCP tools with simple rules and uses the same **`model_group`** for **text-only** completions.
 
-configuration:
-  llm:
-    model_group: gpt-4o-mini
-
-connections:
-  mcp_servers:
-    - name: banking_mcp
-
-- **agent.name**, Must match the name you use in the flow step (`call: banking_assistant`).
-- **agent.protocol**, `RASA` for the built-in ReAct sub-agent (LLM + MCP tools).
-- **agent.description**, Helps the orchestrator and LLM understand when to use this sub-agent.
-- **configuration.llm.model_group**, Model group ID from your config (e.g. gpt-4o-mini).
-- **connections.mcp_servers**, List of MCP server names; each must be defined in `endpoints.yml` under `mcp_servers`.
-
-In **Lab 2.1** you will create the folder `level6/sub_agents/banking_assistant/` and add `config.yml` with your own version of this config.
+In **Lab 2.1** you first complete a **Fill in the blanks** exercise (full **`config.yml`** skeleton), **copy** the passed YAML into **`level6/sub_agents/banking_assistant/config.yml`**, then run the **Code Test** — same **fill-in → copy → Check It!** pattern as **Chapter 1.5 Lab 2.1** (`banking_tools.py`).

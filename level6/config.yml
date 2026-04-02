@@ -1,11 +1,19 @@
+# Level 6 main agent. SearchReady + prompt_template (same pattern as Level 5 Lab 2.0) for reliable SetSlot.
+# Sub-agents live under sub_agents/; MCP servers are registered in endpoints.yml.
+
 recipe: default.v1
 language: en
 assistant_id: level6-agent
 
 pipeline:
   - name: SearchReadyLLMCommandGenerator
+    prompt_template: data/prompts/command_prompt_v3_slot_names.jinja2
     llm:
       model_group: gpt-4o-mini
+    # Flow retrieval embeddings default to OpenAI and need OPENAI_API_KEY. Disable here so
+    # train/run work with RASA_LICENSE only (NLG + command LLM use endpoints.yml model_groups).
+    flow_retrieval:
+      active: false
 
 policies:
   - name: FlowPolicy

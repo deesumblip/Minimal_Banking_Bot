@@ -4,16 +4,22 @@
 
 **Placement.** This lab follows Unit 3 (MCP and ReAct Config), Level 6.
 
-**Task.** Add `mcp_servers:` to `level6/endpoints.yml` with at least one entry (name, url, type). Run the assessment when done.
+**Sequence.**
 
-**Codio guide (Chapter 1.6).** The Lab 3.1 page includes: `{Check It!|assessment}(code-output-compare-501060002)`.
+1. **Fill in the blanks** — `fill-in-the-blanks-501060112` — **`mcp_servers`** block.
+2. **Merge** into **`level6/endpoints.yml`** (after **`tools:`**, before **`model_groups:`**).
+3. **Code Test** — `code-output-compare-501060002`.
+
+**Codio guide (Chapter 1.6).** Lab 3.1 page lists fill-in then code test.
 
 ---
 
 ## Assessment Setup (For Implementers)
 
-**COMMAND:** `/home/codio/workspace/.venv/bin/python3 /home/codio/workspace/.guides/secure/level6_graders/lab_3.1_grader.py`  
-**Working Directory:** `/home/codio/workspace`. **Sequence:** `code-output-compare-501060002.json` (`Check 1`–`Check 3: PASSED`).  
-**Grader:** `.guides/secure/level6_graders/lab_3.1_grader.py`. **Points:** 10. Full pass: **` PASS: Lab 3.1 verification complete! Score: 10/10`**.
+**Fill-in:** `fill-in-the-blanks-501060112.json`.
+
+**Code Test — COMMAND:** `/home/codio/workspace/.venv/bin/python3 /home/codio/workspace/.guides/secure/level6_graders/lab_3.1_grader.py`  
+**Working Directory:** `/home/codio/workspace`. **Sequence:** `code-output-compare-501060002.json`.  
+**Grader:** `.guides/secure/level6_graders/lab_3.1_grader.py`. **Points:** 10.
 
 **Verifies:** endpoints.yml; mcp_servers; name/url/type fields.

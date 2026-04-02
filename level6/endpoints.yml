@@ -6,13 +6,24 @@ nlg:
   llm:
     model_group: gpt-4o-mini
 
-# Tools registration - NEW in Level 5
+# Tools (Level 5)
 tools:
   tools_module: "tools"
 
+# Lab 3.1: Add `mcp_servers:` here so the sub-agent can reach the MCP process.
+# Do not remove sections above. Example shape (values must match your server):
+# mcp_servers:
+#   - name: banking_mcp
+#     url: http://127.0.0.1:8080/mcp
+#     type: http
+# Start the server from level6: python mcp_server/banking.py
+
+# Single model group: Rasa tutorial host (RASA_LICENSE only — no separate API keys).
+# https://rasa.com/docs/rasa-pro/concepts/components/llm-configuration/
 model_groups:
   - id: gpt-4o-mini
     models:
-      - provider: openai
-        model: gpt-4o-mini-2024-07-18
-        temperature: 0.3
+      - provider: rasa
+        model: rasa/command-generator-llama-3.1-8b-instruct
+        api_base: "https://tutorial-llm.rasa.ai"
+        temperature: 0.1

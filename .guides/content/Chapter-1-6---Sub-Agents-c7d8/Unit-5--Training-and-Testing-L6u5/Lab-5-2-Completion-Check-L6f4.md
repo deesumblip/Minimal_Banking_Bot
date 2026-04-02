@@ -12,4 +12,10 @@
 
 ## Running locally
 
-From project root activate the venv, `cd level6`. Ensure your files match the labs above; **Check It!** graded runs are in Codio only.
+From project root activate the venv, then work under **`level6/`**:
+
+```bash
+cd level6
+```
+
+Ensure your files match the labs above; **Check It!** graded runs are in Codio only.

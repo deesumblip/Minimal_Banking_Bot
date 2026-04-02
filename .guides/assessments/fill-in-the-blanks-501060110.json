@@ -1,0 +1,61 @@
+{
+	"type": "fill-in-the-blanks",
+	"taskId": "fill-in-the-blanks-501060110",
+	"source": {
+		"name": "Lab 4.1: ask_banking_assistant.yml (fill-in-the-blanks)",
+		"showName": false,
+		"instructions": "**Fill in the blanks** to complete the flow file. **After you pass:** save the completed YAML as **`level6/data/basics/ask_banking_assistant.yml`**, then run the **Code Test** (the next assessment).",
+		"showValues": true,
+		"text": "```yaml\nflows:\n  ask_banking_assistant:\n    name: <<<ask banking assistant>>>\n    description: |\n      <<<Start when the user wants the banking assistant sub-agent or specialist; delegate balance, transfers, or account info.>>>\n    steps:\n      - call: <<<banking_assistant>>>\n      - action: <<<utter_help>>>\n```",
+		"distractors": "banking_mcp\ncheck_balance\ntransfer_money\nutter_greet\nRASA\ncall_assistant\nsub_agent_flow",
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Fill in the Blanks"
+				}
+			],
+			"files": [],
+			"opened": [
+				{
+					"type": "terminal",
+					"panelNumber": 1
+				}
+			]
+		},
+		"bloomsObjectiveLevel": "",
+		"learningObjectives": "",
+		"guidance": "Top-level key is **`flows:`**. Flow id **`ask_banking_assistant`** matches other flows’ **`active_flow`** hints. **`call:`** must match **`agent.name`** (**`banking_assistant`**). **`utter_help`** is a response action on the main agent after the sub-agent returns. **After you pass,** save the completed YAML as **`level6/data/basics/ask_banking_assistant.yml`**, then run the **Code Test**.",
+		"showGuidanceAfterResponseOption": {
+			"type": "Attempts",
+			"passedFrom": 1
+		},
+		"maxAttemptsCount": 1,
+		"showExpectedAnswerOption": {
+			"type": "Always"
+		},
+		"points": 5,
+		"arePartialPointsAllowed": false,
+		"useMaximumScore": false,
+		"tokens": {
+			"blank": [
+				"ask banking assistant",
+				"Start when the user wants the banking assistant sub-agent or specialist; delegate balance, transfers, or account info.",
+				"banking_assistant",
+				"utter_help"
+			],
+			"text": [
+				"```yaml\nflows:\n  ask_banking_assistant:\n    name: ",
+				0,
+				"\n    description: |\n      ",
+				1,
+				"\n    steps:\n      - call: ",
+				2,
+				"\n      - action: ",
+				3,
+				"\n```"
+			],
+			"regexPositions": []
+		}
+	}
+}

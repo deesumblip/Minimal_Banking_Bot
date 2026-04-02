@@ -1,0 +1,28 @@
+{
+	"type": "multiple-choice",
+	"taskId": "multiple-choice-501060107",
+	"source": {
+		"name": "Chapter 1.6: 1.3 Test Your Knowledge - clean demo phrasing",
+		"showName": false,
+		"instructions": "**You want a clean Inspector demo of the `ask_banking_assistant` flow (sub-agent + MCP). Which user message is the best default choice?**",
+		"multipleResponse": false,
+		"isRandomized": true,
+		"answers": [
+			{"_id": "a5010602-0009-4000-8000-000000000009", "correct": false, "answer": "`Check balance for 88889999` only (no mention of the banking assistant)"},
+			{"_id": "a5010602-0010-4000-8000-000000000010", "correct": true, "answer": "One message that names the banking assistant (or sub-agent) and includes the concrete request, e.g. balance check for a specific account"},
+			{"_id": "a5010602-0011-4000-8000-000000000011", "correct": false, "answer": "Send `Hi` ten times, then ask for a balance"},
+			{"_id": "a5010602-0012-4000-8000-000000000012", "correct": false, "answer": "Ask only `transfer money` with no account numbers"}
+		],
+		"metadata": {"tags": [{"name": "Assessment Type", "value": "Multiple Choice"}], "files": [], "opened": []},
+		"bloomsObjectiveLevel": "3",
+		"learningObjectives": "SWBAT choose demo prompts that avoid main-flow competition",
+		"guidance": "Short balance-only turns may start the main `check_balance` flow. A one-shot line that names the specialist reduces routing conflicts.",
+		"showGuidanceAfterResponseOption": {"type": "Attempts", "passedFrom": 1},
+		"maxAttemptsCount": 1,
+		"showExpectedAnswerOption": {"type": "Always"},
+		"points": 5,
+		"incorrectPoints": 0,
+		"arePartialPointsAllowed": false,
+		"useMaximumScore": false
+	}
+}

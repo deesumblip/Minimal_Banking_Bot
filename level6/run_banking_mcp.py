@@ -1,4 +1,4 @@
-﻿# Run the banking MCP server (Level 6). Listens on http://localhost:8080.
+# Run the banking MCP server (Level 6). Streamable HTTP at http://127.0.0.1:8080/mcp
 import sys
 import os
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))

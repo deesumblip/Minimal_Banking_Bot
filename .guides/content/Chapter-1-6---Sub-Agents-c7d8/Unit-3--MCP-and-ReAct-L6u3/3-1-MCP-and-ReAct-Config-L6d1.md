@@ -1,21 +1,28 @@
-The banking_assistant sub-agent uses **ReAct** (LLM + tools). In this course the tools are provided by an **MCP server**. The main project must register that MCP server in `endpoints.yml` so the sub-agent can connect to it.
+The banking_assistant sub-agent uses **MCP** so tools run on a separate process. In this course the tools are provided by an **MCP server** implemented with **FastMCP** (**Streamable HTTP**). The main project must register that MCP server in `endpoints.yml` so the sub-agent can connect to it.
 
 ## MCP server registration in endpoints.yml
 
-The sub-agent config references an MCP server by **name** (e.g. `banking_mcp`). That name must be defined in the main agent’s `endpoints.yml` under `mcp_servers:`, with a URL and type.
+The sub-agent config references an MCP server by **name** (e.g. `banking_mcp`). That name must be defined in the main agent’s `endpoints.yml` under `mcp_servers:`, with a **URL** and **type**.
 
-## Example: mcp_servers in endpoints.yml
+## What you add (Lab 3.1)
 
-Below is an example of what you will add. You will add your own version in Lab 3.1. Do not remove existing sections (action_endpoint, nlg, tools, model_groups); add the `mcp_servers:` block.
+You **edit** the main project’s **`level6/endpoints.yml`** and add a top-level **`mcp_servers:`** list. Do **not** remove **`action_endpoint`**, **`nlg`**, **`tools`**, or **`model_groups`**.
 
+Each entry needs:
 
+- **`name`** — Must match the name in the sub-agent’s **`connections.mcp_servers`** (e.g. `banking_mcp`).
+- **`url`** — Full URL for **Streamable HTTP**, including the path (for this repo’s server: **`http://127.0.0.1:8080/mcp`** when you run **`python mcp_server/banking.py`** from **`level6`** with defaults).
+- **`type`** — `http` for the HTTP MCP transport used here.
+
+Example shape for one MCP server (values must match your environment and Lab 3.1 fill-in):
+
+```yaml
 mcp_servers:
   - name: banking_mcp
-    url: http://localhost:8080
+    url: http://127.0.0.1:8080/mcp
     type: http
+```
 
-- **name**, Must match the name in the sub-agent’s `connections.mcp_servers` (e.g. `banking_mcp`).
-- **url**, Where the MCP server is running (e.g. the banking MCP server started with `python mcp_server/banking.py` or similar, listening on port 8080).
-- **type**, `http` for an HTTP MCP server.
+The starter **`endpoints.yml`** may show these lines **commented out** so you uncomment or type them in the lab—follow your instructor’s starter.
 
-In **Lab 3.1** you will add this block to `level6/endpoints.yml`. The MCP server itself (e.g. `mcp_server/banking.py`) may be provided or you may create it; the lab assessment verifies that `endpoints.yml` contains the `mcp_servers` entry.
+In **Lab 3.1** you complete a **Fill in the blanks** for the **`mcp_servers`** block, **merge** it into **`endpoints.yml`**, then run the **Code Test** (same pattern as **Chapter 1.5 Lab 3.1**). The MCP implementation **`mcp_server/banking.py`** is **provided** in the repo; the lab checks that **`endpoints.yml`** registers it.

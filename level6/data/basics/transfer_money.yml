@@ -5,6 +5,9 @@ flows:
       Demonstrates collecting multiple slots before executing an action.
       The agent will collect: amount, recipient, and source account.
       Then it will process the transfer.
+      Never start this flow if the **active flow** is **ask_banking_assistant**.
+      Do not start when the user asks for the **banking assistant sub-agent**
+      or **banking specialist**—use the ask_banking_assistant flow instead.
     steps:
       - collect: amount
         description: "transfer amount"

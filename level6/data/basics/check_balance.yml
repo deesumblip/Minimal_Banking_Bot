@@ -2,9 +2,12 @@ flows:
   check_balance:
     name: check a balance (demo)
     description: |
-      Demonstrates a flow with slot collection.
+      Demonstrates a flow with slot collection on the **main** assistant.
       The agent will ask for an account number if not provided,
       then call the action to check the balance.
+      Never start this flow if the **active flow** is **ask_banking_assistant** (the user is
+      already with the banking sub-agent). Do not start when the user asks for the
+      **banking assistant sub-agent** or **banking specialist**—use ask_banking_assistant instead.
     steps:
       - collect: account
         description: "account number"

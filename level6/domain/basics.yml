@@ -1,25 +1,46 @@
-## Level 5: Tool Calling
+## Level 6: Level 5 flows + tools; add ask_banking_assistant flow in Lab 4.1 (sub-agent).
 #
-# This domain includes everything from previous levels, plus tool calling support.
-# - Responses (predefined agent messages)
-# - Actions (custom Python code)
-# - Multiple slots (conversation memory)
-# - Tools (dynamic functions the LLM can call)
+# Every `action:` in flows (including utter_*) must appear under actions:.
 
 version: "3.1"
 
 slots:
   account:
     type: text
-  
+    mappings:
+      - type: from_llm
+        conditions:
+          - active_flow: check_balance
+
   amount:
     type: text
-  
+    mappings:
+      - type: from_llm
+        conditions:
+          - active_flow: transfer_money
+      - type: from_llm
+        conditions:
+          - active_flow: transfer_money_tools
+
   recipient:
     type: text
-  
+    mappings:
+      - type: from_llm
+        conditions:
+          - active_flow: transfer_money
+      - type: from_llm
+        conditions:
+          - active_flow: transfer_money_tools
+
   account_from:
     type: text
+    mappings:
+      - type: from_llm
+        conditions:
+          - active_flow: transfer_money
+      - type: from_llm
+        conditions:
+          - active_flow: transfer_money_tools
 
 responses:
   utter_greet:
@@ -63,6 +84,9 @@ responses:
         rephrase: True
 
 actions:
+  - utter_greet
+  - utter_help
+  - utter_contact
   - action_bank_hours
   - action_check_balance_simple
   - action_process_transfer

@@ -1,16 +1,11 @@
-**Objective.** In Unit 3 you saw an example of the `mcp_servers` block in endpoints.yml. In this lab you will add your own version to `level6/endpoints.yml`: register the MCP server (e.g. `banking_mcp`) with URL and type so the sub-agent can use it.
+**Objective.** Add **`mcp_servers`** to **`level6/endpoints.yml`**. **Pattern:** **Fill in the blanks** for the block → merge into **`endpoints.yml`** (after **`tools:`**, before **`model_groups:`**) → **Code Test**.
 
-## Step-by-Step Instructions
+## Steps
 
-**Step 1.** Open `level6/endpoints.yml`. Keep existing sections (action_endpoint, nlg, tools, model_groups) unchanged.
-
-**Step 2.** Add a top-level key `mcp_servers:` with at least one entry, for example:
-- `name: banking_mcp`
-- `url: http://localhost:8080` (or the URL where your MCP server runs)
-- `type: http`
-
-**Step 3.** Save the file. Verify YAML is valid and the name matches the sub-agent config from Lab 2.1. Run the assessment when done.
+1. Complete **Fill in the blanks** for **`mcp_servers`** in the guide (Lab 3.1).
+2. Merge the passed YAML into **`endpoints.yml`**; save.
+3. Run the **Code Test** assessment.
 
 ## Running locally
 
-From project root activate the venv, `cd level6`. Edit endpoints.yml as above. Run the assessment when done.
+`cd level6`; start **`python mcp_server/banking.py`** before sub-agent tests.

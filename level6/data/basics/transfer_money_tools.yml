@@ -6,6 +6,9 @@ flows:
       The agent collects the necessary information, then the LLM
       can dynamically decide to call tools (like check_balance
       or process_transfer) based on the conversation context.
+      Never start this flow if the **active flow** is **ask_banking_assistant**.
+      Do not start when the user asks for the **banking assistant sub-agent**
+      or **banking specialist**—use the ask_banking_assistant flow instead.
     steps:
       - collect: amount
         description: "transfer amount"

@@ -10,7 +10,7 @@ A **sub-agent** is a separate agent that the main agent can **call** from a flow
 
 ## Example: What a call step looks like
 
-In Level 6 you will add a flow whose steps include **calling** a sub-agent. The flow does not list the sub-agent’s internal steps; it has one step that hands off:
+In Level 6 you will add a flow whose steps include **calling** a sub-agent. The flow does not list the sub-agent’s internal steps; it has one step that hands off (full flow file in **Lab 4.1**):
 
 ```yaml
 steps:
