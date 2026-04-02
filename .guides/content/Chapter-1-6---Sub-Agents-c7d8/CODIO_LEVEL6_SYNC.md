@@ -9,7 +9,7 @@
 - **Unit 2** — Sub-agent layout + **Lab 2.1**
 - **Unit 3** — MCP + ReAct + **Lab 3.1**
 - **Unit 4** — Flow with `call:` + **Lab 4.1** (includes **fill-in-the-blanks-501060110** on the `call:` step)
-- **Unit 5** — Training + testing + **Labs 5.1, 5.2**
+- **Unit 5** — **5.1** training + Lab 5.1 (merged page); **5.2** testing + Lab 5.2 (merged page)
 - **Unit 6** — Summary, walkthrough, knowledge check (6.1–6.7)
 
 **Assessments**

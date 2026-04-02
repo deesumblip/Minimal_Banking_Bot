@@ -89,7 +89,7 @@ Each code-output-compare assessment uses a `source.command` that invokes a grade
 ## 7. Actions taken
 
 1. **Root index** – Added `"Chapter-1-6---Sub-Agents-c7d8"` to `.guides/content/index.json` order.
-2. **Chapter 1.6** – Created `Chapter-1-6---Sub-Agents-c7d8/index.json` with title and unit order. Created `index.json` in each unit (Unit-0 … Unit-6) and a matching `.json` for every `.md` page (21 pages).
+2. **Chapter 1.6** – Created `Chapter-1-6---Sub-Agents-c7d8/index.json` with title and unit order. Created `index.json` in each unit (Unit-0 … Unit-6) and a matching `.json` for every guide page in units. **Unit 5:** Labs 5.1 and 5.2 are merged into pages **5.1** and **5.2** (two guide pages, not four).
 3. **Chapter 1.4** – Replaced placeholder id with `e5f6c7d8-9a1b-4c2d-b3e4-5f6a7b8c9d0e`.
 
 ---

@@ -14,7 +14,7 @@ This document maps **Level 6** (Chapter 1.6 – Sub-Agents) content files, labs,
 | Unit 2 + Lab 2.1 (tools folder) | Unit 2 + **Lab 2.1** (sub_agents/banking_assistant config) |
 | Unit 3 + Lab 3.1 (endpoints tools) | Unit 3 + **Lab 3.1** (endpoints mcp_servers) |
 | Unit 4 + Lab 4.1 (transfer_money_tools flow) | Unit 4 + **Lab 4.1** (ask_banking_assistant flow) |
-| Unit 5 + Labs 5.1, 5.2 | Unit 5 + **Lab 5.1** (train), **Lab 5.2** (completion check) |
+| Unit 5 + Labs 5.1, 5.2 | Unit 5: **5.1** page = training + Lab 5.1; **5.2** page = testing + Lab 5.2 (two guide pages) |
 | Unit 6: 6.1–6.7 | Unit 6: 6.1–6.7 (walkthrough, learned, next, knowledge check, limitations, beyond course, checklist) |
 
 **Lab numbering:** Level 6 uses Labs 2.1, 3.1, 4.1, 5.1, 5.2. Each is graded (10 points, 50 total).
@@ -32,8 +32,8 @@ This document maps **Level 6** (Chapter 1.6 – Sub-Agents) content files, labs,
 | Level6_Unit2_Content_2.1_Sub-Agent-Layout-and-Config.md | sub_agents/<name>/config.yml; full example. Pointer to Lab 2.1. |
 | Level6_Unit3_Content_3.1_MCP-and-ReAct-Config.md | endpoints.yml mcp_servers; full example. Pointer to Lab 3.1. |
 | Level6_Unit4_Content_4.1_Flow-that-Calls-Sub-Agent.md | ask_banking_assistant flow YAML; full example. Pointer to Lab 4.1. |
-| Level6_Unit5_Content_5.1_Training-Level-6.md | Train from level6. Lab 5.1. |
-| Level6_Unit5_Content_5.2_Testing-Sub-Agents.md | Run MCP server, actions, Rasa; Inspector. Lab 5.2. |
+| Level6_Unit5_Content_5.1_Training-Level-6.md | Training + Lab 5.1 (merged in guide). |
+| Level6_Unit5_Content_5.2_Testing-Sub-Agents.md | Lab 5.2 + optional Inspector stack (merged in guide). |
 | Level6_Unit6_Content_6.1 through 6.7 | Walkthrough, learned, next, knowledge check, limitations, beyond course, checklist. |
 
 ---

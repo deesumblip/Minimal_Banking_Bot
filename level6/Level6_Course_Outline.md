@@ -38,8 +38,8 @@
 
 ### Unit 5: Training and Testing
 **Type**: Content + Labs | **Assessment**: Lab 5.1, Lab 5.2  
-**Sections**: 5.1 Training Level 6 | 5.2 Testing Sub-Agents + Labs 5.1, 5.2  
-**Key Concepts**: Train from level6; run MCP server, actions, Rasa; test in Inspector.
+**Sections**: 5.1 Training (Lab 5.1 merged) | 5.2 Testing and Lab 5.2 (merged)  
+**Key Concepts**: Train from level6; completion check; optional MCP + actions + Rasa in Inspector.
 
 ### Unit 6: Summary and Next Steps
 **Type**: Content Page | **Assessment**: None  

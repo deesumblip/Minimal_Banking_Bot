@@ -62,7 +62,7 @@ After Labs 2.1–4.1, `rasa data validate` should report sub-agents loaded (e.g.
 
 ## Run the full stack (Inspector / local test)
 
-Use **three terminals** (venv active, `cd level6`):
+Use **three terminals**. In **each** new terminal, from **project root** activate **`.venv`**, then **`cd level6`**, then run **one** of the roles below (same pattern as Chapter 1.6 Unit **5.2**):
 
 1. **MCP:** `python mcp_server/banking.py` (Streamable HTTP at **`http://127.0.0.1:8080/mcp`**).
 2. **Actions:** `python -m rasa run actions`

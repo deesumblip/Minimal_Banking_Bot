@@ -1,8 +1,13 @@
-To test the sub-agent:
+## 5.2 Testing and Lab 5.2 — mirror of Chapter 1.6 guide
 
-1. **Start the MCP server** (if your setup uses one) — e.g. from level6: `python mcp_server/banking.py` (or the script that starts the banking MCP server on the URL you set in endpoints.yml, e.g. http://127.0.0.1:8080/mcp).
-2. **Start the action server** — from level6: `rasa run actions`.
-3. **Start Rasa** — from level6: `rasa run` or `rasa inspect`.
-4. **Open Inspector** (e.g. Rasa Inspect tab on Codio, or http://localhost:5005/.../inspect). Trigger the "ask banking assistant" flow (e.g. say you want to talk to the banking assistant). Confirm the main agent runs the flow and the sub-agent handles the conversation until completion, then control returns.
+**Part 1 — Lab 5.2 (graded):** **`code-output-compare-501060005`** in Codio (prerequisites: Labs 2.1–4.1; Lab 5.1 recommended).
 
-**Lab 5.2** is a completion check: it verifies that sub_agents config, endpoints mcp_servers, ask_banking_assistant flow, and (optionally) a trained model are in place.
+**Part 2 — Optional Inspector:** three terminals; **each** new terminal — activate venv from **project root**, **`cd level6`**, then:
+
+1. `python mcp_server/banking.py` (URL must match **`endpoints.yml`**, e.g. **`http://127.0.0.1:8080/mcp`**)
+2. `python -m rasa run actions`
+3. `rasa inspect` (or `rasa run`)
+
+Open **`http://localhost:5005/webhooks/socketio/inspect.html`**, new chat, trigger **ask banking assistant**.  
+
+Full wording: Chapter 1.6 Unit 5 page **`5-2-Testing-Sub-Agents-L6f2`**.

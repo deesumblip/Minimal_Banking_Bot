@@ -1,10 +1,13 @@
-After adding the sub-agent config, MCP registration, and the ask_banking_assistant flow, **train** the Level 6 agent.
+## 5.1 Training (Lab 5.1) — mirror of Chapter 1.6 guide
 
-From **project root**, activate the venv, then:
+After Labs 2.1–4.1, train from **`level6/`** so the model includes the sub-agent, **`mcp_servers`**, and **`ask_banking_assistant`**.
 
-- `cd level6`
-- `rasa train`
+```bash
+# Windows: .venv\Scripts\activate
+source .venv/bin/activate
 
-A model is created in `level6/models/`. Use the same venv as Level 1–5 (no new venv in level6). The trained assistant will include the new flow and sub-agent so the main agent can call the banking_assistant when the flow is triggered.
+cd level6
+rasa train
+```
 
-**Lab 5.1** is graded (training). Run the assessment after training completes.
+Then run **Lab 5.1** (**`code-output-compare-501060004`**) in Codio. Full wording: Chapter 1.6 Unit 5 page **`5-1-Training-Level-6-L6f1`**.

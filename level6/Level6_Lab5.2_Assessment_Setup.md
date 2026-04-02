@@ -2,11 +2,11 @@
 
 ## Guide Content (For Students)
 
-**Placement.** This lab follows Unit 5 (Testing Sub-Agents), Level 6.
+**Placement.** Chapter 1.6 Unit 5 — page **5.2 Testing and Lab 5.2** (merged testing + completion check).
 
 **Task.** Run the completion check: verify sub_agents config, mcp_servers in endpoints.yml, ask_banking_assistant flow, and optionally trained model. Run the assessment when ready.
 
-**Codio guide (Chapter 1.6).** The Lab 5.2 page includes: `{Check It!|assessment}(code-output-compare-501060005)`.
+**Codio guide (Chapter 1.6).** The merged 5.2 page includes: `{Check It!|assessment}(code-output-compare-501060005)`.
 
 ---
 
