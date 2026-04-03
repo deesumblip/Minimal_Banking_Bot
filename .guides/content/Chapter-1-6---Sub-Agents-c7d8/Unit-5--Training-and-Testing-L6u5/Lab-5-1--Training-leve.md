@@ -1,5 +1,3 @@
-## 5.1 Training (Lab 5.1)
-
 After Labs 2.1–4.1, train the Level 6 assistant from **`level6/`** so the model package includes the sub-agent, **`mcp_servers`** in **`endpoints.yml`**, and the **`ask_banking_assistant`** flow. Use the **same** virtual environment as the rest of the course (typically **`.venv`** at the **repo root**).
 
 ### Step 1 — Train

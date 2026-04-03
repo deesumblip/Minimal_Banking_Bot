@@ -1,5 +1,3 @@
-## 5.2 Testing and completion (Lab 5.2)
-
 This page has two parts in order: **Lab 5.2** (graded completion check), then **optional** steps to run the full stack in Inspector.
 
 ### Prerequisites
@@ -13,7 +11,7 @@ Use **Check It!** below. The grader checks for the files above, **`call: banking
 
 {Check It!|assessment}(code-output-compare-501060005)
 
-### Part 2 — Optional: Inspector (full stack)
+### Part 2 — Inspector
 
 To see the sub-agent in the browser, run **three processes** in **three separate terminals**. **Every time you open a new terminal**, run the same first two lines (activate venv from **project root**, then **`cd level6`**) before the command for that role.
 

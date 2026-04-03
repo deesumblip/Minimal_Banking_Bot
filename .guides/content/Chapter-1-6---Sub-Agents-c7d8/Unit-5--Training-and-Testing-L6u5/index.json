@@ -1,10 +1,10 @@
 {
-  "id": "level6-unit5-training-L6u5",
-  "type": "section",
-  "title": "Unit 5: Training and Testing",
-  "order": [
-    "5-1-Training-Level-6-L6f1",
-    "5-2-Testing-Sub-Agents-L6f2"
-  ],
-  "content": ""
+	"id": "level6-unit5-training-L6u5",
+	"type": "section",
+	"title": "Unit 5: Training and Testing",
+	"order": [
+		"Lab-5-1--Training-leve",
+		"Lab-5-2--Testing-leve"
+	],
+	"content": ""
 }
