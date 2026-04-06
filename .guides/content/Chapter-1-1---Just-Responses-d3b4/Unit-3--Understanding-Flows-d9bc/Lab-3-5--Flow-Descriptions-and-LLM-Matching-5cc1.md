@@ -1,4 +1,4 @@
-**Objective**: Learn the structure of the hours and balance flows by completing two fill-in-the-blank exercises. In Lab 3.5 you will add those flows and their responses to your project.
+**Objective**: Learn the structure of the hours and balance flows by completing two fill-in-the-blank exercises. In Lab 3.6 you will add those flows and their responses to your project.
 
 **Before You Begin**:
 - ✅ You've completed Lab 3.2 (created goodbye.yml)
@@ -11,7 +11,7 @@
 
 **3.3 Flow Descriptions and LLM Understanding** explains why `description` text matters: the LLM uses it to pick the right flow when users ask things like “What are your hours?” or “How do I check my balance?” Here you practice that on two new flow skeletons (**hours** and **balance**).
 
-You will complete **two fill-in-the-blank** exercises here. In Lab 3.5 you will add those flows and matching responses to your project.
+You will complete **two fill-in-the-blank** exercises here. In Lab 3.6 you will add those flows and matching responses to your project.
 
 ---
 

@@ -1,14 +1,16 @@
 {
-	"id": "3412850c-aa93-bf43-c231-183ba8e2f3d7",
-	"title": "1.4 Test Your Knowledge",
+	"id": "26ac0075-299d-6b97-9314-39a1a9cdb79a",
+	"title": "3.7 Test Your Knowledge",
 	"files": [
 		{
 			"path": "#tabs",
 			"action": "close"
 		}
 	],
-	"layout": "1-panel-tree",
-	"path": [],
+	"layout": "2-panels-tree-guides-left",
+	"path": [
+		"level1"
+	],
 	"type": "page",
 	"contentType": "markdown", "content": "",
 	"teacherOnly": false,

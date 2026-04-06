@@ -1,7 +1,7 @@
 **Objective**: Add a second variation to `utter_goodbye`.
 
 **Before You Begin**:
-- You've completed Lab 2.2 (created `utter_goodbye`)
+- You've completed Lab 2.1 (created `utter_goodbye`)
 - You have `domain/basics.yml` open in your editor
 
 #### Steps

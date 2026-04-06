@@ -8,13 +8,13 @@ We use **Chapter-1-1---Just-Responses-d3b4** as the single source of truth for L
 
 1. **Parked** `.guides/content/Level-1-1-d3b4` → **level1/old_duplicates/Level-1-1-d3b4** (no longer in the guide order).
 2. **Course order** in `.guides/content/index.json` now points to **Chapter-1-1---Just-Responses-d3b4** instead of Level-1-1-d3b4.
-3. **Placeholder** `.guides/content/Chapter-1-1---Just-Responses-d3b4/` exists in the repo (with a README). The actual page content lives on Codio until you complete the steps below.
+3. **Chapter folder** `.guides/content/Chapter-1-1---Just-Responses-d3b4/` in the repo holds **Units 0–8** (nine units), page `.md`/`.json` pairs, and per-unit `index.json` files. Treat this folder as the ground truth alongside Codio; use the steps below if you need to **re-sync** from a Codio export.
 
 ---
 
 ## How to make the repo the ground truth (clone from Codio)
 
-Chapter-1-1---Just-Responses-d3b4 already exists on Codio with full content (Units 0–6). To make the same content the ground truth in this repo so you can clone and edit it locally:
+Chapter-1-1---Just-Responses-d3b4 exists on Codio with full content (**Units 0–8**). To copy or refresh that content in this repo:
 
 ### Option A: Copy from Codio workspace (recommended)
 
@@ -30,9 +30,7 @@ Chapter-1-1---Just-Responses-d3b4 already exists on Codio with full content (Uni
    - Remove the existing README (or keep it at the bottom of the folder if you like).  
    - Unzip or paste the Codio export so that `Chapter-1-1---Just-Responses-d3b4` contains:
      - `index.json` (chapter order)
-     - `Unit-0--Prerequisites-and-Setup-1039/` (and its pages)
-     - `Unit-1--Introduction-to-Rasa-Agents-06a7/`
-     - … through **Unit-6--Training-and-Testing-6c70** (or the exact unit folder names you see on Codio).
+     - `Unit-0--Prerequisites-and-Setup-1039/` through **`Unit-8--Assessment-and-Next-Steps-2d7b/`** (use the exact unit folder names on Codio if they differ, e.g. `Unit-6--Training-and-Testing-9f4e`).
 5. **Commit and push:**
    ```bash
    git add .guides/content/Chapter-1-1---Just-Responses-d3b4

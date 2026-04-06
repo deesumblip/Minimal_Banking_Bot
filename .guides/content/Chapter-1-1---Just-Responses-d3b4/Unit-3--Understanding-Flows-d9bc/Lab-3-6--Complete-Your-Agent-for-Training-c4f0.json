@@ -1,6 +1,6 @@
 {
-	"id": "b5c6d7ec-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-	"title": "Lab 7.1: Build Your Own Feature",
+	"id": "c4f0a1b2-3505-4d5e-9f6a-7b8c9d0e1f2a",
+	"title": "Lab 3.6: Complete Your Agent for Training",
 	"files": [
 		{
 			"path": "#terminal",
@@ -9,7 +9,9 @@
 		}
 	],
 	"layout": "2-panels-tree-guides-left",
-	"path": [],
+	"path": [
+		"level1"
+	],
 	"type": "page",
 	"contentType": "markdown",
 	"content": "",

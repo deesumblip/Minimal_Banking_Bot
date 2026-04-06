@@ -1,10 +1,12 @@
-# Auto-start Rasa Inspector when student opens 6.3 (Codio)
+# 6.4 Auto-start Rasa Inspector (Codio)
+
+This page is for **instructors**: it explains how to configure Codio so the terminal auto-starts Inspector when a student opens **6.3 Testing Your Agent**.
 
 Codio supports running a terminal command when a section is displayed ([docs](https://docs.codio.com/instructors/authoring/guides/settings/opentabs.html)).
 
 ## In Codio Guide Editor
 
-1. Open **Chapter 1.1** → **Unit 6** → **6.3 Testing Your Agent**.
+1. Open **Chapter 1.1** → **Unit 6** → **6.3 Testing Your Agent** (not this 6.4 page—the command belongs on the 6.3 page layout in the Guide Editor).
 2. Click **Layout** (top bar, next to Settings).
 3. Under **Customize tabs within each panel** you should see a row with **TYPE** (e.g. Terminal), **FILENAME** (`#terminal`), **PANEL** (e.g. Panel A).
 4. **Find the command field:**

@@ -5,9 +5,8 @@
   "order": [
     "0-1-What-You-Need-Before-Starting-b29b",
     "0-2-Project-Structure-c2ed",
-    "Lab-0-1--Create-Virtual-Environment-and-Install-Rasa-Pro-4434",
-    "0-3-Understanding-YAML-Syntax-0971",
-    "0-4-Getting-Help-8218"
+    "0-3-Getting-Help-8218",
+    "Lab-0-1--Create-Virtual-Environment-and-Install-Rasa-Pro-4434"
   ],
   "content": ""
 }

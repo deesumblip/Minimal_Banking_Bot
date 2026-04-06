@@ -1,6 +1,6 @@
 {
-	"id": "f72a2671-588b-e6b9-172a-f55afe7f1bd5",
-	"title": "3.3 Flow Descriptions and LLM Understanding",
+	"id": "5cc1e46b-475d-fad0-3dac-7c02ca3970f0",
+	"title": "Lab 3.5: Flow Descriptions and LLM Matching",
 	"files": [
 		{
 			"path": "#tabs",
@@ -12,7 +12,8 @@
 		"level1"
 	],
 	"type": "page",
-	"contentType": "markdown", "content": "",
+	"contentType": "markdown",
+	"content": "",
 	"teacherOnly": false,
 	"closeTerminalSession": true,
 	"learningObjectives": ""

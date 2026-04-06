@@ -2,13 +2,15 @@
 
 This document lists Level 1 (Chapter 1.1) unit content files, lab content files, and assessment references so implementers can sync with Codio and keep content in one place.
 
+**Codio guide (Chapter 1.1)** no longer includes guide pages for Unit **0.3**; Unit **1.3**, **1.4**; **Lab 2.1**; Unit **6.4** (Understanding Agent Behavior); Unit **8.2**, **8.4**, **8.5**. The rows for those topics were removed from the table below (except **0.4** is in the Codio TOC again). Mirror markdown files for some omitted topics may still exist under `level1/` for offline reference (see `.guides/JSON_COHERENCE_REPORT.md` §8).
+
 ---
 
 ## 1. Course structure
 
 Level 1 uses **9 units** (0–8): Setup → Domain → Flows → Patterns → Config → Training → Walkthrough → Assessment.
 
-- **Unit content** is in separate files (below) for copy/paste into Codio.
+- **Unit content** is in separate files (below) for copy/paste into Codio where a matching guide page exists.
 
 ---
 
@@ -18,12 +20,9 @@ Level 1 uses **9 units** (0–8): Setup → Domain → Flows → Patterns → Co
 |------|---------|
 | `Level1_Unit0_Content_0.1_What-You-Need-Before-Starting.md` | Prerequisites, Rasa Pro license |
 | `Level1_Unit0_Content_0.2_Project-Structure.md` | File structure, level1 folder |
-| `Level1_Unit0_Content_0.3_Understanding-YAML-Syntax.md` | YAML basics |
-| `Level1_Unit0_Content_0.4_Getting-Help.md` | Resources, troubleshooting |
+| `Level1_Unit0_Content_0.4_Getting-Help.md` | Resources, troubleshooting (Codio page **0.4**) |
 | `Level1_Unit1_Content_1.1_What-is-a-Conversational-Agent.md` | Agent intro, NLU |
 | `Level1_Unit1_Content_1.2_The-Simplest-Agent-Possible.md` | Minimal agent concept |
-| `Level1_Unit1_Content_1.3_Real-World-Use-Cases.md` | Use cases |
-| `Level1_Unit1_Content_1.4_Test-Your-Knowledge.md` | Quiz |
 | `Level1_Unit2_Content_2.1_What-is-a-Domain.md` | Domain, responses section |
 | `Level1_Unit2_Content_2.2_Understanding-Responses.md` | Response structure, examples |
 | `Level1_Unit2_Content_2.3_Response-Variations.md` | Multiple text variations |
@@ -40,16 +39,12 @@ Level 1 uses **9 units** (0–8): Setup → Domain → Flows → Patterns → Co
 | `Level1_Unit6_Content_6.1_What-is-Training.md` | Training concept |
 | `Level1_Unit6_Content_6.2_How-to-Train-Your-Agent.md` | rasa train |
 | `Level1_Unit6_Content_6.3_Using-Rasa-Inspector.md` | Inspector |
-| `Level1_Unit6_Content_6.4_Testing-Your-Agent.md` | Testing |
-| `Level1_Unit6_Content_6.5_Understanding-Agent-Behavior.md` | Behavior |
+| `Level1_Unit6_Content_6.4_Testing-Your-Agent.md` | Testing (Codio page **6.3** Testing Your Agent) |
 | `Level1_Unit7_Content_7.1_Complete-Agent-Walkthrough.md` | Walkthrough |
 | `Level1_Unit7_Content_7.2_Your-Level-1-Banking-Agent-Summary.md` | Summary |
 | `Level1_Unit7_Content_7.3_Best-Practices.md` | Best practices |
 | `Level1_Unit8_Content_8.1_Knowledge-Check.md` | Knowledge check |
-| `Level1_Unit8_Content_8.2_What-Youve-Learned.md` | Learned |
 | `Level1_Unit8_Content_8.3_Limitations-of-Level-1.md` | Limitations |
-| `Level1_Unit8_Content_8.4_Whats-Next-Level-2-Preview.md` | Level 2 preview |
-| `Level1_Unit8_Content_8.5_Course-Completion-Checklist.md` | Checklist |
 
 ---
 
@@ -58,7 +53,6 @@ Level 1 uses **9 units** (0–8): Setup → Domain → Flows → Patterns → Co
 | Lab | Content File | Assessment Setup File | Notes |
 |-----|--------------|----------------------|--------|
 | 0.1 | Level1_Lab0.1_Content.md | Level1_Lab0.1_Assessment_Setup.md | Venv, Rasa Pro, RASA_LICENSE |
-| 2.1 | Level1_Lab2.1_Content.md | — | Explore YAML/responses (optional) |
 | 2.2 | Level1_Lab2.2_Content.md | — | Add utter_goodbye response |
 | 2.3 | Level1_Lab2.3_Content.md | — | Add response variations |
 | 3.1 | Level1_Lab3.1_Content.md | — | Explore flows |

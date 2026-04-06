@@ -14,7 +14,7 @@ This report compares **content** (`.guides/content/` chapter and unit structure)
 
 | Chapter | index.json `order` | Unit folders / notes | Coherent? |
 |---------|--------------------|----------------------|-----------|
-| 1.1 Just Responses | Unit-0 … Unit-8 (9 units) | Present | Yes |
+| 1.1 Just Responses | Unit-0 … Unit-8 (9 units) | Present (see §8 for trimmed pages) | Yes |
 | 1.2 Custom Actions | Unit-0 … Unit-8 (9 units) | Present | Yes |
 | 1.3 Slot Collection | Unit-0 … Unit-8 (9 units) | Present | Yes |
 | 1.4 Multiple Slots | Unit-0 … Unit-6 (7 units) | Unit-0 folder present; order matches | Yes |
@@ -30,6 +30,8 @@ This report compares **content** (`.guides/content/` chapter and unit structure)
 ## 2. Unit index.json vs page files
 
 For each unit, the `order` array should list page ids that have a matching `.md` and `.json` in that unit folder.
+
+**Chapter 1.1:** Eight pages were removed from the guide TOC; stems are listed in **§8**. Unit **0.4** (Getting Help) was restored. Optional `level1/` mirror markdown for some topics may still exist.
 
 ### Spot checks (sample units)
 
@@ -91,7 +93,18 @@ Each code-output-compare assessment uses a `source.command` that invokes a grade
 1. **Root index** – Added `"Chapter-1-6---Sub-Agents-c7d8"` to `.guides/content/index.json` order.
 2. **Chapter 1.6** – Created `Chapter-1-6---Sub-Agents-c7d8/index.json` with title and unit order. Created `index.json` in each unit (Unit-0 … Unit-6) and a matching `.json` for every guide page in units. **Unit 5:** Labs 5.1 and 5.2 are merged into pages **5.1** and **5.2** (two guide pages, not four).
 3. **Chapter 1.4** – Replaced placeholder id with `e5f6c7d8-9a1b-4c2d-b3e4-5f6a7b8c9d0e`.
+4. **Chapter 1.1** – Removed eight guide pages from TOC (see §8); **Unit 0.4** later restored. Updated affected unit `index.json` files and deleted matching page `.md`/`.json` pairs (except restored 0.4).
 
 ---
 
-*Report updated after fixing all incoherences.*
+*Report updated after fixing all incoherences; Chapter 1.1 guide trim is documented in §8.*
+
+---
+
+## 8. Chapter 1.1 guide trim (Codio)
+
+The following **Chapter 1.1** pages were removed from unit `index.json` `order` arrays and their `.md`/`.json` pairs were deleted under `Chapter-1-1---Just-Responses-d3b4/`: Unit **0.3**; Unit **1.3**, **1.4**; **Lab 2.1**; Unit **6.4** (Understanding Agent Behavior); Unit **8.2**, **8.4**, **8.5**. **Unit 0.4** (Getting Help, stem `0-4-Getting-Help-8218`) was **restored** to the TOC and files.
+
+**Deleted page stems (filename ids):** `0-3-Understanding-YAML-Syntax-0971`, `1-3-Real-World-Use-Cases-d20d`, `1-4-Test-Your-Knowledge-3412`, `Lab-2-1--YAML-Syntax-for-Responses-2906`, `6-4-Understanding-Agent-Behavior-b8c9`, `8-2-What-Youve-Learned-e8f9`, `8-4-Whats-Next-Level-2-Preview-8a04`, `8-5-Course-Completion-Checklist-8a05`.
+
+Assessment JSON files referenced only by deleted pages may remain on disk as orphans until cleaned up separately.

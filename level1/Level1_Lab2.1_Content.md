@@ -1,23 +1,91 @@
-# Lab 2.1: Understanding YAML Syntax for Responses
+# Lab 2.2: Creating Your First Response
 
-**Objective**: Learn YAML syntax by exploring existing responses.
+**Objective**: In Unit 2 you saw how responses are structured (e.g. `utter_greet`, `utter_contact`). In this lab you add your own response: `utter_goodbye`.
 
-**Why this lab**: Before you add or edit responses, you need to see how they're structured in the domain file. Once you can spot the pattern (response name, `- text:`, `metadata:`), adding your own in Lab 2.2 will be straightforward. This is a short look-around; no typing is required.
+**Why add goodbye**: A real conversation has a clear end. When a user says "bye" or "that's all," the agent should have a defined way to respond. Adding `utter_goodbye` here gives the agent something to say at the end of a conversation. In the next unit you'll connect it to a flow so the agent knows when to use it.
 
-#### Steps
+#### Before You Begin
 
-1. **Open the Domain File**
-   - Navigate to `domain/basics.yml` in your IDE
-   - You should see existing responses like `utter_greet`, `utter_help`, and `utter_contact`
+✅ **Checklist**:
+- You have a text editor or IDE open
+- You know where the `domain/` folder is in your project
+- You understand basic YAML structure for the domain file (indentation, keys, list items; see **2.2 Understanding Responses** in the guide if needed)
 
-2. **Identify Response Structure**
-   - Find the `responses:` section
-   - Notice how each response is indented with 2 spaces
-   - Notice the `-` (dash) before `text:`
-   - Notice the `metadata:` section aligned with `text:`
+#### Step-by-Step Tutorial
 
-3. **Explore Response Variations**
-   - Check if any responses have multiple variations (multiple `- text:` items)
-   - Notice how variations are at the same indentation level
+**Step 1: Navigate to the Domain File**
 
-**AI Coach**: If you're confused about YAML syntax, ask the AI Coach: "What does the dash before text: mean?" or "Why do I need metadata: rephrase: True?"
+1. In your project folder, navigate to the `domain/` folder
+2. Open the file named `basics.yml` in your text editor
+3. You should see a file that starts with `version: "3.1"` followed by a `responses:` section
+
+**What you should see**: The file should contain existing responses like `utter_greet`, `utter_help`, and `utter_contact`.
+
+---
+
+**Step 2: Locate the Responses Section**
+
+1. Scroll to find the `responses:` section (it should be near the top, after `version: "3.1"`)
+2. You'll see existing responses (utter_greet, utter_help, utter_contact).
+
+**What you should see**: Multiple responses, each with the `utter_` prefix, indented properly with 2 spaces.
+
+---
+
+**Step 3: Add Your New Response**
+
+1. Find the `utter_contact` response (the last one in the list)
+2. After `utter_contact`, add a blank line
+3. Add your new response using this exact pattern:
+   ```yaml
+   utter_goodbye:
+     - text: "Goodbye! Have a great day!"
+       metadata:
+         rephrase: True
+   ```
+
+⚠️ **Important**: Pay attention to indentation:
+- `utter_goodbye:` should be at the same level as `utter_contact:` (2 spaces from the left)
+- `- text:` should be indented 2 more spaces (4 spaces total)
+- `metadata:` should be at the same level as `text:` (6 spaces from the start of the line)
+- `rephrase: True` should be indented 2 more spaces under `metadata:` (8 spaces total)
+
+---
+
+**Step 4: Verify Your Syntax**
+
+Before saving, double-check:
+
+✅ **Indentation**: Use exactly 2 spaces (not tabs, not 4 spaces)  
+✅ **Structure**: Response name ends with `:`, dash before `text:`, `metadata:` aligned with `text:`  
+✅ **Spelling**: `utter_goodbye` and `rephrase` spelled correctly
+
+**Common mistakes to avoid**:
+- ❌ Missing dash: `text: "..."` instead of `- text: "..."`
+- ❌ Wrong indentation: Using tabs or wrong number of spaces
+- ❌ Missing colon: `utter_goodbye` instead of `utter_goodbye:`
+
+---
+
+**Step 5: Save the File**
+
+1. Save your changes (Ctrl+S or Cmd+S)
+2. Your file should now have the new `utter_goodbye` response
+
+#### Complete Example
+
+Your `responses:` section should now include:
+
+```yaml
+  utter_goodbye:
+    - text: "Goodbye! Have a great day!"
+      metadata:
+        rephrase: True
+```
+
+#### Common Mistakes
+
+1. **Missing dash**: Forgetting the `-` before `text:` causes YAML parsing errors
+2. **Wrong indentation**: YAML is very sensitive to spacing - use 2 spaces consistently
+3. **Missing colon**: The response name must end with `:`
+4. **Forgetting `utter_` prefix**: While not strictly required, it's a strong convention

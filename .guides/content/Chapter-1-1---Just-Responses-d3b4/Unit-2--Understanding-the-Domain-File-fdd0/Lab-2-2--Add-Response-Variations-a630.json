@@ -1,10 +1,11 @@
 {
-	"id": "5cc1e46b-475d-fad0-3dac-7c02ca3970f0",
-	"title": "Lab 3.4: Flow Descriptions and LLM Matching",
+	"id": "a63010a5-5aec-68ea-5863-aba9d86c2d31",
+	"title": "Lab 2.2: Add Response Variations",
 	"files": [
 		{
-			"path": "#tabs",
-			"action": "close"
+			"path": "#terminal",
+			"panel": 1,
+			"action": "open"
 		}
 	],
 	"layout": "2-panels-tree-guides-left",
