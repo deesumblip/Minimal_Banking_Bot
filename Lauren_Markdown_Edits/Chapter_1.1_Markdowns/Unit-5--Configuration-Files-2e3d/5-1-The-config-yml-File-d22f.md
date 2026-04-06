@@ -12,7 +12,7 @@ assistant_id: level1-agent
 pipeline:
   - name: SearchReadyLLMCommandGenerator
     llm:
-      model_group: openai-gpt-5-1
+      model_group: gpt-4o-mini
 
 policies:
   - name: FlowPolicy
@@ -38,7 +38,7 @@ policies:
 4. **`pipeline:`**
    - Defines how Rasa understands user messages
    - `SearchReadyLLMCommandGenerator`: Uses an LLM to understand messages and start the right flow.
-   - `model_group: openai-gpt-5-1`: Which model group to use (configured in `endpoints.yml`).
+   - `model_group: gpt-4o-mini`: Which model group to use (configured in `endpoints.yml`).
 
 5. **`policies:`**
    - Defines how Rasa decides what to do next
