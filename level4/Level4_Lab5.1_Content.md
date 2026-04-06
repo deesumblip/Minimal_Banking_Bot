@@ -15,7 +15,7 @@ After training succeeds, use **Check It!** in Codio (**Lab 5.1** assessment). Th
 3. Run `cd level4` — confirm with `pwd` that the path ends in `level4`.
 4. Run `python -m rasa --version`. If it fails, check the venv and Rasa Pro (**Lab 0.1**).
 5. **Pipeline check (important):** Open **`config.yml`** in this **`level4/`** folder. It must use **`CompactLLMCommandGenerator`** for this chapter (not **`SearchReadyLLMCommandGenerator`**). If you have not completed **Lab 0.1** / **Unit 0.2** yet, fix **`config.yml`** and **`endpoints.yml`** first—otherwise training **bakes the wrong command generator** into the model and you can see *“unable to understand you”* on transfer slots. Compare with this repo’s **`level4/config.yml`** if unsure.
-6. **Endpoints check:** Open **`endpoints.yml`**. Under **`model_groups`**, the group with **`id: gpt-4o-mini`** must use **`model: gpt-4o-2024-11-20`** and **`temperature: 0.1`** (see **Unit 0.2** section 2). Do **not** leave **`model: gpt-4o-mini-…`** with a high **`temperature`** here—free-text **recipient** often fails to fill reliably. Match this repo’s **`level4/endpoints.yml`**.
+6. **Endpoints check:** Open **`endpoints.yml`**. Under **`model_groups`**, the group with **`id: openai-gpt-5-1`** must use **`model: openai-gpt-5-1`** and **`temperature: 0.1`** (see **Unit 0.2** section 2). Do **not** pair a **different** **`model:`** snapshot or a **high** **`temperature`** (e.g. **0.3**) with that group—free-text **recipient** often fails to fill reliably. Match this repo’s **`level4/endpoints.yml`**.
 7. Run `python -m rasa train` — wait for **Successfully saved model** (about 1–3 minutes).
 8. In the file tree, confirm **`models/`** (under **`level4`**) has a new `.tar.gz` file.
 
@@ -29,7 +29,7 @@ After training succeeds, use **Check It!** in Codio (**Lab 5.1** assessment). Th
 | `No module named 'rasa'` | Activate `.venv` from project root, then `cd level4` again |
 | License / API key | `.env` and Lab 0.1 |
 | Transfer slots mis-fill; *unable to understand you*; logs show **`SearchReadyLLMCommandGenerator`** | **`level4/config.yml`** must use **`CompactLLMCommandGenerator`**. Fix config, **`python -m rasa train`** again from **`level4`**, restart Inspector (**Lab 5.2** troubleshooting and **Unit 0.2** section 2) |
-| **Recipient** name skips or wrong; **FillSlot** flaky; **`config.yml`** already uses **Compact** | **`level4/endpoints.yml`**: **`model_groups`** for **`gpt-4o-mini`** should use **`gpt-4o-2024-11-20`** and **`temperature: 0.1`** (**Unit 0.2**). Retrain from **`level4/`** |
+| **Recipient** name skips or wrong; **FillSlot** flaky; **`config.yml`** already uses **Compact** | **`level4/endpoints.yml`**: **`model_groups`** for **`openai-gpt-5-1`** should use **`openai-gpt-5-1`** and **`temperature: 0.1`** (**Unit 0.2**). Retrain from **`level4/`** |
 
 When steps are complete, run **Check It!** for Lab 5.1 in Codio.
 

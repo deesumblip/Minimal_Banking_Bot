@@ -4,7 +4,7 @@ action_endpoint:
 nlg:
   type: rephrase
   llm:
-    model_group: gpt-4o-mini
+    model_group: openai-gpt-5-1
 
 # Tools (Level 5)
 tools:
@@ -21,7 +21,7 @@ tools:
 # Single model group: Rasa tutorial host (RASA_LICENSE only — no separate API keys).
 # https://rasa.com/docs/rasa-pro/concepts/components/llm-configuration/
 model_groups:
-  - id: gpt-4o-mini
+  - id: openai-gpt-5-1
     models:
       - provider: rasa
         model: rasa/command-generator-llama-3.1-8b-instruct

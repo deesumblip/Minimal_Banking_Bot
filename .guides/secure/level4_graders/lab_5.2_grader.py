@@ -197,7 +197,7 @@ else:
 print("")
 
 # Check 6: endpoints.yml model_groups (same criterion as Lab 0.1 Check 5)
-print("Check 6: Verifying level4/endpoints.yml model_groups (gpt-4o-mini → model + temperature)...")
+print("Check 6: Verifying level4/endpoints.yml model_groups (openai-gpt-5-1 → model + temperature)...")
 if not ENDPOINTS_PATH.exists():
     print("❌ Check 6: FAILED - level4/endpoints.yml not found (0 points)")
 else:
@@ -207,19 +207,19 @@ else:
         groups = (ep or {}).get("model_groups") or []
         found = None
         for g in groups:
-            if isinstance(g, dict) and g.get("id") == "gpt-4o-mini":
+            if isinstance(g, dict) and g.get("id") == "openai-gpt-5-1":
                 models = g.get("models") or []
                 if models and isinstance(models[0], dict):
                     found = models[0]
                 break
-        if found and found.get("model") == "gpt-4o-2024-11-20" and found.get("temperature") == 0.1:
+        if found and found.get("model") == "openai-gpt-5-1" and found.get("temperature") == 0.1:
             print(
-                f" Check 6: PASSED - gpt-4o-2024-11-20 at temperature 0.1 ({POINTS_PER_CHECK} points)"
+                f" Check 6: PASSED - openai-gpt-5-1 at temperature 0.1 ({POINTS_PER_CHECK} points)"
             )
             score += POINTS_PER_CHECK
         else:
             print(
-                "❌ Check 6: FAILED - under id gpt-4o-mini use model gpt-4o-2024-11-20, "
+                "❌ Check 6: FAILED - under id openai-gpt-5-1 use model openai-gpt-5-1, "
                 "temperature 0.1 (0 points)"
             )
             print("Hint: Align level4/endpoints.yml with Unit 0.2 / Lab 0.1.")

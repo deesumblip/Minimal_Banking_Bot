@@ -17,7 +17,7 @@ pipeline:
   - name: SearchReadyLLMCommandGenerator
     prompt_template: data/prompts/command_prompt_v3_slot_names.jinja2
     llm:
-      model_group: gpt-4o-mini
+      model_group: openai-gpt-5-1
 ```
 
 ---

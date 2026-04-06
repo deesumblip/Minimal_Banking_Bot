@@ -34,7 +34,7 @@ pipeline:
     # Custom prompt: use domain slot names (amount, recipient, …) in SetSlot commands.
     prompt_template: data/prompts/command_prompt_v3_slot_names.jinja2
     llm:
-      model_group: gpt-4o-mini
+      model_group: openai-gpt-5-1
 ```
 
 3. Do not change `assistant_id`, the **`policies:`** list (keep **`FlowPolicy`**), `recipe`, or the rest of the **`pipeline`** step unless you intend to.

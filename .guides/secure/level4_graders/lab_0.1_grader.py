@@ -99,7 +99,7 @@ else:
         if (
             re.search(r"^\s*actions_module:\s*[\"']?actions[\"']?\s*$", ep_text, re.MULTILINE)
             and re.search(r"^\s*type:\s*[\"']?rephrase[\"']?\s*$", ep_text, re.MULTILINE)
-            and re.search(r"^\s*model_group:\s*[\"']?gpt-4o-mini[\"']?\s*$", ep_text, re.MULTILINE)
+            and re.search(r"^\s*model_group:\s*[\"']?openai-gpt-5-1[\"']?\s*$", ep_text, re.MULTILINE)
         ):
             print(" Check 4: PASSED - action_endpoint, nlg rephrase, model_group (2 points)")
             score += 2
@@ -110,21 +110,21 @@ else:
 print("")
 
 # Check 5: model_groups model + temperature (2 points)
-print("Check 5: Verifying model_groups (gpt-4o + temperature)...")
+print("Check 5: Verifying model_groups (openai-gpt-5-1 + temperature)...")
 if not ENDPOINTS_PATH.exists():
     print("❌ Check 5: FAILED - level4/endpoints.yml not found (0 points)")
 else:
     try:
         ep_text = _read_text(ENDPOINTS_PATH)
         if (
-            re.search(r"^\s*-\s*id:\s*[\"']?gpt-4o-mini[\"']?\s*$", ep_text, re.MULTILINE)
-            and re.search(r"^\s*model:\s*[\"']?gpt-4o-2024-11-20[\"']?\s*$", ep_text, re.MULTILINE)
+            re.search(r"^\s*-\s*id:\s*[\"']?openai-gpt-5-1[\"']?\s*$", ep_text, re.MULTILINE)
+            and re.search(r"^\s*model:\s*[\"']?openai-gpt-5-1[\"']?\s*$", ep_text, re.MULTILINE)
             and re.search(r"^\s*temperature:\s*[\"']?0\.1[\"']?\s*$", ep_text, re.MULTILINE)
         ):
-            print(" Check 5: PASSED - gpt-4o-2024-11-20 at temperature 0.1 (2 points)")
+            print(" Check 5: PASSED - openai-gpt-5-1 at temperature 0.1 (2 points)")
             score += 2
         else:
-            print("❌ Check 5: FAILED - under id gpt-4o-mini use model gpt-4o-2024-11-20, temperature 0.1 (0 points)")
+            print("❌ Check 5: FAILED - under id openai-gpt-5-1 use model openai-gpt-5-1, temperature 0.1 (0 points)")
     except Exception as e:
         print(f"❌ Check 5: FAILED - {e} (0 points)")
 print("")

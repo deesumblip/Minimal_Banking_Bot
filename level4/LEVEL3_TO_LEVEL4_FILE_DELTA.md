@@ -9,7 +9,7 @@ Chapter 1.4 **starts** from **Chapter 1.3 completion**. The **`level3/`** folder
 | File | Chapter 1.3 (`level3/`) | Chapter 1.4 (`level4/`) |
 |------|-------------------------|-------------------------|
 | `config.yml` | `SearchReadyLLMCommandGenerator`; `assistant_id: level3-agent` | `CompactLLMCommandGenerator`; `flow_retrieval`; `assistant_id: level4-agent` (see **Unit 0.2** section 2 in the Chapter 1.4 guide) |
-| `endpoints.yml` | Course Level 3 pattern (often literal mini) | Same **`nlg`** / **`model_groups`** shape; **`gpt-4o-mini`** group id → **`model: gpt-4o-2024-11-20`**, **`temperature: 0.1`** |
+| `endpoints.yml` | Course Level 3 pattern (same **`openai-gpt-5-1`** group id) | Same **`nlg`** / **`model_groups`** shape; **`openai-gpt-5-1`** group id → **`model: openai-gpt-5-1`**, **`temperature: 0.1`** |
 
 ---
 

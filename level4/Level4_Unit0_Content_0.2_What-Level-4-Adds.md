@@ -55,25 +55,25 @@ These differ from Chapter 1.3 **on purpose**. Skipping them often causes **“un
 
 - Keep the same **structure** as Level 3 (**`action_endpoint`**, **`nlg`** with **`type: rephrase`**, **`model_groups`**). Your **`.env`** still supplies API keys.
 
-- **`config.yml`** uses **`model_group: gpt-4o-mini`** for the LLM components. That value is the **`id`** under **`model_groups`**—it is a **label**, not a requirement to call OpenAI’s **`gpt-4o-mini`** model literally.
+- **`config.yml`** sets **`model_group: openai-gpt-5-1`**. That string must match the **`id`** under **`model_groups`** in **`endpoints.yml`** so Rasa uses the intended LLM entry.
 
-- **What you should set (course pattern):** Under **`model_groups`**, the entry with **`id: gpt-4o-mini`** must use **`model: gpt-4o-2024-11-20`** and **`temperature: 0.1`**. **`nlg.llm.model_group`** stays **`gpt-4o-mini`** so it picks up that same group. Example (matches **`level4/endpoints.yml`** in this repo):
+- **What you should set (course pattern):** Under **`model_groups`**, the entry with **`id: openai-gpt-5-1`** must use **`model: openai-gpt-5-1`** and **`temperature: 0.1`**. **`nlg.llm.model_group`** stays **`openai-gpt-5-1`** so it picks up that same group. Example (matches **`level4/endpoints.yml`** in this repo):
 
 ```yaml
 nlg:
   type: rephrase
   llm:
-    model_group: gpt-4o-mini
+    model_group: openai-gpt-5-1
 
 model_groups:
-  - id: gpt-4o-mini
+  - id: openai-gpt-5-1
     models:
       - provider: openai
-        model: gpt-4o-2024-11-20
+        model: openai-gpt-5-1
         temperature: 0.1
 ```
 
-- **What to avoid:** Using **`model: gpt-4o-mini-2024-07-18`** (or similar) together with a **higher** **`temperature`** (e.g. **0.3**) under that group. That combination often **mis-fills** free-text **recipient** or produces flaky **FillSlot** commands—even when **`config.yml`** is already **`CompactLLMCommandGenerator`**.
+- **What to avoid:** A **higher** **`temperature`** (e.g. **0.3**) on that group, or a **`model:`** value that does not match the course **`openai-gpt-5-1`** line. That combination often **mis-fills** free-text **recipient** or produces flaky **FillSlot** commands—even when **`config.yml`** is already **`CompactLLMCommandGenerator`**.
 
 - **What to do:** Copy or diff against **`level4/endpoints.yml`** in this repository. After any change, run **`python -m rasa train`** from **`level4/`** before re-testing in Inspector.
 
@@ -99,10 +99,10 @@ model_groups:
 | Area | Chapter 1.3 end | Chapter 1.4 end adds / changes |
 |------|-----------------|--------------------------------|
 | **Config** | SearchReady | **CompactLLM** + **flow_retrieval** + **`assistant_id`** for level4 |
-| **Endpoints** | NLG + **`model_groups`** (often literal mini) | Same structure, but **`gpt-4o-mini`** group uses **`model: gpt-4o-2024-11-20`**, **`temperature: 0.1`** (see **`level4/endpoints.yml`**) |
+| **Endpoints** | NLG + **`model_groups`** (course **`openai-gpt-5-1`** group id) | Same structure, but **`openai-gpt-5-1`** group uses **`model: openai-gpt-5-1`**, **`temperature: 0.1`** (see **`level4/endpoints.yml`**) |
 | **Domain** | account + asks + bank / holiday / check_balance actions | **+** three transfer slots, three **`utter_ask_*`**, **`action_process_transfer`** |
 | **Actions (Python)** | bank + holiday + check_balance | **+** **`action_process_transfer.py`** |
 | **Flows** | no transfer | **+** **`transfer_money.yml`** |
 | **Train** | level3 model | **Retrain** from **`level4/`** after domain/data/config changes |
 
-**Done when:** **Lab 0.1** (pipeline YAML) and Labs 2.1–5.2 pass, **`level4/config.yml`** matches the **Compact** pipeline pattern, **`level4/endpoints.yml`** matches the course **`model_groups`** / **`temperature`** ( **`gpt-4o`** model under the **`gpt-4o-mini`** group id—see section 2), and the **scripted transfer** in Lab 5.2 reaches a **`(Demo) Transfer of $…`** confirmation.
+**Done when:** **Lab 0.1** (pipeline YAML) and Labs 2.1–5.2 pass, **`level4/config.yml`** matches the **Compact** pipeline pattern, **`level4/endpoints.yml`** matches the course **`model_groups`** / **`temperature`** ( **`openai-gpt-5-1`** model under the **`openai-gpt-5-1`** group id—see section 2), and the **scripted transfer** in Lab 5.2 reaches a **`(Demo) Transfer of $…`** confirmation.

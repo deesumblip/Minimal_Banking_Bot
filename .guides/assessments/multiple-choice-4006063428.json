@@ -21,7 +21,7 @@
 			{
 				"_id": "f84749b9-c1e5-b25c-f198-5867a6eec468",
 				"correct": true,
-				"answer": "GPT-4o-mini"
+				"answer": "openai-gpt-5-1"
 			},
 			{
 				"_id": "66b92118-38b5-3cff-0748-c39ddef19795",
@@ -41,7 +41,7 @@
 		},
 		"bloomsObjectiveLevel": "1",
 		"learningObjectives": "SWBAT identify the LLM model being used in the configuration file",
-		"guidance": "The configuration file specifies `model: gpt-4o-mini-2024-07-18`, indicating that GPT-4o-mini is the LLM model being used.",
+		"guidance": "The configuration file specifies `model: openai-gpt-5-1`, which is the course LLM model id for this agent.",
 		"showGuidanceAfterResponseOption": {
 			"type": "Attempts",
 			"passedFrom": 1

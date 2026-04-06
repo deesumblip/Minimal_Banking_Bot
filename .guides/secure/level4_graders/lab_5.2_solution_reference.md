@@ -25,7 +25,7 @@ The completion check verifies that the student has:
 
 5. **Pipeline (Chapter 1.4)** – `level4/config.yml` has **`CompactLLMCommandGenerator`** in **`pipeline:`** and does **not** use **`SearchReadyLLMCommandGenerator`** as a pipeline step `name`, so the model matches the course slot names (`amount`, `recipient`, `account_from`).
 
-6. **Endpoints (Lab 0.1 / Unit 0.2)** – `level4/endpoints.yml` has **`model_groups`** with **`id: gpt-4o-mini`** whose first model uses **`model: gpt-4o-2024-11-20`** and **`temperature: 0.1`**.
+6. **Endpoints (Lab 0.1 / Unit 0.2)** – `level4/endpoints.yml` has **`model_groups`** with **`id: openai-gpt-5-1`** whose first model uses **`model: openai-gpt-5-1`** and **`temperature: 0.1`**.
 
 Together, these indicate the student can start the agent and test the transfer flow in Rasa Inspector. The grader does not run the agent or Inspector; it only checks files and structure.
 
@@ -40,4 +40,4 @@ Together, these indicate the student can start the agent and test the transfer f
 - **Flow:** `transfer_money.yml` exists with the three collect steps and the action step.
 - **Model:** A model file exists in `level4/models/`.
 - **Config:** `level4/config.yml` pipeline uses **Compact** LLM command generation (not SearchReady).
-- **Endpoints:** `level4/endpoints.yml` **`model_groups`** for **`gpt-4o-mini`** uses **`gpt-4o-2024-11-20`** and **`temperature: 0.1`**.
+- **Endpoints:** `level4/endpoints.yml` **`model_groups`** for **`openai-gpt-5-1`** uses **`openai-gpt-5-1`** and **`temperature: 0.1`**.

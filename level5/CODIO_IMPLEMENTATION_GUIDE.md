@@ -431,17 +431,17 @@ action_endpoint:
 nlg:
   type: rephrase
   llm:
-    model_group: gpt-4o-mini
+    model_group: openai-gpt-5-1
 
 # Tools registration - NEW in Level 5
 tools:
   tools_module: "tools"
 
 model_groups:
-  - id: gpt-4o-mini
+  - id: openai-gpt-5-1
     models:
       - provider: openai
-        model: gpt-4o-mini-2024-07-18
+        model: openai-gpt-5-1
         temperature: 0.3
 ```
 
@@ -484,7 +484,7 @@ tools:
 nlg:
   type: rephrase
   llm:
-    model_group: gpt-4o-mini
+    model_group: openai-gpt-5-1
 
 # Tools registration - NEW in Level 5
 tools:

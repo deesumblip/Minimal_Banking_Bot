@@ -14,7 +14,7 @@
 
 ### Overview
 
-This is a **completion check** (not a full run of the agent in Inspector). The grader verifies that the student has completed the full Level 4 build: (1) domain has the three transfer slots plus **`account`**, four ask responses (including **`utter_ask_account`**), **legacy** actions (`action_bank_hours`, `action_holiday_hours`, `action_check_balance_simple`), and `action_process_transfer`; (2) `action_process_transfer.py` exists and reads the three transfer slots; (3) `transfer_money.yml` exists with the three collect steps and action step; (4) a model file exists in `level4/models/`; (5) **`level4/config.yml`** uses **CompactLLMCommandGenerator** in **`pipeline:`** (not SearchReady); (6) **`level4/endpoints.yml`** under **`model_groups`**, **`id: gpt-4o-mini`**, uses **`model: gpt-4o-2024-11-20`** and **`temperature: 0.1`** (Unit 0.2 / Lab 0.1). Together these indicate the student can run and test the transfer flow. No live Rasa run is required.
+This is a **completion check** (not a full run of the agent in Inspector). The grader verifies that the student has completed the full Level 4 build: (1) domain has the three transfer slots plus **`account`**, four ask responses (including **`utter_ask_account`**), **legacy** actions (`action_bank_hours`, `action_holiday_hours`, `action_check_balance_simple`), and `action_process_transfer`; (2) `action_process_transfer.py` exists and reads the three transfer slots; (3) `transfer_money.yml` exists with the three collect steps and action step; (4) a model file exists in `level4/models/`; (5) **`level4/config.yml`** uses **CompactLLMCommandGenerator** in **`pipeline:`** (not SearchReady); (6) **`level4/endpoints.yml`** under **`model_groups`**, **`id: openai-gpt-5-1`**, uses **`model: openai-gpt-5-1`** and **`temperature: 0.1`** (Unit 0.2 / Lab 0.1). Together these indicate the student can run and test the transfer flow. No live Rasa run is required.
 
 ### Assessment Type
 
@@ -35,7 +35,7 @@ The grader runs from **workspace root** (resolved from the script path). It perf
 3. **Flow file** (2 pts): `level4/data/basics/transfer_money.yml` exists with valid YAML, collect `amount` / `recipient` / `account_from`, and action `action_process_transfer`.
 4. **Model** (2 pts): at least one `.tar.gz` in `level4/models/`.
 5. **Config pipeline** (2 pts): `level4/config.yml` includes **CompactLLMCommandGenerator** and does not use **SearchReadyLLMCommandGenerator** as a pipeline step `name`.
-6. **Endpoints** (2 pts): `level4/endpoints.yml` has **`model_groups`** entry **`id: gpt-4o-mini`** whose first model uses **`model: gpt-4o-2024-11-20`** and **`temperature: 0.1`**.
+6. **Endpoints** (2 pts): `level4/endpoints.yml` has **`model_groups`** entry **`id: openai-gpt-5-1`** whose first model uses **`model: openai-gpt-5-1`** and **`temperature: 0.1`**.
 
 **Total: 12 points.** **Lab 6.2-style:** **Check 1–6**, **` PASS: Lab 5.2 completion check passed! Score: 12/12`** on full pass; exit **0** only on full score.
 

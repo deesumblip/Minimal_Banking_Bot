@@ -18,7 +18,7 @@ The grader checks that:
    - `level4/data/basics/transfer_money.yml` exists with the three collect steps and the action step
    - A model file exists in `level4/models/`
    - `level4/config.yml` uses **`CompactLLMCommandGenerator`** in **`pipeline:`** (not **`SearchReadyLLMCommandGenerator`**)
-   - `level4/endpoints.yml` — under **`model_groups`**, **`id: gpt-4o-mini`** uses **`model: gpt-4o-2024-11-20`** and **`temperature: 0.1`** (**Unit 0.2** / Lab 0.1)
+   - `level4/endpoints.yml` — under **`model_groups`**, **`id: openai-gpt-5-1`** uses **`model: openai-gpt-5-1`** and **`temperature: 0.1`** (**Unit 0.2** / Lab 0.1)
 
 **Inspector:** If the completion check passes but **Part 2** still mis-fills **recipient**, double-check **`endpoints.yml`** and **`config.yml`** and retrain from **`level4/`**.
 

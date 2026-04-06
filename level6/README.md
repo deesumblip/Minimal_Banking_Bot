@@ -27,7 +27,7 @@ Follow the **Chapter 1.6** Unit/Lab pages to create the three deliverables above
 This course deployment passes **only `RASA_LICENSE`** (no separate OpenAI or other vendor API keys).
 
 - Set **`RASA_LICENSE`** before `rasa train` / `rasa run` / `rasa inspect`.
-- **`endpoints.yml`** uses **`provider: rasa`** and **`https://tutorial-llm.rasa.ai`** for model group **`gpt-4o-mini`** (main agent NLG, command generator, and sub-agent **`llm`** all reference that group).
+- **`endpoints.yml`** uses **`provider: rasa`** and **`https://tutorial-llm.rasa.ai`** for model group **`openai-gpt-5-1`** (main agent NLG, command generator, and sub-agent **`llm`** all reference that group).
 
 **Flow retrieval:** **`config.yml`** sets **`flow_retrieval.active: false`** so training does not require OpenAI embeddings for semantic flow retrieval.
 

@@ -176,7 +176,7 @@ Create a directory `.guides/secure/level4_graders/` and add Python graders that 
 
 ### lab_0.1_grader.py
 
-- **Checks:** `level4/config.yml` has `assistant_id: level4-agent`, **`CompactLLMCommandGenerator`** (not SearchReady), **`flow_retrieval`** (turns_to_embed 5, num_flows 20) and **`minimize_num_calls: false`**; `level4/endpoints.yml` has **`action_endpoint`**, **`nlg`** rephrase, **`model_groups`** with **`gpt-4o-2024-11-20`** at **`temperature: 0.1`**. **`code-output-compare-401010001.json`**. Paired with **`fill-in-the-blanks-401010010`**.
+- **Checks:** `level4/config.yml` has `assistant_id: level4-agent`, **`CompactLLMCommandGenerator`** (not SearchReady), **`flow_retrieval`** (turns_to_embed 5, num_flows 20) and **`minimize_num_calls: false`**; `level4/endpoints.yml` has **`action_endpoint`**, **`nlg`** rephrase, **`model_groups`** with **`openai-gpt-5-1`** at **`temperature: 0.1`**. **`code-output-compare-401010001.json`**. Paired with **`fill-in-the-blanks-401010010`**.
 - **Implementation:** Uses **stdlib only** (line/regex checks on file text), like **Level 1** `lab_2.2_grader.py`—no **PyYAML** import, so plain `python3` in Codio’s **COMMAND** works; **`.venv/bin/python3`** is still recommended for consistency with other labs. See **`Level4_Lab0.1_Assessment_Setup.md`**.
 
 ### lab_2.1_grader.py

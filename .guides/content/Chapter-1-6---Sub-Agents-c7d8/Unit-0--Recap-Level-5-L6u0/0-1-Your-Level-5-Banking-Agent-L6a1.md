@@ -55,7 +55,7 @@ In order, you will:
 
 **Scaffolding (same idea as Chapters 1.4–1.5):** For **Labs 2.1, 3.1, and 4.1**, the guide provides **Fill in the blanks** exercises that produce complete YAML snippets. **After you pass** each fill-in, **copy or merge** that YAML into the path in the table above, then run the **Code Test** (**Check It!**) for that lab.
 
-**Heads-up (course deployment):** **`level6/endpoints.yml`** uses the **Rasa-hosted tutorial LLM** (**`provider: rasa`**, **`api_base`** for the tutorial host) and **only** **`RASA_LICENSE`** — no separate vendor API key. The sub-agent therefore uses a **provided** Python module (**`BankingAssistantLiteAgent`**) that works with that host; in Lab 2.1 you set **`configuration.module`** to that import path. Your **`main`** agent still uses the same **`model_group`** id (e.g. **`gpt-4o-mini`**) as in the template.
+**Heads-up (course deployment):** **`level6/endpoints.yml`** uses the **Rasa-hosted tutorial LLM** (**`provider: rasa`**, **`api_base`** for the tutorial host) and **only** **`RASA_LICENSE`** — no separate vendor API key. The sub-agent therefore uses a **provided** Python module (**`BankingAssistantLiteAgent`**) that works with that host; in Lab 2.1 you set **`configuration.module`** to that import path. Your **`main`** agent still uses the same **`model_group`** id (e.g. **`openai-gpt-5-1`**) as in the template.
 
 ---
 

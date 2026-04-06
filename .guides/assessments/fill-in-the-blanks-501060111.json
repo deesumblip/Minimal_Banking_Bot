@@ -6,8 +6,8 @@
 		"showName": false,
 		"instructions": "**Fill in the blanks** to complete the sub-agent config. **After you pass:** save the completed YAML as **`level6/sub_agents/banking_assistant/config.yml`** (create the folder if needed), then run the **Code Test** (the next assessment).",
 		"showValues": true,
-		"text": "```yaml\nagent:\n  name: <<<banking_assistant>>>\n  protocol: <<<RASA>>>\n  description: \"Helps users with balance checks, transfers, and banking questions using MCP tools.\"\n\nconfiguration:\n  llm:\n    model_group: <<<gpt-4o-mini>>>\n  module: actions.banking_assistant_lite_agent.<<<BankingAssistantLiteAgent>>>\n\nconnections:\n  mcp_servers:\n    - name: <<<banking_mcp>>>\n```",
-		"distractors": "banking_mcp\nmain_agent\nOPENAI\nopenai\nreact\nBankingMainAgent\nMCPOpenAgent\nrasa/command-generator\n8080\ngpt-4o\nbanking_tools",
+		"text": "```yaml\nagent:\n  name: <<<banking_assistant>>>\n  protocol: <<<RASA>>>\n  description: \"Helps users with balance checks, transfers, and banking questions using MCP tools.\"\n\nconfiguration:\n  llm:\n    model_group: <<<openai-gpt-5-1>>>\n  module: actions.banking_assistant_lite_agent.<<<BankingAssistantLiteAgent>>>\n\nconnections:\n  mcp_servers:\n    - name: <<<banking_mcp>>>\n```",
+		"distractors": "banking_mcp\nmain_agent\nOPENAI\nopenai\nreact\nBankingMainAgent\nMCPOpenAgent\nrasa/command-generator\n8080\nopenai-gpt-5-1\nbanking_tools",
 		"metadata": {
 			"tags": [
 				{
@@ -25,7 +25,7 @@
 		},
 		"bloomsObjectiveLevel": "",
 		"learningObjectives": "",
-		"guidance": "**`agent.name`** must be **`banking_assistant`** (matches **`call: banking_assistant`** in Lab 4.1). **`protocol`** is **`RASA`**. **`model_group`** must match **`endpoints.yml`** (**`gpt-4o-mini`**). **`module`** ends with **`BankingAssistantLiteAgent`** (provided in **`actions/`**). **`mcp_servers`** name **`banking_mcp`** must match what you register in **`endpoints.yml`** (Lab 3.1). Indentation: two spaces per level. **After you pass,** save as **`level6/sub_agents/banking_assistant/config.yml`**, then run the **Code Test**.",
+		"guidance": "**`agent.name`** must be **`banking_assistant`** (matches **`call: banking_assistant`** in Lab 4.1). **`protocol`** is **`RASA`**. **`model_group`** must match **`endpoints.yml`** (**`openai-gpt-5-1`**). **`module`** ends with **`BankingAssistantLiteAgent`** (provided in **`actions/`**). **`mcp_servers`** name **`banking_mcp`** must match what you register in **`endpoints.yml`** (Lab 3.1). Indentation: two spaces per level. **After you pass,** save as **`level6/sub_agents/banking_assistant/config.yml`**, then run the **Code Test**.",
 		"showGuidanceAfterResponseOption": {
 			"type": "Attempts",
 			"passedFrom": 1
@@ -41,7 +41,7 @@
 			"blank": [
 				"banking_assistant",
 				"RASA",
-				"gpt-4o-mini",
+				"openai-gpt-5-1",
 				"BankingAssistantLiteAgent",
 				"banking_mcp"
 			],

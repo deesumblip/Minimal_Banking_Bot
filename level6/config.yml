@@ -9,7 +9,7 @@ pipeline:
   - name: SearchReadyLLMCommandGenerator
     prompt_template: data/prompts/command_prompt_v3_slot_names.jinja2
     llm:
-      model_group: gpt-4o-mini
+      model_group: openai-gpt-5-1
     # Flow retrieval embeddings default to OpenAI and need OPENAI_API_KEY. Disable here so
     # train/run work with RASA_LICENSE only (NLG + command LLM use endpoints.yml model_groups).
     flow_retrieval:

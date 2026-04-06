@@ -10,7 +10,7 @@ A sub-agent lives in a folder under `sub_agents/<name>/`. Rasa discovers it by n
 You **author** this file in the lab; it is not copy-pasted from the starter tree. It must include:
 
 - **`agent`:** `name` (must match `call:` in the flow), `protocol`, `description`.
-- **`configuration.llm`:** `model_group` matching **`endpoints.yml`** (e.g. `gpt-4o-mini`).
+- **`configuration.llm`:** `model_group` matching **`endpoints.yml`** (e.g. `openai-gpt-5-1`).
 - **`configuration.module`:** **`actions.banking_assistant_lite_agent.BankingAssistantLiteAgent`** — required in this course so the **Rasa tutorial LLM** works without a separate vendor API key. The class **`BankingAssistantLiteAgent`** is **provided** under **`actions/`**; you reference it, you do not reimplement it in the lab.
 - **`connections.mcp_servers`:** at least one **name** (e.g. `banking_mcp`) that you will register in **`endpoints.yml`** in Lab 3.1.
 

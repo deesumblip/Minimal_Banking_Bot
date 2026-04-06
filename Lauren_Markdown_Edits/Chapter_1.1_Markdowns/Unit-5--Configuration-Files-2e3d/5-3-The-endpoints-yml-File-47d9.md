@@ -13,13 +13,13 @@ action_endpoint:
 nlg:
   type: rephrase
   llm:
-    model_group: gpt-4o-mini
+    model_group: openai-gpt-5-1
 
 model_groups:
-  - id: gpt-4o-mini
+  - id: openai-gpt-5-1
     models:
       - provider: openai
-        model: gpt-4o-mini-2024-07-18
+        model: openai-gpt-5-1
         temperature: 0.3
 ```
 
@@ -32,7 +32,7 @@ model_groups:
 
 2. **`nlg:`** (Natural Language Generation)
    - `type: rephrase` enables response rephrasing when a response has `metadata: rephrase: True`
-   - `model_group: gpt-4o-mini` selects which model group to use for rephrasing
+   - `model_group: openai-gpt-5-1` selects which model group to use for rephrasing
 
 3. **`model_groups:`**
    - Declares which LLM provider/model to use

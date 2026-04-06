@@ -16,6 +16,6 @@ Answer these questions by examining the configuration files:
 #### Answers
 
 1. English (`language: en`)
-2. GPT-4o-mini. In the config you'll see something like `model: gpt-4o-mini-2024-07-18`.
+2. **`openai-gpt-5-1`**. In **`endpoints.yml`** (under **`model_groups`**) you'll see **`model: openai-gpt-5-1`** (and the same group id in **`config.yml`** as **`model_group`**).
 3. The `actions/` folder. The config uses `actions_module: "actions"` to point to it.
 4. The LLM will be somewhat creative but mostly consistent. A value of 0.3 is relatively low, meaning less randomness.
