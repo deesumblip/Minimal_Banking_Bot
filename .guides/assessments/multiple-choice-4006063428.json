@@ -11,12 +11,12 @@
 			{
 				"_id": "123a6c93-8747-71a1-3683-ef27429c9685",
 				"correct": false,
-				"answer": "GPT-3.5-turbo"
+				"answer": "gemini-2.0-flash"
 			},
 			{
 				"_id": "f747af3c-676d-1b48-14cf-1bc2eb6232b8",
 				"correct": false,
-				"answer": "GPT-4"
+				"answer": "mistral-large-latest"
 			},
 			{
 				"_id": "f84749b9-c1e5-b25c-f198-5867a6eec468",
