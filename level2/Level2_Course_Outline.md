@@ -197,12 +197,8 @@
   - Complete agent structure
   - What your agent can do now
   - What's still missing (preview of future levels)
-- 7.3 Best Practices
-  - Organizing actions
-  - Writing good actions
-  - Action naming conventions
 
-**Key Concepts**: Integration, best practices, course summary
+**Key Concepts**: Integration, course summary
 
 ---
 

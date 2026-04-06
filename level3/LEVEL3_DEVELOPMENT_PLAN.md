@@ -107,7 +107,7 @@
 - [x] **Level3_Course_Outline.md** – Units and labs listed; assessments marked.  
 - [x] **Level3_Implementation_Overview.md** – Venv root, Codio vs local, Inspector tab, assessment locations.  
 - [x] **level3/README.md** – Quick Start uses venv from root, `cd level3`, Rasa Inspect tab only.  
-- [x] **Level3_Unit*_Content*.md** – Units 0–8; Codio/local and venv order fixed; 7.3 Best Practices, 8.1 Knowledge Check added.  
+- [x] **Level3_Unit*_Content*.md** – Units 0–8; Codio/local and venv order fixed; 8.1 Knowledge Check added.  
 - [x] **Level3_Lab*_Content.md** – Labs 3.1, 4.1, 5.1, 6.1, 6.2, 7.1; Part 1 (Codio) / Part 2 (local); no Ports.  
 - [x] **Level3_Lab*_Assessment_Setup.md** – All six labs; graded labs have LLM Rubric (3.1, 4.1) or Python grader (6.1); ungraded (5.1, 6.2, 7.1) documented.  
 - [ ] **.guides/secure/level3_graders/** – Lab 6.1: `lab_6.1_grader.py` done. Lab 3.1/5.1: solution references done; **optional** `lab_3.1_grader.sh`, `lab_5.1_grader.sh` if offering Option B (Bash).  

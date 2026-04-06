@@ -14,7 +14,7 @@ Assessment of the **Level2_*** content and lab files read in sequence from start
 | **Create** | Unit 3 (3.1, 3.2), Lab 3.1 | "Create your own action" (action_holiday_hours); execution model. Lab 3.1 = build the file. |
 | **Wire in** | Unit 4 + Lab 4.1, Unit 5 + Lab 5.1 | Register both actions; create hours.yml + holiday_hours.yml. |
 | **Run** | Unit 6 + Lab 6.1 | Train and test; verify both flows. |
-| **Integrate** | Unit 7 (7.1–7.3) | Walkthrough (including holiday_hours); summary; best practices. |
+| **Integrate** | Unit 7 (7.1–7.2) | Walkthrough (including holiday_hours); summary. |
 | **Close** | Unit 8 (8.1–8.5) | Knowledge check; what you've learned; limitations; Level 3 preview; checklist. |
 
 **Verdict:** The arc is clear: **recap → concepts → create your action → register it → add a flow → train/test → integrate → review.** The "example vs. your action" thread (action_bank_hours vs. action_holiday_hours) is consistent.

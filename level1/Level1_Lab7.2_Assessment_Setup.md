@@ -2,7 +2,7 @@
 
 ## Guide Content (For Students)
 
-**Placement**: This lab follows Unit 7: Putting It All Together (after 7.2 Summary and 7.3 Best Practices).
+**Placement**: This lab follows Unit 7: Putting It All Together (after 7.2 Summary).
 
 ---
 

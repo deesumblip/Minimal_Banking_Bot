@@ -23,7 +23,7 @@ Level 3 uses **9 units** (0–8): Recap → Slots intro → Slot types → Domai
 | `Level3_Unit4_Content_4.1_Accessing-Slots-in-Actions.md`, `4.2_Placeholder-Handling.md` | tracker.get_slot, placeholder handling; Lab 4.1 |
 | `Level3_Unit5_Content_5.1_*.md`, `5.2_*.md`, `5.3_Creating-the-Flow.md` | Collect step, flow with collect; Lab 5.1 |
 | `Level3_Unit6_Content_6.1_*.md` … `6.4_*.md` | Training, testing, slot state, common issues |
-| `Level3_Unit7_Content_7.1_*.md` … `7.3_*.md` | Walkthrough, summary, best practices |
+| `Level3_Unit7_Content_7.1_*.md`, `7.2_*.md` | Walkthrough, summary |
 | `Level3_Unit8_Content_8.1_*.md` … `8.5_*.md` | Knowledge check, learned, limitations, Level 4 preview, checklist |
 
 ---

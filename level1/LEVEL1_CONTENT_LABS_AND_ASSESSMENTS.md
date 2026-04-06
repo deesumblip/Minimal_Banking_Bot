@@ -42,7 +42,6 @@ Level 1 uses **9 units** (0–8): Setup → Domain → Flows → Patterns → Co
 | `Level1_Unit6_Content_6.4_Testing-Your-Agent.md` | Testing (Codio page **6.3** Testing Your Agent) |
 | `Level1_Unit7_Content_7.1_Complete-Agent-Walkthrough.md` | Walkthrough |
 | `Level1_Unit7_Content_7.2_Your-Level-1-Banking-Agent-Summary.md` | Summary |
-| `Level1_Unit7_Content_7.3_Best-Practices.md` | Best practices |
 | `Level1_Unit8_Content_8.1_Knowledge-Check.md` | Knowledge check |
 | `Level1_Unit8_Content_8.3_Limitations-of-Level-1.md` | Limitations |
 

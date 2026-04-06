@@ -132,10 +132,9 @@
 - 7.1 Complete Agent Walkthrough
 - Lab 7.1: Complete Agent Walkthrough
 - 7.2 Your Level 1 Banking Agent: Summary
-- 7.3 Best Practices
 - Lab 7.2: Build Your Own Feature (Project)
 
-**Key Concepts**: Integration, summary, best practices
+**Key Concepts**: Integration, summary
 
 ---
 

@@ -870,46 +870,6 @@
 </ul>
 <p>You now have a fully-featured conversational banking agent!</p>
 <hr />
-<h3>7.3 Best Practices</h3>
-<h4>Tool Design</h4>
-<ol>
-<li><strong>Clear docstrings</strong>: LLM uses these to understand tools - make them descriptive</li>
-<li><strong>Type hints</strong>: Help LLM understand parameter types</li>
-<li><strong>Return dictionaries</strong>: Tools should return structured data</li>
-<li><strong>Export in <strong>all</strong></strong>: Must list all tools for Rasa to discover them</li>
-</ol>
-<h4>When to Use Tools vs. Actions</h4>
-<p><strong>Use Tools</strong>:<br />
-- When you want LLM to decide what to do<br />
-- For flexible, context-aware operations<br />
-- Complex scenarios with branching</p>
-<p><strong>Use Actions</strong>:<br />
-- For structured, predictable workflows<br />
-- When you need guaranteed execution order<br />
-- Simple, single-purpose operations</p>
-<h4>Tool Documentation</h4>
-<p><strong>Good tool docstring</strong>:</p>
-<div class="codehilite"><pre><span></span><code><span class="sd">&quot;&quot;&quot;Check the balance for a given account.</span>
-
-<span class="sd">This tool retrieves the current balance for a bank account.</span>
-
-<span class="sd">Args:</span>
-<span class="sd">    account: The account number to check (e.g., &quot;1234&quot;)</span>
-
-<span class="sd">Returns:</span>
-<span class="sd">    A dictionary with:</span>
-<span class="sd">        - account: The account number</span>
-<span class="sd">        - balance: The current balance</span>
-<span class="sd">        - currency: The currency code</span>
-<span class="sd">        - status: Account status</span>
-<span class="sd">&quot;&quot;&quot;</span>
-</code></pre></div>
-
-<p><strong>Bad tool docstring</strong>:</p>
-<div class="codehilite"><pre><span></span><code><span class="sd">&quot;&quot;&quot;Check balance.&quot;&quot;&quot;</span>  <span class="c1"># Too vague - LLM won&#39;t understand when to use it</span>
-</code></pre></div>
-
-<hr />
 <h2>Module 8: Assessment and Next Steps</h2>
 <h3>8.1 Knowledge Check</h3>
 <h4>Question 1: What is a Tool?</h4>

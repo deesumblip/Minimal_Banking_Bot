@@ -107,4 +107,6 @@ The following **Chapter 1.1** pages were removed from unit `index.json` `order` 
 
 **Deleted page stems (filename ids):** `0-3-Understanding-YAML-Syntax-0971`, `1-3-Real-World-Use-Cases-d20d`, `1-4-Test-Your-Knowledge-3412`, `Lab-2-1--YAML-Syntax-for-Responses-2906`, `6-4-Understanding-Agent-Behavior-b8c9`, `8-2-What-Youve-Learned-e8f9`, `8-4-Whats-Next-Level-2-Preview-8a04`, `8-5-Course-Completion-Checklist-8a05`.
 
+**Unit 7.3 Best Practices removed (Chapters 1.1–1.3):** Stems `7-3-Best-Practices-a4b5`, `7-3-Best-Practices-a7fd`, `7-3-Best-Practices-f5a6` — page `.md`/`.json` pairs deleted; unit `index.json` `order` arrays updated. Optional `level1`–`level3` mirror files `Level*_Unit7_Content_7.3_Best-Practices.md` removed.
+
 Assessment JSON files referenced only by deleted pages may remain on disk as orphans until cleaned up separately.

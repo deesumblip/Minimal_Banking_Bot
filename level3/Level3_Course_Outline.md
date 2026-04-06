@@ -151,9 +151,8 @@
 **Sections**:
 - 7.1 Complete Agent Walkthrough → **Lab 7.1** (guided demo; no assessment)
 - 7.2 Your Level 3 Banking Agent: Summary
-- 7.3 Best Practices
 
-**Key Concepts**: Integration, summary, best practices
+**Key Concepts**: Integration, summary
 
 ---
 

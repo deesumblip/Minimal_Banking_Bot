@@ -929,28 +929,6 @@ But you now have comprehensive data collection capabilities!
 
 ---
 
-### 7.3 Best Practices
-
-#### Slot Design
-
-1. **One slot per piece of information**: Don't try to store multiple values in one slot
-2. **Logical grouping**: Group related slots together (e.g., all transfer-related slots)
-3. **Clear names**: Use descriptive slot names
-
-#### Collection Order
-
-1. **Logical sequence**: Order slots in a way that makes sense to users
-2. **Dependencies first**: If one slot depends on another, collect the dependency first
-3. **Most important first**: Collect the most critical information first
-
-#### Validation
-
-1. **Validate all slots**: Always check all required slots have values
-2. **Check for placeholders**: Validate that values aren't generic placeholders
-3. **Helpful errors**: Provide clear error messages when validation fails
-
----
-
 ## Unit 8: Assessment and Next Steps
 
 ### 8.1 Knowledge Check

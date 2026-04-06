@@ -53,7 +53,6 @@ No grader change for Lab 6.1 (still "model exists, training succeeded"); the lab
 **Content changes:**
 - **7.1 Walkthrough:** Add a third turn: user asks about holiday hours → `holiday_hours` flow → `action_holiday_hours` runs. Keep the existing turns (greet, hours, contact).
 - **7.2 Summary:** Under "Flows" list both `hours` and `holiday_hours`; under "Actions" list both `action_bank_hours` and `action_holiday_hours`. State that one is the example and one is the action they built.
-- **7.3:** No change needed.
 
 ---
 

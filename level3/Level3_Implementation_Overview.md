@@ -33,7 +33,7 @@ This document provides implementation guidance for **Level 3: Slot Collection** 
 - `Level3_Unit4_Content_4.1_*.md`, `4.2_*.md`
 - `Level3_Unit5_Content_5.1_*.md` … `5.3_*.md`
 - `Level3_Unit6_Content_6.1_*.md` … `6.4_*.md`
-- `Level3_Unit7_Content_7.1_*.md` … `7.3_*.md`
+- `Level3_Unit7_Content_7.1_*.md`, `Level3_Unit7_Content_7.2_*.md`
 - `Level3_Unit8_Content_8.1_*.md` … `8.5_*.md`
 
 ### Lab Content (Student-facing)

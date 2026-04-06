@@ -832,54 +832,6 @@ You now have a fully-featured conversational banking agent!
 
 ---
 
-### 7.3 Best Practices
-
-#### Tool Design
-
-1. **Clear docstrings**: LLM uses these to understand tools - make them descriptive
-2. **Type hints**: Help LLM understand parameter types
-3. **Return dictionaries**: Tools should return structured data
-4. **Export in __all__**: Must list all tools for Rasa to discover them
-
-#### When to Use Tools vs. Actions
-
-**Use Tools**:
-- When you want LLM to decide what to do
-- For flexible, context-aware operations
-- Complex scenarios with branching
-
-**Use Actions**:
-- For structured, predictable workflows
-- When you need guaranteed execution order
-- Simple, single-purpose operations
-
-#### Tool Documentation
-
-**Good tool docstring**:
-```python
-"""Check the balance for a given account.
-    
-This tool retrieves the current balance for a bank account.
-
-Args:
-    account: The account number to check (e.g., "1234")
-        
-Returns:
-    A dictionary with:
-        - account: The account number
-        - balance: The current balance
-        - currency: The currency code
-        - status: Account status
-"""
-```
-
-**Bad tool docstring**:
-```python
-"""Check balance."""  # Too vague - LLM won't understand when to use it
-```
-
----
-
 ## Unit 8: Assessment and Next Steps
 
 ### 8.1 Knowledge Check

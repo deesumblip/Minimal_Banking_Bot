@@ -812,26 +812,6 @@ Agent: &quot;What account number?&quot; (forgot it!)
 - ❌ Use dynamic tool calling (Level 5: Tools)</p>
 <p>But you now have memory - a huge step forward!</p>
 <hr />
-<h3>7.3 Best Practices</h3>
-<h4>Slot Design</h4>
-<ol>
-<li><strong>One slot per piece of information</strong>: Don't try to store multiple values in one slot</li>
-<li><strong>Descriptive names</strong>: Use clear slot names (<code>account</code> not <code>a</code>)</li>
-<li><strong>Appropriate types</strong>: Use <code>text</code> for Level 3 (other types come later)</li>
-</ol>
-<h4>Slot Collection</h4>
-<ol>
-<li><strong>Always provide descriptions</strong>: Help the LLM understand what to extract</li>
-<li><strong>Collect before using</strong>: Make sure <code>collect:</code> comes before actions that need the slot</li>
-<li><strong>Handle missing values</strong>: Always check if slot is <code>None</code> in actions</li>
-</ol>
-<h4>Ask Responses</h4>
-<ol>
-<li><strong>Clear questions</strong>: Make <code>utter_ask_*</code> responses clear and specific</li>
-<li><strong>Consistent naming</strong>: Use <code>utter_ask_&lt;slot_name&gt;</code> convention</li>
-<li><strong>Helpful context</strong>: Tell users why you need the information</li>
-</ol>
-<hr />
 <h2>Module 8: Assessment and Next Steps</h2>
 <h3>8.1 Knowledge Check</h3>
 <h4>Question 1: What is a Slot?</h4>

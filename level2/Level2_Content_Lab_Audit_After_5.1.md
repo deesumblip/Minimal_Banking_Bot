@@ -17,7 +17,7 @@ This audit covers all content and labs that come **after** Level 2 Lab 5.1.
 | Unit 6 | **Lab 6.1** | Run commands (train); no direct file creation by student | Lab with assessment ✓ |
 | Unit 6 | 6.3 Testing Your Action | No — run Inspector, use GUI | None |
 | Unit 6 | 6.4 Debugging Actions | No — read debug output, check files | None |
-| Unit 7 | 7.1, 7.2, 7.3 | No — walkthrough, summary, best practices | None |
+| Unit 7 | 7.1, 7.2 | No — walkthrough, summary | None |
 | Unit 8 | 8.1–8.5 | No — knowledge check, review, checklist | None |
 
 ---
