@@ -8,8 +8,6 @@ This document provides implementation guidance for **Level 1: Just Responses** o
 - Preserve the complete student tutorial content (in separate content and lab files)
 - Use the same file naming and structure as Level 2 for consistency
 - Support auto-grading for key labs (e.g. Lab 0.1, Lab 6.1) via grader scripts
-- Use Codio AI Coach for hints and troubleshooting
-
 ### Content Integration Strategy
 
 - **Unit content**: One markdown file per numbered subsection (e.g. `Level1_Unit1_Content_1.1_What-is-a-Conversational-Agent.md`). Copy into Codio Guide Editor as one page per section.

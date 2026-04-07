@@ -33,7 +33,7 @@
 - **Add** checks for `holiday_hours.yml`: file exists, has `flows:`, has a flow (e.g. `holiday_hours:`), has `name`, `description`, `steps:`, and uses `action_holiday_hours`. Allocate points (e.g. 4–5 for holiday_hours, rest for hours). Max_score can go from 10 to 14–16, or keep 10 and reallocate.
 
 **Student-facing Lab 5.1 (Guide Content):**
-- *"Create (or verify) the example flow `hours.yml` for `action_bank_hours`, and create a new flow `holiday_hours.yml` that uses your `action_holiday_hours`."*
+- *"Create the flow `hours.yml` for `action_bank_hours`, and create `holiday_hours.yml` that uses your `action_holiday_hours`."*
 
 ---
 
@@ -69,15 +69,15 @@ No grader change for Lab 6.1 (still "model exists, training succeeded"); the lab
 ## 6. README (level2/README.md)
 
 **Changes:**
-- **"What this level adds":** Clarify: *"An example action and flow (`action_bank_hours`, `hours.yml`) so you can see how actions work. In Lab 3.1 you create your own action (`action_holiday_hours`); in Labs 4.1 and 5.1 you register it and add a flow for it."*
+- **"What this level adds":** Clarify: *"An example action file (`action_bank_hours.py`) so you can see how actions work. In Lab 3.1 you create your own action (`action_holiday_hours`); in Labs 4.1 and 5.1 you register both actions and add `hours.yml` and `holiday_hours.yml`."*
 - **Exercises:** Align with the new path: (1) Modify `action_holiday_hours` message, (2) Add another action of your choice and register it, (3) Add a flow for that action.
 
 ---
 
 ## 7. Level 2 Starter / Repo (optional)
 
-- **Starter (Codio):** Can still ship with `action_bank_hours.py` and `hours.yml` (and optionally `actions:` and `utter_goodbye` / `goodbye.yml`). Do **not** ship `action_holiday_hours.py` or `holiday_hours.yml` — students create those in Lab 3.1 and 5.1.
-- **domain/basics.yml:** If the starter includes the `actions:` section, it can list only `action_bank_hours`; students add `action_holiday_hours` in Lab 4.1. If the starter has no `actions:` section, students add the section with both actions in Lab 4.1.
+- **Starter (Codio):** Ship **`action_bank_hours.py`** and Level 1 responses/flows; **do not** ship `action_holiday_hours.py`, **`actions:`** in the domain, **`hours.yml`**, or **`holiday_hours.yml`** — students add those in Labs 3.1, 4.1, and 5.1. See **`LEVEL2_STARTER_STATE.md`**.
+- **domain/basics.yml:** Starter has **no** `actions:` section; students add the section and **both** action names in Lab 4.1.
 
 ---
 

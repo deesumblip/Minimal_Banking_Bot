@@ -22,5 +22,3 @@
    - Open `help.yml` and `contact.yml`
    - Notice they all follow the same structure
    - Compare their descriptions - how are they different?
-
-**AI Coach**: Ask questions like "Why does every flow need a description?" or "What happens if I remove the description field?"

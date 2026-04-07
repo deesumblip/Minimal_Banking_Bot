@@ -8,8 +8,6 @@ This document provides implementation guidance for **Level 2: Simple Actions** o
 - Preserve the complete student tutorial content (provided in separate content files)
 - Convert exercises into Codio labs with auto-grading and clear feedback
 - Minimize setup friction (pre-configured environment, templates, helper scripts)
-- Use Codio AI Coach for hints and troubleshooting support
-
 ### Content Integration Strategy
 
 - The full content from the implementation guide is split into separate unit files:
@@ -100,7 +98,7 @@ project/
 
 ---
 
-## AI Coach Configuration Reference (Codio Team)
+## Hint and troubleshooting guidelines (Codio team)
 
 **Guidelines**:
 - Provide hints, not full solutions
@@ -108,7 +106,7 @@ project/
 - Explain why a concept matters (actions vs responses, slots, tools, etc.)
 - Encourage incremental testing (train + inspect frequently)
 
-**Common Topics for AI Coach**:
+**Common topics**:
 - Action class structure and required methods
 - Import statements for Rasa SDK
 - Domain registration syntax
@@ -181,6 +179,7 @@ For Unit 6 (Testing with Actions), configure the terminal so students can "jump 
 
 ### Implementation Files
 - `Level2_Implementation_Overview.md` - This file (for Codio team)
+- `LEVEL2_STARTER_STATE.md` - Canonical list of **starter** vs **Chapter 1.2 completion** bot files (aligns `level2/` with lab narrative)
 
 ---
 

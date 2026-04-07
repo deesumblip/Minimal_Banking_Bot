@@ -81,19 +81,19 @@ Level 2 introduces **Actions** - custom Python code that your agent can execute.
 
 #### What's New in Level 2
 
-**New Files**:
-- `actions/` folder - Contains Python action files
-- `actions/__init__.py` - Makes the folder a Python package
-- `actions/action_bank_hours.py` - Your first custom action
+**In the Chapter 1.2 starter (before Lab 3.1)**:
+- `actions/` folder with `__init__.py` and **`action_bank_hours.py`** (example you study in Units 2–3; not registered in the domain until Lab 4.1)
 
-**Modified Files**:
-- `domain/basics.yml` - Adds `actions:` section to register actions
-- `data/basics/hours.yml` - New flow that uses an action instead of a response
+**Added as students complete labs**:
+- **`action_holiday_hours.py`** (Lab 3.1)
+- **`domain/basics.yml`** — new **`actions:`** section listing both custom actions (Lab 4.1)
+- **`data/basics/hours.yml`** and **`data/basics/holiday_hours.yml`** — flows that call those actions (Lab 5.1)
 
-**Unchanged Files**:
-- All Level 1 responses remain
-- All Level 1 flows remain
-- All configuration files remain (with minor updates to endpoints.yml)
+**Unchanged from Level 1** (in the starter):
+- All Level 1 responses and flows (`greet`, `help`, `contact`, `goodbye`)
+- Configuration files (with minor updates to `endpoints.yml` as needed)
+
+See **`LEVEL2_STARTER_STATE.md`** for a full checklist.
 
 ---
 
@@ -658,19 +658,19 @@ python -m rasa train
 
 #### What Happens During Training
 
-When you run `rasa train`, Rasa:
+After **Labs 3.1–5.1** (both actions registered; `hours.yml` and `holiday_hours.yml` exist), when you run `rasa train`, Rasa:
 
 1. **Reads all flows** from `data/` folder
-   - Finds `hours.yml` with `action_bank_hours`
+   - Finds `hours.yml` with `action_bank_hours` and `holiday_hours.yml` with `action_holiday_hours`
    - Processes all Level 1 flows (unchanged)
 
 2. **Reads the domain** from `domain/` folder
    - Loads all responses (from Level 1)
-   - Loads all actions (new in Level 2)
+   - Loads all actions registered under `actions:` (e.g. `action_bank_hours`, `action_holiday_hours`)
    - Verifies registered actions exist
 
 3. **Validates actions**:
-   - Checks that `action_bank_hours` exists in `actions/` folder
+   - Checks that each registered action has a matching file under `actions/`
    - Verifies the `name()` method returns the registered name
    - Ensures the action class is properly structured
 
@@ -1197,8 +1197,6 @@ This document is a **combined student course + Codio implementation guide** for 
 - Preserve the complete student tutorial content (integrated above)
 - Convert exercises into Codio labs with auto-grading and clear feedback
 - Minimize setup friction (pre-configured environment, templates, helper scripts)
-- Use Codio AI Coach for hints and troubleshooting support
-
 ### Content Integration Strategy
 
 - Unit content is included in this document (to keep the course self-contained). Canonical source for narrative is also the Level2_Unit*_Content_*.md files.
@@ -1266,7 +1264,7 @@ project/
 
 ---
 
-## AI Coach Configuration Reference (Codio Team)
+## Hint and troubleshooting guidelines (Codio team)
 
 **Guidelines**:
 - Provide hints, not full solutions

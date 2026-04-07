@@ -1,4 +1,4 @@
-Training with actions is the same as Level 1, but Rasa now also processes your action files. In **Lab 6.1** you train your agent (go to main folder → activate virtual environment *in the root folder* → `cd level2` → `python -m rasa train`). Here's what happens during that training process:
+Training with actions is the same as Level 1, but Rasa now also processes your action files. In **Lab 6.1** you train your agent (go to main folder → activate virtual environment *in the root folder* → `cd level2` → `python -m rasa train`). The steps below describe what happens **after you have completed Labs 3.1–5.1** (both actions registered, `hours.yml` and `holiday_hours.yml` present).
 
 When you run `rasa train`, Rasa:
 

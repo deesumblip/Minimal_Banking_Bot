@@ -19,5 +19,3 @@
 3. **Explore Response Variations**
    - Check if any responses have multiple variations (multiple `- text:` items)
    - Notice how variations are at the same indentation level
-
-**AI Coach**: If you're confused about YAML syntax, ask the AI Coach: "What does the dash before text: mean?" or "Why do I need metadata: rephrase: True?"

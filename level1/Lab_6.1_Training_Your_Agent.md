@@ -75,8 +75,6 @@
 | **No module named 'rasa'** | Venv not active or Rasa not installed. Run `source .venv/bin/activate`, then `rasa --version`. If it fails, install Rasa Pro: `python -m pip install --no-cache-dir rasa-pro`. |
 | **RASA_LICENSE not set** | Credentials may be pre-configured on Codio. Run the verification commands from Lab 0.1 step 5; if they report "is not set", ask your instructor. Otherwise run training from the `level1/` folder. |
 
-**AI Coach**: Ask "How do I know training succeeded?" or "What should I see when training works?"
-
 ---
 
 ## Part 2: Running locally
@@ -151,7 +149,5 @@ If you're **not** using Codio, follow these steps:
 | **Response 'utter_xyz' not found** | The flow uses a response that isn't in `domain/basics.yml`. Add the response in the domain or fix the typo in the flow so the name matches exactly. |
 | **No module named 'rasa'** | Venv not active or Rasa not installed. Activate the venv, then run `python -m pip install --no-cache-dir rasa-pro`. |
 | **RASA_LICENSE not set** | Create a `.env` file in the same folder as `config.yml` with `RASA_LICENSE=...` (no quotes, no placeholders). Make sure you're running `rasa train` from that folder. |
-
-**AI Coach**: Ask "Where do I put my Rasa license?" or "How do I set environment variables?"
 
 ---

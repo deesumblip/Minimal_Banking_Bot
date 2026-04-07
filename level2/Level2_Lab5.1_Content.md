@@ -7,16 +7,16 @@
 
 ---
 
-In Unit 5.1 you saw how actions are used in flows (e.g. the **hours** flow with `action_bank_hours`). In this lab you create or ensure two flows: the **example** flow `hours.yml` (for `action_bank_hours`) and **your** flow `holiday_hours.yml` (for the action you created in Lab 3.1, `action_holiday_hours`). Follow the steps below, then run the assessment.
+In Unit 5.1 you saw how actions are used in flows (e.g. the **hours** flow with `action_bank_hours`). In this lab you **create** two new flow files: the **example** flow `hours.yml` (for `action_bank_hours`) and **your** flow `holiday_hours.yml` (for the action you created in Lab 3.1, `action_holiday_hours`). Follow the steps below, then run the assessment.
 
 ### Step 1: Navigate to the data folder
 
 1. Go to the `data/basics/` folder (under `level2`).
-2. You should see your Level 1 flows: `greet.yml`, `help.yml`, `contact.yml`.
+2. You should see your Level 1 flows: `greet.yml`, `help.yml`, `contact.yml`, `goodbye.yml`.
 
-### Step 2: Create or ensure the hours flow
+### Step 2: Create the hours flow
 
-1. Create a new file (or open it if your starter already has it): `data/basics/hours.yml`
+1. Create a new file: `data/basics/hours.yml`
 2. Add the following flow so it uses `action_bank_hours`:
 
 ```yaml

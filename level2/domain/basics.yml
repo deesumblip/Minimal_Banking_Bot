@@ -1,6 +1,9 @@
-## Level 2: Responses + Actions (Chapter 1.2 completion)
+## Chapter 1.2 entry: end of Chapter 1.1 + example action (not wired yet)
 #
-# Same responses as Level 1, plus registered custom actions and flows that use them.
+# - Responses only: no `actions:` section yet (students add it in Lab 4.1).
+# - Example Python for Units 2–3: `actions/action_bank_hours.py` (study only until registered).
+# - Students add: `action_holiday_hours.py` (Lab 3.1), domain `actions:` (Lab 4.1),
+#   `hours.yml` and `holiday_hours.yml` (Lab 5.1).
 
 version: "3.1"
 
@@ -29,7 +32,3 @@ responses:
     - text: "Goodbye! Have a great day!"
       metadata:
         rephrase: True
-
-actions:
-  - action_bank_hours
-  - action_holiday_hours

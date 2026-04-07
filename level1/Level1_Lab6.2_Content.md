@@ -13,8 +13,6 @@
 3. **Open Inspector**: In the top menu bar, click the **Rasa Inspect** tab. The chat interface opens.
 4. **Test**: In the chat, type **hello** and press Enter. The agent should respond. Check the flow/debug panel to see which flow triggered.
 
-**AI Coach**: Ask "How do I access Inspector in Codio?" or "Why won't Inspector start?"
-
 ---
 
 ## Part 2: Running locally

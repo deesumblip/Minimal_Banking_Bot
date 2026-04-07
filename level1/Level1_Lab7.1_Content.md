@@ -9,5 +9,3 @@
 1. **Start Inspector** if not already running.
 2. **Have a complete conversation**: Open a new session so that `pattern_session_start` runs. Ask for help, ask for contact info, then end the conversation.
 3. **Observe**: Which flow triggers for each message; use debug output to see LLM understanding; see how flows and responses connect.
-
-**AI Coach**: Ask "How does the agent decide which flow to trigger?" or "What happens when I start a new conversation?"

@@ -13,12 +13,12 @@ actions:
 
 ### Your Task
 
-Add an `actions:` section to `domain/basics.yml` (if it isn't already there) and register **both**:
+Add an `actions:` section to `domain/basics.yml` and register **both**:
 
 - **action_bank_hours** – the example action you studied in the units  
 - **action_holiday_hours** – the action you created in Lab 3.1  
 
-Each action must appear as a list item under `actions:` (e.g. `- action_bank_hours`).
+The Chapter 1.2 starter does **not** include an `actions:` section yet; you add it in this lab. Each action must appear as a list item under `actions:` (e.g. `- action_bank_hours`).
 
 ---
 
@@ -29,7 +29,7 @@ Each action must appear as a list item under `actions:` (e.g. `- action_bank_hou
 1. Navigate to `domain/basics.yml`
 2. Open it in your editor
 
-You should see your Level 1 responses (`utter_greet`, `utter_help`, `utter_contact`). If the starter already has an `actions:` section with `action_bank_hours`, add `action_holiday_hours` to the same list.
+You should see your Level 1 responses (`utter_greet`, `utter_help`, `utter_contact`, `utter_goodbye`). There is no `actions:` section until you add one below.
 
 ---
 
@@ -37,7 +37,7 @@ You should see your Level 1 responses (`utter_greet`, `utter_help`, `utter_conta
 
 1. Find the end of the `responses:` section
 2. Add a blank line
-3. Add the `actions:` section (or add `action_holiday_hours` to an existing list):
+3. Add the `actions:` section with **both** actions listed:
 
 ```yaml
 actions:

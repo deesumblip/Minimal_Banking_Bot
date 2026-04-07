@@ -18,5 +18,3 @@
 3. **Examine `pattern_completed`**
    - Notice it has `noop: true` and `next: END`
    - Understand this marks the end of a conversation
-
-**AI Coach**: Ask "When does pattern_session_start trigger?" or "What happens if I remove pattern_completed?"

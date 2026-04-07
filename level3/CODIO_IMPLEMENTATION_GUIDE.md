@@ -47,7 +47,7 @@ For full details, see **Level3_Implementation_Overview.md**.
 
 ---
 
-## AI Coach / Troubleshooting
+## Troubleshooting
 
 - Point learners to the correct file and section (e.g. `domain/basics.yml` for slots, flow files for `collect:`).
 - Common issues (slot not collected, slot always None) are covered in **Unit 6.4** content (`Level3_Unit6_Content_6.4_Common-Issues-with-Slots.md` and the same content in Chapter 1.3).

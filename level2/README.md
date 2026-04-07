@@ -13,7 +13,7 @@
 
 ⚠️ **Important**: This level builds on your Level 1 banking agent. You don't start from scratch!
 
-**Repo note (Chapter 1.2 end state):** The **`level2/`** folder in this repository is the **completed** Chapter 1.2 agent: same responses, flows, and both custom actions as the **`level3/`** starter used in Chapter 1.3 (aside from `assistant_id` in `config.yml` and the header comments in `domain/basics.yml`). If you follow the labs from a minimal tree, you will **build** the holiday action and flows in order; if you clone the repo to study, you already have the full Level 2 agent here.
+**Repo note (starter vs completion):** The **`level2/`** folder is the **Chapter 1.2 entry** state: end of Chapter 1.1 (responses + Level 1 flows), plus the **example** `actions/action_bank_hours.py` for Units 2–3. It does **not** include `action_holiday_hours.py`, an `actions:` block in the domain, or `hours.yml` / `holiday_hours.yml`—students add those in Labs 3.1, 4.1, and 5.1. The **`level3/`** folder in this repo remains a **completed** Chapter 1.2 baseline (both actions + flows) for Chapter 1.3. See **`LEVEL2_STARTER_STATE.md`** for a full file checklist and the **post–Chapter 1.2** end state.
 
 **What stays the same:**
 - All responses from Level 1 (`utter_greet`, `utter_help`, `utter_contact`, `utter_goodbye`)
@@ -21,8 +21,8 @@
 - All configuration files (`config.yml`, `credentials.yml`, `endpoints.yml`)
 
 **What this level adds (conceptually; labs walk you through creating and wiring pieces):**
-- An **example** action and flow (`action_bank_hours`, `hours.yml`) so you can see how actions work.
-- **Lab 3.1** — create **`action_holiday_hours`**. **Labs 4.1 and 5.1** — register it in the domain and add **`holiday_hours.yml`**.
+- An **example** action file (`action_bank_hours.py`) to study before you write your own.
+- **Lab 3.1** — create **`action_holiday_hours.py`**. **Lab 4.1** — add an **`actions:`** section and register **`action_bank_hours`** and **`action_holiday_hours`**. **Lab 5.1** — create **`hours.yml`** and **`holiday_hours.yml`**.
 
 **Your existing Level 1 banking agent continues to work** — this level adds custom Python code (actions) on top of it, and you build and wire in your own action.
 
@@ -69,17 +69,16 @@
 
 ### Actions Folder (`actions/`)
 - `__init__.py` - Makes the folder a Python package
-- `action_bank_hours.py` - **Example** action (bank hours by day)
-- `action_holiday_hours.py` - Holiday schedule (you create this in **Lab 3.1** when working through the course from scratch; it is already present in this repo’s `level2/` as the Chapter 1.2 completion)
+- `action_bank_hours.py` - **Example** action (bank hours by day); you register it in **Lab 4.1**
+- `action_holiday_hours.py` - You **create** this file in **Lab 3.1** (not present in the starter)
 
 ### Domain (`domain/basics.yml`)
-- **`actions:` section** — Registers `action_bank_hours` and `action_holiday_hours` (Lab 4.1 covers registering actions when you add them yourself)
-- All Level 1 responses remain unchanged
+- **`responses:`** — Same as Chapter 1.1 end state (including `utter_goodbye`)
+- **`actions:`** — You add this section in **Lab 4.1** and list both custom actions
 
 ### Flows that use actions
-- **hours.yml** - Example flow using `action_bank_hours`
-- **holiday_hours.yml** - Flow for `action_holiday_hours` (you create this in **Lab 5.1** when building step by step; present in this repo for parity with **`level3/`**)
-- All Level 1 flows (greet, help, contact, goodbye) remain unchanged
+- **`hours.yml`** and **`holiday_hours.yml`** — You create both in **Lab 5.1**
+- All Level 1 flows (`greet`, `help`, `contact`, `goodbye`) remain as in Chapter 1.1
 
 ## Key Concepts
 

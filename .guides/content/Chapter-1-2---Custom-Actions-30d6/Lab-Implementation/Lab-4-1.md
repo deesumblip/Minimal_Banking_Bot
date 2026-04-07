@@ -8,7 +8,7 @@
 
 ### Your Task
 
-Add an `actions:` section to `domain/basics.yml` (if it isn’t already there) and register **both**:
+Add an `actions:` section to `domain/basics.yml` and register **both** (the Chapter 1.2 starter has responses only—no `actions:` section yet):
 
 - **action_bank_hours** – the example action you studied in the units  
 - **action_holiday_hours** – the action you created in Lab 3.1  

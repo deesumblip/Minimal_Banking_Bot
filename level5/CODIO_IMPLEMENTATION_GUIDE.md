@@ -1054,8 +1054,6 @@ This document is a **combined student course + Codio implementation guide** for 
 - Preserve the complete student tutorial content (integrated above)
 - Convert exercises into Codio labs with auto-grading and clear feedback
 - Minimize setup friction (pre-configured environment, templates, helper scripts)
-- Use Codio AI Coach for hints and troubleshooting support
-
 ### Content Integration Strategy
 
 - Unit content is included in this document (to keep the course self-contained). Canonical source for narrative is also the Level5_Unit*_Content_*.md files.
@@ -1126,7 +1124,7 @@ project/
 
 ---
 
-## AI Coach Configuration Reference (Codio Team)
+## Hint and troubleshooting guidelines (Codio team)
 
 **Guidelines**:
 - Provide hints, not full solutions

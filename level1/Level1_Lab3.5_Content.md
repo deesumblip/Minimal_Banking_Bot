@@ -22,5 +22,3 @@
 - Both flows have `name:` and `description:` at least 20 characters long, specific and action-oriented.
 - Both have `steps:` with at least one action
 - Descriptions are unique; YAML uses 2 spaces, no tabs
-
-**AI Coach**: Ask "How do I write a good flow description?" or "What makes a description too vague?"

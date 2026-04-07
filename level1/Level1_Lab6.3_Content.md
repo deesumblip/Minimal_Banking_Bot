@@ -14,5 +14,3 @@
 #### Documentation
 
 For each test, note: what you said, which flow triggered, what the agent responded, and whether it matched your expectations.
-
-**AI Coach**: Ask "Why isn't my flow triggering?" or "How do I test if my agent works correctly?"

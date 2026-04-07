@@ -21,8 +21,6 @@ Test your agent with multiple phrasings so you see how the LLM matches different
 
 For each test, note: what you said, which flow triggered, what the agent replied, and whether it matched your expectations. That makes it easier to spot when the wrong flow runs or a response is off.
 
-**AI Coach**: Ask "Why isn't my flow triggering?" or "How do I test if my agent works correctly?"
-
 #### Understanding flow triggers
 
 The LLM uses your flow descriptions to match user messages. For example:
