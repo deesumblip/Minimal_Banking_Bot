@@ -1,9 +1,17 @@
 {
   "id": "6304cd50-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
   "title": "Lab 6.1: Training and Testing with Actions",
-  "files": [],
-  "layout": "1-panel",
-  "path": [],
+  "files": [
+    {
+      "path": "#terminal",
+      "panel": 1,
+      "action": "open"
+    }
+  ],
+  "layout": "2-panels-tree-guides-left",
+  "path": [
+    "level2"
+  ],
   "type": "page",
   "contentType": "markdown",
   "teacherOnly": false,

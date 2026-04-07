@@ -1,9 +1,17 @@
 {
   "id": "f68f552b-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
   "title": "Lab 6.2: Verify Domain and Training",
-  "files": [],
-  "layout": "1-panel",
-  "path": [],
+  "files": [
+    {
+      "path": "#terminal",
+      "panel": 1,
+      "action": "open"
+    }
+  ],
+  "layout": "2-panels-tree-guides-left",
+  "path": [
+    "level2"
+  ],
   "type": "page",
   "contentType": "markdown",
   "teacherOnly": false,

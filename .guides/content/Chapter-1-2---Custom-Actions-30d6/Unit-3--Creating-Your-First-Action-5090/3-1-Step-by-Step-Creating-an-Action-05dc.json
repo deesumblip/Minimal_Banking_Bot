@@ -1,9 +1,17 @@
 {
   "id": "520d5a79-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
   "title": "3.1 Step-by-Step: Creating an Action",
-  "files": [],
-  "layout": "1-panel",
-  "path": [],
+  "files": [
+    {
+      "path": "level2/actions/action_bank_hours.py",
+      "panel": 1,
+      "action": "open"
+    }
+  ],
+  "layout": "2-panels-tree-guides-left",
+  "path": [
+    "level2"
+  ],
   "type": "page",
   "contentType": "markdown",
   "teacherOnly": false,

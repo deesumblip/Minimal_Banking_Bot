@@ -1,9 +1,17 @@
 {
   "id": "74c45d34-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
   "title": "1.4 Test Your Knowledge",
-  "files": [],
-  "layout": "1-panel",
-  "path": [],
+  "files": [
+    {
+      "path": "",
+      "panel": 1,
+      "action": "open"
+    }
+  ],
+  "layout": "2-panels-tree-guides-left",
+  "path": [
+    "level2"
+  ],
   "type": "page",
   "contentType": "markdown",
   "content": "",
