@@ -11,7 +11,7 @@ This document provides implementation guidance for **Level 2: Simple Actions** o
 ### Content Integration Strategy
 
 - The full content from the implementation guide is split into separate unit files:
-  - `Level2_Unit0_Content_*.md` through `Level2_Unit7_Content_*.md` - Student-facing content (Unit 7 includes wrap-up and former Unit 8 material)
+  - `Level2_Unit0_Content_*.md` through `Level2_Unit6_Content_*.md` - Student-facing content (Unit **6.4** includes Level 2 wrap-up and former Unit 7 / Unit 8 material)
   - `Level2_Troubleshooting_Content.md` - Troubleshooting guide
   - `Level2_AdditionalResources_Content.md` - Extension exercises and resources
 - Each unit's content can be copy/pasted directly into Codio Guide Editor content pages
@@ -165,8 +165,7 @@ For Unit 6 (Testing with Actions), configure the terminal so students can "jump 
 - `Level2_Lab3.1_Content.md`, `Level2_Unit3_Content_3.2_*` (stub; execution text is in Lab 3.1) — Unit 3
 - `Level2_Unit4_Content.md` - Registering Actions in the Domain
 - `Level2_Unit5_Content.md` - Using Actions in Flows
-- `Level2_Unit6_Content.md` - Training and Testing with Actions
-- `Level2_Unit7_Content_7.1_*.md` - Putting It All Together, review, knowledge check, Level 3 preview (single page; former Unit 8 merged here)
+- `Level2_Unit6_Content_6.2_*.md`, `6.3_*.md`, `6.4_*.md` - Training, testing, debugging, and **Level 2 wrap-up** (single **6.4** page; former standalone Unit 7 and Unit 8 merged here)
 - `Level2_Troubleshooting_Content.md` - Troubleshooting Guide
 - `Level2_AdditionalResources_Content.md` - Extension Exercises
 

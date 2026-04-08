@@ -48,17 +48,17 @@ No grader change for Lab 6.1 (still "model exists, training succeeded"); the lab
 
 ---
 
-## 4. Unit 7 (Putting It All Together)
+## 4. Unit 6 — page 6.4 (Level 2 wrap-up; former Unit 7)
 
 **Content changes:**
-- **7.1 (single page):** Walkthrough includes holiday hours → `holiday_hours` → `action_holiday_hours` plus greet, hours, contact. Same page summarizes domain/flows/actions (both `hours` / `holiday_hours` and example vs student action), future levels, and best practices (former 7.2 / 7.3-style material merged here).
+- **6.4 (single page):** Walkthrough includes holiday hours → `holiday_hours` → `action_holiday_hours` plus greet, hours, contact. Same page summarizes domain/flows/actions (both `hours` / `holiday_hours` and example vs student action), future levels, and best practices (former 7.2 / 7.3-style material merged here).
 
 ---
 
-## 5. Unit 7 wrap-up (former Unit 8 merged into 7.1)
+## 5. Unit 6 wrap-up (former Unit 8 merged into 6.4)
 
 **Content changes:**
-- End of **7.1** should include recap, limitations, Level 3 preview, and readiness items that reference **`action_holiday_hours`** and **`holiday_hours`** alongside the example action and **`hours`** flow.
+- End of **6.4** should include recap, limitations, Level 3 preview, and readiness items that reference **`action_holiday_hours`** and **`holiday_hours`** alongside the example action and **`hours`** flow.
 
 ---
 
@@ -86,7 +86,7 @@ No grader change for Lab 6.1 (still "model exists, training succeeded"); the lab
 | **Unit 5 content** | Lab 5.1: add "Your flow: holiday_hours.yml" using action_holiday_hours. |
 | **Lab 5.1** | Grader: require holiday_hours.yml + structure + action_holiday_hours; student instructions: create hours.yml (if needed) and holiday_hours.yml. |
 | **Unit 6** | 6.3: add "test both regular and holiday hours." |
-| **Unit 7 (7.1)** | Single page: walkthrough, both actions/flows, practices, MC check, recap, limitations, L3 preview, readiness (former 7.2–7.3 and Unit 8 merged). |
+| **Unit 6 (6.4)** | Single page: walkthrough, both actions/flows, practices, MC check, recap, limitations, L3 preview, readiness (former Unit 7 and Unit 8 merged). |
 | **README** | Clarify example vs. your action; align exercises. |
 
 ---

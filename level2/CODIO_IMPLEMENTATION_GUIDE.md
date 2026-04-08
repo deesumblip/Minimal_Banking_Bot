@@ -567,9 +567,9 @@ flows:
 
 ---
 
-## Unit 6: Training and Testing with Actions
+## Unit 6: Training, Testing, and Level 2 Wrap-Up
 
-**Codio guide:** Student-facing training content lives on **Lab 6.1** (`Lab-6-1--Training-and-Testing-with-Actions-7710.md`). The subsections below are the full instructor reference (including local PowerShell).
+**Codio guide:** Student-facing pages include **Lab 6.1** (`Lab-6-1--Training-and-Testing-with-Actions-7710.md`), **6.2**, **Lab 6.2**, **6.3**, and **6.4** (`6-4-Level-2-Wrap-Up-d798.md` — integration, knowledge check, Level 3 preview). The subsections below are the full instructor reference (including local PowerShell).
 
 ### 6.1 Training with Actions
 
@@ -694,13 +694,9 @@ When testing in Inspector, check the debug panel: which flow was triggered, whic
 2. **Action executes but no message**: `dispatcher.utter_message()` is called; check for Python errors in the action.
 3. **Python errors in action**: Syntax, imports, and method names.
 
----
+### 6.4 Level 2 Wrap-Up: Integration, Review, and Next Level
 
-## Unit 7: Putting It All Together (single page; former Unit 8 merged here)
-
-### 7.1 Level 2 Wrap-Up: Integration, Review, and Next Level
-
-One student-facing page in Codio (`7-1-Complete-Agent-Walkthrough-d798`): integration walkthrough, project map, best practices, **five multiple-choice Check It! assessments** (`multiple-choice-1208100001`–`0005`), merged recap of concepts and skills, Level 2 limitations vs when to move on, Level 3 preview (same agent; add `holiday_hours` / `action_holiday_hours` to the “what stays” list), and readiness checklist.
+One student-facing page in Codio (`6-4-Level-2-Wrap-Up-d798`): integration walkthrough, project map, best practices, **five multiple-choice Check It! assessments** (`multiple-choice-1208100001`–`0005`), merged recap of concepts and skills, Level 2 limitations vs when to move on, Level 3 preview (same agent; add `holiday_hours` / `action_holiday_hours` to the “what stays” list), and readiness checklist.
 
 #### Conversation example
 
@@ -708,9 +704,9 @@ Include session start, `hours` + `action_bank_hours`, `holiday_hours` + `action_
 
 #### Practices, knowledge check, recap, limitations, Level 3
 
-Align prose with `Level2_Unit7_Content_7.1_Complete-Agent-Walkthrough.md` / `.guides/.../7-1-Complete-Agent-Walkthrough-d798.md`. Avoid duplicating the “future levels” roadmap in both “at a glance” and limitations—limitations + Level 3 sections carry that detail.
+Align prose with `Level2_Unit6_Content_6.4_Level-2-Wrap-Up.md` / `.guides/.../6-4-Level-2-Wrap-Up-d798.md`. Avoid duplicating the “future levels” roadmap in both “at a glance” and limitations—limitations + Level 3 sections carry that detail.
 
-**Former Unit 8** stems (`8-1-Knowledge-Check-9fc3` through `8-5-Course-Completion-Checklist-5f74`) removed from the chapter; content lives only in **7.1**.
+**Former Unit 7** page stem `7-1-Complete-Agent-Walkthrough-d798` was retired; wrap-up lives as **6.4** at the end of Unit 6. **Former Unit 8** content was merged into that wrap-up page earlier.
 
 ---
 

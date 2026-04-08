@@ -1,6 +1,6 @@
 # Level 2: Narrative Structure Assessment
 
-Assessment of the **Level2_*** content and lab files read in sequence from start to finish. Intended order: **Unit 0 → 1 → 2 → [Lab 2.1] → Lab 3.1 (Unit 3) → Unit 4 → Lab 4.1 → Unit 5 → Lab 5.1 → Unit 6 → Lab 6.1 → Unit 7** (final page includes former Unit 8 wrap-up).
+Assessment of the **Level2_*** content and lab files read in sequence from start to finish. Intended order: **Unit 0 → 1 → 2 → [Lab 2.1] → Lab 3.1 (Unit 3) → Unit 4 → Lab 4.1 → Unit 5 → Lab 5.1 → Unit 6** (labs 6.1–6.2, pages 6.2–6.3, then **6.4** wrap-up; former Unit 7 / Unit 8 material merged into **6.4**).
 
 ---
 
@@ -28,7 +28,7 @@ Assessment of the **Level2_*** content and lab files read in sequence from start
 - **Lab 3.1 (Unit 3)** → Names action_holiday_hours and "Later (Labs 4.1 and 5.1) you'll register it and add a flow"; "Next: Unit 4 / Lab 4.1 … Unit 5 / Lab 5.1."
 - **4.2, 4.3, 4.4** → "the action you created in Lab 3.1", "action_holiday_hours."
 - **Lab 5.1** → "the action you created in Lab 3.1", "your flow holiday_hours.yml"; "In Unit 6 you'll train and test both."
-- **7.1** (wrap-up sections) → "the action you created in Lab 3.1", "your flow (holiday_hours)", "holiday_hours.yml."
+- **6.4** (wrap-up sections) → "the action you created in Lab 3.1", "your flow (holiday_hours)", "holiday_hours.yml."
 
 ### Gaps (weaker or missing links)
 - **Unit 2.2 (end):** No forward pointer. A single line would help: e.g. *"In Lab 3.1 you'll use this structure to create your own action (Unit 3)."*
@@ -39,14 +39,14 @@ Assessment of the **Level2_*** content and lab files read in sequence from start
 ### Backward references
 - References to "Level 1," "action_bank_hours," "the pattern you've seen," and "Lab 3.1" are consistent. No broken "as you saw in Unit X" that assume old file names or order.
 
-**Verdict:** The main story (0 → Lab 3.1 → 4.1 → 5.1 → 6 → 7) is well connected. The gaps above are small and mostly about one-line bridges or reminders.
+**Verdict:** The main story (0 → Lab 3.1 → 4.1 → 5.1 → 6 → 6.4) is well connected. The gaps above are small and mostly about one-line bridges or reminders.
 
 ---
 
 ## 3. Consistency of Terminology and Voice
 
 - **"You" / "your":** Used consistently (your action, your flow, you created, you'll register).
-- **"Example" vs "yours":** Clear in 0.2, Lab 3.1, 4.4, Lab 5.1, 7.1 (action_bank_hours / hours = example; action_holiday_hours / holiday_hours = yours).
+- **"Example" vs "yours":** Clear in 0.2, Lab 3.1, 4.4, Lab 5.1, 6.4 (action_bank_hours / hours = example; action_holiday_hours / holiday_hours = yours).
 - **Lab and unit names:** "Lab 3.1," "Unit 4," "Lab 4.1," etc. used consistently.
 - **File/action names:** action_holiday_hours, holiday_hours.yml, action_bank_hours, hours.yml used consistently.
 
@@ -70,7 +70,7 @@ Assessment of the **Level2_*** content and lab files read in sequence from start
 
 - **Repetition of "action you created in Lab 3.1" / "action_holiday_hours":** Used in 4.2, 4.3, 4.4, Lab 5.1, 7.1. This reinforces the thread without feeling heavy.
 - **Recap of structure (imports, name(), run(), return []):** In Unit 1.3, 2.1, Lab 3.1. Appropriate for learning; Lab 3.1 ties it to "your" action and ends with execution steps.
-- **Training/testing:** **Lab 6.1** explains training; **6.3** describes Inspector testing and debugging tips; **7.1** shows a full conversation and closes the level. No unnecessary duplication.
+- **Training/testing:** **Lab 6.1** explains training; **6.3** describes Inspector testing and debugging tips; **6.4** shows a full conversation and closes the level. No unnecessary duplication.
 
 **Verdict:** Redundancy is controlled and supports the narrative. Pacing (concepts → one hands-on create → register → flow → train → integrate → review) is good.
 
@@ -91,7 +91,7 @@ Assessment of the **Level2_*** content and lab files read in sequence from start
 | Lab 5.1 | ✓ | "example flow" + "your flow" | — |
 | Unit 6 | ✓ | 6.3 tests both flows | 6.1: mention holiday_hours.yml / action_holiday_hours in training |
 | Lab 6.1 | ✓ | — | — |
-| Unit 7 | ✓ | Single 7.1: walkthrough + structure + practices + MC check + limitations + L3 preview + checklist | — |
+| 6.4 | ✓ | Single wrap-up page: walkthrough + structure + practices + MC check + limitations + L3 preview + checklist | — |
 
 ---
 

@@ -15,7 +15,7 @@ This report compares **content** (`.guides/content/` chapter and unit structure)
 | Chapter | index.json `order` | Unit folders / notes | Coherent? |
 |---------|--------------------|----------------------|-----------|
 | 1.1 Just Responses | Unit-0 … Unit-8 (9 units) | Present (see §8 for trimmed pages) | Yes |
-| 1.2 Custom Actions | Unit-0 … Unit-7 (8 units; wrap-up merged into Unit 7) | Present | Yes |
+| 1.2 Custom Actions | Unit-0 … Unit-6 (7 units; Level 2 wrap-up is **6.4** at end of Unit 6) | Present | Yes |
 | 1.3 Slot Collection | Unit-0 … Unit-8 (9 units) | Present | Yes |
 | 1.4 Multiple Slots | Unit-0 … Unit-6 (7 units) | Unit-0 folder present; order matches | Yes |
 | 1.5 Tool Calling | Unit-0 … Unit-6 (7 units) | Present | Yes |
@@ -38,8 +38,7 @@ For each unit, the `order` array should list page ids that have a matching `.md`
 - **Chapter 1.4 Unit 0:** `order` = `["0-1-Your-Level-3-Banking-Agent-e4f5","0-2-What-Level-4-Adds-f5a6"]`; Unit-0 folder has matching .md and .json for both. Coherent.
 - **Chapter 1.4 Unit 1:** order includes 1-1, 1-2, 1-3, 1-4-Test-Your-Knowledge-e4f5; all have .md and .json. Coherent.
 - **Chapter 1.2 Unit 3:** `order` = `["Lab-3-1--Create-Your-Own-Action-04c0"]` only (one guide page). Removed stems (no longer in TOC): `3-1-Step-by-Step-Creating-an-Action-05dc`, `3-2-Understanding-Action-Execution-199d`; execution prose merged into **Lab 3.1**.
-- **Chapter 1.2 Unit 6:** `order` starts with **`Lab-6-1--Training-and-Testing-with-Actions-7710`**; removed stem **`6-1-Training-with-Actions-c79c`** (merged into Lab 6.1). Removed stem **`6-4-Debugging-Actions-6978`** (merged into **`6-3-Testing-Your-Action-4ae9`**).
-- **Chapter 1.2 Unit 7:** `order` is **`7-1-Complete-Agent-Walkthrough-d798`** only; removed stem **`7-2-Your-Level-2-Banking-Agent-Summary-4ed7`** (merged into **`7-1-Complete-Agent-Walkthrough-d798`** along with former **7.3**-style best practices). **Unit 8** removed from the chapter: stems **`8-1-Knowledge-Check-9fc3`** through **`8-5-Course-Completion-Checklist-5f74`** deleted; content and **Check It!** MCs merged into **`7-1-Complete-Agent-Walkthrough-d798`**. Unit **`index.json`** title: **Unit 7: Putting It All Together — Wrap-Up** (aligned with single wrap-up page).
+- **Chapter 1.2 Unit 6:** `order` is **`Lab-6-1--Training-and-Testing-with-Actions-7710`**, **`6-2-Common-Training-Errors-with-Actions-9733`**, **`Lab-6-2--Verify-Domain-and-Training-2289`**, **`6-3-Testing-Your-Action-4ae9`**, **`6-4-Level-2-Wrap-Up-d798`** (Level 2 wrap-up; **5×** MC **Check It!**). Removed stems: **`6-1-Training-with-Actions-c79c`** (merged into Lab 6.1); **`6-4-Debugging-Actions-6978`** (merged into **`6-3-Testing-Your-Action-4ae9`**). **Separate Unit 7 removed:** former page **`7-1-Complete-Agent-Walkthrough-d798`** retired; **`7-2-Your-Level-2-Banking-Agent-Summary-4ed7`** and former **7.3**-style material, plus **Unit 8** stems **`8-1-Knowledge-Check-9fc3`** through **`8-5-Course-Completion-Checklist-5f74`**, are merged into **`6-4-Level-2-Wrap-Up-d798`**. Unit **`index.json`** title: **Unit 6: Training, Testing, and Level 2 Wrap-Up**.
 - **Chapter 1.2 Unit 4:** Removed duplicate **`Lab-4-1-3406.md`** (stray copy of **`Lab-4-1--Registering-Actions-in-the-Domain-3406.md`** with a corrupted first line); TOC uses the long-form stem only.
 - **Chapter 1.6:** Each unit has `index.json`; every listed page stem has matching `.md` and `.json`. Coherent for Codio expectations.
 

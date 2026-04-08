@@ -1,10 +1,12 @@
-This page finishes Level 2. It walks through a **full conversation** (Level 1 plus the example action and your Lab 3.1 action), maps **where your files live**, and suggests **practices** for testing and maintenance. After that, you will find a short **knowledge check** (use **Check It!** for each question), a recap of **core ideas and skills**, what Level 2 **still cannot** do, how **Level 3** builds on the **same** banking agent, and a **readiness** checklist before you leave this level.
+### 6.4 Level 2 Wrap-Up: Integration, Review, and Next Level
+
+This last page of **Unit 6** finishes Level 2. It walks through a **full conversation** (Level 1 plus the example action and your Lab 3.1 action), maps **where your files live**, and suggests **practices** for testing and maintenance. After that, you will find a short **knowledge check** (use **Check It!** for each question), a recap of **core ideas and skills**, what Level 2 **still cannot** do, how **Level 3** builds on the **same** banking agent, and a **readiness** checklist before you leave this level.
 
 #### A complete conversation
 
 The trace below shows static responses, the course example action (`action_bank_hours` / `hours`), and the action you added in Lab 3.1 (`action_holiday_hours` / `holiday_hours`). Replay the same turns in Rasa Inspector to watch which flow and step run after each message—that is how domain entries, flow YAML, and Python under `actions/` show up in the running agent.
 
-```text
+```
 [User opens chat - new session starts]
 
 1. pattern_session_start triggers automatically (Level 1)
@@ -27,7 +29,7 @@ Agent: "Hi! I'm a banking assistant. How can I help you today?"
    Action executes Python code (checks current day via datetime)
    dispatcher.utter_message() sends message
    ↓
-Agent: [Dynamic message, e.g., "Today is Saturday, we're open 10am-2pm." or full schedule on weekdays]
+Agent: [Dynamic message—e.g., "Today is Saturday—we're open 10am-2pm." or full schedule on weekdays]
 
 [User types: "What are your holiday hours?"]
 
@@ -40,7 +42,7 @@ Agent: [Dynamic message, e.g., "Today is Saturday, we're open 10am-2pm." or full
    ↓
    Action runs (checks if today is a holiday via datetime), sends message
    ↓
-Agent: [Dynamic message, e.g. "We're closed today for Christmas." or the general holiday schedule]
+Agent: [Dynamic message—e.g. "We're closed today for Christmas." or the general holiday schedule]
 
 [User types: "How can I contact you?"]
 
@@ -100,7 +102,7 @@ Level 2 is a strong fit for **dynamic** answers from code, **formatting** and **
 
 When you open Level 3, you **keep the same banking agent**: your Level 1 responses, your **`hours`** and **`holiday_hours`** flows, and both **`action_bank_hours`** and **`action_holiday_hours`**, stay in the project. Level 3 adds **slots** (conversation memory), **`utter_ask_*`** style prompts, flows that **collect** slot values, and actions that **read** slots via the tracker—without starting a new codebase from scratch.
 
-A typical Level 3 story is **“check my balance”**: at Level 2 the agent cannot hold an account number between turns; at Level 3 you can store something like an `account` slot, ask with `utter_ask_account`, and read it in an action such as `action_check_balance_simple` inside a **`check_balance`**-style flow. Expect to work with **`collect:`** in flows, **`tracker.get_slot()`** in actions, and clear **flow descriptions** so the policy still routes well.
+A typical Level 3 story is **"check my balance"**: at Level 2 the agent cannot hold an account number between turns; at Level 3 you can store something like an `account` slot, ask with `utter_ask_account`, and read it in an action such as `action_check_balance_simple` inside a **`check_balance`**-style flow. Expect to work with **`collect:`** in flows, **`tracker.get_slot()`** in actions, and clear **flow descriptions** so the policy still routes well.
 
 Move to Level 3 when you need **remembered** user details, **multi-turn** tasks that depend on earlier messages, or **personalized** behavior based on stored information. Your Level 2 work remains the **foundation**; Level 3 layers memory on top.
 

@@ -142,9 +142,9 @@
 
 ---
 
-### Unit 6: Training and Testing with Actions
-**Type**: Lab (with Assessments)  
-**Assessments**: Lab 6.1 - Training and Testing with Actions (4 points). Lab 6.2 - Verify Domain and Training (11 points; right after Lab 6.1).
+### Unit 6: Training, Testing, and Level 2 Wrap-Up
+**Type**: Lab (with Assessments) + closing content page  
+**Assessments**: Lab 6.1 - Training and Testing with Actions (4 points). Lab 6.2 - Verify Domain and Training (11 points; right after Lab 6.1). **6.4** embeds five multiple-choice Check It! items on the page (not part of the 51 graded lab points).
 
 **Sections**:
 - Lab 6.1: Training and Testing with Actions (training overview, `cd level2` + `rasa train`, assessment)
@@ -154,8 +154,12 @@
   - Error: Name Mismatch
 - 6.3 Testing and Debugging Your Action (workflow, Inspector, debug panel, common issues)
 - Lab 6.2: Verify Domain and Training (domain + model file check; optional Inspector)
+- **6.4 Level 2 Wrap-Up: Integration, Review, and Next Level** (single page; former standalone Unit 7 and merged Unit 8 material)
+  - Full conversation example (Level 1 + example action + your Lab 3.1 action)
+  - Project structure at a glance; best practices; **5×** Check It! MCQs
+  - Recap, limitations, Level 3 preview, readiness checklist
 
-**Key Concepts**: Training, testing, debugging, Rasa Inspector, port forwarding
+**Key Concepts**: Training, testing, debugging, Rasa Inspector, port forwarding; integration, review, next level
 
 **Assessment Checks**:
 - Virtual environment exists
@@ -222,7 +226,7 @@
 **Codio: Grader updates from GitHub**  
 When you set up or edit assessments on Codio, configure each Code Test to **run the grader script from the workspace** (e.g. `bash /home/codio/workspace/.guides/secure/level2_graders/lab_5.1_grader.sh`). Do **not** upload or paste the script content into the assessment. That way, when you push grader changes to GitHub and pull on Codio, the assessment will use the updated script automatically.
 
-**Chapter 1.2 (Codio guide)**: Code-output-compare Check It! tags are on Labs 3.1, 4.1, 5.1, 6.1, 6.2. Multiple-choice Check It! tags are on content pages: 1.1, 1.4, 2.2, 2.3, Lab 2.1, 3.1 (fill-in + code test), **7.1** (includes former 8.1 MCQs; see `.guides/content/Chapter-1-2---Custom-Actions-30d6/`).
+**Chapter 1.2 (Codio guide)**: Code-output-compare Check It! tags are on Labs 3.1, 4.1, 5.1, 6.1, 6.2. Multiple-choice Check It! tags are on content pages: 1.1, 1.4, 2.2, 2.3, Lab 2.1, 3.1 (fill-in + code test), **6.4** (Level 2 wrap-up; includes former 8.1-style MCQs; see `.guides/content/Chapter-1-2---Custom-Actions-30d6/`).
 
 ---
 
@@ -234,7 +238,7 @@ Content is split by subsection (one file per numbered subsection). Examples:
 - **Unit 1**: `Level2_Unit1_Content_1.1_*.md` … `1.3_*.md`
 - **Unit 2**: `Level2_Unit2_Content_2.1_*.md`, `2.2_*.md`
 - **Unit 3**: Lab 3.1 only in the guide (execution summary at end of that page). Mirror: `Level2_Lab3.1_Content.md`; `action_bank_hours` example in Unit 2.1 / `Level2_Unit2_Content_2.1_*.md`. The old `Level2_Unit3_Content_3.2_*.md` stub notes content merged into Lab 3.1.
-- **Units 4–8**: `Level2_UnitN_Content_N.M_*.md` (see level2 folder for full list)
+- **Units 4–6**: `Level2_UnitN_Content_N.M_*.md` (see level2 folder for full list)
 - `Level2_Troubleshooting_Content.md` - Troubleshooting guide
 - `Level2_AdditionalResources_Content.md` - Extension exercises
 
@@ -268,9 +272,7 @@ Unit 4: Registering Actions (Hands-on Lab) ✓ Lab 4.1 Assessment
     ↓
 Unit 5: Using Actions in Flows (Hands-on Lab) ✓ Lab 5.1 Assessment
     ↓
-Unit 6: Training and Testing (Hands-on Labs) ✓ Lab 6.1 & Lab 6.2 (Verify Domain and Training) Assessments
-    ↓
-Unit 7: Putting It All Together — integration, review, knowledge check, Level 3 preview (single page)
+Unit 6: Training, Testing, and Level 2 Wrap-Up (Hands-on Labs + page 6.4) ✓ Lab 6.1 & Lab 6.2 Assessments; 6.4 = integration, review, knowledge check, Level 3 preview
 ```
 
 **Note:** Lab 2.1 (Exploring the Actions Folder) is optional and fits after Unit 2. It reinforces the action class structure with multiple-choice and fill-in-the-blank questions; the main sequence continues with Unit 3 and Lab 3.1.
@@ -307,8 +309,7 @@ By the end of Level 2, students should be able to:
 - **Unit 3**: 45-60 minutes (lab + assessment)
 - **Unit 4**: 30-45 minutes (lab + assessment)
 - **Unit 5**: 30-45 minutes (lab + assessment)
-- **Unit 6**: 45-60 minutes (lab + assessment + testing)
-- **Unit 7-8**: 30-45 minutes (integration + review)
+- **Unit 6** (labs + testing + wrap-up page 6.4): 60-90 minutes (labs + assessment + testing + integration review)
 
 **Total Estimated Time**: 4-5 hours
 

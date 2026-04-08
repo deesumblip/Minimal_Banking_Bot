@@ -28,15 +28,14 @@ For a full mapping of Level 2 (Chapter 1.2) content, labs, and graders, see `lev
   - `Chapter-1-2---Custom-Actions-30d6` in the `order` array.
 - Chapter index: `.guides/content/Chapter-1-2---Custom-Actions-30d6/index.json`:
   - `type: "chapter"`, title `"Chapter 1.2 - Custom Actions"`.
-  - `order` (units): Unit-0 … Unit-7 (Unit 8 removed; wrap-up merged into Unit 7):
+  - `order` (units): Unit-0 … Unit-6 (7 units; former Unit 7 wrap-up is **6.4** at the end of Unit 6):
     - `Unit-0--Recap--What-You-Built-in-Level-1-d9e8`
     - `Unit-1--Introduction-to-Actions-aa31`
     - `Unit-2--Understanding-the-Action-Class-6b66`
     - `Unit-3--Creating-Your-First-Action-5090`
     - `Unit-4--Registering-Actions-in-the-Domain-a7fc`
     - `Unit-5--Using-Actions-in-Flows-b1ff`
-    - `Unit-6--Training-and-Testing-with-Actions-b86b`
-    - `Unit-7--Putting-It-All-Together-6721`
+    - `Unit-6--Training-and-Testing-with-Actions-b86b` (includes **`6-4-Level-2-Wrap-Up-d798`**)
 - **Unit 3 index** (`Unit-3--Creating-Your-First-Action-5090/index.json`) now uses:
   - `order`: `["Lab-3-1--Create-Your-Own-Action-04c0"]`.
   - Short duplicate `Lab-3-1-04c0` was removed (both `.md` and `.json`), and the index points only at the long-form Lab 3.1 page.
