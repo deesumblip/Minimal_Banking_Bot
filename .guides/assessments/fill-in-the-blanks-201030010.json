@@ -54,7 +54,7 @@
 				"[]"
 			],
 			"text": [
-				"from datetime import ",
+				"Complete **`action_holiday_hours`**: imports, class, `name()`, `run()` return type, `datetime.now()`, holiday date checks, `dispatcher.utter_message`, and `return []`. Then copy the full script into **`level2/actions/action_holiday_hours.py`** and run the **Code Test**.\n\n```python\nfrom datetime import ",
 				0,
 				"\nfrom typing import ",
 				0,
@@ -80,7 +80,7 @@
 				0,
 				"(text=message)\n        return ",
 				0,
-				"\n"
+				"\n```"
 			],
 			"regexPositions": []
 		}
