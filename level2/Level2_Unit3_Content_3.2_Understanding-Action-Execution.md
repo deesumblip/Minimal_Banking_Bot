@@ -1,17 +1,5 @@
-### 3.2 Understanding Action Execution
+### 3.2 Understanding Action Execution — merged into Lab 3.1
 
-When Rasa executes your action:
+The seven-step “when Rasa executes your action” summary and key point now appear at the **end of Lab 3.1** in the Chapter 1.2 Codio guide. There is no separate guide page for 3.2.
 
-1. **Rasa finds the action**: Looks for the action in the `actions/` folder
-2. **Rasa instantiates the class**: Creates an instance of your action class
-3. **Rasa calls `name()`**: Verifies the action name matches what's registered
-4. **Rasa calls `run()`**: Executes your custom code
-5. **Your code runs**: Python executes your logic
-6. **Message is sent**: `dispatcher.utter_message()` sends text to the user
-7. **Action completes**: Returns empty list `[]`
-
-**Key Point**: Rasa handles all the infrastructure—you just write the `run()` method with your logic.
-
-**Next**: Complete Lab 3.1 to create `action_holiday_hours.py` following the pattern from Unit 3.1.
-
----
+**Use instead:** `.guides/content/Chapter-1-2---Custom-Actions-30d6/Unit-3--Creating-Your-First-Action-5090/Lab-3-1--Create-Your-Own-Action-04c0.md` (section *When Rasa executes your action*).

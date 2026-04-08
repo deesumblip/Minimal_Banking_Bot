@@ -1,6 +1,6 @@
-### 6.3 Testing Your Action
+### 6.3 Testing and Debugging Your Action
 
-You can use Rasa Inspector as in **Lab 5.1** (optional) or **Lab 6.2** to explore your agent. This section formalizes the testing workflow and provides a complete checklist to verify all your flows and actions work correctly.
+You can use Rasa Inspector as in **Lab 5.1** (optional) or **Lab 6.2** to explore your agent. This section formalizes the testing workflow and gives you a checklist against the table below.
 
 **Setup reminder**: If you need to review Inspector setup (go to main folder → activate virtual environment → `cd level2` → train → start Inspector), see **Lab 6.2** for the full step-by-step instructions.
 
@@ -11,36 +11,41 @@ Use these in the Inspector chat to check that the most recent implementations wo
 | You ask | Expected flow | Expected action / behavior |
 |--------|----------------|----------------------------|
 | **"Hello"** | `greet` | Level 1 greeting |
-| **"What are your hours?"** / **"When are you open?"** | `hours` | `action_bank_hours` — message varies by day (weekday vs weekend) |
-| **"What are your holiday hours?"** / **"Are you open on holidays?"** / **"Are you open on Christmas?"** | `holiday_hours` | `action_holiday_hours` — message varies by whether today is a holiday (date-based) |
+| **"What are your hours?"** / **"When are you open?"** | `hours` | `action_bank_hours`, message varies by day (weekday vs weekend) |
+| **"What are your holiday hours?"** / **"Are you open on holidays?"** / **"Are you open on Christmas?"** | `holiday_hours` | `action_holiday_hours`, message varies by whether today is a holiday (date-based) |
 | **"Help"** | `help` | Level 1 help |
 | **"How can I contact you?"** | `contact` | Level 1 contact |
 
-#### Formal Testing Workflow
+#### Formal testing workflow
 
-Follow this structured workflow to verify everything works:
+1. **Train your agent** — From the `level2` folder (with the virtual environment activated):
 
-1. **Train your agent**: From the `level2` folder (with virtual environment activated), run `python -m rasa train`. Wait for training to complete.
+```bash
+python -m rasa train
+```
 
-2. **Start Inspector**: Run `python -m rasa inspect --debug --log-file logs/logs.out` and leave it running. Open Inspector in your browser (see **Lab 6.2** for Codio port forwarding or local setup details).
+Wait for training to finish.
 
-3. **Test the action**:
-   - Type "What are your hours?" or "When are you open?"
-   - Should trigger `hours` flow
-   - Should execute `action_bank_hours`
-   - Should see a message that varies by day—e.g., "Today is Saturday—we're open 10am-2pm." or the full schedule on weekdays
+2. **Start Inspector** — Leave the server running and open Inspector in your browser (Codio port forwarding or local URL: **Lab 6.2**).
 
-4. **Verify Level 1 flows still work**:
-   - Type "hello" → Should trigger `greet` flow (unchanged)
-   - Type "help" → Should trigger `help` flow (unchanged)
-   - Type "contact" → Should trigger `contact` flow (unchanged)
+```bash
+python -m rasa inspect --debug --log-file logs/logs.out
+```
 
-5. **Test both of your actions**:
-   - Ask about **regular hours** (e.g. "What are your hours?") → Should trigger `hours` flow and `action_bank_hours`
-   - Ask about **holiday hours** (e.g. "What are your holiday hours?" or "Are you open on holidays?") → Should trigger `holiday_hours` flow and `action_holiday_hours`; message will vary by whether today is a holiday ("closed today") or not (general schedule)
+3. **Run through the table** — For each row, confirm the **flow** and **action** (or Level 1 behavior) match. Pay special attention to **`hours`** vs **`holiday_hours`** so you see both the example action and your Lab 3.1 action.
 
-**Key Point**: All Level 1 functionality remains, and both the example action and the action you created should work. If your new action doesn’t trigger, check that it’s registered in the domain and that its flow has a clear `description`.
+4. **Watch routing in Inspector** — For the same user goal, compare phrasing (e.g. hours vs holiday hours) and observe how **flow** and **action** change—that reflects your **domain** and **flow YAML**.
 
-**Explore how your modifications show up**: In Inspector you can see which **flow** was matched and which **action** ran for each message. Try "What are your hours?" vs "What are your holiday hours?" and observe how the selected flow and action change—that's your domain registration and flow YAML directly affecting the agent's behavior.
+**Key point**: All Level 1 paths should still work. If your new action does not trigger, check **domain** registration and a clear **`description`** on the flow.
+
+#### Check the debug panel
+
+With **`--debug`** and the log file from step 2, use Inspector’s **debug** output to confirm which **flow** fired, which **action** ran, and whether the action finished without errors.
+
+#### Common issues
+
+1. **Action doesn't trigger** — Does the flow **`description`** match what the user said? Is the action in **`domain/`**? Does the file exist under **`actions/`**?
+2. **Action runs but no message** — Is **`dispatcher.utter_message()`** called? Check the terminal or **`logs/`** for Python errors in the action.
+3. **Python errors** — Fix syntax, imports, and method names (`name()`, `run()`, etc.).
 
 ---

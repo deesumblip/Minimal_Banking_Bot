@@ -2,11 +2,13 @@
 
 ### Your Task
 
-In Unit 3.1 you saw the full example `action_bank_hours`. In this lab you create your own action: `action_holiday_hours`, which returns the bank's holiday schedule **based on today's date**. If today is a holiday, the action should say we're closed today; otherwise it should return the general holiday schedule. That way the response depends on the current date—so it has to be an action, not a single `utter_*` response. Follow the steps below.
+**Unit 2.1** walks through the full **`action_bank_hours.py`** example. This lab creates **`action_holiday_hours`**: the bank's holiday schedule **based on today's date**—same Rasa action pattern, with holiday date logic instead of weekday logic.
+
+**Codio guide:** Unit 3 opens with this lab. Students complete the **Fill in the blanks** assessment first, paste into **`level2/actions/action_holiday_hours.py`**, then run the **Code Test**. The optional manual steps below match that solution if you are editing without Codio.
 
 ---
 
-### Step-by-Step Instructions
+### Step-by-Step Instructions (optional manual build)
 
 **Step 1 – Create the file**  
 - In the `actions/` folder, create a new file named `action_holiday_hours.py`.
@@ -50,3 +52,21 @@ Before submitting, confirm:
 - `run()` calls `dispatcher.utter_message()` and returns `[]`
 
 Run the assessment when you're done.
+
+---
+
+### When Rasa executes your action
+
+When Rasa executes your action:
+
+1. **Rasa finds the action**: Looks for the action in the `actions/` folder
+2. **Rasa instantiates the class**: Creates an instance of your action class
+3. **Rasa calls `name()`**: Verifies the action name matches what's registered
+4. **Rasa calls `run()`**: Executes your custom code
+5. **Your code runs**: Python executes your logic
+6. **Message is sent**: `dispatcher.utter_message()` sends text to the user
+7. **Action completes**: Returns empty list `[]`
+
+**Key Point**: Rasa handles all the infrastructure, you just write the `run()` method with your logic.
+
+---

@@ -33,7 +33,7 @@ Everything else stays as it was at the start of `level3/`.
 These Python files are **preloaded** for you at the start of Chapter 1.3:
 
 - **`action_bank_hours.py`** (bank hours by day of week)
-- **`action_holiday_hours.py`** (holiday schedule; same role as in Chapter 1.2, Lab 3.2)
+- **`action_holiday_hours.py`** (holiday schedule; same role as in Chapter 1.2, Lab 3.1)
 
 You will **add** in Chapter 1.3:
 

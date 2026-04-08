@@ -33,7 +33,7 @@ Level 2 uses 8 units (0–8) with a similar “Putting It All Together” and �
 **Improvements**
 
 - **Optional:** Add a one-line design note in the course outline or CONTENT_LABS doc explaining why Level 1/2/3 use 7–9 units (more concepts, first exposure) and Level 4/5/6 use 7 (0–6) with a single “Summary and Next Steps” unit. No structural change required; this only clarifies intent.
-- **Level 2:** Ensure the narrative explicitly says “Unit 7 = Putting It All Together, Unit 8 = Assessment and Next Steps” so it’s obvious how Level 2 aligns with Level 3’s 7+8.
+- **Level 2:** Chapter 1.2 ends with **Unit 7** only; the final page (**7.1**) includes integration, review, knowledge check, and Level 3 preview (former Unit 8 merged into Unit 7).
 
 ---
 
@@ -42,7 +42,7 @@ Level 2 uses 8 units (0–8) with a similar “Putting It All Together” and �
 | Level | Last unit | Sections |
 |-------|------------|----------|
 | **1** | Unit 8 | 8.1 Knowledge Check, 8.2 What You've Learned, 8.3 Limitations, 8.4 What's Next Level 2, 8.5 Checklist |
-| **2** | Unit 8 | 8.1 Knowledge Check, 8.2 What You've Learned, 8.3 Limitations, 8.4 What's Next Level 3, 8.5 Checklist |
+| **2** | Unit 7 (7.1) | Single wrap-up page: walkthrough, review, 8.1-style MCs, recap, limitations, Level 3 preview, checklist (no separate Unit 8) |
 | **3** | Unit 8 | 8.1–8.5 same |
 | **4** | Unit 6 | 6.1 Walkthrough, 6.2 Learned, 6.3 Next, 6.4 Knowledge Check, 6.5 Limitations, 6.6 Level 5 Preview, 6.7 Checklist |
 | **5** | Unit 6 | 6.1–6.7 same |

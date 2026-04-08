@@ -2,6 +2,8 @@
 
 ## Overview
 
+**Student guide:** `Lab-6-1--Training-and-Testing-with-Actions-7710.md` — Level 1 vs Level 2 training, prerequisites, `rasa train`, what training does, then the assessment.
+
 This assessment verifies that students can successfully train their agent with actions and that the training completes without errors.
 
 ### Assessment Type
@@ -74,9 +76,10 @@ fi
 
 ### Example student deliverable (for grading reference)
 
-Students do not produce a new script file; they run training so that a model is produced. The grader checks that a model file exists in `models/` and that training completed without errors. Example command the student runs (with venv activated):
+Students do not produce a new script file; they run training so that a model is produced. The grader checks that a model file exists in `models/` and that training completed without errors. Example commands (venv activated from project root):
 
 ```bash
+cd level2
 python -m rasa train
 ```
 

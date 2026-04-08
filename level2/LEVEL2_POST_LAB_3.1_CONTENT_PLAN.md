@@ -42,7 +42,7 @@
 **Content changes:**
 - **6.1:** No structural change; training still loads all actions and flows.
 - **6.3 Testing:** Add a bullet: *"Test both flows: ask about regular hours and about holiday hours; confirm both your action and the example action run."*
-- **6.2 / 6.4:** Keep error and debugging content; can add *"If your new action isn’t found, check it’s registered and the flow references it correctly."*
+- **6.2 / 6.3:** Error content in 6.2; testing + debugging at end of **6.3** (former 6.4 merged there).
 
 No grader change for Lab 6.1 (still "model exists, training succeeded"); the lab just benefits from students having both actions and flows.
 
@@ -51,18 +51,14 @@ No grader change for Lab 6.1 (still "model exists, training succeeded"); the lab
 ## 4. Unit 7 (Putting It All Together)
 
 **Content changes:**
-- **7.1 Walkthrough:** Add a third turn: user asks about holiday hours → `holiday_hours` flow → `action_holiday_hours` runs. Keep the existing turns (greet, hours, contact).
-- **7.2 Summary:** Under "Flows" list both `hours` and `holiday_hours`; under "Actions" list both `action_bank_hours` and `action_holiday_hours`. State that one is the example and one is the action they built.
+- **7.1 (single page):** Walkthrough includes holiday hours → `holiday_hours` → `action_holiday_hours` plus greet, hours, contact. Same page summarizes domain/flows/actions (both `hours` / `holiday_hours` and example vs student action), future levels, and best practices (former 7.2 / 7.3-style material merged here).
 
 ---
 
-## 5. Unit 8 (Assessment and Next Steps)
+## 5. Unit 7 wrap-up (former Unit 8 merged into 7.1)
 
 **Content changes:**
-- **8.2 What You've Learned:** Add a bullet: *"Can register your own action and create a flow that uses it."*
-- **8.5 Course Completion Checklist:** Add:
-  - *"[ ] Your action (`action_holiday_hours`) is registered in the domain"*
-  - *"[ ] You have a flow (`holiday_hours.yml`) that uses your action"*
+- End of **7.1** should include recap, limitations, Level 3 preview, and readiness items that reference **`action_holiday_hours`** and **`holiday_hours`** alongside the example action and **`hours`** flow.
 
 ---
 
@@ -90,8 +86,7 @@ No grader change for Lab 6.1 (still "model exists, training succeeded"); the lab
 | **Unit 5 content** | Lab 5.1: add "Your flow: holiday_hours.yml" using action_holiday_hours. |
 | **Lab 5.1** | Grader: require holiday_hours.yml + structure + action_holiday_hours; student instructions: create hours.yml (if needed) and holiday_hours.yml. |
 | **Unit 6** | 6.3: add "test both regular and holiday hours." |
-| **Unit 7** | 7.1: add holiday-hours turn; 7.2: list both actions and both flows. |
-| **Unit 8** | 8.2 + 8.5: add bullets/checklist for "your action registered" and "your flow." |
+| **Unit 7 (7.1)** | Single page: walkthrough, both actions/flows, practices, MC check, recap, limitations, L3 preview, readiness (former 7.2–7.3 and Unit 8 merged). |
 | **README** | Clarify example vs. your action; align exercises. |
 
 ---

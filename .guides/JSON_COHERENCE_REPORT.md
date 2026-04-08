@@ -15,7 +15,7 @@ This report compares **content** (`.guides/content/` chapter and unit structure)
 | Chapter | index.json `order` | Unit folders / notes | Coherent? |
 |---------|--------------------|----------------------|-----------|
 | 1.1 Just Responses | Unit-0 … Unit-8 (9 units) | Present (see §8 for trimmed pages) | Yes |
-| 1.2 Custom Actions | Unit-0 … Unit-8 (9 units) | Present | Yes |
+| 1.2 Custom Actions | Unit-0 … Unit-7 (8 units; wrap-up merged into Unit 7) | Present | Yes |
 | 1.3 Slot Collection | Unit-0 … Unit-8 (9 units) | Present | Yes |
 | 1.4 Multiple Slots | Unit-0 … Unit-6 (7 units) | Unit-0 folder present; order matches | Yes |
 | 1.5 Tool Calling | Unit-0 … Unit-6 (7 units) | Present | Yes |
@@ -37,6 +37,10 @@ For each unit, the `order` array should list page ids that have a matching `.md`
 
 - **Chapter 1.4 Unit 0:** `order` = `["0-1-Your-Level-3-Banking-Agent-e4f5","0-2-What-Level-4-Adds-f5a6"]`; Unit-0 folder has matching .md and .json for both. Coherent.
 - **Chapter 1.4 Unit 1:** order includes 1-1, 1-2, 1-3, 1-4-Test-Your-Knowledge-e4f5; all have .md and .json. Coherent.
+- **Chapter 1.2 Unit 3:** `order` = `["Lab-3-1--Create-Your-Own-Action-04c0"]` only (one guide page). Removed stems (no longer in TOC): `3-1-Step-by-Step-Creating-an-Action-05dc`, `3-2-Understanding-Action-Execution-199d`; execution prose merged into **Lab 3.1**.
+- **Chapter 1.2 Unit 6:** `order` starts with **`Lab-6-1--Training-and-Testing-with-Actions-7710`**; removed stem **`6-1-Training-with-Actions-c79c`** (merged into Lab 6.1). Removed stem **`6-4-Debugging-Actions-6978`** (merged into **`6-3-Testing-Your-Action-4ae9`**).
+- **Chapter 1.2 Unit 7:** `order` is **`7-1-Complete-Agent-Walkthrough-d798`** only; removed stem **`7-2-Your-Level-2-Banking-Agent-Summary-4ed7`** (merged into **`7-1-Complete-Agent-Walkthrough-d798`** along with former **7.3**-style best practices). **Unit 8** removed from the chapter: stems **`8-1-Knowledge-Check-9fc3`** through **`8-5-Course-Completion-Checklist-5f74`** deleted; content and **Check It!** MCs merged into **`7-1-Complete-Agent-Walkthrough-d798`**. Unit **`index.json`** title: **Unit 7: Putting It All Together — Wrap-Up** (aligned with single wrap-up page).
+- **Chapter 1.2 Unit 4:** Removed duplicate **`Lab-4-1-3406.md`** (stray copy of **`Lab-4-1--Registering-Actions-in-the-Domain-3406.md`** with a corrupted first line); TOC uses the long-form stem only.
 - **Chapter 1.6:** Each unit has `index.json`; every listed page stem has matching `.md` and `.json`. Coherent for Codio expectations.
 
 ---
@@ -50,11 +54,15 @@ Assessments are wired by **content**: markdown pages use `{Check It!|assessment}
 | Level | Referenced taskIds (from Assessment_Setup docs) | Assessment JSONs on disk | Coherent? |
 |-------|--------------------------------------------------|---------------------------|-----------|
 | 1.1 | code-output-compare-2562507355, 3333363688, 7772000001, etc. | Present | Yes |
-| 1.2 | 1597644299, 1451983168, 2266471391, 389374509, 1070925386 | Present | Yes |
+| 1.2 | fill-in-the-blanks-201030010, 1597644299, 1451983168, 2266471391, 389374509, 1070925386 | Present | Yes |
 | 1.3 | 3187585640, 2346557111, 2346557110, 1235165472, 1029038275 | Present | Yes |
 | 1.4 | fill-in-the-blanks-401010010, 401010001, 401020001, fill-in-the-blanks-401030010, 401030001, 401040001, 401050001, 401050002 | Present | Yes |
 | 1.5 | 501020000, fill-in-the-blanks-501020010, 501020001, 501030001, fill-in-the-blanks-501040010, 501040001, 501050001, 501050002 | Present | Yes |
 | 1.6 | fill-in-the-blanks-501060110–501060112; code-output-compare-501060001–501060005; multiple-choice-501060100–501060107 | Present | Yes |
+
+**Chapter 1.2:** **Lab 3.1** uses **`fill-in-the-blanks-201030010`** (`action_holiday_hours.py` skeleton) then **`code-output-compare-2266471391`** (`lab_3.2_grader.sh`) — same **fill-in → paste → Code Test** pattern as Chapter 1.4 Lab 3.1 and Chapter 1.5 Lab 2.1.
+
+**Legacy (not linked from any guide page):** **`code-output-compare-2266471390`** + **`lab_3.1_grader.sh`** supported the removed “3.1 Step-by-Step: Creating an Action” page (`action_bank_hours.py` checks). Kept on disk for reference; remove when pruning orphans.
 
 **Chapter 1.4:** Lab .md files under `Chapter-1-4---Multiple-Slots-e5f6/` include `{Check It!|assessment}(code-output-compare-40XXXXXX)` for Labs 2.1, 4.1, 5.1, 5.2; **Lab 0.1** uses `fill-in-the-blanks-401010010` then `code-output-compare-401010001`; **Lab 3.1** also includes `fill-in-the-blanks-401030010` before the code test. Both fill-in-the-blanks JSONs use the **Chapter 1.3 Lab 4.1** `tokens.text` pattern (literal `0` for each blank, sequential). Coherent.
 

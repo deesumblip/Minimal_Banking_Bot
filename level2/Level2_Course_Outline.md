@@ -74,18 +74,10 @@
 
 ### Unit 3: Creating Your First Action
 **Type**: Lab (with Assessment)  
-**Assessment**: Lab 3.1 - Creating Your First Action (8 points)
+**Assessment**: Lab 3.1 - Creating Your First Action (13 points: 5 fill-in + 8 code test)
 
 **Sections**:
-- 3.1 Step-by-Step: Creating an Action
-  - Before You Begin checklist
-  - Step 1: Navigate to Actions Folder
-  - Step 2: Create the Action File
-  - Step 3: Add the Action Class Structure
-  - Step 4: Verify Your Code
-  - Step 5: Save the File
-- 3.2 Understanding Action Execution
-  - How Rasa executes actions (7-step process)
+- Lab 3.1: Create Your Own Action (only page in Unit 3; segue from Unit 2.1; fill-in + paste + Code Test; ends with how Rasa executes your action—7 steps)
 
 **Key Concepts**: Creating action files, Python class structure, imports
 
@@ -155,22 +147,12 @@
 **Assessments**: Lab 6.1 - Training and Testing with Actions (4 points). Lab 6.2 - Verify Domain and Training (11 points; right after Lab 6.1).
 
 **Sections**:
-- 6.1 Training with Actions
-  - Training command (Codio and local)
-  - What happens during training (4-step process)
-- Lab 6.1: Training and Testing with Actions
+- Lab 6.1: Training and Testing with Actions (training overview, `cd level2` + `rasa train`, assessment)
 - 6.2 Common Training Errors with Actions
   - Error: Action Not Found
   - Error: Import Error
   - Error: Name Mismatch
-- 6.3 Testing Your Action
-  - Basic testing workflow
-  - Using Rasa Inspector
-  - Port forwarding setup (Codio)
-  - Verifying Level 1 flows still work
-- 6.4 Debugging Actions
-  - Check debug output
-  - Common issues and solutions
+- 6.3 Testing and Debugging Your Action (workflow, Inspector, debug panel, common issues)
 - Lab 6.2: Verify Domain and Training (domain + model file check; optional Inspector)
 
 **Key Concepts**: Training, testing, debugging, Rasa Inspector, port forwarding
@@ -186,44 +168,18 @@
 
 ---
 
-### Unit 7: Putting It All Together
+### Unit 7: Putting It All Together — Wrap-Up
 **Type**: Content Page  
-**Assessment**: None
+**Assessment**: Embedded knowledge check (5× multiple-choice via Check It! on the same page)
 
-**Sections**:
-- 7.1 Complete Agent Walkthrough
-  - Full conversation example showing Level 1 + Level 2 working together
-- 7.2 Your Level 2 Banking Agent: Summary
-  - Complete agent structure
-  - What your agent can do now
-  - What's still missing (preview of future levels)
+**Sections** (single page **7.1**; former Unit 8 merged here):
+- Full conversation example (Level 1 + example action + your Lab 3.1 action)
+- Project structure at a glance (domain, flows, actions, config)
+- Best practices: organizing flows, responses, descriptions, testing with Inspector and logs
+- Knowledge check (5 MCQs)
+- Core ideas and skills recap; what Level 2 still doesn’t do; Level 3 preview (same agent); readiness checklist
 
-**Key Concepts**: Integration, course summary
-
----
-
-### Unit 8: Assessment and Next Steps
-**Type**: Content Page (Knowledge Check)  
-**Assessment**: None (knowledge check questions only)
-
-**Sections**:
-- 8.1 Knowledge Check
-  - 5 multiple-choice questions with answers and explanations
-- 8.2 What You've Learned
-  - Key concepts summary
-  - Skills developed checklist
-- 8.3 Limitations of Level 2
-  - What Level 2 cannot do
-  - When Level 2 is sufficient
-  - When you need more (Level 3)
-- 8.4 What's Next: Level 3 Preview
-  - Building on existing agent (not starting from scratch)
-  - What slots enable
-  - Key concepts in Level 3
-- 8.5 Course Completion Checklist
-  - 7-item checklist before moving to Level 3
-
-**Key Concepts**: Review, limitations, next steps, Level 3 preview
+**Key Concepts**: Integration, review, limitations, next level (slots), course completion
 
 ---
 
@@ -252,20 +208,21 @@
 
 ## Assessment Summary
 
-| Unit | Lab | Points | Type | Grader Script |
+| Unit | Lab | Points | Type | Grader / task |
 |--------|-----|--------|------|---------------|
-| Unit 3 | Lab 3.1 | 8 | Standard Code Test | `lab_3.1_grader.sh` |
+| Unit 3 | Lab 3.1 (fill-in) | 5 | Fill in the Blanks | `fill-in-the-blanks-201030010` |
+| Unit 3 | Lab 3.1 (code) | 8 | Standard Code Test | `lab_3.2_grader.sh` (`code-output-compare-2266471391`) |
 | Unit 4 | Lab 4.1 | 11 | Standard Code Test | `lab_4.1_grader.sh` |
 | Unit 5 | Lab 5.1 | 12 | Standard Code Test | `lab_5.1_grader.sh` |
 | Unit 6 | Lab 6.1 | 4 | Standard Code Test | `lab_6.1_grader.sh` |
 | Unit 6 | Lab 6.2 | 11 | Code Output Compare | `lab_4.2_grader.sh` (domain + model file) |
 
-**Total Assessment Points**: 46 points
+**Total Assessment Points**: 51 points (5 + 8 + 11 + 12 + 4 + 11)
 
 **Codio: Grader updates from GitHub**  
 When you set up or edit assessments on Codio, configure each Code Test to **run the grader script from the workspace** (e.g. `bash /home/codio/workspace/.guides/secure/level2_graders/lab_5.1_grader.sh`). Do **not** upload or paste the script content into the assessment. That way, when you push grader changes to GitHub and pull on Codio, the assessment will use the updated script automatically.
 
-**Chapter 1.2 (Codio guide)**: Code-output-compare Check It! tags are on Labs 3.1, 4.1, 5.1, 6.1, 6.2. Multiple-choice Check It! tags are on content pages: 1.1, 1.4, 2.2, 2.3, Lab 2.1, 3.1, 3.2, 7.1, 8.1 (see `.guides/content/Chapter-1-2---Custom-Actions-30d6/`).
+**Chapter 1.2 (Codio guide)**: Code-output-compare Check It! tags are on Labs 3.1, 4.1, 5.1, 6.1, 6.2. Multiple-choice Check It! tags are on content pages: 1.1, 1.4, 2.2, 2.3, Lab 2.1, 3.1 (fill-in + code test), **7.1** (includes former 8.1 MCQs; see `.guides/content/Chapter-1-2---Custom-Actions-30d6/`).
 
 ---
 
@@ -276,7 +233,7 @@ Content is split by subsection (one file per numbered subsection). Examples:
 - **Unit 0**: `Level2_Unit0_Content_0.1_*.md`, `Level2_Unit0_Content_0.2_*.md`
 - **Unit 1**: `Level2_Unit1_Content_1.1_*.md` … `1.3_*.md`
 - **Unit 2**: `Level2_Unit2_Content_2.1_*.md`, `2.2_*.md`
-- **Unit 3**: `Level2_Unit3_Content_3.1_Step-by-Step-Creating-an-Action.md`, `Level2_Unit3_Content_3.2_Understanding-Action-Execution.md`
+- **Unit 3**: Lab 3.1 only in the guide (execution summary at end of that page). Mirror: `Level2_Lab3.1_Content.md`; `action_bank_hours` example in Unit 2.1 / `Level2_Unit2_Content_2.1_*.md`. The old `Level2_Unit3_Content_3.2_*.md` stub notes content merged into Lab 3.1.
 - **Units 4–8**: `Level2_UnitN_Content_N.M_*.md` (see level2 folder for full list)
 - `Level2_Troubleshooting_Content.md` - Troubleshooting guide
 - `Level2_AdditionalResources_Content.md` - Extension exercises
@@ -313,9 +270,7 @@ Unit 5: Using Actions in Flows (Hands-on Lab) ✓ Lab 5.1 Assessment
     ↓
 Unit 6: Training and Testing (Hands-on Labs) ✓ Lab 6.1 & Lab 6.2 (Verify Domain and Training) Assessments
     ↓
-Unit 7: Putting It All Together (Integration)
-    ↓
-Unit 8: Assessment and Next Steps (Review)
+Unit 7: Putting It All Together — integration, review, knowledge check, Level 3 preview (single page)
 ```
 
 **Note:** Lab 2.1 (Exploring the Actions Folder) is optional and fits after Unit 2. It reinforces the action class structure with multiple-choice and fill-in-the-blank questions; the main sequence continues with Unit 3 and Lab 3.1.

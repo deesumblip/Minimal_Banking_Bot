@@ -1,8 +1,12 @@
 # Lab 3.2: Create Your Own Action
 
+**Deprecated — duplicate draft.** The Chapter 1.2 guide has **only Lab 3.1** in Unit 3 (`Lab-3-1--Create-Your-Own-Action-04c0`). For implementers, use **`Lab-3-1.md`** and **`Level2_Lab3.1_Assessment_Setup.md`**. The content below is not linked from any unit `index.json`.
+
+---
+
 ## Guide Content (For Students)
 
-**Placement**: This lab follows Lab 3.1 (Step-by-Step: Creating an Action) in Unit 3: Creating Your First Action.
+**Placement (historical):** Was written as if this followed **Lab 3.1**. The live guide has a **single** Lab 3.1 page only.
 
 ---
 
@@ -59,7 +63,9 @@ Before submitting, confirm:
 - [ ] `name()` returns `"action_holiday_hours"` (with **double quotes**)
 - [ ] `run()` calls `dispatcher.utter_message()` and ends with the **literal** `return []`
 
-**In Codio**, use **Check It!** when you're done.
+**In Codio**, complete **`fill-in-the-blanks-201030010`** first (same as **Lab 3.1** student page), paste into **`level2/actions/action_holiday_hours.py`**, then use **Check It!** for the Code Test.
+
+{Check It!|assessment}(fill-in-the-blanks-201030010)
 
 {Check It!|assessment}(code-output-compare-2266471391)
 

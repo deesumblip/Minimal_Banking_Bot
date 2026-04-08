@@ -4,7 +4,7 @@ cd /home/codio/workspace/level2
 score=0
 max_score=8
 
-echo "Running Lab 3.2 Assessment Checks..."
+echo "Running Lab 3.1 Assessment Checks..."
 echo ""
 
 # Check 1: action_holiday_hours.py file exists (2 points) - Step 1: create file in actions/

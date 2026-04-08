@@ -2,62 +2,41 @@
 
 ## Guide Content (For Students)
 
-**Placement**: This lab follows Unit 3: Creating Your First Action.
+**Placement**: This lab **opens** Unit 3: Creating Your First Action (the old “3.1 Step-by-Step” page was removed; students rely on **Unit 2.1** for the `action_bank_hours` example).
 
 ---
 
 ### Your Task
 
-You've learned how actions are structured and how they work. Now create a **new** action: `action_holiday_hours`, which returns the bank's holiday schedule **based on today's date**. If today is a holiday, the action should say we're closed today; otherwise it should return the general holiday schedule. That way the response depends on the current date, so it has to be an action, not a single `utter_*` response. Follow the steps below.
+Students complete a **Fill in the blanks** exercise that matches the course solution (`level3/actions/action_holiday_hours.py`), then **paste** the completed script into **`level2/actions/action_holiday_hours.py`** and run the **Code Test**. Same **fill-in → paste → Check It!** pattern as **Chapter 1.4 Lab 3.1** (`fill-in-the-blanks-401030010` → `code-output-compare-401030001`) and **Chapter 1.5 Lab 2.1**.
 
 ---
 
-### Step-by-Step Instructions
+#### Fill in the blanks
 
-**Step 1 – Create the file**  
-- In the `actions/` folder, create a new file named `action_holiday_hours.py`.
+**Thirteen blanks** cover imports, class, `name()`, `run()` return type, `datetime.now()`, holiday date checks, `dispatcher.utter_message`, and `return []`.
 
-**Step 2 – Add the imports**  
-At the top of the file, add:
-- `from datetime import datetime` (so you can use the current date)
-- `from rasa_sdk import Action, Tracker`
-- `from rasa_sdk.executor import CollectingDispatcher`  
-You can also add `from typing import Any, Dict, List, Text` for type hints.
+{Check It!|assessment}(fill-in-the-blanks-201030010)
 
-**Step 3 – Define the class**  
-- Create a class named `ActionHolidayHours` that inherits from `Action`  
-  (same pattern as `ActionBankHours`, but with the new name).
+---
 
-**Step 4 – Implement `name()`**  
-- Add a method `name(self)` that returns the string `"action_holiday_hours"`  
-  (this must match the filename, without `.py`).
+### After the blanks — paste and Code Test
 
-**Step 5 – Implement `run()` with date-based logic**  
-- Add the `run()` method with parameters: `dispatcher`, `tracker`, and `domain`.  
-- Get today's date, e.g. `now = datetime.now()` and use `now.month` and `now.day` to check if today is a holiday.  
-- **If today is a holiday** (e.g. New Year's Day Jan 1, Independence Day July 4, or Christmas Dec 25, you can use these or your own list): set a message like *"We're closed today for [holiday name]."*  
-- **Otherwise**: set a message with the general holiday schedule, e.g. *"We're closed on New Year's Day, Independence Day, and Christmas. On other holidays we may have limited hours, please call ahead."*  
-- Call `dispatcher.utter_message(text=message)` **once** with whichever message you chose.  
-- At the end of `run()`, return `[]` (an empty list).
+1. Create **`level2/actions/action_holiday_hours.py`** if needed.
+2. Paste the completed script; save.
+3. Run the grader.
 
-**Step 6 – Save and verify**  
-- Save the file and run the assessment below.
+{Check It!|assessment}(code-output-compare-2266471391)
 
 ---
 
 ### Quick Checklist (what the grader checks)
 
-Before submitting, confirm:
+- [ ] **Fill in the blanks** passed (script matches course solution)
+- [ ] File is under **`level2/actions/`** as **`action_holiday_hours.py`**
+- [ ] Imports, `datetime`, `ActionHolidayHours`, `name()`, `run()` as in the reference solution
 
-- [ ] File is in the `actions/` folder and named `action_holiday_hours.py`
-- [ ] You import `datetime` and use it (e.g. `datetime.now()`) to choose the message
-- [ ] Class is `ActionHolidayHours(Action)`
-- [ ] `name()` returns `"action_holiday_hours"`
-- [ ] `run()` calls `dispatcher.utter_message()` and returns `[]`
-
-Run the assessment when you're done.
-
-{Check It!|assessment}(code-output-compare-2266471391)
+The **student guide page** ends with **When Rasa executes your action** (seven numbered steps + key point)—content that used to live on a separate **3.2 Understanding Action Execution** page.
 
 ---
 
@@ -65,17 +44,18 @@ Run the assessment when you're done.
 
 ### Overview
 
-This assessment verifies that students can create a custom action file (`action_holiday_hours.py`) with the correct structure, imports, methods, and date-based logic (so the message depends on whether today is a holiday).
+Students first complete a **Fill in the blanks** assessment (`.guides/assessments/fill-in-the-blanks-201030010.json`), then paste into **`level2/actions/action_holiday_hours.py`**. The **Standard Code Test** (`.guides/assessments/code-output-compare-2266471391.json`, `lab_3.2_grader.sh`) verifies the file on disk.
 
 ### Assessment Type
 
-**Standard Code Test** (Bash script)
+1. **Fill in the Blanks** — taskId **`fill-in-the-blanks-201030010`** (13 blanks; `tokens.text` uses literal `0` for each blank, sequential — same pattern as Chapter 1.4 `fill-in-the-blanks-401030010`).
+2. **Standard Code Test** (Bash script) — taskId **`code-output-compare-2266471391`**
 
 ## Grader Script Location
 
-Save the grader script at:
+Save the grader script at (on-disk name; matches `code-output-compare-2266471391.json`):
 
-.guides/secure/level2_graders/lab_3.1_grader.sh
+.guides/secure/level2_graders/lab_3.2_grader.sh
 
 ## Grader Script
 
@@ -83,6 +63,7 @@ The grader only checks what is explicitly instructed in the student lab: file lo
 
 ```bash
 #!/bin/bash
+# Implemented as lab_3.2_grader.sh in this repo (same checks).
 cd /home/codio/workspace/level2
 
 score=0
@@ -209,11 +190,13 @@ class ActionHolidayHours(Action):
 
 1. **Create the page** – New Codio Guide page **Lab 3.1: Create Your Own Action** (standalone: folder tree, guide editor, terminal). Add the **Guide Content** section above as the page content.
 
-2. **Add Code Test** – Add Code Test → **Standard Code Test**. Configure each tab as follows.
+2. **Add Fill in the Blanks** – Import or create **`fill-in-the-blanks-201030010`** from `.guides/assessments/`. Points: **5**. Max attempts: **1** (or as configured in JSON). Place it **before** the Code Test on the guide page.
+
+3. **Add Code Test** – Add Code Test → **Standard Code Test**. Configure each tab as follows.
 
    **General** – Name: *Lab 3.1: Create Your Own Action*. Description: *Verify that students can create action_holiday_hours.py with correct structure and date-based logic*. Points: `8`. Language: `Bash`.
 
-   **Execution** – COMMAND: `bash /home/codio/workspace/.guides/secure/level2_graders/lab_3.1_grader.sh`. TIMEOUT: `60` seconds. Working Directory: `/home/codio/workspace/level2`.
+   **Execution** – COMMAND: `bash /home/codio/workspace/.guides/secure/level2_graders/lab_3.2_grader.sh`. TIMEOUT: `60` seconds. Working Directory: `/home/codio/workspace/level2`.
 
    **Grading**
    - **Points**: `8` – Total points for this assessment.
@@ -231,8 +214,8 @@ class ActionHolidayHours(Action):
    - **Defined number of attempts**: `OFF` – No limit on submission attempts (or set a limit if desired).
    - **Rationale** (optional): e.g. *The grader checks only what the lab instructs: action file in actions/, correct imports (including datetime), class ActionHolidayHours(Action), name() returning 'action_holiday_hours', and run() calling dispatcher.utter_message() and returning [].*
 
-   **Files** – Create the grader script at `.guides/secure/level2_graders/lab_3.1_grader.sh`. In the Codio workspace terminal (from the workspace root), make it executable: `chmod +x .guides/secure/level2_graders/lab_3.1_grader.sh`.
+   **Files** – Grader script at `.guides/secure/level2_graders/lab_3.2_grader.sh`. In the Codio workspace terminal (from the workspace root), make it executable: `chmod +x .guides/secure/level2_graders/lab_3.2_grader.sh`.
 
-3. **Save & Test** the assessment. Enable **Learning Analytics** if desired.
+4. **Save & Test** both assessments. Enable **Learning Analytics** if desired.
 
 ---

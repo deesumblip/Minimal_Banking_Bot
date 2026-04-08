@@ -6,6 +6,11 @@
       "path": "level2/domain/basics.yml",
       "panel": 1,
       "action": "open"
+    },
+    {
+      "path": "#terminal",
+      "panel": 1,
+      "action": "open"
     }
   ],
   "layout": "2-panels-tree-guides-left",

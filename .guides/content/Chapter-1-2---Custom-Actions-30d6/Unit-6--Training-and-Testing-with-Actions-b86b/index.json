@@ -3,11 +3,9 @@
   "type": "section",
   "title": "Unit 6: Training and Testing with Actions",
   "order": [
-    "6-1-Training-with-Actions-c79c",
     "Lab-6-1--Training-and-Testing-with-Actions-7710",
     "6-2-Common-Training-Errors-with-Actions-9733",
     "Lab-6-2--Verify-Domain-and-Training-2289",
-    "6-3-Testing-Your-Action-4ae9",
-    "6-4-Debugging-Actions-6978"
+    "6-3-Testing-Your-Action-4ae9"
   ]
 }

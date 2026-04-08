@@ -366,90 +366,17 @@ For Level 2, you typically don't need to access the domain directly.
 
 ## Unit 3: Creating Your First Action
 
-### 3.1 Step-by-Step: Creating an Action
+### Lab 3.1 (Codio guide): Create Your Own Action
 
-You've seen `action_bank_hours.py`—it uses `datetime` and conditional logic to return different messages based on the current day. That's why it's an action, not a simple `utter_*` response. Now you'll create your own action in Lab 3.1.
+The guide no longer has a separate “3.1 Step-by-Step” page. Students use **Unit 2.1** (*The Action Class Deep Dive*) for the full **`action_bank_hours.py`** example. **Lab 3.1** is the first page in Unit 3: **Fill in the blanks** for **`action_holiday_hours`**, paste into **`level2/actions/action_holiday_hours.py`**, then the **Code Test**—same **fill-in → paste → grader** flow as Chapter 1.4 Lab 3.1.
 
-**What you learned from `action_bank_hours`**:
-- Actions need imports (including `datetime` if you use the current date/time)
-- The class inherits from `Action`
-- `name()` returns the action identifier
-- `run()` contains your logic—conditionals, calculations, etc.—and calls `dispatcher.utter_message()` to send the result
+**Codio taskIds / grader:** **`fill-in-the-blanks-201030010`** (5 pts) → **`code-output-compare-2266471391`** (8 pts). The Code Test runs **`bash …/level2_graders/lab_3.2_grader.sh`** (on-disk name; script banner says Lab 3.1).
 
----
+**When creating `action_holiday_hours`, verify**: Imports (`datetime`, Rasa SDK, typing as needed); class **`ActionHolidayHours(Action)`**; **`name()`** returns **`action_holiday_hours`**; **`run()`** uses **`datetime.now()`** and date checks for holiday messages; **`dispatcher.utter_message(text=message)`**; **`return []`**.
 
-**For reference, here's the structure of `action_bank_hours`** (the file already exists in your project):
+**Common mistakes**: Forgetting to inherit from **`Action`**; wrong **`name()`** return; forgetting **`return []`** from **`run()`**.
 
-```python
-from datetime import datetime
-from typing import Any, Dict, List, Text
-
-from rasa_sdk import Action, Tracker
-from rasa_sdk.executor import CollectingDispatcher
-
-
-class ActionBankHours(Action):
-    """A custom action that returns bank hours based on the current day."""
-
-    def name(self) -> Text:
-        return "action_bank_hours"
-
-    def run(
-        self,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: Dict[Text, Any],
-    ) -> List[Dict[Text, Any]]:
-        weekday = datetime.now().weekday()  # 0=Monday, 5=Saturday, 6=Sunday
-
-        if weekday == 6:  # Sunday
-            message = "Today is Sunday—we're closed."
-        elif weekday == 5:  # Saturday
-            message = "Today is Saturday—we're open 10am-2pm."
-        else:  # Monday–Friday
-            message = (
-                "Our bank hours are Monday-Friday 9am-5pm, "
-                "Saturday 10am-2pm. We're closed on Sundays."
-            )
-
-        dispatcher.utter_message(text=message)
-        return []
-```
-
-**Next**: Complete Lab 3.1 to create a new action that follows this pattern.
-
----
-
-**When creating your action (Lab 3.1), verify**:
-
- **Imports**: Include `datetime` if you use the current date/time; include Rasa SDK imports
- **Class name**: Descriptive, starts with `Action` (e.g., `ActionHolidayHours`)
- **`name()` method**: Returns the action name (matches filename)
- **`run()` method**: Has correct parameters (`dispatcher`, `tracker`, `domain`)
- **Message sending**: Uses `dispatcher.utter_message()`
- **Return value**: Returns `[]` (empty list)
-
-**Common mistakes to avoid**:
-- ❌ Forgetting to inherit from `Action`
-- ❌ Wrong return type in `name()` (should return string, not call it)
-- ❌ Forgetting to return `[]` from `run()`
-- ❌ Typos in method names (`run` not `runs`, `name` not `names`)
-
----
-
-### 3.2 Understanding Action Execution
-
-When Rasa executes your action:
-
-1. **Rasa finds the action**: Looks for `action_bank_hours` in the `actions/` folder
-2. **Rasa instantiates the class**: Creates an instance of `ActionBankHours`
-3. **Rasa calls `name()`**: Verifies the action name matches
-4. **Rasa calls `run()`**: Executes your custom code
-5. **Your code runs**: Python executes your logic
-6. **Message is sent**: `dispatcher.utter_message()` sends text to the user
-7. **Action completes**: Returns empty list `[]`
-
-**Key Point**: Rasa handles all the infrastructure - you just write the `run()` method with your logic.
+**Execution summary (Codio guide):** The seven-step “when Rasa runs your action” list and key point appear at the **end of Lab 3.1** (no separate Unit 3.2 page).
 
 ---
 
@@ -642,6 +569,8 @@ flows:
 
 ## Unit 6: Training and Testing with Actions
 
+**Codio guide:** Student-facing training content lives on **Lab 6.1** (`Lab-6-1--Training-and-Testing-with-Actions-7710.md`). The subsections below are the full instructor reference (including local PowerShell).
+
 ### 6.1 Training with Actions
 
 Training with actions is the same as Level 1, but Rasa now also processes your action files.
@@ -731,7 +660,7 @@ Error: Action name 'action_bank_hours' in domain doesn't match class name
 
 ---
 
-### 6.3 Testing Your Action
+### 6.3 Testing and Debugging Your Action
 
 #### Basic Testing Workflow
 
@@ -755,318 +684,33 @@ Error: Action name 'action_bank_hours' in domain doesn't match class name
 
 **Key Point**: All Level 1 functionality remains - Level 2 adds new capabilities without breaking existing ones.
 
----
-
-### 6.4 Debugging Actions
-
 #### Check Debug Output
 
-When testing in Inspector, check the debug panel:
-- Which flow was triggered?
-- Which action was called?
-- Did the action execute successfully?
+When testing in Inspector, check the debug panel: which flow was triggered, which action was called, and whether the action completed successfully.
 
 #### Common Issues
 
-1. **Action doesn't trigger**:
-   - Check flow description matches user intent
-   - Verify action is registered in domain
-   - Check action file exists and is correct
-
-2. **Action executes but no message**:
-   - Check `dispatcher.utter_message()` is called
-   - Verify the message text is correct
-   - Check for Python errors in the action
-
-3. **Python errors in action**:
-   - Check Python syntax
-   - Verify all imports are correct
-   - Check for typos in method names
+1. **Action doesn't trigger**: Flow description matches user intent; action registered in domain; action file exists under `actions/`.
+2. **Action executes but no message**: `dispatcher.utter_message()` is called; check for Python errors in the action.
+3. **Python errors in action**: Syntax, imports, and method names.
 
 ---
 
-## Unit 7: Putting It All Together
+## Unit 7: Putting It All Together (single page; former Unit 8 merged here)
 
-### 7.1 Complete Agent Walkthrough
+### 7.1 Level 2 Wrap-Up: Integration, Review, and Next Level
 
-Let's trace through a complete conversation showing how Level 1 and Level 2 work together.
+One student-facing page in Codio (`7-1-Complete-Agent-Walkthrough-d798`): integration walkthrough, project map, best practices, **five multiple-choice Check It! assessments** (`multiple-choice-1208100001`–`0005`), merged recap of concepts and skills, Level 2 limitations vs when to move on, Level 3 preview (same agent; add `holiday_hours` / `action_holiday_hours` to the “what stays” list), and readiness checklist.
 
-#### Conversation Example
+#### Conversation example
 
-```
-[User opens chat - new session starts]
+Include session start, `hours` + `action_bank_hours`, `holiday_hours` + `action_holiday_hours`, and a Level 1 static flow (e.g. `contact`). Fenced `text` trace; dynamic agent lines per course.
 
-1. pattern_session_start triggers automatically (Level 1)
-   ↓
-   Flow: pattern_session_start
-   Step: utter_greet
-   ↓
-Agent: "Hi! I'm a banking assistant. How can I help you today?"
+#### Practices, knowledge check, recap, limitations, Level 3
 
-[User types: "What are your hours?"]
+Align prose with `Level2_Unit7_Content_7.1_Complete-Agent-Walkthrough.md` / `.guides/.../7-1-Complete-Agent-Walkthrough-d798.md`. Avoid duplicating the “future levels” roadmap in both “at a glance” and limitations—limitations + Level 3 sections carry that detail.
 
-2. LLM understands: "User wants to know bank hours"
-   ↓
-   FlowPolicy matches to: hours flow (Level 2)
-   (Description: "Tell the user when the bank is open")
-   ↓
-   Flow: hours
-   Step: action_bank_hours (Level 2 - custom Python code!)
-   ↓
-   Action executes Python code
-   dispatcher.utter_message() sends message
-   ↓
-Agent: "Our bank hours are Monday-Friday 9am-5pm, Saturday 10am-2pm. We're closed on Sundays."
-
-[User types: "How can I contact you?"]
-
-3. LLM understands: "User wants contact information"
-   ↓
-   FlowPolicy matches to: contact flow (Level 1)
-   ↓
-   Flow: contact
-   Step: utter_contact (Level 1 - static response)
-   ↓
-Agent: "You can reach us at support@bank.com or call 1-800-BANK-123."
-```
-
-**Notice**: The agent seamlessly uses both Level 1 responses and Level 2 actions!
-
----
-
-### 7.2 Your Level 2 Banking Agent: Summary
-
-Congratulations! You've extended your Level 1 banking agent with custom Python code.
-
-#### Your Complete Agent Structure
-
-**Domain (`domain/basics.yml`)**:
-- All Level 1 responses (`utter_greet`, `utter_help`, `utter_contact`)
-- New `actions:` section with `action_bank_hours`
-
-**Flows (`data/basics/`)**:
-- All Level 1 flows (`greet`, `help`, `contact`)
-- New flow (`hours`) that uses an action
-
-**Actions (`actions/`)**:
-- `action_bank_hours.py` - Returns bank hours dynamically
-
-**System Patterns**: Unchanged from Level 1
-
-**Configuration**: Unchanged from Level 1 (except minor endpoints.yml updates)
-
-#### What Your Agent Can Do Now
-
-Your Level 2 banking agent can:
-- Everything Level 1 could do (greet, help, contact)
-- Execute custom Python code (actions)
-- Return dynamic responses based on code execution
-- Process data and perform calculations
-
-#### What's Still Missing (Coming in Future Levels)
-
-Your Level 2 agent cannot yet:
-- ❌ Remember information from the conversation (Level 3: Slots)
-- ❌ Collect multiple pieces of information (Level 4: Multiple Slots)
-- ❌ Use dynamic tool calling (Level 5: Tools)
-
-But you have a solid foundation with custom code capabilities!
-
----
-
-## Unit 8: Assessment and Next Steps
-
-### 8.1 Knowledge Check
-
-Test your understanding with these questions:
-
-#### Question 1: What is an Action?
-
-a) A predefined agent message  
-b) Custom Python code the agent can execute  
-c) A conversation script  
-d) A configuration file
-
-**Answer**: b) Custom Python code the agent can execute
-
-**Explanation**: Actions are Python classes that execute custom code. They allow the agent to do more than just send static text - they can perform calculations, access databases, and execute any Python logic.
-
----
-
-#### Question 2: Where are Actions Defined?
-
-a) In `domain/basics.yml` under `responses:`  
-b) In Python files in the `actions/` folder  
-c) In flow files in `data/basics/`  
-d) In `config.yml`
-
-**Answer**: b) In Python files in the `actions/` folder
-
-**Explanation**: Actions are Python classes defined in `.py` files in the `actions/` folder. They must also be registered in `domain/basics.yml` under `actions:`, but the actual code is in Python files.
-
----
-
-#### Question 3: What Method Must Every Action Have?
-
-a) `execute()`  
-b) `run()`  
-c) `perform()`  
-d) `do()`
-
-**Answer**: b) `run()`
-
-**Explanation**: Every action class must have a `run()` method that contains the custom logic. This is the method Rasa calls when the action is executed.
-
----
-
-#### Question 4: How Do You Send a Message from an Action?
-
-a) `print("message")`  
-b) `dispatcher.utter_message(text="message")`  
-c) `return "message"`  
-d) `send_message("message")`
-
-**Answer**: b) `dispatcher.utter_message(text="message")`
-
-**Explanation**: The `dispatcher` parameter in the `run()` method is used to send messages to the user. Use `dispatcher.utter_message(text="...")` to send text.
-
----
-
-#### Question 5: What's the Difference Between `utter_*` and `action_*`?
-
-a) There's no difference  
-b) `utter_*` are responses (static text), `action_*` are actions (custom code)  
-c) `utter_*` are actions, `action_*` are responses  
-d) They're the same thing
-
-**Answer**: b) `utter_*` are responses (static text), `action_*` are actions (custom code)
-
-**Explanation**: `utter_*` responses are predefined text messages in the domain file. `action_*` actions are custom Python code that can execute any logic. Both can be called from flows using `- action:`, but they work differently.
-
----
-
-### 8.2 What You've Learned
-
-#### Key Concepts
-
-1. **Actions**: Custom Python code that the agent can execute
-2. **Action Class**: Python class that inherits from `Action`
-3. **Action Registration**: Telling Rasa about actions in the domain file
-4. **Dispatcher**: Used to send messages from actions
-5. **Action Execution**: How Rasa calls and runs your custom code
-
-#### Skills You've Developed
-
-- Can create custom Python actions
-- Can register actions in the domain file
-- Can call actions from flows
-- Can understand the difference between responses and actions
-- Can debug action-related issues
-- Can extend your Level 1 agent with custom code
-
----
-
-### 8.3 Limitations of Level 2
-
-Level 2 agents have clear limitations:
-
-#### What Level 2 Cannot Do
-
-1. **Remember Information**: The agent cannot remember what the user said earlier
-   - Example: User says "My account is 1234" → Agent forgets immediately
-   - Solution: Level 3 adds slots (memory)
-
-2. **Use Previous Context**: Actions can't access conversation history effectively
-   - Example: "Check my balance" → Agent doesn't know which account
-   - Solution: Level 3 adds slots to remember account numbers
-
-3. **Collect Multiple Pieces of Information**: Can't gather multiple data points
-   - Example: "Transfer money" → Agent can't collect amount, recipient, and account
-   - Solution: Level 4 adds multiple slot collection
-
-#### When Level 2 is Sufficient
-
-Level 2 is perfect for:
-- Dynamic responses based on calculations
-- Data processing and formatting
-- Simple integrations (APIs, databases)
-- Conditional logic that doesn't need memory
-
-#### When You Need More
-
-Move to Level 3 when you need:
-- Memory (slots) to remember user information
-- Multi-turn conversations with context
-- Collecting information from users
-
----
-
-### 8.4 What's Next: Level 3 Preview
-
-⚠️ **Important: Building on Your Existing Banking Agent**
-
-When you move to Level 3, you will **continue working on the same banking agent** you've built throughout Levels 1 and 2. Level 3 doesn't start from scratch - it builds on what you've already created:
-
-- **Your existing responses** (`utter_greet`, `utter_help`, `utter_contact`) stay
-- **Your existing flows** (`greet`, `help`, `contact`, `hours`) stay
-- **Your existing actions** (`action_bank_hours`) stay
-- **Level 3 adds**: Slots (memory), new responses for asking questions, new actions that use slots, new flows that collect information
-
-**You don't start a new agent** - you extend your existing Level 2 banking agent with memory capabilities!
-
----
-
-**Level 3: Slot Collection** introduces conversation memory.
-
-#### What Slots Enable
-
-**Example Scenario**: "Check my balance"
-
-- **Level 2**: Agent can't remember which account the user has
-- **Level 3**: Agent can:
-  - Ask for account number
-  - Remember it in a slot
-  - Use that slot in actions
-  - Check balance for that specific account
-
-In Level 3, you'll add:
-- `account` slot to store the user's account number
-- `utter_ask_account` response to ask for the account
-- `action_check_balance_simple` action that reads the slot
-- `check_balance` flow that collects the account before checking
-
-#### Key Concepts in Level 3
-
-1. **Slots**: Memory variables that store information from the conversation
-2. **Slot Collection**: Using `collect:` in flows to ask for and store information
-3. **Reading Slots**: Using `tracker.get_slot()` in actions to access stored information
-4. **Ask Responses**: `utter_ask_*` responses used when collecting slots
-
-#### When to Move to Level 3
-
-Move to Level 3 when you need:
-- To remember information from the conversation
-- To collect information from users before performing actions
-- Multi-turn conversations with context
-- Personalized responses based on user information
-
-**Your Level 2 banking agent is the foundation** - Level 3 adds memory on top of it!
-
----
-
-### 8.5 Course Completion Checklist
-
-Before moving to Level 3, ensure you can:
-
-- [ ] Explain what an action is and how it differs from a response
-- [ ] Create a new action in Python
-- [ ] Register an action in the domain file
-- [ ] Create a flow that uses an action
-- [ ] Understand how actions are executed
-- [ ] Debug when actions don't work
-- [ ] Understand that Level 2 builds on Level 1 (all Level 1 content remains)
-
-If you can check all these boxes, you're ready for Level 3!
+**Former Unit 8** stems (`8-1-Knowledge-Check-9fc3` through `8-5-Course-Completion-Checklist-5f74`) removed from the chapter; content lives only in **7.1**.
 
 ---
 

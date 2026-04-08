@@ -6,6 +6,11 @@
       "path": "level2/actions/action_bank_hours.py",
       "panel": 1,
       "action": "open"
+    },
+    {
+      "path": "#terminal",
+      "panel": 1,
+      "action": "open"
     }
   ],
   "layout": "2-panels-tree-guides-left",
@@ -14,6 +19,7 @@
   ],
   "type": "page",
   "contentType": "markdown",
+  "content": "",
   "teacherOnly": false,
   "closeTerminalSession": true,
   "learningObjectives": ""

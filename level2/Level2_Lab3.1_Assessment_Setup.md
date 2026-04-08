@@ -2,7 +2,7 @@
 
 ## Guide Content (For Students)
 
-**Placement**: This lab follows Unit 3: Creating Your First Action.
+**Placement**: **Lab 3.1** is the **only** guide page in Unit 3 (students rely on **Unit 2.1** for the `action_bank_hours` example).
 
 ---
 
@@ -63,17 +63,18 @@ Run the assessment when you're done.
 
 ### Overview
 
-This assessment verifies that students can create a custom action file (`action_holiday_hours.py`) with the correct structure, imports, methods, and date-based logic (so the message depends on whether today is a holiday).
+Students complete **`fill-in-the-blanks-201030010`** (5 points) first, paste into **`level2/actions/action_holiday_hours.py`**, then **`code-output-compare-2266471391`** (8 points; Bash grader). This verifies the file has the correct structure, imports, methods, and date-based logic.
 
-### Assessment Type
+### Assessment types
 
-**Standard Code Test** (Bash script)
+1. **Fill in the Blanks** — taskId **`fill-in-the-blanks-201030010`** (see `.guides/assessments/`).
+2. **Standard Code Test** (Bash script) — taskId **`code-output-compare-2266471391`**.
 
 ## Grader Script Location
 
-Save the grader script at:
+The Code Test invokes (on-disk filename; banner text says Lab 3.1):
 ```
-.guides/secure/level2_graders/lab_3.1_grader.sh
+.guides/secure/level2_graders/lab_3.2_grader.sh
 ```
 
 ## Grader Script
@@ -208,11 +209,13 @@ class ActionHolidayHours(Action):
 
 1. **Create the page** – New Codio Guide page **Lab 3.1: Create Your Own Action** (standalone: folder tree, guide editor, terminal). Add the **Guide Content** section above as the page content.
 
-2. **Add Code Test** – Add Code Test → **Standard Code Test**. Configure each tab as follows.
+2. **Add Fill in the Blanks** – Import or configure from `.guides/assessments/fill-in-the-blanks-201030010.json` (taskId **`fill-in-the-blanks-201030010`**). Points: `5`. Place this **before** the Code Test on the page.
 
-   **General** – Name: *Lab 3.1: Create Your Own Action*. Description: *Verify that students can create action_holiday_hours.py with correct structure and date-based logic*. Points: `8`. Language: `Bash`.
+3. **Add Code Test** – Add Code Test → **Standard Code Test**. Configure each tab as follows.
 
-   **Execution** – COMMAND: `bash /home/codio/workspace/.guides/secure/level2_graders/lab_3.1_grader.sh`. TIMEOUT: `60` seconds. Working Directory: `/home/codio/workspace/level2`.
+   **General** – Name: *Lab 3.1: Create Your Own Action (Code Test)*. Description: *Verify that students can create action_holiday_hours.py with correct structure and date-based logic*. Points: `8`. Language: `Bash`.
+
+   **Execution** – COMMAND: `bash /home/codio/workspace/.guides/secure/level2_graders/lab_3.2_grader.sh`. TIMEOUT: `60` seconds. Working Directory: `/home/codio/workspace/level2`.
 
    **Grading**
    - **Points**: `8` – Total points for this assessment.
@@ -230,8 +233,8 @@ class ActionHolidayHours(Action):
    - **Defined number of attempts**: `OFF` – No limit on submission attempts (or set a limit if desired).
    - **Rationale** (optional): e.g. *The grader checks only what the lab instructs: action file in actions/, correct imports (including datetime), class ActionHolidayHours(Action), name() returning 'action_holiday_hours', and run() calling dispatcher.utter_message() and returning [].*
 
-   **Files** – Create the grader script at `.guides/secure/level2_graders/lab_3.1_grader.sh`. In the Codio workspace terminal (from the workspace root), make it executable: `chmod +x .guides/secure/level2_graders/lab_3.1_grader.sh`.
+   **Files** – Grader script at `.guides/secure/level2_graders/lab_3.2_grader.sh`. From the workspace root: `chmod +x .guides/secure/level2_graders/lab_3.2_grader.sh`.
 
-3. **Save & Test** the assessment. Enable **Learning Analytics** if desired.
+4. **Save & Test** both assessments. Enable **Learning Analytics** if desired.
 
 ---

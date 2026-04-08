@@ -28,7 +28,7 @@ For a full mapping of Level 2 (Chapter 1.2) content, labs, and graders, see `lev
   - `Chapter-1-2---Custom-Actions-30d6` in the `order` array.
 - Chapter index: `.guides/content/Chapter-1-2---Custom-Actions-30d6/index.json`:
   - `type: "chapter"`, title `"Chapter 1.2 - Custom Actions"`.
-  - `order` (units): Unit-0 … Unit-8:
+  - `order` (units): Unit-0 … Unit-7 (Unit 8 removed; wrap-up merged into Unit 7):
     - `Unit-0--Recap--What-You-Built-in-Level-1-d9e8`
     - `Unit-1--Introduction-to-Actions-aa31`
     - `Unit-2--Understanding-the-Action-Class-6b66`
@@ -37,9 +37,8 @@ For a full mapping of Level 2 (Chapter 1.2) content, labs, and graders, see `lev
     - `Unit-5--Using-Actions-in-Flows-b1ff`
     - `Unit-6--Training-and-Testing-with-Actions-b86b`
     - `Unit-7--Putting-It-All-Together-6721`
-    - `Unit-8--Assessment-and-Next-Steps-5e33`
 - **Unit 3 index** (`Unit-3--Creating-Your-First-Action-5090/index.json`) now uses:
-  - `order`: `["3-1-Step-by-Step-Creating-an-Action-05dc", "Lab-3-1--Creating-Your-First-Action-04c0", "3-2-Understanding-Action-Execution-199d"]`.
+  - `order`: `["Lab-3-1--Create-Your-Own-Action-04c0"]`.
   - Short duplicate `Lab-3-1-04c0` was removed (both `.md` and `.json`), and the index points only at the long-form Lab 3.1 page.
 - **Unit 2 index** (`Unit-2--Understanding-the-Action-Class-6b66/index.json`):
   - `order`: `["2-1-The-Action-Class-Deep-Dive-49b9", "2-2-Understanding-the-Parameters-3f41", "2-3-Test-Your-Knowledge-5051", "Lab-2-1--Exploring-the-Actions-Folder-45a5"]`.
@@ -94,21 +93,17 @@ All corresponding JSONs exist under `.guides/assessments/` with matching `taskId
 
 **Note:** The lab still has **short-answer FIB JSONs** in `.guides/assessments/` (IDs like 2658905168, 2658905169, 2658905170, 341339148, 235818681), but they are no longer referenced from this guide. They can be reused later if needed or deleted if we decide they are permanently out-of-scope.
 
-#### 3.2 Lab 3.1 – Creating Your First Action (Unit 3)
+#### Lab 3.1 – Creating Your First Action (Unit 3)
 
-- **Guide page (canonical):** `Lab-3-1--Creating-Your-First-Action-04c0.md`.
-  - Describes creating `actions/action_holiday_hours.py`:
-    - Imports including `datetime`, `Action`, `Tracker`, `CollectingDispatcher`.
-    - Class `ActionHolidayHours(Action)`.
-    - `name()` returns `"action_holiday_hours"`.
-    - `run()` uses current date to decide whether today is a holiday, sends appropriate message, and returns `[]`.
-  - Ends with `{Check It!|assessment}(code-output-compare-2266471391)`.
-- **Old duplicate page pair removed:**
-  - `Lab-3-1-04c0.md` and `Lab-3-1-04c0.json` were deleted.
-  - Unit 3 `index.json` now references only `"Lab-3-1--Creating-Your-First-Action-04c0"` in the `order`.
-- **Assessment JSON:** `.guides/assessments/code-output-compare-2266471391.json`.
-  - Runs `.guides/secure/level2_graders/lab_3.1_grader.sh`.
-  - Checks for correct file, imports, class name, `name()`, `run()`, and return value structure.
+- **Guide page (canonical):** `Unit-3--Creating-Your-First-Action-5090/Lab-3-1--Create-Your-Own-Action-04c0.md` (+ matching `.json`).
+  - **Unit 3** contains **this page only** (removed: “3.1 Step-by-Step: Creating an Action”, “3.2 Understanding Action Execution”; execution steps moved to the **end of Lab 3.1**).
+  - Segue from **Unit 2.1** (`action_bank_hours`); task: `level2/actions/action_holiday_hours.py`.
+  - **Check It! order:** `{Check It!|assessment}(fill-in-the-blanks-201030010)` → paste → `{Check It!|assessment}(code-output-compare-2266471391)`.
+  - Page ends with prose section **When Rasa executes your action** (seven steps + key point).
+- **Unit 3 `index.json` `order`:** `["Lab-3-1--Create-Your-Own-Action-04c0"]` only.
+- **Assessment JSONs:** `.guides/assessments/fill-in-the-blanks-201030010.json` (5 pts); `.guides/assessments/code-output-compare-2266471391.json` (8 pts).
+  - Code test runs `bash .../level2_graders/lab_3.2_grader.sh` (filename in repo; banner says Lab 3.1).
+  - Checks file, imports, `datetime`, `ActionHolidayHours`, `name()`, `run()`, `dispatcher.utter_message`, `return []`.
 
 ---
 

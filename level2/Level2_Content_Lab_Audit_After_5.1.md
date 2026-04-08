@@ -12,13 +12,11 @@ This audit covers all content and labs that come **after** Level 2 Lab 5.1.
 |------|----------------|----------------------------|--------------|
 | Unit 5 | Lab 5.1 | Yes — create `hours.yml`, create `holiday_hours.yml` | Full step-by-step in lab; single assessment. |
 | Unit 5 | 5.2 Mixing Responses and Actions | No — example YAML only, conceptual | None |
-| Unit 6 | 6.1 Training with Actions | No — run `rasa train`; model file is created by command | **Lab 6.1** already exists and assesses training / model file. |
+| Unit 6 | *(former 6.1 page merged into Lab 6.1)* | — | **Lab 6.1** covers training overview + `rasa train` + assessment. |
 | Unit 6 | 6.2 Common Training Errors | No — reference / how to fix | None |
 | Unit 6 | **Lab 6.1** | Run commands (train); no direct file creation by student | Lab with assessment ✓ |
-| Unit 6 | 6.3 Testing Your Action | No — run Inspector, use GUI | None |
-| Unit 6 | 6.4 Debugging Actions | No — read debug output, check files | None |
-| Unit 7 | 7.1, 7.2 | No — walkthrough, summary | None |
-| Unit 8 | 8.1–8.5 | No — knowledge check, review, checklist | None |
+| Unit 6 | 6.3 Testing and Debugging Your Action | No — Inspector, debug panel, common issues | None |
+| Unit 7 | 7.1 only (walkthrough, summary, best practices, knowledge check, limitations, L3 preview, checklist; former **8.x** merged) | MCs embedded on 7.1 | None |
 
 ---
 
