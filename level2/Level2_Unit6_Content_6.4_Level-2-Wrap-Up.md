@@ -1,4 +1,4 @@
-### 6.4 Level 2 Wrap-Up: Integration, Review, and Next Level
+## 6.4 Level 2 Wrap-Up: Integration, Review, and Next Level
 
 This last page of **Unit 6** finishes Level 2. It walks through a **full conversation** (Level 1 plus the example action and your Lab 3.1 action), maps **where your files live**, and suggests **practices** for testing and maintenance. After that, you will find a short **knowledge check** (use **Check It!** for each question), a recap of **core ideas and skills**, what Level 2 **still cannot** do, how **Level 3** builds on the **same** banking agent, and a **readiness** checklist before you leave this level.
 
