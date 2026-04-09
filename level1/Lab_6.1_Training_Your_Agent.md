@@ -43,9 +43,9 @@ INFO     rasa.model  - Successfully saved model to 'models/20250112-120817-desce
 
 **6. Success checklist** (before Check It!)
 
-- [ ] Prompt shows `(.venv)`.
-- [ ] `pwd` ends with `level1`.
-- [ ] A new `.tar.gz` exists under `level1/models/`.
+- Prompt shows `(.venv)`.
+- `pwd` ends with `level1`.
+- A new `.tar.gz` exists under `level1/models/`.
 
 The assessment expects a **recent** model (about **10 minutes**). Re-run `python -m rasa train` in `level1` if your last train was long ago, then use Check It!.
 

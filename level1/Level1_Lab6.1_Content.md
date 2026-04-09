@@ -42,9 +42,9 @@ python -m rasa train
 
 **Success checklist** (before you use Check It!):
 
-- [ ] Prompt shows `(.venv)`.
-- [ ] `pwd` ends with `level1` (you did not run `rasa train` from the repo root).
-- [ ] Training exited without an error and created a new file under `level1/models/`.
+- Prompt shows `(.venv)`.
+- `pwd` ends with `level1` (you did not run `rasa train` from the repo root).
+- Training exited without an error and created a new file under `level1/models/`.
 
 The graded Check It! expects a **recent** model (typically within about **10 minutes** of running the assessment). If you trained a long time ago, run `python -m rasa train` again in `level1`, then use Check It!.
 
