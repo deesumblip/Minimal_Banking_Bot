@@ -34,7 +34,7 @@
            rephrase: True
    ```
 
-**What you should see**: Multiple responses, each with the `utter_` prefix, indented properly with 2 spaces.
+**What you should see**: Different responses, each with the `utter_` prefix.
 
 ---
 
@@ -42,7 +42,7 @@
 
 1. Find the last response in the list
 2. After this response, add a blank line
-3. Add your new response using this exact pattern:
+3. Add your new response. Here is an example, you can make the text your own:
    ```yaml
    utter_goodbye:
      - text: "Goodbye! Have a great day!"
@@ -50,46 +50,14 @@
          rephrase: True
    ```
 
-⚠️ **Important**: Pay attention to indentation:
-- `utter_goodbye:` should be at the same level as `utter_contact:` (2 spaces from the left)
-- `- text:` should be indented 2 more spaces (4 spaces total)
-- `metadata:` should be at the same level as `text:` (6 spaces from the start of the line)
-- `rephrase: True` should be indented 2 more spaces under `metadata:` (8 spaces total)
-
 **Why add it here?** The order doesn't matter for functionality, but keeping responses organized helps with readability.
 
 ---
 
-**Step 4: Verify Your Syntax**
-
-Before saving, double-check:
-
-**Indentation**: 
-- Use exactly 2 spaces (not tabs, not 4 spaces)
-- Use your editor's "show whitespace" feature if available
-
-**Structure**:
-- Response name ends with `:` (colon)
-- `-` (dash) before `text:`
-- `metadata:` is aligned with `text:`
-- `rephrase: True` is under `metadata:`
-
-**Spelling**: 
-- `utter_goodbye` is spelled correctly
-- `rephrase` is spelled correctly
-
-**Common mistakes to avoid**:
-- Missing dash: `text: "..."` instead of `- text: "..."`
-- Wrong indentation: Using tabs or wrong number of spaces
-- Missing colon: `utter_goodbye` instead of `utter_goodbye:`
-- Wrong metadata indentation: `metadata:` aligned with `-` instead of `text:`
-
----
-
-**Step 5: Save the File**
+**Step 4: Save the File**
 
 1. Save your changes (Ctrl+S or Cmd+S)
-2. Your file should now have the new `utter_goodbye` response
+2. Your file should now have the new `utter_goodbye` response that looks similar to this:
 
 #### Complete Example
 
@@ -122,47 +90,3 @@ responses:
       metadata:
         rephrase: True
 ```
-
-#### Common Mistakes
-
-1. **Missing dash**: Forgetting the `-` before `text:` causes YAML parsing errors
-2. **Wrong indentation**: YAML is very sensitive to spacing - use 2 spaces consistently
-3. **Missing colon**: The response name must end with `:`
-4. **Forgetting `utter_` prefix**: While not strictly required, it's a strong convention
-
----
-
-### 2.3 Response Variations
-
-Having multiple variations of the same response makes your agent feel more natural and less robotic.
-
-#### When to Use Variations
-
-{Check It!|assessment}(code-output-compare-101020002)
-
-
-**Good for**:
-- Greetings (various ways to say hello)
-- Confirmations (different ways to say "yes")
-- General information (can be phrased differently)
-
-**Not good for**:
-- Critical information (account numbers, error codes)
-- Legal disclaimers (must be exact)
-- Step-by-step instructions (clarity is more important than variety)
-
-#### Example: Multiple Variations
-
-```yaml
-utter_greet:
-  - text: "Hi! I'm a banking assistant. How can I help you today?"
-  - text: "Hello! I'm here to help with your banking needs."
-  - text: "Welcome! How can I assist you today?"
-    metadata:
-      rephrase: True
-```
-
-When `utter_greet` is called, Rasa randomly selects one of these three options.
-
-
----

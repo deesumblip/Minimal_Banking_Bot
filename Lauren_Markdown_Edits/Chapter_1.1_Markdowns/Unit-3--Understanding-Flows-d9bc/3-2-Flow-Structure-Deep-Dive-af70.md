@@ -30,14 +30,14 @@ flows:
    - Should be clear and specific
    - Example: "Greet the user when they start a conversation" helps the LLM understand this flow should trigger on "hello", "hi", "hey", etc.
 
-⚠️ **Critical**: Flow descriptions are **essential**! The LLM reads flow descriptions to understand what each flow does. Without a good description, the LLM won't know when to trigger your flow. Always write clear, specific descriptions.
+⚠️ **Critical**: Flow descriptions are **essential**! The LLM reads flow descriptions to understand what each flow does. Without a good description, the LLM won't know when to activate your flow. Always write clear, specific descriptions.
 
 **Example of good vs bad descriptions**:
 - **Bad**: "Say hello" (too vague - when? why?)
-- **Good**: "Greet the user when they start a conversation" (clear context and purpose)
+- **Good**: "Greet the user when they start a conversation or say hello" (clear context and purpose)
 
 5. **`steps:`**: The actual steps to execute
-   - A list of actions to perform in order
+   - An outline of actions to perform
    - Each step is indented with a dash (`-`)
 
 6. **`- action: utter_greet`**: A single step

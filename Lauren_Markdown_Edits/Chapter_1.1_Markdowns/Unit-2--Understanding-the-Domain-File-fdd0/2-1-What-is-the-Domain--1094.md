@@ -1,4 +1,3 @@
-
 The **domain file** is the agent's knowledge base. It defines everything the agent "knows":
 - What it can **say** (responses)
 - What it can **remember** (slots) - not in Level 1
