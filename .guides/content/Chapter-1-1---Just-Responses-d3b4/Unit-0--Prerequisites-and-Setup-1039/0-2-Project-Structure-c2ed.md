@@ -1,4 +1,4 @@
-Understanding the file structure will help you navigate the codebase and understand how everything fits together.
+Understanding the file structure will help you navigate the codebase and understand how everything fits together. This is the file tree at the beginning of the course. Items like **sub-agents** and **tools (actions)** will be added to the file tree as you progress through the course.
 
 ---
 
@@ -11,17 +11,22 @@ level1/
 ├── endpoints.yml # Where to find actions/LLMs
 ├── .env # Environment variables (manually added locally)
 ├── domain/
-│ └── basics.yml # Agent knowledge base (responses)
+│   └── basics.yml # Agent knowledge base (responses)
 ├── data/
-│ ├── basics/ # User-facing flows (conversation scripts)
-│ │ ├── greet.yml
-│ │ ├── help.yml
-│ │ └── contact.yml
-│ └── system/
-│ └── patterns/
-│ └── patterns.yml # System patterns (session start, completed)
+│   ├── basics/ # User-facing flows (conversation scripts)
+│   │   ├── greet.yml
+│   │   ├── help.yml
+│   │   └── contact.yml
+│   └── system/
+│       └── patterns/
+│           └── patterns.yml # System patterns (session start, completed)
+├── logs/ # Log files (e.g. when running Inspector; may be empty at first)
 └── models/ # Generated during training (don't edit)
 ```
+
+The layout above is the **starter** Level 1 agent before most labs—you will add more flows, domain responses, and (after `rasa train`) a packaged model under `models/` as you work through the chapter.
+
+This tree shows the **Rasa agent layout** for those core files. Your real `level1/` folder may also contain course notes (`.md` files), helper scripts, `.guides`, `.rasa`, and other files—those support the course but are not part of the agent definition above.
 
 **Note for Codio Students**: Credentials are pre-configured via environment variables. The `.env` file may not be visible in your project; that's expected.
 

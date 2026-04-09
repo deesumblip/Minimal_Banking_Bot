@@ -1,14 +1,7 @@
 
-Before diving into building your first Rasa agent, let's make sure you have everything set up correctly.
+Before diving into building your first Rasa agent, let's make sure you have the prerequisites to get started: 
 
-**Prerequisites**: Python knowledge, command line familiarity, file editing, **Rasa Pro license**. Plan for 2–3 hours.
-
-**Note for Codio Students**: Start with Lab 0.1 below to create a virtual environment and install Rasa Pro. Follow the lab to set **RASA_LICENSE** (e.g. via `export RASA_LICENSE=...` or `.env` in project root or Codio environment variables) before running `rasa --version` or other Rasa commands.
-
-**Note for Local Setup**: If you are repeating this exercise on your own machine (not in Codio), set **RASA_LICENSE** (e.g. create a `.env` file in your **project root** with):
-
-```text
-RASA_LICENSE=rasaxxx-your-license-here
-```
-Replace the placeholder with your actual Rasa Pro license. Load it (e.g. `source .env` from project root) before running Rasa.  
-**Never commit `.env` to version control.**
+**Prerequisites**:
+- **Timing:** This is a self-guided course that should take about 2-3 hours
+- Basic Python knowledge, command line familiarity, file editing is necessary to be successful
+- **Rasa license**. You can get your free Rasa developer edition license [at this link](https://rasa.com/rasa-pro-developer-edition-license-key-request)
