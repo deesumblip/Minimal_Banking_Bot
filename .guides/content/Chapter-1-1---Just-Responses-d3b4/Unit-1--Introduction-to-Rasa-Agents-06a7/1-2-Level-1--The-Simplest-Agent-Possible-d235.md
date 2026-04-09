@@ -1,25 +1,24 @@
 
-Level 1 represents the **absolute minimum** a functional Rasa agent needs. We intentionally start simple to build a solid foundation.
+Level 1 is the **absolute minimum** a working Rasa agent needs: **responses**, **flows**, and **configuration**—nothing else. We start here so the core ideas stick before you add memory, tools, and richer logic.
 
-#### What Level 1 Includes
+#### What Level 1 includes
 
-- **Responses**: Predefined messages the agent can say
-- **Flows**: Simple conversation scripts that use those responses
-- **Basic configuration**: Files that tell Rasa how to build the agent
+You work with three building blocks:
 
-#### What Level 1 Does NOT Include
+- **Responses** — predefined messages the agent can send.
+- **Flows** — simple conversation scripts that decide **when** to send which response.
+- **Basic configuration** — files that tell Rasa how to assemble and run the agent.
 
-- **Slots (Memory)**: The agent cannot remember information from earlier in the conversation
-- **Actions (Custom Code)**: The agent cannot execute Python code or perform calculations
-- **Dynamic Responses**: All responses are static - they don't change based on context
+#### What Level 1 does not include
 
-#### Why Start Here?
+There is **no memory across turns** (no **slots**), **no custom Python or external integrations** (no **actions** / tool calls), and **no responses that change from context alone**—what the agent says is declared in advance. Heavier **autonomy** and **LLM-driven reasoning** belong in later levels. Here the surface area stays small on purpose.
 
-1. **Minimal Cognitive Load**: You only need to understand one concept: responses
-2. **Quick Wins**: You can build a working agent in minutes
-3. **Real-World Validity**: Many production agents are exactly this simple
-4. **Foundation**: Everything else builds on this base
+#### Why we begin here
 
-**Analogy**: Level 1 is like a FAQ page that can understand questions. It provides information, but doesn't do anything complex.
+The cognitive load stays low: you mostly think about **responses** and how **flows** trigger them. You can get a runnable agent quickly, and many real systems stay close to this shape for straight FAQ-style help. Later, when you build more open-ended or hybrid agents, you will still reach for these same pieces whenever you need a **controlled, predictable** path.
+
+#### What Level 1 is good for
+
+Use cases like **FAQs, hours, contact information, and simple guided help**—situations where the conversation path is known ahead of time and the user does not need the agent to remember earlier turns. In short: at this level the agent can **reply** from fixed content; it does not yet **remember**, **reason**, or **act** beyond those scripted responses.
 
 ---
