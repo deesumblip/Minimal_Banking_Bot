@@ -1,18 +1,17 @@
 **Objective**: Add a second variation to `utter_goodbye`.
 
-**Before You Begin**:
-- You've completed Lab 2.1 (created `utter_goodbye`)
-- You have `domain/basics.yml` open in your editor
+**Before you begin**
+
+- Finish **Lab 2.1** first so `utter_goodbye` already exists in the domain.
+- Keep **`domain/basics.yml`** open in your editor.
 
 #### Steps
 
-1. Find `utter_goodbye` in `domain/basics.yml` (it should be at the end of the responses section)
-2. Add a second `- text:` item with a different farewell message
-   - The second `- text:` should be at the same indentation level as the first
-   - Use a different farewell phrase (e.g., "See you later!", "Take care!", "Have a great day!")
-3. Keep the `metadata:` section (it can be under the last text item)
+1. Find **`utter_goodbye`** in **`domain/basics.yml`**. It should be the last block in the **`responses:`** section.
+2. Add a second **`- text:`** line with a different farewell message. The new **`- text:`** must sit at the **same** indentation as the first **`- text:`** line. You might use lines such as “See you later!”, “Take care!”, or another short goodbye you prefer.
+3. Keep a single **`metadata:`** block. It may sit under the last **`text:`** entry, which is the usual pattern when both lines share the same rephrasing settings.
 
-**Example Solution**:
+**Example:**
 
 ```yaml
 utter_goodbye:
@@ -22,15 +21,14 @@ utter_goodbye:
       rephrase: True
 ```
 
-**How to Verify**:
-1. Check that both `- text:` items are at the same indentation level (4 spaces from the left)
-2. Check that `metadata:` is aligned with `text:` (6 spaces from the left)
-3. Check that `rephrase: True` is under `metadata:` (8 spaces from the left)
-4. Try training your agent (we'll learn this in Unit 6) - if training succeeds, your YAML is correct!
+#### How to verify
 
-**What This Means**: When `utter_goodbye` is used, Rasa will randomly select one of the two variations, making your agent feel more natural.
+Both **`- text:`** lines should sit at the same indent. **`metadata:`** should align with **`text:`**, and **`rephrase: True`** should nest under **`metadata:`**. When you later run **`python -m rasa train`** from **`level1`** in Unit 6, valid YAML will train successfully; if training fails with a parse error, open the file at the line number in the message and fix indentation.
+
+#### What this does
+
+Each time the flow uses **`utter_goodbye`**, Rasa picks **one** of the **`text:`** lines at random, so the agent is less likely to repeat the exact same line if the user triggers goodbye several times. If **`rephrase: True`** is also set, the LLM can still vary wording on top of those templates, which stacks two kinds of variety together.
 
 {Check It!|assessment}(code-output-compare-302300002)
-
 
 ---

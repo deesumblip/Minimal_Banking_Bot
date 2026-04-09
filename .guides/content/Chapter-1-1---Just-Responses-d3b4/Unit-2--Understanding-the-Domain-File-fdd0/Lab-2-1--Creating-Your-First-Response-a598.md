@@ -1,15 +1,14 @@
 **Objective**: Add a new `utter_goodbye` response to your agent’s domain file.
 
-#### Step-by-Step Tutorial
+#### Step-by-step
 
 **Step 1: Open the domain file**
 
-1. In your project, open **`level1/domain/basics.yml`**.
-2. Confirm it starts with `version: "3.1"` and contains a `responses:` section with entries such as `utter_greet`, `utter_help`, and `utter_contact`.
+In your project, open **`level1/domain/basics.yml`**. Confirm the file begins with `version: "3.1"` and that a **`responses:`** section lists entries such as `utter_greet`, `utter_help`, and `utter_contact`.
 
-**Step 2: Find `responses:`**
+**Step 2: Review existing responses**
 
-Scroll to `responses:` (near the top). You should see blocks like:
+Scroll to **`responses:`** near the top. You should see blocks similar to:
 
 ```yaml
 responses:
@@ -28,11 +27,11 @@ responses:
         rephrase: True
 ```
 
-Each response name uses the `utter_` prefix and is indented under `responses:`.
+Each response name uses the `utter_` prefix and sits under **`responses:`** with consistent indentation.
 
 **Step 3: Add `utter_goodbye`**
 
-1. After the **last** response in the list, add a blank line, then paste:
+1. After the **last** response block, add a blank line, then add your new response. You may change the farewell text, but keep the same shape as the other responses:
 
    ```yaml
    utter_goodbye:
@@ -41,21 +40,23 @@ Each response name uses the `utter_` prefix and is indented under `responses:`.
          rephrase: True
    ```
 
-2. **Indentation**: `utter_goodbye:` lines up with `utter_contact:`; `- text:` is indented two more spaces; `metadata:` lines up with `text:`; `rephrase: True` is under `metadata:`.
+2. **Indentation:** Align **`utter_goodbye:`** with names like **`utter_contact:`**. The **`- text:`** line is indented two spaces deeper than the response name. **`metadata:`** lines up with **`text:`**, and **`rephrase: True`** sits under **`metadata:`**.
+
+Response order does not change how Rasa runs, but keeping the file tidy makes later edits easier.
 
 **Step 4: Check before you save**
 
-- Spaces only (no tabs); consistent 2-space indents.
-- Response name ends with `:`; `-` before `text:`; `metadata:` aligned with `text:`.
-- Spelling: `utter_goodbye`, `rephrase`.
+- Use spaces only, no tabs, with two spaces per indent level.
+- The response name ends with a colon. Each message line starts with **`-`** before **`text:`**.
+- Spell **`utter_goodbye`** and **`rephrase`** exactly as shown.
 
 **Step 5: Save**
 
-Save `basics.yml` (e.g. Ctrl+S / Cmd+S).
+Save **`basics.yml`**, for example with Ctrl+S on Windows or Cmd+S on macOS.
 
 #### Complete example
 
-Your `responses:` section should look like this (with your new block at the end):
+Your **`responses:`** section should look like the following, with your new block at the end:
 
 ```yaml
 responses:
@@ -87,10 +88,10 @@ responses:
 
 #### Common mistakes
 
-1. **Missing `-`** before `text:` (YAML expects a list item).
-2. **Wrong indentation** — YAML is strict; use 2 spaces per level.
-3. **Missing `:`** after the response name (`utter_goodbye:`).
-4. **`metadata:`** must align with `text:`, not with the `-`.
+1. **Missing `-`** before **`text:`**. YAML expects each message to be a list item.
+2. **Wrong indentation.** YAML is strict; use two spaces per level and do not mix tabs.
+3. **Missing `:`** after the response name, for example **`utter_goodbye:`**.
+4. **`metadata:`** must line up with **`text:`**, not with the leading **`-`**.
 
 {Check It!|assessment}(code-output-compare-101020002)
 

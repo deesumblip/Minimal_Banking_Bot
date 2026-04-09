@@ -1,38 +1,36 @@
-Create a virtual environment in the **project root**, install Rasa Pro, set up **your own** Rasa Pro license (`RASA_LICENSE`), and verify everything works. This is your first step, you need this setup before any other lab.
+Create a virtual environment in the **project root**, install Rasa Pro, configure **your own** Rasa Pro license using the **`RASA_LICENSE`** variable, and confirm the tools work. This is your first lab; complete it before any other hands-on work.
 
-This course uses:
-
-- `RASA_LICENSE` (Rasa Pro license)
+This course expects a valid **`RASA_LICENSE`** for Rasa Pro.
 
 ---
 
 ## In this lab you will
 
-1. Check Python and pip
-2. Create a virtual environment (`.venv`) in the **project root**, this same `.venv` is used across **all levels** (level1, level2, level3, etc.)
-3. Install Rasa Pro in that venv
-4. Set up **RASA_LICENSE** (your own Rasa Pro license)
-5. Verify the installation with `rasa --version` (after your environment variable is loaded)
-6. Confirm the `level1` project structure is present
+1. Check Python and pip.
+2. Create a virtual environment named **`.venv`** in the **project root**. You reuse this same environment for **level1**, **level2**, **level3**, and the rest of the course.
+3. Install Rasa Pro inside that virtual environment.
+4. Configure **`RASA_LICENSE`** with your personal Rasa Pro license key.
+5. Run **`rasa --version`** after the license environment variable is loaded.
+6. Confirm the **`level1`** project layout is present.
 
 ---
 
 > **📌 Create the venv in the project root**
 >
-> The **project root** is the folder that contains all levels used in this course. Create `.venv` there. You'll use this single `.venv` for every level. Activate it from the project root, then `cd` into the level you're working in (e.g. `cd level1`).
+> The **project root** is the folder that contains every **level** folder used in this course. Create **`.venv`** there once. You reuse that single environment for all levels. Activate it from the project root, then change into the level you are working on, for example **`cd level1`**.
 
 ---
 
 ## Before you start
 
-- Open a terminal (Codio or your local machine).
-- Stay in the **project root** for all setup steps below. Choose the section that matches your environment: **Codio**, **Windows**, **macOS**, or **Linux**.
+- Open a terminal on **Codio** or on your own computer.
+- Run all setup steps from the **project root**. Use the section below that matches your environment: **Codio**, **Windows**, **macOS**, or **Linux**.
 
 ---
 
 ## On Codio
 
-Follow these steps from the **project root** (e.g. `~/workspace`). You do **not** need to run `mkdir` or `cd` into a new folder.
+Follow these steps from the **project root**, often **`~/workspace`**. You do **not** need to create a new folder or **`cd`** away from the root before you begin.
 
 **1. Check Python and pip**
 

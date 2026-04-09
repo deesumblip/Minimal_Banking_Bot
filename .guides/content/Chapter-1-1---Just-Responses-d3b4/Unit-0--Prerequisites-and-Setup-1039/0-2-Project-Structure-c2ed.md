@@ -1,4 +1,4 @@
-Understanding the file structure will help you navigate the codebase and understand how everything fits together. This is the file tree at the beginning of the course. Items like **sub-agents** and **tools (actions)** will be added to the file tree as you progress through the course.
+Understanding the file structure will help you navigate the codebase and understand how everything fits together. The diagram below shows the file tree **at the beginning of the course**. As you progress, you will add pieces such as **sub-agents** and **tools** implemented as **actions**.
 
 ---
 
@@ -24,9 +24,9 @@ level1/
 └── models/ # Generated during training (don't edit)
 ```
 
-The layout above is the **starter** Level 1 agent before most labs—you will add more flows, domain responses, and (after `rasa train`) a packaged model under `models/` as you work through the chapter.
+The layout above is the **starter** Level 1 agent before most labs. As you work through the chapter you will add more flows and domain responses. After you run **`rasa train`**, a packaged model appears under **`models/`**.
 
-This tree shows the **Rasa agent layout** for those core files. Your real `level1/` folder may also contain course notes (`.md` files), helper scripts, `.guides`, `.rasa`, and other files—those support the course but are not part of the agent definition above.
+The tree lists only the **agent** files. Your real **`level1/`** folder may also include course notes as **`.md`** files, helper scripts, **`.guides`**, **`.rasa`**, and other items. Those extras support the course; they are not part of the agent definition above.
 
 **Note for Codio Students**: Credentials are pre-configured via environment variables. The `.env` file may not be visible in your project; that's expected.
 

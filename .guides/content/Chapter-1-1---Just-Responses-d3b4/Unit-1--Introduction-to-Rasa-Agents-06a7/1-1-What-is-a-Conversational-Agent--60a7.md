@@ -13,7 +13,7 @@ Third, **dialogue management**: the layer that decides each turn whether to clar
 
 #### Rule-based, autonomous, and hybrid agents
 
-Design is a tradeoff about how much freedom you give the system. **Rule-based** agents follow fixed scripts. They are predictable and safe for strict processes (compliance, onboarding) but struggle when users go off-script. **Fully autonomous** agents take a goal plus **tools** and reason toward an outcome. They suit open-ended tasks but need careful design so flexibility does not turn into chaos.
+Design is a tradeoff about how much freedom you give the system. **Rule-based** agents follow fixed scripts. They are predictable and safe for strict processes such as **compliance** workflows and **onboarding**, but they struggle when users go off-script. **Fully autonomous** agents take a goal plus **tools** and reason toward an outcome. They suit open-ended tasks but need careful design so flexibility does not turn into chaos.
 
 **Hybrid** agents mix **guided flows** with more open-ended steps. **Rasa is aimed at that blend**: precision where you need it, flexibility where you do not. Most serious production agents end up hybrid, and this course prepares you for that path.
 

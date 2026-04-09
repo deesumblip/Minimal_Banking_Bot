@@ -11,7 +11,7 @@ You work with three building blocks:
 
 #### What Level 1 does not include
 
-There is **no memory across turns** (no **slots**), **no custom Python or external integrations** (no **actions** / tool calls), and **no responses that change from context alone**—what the agent says is declared in advance. Heavier **autonomy** and **LLM-driven reasoning** belong in later levels. Here the surface area stays small on purpose.
+**Level 1** does not use **slots**, so the agent does not remember information across turns. It does not run **actions**, so there is no custom Python and no external tool calls. Every response is declared up front in the domain, so nothing changes based on context alone. Heavier **autonomy** and **LLM-driven reasoning** belong in later levels, which keeps the surface area small here on purpose.
 
 #### Why we begin here
 
@@ -19,6 +19,6 @@ The cognitive load stays low: you mostly think about **responses** and how **flo
 
 #### What Level 1 is good for
 
-Use cases like **FAQs, hours, contact information, and simple guided help**—situations where the conversation path is known ahead of time and the user does not need the agent to remember earlier turns. In short: at this level the agent can **reply** from fixed content; it does not yet **remember**, **reason**, or **act** beyond those scripted responses.
+Use cases include **FAQs, hours, contact information, and simple guided help**. In those situations the conversation path is known ahead of time, and the user does not need the agent to remember earlier turns. At this level the agent can **reply** from fixed content. It does not yet **remember**, **reason**, or **act** beyond those scripted responses.
 
 ---

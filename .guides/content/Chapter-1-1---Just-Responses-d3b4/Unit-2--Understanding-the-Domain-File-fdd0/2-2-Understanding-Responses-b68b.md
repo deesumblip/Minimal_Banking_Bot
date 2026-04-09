@@ -1,8 +1,7 @@
-A **response** is a predefined message the agent can send to users. Responses are defined in the domain file and used in flows.
 
-#### Response Structure
+A **response** is a predefined message the agent can send. You declare responses in the domain and **flows** decide when to use them. That pairing is the whole contract between content and behavior.
 
-Let's examine a real response from `domain/basics.yml`:
+#### A real response from `domain/basics.yml`
 
 ```yaml
 utter_greet:
@@ -11,30 +10,21 @@ utter_greet:
       rephrase: True
 ```
 
-**Breaking it down**:
+#### What each part does
 
-1. **`utter_greet`**: The response name
-   - Must start with `utter_` (Rasa convention)
-   - `greet` is the descriptive part
-   - This is how you reference the response in flows
+**Name — `utter_greet`.** Every response name starts with the `utter_` prefix. The part after the underscore is yours to choose. Flows reference this name when they want the agent to speak.
 
-2. **`- text: "..."`**: The actual message
-   - The dash (`-`) means this is a list item
-   - `text:` is the field name
-   - The quoted string is what the agent will say
+**List item — `- text: "..."`.** The dash means this entry is one item in a **list**. That matters because a single response can list several `text` lines; Rasa can pick among them. More on that below.
 
-3. **`metadata: rephrase: True`**: Optional configuration
-   - Tells the LLM it can vary the wording
-   - Makes the agent feel more natural
-   - The agent might say "Hello!" instead of "Hi!" sometimes
+**Optional metadata — `rephrase: True`.** When this is set, the **LLM** may rephrase the wording while keeping the meaning. You can tune the rephraser in Rasa if you need tighter control. Without **`rephrase: True`**, the agent repeats the same string every time. Users notice when an agent sounds like a broken record.
 
-⚠️ **Important**: `rephrase: True` allows the LLM to vary the wording while keeping the same meaning. This makes conversations feel more natural - users notice when a agent says the exact same thing every time!
+With rephrasing enabled, “Hi! I'm a banking assistant.” might become “Hello! What can I help you with today?” on the next turn—same intent, different words, and a less robotic feel.
 
-**Why this matters**: Real conversations aren't repetitive. Without `rephrase: True`, your agent will always say exactly the same thing. With it enabled, the agent can say "Hello!" one time and "Hi there!" another time, while meaning the same thing.
+⚠️ **Important:** `rephrase: True` is optional, but it is the main lever for natural variation at Level 1. Real conversations are not perfectly repetitive; this setting helps your agent match that expectation.
 
-#### Why a List?
+#### Why responses are lists
 
-Responses are defined as lists because you can have multiple variations:
+Responses are lists so you can offer **multiple canned lines** for the same intent. Rasa can choose one at random, which adds variety **without** relying on the LLM:
 
 ```yaml
 utter_greet:
@@ -43,7 +33,7 @@ utter_greet:
   - text: "Welcome! I'm here to assist you."
 ```
 
-Rasa will randomly select one of these when the response is used, making the agent feel more natural.
+You can combine that random pick with **`rephrase: True`** so both the template list *and* the rephraser contribute to variety.
 
 {Check It!|assessment}(multiple-choice-2055505786)
 
