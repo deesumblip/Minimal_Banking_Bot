@@ -111,12 +111,10 @@
 **Assessment**: Lab 6.1 (Training Your Agent)
 
 **Sections** (Codio TOC order):
-- 6.1 What is Training?
-- 6.2 How to Train Your Agent
+- 6.1 Training: What It Does and How to Run It
 - Lab 6.1: Training Your Agent
 - Lab 6.2: Using Rasa Inspector
 - 6.3 Testing Your Agent
-- `CODIO_AUTO_START_INSPECTOR` (Codio helper page)
 
 **Key Concepts**: Training, Inspector, testing workflow
 

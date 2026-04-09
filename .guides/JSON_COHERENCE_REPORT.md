@@ -35,6 +35,7 @@ For each unit, the `order` array should list page ids that have a matching `.md`
 
 ### Spot checks (sample units)
 
+- **Chapter 1.1 Unit 6:** `order` = `6-1-What-is-Training-a1b2`, `Lab-6-1-Training-Your-Agent-c3d4`, `Lab-6-2-Using-Rasa-Inspector-e5f6`, `6-3-Testing-Your-Agent-f6a7`. Stem **`6-2-How-to-Train-Your-Agent-b2c3`** was merged into **6.1** (see §8).
 - **Chapter 1.4 Unit 0:** `order` = `["0-1-Your-Level-3-Banking-Agent-e4f5","0-2-What-Level-4-Adds-f5a6"]`; Unit-0 folder has matching .md and .json for both. Coherent.
 - **Chapter 1.4 Unit 1:** order includes 1-1, 1-2, 1-3, 1-4-Test-Your-Knowledge-e4f5; all have .md and .json. Coherent.
 - **Chapter 1.2 Unit 3:** `order` = `["Lab-3-1--Create-Your-Own-Action-04c0"]` only (one guide page). Removed stems (no longer in TOC): `3-1-Step-by-Step-Creating-an-Action-05dc`, `3-2-Understanding-Action-Execution-199d`; execution prose merged into **Lab 3.1**.
@@ -112,7 +113,11 @@ Each code-output-compare assessment uses a `source.command` that invokes a grade
 
 The following **Chapter 1.1** pages were removed from unit `index.json` `order` arrays and their `.md`/`.json` pairs were deleted under `Chapter-1-1---Just-Responses-d3b4/`: Unit **0.3**; Unit **1.3**, **1.4**; **Lab 2.1**; Unit **6.4** (Understanding Agent Behavior); Unit **8.2**, **8.4**, **8.5**. **Unit 0.4** (Getting Help, stem `0-4-Getting-Help-8218`) was **restored** to the TOC and files.
 
-**Deleted page stems (filename ids):** `0-3-Understanding-YAML-Syntax-0971`, `1-3-Real-World-Use-Cases-d20d`, `1-4-Test-Your-Knowledge-3412`, `Lab-2-1--YAML-Syntax-for-Responses-2906`, `6-4-Understanding-Agent-Behavior-b8c9`, `8-2-What-Youve-Learned-e8f9`, `8-4-Whats-Next-Level-2-Preview-8a04`, `8-5-Course-Completion-Checklist-8a05`.
+**Unit 6 (Training and Testing), instructor-only page removed from student TOC:** Stem **`6-4-Auto-Start-Rasa-Inspector-Codio-c0d1`** (formerly titled “6.4 Auto-start Rasa Inspector (Codio setup)” in the guide). The same material for implementers is kept at the repository root as **`Rasa_Inspector_Codio_Setup_for_Instructors.md`** and must not be linked from student-facing guide content.
+
+**Unit 6 page merge:** Stem **`6-2-How-to-Train-Your-Agent-b2c3`** was removed from the TOC; its content was merged into **`6-1-What-is-Training-a1b2`**. The 6.1 page JSON **title** is **“6.1 Training: What It Does and How to Run It”**. The `.md`/`.json` pair for **`6-2-How-to-Train-Your-Agent-b2c3`** was deleted.
+
+**Deleted page stems (filename ids):** `0-3-Understanding-YAML-Syntax-0971`, `1-3-Real-World-Use-Cases-d20d`, `1-4-Test-Your-Knowledge-3412`, `Lab-2-1--YAML-Syntax-for-Responses-2906`, `6-2-How-to-Train-Your-Agent-b2c3`, `6-4-Understanding-Agent-Behavior-b8c9`, `6-4-Auto-Start-Rasa-Inspector-Codio-c0d1`, `8-2-What-Youve-Learned-e8f9`, `8-4-Whats-Next-Level-2-Preview-8a04`, `8-5-Course-Completion-Checklist-8a05`.
 
 **Unit 7.3 Best Practices removed (Chapters 1.1–1.3):** Stems `7-3-Best-Practices-a4b5`, `7-3-Best-Practices-a7fd`, `7-3-Best-Practices-f5a6` — page `.md`/`.json` pairs deleted; unit `index.json` `order` arrays updated. Optional `level1`–`level3` mirror files `Level*_Unit7_Content_7.3_Best-Practices.md` removed.
 

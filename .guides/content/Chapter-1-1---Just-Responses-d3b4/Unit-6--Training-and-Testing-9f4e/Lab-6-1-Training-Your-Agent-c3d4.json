@@ -14,5 +14,5 @@
 	"contentType": "markdown", "content": "",
 	"teacherOnly": false,
 	"closeTerminalSession": true,
-	"learningObjectives": ""
+	"learningObjectives": "Activate venv at project root, run rasa train from level1, verify model under models/, complete Check It! with a recent model."
 }

@@ -1,4 +1,4 @@
-**Inspector** is Rasa's built-in testing interface. It lets you chat with your agent in a web page so you can see how it responds. You start it from the **terminal**, then open the chat in your **browser** (or in Codio's Rasa Inspect tab).
+**Inspector** is Rasa's built-in testing interface. It lets you chat with your agent in a web page so you can see how it responds. You start it from the **terminal**, then open the chat from the **Rasa Inspect** tab in the top menu.
 
 #### Step 1: Activate the virtual environment
 
@@ -35,9 +35,9 @@ Starting Rasa server on http://0.0.0.0:5005
 
 **Leave this terminal open.** Inspector is running as a server; if you close the terminal, it will stop.
 
-#### Step 4: Open the chat in Codio
+#### Step 4: Open the chat
 
-In Codio, go to the top menu bar and click the **Rasa Inspect** tab. The chat interface should open.
+Go to the top menu bar and click the **Rasa Inspect** tab. The chat interface should open.
 
 As a first check, type **hello** and press Enter; the agent should respond. Check the flow/debug panel to see which flow triggered.
 
@@ -50,7 +50,7 @@ At this stage the agent only uses simple responses, so the answers will be strai
 
 ---
 
-**Use Check It!** below when done (Codio).
+**Use Check It!** below when done.
 
 {Check It!|assessment}(code-output-compare-2562507356)
 
@@ -76,50 +76,3 @@ When Inspector opens, you'll see several areas. You don't need to understand eve
    - Slots are for "remembering" information in a conversation. **In Level 1 we don't use them**, so this will be empty. You can ignore it until later levels.
 
 **In short**: Use the **chat** to talk to your agent. Use the **flow** and **debug** areas to see which flow ran and to fix things when the agent doesn't do what you want.
-
-#### Launching Rasa Inspector locally
-
-If you're **not** using Codio and want to run Inspector on your own computer, follow the steps for your operating system. You'll need: the `level1` project folder, a virtual environment with Rasa Pro installed, and **RASA_LICENSE** set (e.g. `.env` in project root; see Unit 0 and Lab 0.1).
-
-**1. Go to your project folder**
-
-- Open a terminal (or PowerShell on Windows).
-- Navigate into the `level1` folder (the one that contains `config.yml`, `domain/`, and `data/`).
-- Example: `cd C:\Users\You\Minimal_Banking_Agent\level1` or `cd ~/Minimal_Banking_Agent/level1`.
-
-**2. Create the logs folder**
-
-- From the `level1` folder, run: `mkdir -p logs` (macOS/Linux) or `mkdir logs` (Windows, if the folder doesn't exist).
-
-**3. Activate the virtual environment and start Inspector**
-
-- **Windows (PowerShell)**  
-  ```powershell
-  .venv\Scripts\Activate.ps1
-  python -m rasa inspect --debug --log-file logs/logs.out
-  ```
-- **Windows (Command Prompt)**  
-  ```cmd
-  .venv\Scripts\activate.bat
-  python -m rasa inspect --debug --log-file logs/logs.out
-  ```
-- **macOS / Linux**  
-  ```bash
-  source .venv/bin/activate
-  python -m rasa inspect --debug --log-file logs/logs.out
-  ```
-
-Leave this terminal window open. When you see something like `Starting Rasa server on http://0.0.0.0:5005`, Inspector is running.
-
-**4. Open Inspector in your browser**
-
-- Open a web browser (Chrome, Firefox, Edge, etc.).
-- Go to: **http://localhost:5005**  
-  If that shows a status page or doesn't open the chat, try: **http://localhost:5005/webhooks/socketio/inspect.html**
-- You should see the Inspector chat interface. Type a message and press Enter to talk to your agent.
-
-**Troubleshooting (local)**
-
-- **"No module named 'rasa'"** – Activate the virtual environment again and make sure Rasa is installed (`pip install rasa-pro`).
-- **"RASA_LICENSE" not set** – Set RASA_LICENSE (e.g. create or edit `.env` in the **project root** with `RASA_LICENSE=your-license`, then source it from root before `cd level1`). See Lab 0.1. Restart the terminal and run `rasa inspect` again from `level1`.
-- **"Address already in use" or port 5005 in use** – Another program is using port 5005. Close other Rasa or Python processes, or use a different port: `python -m rasa inspect --debug --log-file logs/logs.out --port 5006` and then open **http://localhost:5006** (or …/inspect.html on 5006) in your browser.

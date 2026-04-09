@@ -4,11 +4,11 @@
 
 **Placement**: This lab follows Unit 6: Training and Testing.
 
-**Structure**: Part 1 (In Codio) and Part 2 (Running locally). Both follow the same order: **activate the virtual environment in the main project folder (root)** first, then **navigate to `level1`**, then train. Students use the terminal window (no separate "Open Tools → Terminal" step). **"Run the assessment when done"** appears at the end of Part 1 only; Part 2 ends with success criteria only.
+**Structure**: **Activate the virtual environment in the main project folder (root)** first, then **navigate to `level1`**, then run **`python -m rasa train` only from `level1`** (not from the repo root). Students use the terminal window (no separate "Open Tools → Terminal" step). The lab explains expected runtime (several minutes), example success output, a short checklist, file/line troubleshooting for YAML errors, and that **Check It!** should be used after a **recent** train (see grader Check 2).
 
 ### Your Task (summary)
 
-Activate the virtual environment in the main project folder (root), navigate to `level1`, then train your agent by running:
+Activate the virtual environment in the main project folder (root), navigate to `level1`, then train your agent:
 
 ```bash
 cd level1
@@ -22,15 +22,16 @@ Wait for training to finish. A model file (`.tar.gz`) will be created in the `mo
 Before submitting, confirm:
 
 - Training completed without errors
-- A model file exists under `models/`
+- A model file exists under `models/` under `level1/`
+- The model is **recent** (re-run training if the last run was more than ~10 minutes ago—the grader checks freshness)
 
-Run the assessment when you're done (Part 1 path).
+Run **Check It!** from the same course workspace after training completes.
 
 ---
 
 #### Review in Inspector (optional)
 
-After the assessment, open Rasa Inspector (see Unit 6.3). Try "hello", "help", and "contact" to confirm the correct flows trigger.
+After the assessment, open Rasa Inspector (**Lab 6.2**) and use **6.3 Testing Your Agent** for a fuller test pass. Try "hello", "help", and "contact" to confirm the correct flows trigger.
 
 ---
 
@@ -40,7 +41,7 @@ After the assessment, open Rasa Inspector (see Unit 6.3). Try "hello", "help", a
 
 This assessment verifies that students can successfully train their Level 1 agent and that training completes without errors (model file created, no critical errors in logs).
 
-**Lab workflow (for implementers)**: The student-facing lab instructs students to (1) use the terminal window, (2) go to the main project folder and activate the venv there, (3) then `cd level1`, (4) then run `python -m rasa train`. The line "Run the assessment when done" appears at the end of Part 1 (Codio) only, not in Part 2 (Running locally). The grader runs from `level1` and checks for model file and logs only; it does not depend on where the venv was activated.
+**Lab workflow (for implementers)**: The student-facing lab instructs students to (1) use the terminal window, (2) go to the main project folder and activate the venv there, (3) then `cd level1`, (4) then run `python -m rasa train` **from `level1` only**. The lab tells students to use Check It! after a successful train and notes the **~10 minute** window for model freshness (matches grader Check 2). The grader activates the venv from workspace root, then runs checks under `level1`.
 
 ### Assessment Type
 

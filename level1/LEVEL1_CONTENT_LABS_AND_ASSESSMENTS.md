@@ -36,8 +36,7 @@ Level 1 uses **9 units** (0–8): Setup → Domain → Flows → Patterns → Co
 | `Level1_Unit5_Content_5.1_The-config-yml-File.md` | config.yml |
 | `Level1_Unit5_Content_5.2_credentials-yml.md` | credentials.yml |
 | `Level1_Unit5_Content_5.3_endpoints-yml.md` | endpoints.yml |
-| `Level1_Unit6_Content_6.1_What-is-Training.md` | Training concept |
-| `Level1_Unit6_Content_6.2_How-to-Train-Your-Agent.md` | rasa train |
+| `Level1_Unit6_Content_6.1_What-is-Training.md` | Training concept, `python -m rasa train`, success criteria (merged former 6.1 + 6.2) |
 | `Level1_Unit6_Content_6.3_Using-Rasa-Inspector.md` | Inspector |
 | `Level1_Unit6_Content_6.4_Testing-Your-Agent.md` | Testing (Codio page **6.3** Testing Your Agent) |
 | `Level1_Unit7_Content_7.1_Complete-Agent-Walkthrough.md` | Walkthrough |

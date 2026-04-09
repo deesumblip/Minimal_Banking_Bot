@@ -4,11 +4,9 @@
   "title": "Unit 6: Training and Testing",
   "order": [
     "6-1-What-is-Training-a1b2",
-    "6-2-How-to-Train-Your-Agent-b2c3",
     "Lab-6-1-Training-Your-Agent-c3d4",
     "Lab-6-2-Using-Rasa-Inspector-e5f6",
-    "6-3-Testing-Your-Agent-f6a7",
-    "6-4-Auto-Start-Rasa-Inspector-Codio-c0d1"
+    "6-3-Testing-Your-Agent-f6a7"
   ],
   "content": ""
 }
