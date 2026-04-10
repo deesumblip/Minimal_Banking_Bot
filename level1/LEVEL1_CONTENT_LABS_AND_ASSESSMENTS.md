@@ -28,7 +28,7 @@ Level 1 uses **9 units** (0–8): Setup → Domain → Flows → Patterns → Co
 | `Level1_Unit2_Content_2.3_Response-Variations.md` | Multiple text variations |
 | `Level1_Unit3_Content_3.1_What-is-a-Flow.md` | Flow concept |
 | `Level1_Unit3_Content_3.2_Flow-Structure-Deep-Dive.md` | greet.yml structure |
-| `Level1_Unit3_Content_3.3_Flow-Descriptions-and-LLM-Understanding.md` | Descriptions, LLM matching |
+| `Level1_Unit3_Content_3.4_Flow-Descriptions-and-LLM-Understanding.md` | Descriptions, LLM matching (Codio page **3.4**) |
 | `Level1_Unit4_Content_4.1_What-are-System-Patterns.md` | Patterns intro |
 | `Level1_Unit4_Content_4.2_Session-Start-Pattern.md` | pattern_session_start |
 | `Level1_Unit4_Content_4.3_Pattern-Completed.md` | pattern_completed |
@@ -56,13 +56,13 @@ Level 1 uses **9 units** (0–8): Setup → Domain → Flows → Patterns → Co
 | 3.1 | Level1_Lab3.1_Content.md | — | Explore flows |
 | 3.2 | Level1_Lab3.2_Content.md | — | Create goodbye.yml flow |
 | 3.3 | Level1_Lab3.3_Content.md | — | Multi-step flow |
-| 3.4 | Level1_Lab3.4_Content.md | — | Create hours + balance flows |
-| 3.5 | Level1_Lab3.5_Content.md | Level1_Lab3.5_Assessment_Setup.md | Complete domain + hours/balance flows; grader: lab_3.5_grader.py |
+| 3.5 | Level1_Lab3.5_Content.md | — | Hours and balance flow YAML (fill-in-the-blank; assessments embedded in Codio guide) |
+| 3.6 | Level1_Lab3.6_Content.md | Level1_Lab3.6_Assessment_Setup.md | Add hours/balance responses and flows to `level1`; Check It! in guide Lab 3.6 |
 | 4.1 | Level1_Lab4.1_Content.md | — | Explore system patterns |
 | 4.2 | Level1_Lab4.2_Content.md | — | Modify patterns |
 | 5.1 | Level1_Lab5.1_Content.md | — | Config |
-| 6.1 | Level1_Lab6.1_Content.md | Level1_Lab6.1_Assessment_Setup.md | Training |
-| 6.2 | Level1_Lab6.2_Content.md | — | Inspector |
+| 6.1 | Level1_Lab6.1_Content.md | Level1_Lab6.1_Assessment_Setup.md | `rasa train` from `level1`; Codio primary path; optional “Not using Codio?” local training section mirrors guide |
+| 6.2 | Level1_Lab6.2_Content.md | — | Inspector; Codio **Rasa Inspect** tab; optional local **localhost** section mirrors guide |
 | 6.3 | Level1_Lab6.3_Content.md | — | Test flows |
 | 7.1 | Level1_Lab7.1_Content.md | — | Walkthrough |
 | 7.2 | Level1_Lab7.2_Content.md | Level1_Lab7.2_Assessment_Setup.md | Build your own feature |

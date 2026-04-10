@@ -1,78 +1,130 @@
-**Inspector** is Rasa's built-in testing interface. It lets you chat with your agent in a web page so you can see how it responds. You start it from the **terminal**, then open the chat from the **Rasa Inspect** tab in the top menu.
+**Inspector** is Rasa’s built-in testing UI. You start a small server from the terminal, then talk to the agent in a browser-like chat. In **Codio**, use the **Rasa Inspect** tab in the top menu. On your **own computer**, you open a normal browser to **localhost**, as described at the end of this page.
 
-#### Step 1: Activate the virtual environment
+---
 
-1. **In the terminal, make sure you're in the right folder** with the venv active (same as Lab 6.1):
-   - You should be in the `level1` folder (run `pwd`; you should see a path ending in `level1`).
-   - Your prompt should start with `(.venv)`. If not, from the **main project folder (root)** run:
-     ```bash
-     source .venv/bin/activate
-     cd level1
-     ```
+#### In Codio
 
-#### Step 2: Create the logs folder
+##### Step 1: Virtual environment and folder
 
-From the `level1` folder, create a `logs` directory so the Inspector log can be written:
+Stay in the same setup as **Lab 6.1**. You should be in **`level1`** with the venv active. Run **`pwd`** and check that the path ends with **`level1`**. Your prompt should start with **`(.venv)`**.
+
+If the venv is not active, go to the **project root**, the folder above **`level1`** that contains **`.venv`**, then run:
+
+```bash
+source .venv/bin/activate
+cd level1
+```
+
+##### Step 2: Logs folder
+
+From **`level1`**, create a **`logs`** directory so Inspector can write its log file.
 
 ```bash
 mkdir -p logs
 ```
 
-#### Step 3: Start Inspector in the terminal
+##### Step 3: Start Inspector
 
-From the `level1` folder, run:
+From **`level1`**, with the venv still active, run:
 
 ```bash
 python -m rasa inspect --debug --log-file logs/logs.out
 ```
 
-**What you'll see**: The terminal will show a lot of output, including something like:
+The terminal will print a lot of output. You should see a line similar to the following.
 
 ```text
 Starting Rasa server on http://0.0.0.0:5005
 ...
 ```
 
-**Leave this terminal open.** Inspector is running as a server; if you close the terminal, it will stop.
+**Leave this terminal open.** Inspector is a server process. If you close the terminal, Inspector stops.
 
-#### Step 4: Open the chat
+##### Step 4: Open the chat
 
-Go to the top menu bar and click the **Rasa Inspect** tab. The chat interface should open.
+Click the **Rasa Inspect** tab in the top menu. The chat view should load.
 
-As a first check, type **hello** and press Enter; the agent should respond. Check the flow/debug panel to see which flow triggered.
+Type **hello** and press Enter. The agent should reply. Use the flow or debug panel to see which flow ran.
 
-Try a few more questions, for example:
+Try a few more messages, for example:
+
 - "How do I contact support?"
 - "What can you do?"
 - "Hi!"
 
-At this stage the agent only uses simple responses, so the answers will be straightforward.
+At this stage the agent uses simple responses, so replies stay short and direct.
 
 ---
 
-**Use Check It!** below when done.
+**Use Check It!** when Inspector is running and you have exercised the chat.
 
 {Check It!|assessment}(code-output-compare-2562507356)
 
-#### Inspector interface: what you see (beginner guide)
+---
 
-When Inspector opens, you'll see several areas. You don't need to understand every part to use it, here's what matters at Level 1.
+#### Inspector interface: what you see
 
-1. **Chat area (main part)**
-   - This is where you type and where the agent's replies appear.
-   - Use it like a normal chat: type a message, press Enter, and see what the agent says.
-   - Your conversation history stays visible so you can scroll back.
+You do not need every panel for Level 1. These are the parts that matter first.
 
-2. **Flow / diagram area**
-   - This shows which **flow** the agent is following right now (e.g. "greet", "help", "contact").
-   - Think of it as "which conversation path the agent chose." When you type "Hi!", you should see something like the greet flow; when you ask for help, the help flow.
-   - If the wrong flow appears for what you said, you can use this to notice and then improve your flow descriptions later.
+1. **Chat**  
+   You type here and read the agent’s replies. Messages stay in view so you can scroll back.
 
-3. **Debug / technical details**
-   - This area shows more technical information: which flow was triggered, what the agent "thought" your message meant, and so on.
-   - You can ignore it at first. When something doesn't work as expected, this is where you can look to see why the wrong flow might have run.
+2. **Flow or diagram**  
+   This shows which **flow** is active, for example **greet**, **help**, or **contact**. It is the path the agent chose for your last turn. If the wrong flow appears, you will often fix it later by improving **description** text on flows.
 
-4. **Slots**
-   - Slots are for "remembering" information in a conversation. **In Level 1 we don't use them**, so this will be empty. You can ignore it until later levels.
+3. **Debug or technical details**  
+   This area lists what was triggered and related metadata. You can ignore it at first. When behavior is wrong, it helps explain why a flow fired.
 
-**In short**: Use the **chat** to talk to your agent. Use the **flow** and **debug** areas to see which flow ran and to fix things when the agent doesn't do what you want.
+4. **Slots**  
+   Slots store remembered values across turns. Level 1 does not use them yet, so this area may stay empty.
+
+**Summary**: Use **chat** to probe behavior. Use **flow** and **debug** when you need to see why a path was chosen.
+
+---
+
+#### Not using Codio? Launching Inspector locally
+
+Use this path when you run the course on your own machine instead of the Codio workspace. You need the **`level1`** tree, Rasa Pro installed in your venv, and **`RASA_LICENSE`** set as in **Unit 0** and **Lab 0.1**.
+
+1. Open a terminal and **`cd`** to the **project root**, the folder that contains **`level1`** and **`.venv`**.
+2. **Activate the venv** from that root.
+   - **Windows PowerShell**: `.\.venv\Scripts\Activate.ps1`
+   - **Windows Command Prompt**: `.venv\Scripts\activate.bat`
+   - **macOS or Linux**: `source .venv/bin/activate`
+3. Run **`cd level1`** so your working directory is **`level1`**.
+4. Create **`logs`** if it does not exist. On macOS or Linux use **`mkdir -p logs`**. On Windows use **`mkdir logs`** when the folder is missing.
+5. With the venv still active, start Inspector from **`level1`**:
+
+   **Windows PowerShell**
+
+   ```powershell
+   python -m rasa inspect --debug --log-file logs/logs.out
+   ```
+
+   **Windows Command Prompt**
+
+   ```cmd
+   python -m rasa inspect --debug --log-file logs/logs.out
+   ```
+
+   **macOS or Linux**
+
+   ```bash
+   python -m rasa inspect --debug --log-file logs/logs.out
+   ```
+
+   Leave the window open. When you see a line such as **`Starting Rasa server on http://0.0.0.0:5005`**, the server is running.
+
+6. Open a browser and go to **http://localhost:5005**. If you see a status page or the chat does not load, try **http://localhost:5005/webhooks/socketio/inspect.html**.
+
+**Local troubleshooting**
+
+- **`No module named 'rasa'`** — Activate the venv again, **`cd level1`**, and install Rasa Pro if needed: **`pip install rasa-pro`**.
+- **`RASA_LICENSE` not set** — Set the variable the same way you did for training. **Lab 0.1** covers local options. Fix the environment, open a new terminal if needed, **`cd`** to **`level1`**, and run **`python -m rasa inspect`** again.
+- **Address already in use or port 5005 in use** — Another process owns the port. Stop other Rasa or Python servers, or pick another port, for example:
+
+  ```bash
+  python -m rasa inspect --debug --log-file logs/logs.out --port 5006
+  ```
+
+  Then open **http://localhost:5006** or **http://localhost:5006/webhooks/socketio/inspect.html**.

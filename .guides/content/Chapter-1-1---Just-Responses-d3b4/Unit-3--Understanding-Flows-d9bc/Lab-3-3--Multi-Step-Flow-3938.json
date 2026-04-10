@@ -17,5 +17,5 @@
 	"content": "",
 	"teacherOnly": false,
 	"closeTerminalSession": true,
-	"learningObjectives": ""
+	"learningObjectives": "Extend a flow with multiple ordered steps and verify structure against the domain."
 }

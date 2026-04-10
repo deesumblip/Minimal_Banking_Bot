@@ -9,40 +9,26 @@ flows:
       - action: utter_greet
 ```
 
-#### Breaking Down Each Component
+#### Breaking down each part
 
-1. **`flows:`**: Top-level key
-   - Indicates this file contains flow definitions
-   - All flows in this file go under this key
+1. **`flows:`** — Top-level key. It tells Rasa that this file defines flows. Every flow in the file nests under **`flows:`**.
 
-2. **`greet:`**: Flow name
-   - This is the identifier used to reference the flow
-   - Must be unique within the agent
-   - Convention: lowercase, descriptive
+2. **`greet:`** — The flow **id** your project uses internally. Keep it **unique**, **lowercase**, and descriptive.
 
-3. **`name: say hello`**: Human-readable name
-   - Used in logs and debugging
-   - Helps humans understand what the flow does
-   - Can be different from the flow identifier
+3. **`name: say hello`** — A human-readable label for logs and debugging. It can differ from the id **`greet`**.
 
-4. **`description: ...`**: What the flow does
-   - **Critical**: The LLM uses this to match user messages to flows
-   - Should be clear and specific
-   - Example: "Greet the user when they start a conversation" helps the LLM understand this flow should trigger on "hello", "hi", "hey", etc.
+4. **`description:`** — **Critical for matching.** The LLM reads this text to decide when the flow fits the user’s message. Be concrete. For example, *Greet the user when they start a conversation* signals that “hello”, “hi”, and “hey” should all route here.
 
-⚠️ **Critical**: Flow descriptions are **essential**! The LLM reads flow descriptions to understand what each flow does. Without a good description, the LLM won't know when to trigger your flow. Always write clear, specific descriptions.
+   Compare weaker and stronger wording:
+   - **Too vague:** *Say hello* does not state **when** the flow should run.
+   - **Too narrow:** *Respond only when the user types the word hello exactly* will miss natural variants such as “hi” or “hey.”
+   - **Balanced:** *Greet the user when they start a conversation* gives enough context without locking you to one phrase.
 
-**Example of good vs bad descriptions**:
-- **Bad**: "Say hello" (too vague - when? why?)
-- **Good**: "Greet the user when they start a conversation" (clear context and purpose)
+5. **`steps:`** — Ordered actions to run. Each entry is a list item starting with **`-`**.
 
-5. **`steps:`**: The actual steps to execute
-   - A list of actions to perform in order
-   - Each step is indented with a dash (`-`)
+6. **`- action: utter_greet`** — One step. **`utter_greet`** must exist as a **response** in the domain.
 
-6. **`- action: utter_greet`**: A single step
-   - `action:` indicates this is an action step
-   - `utter_greet` is the response to use (must be defined in domain)
+⚠️ **Remember:** If **`description:`** is missing or fuzzy, the LLM cannot **trigger** the flow reliably. Clear sentences here pay off immediately in matching quality.
 
 {Check It!|assessment}(multiple-choice-1420316307)
 

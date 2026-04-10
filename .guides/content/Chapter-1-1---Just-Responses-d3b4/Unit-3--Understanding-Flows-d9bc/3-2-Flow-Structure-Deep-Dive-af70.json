@@ -20,5 +20,5 @@
 	"contentType": "markdown", "content": "",
 	"teacherOnly": false,
 	"closeTerminalSession": true,
-	"learningObjectives": ""
+	"learningObjectives": "Interpret each key in a flow definition and explain why descriptions drive LLM triggering."
 }

@@ -17,5 +17,5 @@
 	"content": "",
 	"teacherOnly": false,
 	"closeTerminalSession": true,
-	"learningObjectives": ""
+	"learningObjectives": "Create a new flow file with id, name, description, and steps wired to domain responses."
 }

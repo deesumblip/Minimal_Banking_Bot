@@ -1,15 +1,18 @@
 **Objective**: Train your agent and verify it works.
 
-**Before you begin**: Complete Lab 3.6 (Adding New Flows) so your domain and flows (hours, balance) are set up; then training will pass validation.
+**Before you begin**: Finish **Lab 3.6** so your domain and flows include **hours** and **balance**. Training will fail validation if those pieces are missing.
 
-**Where training runs**: Always run `python -m rasa train` from the **`level1`** folder with your virtual environment active. Do **not** run it from the repository root (the folder that contains `level1` and `level2`)—Rasa needs `config.yml`, `domain/`, and `data/` from inside `level1`.
+**Where training runs**: Run `python -m rasa train` only from the **`level1`** folder with your virtual environment active. Rasa needs `config.yml`, `domain/`, and `data/` from **`level1`**. Do not run the command from the repository root, which is the folder that contains **`level1`** and **`level2`**.
 
-**Confirm you are in the right project root** (before `cd level1`): In the terminal, `ls` should list folders such as `level1`, `level2`, and `.guides`. If you do not see those, `cd` to the main project folder first, then activate the venv there.
+---
 
-Typical command sequence (project root contains `level1`, `level2`, `.guides`, and `.venv` after Lab 0.1):
+#### In Codio
+
+The terminal opens in your workspace root. If `ls` does not show **`level1`**, **`level2`**, and **`.guides`**, change directory to your main project folder first.
+
+Use one continuous sequence from the project root. The venv from **Lab 0.1** lives next to **`level1`**, not inside it.
 
 ```bash
-# From project root
 ls -la .venv
 source .venv/bin/activate
 # If .venv is missing: python3.11 -m venv .venv && source .venv/bin/activate
@@ -20,44 +23,62 @@ python -m rasa --version
 python -m rasa train
 ```
 
-1. **Virtual environment**: Open the terminal (it starts in your workspace root). Go to the main project folder if needed—the one that contains `level1`, `level2`, and `.guides`. Run `ls -la .venv`. If it exists: `source .venv/bin/activate`. If not: `python3.11 -m venv .venv` then `source .venv/bin/activate`. Your prompt should show `(.venv)`.
-2. **Navigate to level1**: `cd level1`. Confirm with `pwd` (the path should end in `level1`).
-3. **Rasa**: Run `python -m rasa --version`. If you see an error, install Rasa Pro with the venv active: `pip install rasa-pro`.
-4. **Train**: With the venv still active and your **current directory still `level1`**, run `python -m rasa train`.
+Your prompt should show **`(.venv)`**, and **`pwd`** should end with **`level1`**. If `python -m rasa --version` fails, install Rasa Pro with the venv active: **`pip install rasa-pro`**.
 
-   Training can take **several minutes** the first time. The terminal will print many log lines; that is normal. Wait until the command finishes—do not close the terminal while it runs.
+Training can take **several minutes** the first time. Log output is normal. Wait until the command finishes. Do not close the terminal while it runs.
 
-   When training succeeds, the tail of the output looks roughly like this (your model filename will differ):
+When training succeeds, the tail of the output looks roughly like this. Your model filename will differ.
 
-   ```text
-   ...
-   INFO     rasa.model  - Successfully saved model to 'models/20250112-120817-descent-lard.tar.gz'
-   ```
+```text
+...
+INFO     rasa.model  - Successfully saved model to 'models/20250112-120817-descent-lard.tar.gz'
+```
 
-5. **Verify**: You should see a line like **Successfully saved model to 'models/...'**. In the file tree, `level1/models/` should contain a new `.tar.gz` file.
+Confirm that **`level1/models/`** contains a new **`.tar.gz`** file.
 
-**Success checklist** (before you use Check It!):
+**Success checklist** before **Check It!**:
 
-- Prompt shows `(.venv)`.
-- `pwd` ends with `level1` (you did not run `rasa train` from the repo root).
-- Training exited without an error and created a new file under `level1/models/`.
+- Your prompt shows **`(.venv)`**.
+- Your current directory is **`level1`**, not the repo root.
+- Training finished without errors and produced a new file under **`level1/models/`**.
 
-The graded Check It! expects a **recent** model (typically within about **10 minutes** of running the assessment). If you trained a long time ago, run `python -m rasa train` again in `level1`, then use Check It!.
+The graded **Check It!** expects a **recent** model, usually within about **10 minutes** of running the assessment. If you trained earlier, run **`python -m rasa train`** again from **`level1`**, then use **Check It!**.
 
-**If training fails**, Rasa usually names the file and line number (for example a YAML parse error). Open that file in the editor, fix the issue, save, and run `python -m rasa train` again from `level1`.
+If training fails, Rasa usually prints a file path and line number for YAML problems. Open that file, fix the issue, save, and run **`python -m rasa train`** again from **`level1`**.
 
 #### Common errors
 
 | Symptom | What to do |
 |--------|------------|
-| **YAML / parse error with a file path and line** | Open the file at that line. Use **2 spaces** (not tabs), colons after keys, list items with `-`. Save and train again from `level1`. |
-| **YAML syntax** (e.g. "block mapping") | Same as above: fix indentation and structure, save, train again. |
-| **Response `utter_…` not found** | The flow references a response missing from the domain (often `domain/basics.yml`). Add the response or fix the name in the flow. |
-| **No module named `rasa`** | Activate the venv from project root, `cd level1`, then `pip install rasa-pro` if needed. |
-| **RASA_LICENSE not set** | Check Lab 0.1 (set `RASA_LICENSE`) or ask your instructor. |
+| **YAML or parse error with a file path and line** | Open the file at that line. Use **2 spaces**, not tabs. Check colons after keys and list items that start with **`-`**. Save and train again from **`level1`**. |
+| **YAML syntax such as “block mapping”** | Fix indentation and structure, save, train again from **`level1`**. |
+| **Response `utter_…` not found** | A flow references a response that is not in the domain, often **`domain/basics.yml`**. Add the response or correct the name in the flow. |
+| **No module named `rasa`** | Activate the venv from the project root, **`cd level1`**, then run **`pip install rasa-pro`** if needed. |
+| **RASA_LICENSE not set** | See **Lab 0.1** for setting **`RASA_LICENSE`**, or ask your instructor. |
 
-**Next**: In **Lab 6.2**, you will start Rasa Inspector and chat with the model you just built.
+---
 
-**Use Check It!** after training finishes and you have a new model under `level1/models/`. Run it from the normal course workspace (same project as your terminal); you do not need a separate step beyond clicking Check It! below.
+#### Not using Codio? Training on your own machine
+
+Follow the same rules as above: activate the venv from the **project root**, then **`cd level1`**, then train. Use your own terminal on Windows, macOS, or Linux.
+
+1. Open a terminal and go to the **project root**, the folder that contains **`level1`**, **`level2`**, and **`.guides`**. For example, use **`cd`** with the path where you cloned the course repository.
+2. Activate the virtual environment. The **`.venv`** folder sits in the project root.
+   - **Windows PowerShell**: `.\.venv\Scripts\Activate.ps1`
+   - **Windows Command Prompt**: `.venv\Scripts\activate.bat`
+   - **macOS or Linux**: `source .venv/bin/activate`  
+   Your prompt should show **`(.venv)`**.
+3. Run **`cd level1`**. Confirm with **`pwd`** or **`cd`** that you are inside **`level1`**.
+4. Set **`RASA_LICENSE`** if it is not already in your environment. **Lab 0.1** describes how to do this for local setups. A common pattern is a **`.env`** file in the project root with **`RASA_LICENSE=your-license-key`** without quotes, loaded according to your shell or tooling before you **`cd level1`**.
+5. From **`level1`**, run **`python -m rasa train`**. Wait until you see a **Successfully saved model** message.
+6. Confirm that a new **`.tar.gz`** appears under **`level1/models/`**.
+
+Success means the same thing as in Codio: training completes with no errors and a fresh model file exists under **`models/`**. Use the **Common errors** table above if something goes wrong.
+
+---
+
+**Next**: In **Lab 6.2**, start Rasa Inspector and chat with the model you just built.
+
+**Check It!** runs in the course workspace after you have a new model under **`level1/models/`**. Click **Check It!** below when you are ready.
 
 {Check It!|assessment}(code-output-compare-2562507355)

@@ -15,5 +15,5 @@
 	"contentType": "markdown", "content": "",
 	"teacherOnly": false,
 	"closeTerminalSession": true,
-	"learningObjectives": ""
+	"learningObjectives": "Explain how the LLM uses descriptions to match user messages and distinguish strong from weak wording."
 }

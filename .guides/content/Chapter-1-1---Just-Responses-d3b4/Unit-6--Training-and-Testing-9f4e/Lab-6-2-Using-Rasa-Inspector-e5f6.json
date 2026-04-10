@@ -14,5 +14,5 @@
 	"contentType": "markdown", "content": "",
 	"teacherOnly": false,
 	"closeTerminalSession": true,
-	"learningObjectives": ""
+	"learningObjectives": "Start rasa inspect from level1, use the Rasa Inspect tab in Codio or localhost in a browser locally, and interpret chat, flow, and debug panels at a basic level."
 }

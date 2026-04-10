@@ -1,20 +1,19 @@
-A **flow** is a conversation script - a step-by-step plan for how the agent should handle a particular conversation path.
+A **flow** is one conversational path your agent runs from start to finish. It encodes the **business logic** for a single process: an ordered plan for what should happen when that process applies.
 
-**File Location**: `data/basics/*.yml` (one file per flow, or multiple flows per file)
+Flows lean toward the **guided** end of the autonomy spectrum. They are the right tool when the steps are known in advance, **order matters**, and you do **not** want the language model inventing the sequence on the fly. Examples include onboarding checklists, scripted help, or any journey where straying from the path is a defect rather than a feature.
 
-**Analogy**: A flow is like a recipe. It has:
-- A name (what recipe is this?)
-- A description (what does this recipe make?)
-- Steps (what do I do, in order?)
+**Where flows live:** YAML files under **`data/basics/`**. You may use **one file per flow** or place **several related flows** in the same file.
 
-#### Flow Execution
+**Analogy:** A flow works like a recipe. It needs a **name**, a short **description** of what it produces, and **steps** that say what to do, in order.
 
-When a flow is triggered, Rasa executes each step in order:
+#### Flow execution
+
+When a flow **triggers**, Rasa runs its **steps** in sequence:
 
 ```text
 User says "hello"
     ↓
-Flow: greet is triggered
+Flow greet runs
     ↓
 Step 1: utter_greet
     ↓
@@ -22,5 +21,7 @@ Agent responds: "Hi! I'm a banking assistant..."
     ↓
 Flow completes
 ```
+
+The sequence is linear and easy to inspect. When behavior is wrong, you can usually tie it to a specific step.
 
 ---

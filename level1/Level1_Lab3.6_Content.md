@@ -1,8 +1,8 @@
 **Objective**: Add flows that use the `utter_hours` and `utter_balance` responses. You will paste in pre-written response text and flow files so the assessment for this section can verify your project.
 
-**Why this lab**: In Lab 3.4 you created flows for bank hours and account balance (and may have added your own responses). If your Lab 3.4 assessment passed, those responses met all valid criteria. Here you are given **exact, pre-written versions** of those responses and the corresponding flow files. By pasting them in, you ensure your agent has the responses and flows the automated assessment for this section expects, so you can pass the Lab 3.5 assessment.
+**Why this lab**: In **Lab 3.5** you completed the hours and balance flow YAML with fill-in-the-blank exercises. Here you are given **exact, pre-written versions** of the responses and the corresponding flow files so your `level1` project matches what the **Lab 3.6** Check It! assessment expects.
 
-**Before You Begin**: You’ve completed Lab 3.4 (or at least understand flow structure). You are in the `level1` project (folder that contains `domain/`, `data/`, `config.yml`).
+**Before You Begin**: You’ve passed both fill-in-the-blank checks in **Lab 3.5** (or at least understand flow structure). You are in the `level1` project (folder that contains `domain/`, `data/`, `config.yml`).
 
 ---
 

@@ -26,4 +26,4 @@ flows:
 
 **What Happens**: When a user says "hello", the agent will first greet them, then show the help message.
 
-**Next:** Read **3.3 Flow Descriptions and LLM Understanding** for how the `description` field helps the LLM match user messages to flows. Then apply that in **Lab 3.4** (hours and balance practice in the guides).
+**Next:** Read **3.4 Flow Descriptions and LLM Understanding** for how the `description` field helps the LLM match user messages to flows. Then apply that in **Lab 3.5** (hours and balance fill-in exercises in the guides), followed by **Lab 3.6** to add those flows to your project.

@@ -15,5 +15,5 @@
 	"contentType": "markdown", "content": "",
 	"teacherOnly": false,
 	"closeTerminalSession": true,
-	"learningObjectives": ""
+	"learningObjectives": "Define a flow, locate flow YAML under data/basics, and recognize when guided flows fit scripted business logic."
 }
