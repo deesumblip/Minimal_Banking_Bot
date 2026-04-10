@@ -1,31 +1,5 @@
-**Starting point:** After this chapter’s labs in **`level5/`**, you can preview what comes next.
+**Starting point:** **`level5/`** after this chapter’s labs.
 
-**Building on Chapter 1.5**
+**Chapter 1.6** adds **sub-agents** and MCP-backed delegation on the **same** project (**`level6/`**). The main agent can hand off a task to a specialist agent and take control back when it finishes.
 
-**Chapter 1.6** continues the **same** banking project. It does **not** reset the repo. It layers **sub-agents** on your current responses, flows, actions, slots, and tools.
-
-You keep everything you built: responses, flows, actions, slots, **`tools/`**, and **`transfer_money_tools`**.
-
-Chapter 1.6 adds **multiple agents**—for example a main assistant that hands off to a balance-focused or transfer-focused agent—so longer dialogues stay clearer.
-
----
-
-**Chapter 1.6 (Level 6): Sub-agents** lets more than one agent participate in the same project.
-
-## What sub-agents enable
-
-**Example.** A main agent can route to a balance specialist or a transfer specialist. Each sub-agent may own its own flows, actions, and tools. The main agent chooses when to delegate.
-
-Chapter 1.6 shows how to define sub-agents and wire them so delegation works.
-
-## Core ideas in Chapter 1.6
-
-1. **Sub-agents.** Distinct agents with their own flows and optionally tools.
-2. **Handoff and routing.** The main agent selects which sub-agent to invoke.
-3. **One project.** Same codebase and venv; several agents in one Rasa app.
-
-## When to open Chapter 1.6
-
-Open it when you need several specialized agents, cleaner separation (balance vs. transfer), or orchestration that a single assistant cannot express cleanly.
-
-Chapter 1.5 remains the base; 1.6 adds the sub-agent layer.
+The full **Level 6** baseline, lab order, **`mcp_servers`** wiring, and checklist are in **Chapter 1.6 Unit 0** (**0-1** and **0-2**). Read those next—this preview does not repeat that roadmap.

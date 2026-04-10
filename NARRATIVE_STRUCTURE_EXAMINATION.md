@@ -28,12 +28,12 @@ This document examines the narrative structure of Levels 1–6 (Chapters 1.1–1
 | **Long (9 units)** | 1, 3 | 0: Setup/Recap → 1–5: Concepts + labs → 6: Training → 7: Putting It All Together → 8: Assessment (Knowledge Check, Learned, Limitations, Next Preview, Checklist) |
 | **Short (7 units)** | 4, 5, 6 | 0: Recap → 1–4: Concepts + labs → 5: Training and Testing → 6: Summary (6.1 Walkthrough … 6.7 Checklist) |
 
-Level 2 uses **7 units** (0–6) with wrap-up and knowledge check on the **last page of Unit 6 (6.4)**.
+Level 2 uses **7 units** (0–6) with integration walkthrough and knowledge check on **6.4**, then recap, limitations, Level 3 preview, and checklist on **6.5** (last pages of Unit 6).
 
 **Improvements**
 
 - **Optional:** Add a one-line design note in the course outline or CONTENT_LABS doc explaining why Level 1/2/3 use 7–9 units (more concepts, first exposure) and Level 4/5/6 use 7 (0–6) with a single “Summary and Next Steps” unit. No structural change required; this only clarifies intent.
-- **Level 2:** Chapter 1.2 ends with **Unit 6**; the final page (**6.4**) includes integration, review, knowledge check, and Level 3 preview (former Unit 7 page and Unit 8 material merged into **6.4**).
+- **Level 2:** Chapter 1.2 ends with **Unit 6**; **6.4** covers integration, review, and the knowledge check; **6.5** covers recap, limitations, Level 3 preview, and readiness (former Unit 7 / Unit 8 material split across these two pages).
 
 ---
 
@@ -42,17 +42,17 @@ Level 2 uses **7 units** (0–6) with wrap-up and knowledge check on the **last 
 | Level | Last unit | Sections |
 |-------|------------|----------|
 | **1** | Unit 8 | 8.1 Knowledge Check, 8.2 What You've Learned, 8.3 Limitations, 8.4 What's Next Level 2, 8.5 Checklist |
-| **2** | Unit 6 (6.4) | Single wrap-up page: walkthrough, review, 8.1-style MCs, recap, limitations, Level 3 preview, checklist (no separate Unit 7 or Unit 8) |
+| **2** | Unit 6 (**6.4**, **6.5**) | **6.4:** walkthrough, review, 8.1-style MCs. **6.5:** recap, limitations, Level 3 preview, checklist (no separate Unit 7 or Unit 8) |
 | **3** | Unit 8 | 8.1–8.5 same |
 | **4** | Unit 6 | 6.1 Walkthrough, 6.2 Learned, 6.3 Next, 6.4 Knowledge Check, 6.5 Limitations, 6.6 Level 5 Preview, 6.7 Checklist |
 | **5** | Unit 6 | 6.1–6.7 same |
 | **6** | Unit 6 | 6.1–6.7 (in content); 6.6 = “What’s Next Beyond Course” (no Level 7) |
 
-Levels 4–6 use a **7-part closing** (walkthrough, learned, next, knowledge check, limitations, next-level preview / beyond course, checklist); Levels 1–3 use a **5-part closing** (knowledge check, learned, limitations, next preview, checklist) and put “Complete Agent Walkthrough” and “Summary” in the **last unit** (Level 2: Unit **6.4**).
+Levels 4–6 use a **7-part closing** (walkthrough, learned, next, knowledge check, limitations, next-level preview / beyond course, checklist); Levels 1–3 use a **5-part closing** (knowledge check, learned, limitations, next preview, checklist) and put “Complete Agent Walkthrough” and “Summary” in the **last unit** (Level 2: Unit 6 pages **6.4–6.5**).
 
 **Improvements**
 
-- **Optional:** In Level 1/2/3, add an explicit “Complete Agent Walkthrough” subsection inside the closing block (or point to the wrap-up page — Level 2: **6.4**) so the “review what you built” moment is clearly part of the same narrative block as Knowledge Check and Checklist. This is a light wording/pointer change, not a restructure.
+- **Optional:** In Level 1/2/3, add an explicit “Complete Agent Walkthrough” subsection inside the closing block (or point to the wrap-up pages — Level 2: **6.4** and **6.5**) so the “review what you built” moment is clearly part of the same narrative block as Knowledge Check and Checklist. This is a light wording/pointer change, not a restructure.
 
 ---
 

@@ -1,17 +1,13 @@
-**Starting point:** Work in **`level4/`** (see **Unit 0.1**).
+**Starting point:** **`level4/`** (see **Unit 0.1**).
 
-## What Level 4 Cannot Do
+## What Level 4 does not cover
 
-1. **Tool calling.** The agent cannot yet call external tools or functions chosen dynamically by the LLM based on what the user said. Level 5 adds tool calling so the assistant can invoke functions (e.g. check balance, process transfer) as tools.
+Level 4 gives you **ordered multi-slot flows** and actions that read those slots. It does **not** add **tool calling** (functions the model selects at runtime from context) or **sub-agents**. Those are later chapters.
 
-2. **Rich validation and forms.** Level 4 uses simple text slots and optional placeholder checks in actions. It does not use Rasa forms or built-in validation for formats (e.g. amount as number, account pattern). You can add validation in your action code; Level 5 and beyond can integrate tools and more structure.
+Simple validation stays in your action code; this course does not introduce Rasa Forms for these flows.
 
-3. **Dynamic flow selection.** Flows are fixed in the project; the agent does not create new flows at runtime. Level 4 is well-suited to predefined flows that collect a known set of slots.
+## When Level 4 is enough
 
-## When Level 4 is Sufficient
+Use Level 4 when several slot values must be collected and consumed in **one** action—for example the transfer path you built.
 
-Level 4 is a good fit when you need to collect several pieces of information in one conversation (e.g. amount, recipient, account for a transfer), run one action that uses all of them, and keep the same venv and project structure as in earlier levels.
-
-## When You Need More
-
-Move to Level 5 when you want the LLM to call tools (e.g. check balance, process transfer) as invocable functions, or when you want to structure your logic as tools that the assistant can select and run based on context.
+**Chapter 1.5 Unit 0** explains when **tools** matter and how **`level5/`** extends **`level4/`**; read **0-1** / **0-2** there for the full “why Level 5” story instead of repeating it on this page.

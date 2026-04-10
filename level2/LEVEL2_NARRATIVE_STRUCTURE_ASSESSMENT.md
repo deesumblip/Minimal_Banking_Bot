@@ -1,6 +1,6 @@
 # Level 2: Narrative Structure Assessment
 
-Assessment of the **Level2_*** content and lab files read in sequence from start to finish. Intended order: **Unit 0 → 1 → 2 → [Lab 2.1] → Lab 3.1 (Unit 3) → Unit 4 → Lab 4.1 → Unit 5 → Lab 5.1 → Unit 6** (labs 6.1–6.2, pages 6.2–6.3, then **6.4** wrap-up; former Unit 7 / Unit 8 material merged into **6.4**).
+Assessment of the **Level2_*** content and lab files read in sequence from start to finish. Intended order: **Unit 0 → 1 → 2 → [Lab 2.1] → Lab 3.1 (Unit 3) → Unit 4 → Lab 4.1 → Unit 5 → Lab 5.1 → Unit 6** (labs 6.1–6.2, pages 6.2–6.3, then **6.4** integration + knowledge check, **6.5** closing recap and Level 3 readiness; former Unit 7 / Unit 8 material split across **6.4** and **6.5**).
 
 ---
 

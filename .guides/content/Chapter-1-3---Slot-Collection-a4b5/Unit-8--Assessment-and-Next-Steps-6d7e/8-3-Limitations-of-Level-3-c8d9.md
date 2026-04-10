@@ -1,13 +1,3 @@
-## What Level 3 Cannot Do
+**Next chapter:** Start **Chapter 1.4** in **Unit 0** (**0-1**, **0-2**, and **Lab 0.1** as the guide directs). That is where the course gives the **baseline recap** of your project after Chapter 1.3, the **Chapter 1.4** work plan (**`level4/`**, config/endpoints, labs), and the full “what stays / what you add” detail.
 
-1. **Collect Multiple Slots Efficiently.** You can only collect one slot at a time easily. For example "Transfer money" needs amount, recipient, and account. Level 4 adds multiple slot collection.
-
-2. **Complex Validation.** Level 3 has limited validation of slot values. For example you can't easily validate account format. You can handle some of this in actions; Level 4 makes it easier.
-
-## When Level 3 is Sufficient
-
-Level 3 is a good fit for a single piece of information such as account number or name, simple multi-turn conversations, and remembering one key piece of data.
-
-## When You Need More
-
-Move to Level 4 when you need to collect multiple pieces of information, handle complex forms with multiple fields, or validate multiple slot values together.
+This unit keeps **skills (8-2)**, **knowledge check (8-1)**, and **readiness (8-5)**. It does **not** restate limitation lists or file inventories that belong on **1.4 Unit 0**—read **0-1** there instead of looking for them here.

@@ -1,3 +1,5 @@
+**Levels 1–5** are summarized in **Unit 0.1** (what you bring into **`level6/`**). Below is only the **Level 6** orchestration slice.
+
 Your Level 6 agent supports everything from Level 5 plus **orchestration**:
 
 - **Level 1–4:** Greet, help, contact, goodbye, bank hours, check balance, transfer (with slots and action).

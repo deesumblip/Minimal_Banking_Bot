@@ -1,9 +1,9 @@
-You have completed the Minimal Banking Agent course through Level 6. Possible directions beyond the course:
+You have completed the Minimal Banking Agent course through Level 6. Typical directions from here:
 
-- **More sub-agents**, Add additional specialized agents and flows that call them.
-- **Task-specific sub-agents**, Use exit_if and slot handback so a sub-agent fills slots and returns control with data.
-- **Richer NLU**, Improve intents and training data for more reliable flow selection.
-- **Channels and deployment**, Deploy the agent with Rasa, action server, and MCP server in your target environment.
-- **Rasa documentation**, Explore advanced orchestration, A2A, and MCP in the official Rasa docs.
+- **More sub-agents** — additional specialists and flows that **`call:`** them.
+- **Task-specific sub-agents** — exit conditions and slot handback so a sub-agent returns data to the main flow.
+- **NLU and routing** — refine training data so the right flow fires (**`ask_banking_assistant`** vs others).
+- **Channels and deployment** — run Rasa, the action server, and MCP together in your environment.
+- **Rasa docs** — advanced orchestration, protocols, and MCP patterns beyond this course.
 
-Your Level 6 agent demonstrates orchestration with one ReAct sub-agent and MCP tools, a solid base to build on.
+Your Level 6 project is one main agent plus a ReAct sub-agent with MCP tools—a base to extend, not a duplicate list on **6.3**.

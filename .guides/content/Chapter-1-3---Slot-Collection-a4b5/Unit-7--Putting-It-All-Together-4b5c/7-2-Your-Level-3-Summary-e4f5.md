@@ -1,3 +1,3 @@
-Your agent can do all Level 1 and Level 2 capabilities: responses, flows, and actions. It can remember user-provided information in slots and ask for missing information and use it in actions, such as checking the balance for an account.
+Your **`level3/`** assistant still runs all Level 1 and Level 2 behavior, and it can **store** a value in a slot, **ask** with **`utter_ask_*`** when the slot is empty, and **use** that value in an action (the **check_balance** path from this chapter’s labs).
 
-Key additions are the `slots:` section and `utter_ask_account` in the domain, the `check_balance.yml` flow with `collect: account`, and `action_check_balance_simple`, which reads the slot and handles placeholders. Use clear slot names, keep `utter_ask_*` consistent with slot names, and validate slot values in your action.
+**Where the pieces are named** (domain slots, `check_balance.yml`, `action_check_balance_simple`, lab order) is already spelled out in **Unit 0.2** and on each lab page—use those as the reference, not a second inventory here. **Lab 7.1** is for seeing it all behave in **Inspector**.

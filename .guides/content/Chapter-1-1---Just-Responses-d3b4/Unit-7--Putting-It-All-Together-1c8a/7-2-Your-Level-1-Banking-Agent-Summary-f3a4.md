@@ -1,7 +1,5 @@
-**Domain**: `utter_greet`, `utter_help`, `utter_contact` (and `utter_goodbye` if added).  
-**Flows**: `greet`, `help`, `contact` (and `goodbye`, `hours`, `balance` if added).  
-**System patterns**: `pattern_session_start`, `pattern_completed`.
+**What your agent can do:** greet, explain services, provide contact information, and (if you added them) goodbye and other response-only flows—using **`utter_*`** steps and **YAML** flows you defined earlier in this chapter.
 
-**What your agent can do**: Greet users, explain services, provide contact information.
+**File-level inventory** (domain keys, flow files, patterns) appears where you first built them (**Units 2–5**); this box is a **closure snapshot**, not a second full spec.
 
-**What's missing (later levels)**: Custom code (Level 2), memory (Level 3), multiple slots (Level 4), tools (Level 5). Level 2 builds on this same agent.
+**Later levels** add actions, slots, multi-slot flows, and tools on **this same** project. Chapter 1.2 Unit 0 explains what stays when you add actions.

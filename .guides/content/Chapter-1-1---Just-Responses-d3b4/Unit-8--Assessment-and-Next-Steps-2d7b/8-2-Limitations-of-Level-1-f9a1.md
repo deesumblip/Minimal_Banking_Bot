@@ -1,5 +1,5 @@
-**Level 1 cannot**: Remember information; perform calculations; access databases; make API calls; give dynamic responses (e.g. current time).
+Level 1 uses **static responses** only: no custom Python (**actions**), no **slots**, and no **tool** calls.
 
-**Level 1 is sufficient for**: Static information agents (FAQs, contact info), simple help systems, information-only assistants.
+**Chapter 1.2 Unit 0** is the full handoff—what your Level 1 agent contains, what it cannot do, and exactly what Level 2 adds. Read that when you continue instead of repeating a long limitations list here.
 
-**Move to Level 2** when you need custom Python code (actions) and dynamic responses. **Move to Level 3** when you need memory (slots) and multi-turn context.
+**When to advance:** move to **Level 2** when you need **actions** and dynamic logic. Move to **Level 3** when you need **slots** and remembered values across turns.

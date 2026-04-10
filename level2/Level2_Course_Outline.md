@@ -154,10 +154,11 @@
   - Error: Name Mismatch
 - 6.3 Testing and Debugging Your Action (workflow, Inspector, debug panel, common issues)
 - Lab 6.2: Verify Domain and Training (domain + model file check; optional Inspector)
-- **6.4 Level 2 Wrap-Up: Integration, Review, and Next Level** (single page; former standalone Unit 7 and merged Unit 8 material)
+- **6.4 Level 2 Wrap-Up: Integration, Review, and Next Level**
   - Full conversation example (Level 1 + example action + your Lab 3.1 action)
   - Project structure at a glance; best practices; **5×** Check It! MCQs
-  - Recap, limitations, Level 3 preview, readiness checklist
+- **6.5 Core Ideas, Level 2 Limits, and Level 3 Readiness** (no assessments)
+  - Short L2 checkpoint; readiness bullets; points to Chapter 1.3 Unit 0 for full recap (avoids overlap with **0-1** / **0-2**)
 
 **Key Concepts**: Training, testing, debugging, Rasa Inspector, port forwarding; integration, review, next level
 
@@ -172,11 +173,11 @@
 
 ---
 
-### Unit 7: Putting It All Together — Wrap-Up
+### Unit 7: Putting It All Together — Wrap-Up *(not a separate Codio unit; see Unit 6 pages 6.4–6.5)*
 **Type**: Content Page  
-**Assessment**: Embedded knowledge check (5× multiple-choice via Check It! on the same page)
+**Assessment**: Embedded knowledge check (5× multiple-choice via Check It! on **6.4**)
 
-**Sections** (single page **7.1**; former Unit 8 merged here):
+**Sections** (historical outline; in the live guide this is **6.4** + **6.5**; former Unit 8 merged here):
 - Full conversation example (Level 1 + example action + your Lab 3.1 action)
 - Project structure at a glance (domain, flows, actions, config)
 - Best practices: organizing flows, responses, descriptions, testing with Inspector and logs
@@ -226,7 +227,7 @@
 **Codio: Grader updates from GitHub**  
 When you set up or edit assessments on Codio, configure each Code Test to **run the grader script from the workspace** (e.g. `bash /home/codio/workspace/.guides/secure/level2_graders/lab_5.1_grader.sh`). Do **not** upload or paste the script content into the assessment. That way, when you push grader changes to GitHub and pull on Codio, the assessment will use the updated script automatically.
 
-**Chapter 1.2 (Codio guide)**: Code-output-compare Check It! tags are on Labs 3.1, 4.1, 5.1, 6.1, 6.2. Multiple-choice Check It! tags are on content pages: 1.1, 1.4, 2.2, 2.3, Lab 2.1, 3.1 (fill-in + code test), **6.4** (Level 2 wrap-up; includes former 8.1-style MCQs; see `.guides/content/Chapter-1-2---Custom-Actions-30d6/`).
+**Chapter 1.2 (Codio guide)**: Code-output-compare Check It! tags are on Labs 3.1, 4.1, 5.1, 6.1, 6.2. Multiple-choice Check It! tags are on content pages: 1.1, 1.4, 2.2, 2.3, Lab 2.1, 3.1 (fill-in + code test), **6.4** (Level 2 wrap-up knowledge check; former 8.1-style MCQs; **6.5** has no Check It!; see `.guides/content/Chapter-1-2---Custom-Actions-30d6/`).
 
 ---
 
@@ -309,7 +310,7 @@ By the end of Level 2, students should be able to:
 - **Unit 3**: 45-60 minutes (lab + assessment)
 - **Unit 4**: 30-45 minutes (lab + assessment)
 - **Unit 5**: 30-45 minutes (lab + assessment)
-- **Unit 6** (labs + testing + wrap-up page 6.4): 60-90 minutes (labs + assessment + testing + integration review)
+- **Unit 6** (labs + testing + wrap-up pages **6.4**–**6.5**): 60-90 minutes (labs + assessment + testing + integration review + closing pages)
 
 **Total Estimated Time**: 4-5 hours
 

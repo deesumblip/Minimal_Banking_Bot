@@ -1,13 +1,11 @@
-**Starting point:** Work in **`level4/`** (see **Unit 0.1**).
+**Starting point:** **`level4/`** (see **Unit 0.1**).
 
-Before moving to Level 5, ensure you can:
+Before **Chapter 1.5**, you should be able to:
 
-- Explain the **full delta** in **Unit 0.2** (pipeline **`config.yml`** / **`endpoints.yml`** plus labs), not only domain and flow edits
-- Add multiple slots to the domain and matching `utter_ask_*` responses (with **`rephrase: False`** on transfer asks)
-- Create an action that reads multiple slots, caps **recipient** at **100** characters, handles placeholders, and sends the demo confirmation
-- Create a flow with multiple `collect:` steps in order, then an `action:` step
-- Explain why the order of `collect:` steps matters
-- Train the Level 4 agent from the `level4` folder and run the completion check (and the **scripted transfer** in Inspector from Lab 5.2)
-- Understand that **Level 4** extends the baseline agent and that **greet, hours, check_balance, …** still live in **`level4/`**
+- Explain the **Unit 0.2** pipeline delta (**`config.yml`** / **`endpoints.yml`**) plus your lab work, not only domain and flow edits.
+- Add multiple slots and matching **`utter_ask_*`** responses (with **`rephrase: False`** on transfer asks where required).
+- Implement **`action_process_transfer`** (multi-slot read, **recipient** cap, placeholders, demo confirmation).
+- Author **`transfer_money.yml`** with ordered **`collect:`** steps and a final **`action:`** step.
+- Train from **`level4/`** and complete **Lab 5.2** (including the **scripted transfer**).
 
-If you can do all of the above, you're ready for Level 5!
+**Next:** **Chapter 1.5 Unit 0** covers tool-calling readiness and **`level5/`** setup in depth—use it as the continuation checklist.

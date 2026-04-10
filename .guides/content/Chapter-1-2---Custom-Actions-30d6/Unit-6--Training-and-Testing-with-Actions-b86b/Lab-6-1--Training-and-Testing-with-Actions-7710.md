@@ -1,5 +1,3 @@
-## Lab 6.1: Training and Testing with Actions
-
 Training in Level 2 is the same idea as Level 1: you run `rasa train` and Rasa writes a packaged model under **`models/`**. What changes is that Rasa now **also reads your custom actions** under **`actions/`** and folds them together with **`domain/`** and **`data/`**—so the model knows about `action_bank_hours` and `action_holiday_hours`, not only `utter_*` responses.
 
 You should already have finished **Labs 3.1–5.1**: both actions appear in the domain, **`hours.yml`** uses `action_bank_hours`, and **`holiday_hours.yml`** uses `action_holiday_hours`.

@@ -1,0 +1,20 @@
+{
+	"id": "1661b3bc-c3b7-57b1-8c50-70673d9e1a06",
+	"title": "6.5 Core Ideas, Level 2 Limits, and Level 3 Readiness",
+	"files": [
+		{
+			"path": "#tabs",
+			"action": "close"
+		}
+	],
+	"layout": "2-panels-tree-guides-left",
+	"path": [
+		"level2"
+	],
+	"type": "page",
+	"contentType": "markdown",
+	"content": "",
+	"teacherOnly": false,
+	"closeTerminalSession": true,
+	"learningObjectives": "Confirm Level 2 action skills, note the slot-sized gap without duplicating Chapter 1.3 Unit 0, and self-check readiness before continuing."
+}

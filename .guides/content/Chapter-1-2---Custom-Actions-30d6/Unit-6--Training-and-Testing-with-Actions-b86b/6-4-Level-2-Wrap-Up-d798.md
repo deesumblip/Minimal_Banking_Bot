@@ -1,6 +1,4 @@
-## 6.4 Level 2 Wrap-Up: Integration, Review, and Next Level
-
-This last page of **Unit 6** finishes Level 2. It walks through a **full conversation** (Level 1 plus the example action and your Lab 3.1 action), maps **where your files live**, and suggests **practices** for testing and maintenance. After that, you will find a short **knowledge check** (use **Check It!** for each question), a recap of **core ideas and skills**, what Level 2 **still cannot** do, how **Level 3** builds on the **same** banking agent, and a **readiness** checklist before you leave this level.
+This page of **Unit 6** walks through a **full conversation** (Level 1 plus the example action and your Lab 3.1 action), maps **where your files live**, suggests **practices** for testing and maintenance, and ends with a short **knowledge check** (use **Check It!** for each question). **6.5** adds a brief Level 2 checkpoint and readiness list; **Chapter 1.3 Unit 0** carries the full “what you built / what slots add” recap so it is not repeated here.
 
 #### A complete conversation
 
@@ -58,7 +56,7 @@ Agent: "You can reach us at support@bank.com or call 1-800-BANK-123."
 
 #### Your project at a glance
 
-You have extended Level 1 with custom Python. Structurally, the Level 2 agent looks like this:
+This matches the **Level 1 baseline** described in **Unit 0.1**, plus the Level 2 actions and flows you added in the labs—listed here so you can read it beside the **conversation trace** above. You have extended Level 1 with custom Python. Structurally, the Level 2 agent looks like this:
 
 **Domain (`domain/basics.yml`)** — Level 1 responses (`utter_greet`, `utter_help`, `utter_contact`, `utter_goodbye`) plus an `actions:` section listing `action_bank_hours` and `action_holiday_hours` (after Lab 4.1).
 
@@ -90,32 +88,6 @@ Answer the five questions using **Check It!** below. Questions, choices, and fee
 
 {Check It!|assessment}(multiple-choice-1208100005)
 
-#### Core ideas and what you can do now
-
-You should be solid on how **actions** differ from static **responses**, how an **Action** class is structured and **registered** in the domain, how the **dispatcher** sends messages from **`run()`**, and how Rasa **executes** actions from flows. In hands-on work you created **`action_holiday_hours`**, registered it, and wired **`holiday_hours`**—alongside the Level 1 work and the **`hours` / `action_bank_hours`** example. **Level 2 keeps all Level 1 behavior**; you extended the same project rather than replacing it. The **knowledge check** above and the **readiness** list below tie those ideas to what you built in the labs.
-
-#### What Level 2 still doesn't do
-
-Level 2 is a strong fit for **dynamic** answers from code, **formatting** and **branching** without remembering user-specific facts across turns, and **simple integrations** when each request can be handled in isolation. It does **not** give you durable **memory** of what the user said earlier: for example, if they mention an account number once, the agent will not reliably retain it for the next turn. That is what **slots** address in Level 3. Similarly, **collecting several fields** in one task (for example transfer amount, payee, and source account) is out of scope until **multiple-slot** patterns in a later level, and **tool-style** orchestration appears in the tools-focused level—so plan to advance when your design needs memory, multi-step data collection, or richer tool use.
-
-#### Continuing with the same agent in Level 3
-
-When you open Level 3, you **keep the same banking agent**: your Level 1 responses, your **`hours`** and **`holiday_hours`** flows, and both **`action_bank_hours`** and **`action_holiday_hours`**, stay in the project. Level 3 adds **slots** (conversation memory), **`utter_ask_*`** style prompts, flows that **collect** slot values, and actions that **read** slots via the tracker—without starting a new codebase from scratch.
-
-A typical Level 3 story is **“check my balance”**: at Level 2 the agent cannot hold an account number between turns; at Level 3 you can store something like an `account` slot, ask with `utter_ask_account`, and read it in an action such as `action_check_balance_simple` inside a **`check_balance`**-style flow. Expect to work with **`collect:`** in flows, **`tracker.get_slot()`** in actions, and clear **flow descriptions** so the policy still routes well.
-
-Move to Level 3 when you need **remembered** user details, **multi-turn** tasks that depend on earlier messages, or **personalized** behavior based on stored information. Your Level 2 work remains the **foundation**; Level 3 layers memory on top.
-
-#### Readiness for Level 3
-
-Use this as a final pass before you leave Level 2:
-
-- You can explain what an action is and how it differs from a response.
-- You created **`action_holiday_hours`** in Lab 3.1 and understand its place next to the example action.
-- **`action_holiday_hours`** (and the example action) appear under **`actions:`** in the domain where required.
-- You have a flow (**`holiday_hours`**) that uses your action, in addition to the example **`hours`** flow.
-- You know how actions are triggered from flows and how to spot failures in Inspector or logs.
-
-If those points feel true, you are in good shape to start Level 3.
+**Next:** Open **6.5** for a short checkpoint, then **Chapter 1.3 Unit 0** for the Level 3 overview.
 
 ---

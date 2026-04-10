@@ -569,7 +569,7 @@ flows:
 
 ## Unit 6: Training, Testing, and Level 2 Wrap-Up
 
-**Codio guide:** Student-facing pages include **Lab 6.1** (`Lab-6-1--Training-and-Testing-with-Actions-7710.md`), **6.2**, **Lab 6.2**, **6.3**, and **6.4** (`6-4-Level-2-Wrap-Up-d798.md` — integration, knowledge check, Level 3 preview). The subsections below are the full instructor reference (including local PowerShell).
+**Codio guide:** Student-facing pages include **Lab 6.1** (`Lab-6-1--Training-and-Testing-with-Actions-7710.md`), **6.2**, **Lab 6.2**, **6.3**, **6.4** (`6-4-Level-2-Wrap-Up-d798.md` — integration, practices, knowledge check), and **6.5** (`6-5-Core-Ideas-and-Level-3-Readiness-b91a.md` — core ideas, limitations, Level 3 preview, readiness checklist). The subsections below are the full instructor reference (including local PowerShell).
 
 ### 6.1 Training with Actions
 
@@ -696,17 +696,21 @@ When testing in Inspector, check the debug panel: which flow was triggered, whic
 
 ### 6.4 Level 2 Wrap-Up: Integration, Review, and Next Level
 
-One student-facing page in Codio (`6-4-Level-2-Wrap-Up-d798`): integration walkthrough, project map, best practices, **five multiple-choice Check It! assessments** (`multiple-choice-1208100001`–`0005`), merged recap of concepts and skills, Level 2 limitations vs when to move on, Level 3 preview (same agent; add `holiday_hours` / `action_holiday_hours` to the “what stays” list), and readiness checklist.
+Student-facing page (`6-4-Level-2-Wrap-Up-d798`): integration walkthrough, project map, best practices, **five multiple-choice Check It! assessments** (`multiple-choice-1208100001`–`0005`). Ends with a pointer to **6.5** for recap, limitations, and Level 3 readiness.
 
 #### Conversation example
 
 Include session start, `hours` + `action_bank_hours`, `holiday_hours` + `action_holiday_hours`, and a Level 1 static flow (e.g. `contact`). Fenced `text` trace; dynamic agent lines per course.
 
-#### Practices, knowledge check, recap, limitations, Level 3
+#### Practices and knowledge check
 
-Align prose with `Level2_Unit6_Content_6.4_Level-2-Wrap-Up.md` / `.guides/.../6-4-Level-2-Wrap-Up-d798.md`. Avoid duplicating the “future levels” roadmap in both “at a glance” and limitations—limitations + Level 3 sections carry that detail.
+Align **6.4** prose with `Level2_Unit6_Content_6.4_Level-2-Wrap-Up.md` / `.guides/.../6-4-Level-2-Wrap-Up-d798.md`.
 
-**Former Unit 7** page stem `7-1-Complete-Agent-Walkthrough-d798` was retired; wrap-up lives as **6.4** at the end of Unit 6. **Former Unit 8** content was merged into that wrap-up page earlier.
+### 6.5 Core Ideas, Level 2 Limits, and Level 3 Readiness
+
+Student-facing page (`6-5-Core-Ideas-and-Level-3-Readiness-b91a`): short Level 2 skills recap, one paragraph on limits (slots vs not), readiness bullets, and a pointer to **Chapter 1.3 Unit 0** for the full agent recap and Level 3 roadmap (avoid duplicating **0-1** / **0-2**). Align with `Level2_Unit6_Content_6.5_Core-Ideas-and-Level-3-Readiness.md` / `.guides/.../6-5-Core-Ideas-and-Level-3-Readiness-b91a.md`.
+
+**Former Unit 7** page stem `7-1-Complete-Agent-Walkthrough-d798` was retired; closing material for Unit 6 is split across **6.4** and **6.5**. **Former Unit 8** content was merged into that closing pair earlier.
 
 ---
 

@@ -1,8 +1,3 @@
-Possible next steps after Level 6:
+After Level 6 you can grow the same patterns—more sub-agents, tighter routing, and deployment—with **`level6/`** as the base.
 
-- **More sub-agents**, Add other specialized agents (e.g. support, loans) and flows that call them.
-- **Task-specific sub-agents**, Use exit conditions and slot handback for sub-agents that fill slots and return to the main flow.
-- **NLU and intents**, Refine intents and training data so the agent reliably triggers ask_banking_assistant vs other flows.
-- **Channels and deployment**, Connect the agent to channels and deploy with MCP server and Rasa in the same environment.
-
-Your Level 6 banking agent is a full orchestration example: one main agent that can delegate to a ReAct sub-agent with MCP tools.
+Concrete extension ideas are listed on **6.6 — What’s next beyond the course** so this section stays short and linear.
