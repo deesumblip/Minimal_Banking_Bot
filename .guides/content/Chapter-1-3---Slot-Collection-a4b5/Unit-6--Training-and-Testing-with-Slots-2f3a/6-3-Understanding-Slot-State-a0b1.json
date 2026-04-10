@@ -1,11 +1,10 @@
 {
-	"id": "a0b1b6ae-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+	"id": "b0ca5695-5ce5-5366-9b91-d71c59475750",
 	"title": "6.3 Understanding Slot State",
 	"files": [
 		{
-			"path": "",
-			"panel": 1,
-			"action": "open"
+			"path": "#tabs",
+			"action": "close"
 		}
 	],
 	"layout": "2-panels-tree-guides-left",
@@ -17,5 +16,5 @@
 	"content": "",
 	"teacherOnly": false,
 	"closeTerminalSession": true,
-	"learningObjectives": ""
+	"learningObjectives": "Describe how slot state changes across turns and sessions."
 }

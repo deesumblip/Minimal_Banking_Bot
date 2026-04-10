@@ -1,11 +1,10 @@
 {
-	"id": "d1e2b6ae-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+	"id": "82a64791-ef6f-5065-a5e2-982601321bb1",
 	"title": "5.3 Creating the Flow",
 	"files": [
 		{
-			"path": "",
-			"panel": 1,
-			"action": "open"
+			"path": "#tabs",
+			"action": "close"
 		}
 	],
 	"layout": "2-panels-tree-guides-left",
@@ -17,5 +16,5 @@
 	"content": "",
 	"teacherOnly": false,
 	"closeTerminalSession": true,
-	"learningObjectives": ""
+	"learningObjectives": "Outline the check_balance flow that collects account before running the balance action."
 }

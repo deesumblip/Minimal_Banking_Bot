@@ -1,5 +1,3 @@
-A full conversation ties together Level 1 (responses), Level 2 (actions), and Level 3 (slot memory).
+This chapter’s agent combines **Level 1** responses, **Level 2** custom actions, and **Level 3** slot memory in one conversation.
 
-You'll do the walkthrough in **Lab 7.1**. You will start Inspector and run a session start so the agent greets you. You'll say "Check my balance" and the agent will ask for the account (slot empty). You'll provide "1234" and the agent will store it, run the action, and reply with the balance. You'll say "What's my balance?" again and the agent will remember 1234 and reply without asking (slot persistence). You'll say "What are your hours?" and the Level 2 flow will run.
-
-Levels 1, 2, and 3 work together: responses, actions, and slot memory. Lab 7.1 has no graded assessment.
+**Lab 7.1** is where you run that conversation in Inspector: you trigger slot collection, confirm persistence on a follow-up turn, and still reach your Level 1 and Level 2 flows. The lab walks through the steps and what to watch in the debug UI. The lab does not add a separate automated grader beyond the knowledge checks listed there.

@@ -1,5 +1,5 @@
 {
-	"id": "f9a0b6ae-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+	"id": "9274b748-87e1-53af-81c4-92de9907ec25",
 	"title": "Lab 6.2: Testing Slot Collection",
 	"files": [
 		{
@@ -17,5 +17,5 @@
 	"content": "",
 	"teacherOnly": false,
 	"closeTerminalSession": true,
-	"learningObjectives": ""
+	"learningObjectives": "Run Inspector tests for collection and persistence; complete Check Your Knowledge."
 }

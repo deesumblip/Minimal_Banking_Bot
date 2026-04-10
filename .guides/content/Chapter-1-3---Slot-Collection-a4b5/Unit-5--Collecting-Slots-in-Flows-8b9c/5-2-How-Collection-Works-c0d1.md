@@ -1,11 +1,7 @@
-As in Unit 1.3, when the flow runs:
+**Section 1.3** walked through the first time the flow hits a `collect:` step: ask if empty, store the reply, then continue. This section adds the usual reason the agent **does not** ask again.
 
-1. Flow starts at Step 1, `collect: account`.
-2. Rasa checks whether the `account` slot already has a value.
-   - **No.** The agent asks for it using `utter_ask_account`, for example "What is your account number?" The user replies, Rasa stores the value in the slot, and the flow continues to Step 2.
-   - **Yes.** The agent skips asking and uses the existing value, then continues to Step 2.
-3. Step 2. `action_check_balance_simple` runs and reads the slot.
+If the `account` slot **already holds a value** from an earlier turn in the conversation, Rasa skips `utter_ask_account` and goes straight to the next step. The action still runs with the slot value that is already in the tracker.
 
-The agent only asks when the slot is empty. If the slot already has a value, for example from an earlier turn in the conversation, Rasa uses that value immediately.
+That is how a follow-up like "What's my balance?" can resolve without re-prompting for the account number. The slot persisted.
 
 {Check It!|assessment}(multiple-choice-5130520013)

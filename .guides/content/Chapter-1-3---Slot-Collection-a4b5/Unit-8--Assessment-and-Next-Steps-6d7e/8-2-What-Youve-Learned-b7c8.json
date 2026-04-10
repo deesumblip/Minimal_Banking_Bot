@@ -1,11 +1,10 @@
 {
-	"id": "b7c8b6ae-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+	"id": "0d3ca8b6-4c10-5fc9-b587-fee19787fda3",
 	"title": "8.2 What You've Learned",
 	"files": [
 		{
-			"path": "",
-			"panel": 1,
-			"action": "open"
+			"path": "#tabs",
+			"action": "close"
 		}
 	],
 	"layout": "2-panels-tree-guides-left",
@@ -17,5 +16,5 @@
 	"content": "",
 	"teacherOnly": false,
 	"closeTerminalSession": true,
-	"learningObjectives": ""
+	"learningObjectives": "Review what you have learned in Chapter 1.3."
 }

@@ -1,11 +1,10 @@
 {
-	"id": "f3a4b6ae-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+	"id": "baa8755c-dd23-5bb3-b68a-fed1f0ea6b0c",
 	"title": "4.1 Accessing Slots in Actions",
 	"files": [
 		{
-			"path": "",
-			"panel": 1,
-			"action": "open"
+			"path": "#tabs",
+			"action": "close"
 		}
 	],
 	"layout": "2-panels-tree-guides-left",
@@ -17,5 +16,5 @@
 	"content": "",
 	"teacherOnly": false,
 	"closeTerminalSession": true,
-	"learningObjectives": ""
+	"learningObjectives": "Read slot values from the tracker inside custom actions."
 }

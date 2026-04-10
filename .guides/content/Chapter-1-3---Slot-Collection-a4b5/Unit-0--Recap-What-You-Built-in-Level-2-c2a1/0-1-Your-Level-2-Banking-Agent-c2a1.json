@@ -1,11 +1,10 @@
 {
-	"id": "c2a1b6ae-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+	"id": "48953be7-13b9-5613-8a99-5225e1330c43",
 	"title": "0.1 Your Level 2 Banking Agent",
 	"files": [
 		{
-			"path": "",
-			"panel": 1,
-			"action": "open"
+			"path": "#tabs",
+			"action": "close"
 		}
 	],
 	"layout": "2-panels-tree-guides-left",
@@ -17,5 +16,5 @@
 	"content": "",
 	"teacherOnly": false,
 	"closeTerminalSession": true,
-	"learningObjectives": ""
+	"learningObjectives": "Recall what the Level 2 banking agent included before adding slots."
 }

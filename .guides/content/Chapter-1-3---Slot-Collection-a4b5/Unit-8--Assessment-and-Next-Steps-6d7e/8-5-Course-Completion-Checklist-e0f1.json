@@ -1,11 +1,10 @@
 {
-	"id": "e0f1b6ae-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+	"id": "e9965d8c-b765-5456-ae95-c8d7ccc20eb5",
 	"title": "8.5 Course Completion Checklist",
 	"files": [
 		{
-			"path": "",
-			"panel": 1,
-			"action": "open"
+			"path": "#tabs",
+			"action": "close"
 		}
 	],
 	"layout": "2-panels-tree-guides-left",
@@ -17,5 +16,5 @@
 	"content": "",
 	"teacherOnly": false,
 	"closeTerminalSession": true,
-	"learningObjectives": ""
+	"learningObjectives": "Complete the course checklist for Chapter 1.3."
 }

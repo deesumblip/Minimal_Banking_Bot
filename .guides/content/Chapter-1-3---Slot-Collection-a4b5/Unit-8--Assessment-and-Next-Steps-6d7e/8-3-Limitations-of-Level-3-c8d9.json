@@ -1,11 +1,10 @@
 {
-	"id": "c8d9b6ae-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+	"id": "b732a6c9-a1a8-5f4b-a7f2-da2dfeb0b1c1",
 	"title": "8.3 Limitations of Level 3",
 	"files": [
 		{
-			"path": "",
-			"panel": 1,
-			"action": "open"
+			"path": "#tabs",
+			"action": "close"
 		}
 	],
 	"layout": "2-panels-tree-guides-left",
@@ -17,5 +16,5 @@
 	"content": "",
 	"teacherOnly": false,
 	"closeTerminalSession": true,
-	"learningObjectives": ""
+	"learningObjectives": "Recognize limitations of the Level 3 slot-based approach."
 }

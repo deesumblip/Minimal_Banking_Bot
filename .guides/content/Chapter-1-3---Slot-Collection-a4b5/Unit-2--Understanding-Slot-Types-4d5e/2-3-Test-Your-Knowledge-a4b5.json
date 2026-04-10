@@ -1,11 +1,10 @@
 {
-	"id": "a4b52a3b-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+	"id": "78d743ed-a739-543d-a756-e51be31a047a",
 	"title": "2.3 Test Your Knowledge",
 	"files": [
 		{
-			"path": "",
-			"panel": 1,
-			"action": "open"
+			"path": "#tabs",
+			"action": "close"
 		}
 	],
 	"layout": "2-panels-tree-guides-left",
@@ -17,5 +16,5 @@
 	"content": "",
 	"teacherOnly": false,
 	"closeTerminalSession": true,
-	"learningObjectives": ""
+	"learningObjectives": "Validate understanding of slot types and naming via embedded checks."
 }

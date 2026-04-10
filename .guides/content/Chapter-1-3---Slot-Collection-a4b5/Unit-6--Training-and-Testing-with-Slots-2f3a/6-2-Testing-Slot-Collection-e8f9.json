@@ -1,5 +1,5 @@
 {
-	"id": "e8f9b6ae-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+	"id": "e8a4e173-5acc-51ba-bf54-024c4ce9d1a1",
 	"title": "6.2 Testing Slot Collection",
 	"files": [
 		{
@@ -17,5 +17,5 @@
 	"content": "",
 	"teacherOnly": false,
 	"closeTerminalSession": true,
-	"learningObjectives": ""
+	"learningObjectives": "Orient to Inspector testing for slot collection and persistence before Lab 6.2."
 }

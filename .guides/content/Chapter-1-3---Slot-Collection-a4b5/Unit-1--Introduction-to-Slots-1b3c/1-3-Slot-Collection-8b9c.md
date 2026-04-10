@@ -14,11 +14,13 @@ steps:
 ```
 
 **What happens**:
-1. Flow starts
-2. Agent checks: Does `account` slot have a value?
-   - **No** → Agent asks: "What is your account number?" (using `utter_ask_account`)
-   - **Yes** → Skip to step 2
-3. User provides account number
-4. Agent stores it in `account` slot
-5. Flow continues to step 2
-6. Action reads `account` slot and uses it
+
+1. Flow starts.
+2. The agent checks whether the `account` slot has a value.
+   - **No.** The agent asks using the `utter_ask_account` response, for example "What is your account number?" After the user replies, Rasa stores the value and the flow continues.
+   - **Yes.** The agent skips asking and continues.
+3. The user may provide or confirm the account number; Rasa keeps the slot updated as needed.
+4. The flow continues to the action step.
+5. The action reads the `account` slot and uses it.
+
+For the **`collect:`** syntax used in YAML, see **5.1 The Collect Step** in this chapter.

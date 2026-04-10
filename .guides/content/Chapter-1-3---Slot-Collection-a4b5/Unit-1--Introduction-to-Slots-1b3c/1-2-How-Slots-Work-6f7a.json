@@ -1,11 +1,10 @@
 {
-	"id": "6f7ab6ae-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+	"id": "8f20d219-06b6-514f-bc69-c047e6920df5",
 	"title": "1.2 How Slots Work",
 	"files": [
 		{
-			"path": "",
-			"panel": 1,
-			"action": "open"
+			"path": "#tabs",
+			"action": "close"
 		}
 	],
 	"layout": "2-panels-tree-guides-left",
@@ -17,5 +16,5 @@
 	"content": "",
 	"teacherOnly": false,
 	"closeTerminalSession": true,
-	"learningObjectives": ""
+	"learningObjectives": "Explain how Rasa stores and retrieves slot values during a conversation."
 }

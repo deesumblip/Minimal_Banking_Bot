@@ -1,9 +1,3 @@
-After training in Lab 6.1, you'll test the agent in Inspector to confirm slot collection and persistence.
+After training in **Lab 6.1**, you will exercise the agent in Inspector to confirm **slot collection** and **slot persistence**.
 
-**Lab 6.2** walks you through starting Inspector (on Codio use the Rasa Inspect tab; locally open a browser), testing slot collection by saying something like "Check my balance" so the agent asks for the account and you provide it, testing slot persistence by asking again so the agent remembers without re-asking, and verifying that Level 2 flows still work.
-
-That lab has no graded assessment. It is completion-based.
-
-{Check It!|assessment}(multiple-choice-2446085116)
-{Check It!|assessment}(multiple-choice-3751028362)
-{Check It!|assessment}(multiple-choice-2697467428)
+**Lab 6.2** is the hands-on page. There you start Inspector on **Codio** or locally, run through the scripted checks, and use the debug panel if you want to inspect slot values. The practical steps are **completion-based** (not a separate graded lab task). At the end of **Lab 6.2**, answer the **Check Your Knowledge** questions to reinforce what you observed.

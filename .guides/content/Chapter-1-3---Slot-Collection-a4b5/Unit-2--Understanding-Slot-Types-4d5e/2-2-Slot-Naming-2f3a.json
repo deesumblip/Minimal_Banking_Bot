@@ -1,11 +1,10 @@
 {
-	"id": "2f3ab6ae-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+	"id": "052e8171-a5f1-5e03-b8de-c295c35dbba6",
 	"title": "2.2 Slot Naming",
 	"files": [
 		{
-			"path": "",
-			"panel": 1,
-			"action": "open"
+			"path": "#tabs",
+			"action": "close"
 		}
 	],
 	"layout": "2-panels-tree-guides-left",
@@ -17,5 +16,5 @@
 	"content": "",
 	"teacherOnly": false,
 	"closeTerminalSession": true,
-	"learningObjectives": ""
+	"learningObjectives": "Apply consistent slot naming conventions across domain, flows, and actions."
 }

@@ -1,11 +1,10 @@
 {
-	"id": "e4f5b6ae-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+	"id": "7461de0b-fbee-5aad-bf1c-5c330d39a73e",
 	"title": "7.2 Your Level 3 Summary",
 	"files": [
 		{
-			"path": "",
-			"panel": 1,
-			"action": "open"
+			"path": "#tabs",
+			"action": "close"
 		}
 	],
 	"layout": "2-panels-tree-guides-left",
@@ -17,5 +16,5 @@
 	"content": "",
 	"teacherOnly": false,
 	"closeTerminalSession": true,
-	"learningObjectives": ""
+	"learningObjectives": "Summarize Level 3 learning outcomes and how they extend prior levels."
 }

@@ -1,11 +1,10 @@
 {
-	"id": "a4b5b6ae-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+	"id": "7c7ff548-7335-51a1-8752-128f1369063f",
 	"title": "4.2 Placeholder Handling",
 	"files": [
 		{
-			"path": "",
-			"panel": 1,
-			"action": "open"
+			"path": "#tabs",
+			"action": "close"
 		}
 	],
 	"layout": "2-panels-tree-guides-left",
@@ -17,5 +16,5 @@
 	"content": "",
 	"teacherOnly": false,
 	"closeTerminalSession": true,
-	"learningObjectives": ""
+	"learningObjectives": "Handle placeholder or invalid slot text safely in actions."
 }

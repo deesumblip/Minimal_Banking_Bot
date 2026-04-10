@@ -17,6 +17,8 @@ This report compares **content** (`.guides/content/` chapter and unit structure)
 | 1.1 Just Responses | Unit-0 … Unit-8 (9 units) | Present (see §8 for trimmed pages) | Yes |
 | 1.2 Custom Actions | Unit-0 … Unit-6 (7 units; Level 2 wrap-up is **6.4** at end of Unit 6) | Present | Yes |
 | 1.3 Slot Collection | Unit-0 … Unit-8 (9 units) | Present | Yes |
+
+**Chapter 1.3 metadata:** Chapter, section, and page `id` fields use stable UUIDs (no `xxxx` placeholders). Reading pages use the same **#tabs** close pattern as Chapter 1.1. **Lab 6.1** display title: **Lab 6.1: Training Your Level 3 Agent**.
 | 1.4 Multiple Slots | Unit-0 … Unit-6 (7 units) | Unit-0 folder present; order matches | Yes |
 | 1.5 Tool Calling | Unit-0 … Unit-6 (7 units) | Present | Yes |
 | 1.6 Sub-Agents | Unit-0 … Unit-6 (7 units) | Chapter index.json and all unit index.json + page .json added | Yes |

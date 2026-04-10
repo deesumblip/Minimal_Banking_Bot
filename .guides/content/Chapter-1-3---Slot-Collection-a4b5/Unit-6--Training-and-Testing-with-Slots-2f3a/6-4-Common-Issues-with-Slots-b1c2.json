@@ -1,11 +1,10 @@
 {
-	"id": "b1c2b6ae-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+	"id": "319745c3-463e-5c4a-88a0-bd80db598d67",
 	"title": "6.4 Common Issues with Slots",
 	"files": [
 		{
-			"path": "",
-			"panel": 1,
-			"action": "open"
+			"path": "#tabs",
+			"action": "close"
 		}
 	],
 	"layout": "2-panels-tree-guides-left",
@@ -17,5 +16,5 @@
 	"content": "",
 	"teacherOnly": false,
 	"closeTerminalSession": true,
-	"learningObjectives": ""
+	"learningObjectives": "Diagnose common slot configuration and flow issues."
 }

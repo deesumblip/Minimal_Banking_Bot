@@ -1,16 +1,29 @@
-Your goal is to see how all pieces (Level 1, 2, and 3) work together in one conversation.
+Your goal is to see how Level 1, 2, and 3 pieces work together in **one** Inspector session.
+
+**Prerequisites.** Trained model under **`level3/models/`**, Inspector available (**Lab 6.2**).
 
 ---
 
 ## Steps
 
-1. **Start Inspector** (if not already running). From `level3` with venv active, run `python -m rasa inspect --debug --log-file logs/logs.out`. Open the **Rasa Inspect** tab (Codio) or http://localhost:5005 (local).
+1. **Start Inspector** if it is not running. From **`level3`** with venv active:
 
-2. **Have a complete conversation.** On session start the agent greets you. Say "Check my balance" and the agent asks for your account number (slot empty). Say "1234" and the agent stores the account, runs the action, and replies with the balance. Say "What's my balance?" and the agent remembers 1234 and replies without asking again (slot persistence). Say "What are your hours?" and the Level 2 flow runs.
+   ```bash
+   mkdir -p logs
+   python -m rasa inspect --debug --log-file logs/logs.out
+   ```
 
-3. **Observe.** Use the debug panel to see which flow triggers and how the `account` slot is set and reused.
+   Open the **Rasa Inspect** tab in Codio, or **http://localhost:5005** (or **`.../inspect.html`**) locally.
 
-You're done when you see slot collection, persistence, and Level 1 and 2 flows in one session. This lab has no graded assessment.
+2. **Run through the scenarios** in order:
+   - Let **session start** run so the agent greets you.
+   - Say you want to check your balance. When the **`account`** slot is empty, the agent should ask for it. Provide **1234** and confirm you get a balance reply driven by your action.
+   - Ask for your balance again without giving a new account number. The agent should **not** re-ask; the slot should still hold **1234**.
+   - Ask something that hits a **Level 2** path, for example bank hours, and a simple **Level 1** greeting.
+
+3. **Observe.** Use the debug or flow panel to see which flow ran and how **`account`** is set and reused.
+
+You are done when you have seen **collection**, **persistence**, and **Level 1 / 2** flows in one session. This lab has no separate graded Check It! beyond the knowledge questions below.
 
 ---
 

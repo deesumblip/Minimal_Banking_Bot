@@ -1,5 +1,5 @@
 {
-	"id": "c6d7b6ae-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+	"id": "9bff9af9-7943-50e8-9c6e-32cd70302f22",
 	"title": "6.1 Training with Slots",
 	"files": [
 		{
@@ -17,5 +17,5 @@
 	"content": "",
 	"teacherOnly": false,
 	"closeTerminalSession": true,
-	"learningObjectives": ""
+	"learningObjectives": "Explain what Level 3 training validates for slots, flows, and utter_ask responses."
 }

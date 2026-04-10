@@ -1,11 +1,10 @@
 {
-	"id": "d9e0b6ae-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+	"id": "5e12ab03-13d3-502a-8b9d-9fb1cabba191",
 	"title": "8.4 What's Next: Level 4 Preview",
 	"files": [
 		{
-			"path": "",
-			"panel": 1,
-			"action": "open"
+			"path": "#tabs",
+			"action": "close"
 		}
 	],
 	"layout": "2-panels-tree-guides-left",
@@ -17,5 +16,5 @@
 	"content": "",
 	"teacherOnly": false,
 	"closeTerminalSession": true,
-	"learningObjectives": ""
+	"learningObjectives": "Preview how Level 4 builds on Chapter 1.3."
 }

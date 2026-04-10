@@ -1,11 +1,10 @@
 {
-	"id": "4d5eb6ae-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+	"id": "937df873-fcad-5ad3-a6b4-e374b2948a38",
 	"title": "1.1 What is a Slot?",
 	"files": [
 		{
-			"path": "",
-			"panel": 1,
-			"action": "open"
+			"path": "#tabs",
+			"action": "close"
 		}
 	],
 	"layout": "2-panels-tree-guides-left",
@@ -17,5 +16,5 @@
 	"content": "",
 	"teacherOnly": false,
 	"closeTerminalSession": true,
-	"learningObjectives": ""
+	"learningObjectives": "Define slots as conversational memory and contrast Level 2 vs Level 3 behavior."
 }

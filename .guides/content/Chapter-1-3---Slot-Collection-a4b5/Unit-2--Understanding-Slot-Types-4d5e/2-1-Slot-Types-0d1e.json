@@ -1,11 +1,10 @@
 {
-	"id": "0d1eb6ae-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+	"id": "2530e321-d34b-55e5-8904-cf84e8953102",
 	"title": "2.1 Slot Types",
 	"files": [
 		{
-			"path": "",
-			"panel": 1,
-			"action": "open"
+			"path": "#tabs",
+			"action": "close"
 		}
 	],
 	"layout": "2-panels-tree-guides-left",
@@ -17,5 +16,5 @@
 	"content": "",
 	"teacherOnly": false,
 	"closeTerminalSession": true,
-	"learningObjectives": ""
+	"learningObjectives": "Identify common slot types and when to use them in the domain."
 }

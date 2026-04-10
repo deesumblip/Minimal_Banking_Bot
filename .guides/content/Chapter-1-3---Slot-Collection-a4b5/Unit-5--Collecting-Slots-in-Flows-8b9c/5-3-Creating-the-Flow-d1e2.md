@@ -1,5 +1,3 @@
-In the previous unit you wrote `action_check_balance_simple`, which reads the slot. Now you will create the flow that collects the slot and runs that action.
+In **Unit 4** you implemented `action_check_balance_simple`, which reads the **account** slot from the tracker. You will now connect that action to a flow that **collects** the slot first.
 
-In **Lab 5.1** you will create the `check_balance` flow. That flow will collect the `account` slot so the agent asks for it when it's missing, then run `action_check_balance_simple`, which reads the slot and returns a balance.
-
-You already defined the `account` slot and `utter_ask_account` and registered `action_check_balance_simple` in Lab 3.1, and you **wrote** the action in Lab 4.1. In Lab 5.1 you will create the flow file and follow the steps.
+You will add **`level3/data/basics/check_balance.yml`** with a flow id such as **`check_balance`**. The flow needs at least two steps: a **`collect:`** step for **`account`**, then an **`action:`** step for **`action_check_balance_simple`**. You already defined the slot, **`utter_ask_account`**, and the action registration in **Lab 3.1**, and you wrote the Python in **Lab 4.1**. **Lab 5.1** has the exact YAML and file layout so your project matches the course checks.

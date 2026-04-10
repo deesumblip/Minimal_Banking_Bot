@@ -1,11 +1,10 @@
 {
-	"id": "c0d1b6ae-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+	"id": "d3cb710f-4e68-5aab-990d-f40816ca3fcb",
 	"title": "5.2 How Collection Works",
 	"files": [
 		{
-			"path": "",
-			"panel": 1,
-			"action": "open"
+			"path": "#tabs",
+			"action": "close"
 		}
 	],
 	"layout": "2-panels-tree-guides-left",
@@ -17,5 +16,5 @@
 	"content": "",
 	"teacherOnly": false,
 	"closeTerminalSession": true,
-	"learningObjectives": ""
+	"learningObjectives": "Explain when collection skips because the slot is already filled."
 }
