@@ -88,6 +88,6 @@ Answer the five questions using **Check It!** below. Questions, choices, and fee
 
 {Check It!|assessment}(multiple-choice-1208100005)
 
-**Next:** Open **6.5** for a short checkpoint, then **Chapter 1.3 Unit 0** for the Level 3 overview.
+**Next:** Open **6.5 Before you continue**, then **Chapter 1.3 Unit 0** for the Level 3 overview.
 
 ---

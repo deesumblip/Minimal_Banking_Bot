@@ -2,7 +2,7 @@
 
 #### Core ideas and what you can do now
 
-You should be solid on how **actions** differ from static **responses**, how an **Action** class is structured and registered in the domain, how the **dispatcher** sends messages from **`run()`**, and how Rasa runs actions from flows. In labs you added **`action_holiday_hours`**, registered it, and wired **`holiday_hours`** alongside **`hours`** / **`action_bank_hours`**. The **Check It!** items on **6.4** exercise those ideas.
+You should be solid on how **actions** differ from static **responses**, how an **Action** class is structured and registered in the domain, how the **dispatcher** sends messages from **`run()`**, and how Rasa runs actions from flows. In labs you added **`action_holiday_hours`**, registered it, and wired **`holiday_hours`** alongside **`hours`** / **`action_bank_hours`**. The **Check It!** items on **6.4** (*See it all together*) exercise those ideas.
 
 #### What Level 2 still does not cover
 

@@ -42,7 +42,7 @@ Level 2 uses **7 units** (0–6) with integration walkthrough and knowledge chec
 | Level | Last unit | Sections |
 |-------|------------|----------|
 | **1** | Unit 8 | 8.1 Knowledge Check, 8.2 What You've Learned, 8.3 Limitations, 8.4 What's Next Level 2, 8.5 Checklist |
-| **2** | Unit 6 (**6.4**, **6.5**) | **6.4:** walkthrough, review, 8.1-style MCs. **6.5:** recap, limitations, Level 3 preview, checklist (no separate Unit 7 or Unit 8) |
+| **2** | Unit 6 (**6.4**, **6.5**) | **6.4** *See it all together*: walkthrough, review, 8.1-style MCs. **6.5** *Before you continue*: recap, limits, readiness (no separate Unit 7 or Unit 8) |
 | **3** | Unit 8 | 8.1–8.5 same |
 | **4** | Unit 6 | 6.1 Walkthrough, 6.2 Learned, 6.3 Next, 6.4 Knowledge Check, 6.5 Limitations, 6.6 Level 5 Preview, 6.7 Checklist |
 | **5** | Unit 6 | 6.1–6.7 same |

@@ -1,6 +1,6 @@
 # Level 2: Narrative Structure Assessment
 
-Assessment of the **Level2_*** content and lab files read in sequence from start to finish. Intended order: **Unit 0 → 1 → 2 → [Lab 2.1] → Lab 3.1 (Unit 3) → Unit 4 → Lab 4.1 → Unit 5 → Lab 5.1 → Unit 6** (labs 6.1–6.2, pages 6.2–6.3, then **6.4** integration + knowledge check, **6.5** closing recap and Level 3 readiness; former Unit 7 / Unit 8 material split across **6.4** and **6.5**).
+Assessment of the **Level2_*** content and lab files read in sequence from start to finish. Intended order: **Unit 0 → 1 → 2 → [Lab 2.1] → Lab 3.1 (Unit 3) → Unit 4 → Lab 4.1 → Unit 5 → Lab 5.1 → Unit 6** (labs 6.1–6.2, pages 6.2–6.3, then **6.4** *See it all together*, **6.5** *Before you continue*; former Unit 7 / Unit 8 material split across those two pages).
 
 ---
 
@@ -91,7 +91,7 @@ Assessment of the **Level2_*** content and lab files read in sequence from start
 | Lab 5.1 | ✓ | "example flow" + "your flow" | — |
 | Unit 6 | ✓ | 6.3 tests both flows | 6.1: mention holiday_hours.yml / action_holiday_hours in training |
 | Lab 6.1 | ✓ | — | — |
-| 6.4 | ✓ | Single wrap-up page: walkthrough + structure + practices + MC check + limitations + L3 preview + checklist | — |
+| 6.4 / 6.5 | ✓ | **6.4** *See it all together*: trace + map + practices + MC check; **6.5** *Before you continue*: readiness + Ch 1.3 handoff | — |
 
 ---
 
