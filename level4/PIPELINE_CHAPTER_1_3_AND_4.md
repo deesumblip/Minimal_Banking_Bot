@@ -21,11 +21,11 @@ After **Lab 0.1**, **`level4/config.yml`** uses **`CompactLLMCommandGenerator`**
 
 | State | Command generator |
 |--------|-------------------|
-| `level3/` (Ch. 1.3) | `SearchReadyLLMCommandGenerator` |
+| `level3/` (Level 3) | `SearchReadyLLMCommandGenerator` |
 | `level4/` starter (before Lab 0.1) | `SearchReadyLLMCommandGenerator` (same as Level 3) |
 | `level4/` after Lab 0.1 | `CompactLLMCommandGenerator` |
 
-The **`recipe`**, **`.env`**, and overall **`endpoints.yml`** layout match Level 3 at the **starter**; after Lab 0.1, the **`model_groups`** entry for command generation is **tuned in `level4/endpoints.yml`** (model + temperature)—see **Unit 0.2** in Level 4 for the full Level 3 → 1.4 checklist.
+The **`recipe`**, **`.env`**, and overall **`endpoints.yml`** layout match Level 3 at the **starter**; after Lab 0.1, the **`model_groups`** entry for command generation is **tuned in `level4/endpoints.yml`** (model + temperature)—see **Unit 0.2** in Level 4 for the full Level 3 → Level 4 checklist.
 
 **`endpoints.yml` model** — The **`openai-gpt-5-1`** *group id* ties **`config.yml`**’s **`model_group`** to the **`model_groups`** entry in **`endpoints.yml`**. For Level 4, keep **`model: openai-gpt-5-1`** with **`temperature: 0.1`** so free-text **recipient** **FillSlot** / CALM command DSL stays steadier; a **higher** **`temperature`** or a **`model:`** line that does not match the course value often mis-generates slot fills even when **`CompactLLMCommandGenerator`** is correct. NLG rephrase uses the same group.
 

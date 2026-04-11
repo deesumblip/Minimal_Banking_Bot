@@ -227,7 +227,7 @@
 **Codio: Grader updates from GitHub**  
 When you set up or edit assessments on Codio, configure each Code Test to **run the grader script from the workspace** (e.g. `bash /home/codio/workspace/.guides/secure/level2_graders/lab_5.1_grader.sh`). Do **not** upload or paste the script content into the assessment. That way, when you push grader changes to GitHub and pull on Codio, the assessment will use the updated script automatically.
 
-**Level 2 (Codio guide)**: Code-output-compare Check It! tags are on Labs 3.1, 4.1, 5.1, 6.1, 6.2. Multiple-choice Check It! tags are on content pages: 1.1, 1.4, 2.2, 2.3, Lab 2.1, 3.1 (fill-in + code test), **6.4** *See it all together* (knowledge check; former 8.1-style MCQs; **6.5** *Before you continue* has no Check It!; see `.guides/content/Chapter-1-2---Custom-Actions-30d6/`).
+**Level 2 (Codio guide)**: Code-output-compare Check It! tags are on Labs 3.1, 4.1, 5.1, 6.1, 6.2. Multiple-choice Check It! tags are on content pages: 1.1, 1.4, 2.2, 2.3, Lab 2.1, 3.1 (fill-in + code test), **6.4** *See it all together* (knowledge check; former 8.1-style MCQs; **6.5** *Before you continue* has no Check It!; see `.guides/content/Level-2---Custom-Actions-30d6/`).
 
 ---
 

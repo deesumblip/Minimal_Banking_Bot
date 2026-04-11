@@ -9,7 +9,7 @@ This file captures high-level context and recent structural decisions so future 
 - **Repo:** `Minimal_Banking_Agent` – multi-level Rasa Pro + CALM course.
 - **Codio guides:** Live under `.guides/content/` with:
   - Root guide index: `.guides/content/index.json`.
-  - Per-level guide folders (Codio folder names unchanged), e.g. `Chapter-1-2---Custom-Actions-30d6/`.
+  - Per-level guide folders (Codio folder names unchanged), e.g. `Level-2---Custom-Actions-30d6/`.
   - Each unit has an `index.json` listing pages in `order`.
 - **Assessments:** Live under `.guides/assessments/`:
   - Types: `code-output-compare`, `multiple-choice`, `fill-in-the-blanks`.
@@ -25,8 +25,8 @@ For a full mapping of Level 2 content, labs, and graders, see `level2/LEVEL2_CON
 #### 2.1 Structure (global JSONs)
 
 - Root `.guides/content/index.json` includes:
-  - `Chapter-1-2---Custom-Actions-30d6` in the `order` array.
-- Level 2 guide index: `.guides/content/Chapter-1-2---Custom-Actions-30d6/index.json`:
+  - `Level-2---Custom-Actions-30d6` in the `order` array.
+- Level 2 guide index: `.guides/content/Level-2---Custom-Actions-30d6/index.json`:
   - `type: "chapter"`, title `"Level 2 - Custom Actions"`.
   - `order` (units): Unit-0 … Unit-6 (7 units; Unit 6 closes with **6.4** *See it all together* then **6.5** *Before you continue*):
     - `Unit-0--Recap--What-You-Built-in-Level-1-d9e8`
@@ -69,7 +69,7 @@ All corresponding JSONs exist under `.guides/assessments/` with matching `taskId
 
 #### 3.1 Lab 2.1 – Exploring the Actions Folder (Unit 2)
 
-- **Guide page:** `.guides/content/Chapter-1-2---Custom-Actions-30d6/Unit-2--Understanding-the-Action-Class-6b66/Lab-2-1--Exploring-the-Actions-Folder-45a5.md`.
+- **Guide page:** `.guides/content/Level-2---Custom-Actions-30d6/Unit-2--Understanding-the-Action-Class-6b66/Lab-2-1--Exploring-the-Actions-Folder-45a5.md`.
 - **Placement:** Immediately after `2-3-Test-Your-Knowledge-5051` in the Unit 2 `index.json`.
 - **Current content design:**
   - Lab now consists of:

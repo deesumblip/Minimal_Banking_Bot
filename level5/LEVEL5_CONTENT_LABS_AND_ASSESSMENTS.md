@@ -62,8 +62,8 @@ This document maps **Level 5** (Level 5 – Tool Calling) content files, labs, a
 
 ## 4. Codio guide (Level 5)
 
-- **Codio guide folder ID (Level 5):** `Chapter-1-5---Tool-Calling-f9e0`
-- **Content path:** `.guides/content/Chapter-1-5---Tool-Calling-f9e0/`
+- **Codio guide folder ID (Level 5):** `Level-5---Tool-Calling-f9e0`
+- **Content path:** `.guides/content/Level-5---Tool-Calling-f9e0/`
 - **Lab 2.0** uses `{Check It!|assessment}(code-output-compare-501020000)`; **`prompt_template`** wiring is also checked in **501050001** and **501050002** (grader Check 3). **Lab 2.1** pages include `{Check It!|assessment}(fill-in-the-blanks-501020010)` and `{Check It!|assessment}(code-output-compare-501020001)`; other labs use `code-output-compare-50XXXXXX` as above.
 - **Graders:** All in `.guides/secure/level5_graders/`. No grader scripts live under `.guides/assessments/`.
 
@@ -73,7 +73,7 @@ This document maps **Level 5** (Level 5 – Tool Calling) content files, labs, a
 
 | Item | Location / Value |
 |------|------------------|
-| Guide folder id | `Chapter-1-5---Tool-Calling-f9e0` |
+| Guide folder id | `Level-5---Tool-Calling-f9e0` |
 | Units | 0–6 (7 units) |
 | Graded labs | 2.0 (10), 2.1 (5 + 10), 3.1–5.2 (10 each); **65 total** |
 | Task IDs | **501020000** (Lab 2.0); **501020010** + 501020001 (Lab 2.1); 501030001, 501040001, 501050001, 501050002 |

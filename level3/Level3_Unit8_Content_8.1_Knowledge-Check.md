@@ -61,7 +61,7 @@ d) The flow stops and never runs the action that comes after the collect step
 
 ## Codio guide — Check It! tags
 
-The Level 3 page `.guides/content/Chapter-1-3---Slot-Collection-a4b5/Unit-8--Assessment-and-Next-Steps-6d7e/8-1-Knowledge-Check-a6b7.md` uses these assessments (in order):
+The Level 3 page `.guides/content/Level-3---Slot-Collection-a4b5/Unit-8--Assessment-and-Next-Steps-6d7e/8-1-Knowledge-Check-a6b7.md` uses these assessments (in order):
 
 ```
 {Check It!|assessment}(multiple-choice-2551391875)

@@ -2,7 +2,7 @@
 import json
 from pathlib import Path
 
-base = Path(__file__).resolve().parent / "content" / "Chapter-1-5---Tool-Calling-f9e0"
+base = Path(__file__).resolve().parent / "content" / "Level-5---Tool-Calling-f9e0"
 issues = []
 for unit_dir in sorted(base.iterdir()):
     if not unit_dir.is_dir() or not unit_dir.name.startswith("Unit-"):

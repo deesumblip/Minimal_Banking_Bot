@@ -90,7 +90,7 @@
 ### Phase 4: Codio .guides (optional / last)
 
 9. **Add a Level 3 chapter under `.guides/content`**  
-   - e.g. `Chapter-1-3---Slot-Collection-xxxx` (or similar naming used for L1/L2).  
+   - e.g. `Level-3---Slot-Collection-xxxx` (or similar naming used for L1/L2).  
    - Add `Unit-*` and lab pages; **paste** from `level3/Level3_Unit*_Content*.md` and `level3/Level3_Lab*_Content.md` so the single source of truth remains in `level3/`.  
    - Add `index.json` and any page `.json` files so the guide tree matches the outline.
 
@@ -111,7 +111,7 @@
 - [x] **Level3_Lab*_Content.md** – Labs 3.1, 4.1, 5.1, 6.1, 6.2, 7.1; Part 1 (Codio) / Part 2 (local); no Ports.  
 - [x] **Level3_Lab*_Assessment_Setup.md** – All six labs; graded labs have LLM Rubric (3.1, 4.1) or Python grader (6.1); ungraded (5.1, 6.2, 7.1) documented.  
 - [ ] **.guides/secure/level3_graders/** – Lab 6.1: `lab_6.1_grader.py` done. Lab 3.1/5.1: solution references done; **optional** `lab_3.1_grader.sh`, `lab_5.1_grader.sh` if offering Option B (Bash).  
-- [x] **.guides/content** – Level 3 chapter (Chapter-1-3---Slot-Collection-a4b5) added; Units 0–8 with content and labs pasted from level3.
+- [x] **.guides/content** – Level 3 chapter (Level-3---Slot-Collection-a4b5) added; Units 0–8 with content and labs pasted from level3.
 - [x] **level3/CODIO_IMPLEMENTATION_GUIDE.md** – Shortened to implementer-only; **.guides/CODIO_IMPLEMENTATION_OVERVIEW.md** – Level 3 section added (shared L1/L2/L3 entry point).
 
 ---
@@ -121,7 +121,7 @@
 | Phase | Item | Status |
 |-------|------|--------|
 | **Phase 3** | Bash graders for Lab 3.1 and 5.1 (Option B) | Optional: create `lab_3.1_grader.sh`, `lab_5.1_grader.sh` if implementers want Standard Code Test instead of LLM Rubric. |
-| **Phase 4** | Level 3 chapter in `.guides/content` | **Done.** Chapter-1-3---Slot-Collection-a4b5 with Units 0–8, all content/lab pages pasted from level3. |
+| **Phase 4** | Level 3 chapter in `.guides/content` | **Done.** Level-3---Slot-Collection-a4b5 with Units 0–8, all content/lab pages pasted from level3. |
 | **Phase 4** | Codio implementation guide | **Done.** `CODIO_IMPLEMENTATION_GUIDE.md` shortened to implementer-only; Level 3 added to `.guides/CODIO_IMPLEMENTATION_OVERVIEW.md`. |
 
 ---

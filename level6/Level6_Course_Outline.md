@@ -66,4 +66,4 @@
 
 - **Content and labs**: level6/LEVEL6_CONTENT_LABS_AND_ASSESSMENTS.md (unit list, lab list, task IDs, grader paths)  
 - **Source content**: level6/Level6_Unit*_Content_*.md, level6/Level6_Lab*_Content.md  
-- **Codio chapter**: Chapter-1-6---Sub-Agents-c7d8
+- **Codio chapter**: Level-6---Sub-Agents-c7d8

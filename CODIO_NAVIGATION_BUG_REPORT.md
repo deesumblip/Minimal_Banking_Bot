@@ -42,7 +42,7 @@ When the user is on a given page, the app may resolve “current page” using a
 
 ## Content Structure (for reference)
 
-- **Root:** `.guides/content/index.json` has an `order` array listing chapters (e.g. `Chapter-1-1---...`, `Chapter-1-2---...`, …).
+- **Root:** `.guides/content/index.json` has an `order` array listing guide folders (e.g. `Level-1---Just-Responses-d3b4`, `Level-2---Custom-Actions-30d6`, …).
 - **Per chapter:** Each chapter has an `index.json` with an `order` array of unit folder names (e.g. `Unit-0--...`, …, `Unit-8--...`).
 - **Per unit:** Each unit has an `index.json` with an `order` array of **page slugs** (filenames without extension), e.g. `8-1-Knowledge-Check-9fc3`, `8-2-...`, …, `8-5-Course-Completion-Checklist-5f74`.
 

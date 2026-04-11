@@ -52,7 +52,7 @@
 Labs 2.1, 3.1, 4.1, 5.1, 5.2 - each 10 points, total 50. Graders in .guides/secure/level5_graders/.
 
 ## Codio guide folder ID
-Use unique ID for Level 5: e.g. Chapter-1-5---Tool-Calling-f9e0 (suffix f9e0; do not reuse d3b4, 30d6, a4b5, e5f6).
+Use unique ID for Level 5: e.g. Level-5---Tool-Calling-f9e0 (suffix f9e0; do not reuse d3b4, 30d6, a4b5, e5f6).
 
 ---
 
@@ -76,7 +76,7 @@ All source files live in **level5/**. When creating the Level 5 chapter in Codio
 
 ### Codio guide folder ID (do not overlap)
 
-Existing: Chapter-1-1 (d3b4), Chapter-1-2 (30d6), Chapter-1-3 (a4b5), Chapter-1-4 (e5f6). Use **Chapter-1-5---Tool-Calling-f9e0** (suffix f9e0). Ensure unit and page IDs under this chapter are also unique.
+Existing guide folders: **Level-1---Just-Responses-d3b4**, **Level-2---Custom-Actions-30d6**, **Level-3---Slot-Collection-a4b5**, **Level-4---Multiple-Slots-e5f6**. Use **Level-5---Tool-Calling-f9e0** (suffix f9e0). Ensure unit and page IDs under this guide are also unique.
 
 ### Unit Content (one file per section)
 

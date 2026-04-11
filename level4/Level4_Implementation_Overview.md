@@ -101,4 +101,4 @@ level4/
 Use the same workflow: copy unit content into guide pages, copy lab content into lab pages, configure assessments from instructor setup notes and grader scripts.
 
 **Level 4 (Codio guide)**  
-The Level 4 guide in `.guides/content/Chapter-1-4---Multiple-Slots-e5f6/` includes code-output-compare (or LLM Rubric) on Labs 2.1, 3.1, 4.1, 5.1 and a completion check on Lab 5.2.
+The Level 4 guide in `.guides/content/Level-4---Multiple-Slots-e5f6/` includes code-output-compare (or LLM Rubric) on Labs 2.1, 3.1, 4.1, 5.1 and a completion check on Lab 5.2.

@@ -43,7 +43,7 @@ This document lists what to do for **Level 6** (Sub-Agents) and **Level 6** so t
 
 ## 3. Checklist for Implementers
 
-- [ ] **.guides/content/Chapter-1-6---Sub-Agents-XXXX**  
+- [ ] **.guides/content/Level-6---Sub-Agents-XXXX**  
   Create chapter folder with unique ID (e.g. suffix like Level 5’s f9e0). Add one page per unit/section; lab pages with `{Check It!|assessment}(code-output-compare-50106XXXX)`.
 
 - [ ] **level6/ unit content**  

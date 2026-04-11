@@ -17,8 +17,8 @@ REPO_ROOT = Path(__file__).resolve().parent
 LEVEL2_DIR = REPO_ROOT / "level2"
 GUIDES_CONTENT = REPO_ROOT / ".guides" / "content"
 
-# Level 2 lives inside this existing Codio chapter (do not create a new chapter)
-LEVEL2_CHAPTER_FOLDER = "Chapter-1-2---Custom-Actions-30d6"
+# Level 2 content syncs into this existing Codio guide folder (do not create a new top-level folder)
+LEVEL2_GUIDE_FOLDER = "Level-2---Custom-Actions-30d6"
 # Stable slug ids for lab content pages (so we overwrite same Codio page and preserve assessment JSON)
 LAB_CONTENT_SLUG_IDS = {"3.1": "04c0", "4.1": "3406", "5.1": "e512", "6.1": "7710", "6.2": "2289"}
 UNIT_TITLES = {
@@ -218,7 +218,7 @@ def sync():
     GUIDES_CONTENT.mkdir(parents=True, exist_ok=True)
     pages_by_unit = collect_level2_pages()
 
-    chapter_name = LEVEL2_CHAPTER_FOLDER
+    chapter_name = LEVEL2_GUIDE_FOLDER
     chapter_dir = GUIDES_CONTENT / chapter_name
     chapter_dir.mkdir(parents=True, exist_ok=True)
 

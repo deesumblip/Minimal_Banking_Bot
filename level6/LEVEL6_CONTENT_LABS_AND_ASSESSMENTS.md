@@ -54,8 +54,8 @@ This document maps **Level 6** (Level 6 – Sub-Agents) content files, labs, and
 
 ## 4. Codio guide (Level 6)
 
-- **Codio guide folder ID (Level 6):** `Chapter-1-6---Sub-Agents-c7d8`
-- **Content path:** `.guides/content/Chapter-1-6---Sub-Agents-c7d8/`
+- **Codio guide folder ID (Level 6):** `Level-6---Sub-Agents-c7d8`
+- **Content path:** `.guides/content/Level-6---Sub-Agents-c7d8/`
 - **Graders:** All in `.guides/secure/level6_graders/`.
 
 ---
@@ -64,7 +64,7 @@ This document maps **Level 6** (Level 6 – Sub-Agents) content files, labs, and
 
 | Item | Location / Value |
 |------|------------------|
-| Guide folder id | `Chapter-1-6---Sub-Agents-c7d8` |
+| Guide folder id | `Level-6---Sub-Agents-c7d8` |
 | Units | 0–6 |
 | Graded labs | 2.1, 3.1, 4.1, 5.1, 5.2 (10 points each, 50 total) |
 | Task IDs | 501060001 – 501060005 |

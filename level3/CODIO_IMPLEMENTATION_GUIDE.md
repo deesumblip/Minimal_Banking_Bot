@@ -9,7 +9,7 @@
 ## Where Student Content Lives
 
 - **Source of truth (markdown)**: `level3/Level3_Unit*_Content_*.md` and `level3/Level3_Lab*_Content.md`
-- **Codio guide (already populated)**: `.guides/content/Chapter-1-3---Slot-Collection-a4b5/` — Units 0–8 and all section/lab pages are copied from the `level3/` files. Sync this chapter for the Level 3 TOC; do not maintain duplicate tutorial text in this guide.
+- **Codio guide (already populated)**: `.guides/content/Level-3---Slot-Collection-a4b5/` — Units 0–8 and all section/lab pages are copied from the `level3/` files. Sync this chapter for the Level 3 TOC; do not maintain duplicate tutorial text in this guide.
 - **Guide page JSON (Level 3)**: All student pages use `layout: "2-panels-tree-guides-left"` and `path: ["level3"]` so the file tree stays open and focused on `level3`; clicking a file opens it in the secondary panel (right). **`files[0].path`**: use `""` for read-only / concept pages, **Lab 3.1** (domain YAML only), **Lab 5.1** (flow YAML only), and similar file-edit-only steps; use `"#terminal"` where students run the terminal (`venv`, `cd level3`, `rasa train`, `rasa inspect`) for **Labs 4.1, 6.1, 6.2, 7.1** plus content pages **6.1 Training with Slots**, **6.2 Testing Slot Collection**, and **7.1 Complete Agent Walkthrough** (same pattern as Level 2’s `level2` pages).
 
 **Do not** copy the old long tutorial from this file into Codio. Use the unit/lab files above or the Level 3 guide content.
@@ -56,6 +56,6 @@ For full details, see **Level3_Implementation_Overview.md**.
 
 ## Summary
 
-1. **Student content**: `level3/Level3_Unit*_Content_*.md`, `level3/Level3_Lab*_Content.md`, and `.guides/content/Chapter-1-3---Slot-Collection-a4b5/`.
+1. **Student content**: `level3/Level3_Unit*_Content_*.md`, `level3/Level3_Lab*_Content.md`, and `.guides/content/Level-3---Slot-Collection-a4b5/`.
 2. **Implementer setup**: **Level3_Implementation_Overview.md** + **Level3_Course_Outline.md** + each **Level3_Lab*_Assessment_Setup.md**.
 3. **This file**: Implementer-only pointer and quick reference; no student tutorial content.

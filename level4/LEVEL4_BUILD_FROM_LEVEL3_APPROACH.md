@@ -43,7 +43,7 @@ See **Unit 0.2** (section 2) in the Level 4 guide. **`level4/config.yml`** uses 
 
 ## 4. Codio and `.guides`
 
-Sync **`level4/`** unit and lab content into **`.guides/content/Chapter-1-4-...`** so Codio matches the source-of-truth copy.
+Sync **`level4/`** unit and lab content into **`.guides/content/Level-4---Multiple-Slots-e5f6/`** so Codio matches the source-of-truth copy.
 
 ---
 

@@ -1,7 +1,7 @@
 import pathlib
 import re
 
-base = pathlib.Path(__file__).resolve().parent / "content" / "Chapter-1-6---Sub-Agents-c7d8"
+base = pathlib.Path(__file__).resolve().parent / "content" / "Level-6---Sub-Agents-c7d8"
 for p in base.rglob("*.json"):
     if p.name == "index.json":
         continue

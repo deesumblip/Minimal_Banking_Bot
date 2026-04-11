@@ -197,7 +197,7 @@ Use this as a strategic checklist before starting Level 6.
 
 - **Level 5 content:** `level5/Level5_Unit*_Content_*.md`, `level5/Level5_Lab*_Content.md`.
 - **Level 5 outline:** `level5/Level5_Course_Outline.md`.
-- **Codio chapter (Level 5):** `.guides/content/Chapter-1-5---Tool-Calling-f9e0/`.
+- **Codio chapter (Level 5):** `.guides/content/Level-5---Tool-Calling-f9e0/`.
 - **This prerequisite list:** `level5/PREREQUISITES_BEFORE_SUB_AGENTS.md` — can be linked from Level 5 "What's Next" or a future Level 6 intro.
 
 If you are building Level 6 (sub-agents) content, you can reference this document as the **strategic list of content and examples** students must cover before diving into sub-agents.

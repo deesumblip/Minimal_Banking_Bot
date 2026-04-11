@@ -19,7 +19,7 @@ This document provides implementation guidance for **Level 5: Tool Calling** on 
 
 ### Codio guide folder ID (Do Not Overlap)
 
-Existing chapter IDs in `.guides/content/`: Chapter-1-1 (d3b4), Chapter-1-2 (30d6), Chapter-1-3 (a4b5), Chapter-1-4 (e5f6). **Use a unique ID for Level 5**, e.g. **Chapter-1-5---Tool-Calling-f9e0** (suffix `f9e0`). When creating or syncing Level 5 content, ensure unit and page IDs under this chapter do not duplicate IDs used in other chapters.
+Existing guide folder IDs in `.guides/content/` include **Level-1---Just-Responses-d3b4**, **Level-2---Custom-Actions-30d6**, **Level-3---Slot-Collection-a4b5**, **Level-4---Multiple-Slots-e5f6**. **Use a unique ID for Level 5**, e.g. **Level-5---Tool-Calling-f9e0** (suffix `f9e0`). When creating or syncing Level 5 content, ensure unit and page IDs under this guide do not duplicate IDs used in other levels.
 
 ### Codio vs Local
 
@@ -105,4 +105,4 @@ level5/
 | PASS / Successfully passed! | Same |
 | LevelN_Unit*_Content*.md | Level5_Unit*_Content*.md |
 | LevelN_Lab*_Content.md + _Assessment_Setup.md | Same |
-| Codio chapter ID unique | Use Chapter-1-5---Tool-Calling-f9e0 (no overlap with 1-1..1-4) |
+| Codio chapter ID unique | Use Level-5---Tool-Calling-f9e0 (no overlap with 1-1..1-4) |

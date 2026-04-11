@@ -6,7 +6,7 @@
 
 ## Level 1: Just Responses (Level 1)
 
-- **Content**: `.guides/content/Chapter-1-1---Just-Responses-d3b4/`
+- **Content**: `.guides/content/Level-1---Just-Responses-d3b4/`
 - **Implementer docs**: `level1/Level1_Implementation_Overview.md`
 - **Course outline**: See Level 1 unit/lab structure in repo; assessments per `Level1_Lab*_Assessment_Setup.md`
 
@@ -14,7 +14,7 @@
 
 ## Level 2: Custom Actions (Level 2)
 
-- **Content**: `.guides/content/Chapter-1-2---Custom-Actions-30d6/`
+- **Content**: `.guides/content/Level-2---Custom-Actions-30d6/`
 - **Implementer docs**: `level2/Level2_Implementation_Overview.md`
 - **Course outline**: See Level 2 unit/lab structure; assessments per `Level2_Lab*_Assessment_Setup.md`
 
@@ -22,7 +22,7 @@
 
 ## Level 3: Slot Collection (Level 3)
 
-- **Content**: `.guides/content/Chapter-1-3---Slot-Collection-a4b5/` (populated from `level3/Level3_Unit*_Content_*.md` and `level3/Level3_Lab*_Content.md`)
+- **Content**: `.guides/content/Level-3---Slot-Collection-a4b5/` (populated from `level3/Level3_Unit*_Content_*.md` and `level3/Level3_Lab*_Content.md`)
 - **Implementer docs**: `level3/Level3_Implementation_Overview.md` (primary); `level3/CODIO_IMPLEMENTATION_GUIDE.md` (short implementer-only pointer)
 - **Course outline**: `level3/Level3_Course_Outline.md`
 - **Assessments**: Per `level3/Level3_Lab*_Assessment_Setup.md`; graders in `.guides/secure/level3_graders/` (LLM Rubric solution refs for 3.1/4.1, Python grader for 6.1). Venv in project root; Working Directory `/home/codio/workspace`; use **Rasa Inspect** tab only (no Ports).
@@ -31,7 +31,7 @@
 
 ## Level 4: Multiple Slots (Level 4)
 
-- **Content**: `.guides/content/Chapter-1-4---Multiple-Slots-e5f6/` (populated from `level4/Level4_Unit*_Content_*.md` and `level4/Level4_Lab*_Content.md`)
+- **Content**: `.guides/content/Level-4---Multiple-Slots-e5f6/` (populated from `level4/Level4_Unit*_Content_*.md` and `level4/Level4_Lab*_Content.md`)
 - **Implementer docs**: `level4/Level4_Implementation_Overview.md` (primary); `level4/CODIO_IMPLEMENTATION_GUIDE.md` (implementer pointer)
 - **Course outline**: `level4/Level4_Course_Outline.md`
 - **Assessments**: Per `level4/Level4_Lab*_Assessment_Setup.md`; graders in `.guides/secure/level4_graders/` (Python graders for Labs 2.1, 3.1, 4.1, 5.1; Lab 5.2 completion check). Venv in project root; Working Directory `/home/codio/workspace`; use **Rasa Inspect** tab only (no Ports).

@@ -188,7 +188,7 @@
 - Codio Working Directory: `/home/codio/workspace`.
 
 **Level 3 (Codio guide)**  
-Code-output-compare Check It! tags are on Labs 3.1, 4.1, 5.1, 6.1 in `.guides/content/Chapter-1-3---Slot-Collection-a4b5/`. Fill-in-the-blanks Check It! tags are on content pages **1.1, 2.3, 5.1** and **Lab 4.1** (`fill-in-the-blanks-2346557111` — full `action_check_balance_simple` script; paste into file then run code test). Multiple-choice Check It! tags are on **3.1, 5.2** (`multiple-choice-5130520013` — slot already filled), **6.2, Lab 6.2, 8.1** (includes `multiple-choice-5130520013` plus domain/action/slot recap questions).
+Code-output-compare Check It! tags are on Labs 3.1, 4.1, 5.1, 6.1 in `.guides/content/Level-3---Slot-Collection-a4b5/`. Fill-in-the-blanks Check It! tags are on content pages **1.1, 2.3, 5.1** and **Lab 4.1** (`fill-in-the-blanks-2346557111` — full `action_check_balance_simple` script; paste into file then run code test). Multiple-choice Check It! tags are on **3.1, 5.2** (`multiple-choice-5130520013` — slot already filled), **6.2, Lab 6.2, 8.1** (includes `multiple-choice-5130520013` plus domain/action/slot recap questions).
 
 ---
 

@@ -8,7 +8,7 @@ This report compares **content** (`.guides/content/` guide and unit structure) w
 
 ### Root `.guides/content/index.json`
 
-- **order**: `Chapter-1-1---Just-Responses-d3b4`, `Chapter-1-2---Custom-Actions-30d6`, `Chapter-1-3---Slot-Collection-a4b5`, `Chapter-1-4---Multiple-Slots-e5f6`, `Chapter-1-5---Tool-Calling-f9e0`, `Chapter-1-6---Sub-Agents-c7d8`. **Fixed:** Level 6 added to order.
+- **order**: `Level-1---Just-Responses-d3b4`, `Level-2---Custom-Actions-30d6`, `Level-3---Slot-Collection-a4b5`, `Level-4---Multiple-Slots-e5f6`, `Level-5---Tool-Calling-f9e0`, `Level-6---Sub-Agents-c7d8`. **Fixed:** Level 6 added to order.
 
 ### Level `index.json` vs unit folders
 
@@ -66,7 +66,7 @@ Assessments are wired by **content**: markdown pages use `{Check It!|assessment}
 
 **Legacy (not linked from any guide page):** **`code-output-compare-2266471390`** + **`lab_3.1_grader.sh`** supported the removed “3.1 Step-by-Step: Creating an Action” page (`action_bank_hours.py` checks). Kept on disk for reference; remove when pruning orphans.
 
-**Level 4:** Lab .md files under `Chapter-1-4---Multiple-Slots-e5f6/` include `{Check It!|assessment}(code-output-compare-40XXXXXX)` for Labs 2.1, 4.1, 5.1, 5.2; **Lab 0.1** uses `fill-in-the-blanks-401010010` then `code-output-compare-401010001`; **Lab 3.1** also includes `fill-in-the-blanks-401030010` before the code test. Both fill-in-the-blanks JSONs use the **Level 3 Lab 4.1** `tokens.text` pattern (literal `0` for each blank, sequential). Coherent.
+**Level 4:** Lab .md files under `Level-4---Multiple-Slots-e5f6/` include `{Check It!|assessment}(code-output-compare-40XXXXXX)` for Labs 2.1, 4.1, 5.1, 5.2; **Lab 0.1** uses `fill-in-the-blanks-401010010` then `code-output-compare-401010001`; **Lab 3.1** also includes `fill-in-the-blanks-401030010` before the code test. Both fill-in-the-blanks JSONs use the **Level 3 Lab 4.1** `tokens.text` pattern (literal `0` for each blank, sequential). Coherent.
 
 **Level 5:** **Lab 2.0** (command-generator prompt) uses **`code-output-compare-501020000`** (`lab_2.0_grader.py`); **`prompt_template`** and the prompt file are **also checked by Lab 5.1 and Lab 5.2** (`501050001`, `501050002`, grader Check 3). **Lab 2.1** uses `fill-in-the-blanks-501020010` then `code-output-compare-501020001`; **Lab 4.1** uses `fill-in-the-blanks-501040010` (domain slot conditions for `transfer_money_tools`) then `code-output-compare-501040001`. Coherent.
 
@@ -100,8 +100,8 @@ Each code-output-compare assessment uses a `source.command` that invokes a grade
 
 ## 7. Actions taken
 
-1. **Root index** – Added `"Chapter-1-6---Sub-Agents-c7d8"` to `.guides/content/index.json` order.
-2. **Level 6** – Created `Chapter-1-6---Sub-Agents-c7d8/index.json` with title and unit order. Created `index.json` in each unit (Unit-0 … Unit-6) and a matching `.json` for every guide page in units. **Unit 5:** Labs 5.1 and 5.2 are merged into pages **5.1** and **5.2** (two guide pages, not four).
+1. **Root index** – Added `"Level-6---Sub-Agents-c7d8"` to `.guides/content/index.json` order.
+2. **Level 6** – Created `Level-6---Sub-Agents-c7d8/index.json` with title and unit order. Created `index.json` in each unit (Unit-0 … Unit-6) and a matching `.json` for every guide page in units. **Unit 5:** Labs 5.1 and 5.2 are merged into pages **5.1** and **5.2** (two guide pages, not four).
 3. **Level 4** – Replaced placeholder id with `e5f6c7d8-9a1b-4c2d-b3e4-5f6a7b8c9d0e`.
 4. **Level 1** – Removed eight guide pages from TOC (see §8); **Unit 0.4** later restored. Updated affected unit `index.json` files and deleted matching page `.md`/`.json` pairs (except restored 0.4).
 
@@ -113,7 +113,7 @@ Each code-output-compare assessment uses a `source.command` that invokes a grade
 
 ## 8. Level 1 guide trim (Codio)
 
-The following **Level 1** pages were removed from unit `index.json` `order` arrays and their `.md`/`.json` pairs were deleted under `Chapter-1-1---Just-Responses-d3b4/`: Unit **0.3**; Unit **1.3**, **1.4**; **Lab 2.1**; Unit **6.4** (Understanding Agent Behavior); Unit **8.2**, **8.4**, **8.5**. **Unit 0.4** (Getting Help, stem `0-4-Getting-Help-8218`) was **restored** to the TOC and files.
+The following **Level 1** pages were removed from unit `index.json` `order` arrays and their `.md`/`.json` pairs were deleted under `Level-1---Just-Responses-d3b4/`: Unit **0.3**; Unit **1.3**, **1.4**; **Lab 2.1**; Unit **6.4** (Understanding Agent Behavior); Unit **8.2**, **8.4**, **8.5**. **Unit 0.4** (Getting Help, stem `0-4-Getting-Help-8218`) was **restored** to the TOC and files.
 
 **Unit 6 (Training and Testing), instructor-only page removed from student TOC:** Stem **`6-4-Auto-Start-Rasa-Inspector-Codio-c0d1`** (formerly titled “6.4 Auto-start Rasa Inspector (Codio setup)” in the guide). The same material for implementers is kept at the repository root as **`Rasa_Inspector_Codio_Setup_for_Instructors.md`** and must not be linked from student-facing guide content.
 

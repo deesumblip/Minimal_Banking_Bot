@@ -116,12 +116,12 @@ After `python sync_level2_to_codio.py`, old page files whose slugs are no longer
 
 ## Level 1 content
 
-Level 1 (Just Responses) uses **Chapter-1-1---Just-Responses-d3b4** as the single source of truth. It lives at `.guides/content/Chapter-1-1---Just-Responses-d3b4/`. The old chapter **Level-1-1-d3b4** has been moved to **level1/old_duplicates/Level-1-1-d3b4**.
+Level 1 (Just Responses) uses **Level-1---Just-Responses-d3b4** as the single source of truth. It lives at `.guides/content/Level-1---Just-Responses-d3b4/`. The old chapter **Level-1-1-d3b4** has been moved to **level1/old_duplicates/Level-1-1-d3b4**.
 
 - **On Codio:** The full chapter (Units 0–6) already exists. Keep using it there.
-- **In the repo:** To make the repo the ground truth, copy the chapter from Codio into `.guides/content/Chapter-1-1---Just-Responses-d3b4/` and push. See **level1/MIGRATION_LEVEL1_CHAPTER.md** for step-by-step instructions.
+- **In the repo:** To make the repo the ground truth, copy the chapter from Codio into `.guides/content/Level-1---Just-Responses-d3b4/` and push. See **level1/MIGRATION_LEVEL1_CHAPTER.md** for step-by-step instructions.
 
-After that, edit Level 1 by changing the markdown and JSON under `.guides/content/Chapter-1-1---Just-Responses-d3b4/`, then commit, push, and re-import in Codio.
+After that, edit Level 1 by changing the markdown and JSON under `.guides/content/Level-1---Just-Responses-d3b4/`, then commit, push, and re-import in Codio.
 
 ---
 
