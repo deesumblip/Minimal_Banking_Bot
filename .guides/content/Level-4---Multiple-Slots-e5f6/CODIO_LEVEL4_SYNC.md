@@ -6,7 +6,7 @@ This folder mirrors the Level 4 content from `level4/` (unit content and lab con
 
 ## Structure
 
-- **Chapter:** Chapter-1-4---Multiple-Slots-e5f6
+- **Chapter:** Level-4---Multiple-Slots-e5f6
 - **Units:** Unit 0 (Recap - What you built in Level 3) through Unit 6 (Summary and Next Steps) — 7 units total. Folder names are **Unit-0--** through **Unit-6--** so the table of contents shows in order. **Unit 0** has **0.1** (Your Level 3 agent), **0.2** (What Level 4 adds — includes full Level 3 → 1.4 checklist), and **Lab 0.1** (pipeline: fill-in-the-blanks + paste `config.yml` / `endpoints.yml` + code test). Unit 1 has four pages (1.1–1.4, including Test Your Knowledge); Unit 6 has seven pages (6.1–6.7, including Knowledge Check, Limitations, Level 5 Preview, Course Completion Checklist).
 - **Labs:** Lab 0.1 (pipeline), Lab 2.1 (domain), Lab 3.1 (action), Lab 4.1 (flow), Lab 5.1 (training), Lab 5.2 (completion check + optional Inspector testing — no separate Unit 5 “5.1” or “5.2” concept pages)
 
@@ -22,7 +22,7 @@ Each unit has an `index.json` (section title and order of pages) and each page h
 
 ## Root index
 
-The main guide index at `.guides/content/index.json` includes `Chapter-1-4---Multiple-Slots-e5f6` in its `order` array so this chapter appears after Level 3 when the project is loaded or re-imported from Git in Codio.
+The main guide index at `.guides/content/index.json` includes `Level-4---Multiple-Slots-e5f6` in its `order` array so this chapter appears after Level 3 when the project is loaded or re-imported from Git in Codio.
 
 ## Assessments
 

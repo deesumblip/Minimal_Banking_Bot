@@ -1,15 +1,15 @@
-# Compare Level-1-1-d3b4 vs Chapter-1-1---Just-Responses-d3b4 (Units 0-3 overlap).
+# Compare Level-1-1-d3b4 vs Level-1---Just-Responses-d3b4 (Units 0-3 overlap).
 # Run from repo root: .\.guides\content\compare_level1_chapters.ps1
 
 $Level  = ".guides/content/Level-1-1-d3b4"
-$Chapter = ".guides/content/Chapter-1-1---Just-Responses-d3b4"
+$Guide = ".guides/content/Level-1---Just-Responses-d3b4"
 
 if (-not (Test-Path $Level)) {
     Write-Host "Level-1-1-d3b4 not found at $Level"
     exit 1
 }
-if (-not (Test-Path $Chapter)) {
-    Write-Host "Chapter-1-1---Just-Responses-d3b4 not found at $Chapter"
+if (-not (Test-Path $Guide)) {
+    Write-Host "Level-1---Just-Responses-d3b4 not found at $Guide"
     Write-Host "Copy it from Codio into the repo to compare."
     exit 1
 }
@@ -21,12 +21,12 @@ Get-ChildItem -Path $Level -Recurse -Filter "*.md" | ForEach-Object {
 }
 
 Write-Host ""
-Write-Host "=== Chapter-1-1---Just-Responses-d3b4 - Units 0-3 ==="
-Get-ChildItem -Path $Chapter -Recurse -Filter "*.md" | Where-Object {
-    $rel = $_.FullName.Replace((Resolve-Path $Chapter).Path + [IO.Path]::DirectorySeparatorChar, "")
+Write-Host "=== Level-1---Just-Responses-d3b4 - Units 0-3 ==="
+Get-ChildItem -Path $Guide -Recurse -Filter "*.md" | Where-Object {
+    $rel = $_.FullName.Replace((Resolve-Path $Guide).Path + [IO.Path]::DirectorySeparatorChar, "")
     $rel -match "^Unit-[0-3]"
 } | ForEach-Object {
-    $rel = $_.FullName.Replace((Resolve-Path $Chapter).Path + [IO.Path]::DirectorySeparatorChar, "")
+    $rel = $_.FullName.Replace((Resolve-Path $Guide).Path + [IO.Path]::DirectorySeparatorChar, "")
     Write-Host "  $rel"
 }
 
@@ -45,9 +45,9 @@ Write-Host "  Files with same name in both: $($common.Count)"
 $common | ForEach-Object { Write-Host "    $_" }
 Write-Host "  Only in Level-1-1-d3b4: $($onlyInLevel.Count)"
 $onlyInLevel | ForEach-Object { Write-Host "    $_" }
-Write-Host "  Only in Chapter-1-1 (Units 0-3): $($onlyInChapter.Count)"
+Write-Host "  Only in Level-1---Just-Responses-d3b4 (Units 0-3): $($onlyInChapter.Count)"
 $onlyInChapter | ForEach-Object { Write-Host "    $_" }
 
 Write-Host ""
 Write-Host "To diff a specific file, run:"
-Write-Host '  diff (Get-Content ".guides/content/Level-1-1-d3b4/Unit-0--.../file.md") (Get-Content ".guides/content/Chapter-1-1---Just-Responses-d3b4/Unit-0-.../file.md")'
+Write-Host '  diff (Get-Content ".guides/content/Level-1-1-d3b4/Unit-0--.../file.md") (Get-Content ".guides/content/Level-1---Just-Responses-d3b4/Unit-0-.../file.md")'

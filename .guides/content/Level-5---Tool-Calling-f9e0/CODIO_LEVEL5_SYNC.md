@@ -21,7 +21,7 @@ This folder mirrors Level 5 teaching content (aligned with **`level5/`**) for Co
 
 ## Structure
 
-- **Chapter:** `Chapter-1-5---Tool-Calling-f9e0`
+- **Chapter:** `Level-5---Tool-Calling-f9e0`
 - **Units:** **Unit-0--** through **Unit-6--** (seven units). Unit 0: recap. Unit 1: introduction to tools (pages 1.1, 1.2, 1.3 quiz). Unit 6: summary track (6.1 walkthrough through 6.7 checklist).
 - **Labs:** 2.0 (command prompt), 2.1 (tools folder), 3.1 (endpoints), 4.1 (flow + action), 5.1 (train), 5.2 (completion check).
 - **Unit 5 sequence:** theory 5.1 → Lab 5.1 → theory 5.2 → Lab 5.2.
@@ -30,7 +30,7 @@ Each unit has an `index.json` and each page has a `.md` and `.json`. **IDs use t
 
 ## Root index
 
-The main guide index at `.guides/content/index.json` includes `Chapter-1-5---Tool-Calling-f9e0` in its `order` array so this chapter appears after Level 4.
+The main guide index at `.guides/content/index.json` includes `Level-5---Tool-Calling-f9e0` in its `order` array so this chapter appears after Level 4.
 
 ## Assessments
 
