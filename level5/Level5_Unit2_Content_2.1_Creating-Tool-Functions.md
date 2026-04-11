@@ -1,4 +1,4 @@
-**Starting point:** Work in **`level5/`** with the Chapter 1.4 completion baseline. The **next lab** in this unit has you add **`tools/banking_tools.py`**; this page explains the pattern first.
+**Starting point:** Work in **`level5/`** with the Level 4 completion baseline. The **next lab** in this unit has you add **`tools/banking_tools.py`**; this page explains the pattern first.
 
 Tool functions are plain Python functions that the LLM can call. They live in a **tools** module (e.g. `tools/banking_tools.py`).
 

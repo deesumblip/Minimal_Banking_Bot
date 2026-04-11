@@ -2,7 +2,7 @@
 	"type": "multiple-choice",
 	"taskId": "multiple-choice-1202300004",
 	"source": {
-		"name": "Chapter 1.2: 2.3 Test Your Knowledge - Why action_bank_hours Uses datetime",
+		"name": "Level 2: 2.3 Test Your Knowledge - Why action_bank_hours Uses datetime",
 		"showName": false,
 		"instructions": "**Why does action_bank_hours use Python's datetime instead of a simple utter response?**",
 		"multipleResponse": false,

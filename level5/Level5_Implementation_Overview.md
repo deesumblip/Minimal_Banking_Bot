@@ -6,7 +6,7 @@ This document provides implementation guidance for **Level 5: Tool Calling** on 
 
 **Key goals**:
 - Use the **same conventions** as Level 4 (venv in project root, Codio vs local, Rasa Inspect tab)
-- **Storyline**: Chapter 1.5 **starts** from **Chapter 1.4 completion** (final banking agent); **`level5/`** in the repo is that baseline by default; labs **add** tools, `endpoints.yml` registration, and tool-based transfer flow/action
+- **Storyline**: Level 5 **starts** from **Level 4 completion** (final banking agent); **`level5/`** in the repo is that baseline by default; labs **add** tools, `endpoints.yml` registration, and tool-based transfer flow/action
 - Preserve student tutorial content in separate `Level5_Unit*` and `Level5_Lab*` files
 - Support auto-grading for all labs (2.1, 3.1, 4.1, 5.1, 5.2) via grader scripts or LLM Rubric
 - Single source of truth: content lives in `level5/*.md`; Codio `.guides` content is copied from there
@@ -17,7 +17,7 @@ This document provides implementation guidance for **Level 5: Tool Calling** on 
 - **Every lab**: Students **activate from project root** (`source .venv/bin/activate`), then **`cd level5`**, then run commands.
 - **Grader scripts**: Run from **workspace root** (`/home/codio/workspace`); script activates venv and `cd`s to `level5` for file/command checks.
 
-### Codio Chapter ID (Do Not Overlap)
+### Codio guide folder ID (Do Not Overlap)
 
 Existing chapter IDs in `.guides/content/`: Chapter-1-1 (d3b4), Chapter-1-2 (30d6), Chapter-1-3 (a4b5), Chapter-1-4 (e5f6). **Use a unique ID for Level 5**, e.g. **Chapter-1-5---Tool-Calling-f9e0** (suffix `f9e0`). When creating or syncing Level 5 content, ensure unit and page IDs under this chapter do not duplicate IDs used in other chapters.
 

@@ -2,7 +2,7 @@
 	"type": "multiple-choice",
 	"taskId": "multiple-choice-1201800003",
 	"source": {
-		"name": "Chapter 1.2: 8.1 Knowledge Check - Action name() method",
+		"name": "Level 2: 8.1 Knowledge Check - Action name() method",
 		"showName": false,
 		"instructions": "**What must an action's name() method return, and why does it matter?**",
 		"multipleResponse": false,

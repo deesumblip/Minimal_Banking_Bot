@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Lab 5.1: Creating a Flow with Slot Collection - Grader Script
-Output format matches Chapter 1.2 Lab 6.2 / Level 3 Lab 3.1: Check 1–4 (1-based),
+Output format matches Level 2 Lab 6.2 / Level 3 Lab 3.1: Check 1–4 (1-based),
 leading space on PASSED lines, ========== summary band.
 
 Checks level3/data/basics/check_balance.yml.

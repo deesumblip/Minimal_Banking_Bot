@@ -6,7 +6,7 @@
 
 **Task.** In `domain/basics.yml` in the `level3` folder, add the `slots:` section with `account` (type text), the `utter_ask_account` response, and register `action_check_balance_simple` in the `actions:` list together with `action_bank_hours` and `action_holiday_hours`. Run the assessment when done.
 
-**Codio guide (Chapter 1.3).** The Lab 3.1 page in the Chapter 1.3 guide includes: `{Check It!|assessment}(code-output-compare-3187585640)`. Assessment JSON: `.guides/assessments/code-output-compare-3187585640.json`.
+**Codio guide (Level 3).** The Lab 3.1 page in the Level 3 guide includes: `{Check It!|assessment}(code-output-compare-3187585640)`. Assessment JSON: `.guides/assessments/code-output-compare-3187585640.json`.
 
 ---
 
@@ -93,7 +93,7 @@ Configure the assessment so the LLM can read:
 
 ### Option B: Standard Code Test (Python script)
 
-Use a Python grader for faster feedback than the LLM rubric. The script matches the **Chapter 1.2 Lab 6.2** template (`code-output-compare-1597644299` + `lab_4.1_grader.sh` style): **Check 1–8** (1-based), **leading space** on pass lines (` Check N: PASSED - …`), no checkmark emoji on pass lines; **❌** / **⚠️** on fail/partial; **`==========================================`** score band; optional **Summary:** line. Same **Codio sequence** pattern as Lab 6.2: eight entries **`Check 1: PASSED`** … **`Check 8: PASSED`** with **`showFeedback`: false**.
+Use a Python grader for faster feedback than the LLM rubric. The script matches the **Level 2 Lab 6.2** template (`code-output-compare-1597644299` + `lab_4.1_grader.sh` style): **Check 1–8** (1-based), **leading space** on pass lines (` Check N: PASSED - …`), no checkmark emoji on pass lines; **❌** / **⚠️** on fail/partial; **`==========================================`** score band; optional **Summary:** line. Same **Codio sequence** pattern as Lab 6.2: eight entries **`Check 1: PASSED`** … **`Check 8: PASSED`** with **`showFeedback`: false**.
 
 | Check | What it verifies | Points |
 |-------|------------------|--------|
@@ -128,10 +128,10 @@ Use a Python grader for faster feedback than the LLM rubric. The script matches 
    - **Timeout:** `60` seconds
 3. **Grading** tab:
    - **Points:** Set to **10** (or match your course scale). Enable **Allow partial points** if you want partial credit for partial checks.
-   - **Sequence / test cases:** The repo JSON uses **eight** substring matches, same layout as **Chapter 1.2 Lab 6.2** (`code-output-compare-1597644299`): `Check 1: PASSED` through `Check 8: PASSED`, each with **`showFeedback`: false**. Re-import from the repo if your Codio assessment still has a single `PASS` or old `Check 0–7` list.
+   - **Sequence / test cases:** The repo JSON uses **eight** substring matches, same layout as **Level 2 Lab 6.2** (`code-output-compare-1597644299`): `Check 1: PASSED` through `Check 8: PASSED`, each with **`showFeedback`: false**. Re-import from the repo if your Codio assessment still has a single `PASS` or old `Check 0–7` list.
    - **SHOW RATIONALE TO STUDENT:** Choose when students see the explanation. Recommended: **AFTER [1] ATTEMPTS** so they see the rationale after their first run (or **ALWAYS** if you want it visible immediately). Set the number in the box to 1 if using "AFTER … ATTEMPTS".
    - **RATIONALE** (the text box below): Paste or type a short explanation so students know what was checked. Example:
-     > Same pattern as **Lab 6.2 (Ch 1.2)**: **Check 1**–**Check 8** each appear as **PASSED** or **FAILED** in the script and as separate lines in Codio when the sequence is configured. **Check 2** must pass (valid YAML). Full credit: **` PASS: Lab 3.1 verification complete! Score: 10/10`**.
+     > Same pattern as **Lab 6.2 (Level 2)**: **Check 1**–**Check 8** each appear as **PASSED** or **FAILED** in the script and as separate lines in Codio when the sequence is configured. **Check 2** must pass (valid YAML). Full credit: **` PASS: Lab 3.1 verification complete! Score: 10/10`**.
    - **SHOW EXPECTED ANSWER:** Optional; set to **Always** to match Lab 6.2, or **When grades are released**.
 
 **Files.** The script lives in the repo at `.guides/secure/level3_graders/lab_3.1_grader.py`. Do not upload or paste it into the assessment; the Execution command runs this file from the workspace so `git pull` keeps the grader in sync. The script requires Python 3 and PyYAML. Use the venv’s Python in COMMAND (e.g. `/home/codio/workspace/.venv/bin/python3 …`) so the grader runs with PyYAML without depending on pre-exec or shell activation.

@@ -2,7 +2,7 @@
 	"type": "multiple-choice",
 	"taskId": "multiple-choice-1420316307",
 	"source": {
-		"name": "Chapter 1.1: 3.2 - Flow Structure Deep Dive",
+		"name": "Level 1: 3.2 - Flow Structure Deep Dive",
 		"showName": false,
 		"instructions": "**Which of the following statements about flow structure in YAML files are correct? Select all that apply.**",
 		"multipleResponse": true,

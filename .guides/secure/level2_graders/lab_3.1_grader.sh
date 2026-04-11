@@ -24,7 +24,7 @@ echo ""
 echo "Check 2: Verifying action_bank_hours.py (example action) exists..."
 if [ ! -f "actions/action_bank_hours.py" ]; then
     echo "❌ Check 2: FAILED - actions/action_bank_hours.py not found (0 points)"
-    echo "Hint: The example action file should be in the actions/ folder. If you started from Chapter 1.1 end state, add the Level 2 starter files or create action_bank_hours.py from the reference in this lab."
+    echo "Hint: The example action file should be in the actions/ folder. If you started from Level 1 end state, add the Level 2 starter files or create action_bank_hours.py from the reference in this lab."
 else
     echo " Check 2: PASSED - action_bank_hours.py exists (2 points)"
     score=$((score + 2))

@@ -2,7 +2,7 @@
 	"type": "multiple-choice",
 	"taskId": "multiple-choice-3629141196",
 	"source": {
-		"name": "Chapter 1.3 - 2.3 - Test Your Knowledge: collect step behavior",
+		"name": "Level 3 - 2.3 - Test Your Knowledge: collect step behavior",
 		"showName": false,
 		"instructions": "**When a flow has a `collect: account` step and the `account` slot is empty, what does the agent do?**",
 		"multipleResponse": false,

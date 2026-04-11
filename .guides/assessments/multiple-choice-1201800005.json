@@ -2,7 +2,7 @@
 	"type": "multiple-choice",
 	"taskId": "multiple-choice-1201800005",
 	"source": {
-		"name": "Chapter 1.2: 8.1 Knowledge Check - Training with actions",
+		"name": "Level 2: 8.1 Knowledge Check - Training with actions",
 		"showName": false,
 		"instructions": "**When you run 'python -m rasa train' in Level 2, what does Rasa do with your action files?**",
 		"multipleResponse": false,

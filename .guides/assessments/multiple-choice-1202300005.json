@@ -2,7 +2,7 @@
 	"type": "multiple-choice",
 	"taskId": "multiple-choice-1202300005",
 	"source": {
-		"name": "Chapter 1.2: 2.3 Test Your Knowledge - actions/ Folder and run() Return",
+		"name": "Level 2: 2.3 Test Your Knowledge - actions/ Folder and run() Return",
 		"showName": false,
 		"instructions": "**What should a simple action's run() method typically return at the end?**",
 		"multipleResponse": false,

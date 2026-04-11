@@ -1,4 +1,4 @@
-**Starting point:** Work in **`level5/`** with **Lab 2.0** complete (**`data/prompts/command_prompt_v3_slot_names.jinja2`** and **`prompt_template`** in **`config.yml`**) and the Chapter 1.4 completion baseline otherwise unchanged.
+**Starting point:** Work in **`level5/`** with **Lab 2.0** complete (**`data/prompts/command_prompt_v3_slot_names.jinja2`** and **`prompt_template`** in **`config.yml`**) and the Level 4 completion baseline otherwise unchanged.
 
 In this lab you complete **`banking_tools.py`** in the fill-in-the-blanks exercise, then create **`level5/tools/`** and save the same module as **`level5/tools/banking_tools.py`**. The module must define **`check_balance`**, **`process_transfer`**, and **`get_account_info`**, export them in **`__all__`**, and use the patterns from **Unit 2.1** (type hints, docstrings, return dicts).
 

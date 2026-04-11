@@ -1,4 +1,4 @@
-# Chapter 1.4 Lab 4.1 targets transfer_money.yml; check_balance often stays as in Level 3/early 4.
+# Level 4 Lab 4.1 targets transfer_money.yml; check_balance often stays as in Level 3/early 4.
 # This collect description is richer than a one-line hint in the level4 starter tree so CALM can
 # take the account from the same user turn as starting the flow (same spirit as Lab 4.1 collect text).
 

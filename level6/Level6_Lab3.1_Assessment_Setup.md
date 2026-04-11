@@ -10,7 +10,7 @@
 2. **Merge** into **`level6/endpoints.yml`** (after **`tools:`**, before **`model_groups:`**).
 3. **Code Test** — `code-output-compare-501060002`.
 
-**Codio guide (Chapter 1.6).** Lab 3.1 page lists fill-in then code test.
+**Codio guide (Level 6).** Lab 3.1 page lists fill-in then code test.
 
 ---
 

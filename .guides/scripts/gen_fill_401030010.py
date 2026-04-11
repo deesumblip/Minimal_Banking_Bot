@@ -70,7 +70,7 @@ obj = {
         "learningObjectives": "",
         "guidance": """The correct answers are:
 
-* **Any, Dict, List, Text** - Typing names for `run()` signature and return type (same pattern as Level 2 and Chapter 1.3 Lab 4.1).
+* **Any, Dict, List, Text** - Typing names for `run()` signature and return type (same pattern as Level 2 and Level 3 Lab 4.1).
 * **Action** - Base class from `rasa_sdk` that `ActionProcessTransfer` subclasses.
 * **action_process_transfer** - String returned by `name()`; must match `actions:` in the domain (Lab 2.1) and the `transfer_money` flow.
 * **List[Dict[Text, Any]]** - Return type of `run()`.

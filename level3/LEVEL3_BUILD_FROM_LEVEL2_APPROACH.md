@@ -4,13 +4,13 @@
 
 Students should **start from their Level 2 agent as the baseline** and build Level 3 themselves under guidance. Level 3 = Level 2 + slots, new action, and new flow; the student does the adding.
 
-**Course design (Chapter 1.3):** The **`level3/`** folder is a **ready-to-use Chapter 1.2–equivalent starter**: same Level 1/2 responses and flows, with **`action_bank_hours.py`** and **`action_holiday_hours.py` preloaded** in `actions/` from the first page of the chapter. Students **do not** recreate the holiday action in Level 3. They add `slots:`, `utter_ask_account`, register `action_check_balance_simple`, then create that `.py` file (Lab 4.1) and `check_balance.yml` (Lab 5.1).
+**Course design (Level 3):** The **`level3/`** folder is a **ready-to-use Level 2–equivalent starter**: same Level 1/2 responses and flows, with **`action_bank_hours.py`** and **`action_holiday_hours.py` preloaded** in `actions/` from the first page of the chapter. Students **do not** recreate the holiday action in Level 3. They add `slots:`, `utter_ask_account`, register `action_check_balance_simple`, then create that `.py` file (Lab 4.1) and `check_balance.yml` (Lab 5.1).
 
 ---
 
 ## 1. Level 3 starter = Level 2 end state (+ no Level 3 wiring yet)
 
-Target state when a student **opens** `level3/` at the start of Chapter 1.3:
+Target state when a student **opens** `level3/` at the start of Level 3:
 
 - **level3/domain/basics.yml** — Match Level 2: same responses (including `utter_goodbye`), **`actions:`** lists **`action_bank_hours`** and **`action_holiday_hours`** only. The starter should omit `slots:`, `utter_ask_account`, and `action_check_balance_simple` until Lab 3.1; after Lab 3.1 the list includes all three action names.
 - **level3/data/basics/** — Same flow files as Level 2: `greet.yml`, `help.yml`, `contact.yml`, `goodbye.yml`, `hours.yml`, `holiday_hours.yml`. **Do not** ship `check_balance.yml`; the student creates it in Lab 5.1.
@@ -58,7 +58,7 @@ No change to the lab idea: student **creates** `data/basics/check_balance.yml` w
 
 ## 5. Unit 0 and 0.2 wording
 
-- **0.1** — Recap Level 2; state that **`level3/`** ships as a Chapter 1.2–equivalent starter with **`action_bank_hours.py`** and **`action_holiday_hours.py` preloaded**; students do not rebuild the holiday action in Chapter 1.3.
+- **0.1** — Recap Level 2; state that **`level3/`** ships as a Level 2–equivalent starter with **`action_bank_hours.py`** and **`action_holiday_hours.py` preloaded**; students do not rebuild the holiday action in Level 3.
 - **0.2** — Under “What’s new in Level 3,” state clearly:
   - “You’ll **add** in Lab 3.1: `slots:` and `utter_ask_account`, and you’ll **register** `action_check_balance_simple` alongside `action_bank_hours` and `action_holiday_hours` (you create the `.py` file in Lab 4.1).”
   - “You’ll **create** in Lab 4.1: `action_check_balance_simple.py`. You’ll **create** in Lab 5.1: `data/basics/check_balance.yml`.”

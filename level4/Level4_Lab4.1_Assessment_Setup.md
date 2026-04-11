@@ -6,7 +6,7 @@
 
 **Task.** Create `data/basics/transfer_money.yml` in the `level4` folder with a flow that has `collect: amount`, `collect: recipient`, `collect: account_from`, and `action: action_process_transfer`. Run the assessment when done.
 
-**Codio guide (Chapter 1.4).** The Lab 4.1 page in the Chapter 1.4 guide includes: `{Check It!|assessment}(code-output-compare-401040001)`. Assessment JSON: `.guides/assessments/code-output-compare-401040001.json`.
+**Codio guide (Level 4).** The Lab 4.1 page in the Level 4 guide includes: `{Check It!|assessment}(code-output-compare-401040001)`. Assessment JSON: `.guides/assessments/code-output-compare-401040001.json`.
 
 ---
 

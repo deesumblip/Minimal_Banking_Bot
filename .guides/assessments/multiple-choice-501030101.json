@@ -2,7 +2,7 @@
 	"type": "multiple-choice",
 	"taskId": "multiple-choice-501030101",
 	"source": {
-		"name": "Chapter 1.5: 1.3 Test Your Knowledge - register tools",
+		"name": "Level 5: 1.3 Test Your Knowledge - register tools",
 		"showName": false,
 		"instructions": "**Where do you register tools so Rasa can discover them?**",
 		"multipleResponse": false,

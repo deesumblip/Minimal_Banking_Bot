@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Lab 3.1: Writing the Action That Uses Multiple Slots - Grader Script
-Output format matches Chapter 1.2 Lab 6.2 template (leading space on PASSED lines,
+Output format matches Level 2 Lab 6.2 template (leading space on PASSED lines,
 no emoji on pass; ❌ on fail; ========== summary band; exit 0 only on full score).
 
 Checks level4/actions/action_process_transfer.py for: correct class, name(),

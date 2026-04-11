@@ -1,4 +1,4 @@
-**Work in \`level5/\`:** Chapter 1.6 continues from the agent in **`level5/`**.
+**Work in \`level5/\`:** Level 6 continues from the agent in **`level5/`**.
 
 **Important. Building on Your Level 5 Agent**
 

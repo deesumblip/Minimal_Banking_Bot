@@ -2,7 +2,7 @@
 	"type": "multiple-choice",
 	"taskId": "multiple-choice-1201400002",
 	"source": {
-		"name": "Chapter 1.2: 1.4 Test Your Knowledge - Actions vs Responses",
+		"name": "Level 2: 1.4 Test Your Knowledge - Actions vs Responses",
 		"showName": false,
 		"instructions": "**How do actions differ from responses (utter_\\*) in Rasa?**",
 		"multipleResponse": false,

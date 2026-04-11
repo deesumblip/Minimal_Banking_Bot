@@ -2,7 +2,7 @@
 	"type": "multiple-choice",
 	"taskId": "multiple-choice-1201400004",
 	"source": {
-		"name": "Chapter 1.2: 1.4 Test Your Knowledge - Flow Calling an Action",
+		"name": "Level 2: 1.4 Test Your Knowledge - Flow Calling an Action",
 		"showName": false,
 		"instructions": "**When a flow step uses `- action: action_bank_hours`, what happens next?**",
 		"multipleResponse": false,

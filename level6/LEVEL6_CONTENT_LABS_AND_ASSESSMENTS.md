@@ -1,6 +1,6 @@
 # Level 6: Content, Labs, and Assessments — Mapping and Task IDs
 
-This document maps **Level 6** (Chapter 1.6 – Sub-Agents) content files, labs, and assessment task IDs.
+This document maps **Level 6** (Level 6 – Sub-Agents) content files, labs, and assessment task IDs.
 
 ---
 
@@ -48,13 +48,13 @@ This document maps **Level 6** (Chapter 1.6 – Sub-Agents) content files, labs,
 | 5.1 | Level6_Lab5.1_Content.md | Level6_Lab5.1_Assessment_Setup.md | code-output-compare-501060004 | lab_5.1_grader.py |
 | 5.2 | Level6_Lab5.2_Content.md | Level6_Lab5.2_Assessment_Setup.md | code-output-compare-501060005 | lab_5.2_grader.py |
 
-**Assessment JSONs:** **Fill-in:** `fill-in-the-blanks-501060110.json`, `501060111.json`, `501060112.json`. **Code tests:** `code-output-compare-501060001.json` through `501060005.json`. COMMAND uses `.guides/secure/level6_graders/lab_*.py`. Working Directory: `/home/codio/workspace`. Labs 2.1–4.1: **fill-in first**, copy YAML into `level6/`, then **code test** (Chapter 1.5 pattern).
+**Assessment JSONs:** **Fill-in:** `fill-in-the-blanks-501060110.json`, `501060111.json`, `501060112.json`. **Code tests:** `code-output-compare-501060001.json` through `501060005.json`. COMMAND uses `.guides/secure/level6_graders/lab_*.py`. Working Directory: `/home/codio/workspace`. Labs 2.1–4.1: **fill-in first**, copy YAML into `level6/`, then **code test** (Level 5 pattern).
 
 ---
 
-## 4. Codio guide (Chapter 1.6)
+## 4. Codio guide (Level 6)
 
-- **Chapter ID:** Chapter-1-6---Sub-Agents-c7d8
+- **Codio guide folder ID (Level 6):** `Chapter-1-6---Sub-Agents-c7d8`
 - **Content path:** `.guides/content/Chapter-1-6---Sub-Agents-c7d8/`
 - **Graders:** All in `.guides/secure/level6_graders/`.
 
@@ -64,7 +64,7 @@ This document maps **Level 6** (Chapter 1.6 – Sub-Agents) content files, labs,
 
 | Item | Location / Value |
 |------|------------------|
-| Chapter | Chapter-1-6---Sub-Agents-c7d8 |
+| Guide folder id | `Chapter-1-6---Sub-Agents-c7d8` |
 | Units | 0–6 |
 | Graded labs | 2.1, 3.1, 4.1, 5.1, 5.2 (10 points each, 50 total) |
 | Task IDs | 501060001 – 501060005 |

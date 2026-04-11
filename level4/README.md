@@ -2,11 +2,11 @@
 
 **Goal:** Learn how to collect multiple pieces of information from the user before performing an action.
 
-**Starting point:** The **`level4/`** folder in this repository is initialized to the **Chapter 1.3 completion** state: same **`config.yml`** / **`endpoints.yml`** pattern as **`level3/`** (SearchReady + Level 3 endpoints), same domain ( **`account`** slot, **`utter_ask_account`**, Level 2–3 actions), **`check_balance.yml`**, and **`action_check_balance_simple.py`**. There is **no** transfer flow or **`action_process_transfer`** until you complete the Chapter 1.4 labs.
+**Starting point:** The **`level4/`** folder in this repository is initialized to the **Level 3 completion** state: same **`config.yml`** / **`endpoints.yml`** pattern as **`level3/`** (SearchReady + Level 3 endpoints), same domain ( **`account`** slot, **`utter_ask_account`**, Level 2–3 actions), **`check_balance.yml`**, and **`action_check_balance_simple.py`**. There is **no** transfer flow or **`action_process_transfer`** until you complete the Level 4 labs.
 
-**What you build in Chapter 1.4:** **Lab 0.1** (pipeline YAML) → **Lab 2.1** (transfer slots + asks + register action) → **Lab 3.1** (action file) → **Lab 4.1** (`transfer_money.yml`) → **Labs 5.1–5.2** (train + completion check). See **Unit 0.1** and **Unit 0.2** in the Chapter 1.4 guide. After **Lab 5.1**, **`level4/models/`** holds your trained model for **Lab 5.2**.
+**What you build in Level 4:** **Lab 0.1** (pipeline YAML) → **Lab 2.1** (transfer slots + asks + register action) → **Lab 3.1** (action file) → **Lab 4.1** (`transfer_money.yml`) → **Labs 5.1–5.2** (train + completion check). See **Unit 0.1** and **Unit 0.2** in the Level 4 guide. After **Lab 5.1**, **`level4/models/`** holds your trained model for **Lab 5.2**.
 
-**Repository note:** Graders in **`.guides/secure/level4_graders/`** expect the **finished** Chapter 1.4 tree when run for assessment validation; your workspace should match that **after** you complete the labs (or use a separate workspace or branch for grading). The **committed** **`level4/`** bot is the **starter** so you can see exactly what Chapter 1.3 leaves you with.
+**Repository note:** Graders in **`.guides/secure/level4_graders/`** expect the **finished** Level 4 tree when run for assessment validation; your workspace should match that **after** you complete the labs (or use a separate workspace or branch for grading). The **committed** **`level4/`** bot is the **starter** so you can see exactly what Level 3 leaves you with.
 
 ## What You'll Learn
 
@@ -19,11 +19,11 @@
 
 **Important:** This level builds on your Level 3 banking agent. You don't start from scratch. You use the **same virtual environment** created in Level 1 (in the **project root**). There is no new `.venv` inside `level4/`.
 
-**Pipeline:** The checked-in **`level4/`** starter matches **`level3/`** (**`SearchReadyLLMCommandGenerator`** + Level 3-style **`endpoints.yml`**). **Lab 0.1** switches **`level4/`** to **`CompactLLMCommandGenerator`** and the Chapter 1.4 **`endpoints.yml`** (same **`openai-gpt-5-1`** group **id**, **`openai-gpt-5-1`**, **`temperature: 0.1`**) so multi-slot / free-text collection behaves—see **Unit 0.2** (section 2) in the Chapter 1.4 guide. **Level 3 is not modified.**
+**Pipeline:** The checked-in **`level4/`** starter matches **`level3/`** (**`SearchReadyLLMCommandGenerator`** + Level 3-style **`endpoints.yml`**). **Lab 0.1** switches **`level4/`** to **`CompactLLMCommandGenerator`** and the Level 4 **`endpoints.yml`** (same **`openai-gpt-5-1`** group **id**, **`openai-gpt-5-1`**, **`temperature: 0.1`**) so multi-slot / free-text collection behaves—see **Unit 0.2** (section 2) in the Level 4 guide. **Level 3 is not modified.**
 
-**Full delta (Ch 1.3 end → Ch 1.4 end):** **Unit 0.2** in the Chapter 1.4 guide (pipeline, labs, summary tables in one place).
+**Full delta (Level 3 end → Level 4 end):** **Unit 0.2** in the Level 4 guide (pipeline, labs, summary tables in one place).
 
-In the labs you **add** the following in **`level4/`** (on top of the **final banking agent at the end of Chapter 1.3**—your **`level3/`** project).
+In the labs you **add** the following in **`level4/`** (on top of the **final banking agent at the end of Level 3**—your **`level3/`** project).
 
 **What stays the same:** All Level 3 responses, flows, actions, and the `account` slot remain.
 
@@ -63,7 +63,7 @@ Use your actual project path. Ensure `.env` exists in the project root (or level
 - **Action (Lab 3.1):** `actions/action_process_transfer.py` — reads the three slots and sends a transfer confirmation (and optionally validates placeholders).
 - **Flow (Lab 4.1):** `data/basics/transfer_money.yml` — collect amount, recipient, account_from, then run action_process_transfer.
 
-All Chapter 1.3 content (including **`check_balance`**, **`holiday_hours`**, and the existing actions) remains in place; you add the transfer pieces alongside it.
+All Level 3 content (including **`check_balance`**, **`holiday_hours`**, and the existing actions) remains in place; you add the transfer pieces alongside it.
 
 ## Key Concepts
 

@@ -1,6 +1,6 @@
 # Level 3: Content, Labs, and Assessments
 
-This document maps Level 3 (Chapter 1.3 – Slot Collection) unit content files, lab content files, and assessment task IDs / grader paths so implementers can sync with Codio.
+This document maps Level 3 – Slot Collection unit content files, lab content files, and assessment task IDs / grader paths so implementers can sync with Codio.
 
 ---
 

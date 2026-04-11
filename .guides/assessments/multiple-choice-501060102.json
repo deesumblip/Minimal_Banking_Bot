@@ -2,7 +2,7 @@
 	"type": "multiple-choice",
 	"taskId": "multiple-choice-501060102",
 	"source": {
-		"name": "Chapter 1.6: 6.4 Knowledge Check - mcp_servers in endpoints",
+		"name": "Level 6: 6.4 Knowledge Check - mcp_servers in endpoints",
 		"showName": false,
 		"instructions": "**Why do we add mcp_servers to endpoints.yml in Level 6?**",
 		"multipleResponse": false,

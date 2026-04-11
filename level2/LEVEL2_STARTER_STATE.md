@@ -1,10 +1,10 @@
-# Chapter 1.2 (Level 2): Starter vs completion
+# Level 2: Starter vs completion
 
-Use this as the single reference for what ships in **`level2/`** and what students add to reach the **end of Chapter 1.2**.
+Use this as the single reference for what ships in **`level2/`** and what students add to reach the **end of Level 2**.
 
 ## Starter (before Lab 3.1)
 
-The repo’s **`level2/`** folder matches **Chapter 1.1 complete** plus one teaching artifact:
+The repo’s **`level2/`** folder matches **Level 1 complete** plus one teaching artifact:
 
 | Area | Files / contents |
 |------|------------------|
@@ -16,7 +16,7 @@ The repo’s **`level2/`** folder matches **Chapter 1.1 complete** plus one teac
 
 Students need a working **Level 1** agent (above), **Rasa Pro** + env (`.env`, venv), and the example action file so they can study and copy the pattern. Nothing is missing to complete Labs **3.1 → 4.1 → 5.1** in order.
 
-## After all Chapter 1.2 assignments (completion)
+## After all Level 2 assignments (completion)
 
 Students will have added:
 
@@ -26,7 +26,7 @@ Students will have added:
 | `domain/basics.yml` with `actions:` listing `action_bank_hours` and `action_holiday_hours` | 4.1 |
 | `data/basics/hours.yml` and `data/basics/holiday_hours.yml` | 5.1 |
 
-The **`level3/`** folder in this repository is maintained as a **Chapter 1.2–complete** baseline (both actions + both flows + domain registrations) for Chapter 1.3, so instructors can compare or sync without using a partially edited `level2`.
+The **`level3/`** folder in this repository is maintained as a **Level 2–complete** baseline (both actions + both flows + domain registrations) for Level 3, so instructors can compare or sync without using a partially edited `level2`.
 
 ## Text in guides
 

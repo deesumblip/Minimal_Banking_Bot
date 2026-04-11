@@ -2,7 +2,7 @@
 	"type": "multiple-choice",
 	"taskId": "multiple-choice-501060101",
 	"source": {
-		"name": "Chapter 1.6: 6.4 Knowledge Check - sub-agent config location",
+		"name": "Level 6: 6.4 Knowledge Check - sub-agent config location",
 		"showName": false,
 		"instructions": "**Where is the sub-agent config file located?**",
 		"multipleResponse": false,

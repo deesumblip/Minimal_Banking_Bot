@@ -1,4 +1,4 @@
-# Chapter 1.1: Just Responses (ground truth)
+# Level 1: Just Responses (ground truth)
 
 This folder is the **single source of truth** for Level 1 (Just Responses) in both Codio and the main repo.
 

@@ -1,4 +1,4 @@
-**Objective.** Add the **`ask_banking_assistant`** flow so the main agent can **`call: banking_assistant`**. **Same pattern as Chapter 1.4 / 1.5:** fill-in-the-blanks for the full flow file, save under **`data/basics/`**, then **Code Test**.
+**Objective.** Add the **`ask_banking_assistant`** flow so the main agent can **`call: banking_assistant`**. **Same pattern as Level 4 / 1.5:** fill-in-the-blanks for the full flow file, save under **`data/basics/`**, then **Code Test**.
 
 ## Step-by-Step Instructions
 

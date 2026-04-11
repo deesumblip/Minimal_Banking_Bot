@@ -1,4 +1,4 @@
-**Starting point:** Work in **`level5/`** from the Chapter 1.4 completion baseline (**Unit 0.1**).
+**Starting point:** Work in **`level5/`** from the Level 4 completion baseline (**Unit 0.1**).
 
 Rasa’s **`SearchReadyLLMCommandGenerator`** turns model output into commands, including **`set slot`**. It follows **examples in its prompt**.
 

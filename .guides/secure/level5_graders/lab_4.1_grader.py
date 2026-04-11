@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Lab 4.1: Creating the transfer_money_tools Flow and Action - Grader Script (Level 5)
-Output format matches Chapter 1.2 Lab 6.2 template.
+Output format matches Level 2 Lab 6.2 template.
 
 Checks level5/data/basics/transfer_money_tools.yml, action_process_transfer_with_tools.py,
 domain actions, and from_llm slot conditions for transfer_money_tools. Runs from workspace root;

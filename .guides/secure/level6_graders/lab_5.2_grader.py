@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Lab 5.2: Completion Check Level 6 - Grader
-Output format matches Chapter 1.2 Lab 6.2 template.
+Output format matches Level 2 Lab 6.2 template.
 
 Verifies Level 6 artifacts: sub_agent config, mcp_servers in endpoints, ask_banking_assistant flow.
 """

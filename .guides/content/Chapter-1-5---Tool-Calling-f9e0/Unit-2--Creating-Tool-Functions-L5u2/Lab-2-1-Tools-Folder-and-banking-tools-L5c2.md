@@ -1,4 +1,4 @@
-**Starting point:** Work in **`level5/`** with **Lab 2.0** complete (command-generator prompt in **`data/prompts/`** and **`config.yml`**). See **Unit 0.1** for the Chapter 1.4 baseline if needed.
+**Starting point:** Work in **`level5/`** with **Lab 2.0** complete (command-generator prompt in **`data/prompts/`** and **`config.yml`**). See **Unit 0.1** for the Level 4 baseline if needed.
 
 You finish **`banking_tools.py`** in the fill-in-the-blanks exercise. Then you create **`level5/tools/`** and save the completed module as **`level5/tools/banking_tools.py`**.
 

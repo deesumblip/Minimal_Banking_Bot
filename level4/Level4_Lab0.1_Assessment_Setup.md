@@ -2,9 +2,9 @@
 
 ## Guide Content (For Students)
 
-**Placement.** **Unit 0** (Level 4 / Chapter 1.4), after **0.2 What Level 4 Adds**. Students complete **fill-in-the-blanks**, paste into **`level4/config.yml`** and **`level4/endpoints.yml`**, then run the **Code Test**. Same pattern as **Lab 3.1** (blanks → paste → grader).
+**Placement.** **Unit 0** (Level 4 / Level 4), after **0.2 What Level 4 Adds**. Students complete **fill-in-the-blanks**, paste into **`level4/config.yml`** and **`level4/endpoints.yml`**, then run the **Code Test**. Same pattern as **Lab 3.1** (blanks → paste → grader).
 
-**Codio guide.** The **Lab 0.1** page (Unit 0 in Chapter 1.4) includes `{Check It!|assessment}(fill-in-the-blanks-401010010)` and `{Check It!|assessment}(code-output-compare-401010001)`.
+**Codio guide.** The **Lab 0.1** page (Unit 0 in Level 4) includes `{Check It!|assessment}(fill-in-the-blanks-401010010)` and `{Check It!|assessment}(code-output-compare-401010001)`.
 
 ---
 

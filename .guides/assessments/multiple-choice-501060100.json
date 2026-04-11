@@ -2,7 +2,7 @@
 	"type": "multiple-choice",
 	"taskId": "multiple-choice-501060100",
 	"source": {
-		"name": "Chapter 1.6: 6.4 Knowledge Check - call banking_assistant",
+		"name": "Level 6: 6.4 Knowledge Check - call banking_assistant",
 		"showName": false,
 		"instructions": "**What does a flow step `call: banking_assistant` do?**",
 		"multipleResponse": false,

@@ -2,7 +2,7 @@
 	"type": "multiple-choice",
 	"taskId": "multiple-choice-401040107",
 	"source": {
-		"name": "Chapter 1.4: 6.4 Knowledge Check - why collect order matters",
+		"name": "Level 4: 6.4 Knowledge Check - why collect order matters",
 		"showName": false,
 		"instructions": "**Why is the order of `collect:` steps in the flow important?**",
 		"multipleResponse": false,

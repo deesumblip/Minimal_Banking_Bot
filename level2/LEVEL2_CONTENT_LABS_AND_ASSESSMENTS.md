@@ -1,6 +1,6 @@
 # Level 2: Content, Labs, and Assessments
 
-This document maps Level 2 (Chapter 1.2 – Custom Actions) unit content files, lab content files, and assessment task IDs / grader paths so implementers can sync with Codio.
+This document maps Level 2 – Custom Actions unit content files, lab content files, and assessment task IDs / grader paths so implementers can sync with Codio.
 
 ---
 
@@ -25,7 +25,7 @@ Level 2 uses **7 units** (0–6): Recap → Introduction to Actions → Action C
 | `Level2_Unit5_Content_5.1_Actions-vs-Responses-in-Flows.md` | Actions in flows, hours example |
 | `Level2_Unit6_Content_6.2_*.md`, `6.3_*.md` | Common training errors; testing and debugging (former **6.4 debugging** page merged into **6.3**); **Lab 6.1** is **`Level2_Lab6.1_Content.md`** only |
 | `Level2_Unit6_Content_6.4_Level-2-Wrap-Up.md` | Codio title **6.4 See it all together** — walkthrough, structure, practices, **5× MC knowledge check** |
-| `Level2_Unit6_Content_6.5_Core-Ideas-and-Level-3-Readiness.md` | Codio title **6.5 Before you continue** — short checkpoint; detailed Level 3 handoff is Chapter 1.3 **0-1** / **0-2** |
+| `Level2_Unit6_Content_6.5_Core-Ideas-and-Level-3-Readiness.md` | Codio title **6.5 Before you continue** — short checkpoint; detailed Level 3 handoff is Level 3 **0-1** / **0-2** |
 | `Level2_Troubleshooting_Content.md`, `Level2_AdditionalResources_Content.md` | Troubleshooting, extensions |
 
 ---

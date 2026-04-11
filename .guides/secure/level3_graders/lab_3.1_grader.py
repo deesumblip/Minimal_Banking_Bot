@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Lab 3.1: Defining a Slot in the Domain - Grader Script
-Output format matches Chapter 1.2 Lab 6.2 template (level2 lab_4.1_grader.sh):
+Output format matches Level 2 Lab 6.2 template (level2 lab_4.1_grader.sh):
   Check 1–8 with leading space on PASSED lines (" Check N: PASSED - ..."), no emoji on pass;
   ❌ / ⚠️ on fail or partial; ========== summary band; exit 0 only on full score.
 
@@ -161,7 +161,7 @@ else:
     score += 1
 print("")
 
-# Summary (same band style as Chapter 1.2 Lab 4.1 / Lab 6.2 shell graders)
+# Summary (same band style as Level 2 Lab 4.1 / Lab 6.2 shell graders)
 print("==========================================")
 if score >= max_score:
     print(f" PASS: Lab 3.1 verification complete! Score: {score}/{max_score}")

@@ -13,7 +13,7 @@
 
 ⚠️ **Important**: This level builds on your Level 1 banking agent. You don't start from scratch!
 
-**Repo note (starter vs completion):** The **`level2/`** folder is the **Chapter 1.2 entry** state: end of Chapter 1.1 (responses + Level 1 flows), plus the **example** `actions/action_bank_hours.py` for Units 2–3. It does **not** include `action_holiday_hours.py`, an `actions:` block in the domain, or `hours.yml` / `holiday_hours.yml`—students add those in Labs 3.1, 4.1, and 5.1. The **`level3/`** folder in this repo remains a **completed** Chapter 1.2 baseline (both actions + flows) for Chapter 1.3. See **`LEVEL2_STARTER_STATE.md`** for a full file checklist and the **post–Chapter 1.2** end state.
+**Repo note (starter vs completion):** The **`level2/`** folder is the **Level 2 entry** state: end of Level 1 (responses + Level 1 flows), plus the **example** `actions/action_bank_hours.py` for Units 2–3. It does **not** include `action_holiday_hours.py`, an `actions:` block in the domain, or `hours.yml` / `holiday_hours.yml`—students add those in Labs 3.1, 4.1, and 5.1. The **`level3/`** folder in this repo remains a **completed** Level 2 baseline (both actions + flows) for Level 3. See **`LEVEL2_STARTER_STATE.md`** for a full file checklist and the **post–Level 2** end state.
 
 **What stays the same:**
 - All responses from Level 1 (`utter_greet`, `utter_help`, `utter_contact`, `utter_goodbye`)
@@ -73,12 +73,12 @@
 - `action_holiday_hours.py` - You **create** this file in **Lab 3.1** (not present in the starter)
 
 ### Domain (`domain/basics.yml`)
-- **`responses:`** — Same as Chapter 1.1 end state (including `utter_goodbye`)
+- **`responses:`** — Same as Level 1 end state (including `utter_goodbye`)
 - **`actions:`** — You add this section in **Lab 4.1** and list both custom actions
 
 ### Flows that use actions
 - **`hours.yml`** and **`holiday_hours.yml`** — You create both in **Lab 5.1**
-- All Level 1 flows (`greet`, `help`, `contact`, `goodbye`) remain as in Chapter 1.1
+- All Level 1 flows (`greet`, `help`, `contact`, `goodbye`) remain as in Level 1
 
 ## Key Concepts
 

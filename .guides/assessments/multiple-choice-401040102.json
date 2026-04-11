@@ -2,7 +2,7 @@
 	"type": "multiple-choice",
 	"taskId": "multiple-choice-401040102",
 	"source": {
-		"name": "Chapter 1.4: 1.4 Test Your Knowledge - utter_ask naming",
+		"name": "Level 4: 1.4 Test Your Knowledge - utter_ask naming",
 		"showName": false,
 		"instructions": "**What naming convention do we use for the response that asks for a slot value?**",
 		"multipleResponse": false,

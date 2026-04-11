@@ -1,8 +1,8 @@
 # Level 1: Content, Labs, and Assessments
 
-This document lists Level 1 (Chapter 1.1) unit content files, lab content files, and assessment references so implementers can sync with Codio and keep content in one place.
+This document lists Level 1 unit content files, lab content files, and assessment references so implementers can sync with Codio and keep content in one place.
 
-**Codio guide (Chapter 1.1)** no longer includes guide pages for Unit **0.3**; Unit **1.3**, **1.4**; **Lab 2.1**; Unit **6.4** (Understanding Agent Behavior); Unit **8.2**, **8.4**, **8.5**. The rows for those topics were removed from the table below (except **0.4** is in the Codio TOC again). Mirror markdown files for some omitted topics may still exist under `level1/` for offline reference (see `.guides/JSON_COHERENCE_REPORT.md` §8).
+**Codio guide (Level 1)** no longer includes guide pages for Unit **0.3**; Unit **1.3**, **1.4**; **Lab 2.1**; Unit **6.4** (Understanding Agent Behavior); Unit **8.2**, **8.4**, **8.5**. The rows for those topics were removed from the table below (except **0.4** is in the Codio TOC again). Mirror markdown files for some omitted topics may still exist under `level1/` for offline reference (see `.guides/JSON_COHERENCE_REPORT.md` §8).
 
 ---
 
@@ -67,7 +67,7 @@ Level 1 uses **9 units** (0–8): Setup → Domain → Flows → Patterns → Co
 | 7.1 | Level1_Lab7.1_Content.md | — | Walkthrough |
 | 7.2 | Level1_Lab7.2_Content.md | Level1_Lab7.2_Assessment_Setup.md | Build your own feature |
 
-**Task IDs / Graders:** Level 1 assessments (e.g. Check It! code-output-compare) are configured in the Codio guide (Chapter 1.1). See `.guides/content/` and assessment JSONs for task IDs and grader paths.
+**Task IDs / Graders:** Level 1 assessments (e.g. Check It! code-output-compare) are configured in the Codio guide (Level 1). See `.guides/content/` and assessment JSONs for task IDs and grader paths.
 
 ---
 

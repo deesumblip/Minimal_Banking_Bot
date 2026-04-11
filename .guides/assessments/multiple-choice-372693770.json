@@ -2,7 +2,7 @@
 	"type": "multiple-choice",
 	"taskId": "multiple-choice-372693770",
 	"source": {
-		"name": "Chapter 1.1: 5.2 - Credentials.yml Purpose",
+		"name": "Level 1: 5.2 - Credentials.yml Purpose",
 		"showName": false,
 		"instructions": "**What is the primary purpose of the credentials.yml file in a Rasa chat agent project?**",
 		"multipleResponse": false,

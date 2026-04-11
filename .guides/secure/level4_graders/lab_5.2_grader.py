@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Lab 5.2: Completion Check (Transfer Flow) — Grader Script
-Output format matches Chapter 1.2 Lab 6.2 template.
+Output format matches Level 2 Lab 6.2 template.
 
 Verifies Level 4 agent is complete: domain (slots + ask responses + Level 3 account/ask +
 legacy actions + action), action file, transfer_money.yml flow, trained model,
@@ -187,7 +187,7 @@ else:
         elif has_search_ready:
             print("❌ Check 5: FAILED - config uses SearchReadyLLMCommandGenerator (0 points)")
             print(
-                "Hint: Chapter 1.4 requires CompactLLMCommandGenerator. Edit level4/config.yml, "
+                "Hint: Level 4 requires CompactLLMCommandGenerator. Edit level4/config.yml, "
                 "then retrain."
             )
         else:

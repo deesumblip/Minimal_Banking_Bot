@@ -2,7 +2,7 @@
 	"type": "multiple-choice",
 	"taskId": "multiple-choice-1201800001",
 	"source": {
-		"name": "Chapter 1.2: 8.1 Knowledge Check - Registering actions in the domain",
+		"name": "Level 2: 8.1 Knowledge Check - Registering actions in the domain",
 		"showName": false,
 		"instructions": "**Why must custom actions be listed in the domain file (under an actions: section)?**",
 		"multipleResponse": false,

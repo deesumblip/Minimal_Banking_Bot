@@ -2,7 +2,7 @@
 
 **Starting point:** Your **`level4/`** folder should already include the baseline banking agent (**Unit 0.1**). You are **adding** transfer domain fields on top of that baseline, not replacing the whole project.
 
-**Prerequisite:** Complete **Lab 0.1**: fill-in-the-blanks for **`config.yml`** and **`endpoints.yml`**, paste into **`level4/`**, pass the **Code Test** (Chapter 1.4 Unit 0). See **Unit 0.2** for the full pipeline checklist. If you **skipped Lab 0.1**, do that lab **before** this one.
+**Prerequisite:** Complete **Lab 0.1**: fill-in-the-blanks for **`config.yml`** and **`endpoints.yml`**, paste into **`level4/`**, pass the **Code Test** (Level 4 Unit 0). See **Unit 0.2** for the full pipeline checklist. If you **skipped Lab 0.1**, do that lab **before** this one.
 
 - Add the slots `amount`, `recipient`, and `account_from`
 - Add the ask responses `utter_ask_amount`, `utter_ask_recipient`, and `utter_ask_account_from`

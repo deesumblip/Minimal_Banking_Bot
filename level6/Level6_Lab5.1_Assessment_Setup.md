@@ -2,11 +2,11 @@
 
 ## Guide Content (For Students)
 
-**Placement.** Chapter 1.6 Unit 5 — page **5.1 Training (Lab 5.1)** (merged concept + lab).
+**Placement.** Level 6 Unit 5 — page **5.1 Training (Lab 5.1)** (merged concept + lab).
 
 **Task.** From **`level6/`** run **`rasa train`**, then run the assessment.
 
-**Codio guide (Chapter 1.6).** The merged 5.1 page includes: `{Check It!|assessment}(code-output-compare-501060004)`.
+**Codio guide (Level 6).** The merged 5.1 page includes: `{Check It!|assessment}(code-output-compare-501060004)`.
 
 ---
 

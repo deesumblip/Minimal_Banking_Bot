@@ -2,7 +2,7 @@
 	"type": "multiple-choice",
 	"taskId": "multiple-choice-501030105",
 	"source": {
-		"name": "Chapter 1.5: 6.4 Knowledge Check - from_llm and transfer_money_tools",
+		"name": "Level 5: 6.4 Knowledge Check - from_llm and transfer_money_tools",
 		"showName": false,
 		"instructions": "**You added the flow `transfer_money_tools`, which reuses the same slots as `transfer_money`. For `from_llm` slot mappings that use `conditions` with `active_flow`, why must `amount`, `recipient`, and `account_from` each include `active_flow: transfer_money_tools`?**",
 		"multipleResponse": false,

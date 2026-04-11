@@ -2,7 +2,7 @@
 	"type": "multiple-choice",
 	"taskId": "multiple-choice-501060107",
 	"source": {
-		"name": "Chapter 1.6: 1.3 Test Your Knowledge - clean demo phrasing",
+		"name": "Level 6: 1.3 Test Your Knowledge - clean demo phrasing",
 		"showName": false,
 		"instructions": "**You want a clean Inspector demo of the `ask_banking_assistant` flow (sub-agent + MCP). Which user message is the best default choice?**",
 		"multipleResponse": false,

@@ -23,4 +23,4 @@ flows:
 
 Write **`name`** and **`description`** yourself so they fit your course wording; do not rely on a single canned paragraph from the guide.
 
-In **Lab 4.1** you complete a **Fill in the blanks** for the full flow file (including **`flows:`**), **save** it as **`ask_banking_assistant.yml`**, then run **Check It!** — same **fill-in → copy → code test** pattern as **Chapter 1.5 Lab 4.1** (domain slot conditions + flow).
+In **Lab 4.1** you complete a **Fill in the blanks** for the full flow file (including **`flows:`**), **save** it as **`ask_banking_assistant.yml`**, then run **Check It!** — same **fill-in → copy → code test** pattern as **Level 5 Lab 4.1** (domain slot conditions + flow).

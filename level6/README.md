@@ -4,9 +4,9 @@ This folder is the **Level 6** banking agent (Level 5 behavior plus **sub-agent 
 
 ## Starter repo vs. lab deliverables
 
-The repo **includes** the main agent, domain, flows from Level 5, tools, **`actions/banking_assistant_lite_agent.py`** (tutorial-compatible sub-agent implementation), and the **MCP server** script. **`rasa train`** / `rasa inspect` for the full Level 6 story assume you have **completed Labs 2.1–4.1** (see Chapter 1.6).
+The repo **includes** the main agent, domain, flows from Level 5, tools, **`actions/banking_assistant_lite_agent.py`** (tutorial-compatible sub-agent implementation), and the **MCP server** script. **`rasa train`** / `rasa inspect` for the full Level 6 story assume you have **completed Labs 2.1–4.1** (see Level 6).
 
-**You add in Labs 2.1–4.1** (not committed in the starter tree). **Same workflow as Chapters 1.4–1.5:** complete the **Fill in the blanks** in the guide for each lab, **copy or merge** the passed YAML into the path below, then run the **Code Test** (**Check It!**).
+**You add in Labs 2.1–4.1** (not committed in the starter tree). **Same workflow as Levels 4–5:** complete the **Fill in the blanks** in the guide for each lab, **copy or merge** the passed YAML into the path below, then run the **Code Test** (**Check It!**).
 
 - **`sub_agents/banking_assistant/config.yml`** (Lab 2.1 fill-in → `501060111`)
 - **`mcp_servers:`** in **`endpoints.yml`** (Lab 3.1 fill-in → `501060112`; starter may show commented hints only)
@@ -20,7 +20,7 @@ The repo **includes** the main agent, domain, flows from Level 5, tools, **`acti
 - **Actions & tools:** `actions/` (including `action_process_transfer_with_tools`), `tools/banking_tools.py`.
 - **MCP server:** `mcp_server/banking.py` — **Streamable HTTP** MCP (FastMCP). After Lab 3.1, **`mcp_servers.url`** should match this server (e.g. **`http://127.0.0.1:8080/mcp`**).
 
-Follow the **Chapter 1.6** Unit/Lab pages to create the three deliverables above, then **validate**, **train**, and test.
+Follow the **Level 6** Unit/Lab pages to create the three deliverables above, then **validate**, **train**, and test.
 
 ## Environment (Rasa license only)
 
@@ -38,7 +38,7 @@ The stock **`MCPOpenAgent`** ReAct loop sends **tool definitions** on every LLM 
 1. **Routes** user text to MCP tools (`check_balance`, `process_transfer`, `get_account_info`) with simple, explainable rules.
 2. Uses the same **`model_group`** for **text-only** completions to polish replies—compatible with **`provider: rasa`** and **`https://tutorial-llm.rasa.ai`**.
 
-For Chapter **1.6**, you still demonstrate **delegation** (`call: banking_assistant`), **MCP-backed tools**, and a **specialist sub-agent**; the implementation trades default multi-step ReAct for a **deterministic router** so demos work in Codio without a separate vendor API key.
+For **Level 6**, you still demonstrate **delegation** (`call: banking_assistant`), **MCP-backed tools**, and a **specialist sub-agent**; the implementation trades default multi-step ReAct for a **deterministic router** so demos work in Codio without a separate vendor API key.
 
 Optional PowerShell: `$env:RASA_LICENSE = "…"` before Rasa commands, or load from a `.env` file with a small script (do not commit secrets).
 
@@ -62,7 +62,7 @@ After Labs 2.1–4.1, `rasa data validate` should report sub-agents loaded (e.g.
 
 ## Run the full stack (Inspector / local test)
 
-Use **three terminals**. In **each** new terminal, from **project root** activate **`.venv`**, then **`cd level6`**, then run **one** of the roles below (same pattern as Chapter 1.6 Unit **5.2**):
+Use **three terminals**. In **each** new terminal, from **project root** activate **`.venv`**, then **`cd level6`**, then run **one** of the roles below (same pattern as Level 6 Unit **5.2**):
 
 1. **MCP:** `python mcp_server/banking.py` (Streamable HTTP at **`http://127.0.0.1:8080/mcp`**).
 2. **Actions:** `python -m rasa run actions`
@@ -86,7 +86,7 @@ With MCP + actions + Rasa running, the **SearchReady** command generator can emi
 
 You should see a balance line consistent with the demo MCP (e.g. **$123.45**), then the flow can continue to **`utter_help`**.
 
-**Follow-up turns:** A later message like “check my balance for account …” can still produce **`start flow check_balance`** from the command LLM (another flow **interrupts** the stack). Flow descriptions discourage that, but the LLM does not always obey them. For a clean **Chapter 1.6** recording, prefer the **one-shot** example above.
+**Follow-up turns:** A later message like “check my balance for account …” can still produce **`start flow check_balance`** from the command LLM (another flow **interrupts** the stack). Flow descriptions discourage that, but the LLM does not always obey them. For a clean **Level 6** recording, prefer the **one-shot** example above.
 
 If the MCP server URL or port changes, update `mcp_servers` in `endpoints.yml` to match.
 

@@ -10,4 +10,4 @@ Simple validation stays in your action code; this course does not introduce Rasa
 
 Use Level 4 when several slot values must be collected and consumed in **one** action—for example the transfer path you built.
 
-**Chapter 1.5 Unit 0** explains when **tools** matter and how **`level5/`** extends **`level4/`**; read **0-1** / **0-2** there for the full “why Level 5” story instead of repeating it on this page.
+**Level 5 Unit 0** explains when **tools** matter and how **`level5/`** extends **`level4/`**; read **0-1** / **0-2** there for the full “why Level 5” story instead of repeating it on this page.

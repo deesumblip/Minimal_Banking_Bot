@@ -1,4 +1,4 @@
-**Objective.** Create **`sub_agents/banking_assistant/config.yml`**. **Pattern:** Chapter 1.6 **Fill in the blanks** (guide assessment) → copy YAML to **`level6/sub_agents/banking_assistant/config.yml`** → **Code Test**.
+**Objective.** Create **`sub_agents/banking_assistant/config.yml`**. **Pattern:** Level 6 **Fill in the blanks** (guide assessment) → copy YAML to **`level6/sub_agents/banking_assistant/config.yml`** → **Code Test**.
 
 ## Steps
 

@@ -1,6 +1,6 @@
 # Level 4: Content, Labs, and Assessment Files — How to Mirror Level 3
 
-This document describes how to create **Level 4** content, labs, and assessment files so they mirror the structure and style of Level 3. **Instructional content** assumes Chapter 1.4 **begins** from **Chapter 1.3 completion** (what the student finished in **`level3/`**); labs **add** transfer domain fields, **`action_process_transfer`**, **`transfer_money.yml`**, then train and test.
+This document describes how to create **Level 4** content, labs, and assessment files so they mirror the structure and style of Level 3. **Instructional content** assumes Level 4 **begins** from **Level 3 completion** (what the student finished in **`level3/`**); labs **add** transfer domain fields, **`action_process_transfer`**, **`transfer_money.yml`**, then train and test.
 
 ---
 
@@ -8,7 +8,7 @@ This document describes how to create **Level 4** content, labs, and assessment 
 
 | Level 3 | Level 4 equivalent |
 |--------|---------------------|
-| **Starter** = Level 2 end state | **Starter** = Level 3 / Ch. 1.3 **completion** (then **add** transfer work in Chapter 1.4 labs) |
+| **Starter** = Level 2 end state | **Starter** = Level 3 / Ch. 1.3 **completion** (then **add** transfer work in Level 4 labs) |
 | Unit 0: Your Level 2 agent / What Level 3 adds | Unit 0: Recap - What you built in Level 3 / What Level 4 adds |
 | Unit 1: Slots intro, types, naming | Unit 1: Multiple slots intro, ordering, slot naming (1.1, 1.2, 1.3) |
 | Unit 2 + **Lab 3.1** (domain: account, utter_ask_account, register action) | Unit 2 + **Lab 2.1** (domain: amount, recipient, account_from + utter_ask_* + register action_process_transfer) |
@@ -35,7 +35,7 @@ Create a **course outline** document in `level4/` with:
 - **Unit 5:** Training and testing → **Lab 5.1** (train from level4), **Lab 5.2** (completion check graded + **Rasa Inspector** using a **fixed sequence of user turns** in the Lab 5.2 page—see **Scripted transfer** below). No separate Unit 5 concept-only pages.
 - **Unit 6:** Complete agent walkthrough, summary, what’s next.
 
-**Assessment summary table:** Lab 0.1 (pipeline: fill-in-the-blanks + code test), Lab 2.1 (domain), 3.1 (action), 4.1 (flow), 5.1 (train), 5.2 (test); same Codio pattern as Level 3 Lab 3.1 / Chapter 1.2 Lab 6.2: **sequence** of `Check N: PASSED` substring tests (see `code-output-compare-40101*` – `401050002.json`), not a single `PASS` line.
+**Assessment summary table:** Lab 0.1 (pipeline: fill-in-the-blanks + code test), Lab 2.1 (domain), 3.1 (action), 4.1 (flow), 5.1 (train), 5.2 (test); same Codio pattern as Level 3 Lab 3.1 / Level 2 Lab 6.2: **sequence** of `Check N: PASSED` substring tests (see `code-output-compare-40101*` – `401050002.json`), not a single `PASS` line.
 
 ---
 
@@ -43,10 +43,10 @@ Create a **course outline** document in `level4/` with:
 
 Create one markdown file per section, same naming pattern as Level 3. Paths under `level4/`:
 
-| Guide section (Chapter 1.4) | Purpose (mirror as source files under **level4/**) |
+| Guide section (Level 4) | Purpose (mirror as source files under **level4/**) |
 |------|--------|
 | **Unit 0.1** | Recap: level4 folder = your Level 3 agent; what’s in domain (account slot, utter_ask_account, actions), data/basics (check_balance, hours, holiday_hours, …), actions (`action_bank_hours`, `action_holiday_hours`, `action_check_balance_simple`). What Level 3 couldn’t do: collect several pieces of info in one flow (e.g. amount, recipient, account). |
-| **Unit 0.2** | Concept + **authoritative Ch 1.3 end → Ch 1.4 end checklist**: pipeline (**`config.yml`** / **`endpoints.yml`**), lab deliverables, summary table; lab order 2.1 → 3.1 → 4.1 → 5.1 → 5.2. |
+| **Unit 0.2** | Concept + **authoritative Level 3 end → Level 4 end checklist**: pipeline (**`config.yml`** / **`endpoints.yml`**), lab deliverables, summary table; lab order 2.1 → 3.1 → 4.1 → 5.1 → 5.2. |
 | **Unit 1.1** | Multiple slots = agent remembers several values in one conversation (e.g. amount, recipient, account_from for a transfer). |
 | **Unit 1.2** | Order of `collect:` steps in the flow determines the order the agent asks; keep order consistent with the action’s expectations. |
 | **Unit 1.3** | Naming: utter_ask_<slot_name>; slot names used in action must match domain and flow. |
@@ -70,7 +70,7 @@ Each lab has one **Content** markdown file that students see. Match the style of
 **Lab 0.1** (content mirror under **level4/**)
 
 - **Objective:** Student-built **`level4/config.yml`** and **`level4/endpoints.yml`** via **fill-in-the-blanks** (`fill-in-the-blanks-401010010.json`), paste, then **code test** (`lab_0.1_grader.py` / `code-output-compare-401010001.json`). Same pattern as Lab 3.1.
-- **Codio JSON:** In `tokens.text`, use literal `0` for each blank (sequential blanks), not `0..n` indices—same as Chapter 1.3 Lab 4.1 (`fill-in-the-blanks-2346557111.json`).
+- **Codio JSON:** In `tokens.text`, use literal `0` for each blank (sequential blanks), not `0..n` indices—same as Level 3 Lab 4.1 (`fill-in-the-blanks-2346557111.json`).
 - **Prerequisite:** None. **Before Lab 2.1.**
 
 ### Lab 2.1 — Domain (add slots + ask responses + register action)
@@ -92,7 +92,7 @@ Each lab has one **Content** markdown file that students see. Match the style of
 - **Part 1 / Part 2:** Same Codio vs local pattern. Run assessment when done.
 - **Success criteria:** File exists; has correct name; run() reads all three slots and sends a message.
 
-Use the **fill-in-the-blanks** assessment **`fill-in-the-blanks-401030010.json`** (twelve blanks, aligned with the repo action); regenerate via `.guides/scripts/regen_fill_401030010.py` if the canonical action changes. **Codio JSON:** same `tokens.text` pattern as Lab 0.1 and Chapter 1.3 Lab 4.1 (repeated `0` per blank).
+Use the **fill-in-the-blanks** assessment **`fill-in-the-blanks-401030010.json`** (twelve blanks, aligned with the repo action); regenerate via `.guides/scripts/regen_fill_401030010.py` if the canonical action changes. **Codio JSON:** same `tokens.text` pattern as Lab 0.1 and Level 3 Lab 4.1 (repeated `0` per blank).
 
 ### Lab 4.1 — Flow (create transfer_money.yml)
 
@@ -118,7 +118,7 @@ Use the **fill-in-the-blanks** assessment **`fill-in-the-blanks-401030010.json`*
 
 #### Scripted transfer (Inspector) — canonical user turns
 
-Students should type **in order** (mirrors the **Lab 5.2** page in the Chapter 1.4 guide):
+Students should type **in order** (mirrors the **Lab 5.2** page in the Level 4 guide):
 
 | Step | Example user message | What to verify |
 |------|----------------------|----------------|
@@ -129,7 +129,7 @@ Students should type **in order** (mirrors the **Lab 5.2** page in the Chapter 1
 
 **Expected shape:** `(Demo) Transfer of $300 from account savings to Alice has been processed successfully.` (exact wording may vary slightly with slot values.)
 
-**Troubleshooting** (if “unable to understand you” on names): `rephrase: False` on `utter_ask_*` in domain; clear `description:` on `collect: recipient` / `account_from` in flow; **`level4/config.yml`** uses **`CompactLLMCommandGenerator`**; retrain from `level4`. See **Unit 0.2** (section 2) and **Lab 5.2** in the Chapter 1.4 guide.
+**Troubleshooting** (if “unable to understand you” on names): `rephrase: False` on `utter_ask_*` in domain; clear `description:` on `collect: recipient` / `account_from` in flow; **`level4/config.yml`** uses **`CompactLLMCommandGenerator`**; retrain from `level4`. See **Unit 0.2** (section 2) and **Lab 5.2** in the Level 4 guide.
 
 ---
 
@@ -243,7 +243,7 @@ For each graded lab, add **solution reference** material for the Instructor Prov
 
 | Step | Action |
 |------|--------|
-| 1 | Align instructional story: Chapter 1.4 **starts** from Chapter 1.3 **completion** (see **LEVEL4_BUILD_FROM_LEVEL3_APPROACH** in **level4/**). |
+| 1 | Align instructional story: Level 4 **starts** from Level 3 **completion** (see **LEVEL4_BUILD_FROM_LEVEL3_APPROACH** in **level4/**). |
 | 2 | Create the course outline and all unit content mirrors under **level4/**. |
 | 3 | Create lab content mirrors for Labs 0.1, 2.1, 3.1, 4.1, 5.1, 5.2 with step-by-step and success criteria. |
 | 4 | Add instructor assessment setup notes for each graded lab (Option A + B, rationale, substring match). |

@@ -2,7 +2,7 @@
 	"type": "multiple-choice",
 	"taskId": "multiple-choice-1201400005",
 	"source": {
-		"name": "Chapter 1.2: 1.4 Test Your Knowledge - Action Class Structure",
+		"name": "Level 2: 1.4 Test Your Knowledge - Action Class Structure",
 		"showName": false,
 		"instructions": "**Which two methods must every Rasa action class implement?**",
 		"multipleResponse": false,

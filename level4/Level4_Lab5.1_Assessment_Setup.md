@@ -6,7 +6,7 @@
 
 **Structure.** Part 1 (In Codio) and Part 2 (Running locally). Both follow the same order: **activate the virtual environment in the main project folder (root)** first, then **navigate to `level4`**, then train. Run the assessment when done (Part 1 path).
 
-**Codio guide (Chapter 1.4).** The Lab 5.1 page in the Chapter 1.4 guide includes: `{Check It!|assessment}(code-output-compare-401050001)`. Assessment JSON: `.guides/assessments/code-output-compare-401050001.json`.
+**Codio guide (Level 4).** The Lab 5.1 page in the Level 4 guide includes: `{Check It!|assessment}(code-output-compare-401050001)`. Assessment JSON: `.guides/assessments/code-output-compare-401050001.json`.
 
 ### Your Task (summary)
 
@@ -34,7 +34,7 @@ Run the assessment when you're done (Part 1 path).
 
 ### Overview
 
-This assessment verifies that students can successfully train their Level 4 agent and that training completes without errors (model file created, no critical errors in logs), and that **`level4/config.yml`** uses the Chapter 1.4 pipeline (**CompactLLMCommandGenerator**, not SearchReady). Same conventions as Level 3: venv in workspace root, grader runs from root and checks `level4` for model, optional log checks, and parsed pipeline step names.
+This assessment verifies that students can successfully train their Level 4 agent and that training completes without errors (model file created, no critical errors in logs), and that **`level4/config.yml`** uses the Level 4 pipeline (**CompactLLMCommandGenerator**, not SearchReady). Same conventions as Level 3: venv in workspace root, grader runs from root and checks `level4` for model, optional log checks, and parsed pipeline step names.
 
 **Lab workflow:** Students (1) activate venv in project root, (2) `cd level4`, (3) run `python -m rasa train`. The grader script runs from **workspace root** and checks `level4` for model and optional logs.
 
@@ -56,7 +56,7 @@ The grader runs from **workspace root** (`/home/codio/workspace`): it verifies t
 2. **Check 2 – Model file exists** (2 pts): at least one `.tar.gz` in `level4/models/`.
 3. **Check 3 – Model recent** (3 pts): newest model is under 10 minutes old (warnings / **PARTIAL** if older).
 4. **Check 4 – Logs** (3 pts): if `level4/logs/logs.out` exists, check for error/exception/failed; if no log file, pass (**PARTIAL** if errors suspected).
-5. **Check 5 – Pipeline in config.yml** (2 pts): `level4/config.yml` parses as YAML; **`pipeline:`** step `name`s include **`CompactLLMCommandGenerator`** and do **not** include **`SearchReadyLLMCommandGenerator`** (Chapter 1.4; avoids wrong slot commands baked into the model).
+5. **Check 5 – Pipeline in config.yml** (2 pts): `level4/config.yml` parses as YAML; **`pipeline:`** step `name`s include **`CompactLLMCommandGenerator`** and do **not** include **`SearchReadyLLMCommandGenerator`** (Level 4; avoids wrong slot commands baked into the model).
 
 **Total: 12 points.** **Lab 6.2-style:** **` PASS: Lab 5.1 verification complete! Score: 12/12`** and exit **0** only on full score; checks 3–4 may print **⚠️ PARTIAL** (substring `Check N: PASSED` missing → assessment not fully passed).
 

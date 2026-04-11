@@ -1,4 +1,4 @@
-**Objective.** In Unit 2 you saw what belongs in the sub-agent config. In this lab you will create **`level6/sub_agents/banking_assistant/config.yml`** so the main agent can call the **`banking_assistant`** sub-agent. **Same pattern as Chapter 1.5 Lab 2.1:** fill-in-the-blanks first, copy the completed file into the project, then **Code Test**.
+**Objective.** In Unit 2 you saw what belongs in the sub-agent config. In this lab you will create **`level6/sub_agents/banking_assistant/config.yml`** so the main agent can call the **`banking_assistant`** sub-agent. **Same pattern as Level 5 Lab 2.1:** fill-in-the-blanks first, copy the completed file into the project, then **Code Test**.
 
 ## Step-by-Step Instructions
 

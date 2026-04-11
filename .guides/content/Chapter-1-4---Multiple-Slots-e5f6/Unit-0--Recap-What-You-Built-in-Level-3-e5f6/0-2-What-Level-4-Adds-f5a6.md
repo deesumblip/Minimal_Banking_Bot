@@ -1,46 +1,46 @@
-Chapter 1.4 builds on the **final agent at the end of Chapter 1.3** (see **Unit 0.1**).
+Level 4 builds on the **final agent at the end of Level 3** (see **Unit 0.1**).
 
 Level 4 adds **multiple slots** in one flow: the agent remembers several values in a single conversation and uses them together in one action.
 
 **How to read this page**
 
-- Your **starting point** is always **Chapter 1.3 completion** (see **Unit 0.1** and **Chapter 1.3 end state** below). In this course repo, **`level4/`** is already that baseline—you **add** transfer-related domain fields, a new action, and a new flow, then align pipeline files in **`level4/`**, train, and test. You still complete every lab so *you* produce the pipeline files, domain, action, and flow. When you are done, your tree should match the **Chapter 1.4 end state** described here. Work through **section 2** (pipeline), then **section 3** (lab deliverables), and use **section 4** as a final check.
+- Your **starting point** is always **Level 3 completion** (see **Unit 0.1** and **Level 3 end state** below). In this course repo, **`level4/`** is already that baseline—you **add** transfer-related domain fields, a new action, and a new flow, then align pipeline files in **`level4/`**, train, and test. You still complete every lab so *you* produce the pipeline files, domain, action, and flow. When you are done, your tree should match the **Level 4 end state** described here. Work through **section 2** (pipeline), then **section 3** (lab deliverables), and use **section 4** as a final check.
 
-Your Level 3 behavior stays in place; you **add** the transfer flow and align **`level4/`** pipeline files so CALM can fill free-text slots reliably. The sections below are the **full checklist** from **Chapter 1.3 end** through **Chapter 1.4 end**. Step-by-step instructions live on each lab page.
+Your Level 3 behavior stays in place; you **add** the transfer flow and align **`level4/`** pipeline files so CALM can fill free-text slots reliably. The sections below are the **full checklist** from **Level 3 end** through **Level 4 end**. Step-by-step instructions live on each lab page.
 
 **Implementation order:** pipeline (**Lab 0.1** — fill-in-the-blanks + paste **`config.yml`** / **`endpoints.yml`**), then domain (Lab 2.1), then action (Lab 3.1), then flow (Lab 4.1), then train and test (Labs 5.1 and 5.2). The table in **section 3** spells out files and changes. **Hands-on pipeline:** see **Lab 0.1** in Unit 0 (same pattern as Lab 3.1: blanks → paste → code test).
 
 ---
 
-## Chapter 1.3 end state (what you bring forward)
+## Level 3 end state (what you bring forward)
 
-At Chapter 1.3 completion you typically have:
+At Level 3 completion you typically have:
 
 - **`domain/basics.yml`:** an `account` slot, `utter_ask_account`, responses for greet, help, contact, and goodbye, and **`action_bank_hours`**, **`action_holiday_hours`**, and **`action_check_balance_simple`** under **`actions:`**
 - **`data/basics/`:** flow files **`greet`**, **`help`**, **`contact`**, **`goodbye`**, **`hours`**, **`holiday_hours`**, **`check_balance`**
 - **`actions/`:** **`action_bank_hours.py`**, **`action_holiday_hours.py`**, **`action_check_balance_simple.py`**
-- **`config.yml`:** **`SearchReadyLLMCommandGenerator`** and **`FlowPolicy`** (Chapter 1.3 pattern)
+- **`config.yml`:** **`SearchReadyLLMCommandGenerator`** and **`FlowPolicy`** (Level 3 pattern)
 - **`endpoints.yml`:** NLG rephrase and **`model_groups`** (your API keys in **`.env`**)
 
-You do **not** delete that work. Chapter 1.4 **adds** the **transfer** pieces and adjusts **pipeline** files in **`level4/`**.
+You do **not** delete that work. Level 4 **adds** the **transfer** pieces and adjusts **pipeline** files in **`level4/`**.
 
 ---
 
 ## 1. Use the `level4/` folder
 
-- Do all Chapter 1.4 work under **`level4/`**. By default (this repository), **`level4/`** already matches **Chapter 1.3 completion**—see **Unit 0.1**. Keep **`level3/`** as your Chapter 1.3 reference; do **not** modify it for Chapter 1.4.
+- Do all Level 4 work under **`level4/`**. By default (this repository), **`level4/`** already matches **Level 3 completion**—see **Unit 0.1**. Keep **`level3/`** as your Level 3 reference; do **not** modify it for Level 4.
 
 ---
 
 ## 2. Pipeline files (required for reliable CALM)
 
-These differ from Chapter 1.3 **on purpose**. Skipping them often causes **“unable to understand you”** on **recipient** / **account_from** even when domain and flows are correct.
+These differ from Level 3 **on purpose**. Skipping them often causes **“unable to understand you”** on **recipient** / **account_from** even when domain and flows are correct.
 
 **Do the work yourself:** Finish **Lab 0.1** (Unit 0) **before Lab 2.1**. Fill in the blanks, paste into **`level4/config.yml`** and **`level4/endpoints.yml`**, then pass the **Code Test**. Skipping the exercise and only diffing against the repo shortchanges the learning; treat the repo as a reference for correct YAML, not a substitute for doing the work yourself.
 
 ### `config.yml` (in `level4/`)
 
-| Setting | Chapter 1.3 (`level3/`) | Chapter 1.4 (`level4/`) |
+| Setting | Level 3 (`level3/`) | Level 4 (`level4/`) |
 |--------|-------------------------|-------------------------|
 | **`assistant_id`** | e.g. `level3-agent` | e.g. **`level4-agent`** (distinct assistant) |
 | **Command generator** | **`SearchReadyLLMCommandGenerator`** | **`CompactLLMCommandGenerator`** |
@@ -90,13 +90,13 @@ model_groups:
 | **Lab 5.1** | Train so you get **`level4/models/*.tar.gz`** | Terminal |
 | **Lab 5.2** | Completion check + Inspector (**scripted transfer** on the Lab 5.2 page) | **Check It!** + Rasa Inspect |
 
-**Unchanged in spirit.** All Chapter 1.3 responses, flows, and actions remain in **`level4/`**; you **add** the transfer domain pieces, action, and flow.
+**Unchanged in spirit.** All Level 3 responses, flows, and actions remain in **`level4/`**; you **add** the transfer domain pieces, action, and flow.
 
 ---
 
-## 4. Summary: Chapter 1.3 end → Chapter 1.4 end
+## 4. Summary: Level 3 end → Level 4 end
 
-| Area | Chapter 1.3 end | Chapter 1.4 end adds / changes |
+| Area | Level 3 end | Level 4 end adds / changes |
 |------|-----------------|--------------------------------|
 | **Config** | SearchReady | **CompactLLM** + **flow_retrieval** + **`assistant_id`** for level4 |
 | **Endpoints** | NLG + **`model_groups`** (course **`openai-gpt-5-1`** group id) | Same structure, but **`openai-gpt-5-1`** group uses **`model: openai-gpt-5-1`**, **`temperature: 0.1`** (see **`level4/endpoints.yml`**) |

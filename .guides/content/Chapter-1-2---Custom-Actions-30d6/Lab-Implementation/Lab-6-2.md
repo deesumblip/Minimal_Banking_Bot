@@ -28,9 +28,9 @@ Lab 6.2 reinforces that both actions are registered and verifies that the studen
 3. Configure expected output / sequence per `.guides/assessments/code-output-compare-1597644299.json` (e.g. expected substring: `PASS: Action registration verification complete!`).
 4. **Points**: 11. Enable **Learning Analytics** if desired.
 
-### Check It! Tag (Chapter 1.2 guide)
+### Check It! Tag (Level 2 guide)
 
-The Lab 6.2 page in the Chapter 1.2 Codio guide (Unit 6, right after Lab 6.1) includes:
+The Lab 6.2 page in the Level 2 Codio guide (Unit 6, right after Lab 6.1) includes:
 `{Check It!|assessment}(code-output-compare-1597644299)`  
 so students can run the assessment from the guide.
 

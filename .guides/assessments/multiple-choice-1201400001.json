@@ -2,7 +2,7 @@
 	"type": "multiple-choice",
 	"taskId": "multiple-choice-1201400001",
 	"source": {
-		"name": "Chapter 1.2: 1.4 Test Your Knowledge - What is an Action",
+		"name": "Level 2: 1.4 Test Your Knowledge - What is an Action",
 		"showName": false,
 		"instructions": "**What is an action in Rasa?**",
 		"multipleResponse": false,

@@ -2,7 +2,7 @@
 	"type": "multiple-choice",
 	"taskId": "multiple-choice-1592311807",
 	"source": {
-		"name": "Chapter 1.1:8.1 - rephrase functionality",
+		"name": "Level 1:8.1 - rephrase functionality",
 		"showName": false,
 		"instructions": "**What does `rephrase: True` do?**",
 		"multipleResponse": false,

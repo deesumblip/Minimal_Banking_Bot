@@ -1,6 +1,6 @@
 # Lab 3.2: Create Your Own Action
 
-**Deprecated — duplicate draft.** The Chapter 1.2 guide has **only Lab 3.1** in Unit 3 (`Lab-3-1--Create-Your-Own-Action-04c0`). For implementers, use **`Lab-3-1.md`** and **`Level2_Lab3.1_Assessment_Setup.md`**. The content below is not linked from any unit `index.json`.
+**Deprecated — duplicate draft.** The Level 2 guide has **only Lab 3.1** in Unit 3 (`Lab-3-1--Create-Your-Own-Action-04c0`). For implementers, use **`Lab-3-1.md`** and **`Level2_Lab3.1_Assessment_Setup.md`**. The content below is not linked from any unit `index.json`.
 
 ---
 

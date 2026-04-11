@@ -2,7 +2,7 @@
 	"type": "multiple-choice",
 	"taskId": "multiple-choice-9821730",
 	"source": {
-		"name": "Chapter 1.1: 8.1 Knowledge Check - pattern_session_start trigger",
+		"name": "Level 1: 8.1 Knowledge Check - pattern_session_start trigger",
 		"showName": false,
 		"instructions": "**What triggers pattern_session_start?**",
 		"multipleResponse": false,

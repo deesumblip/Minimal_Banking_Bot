@@ -23,7 +23,7 @@ The completion check verifies that the student has:
 
 4. **Trained model (Lab 5.1)** – At least one `.tar.gz` file exists in `level4/models/`, indicating the student ran `python -m rasa train` from `level4`.
 
-5. **Pipeline (Chapter 1.4)** – `level4/config.yml` has **`CompactLLMCommandGenerator`** in **`pipeline:`** and does **not** use **`SearchReadyLLMCommandGenerator`** as a pipeline step `name`, so the model matches the course slot names (`amount`, `recipient`, `account_from`).
+5. **Pipeline (Level 4)** – `level4/config.yml` has **`CompactLLMCommandGenerator`** in **`pipeline:`** and does **not** use **`SearchReadyLLMCommandGenerator`** as a pipeline step `name`, so the model matches the course slot names (`amount`, `recipient`, `account_from`).
 
 6. **Endpoints (Lab 0.1 / Unit 0.2)** – `level4/endpoints.yml` has **`model_groups`** with **`id: openai-gpt-5-1`** whose first model uses **`model: openai-gpt-5-1`** and **`temperature: 0.1`**.
 

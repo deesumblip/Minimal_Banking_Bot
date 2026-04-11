@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Lab 5.1: Training the Level 4 Agent - Grader Script
-Output format matches Chapter 1.2 Lab 6.2 template (⚠️ for partial / stale model / log issues).
+Output format matches Level 2 Lab 6.2 template (⚠️ for partial / stale model / log issues).
 
 Runs from workspace root, verifies venv, then checks level4 for model, logs, and
 CompactLLMCommandGenerator (not SearchReady) in config.yml pipeline.
@@ -110,7 +110,7 @@ else:
     score += 3
 print("")
 
-# Check 5: Chapter 1.4 pipeline in config.yml (2 points) — SearchReady bakes wrong slot commands into the model
+# Check 5: Level 4 pipeline in config.yml (2 points) — SearchReady bakes wrong slot commands into the model
 print("Check 5: Verifying level4/config.yml uses CompactLLMCommandGenerator...")
 if not CONFIG_PATH.exists():
     print("❌ Check 5: FAILED - level4/config.yml not found (0 points)")
@@ -134,7 +134,7 @@ else:
         elif has_search_ready:
             print("❌ Check 5: FAILED - config uses SearchReadyLLMCommandGenerator (0 points)")
             print(
-                "Hint: Chapter 1.4 requires CompactLLMCommandGenerator in level4/config.yml (see Unit 0.2). "
+                "Hint: Level 4 requires CompactLLMCommandGenerator in level4/config.yml (see Unit 0.2). "
                 "Then run: python -m rasa train from level4."
             )
         else:

@@ -4,7 +4,7 @@
 
 ---
 
-## Level 1: Just Responses (Chapter 1.1)
+## Level 1: Just Responses (Level 1)
 
 - **Content**: `.guides/content/Chapter-1-1---Just-Responses-d3b4/`
 - **Implementer docs**: `level1/Level1_Implementation_Overview.md`
@@ -12,7 +12,7 @@
 
 ---
 
-## Level 2: Custom Actions (Chapter 1.2)
+## Level 2: Custom Actions (Level 2)
 
 - **Content**: `.guides/content/Chapter-1-2---Custom-Actions-30d6/`
 - **Implementer docs**: `level2/Level2_Implementation_Overview.md`
@@ -20,7 +20,7 @@
 
 ---
 
-## Level 3: Slot Collection (Chapter 1.3)
+## Level 3: Slot Collection (Level 3)
 
 - **Content**: `.guides/content/Chapter-1-3---Slot-Collection-a4b5/` (populated from `level3/Level3_Unit*_Content_*.md` and `level3/Level3_Lab*_Content.md`)
 - **Implementer docs**: `level3/Level3_Implementation_Overview.md` (primary); `level3/CODIO_IMPLEMENTATION_GUIDE.md` (short implementer-only pointer)
@@ -29,7 +29,7 @@
 
 ---
 
-## Level 4: Multiple Slots (Chapter 1.4)
+## Level 4: Multiple Slots (Level 4)
 
 - **Content**: `.guides/content/Chapter-1-4---Multiple-Slots-e5f6/` (populated from `level4/Level4_Unit*_Content_*.md` and `level4/Level4_Lab*_Content.md`)
 - **Implementer docs**: `level4/Level4_Implementation_Overview.md` (primary); `level4/CODIO_IMPLEMENTATION_GUIDE.md` (implementer pointer)

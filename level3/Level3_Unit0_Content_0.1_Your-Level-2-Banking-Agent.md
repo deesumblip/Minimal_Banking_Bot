@@ -2,9 +2,9 @@ Here is a quick recap of what you built in Level 2. In this chapter you will add
 
 ## Level 3 setup
 
-The **level3** folder in this course is a **ready-to-use copy** of the expected end state after **Chapter 1.2** (Custom Actions): same domain shape, flows, and **both** Level 2 custom action files. You do **not** recreate `action_holiday_hours.py` in Chapter 1.3; it is **already in** `level3/actions/` so training matches the `holiday_hours` flow. If you completed Chapter 1.2 in your own repo, your files should match this starter.
+The **level3** folder in this course is a **ready-to-use copy** of the expected end state after **Level 2** (Custom Actions): same domain shape, flows, and **both** Level 2 custom action files. You do **not** recreate `action_holiday_hours.py` in Level 3; it is **already in** `level3/actions/` so training matches the `holiday_hours` flow. If you completed Level 2 in your own repo, your files should match this starter.
 
-In this repository, **`level2/`** is maintained as that **same** Chapter 1.2 completion snapshot: the same responses, `data/basics/` flows, and `actions/` Python files as **`level3/`**, so the runnable agent matches. The only intentional differences are **`assistant_id`** in `config.yml` (`level2-agent` vs `level3-agent`) and the comment block at the top of `domain/basics.yml` (the YAML under `version:` is the same).
+In this repository, **`level2/`** is maintained as that **same** Level 2 completion snapshot: the same responses, `data/basics/` flows, and `actions/` Python files as **`level3/`**, so the runnable agent matches. The only intentional differences are **`assistant_id`** in `config.yml` (`level2-agent` vs `level3-agent`) and the comment block at the top of `domain/basics.yml` (the YAML under `version:` is the same).
 
 In this chapter you will:
 
@@ -30,12 +30,12 @@ Everything else stays as it was at the start of `level3/`.
 
 ### Actions (`actions/`)
 
-These Python files are **preloaded** for you at the start of Chapter 1.3:
+These Python files are **preloaded** for you at the start of Level 3:
 
 - **`action_bank_hours.py`** (bank hours by day of week)
-- **`action_holiday_hours.py`** (holiday schedule; same role as in Chapter 1.2, Lab 3.1)
+- **`action_holiday_hours.py`** (holiday schedule; same role as in Level 2, Lab 3.1)
 
-You will **add** in Chapter 1.3:
+You will **add** in Level 3:
 
 - **`action_check_balance_simple.py`** in **Lab 4.1** (new file; not in the starter)
 

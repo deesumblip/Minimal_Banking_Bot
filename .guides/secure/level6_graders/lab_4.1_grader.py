@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Lab 4.1: ask_banking_assistant Flow - Grader (Level 6)
-Output format matches Chapter 1.2 Lab 6.2 template.
+Output format matches Level 2 Lab 6.2 template.
 
 Checks level6/data/basics/ask_banking_assistant.yml exists and flow has call: banking_assistant.
 """

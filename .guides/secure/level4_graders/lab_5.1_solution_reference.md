@@ -17,7 +17,7 @@ Use this file as the **Instructor Provided Solution File** for Lab 5.1 if you us
 
 3. **Outcome** – Training completes without critical errors, and a model file (`.tar.gz`) is created in `level4/models/`.
 
-4. **Pipeline** – `level4/config.yml` lists **`CompactLLMCommandGenerator`** in **`pipeline:`** (Chapter 1.4). **`SearchReadyLLMCommandGenerator`** must not be used here; it can bake wrong slot command names into the trained model.
+4. **Pipeline** – `level4/config.yml` lists **`CompactLLMCommandGenerator`** in **`pipeline:`** (Level 4). **`SearchReadyLLMCommandGenerator`** must not be used here; it can bake wrong slot command names into the trained model.
 
 ---
 

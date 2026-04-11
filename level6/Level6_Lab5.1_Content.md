@@ -1,1 +1,1 @@
-**Lab 5.1** is merged into the Chapter 1.6 Unit **5.1** guide page (training + graded **Check It!**). **Assessment:** `code-output-compare-501060004`. See **`Level6_Unit5_Content_5.1_Training-Level-6.md`** and `.guides/.../5-1-Training-Level-6-L6f1.md`.
+**Lab 5.1** is merged into the Level 6 Unit **5.1** guide page (training + graded **Check It!**). **Assessment:** `code-output-compare-501060004`. See **`Level6_Unit5_Content_5.1_Training-Level-6.md`** and `.guides/.../5-1-Training-Level-6-L6f1.md`.

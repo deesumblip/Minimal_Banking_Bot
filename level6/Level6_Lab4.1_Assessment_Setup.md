@@ -10,7 +10,7 @@
 2. **Save** as **`level6/data/basics/ask_banking_assistant.yml`**.
 3. **Code Test** — `code-output-compare-501060003`.
 
-**Codio guide (Chapter 1.6).** Lab 4.1 page lists fill-in then code test.
+**Codio guide (Level 6).** Lab 4.1 page lists fill-in then code test.
 
 ---
 

@@ -1,4 +1,4 @@
-**Work in \`level5/\`:** All Chapter 1.5 files and Rasa commands use **`level5/`** as the agent directory.
+**Work in \`level5/\`:** All Level 5 files and Rasa commands use **`level5/`** as the agent directory.
 
 Use **tools** when you want the LLM to decide what to do based on context: for example, the user might ask for a balance check, a transfer, or both in one conversation. The LLM selects which tool(s) to call and with what arguments.
 

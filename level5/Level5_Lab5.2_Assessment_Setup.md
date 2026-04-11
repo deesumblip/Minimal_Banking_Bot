@@ -6,7 +6,7 @@
 
 **Task.** Run a completion check: verify tools folder, endpoints tools section, **Lab 2.0** prompt file and `config.yml` wiring, transfer_money_tools flow, action_process_transfer_with_tools action and domain registration, and trained model. Run the assessment when done.
 
-**Codio guide (Chapter 1.5).** The Lab 5.2 page in the Chapter 1.5 guide includes: `{Check It!|assessment}(code-output-compare-501050002)`. Assessment JSON: `.guides/assessments/code-output-compare-501050002.json`.
+**Codio guide (Level 5).** The Lab 5.2 page in the Level 5 guide includes: `{Check It!|assessment}(code-output-compare-501050002)`. Assessment JSON: `.guides/assessments/code-output-compare-501050002.json`.
 
 ---
 

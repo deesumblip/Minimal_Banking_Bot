@@ -2,7 +2,7 @@
 	"type": "multiple-choice",
 	"taskId": "multiple-choice-501030107",
 	"source": {
-		"name": "Chapter 1.5: 6.4 Knowledge Check - tools package __init__",
+		"name": "Level 5: 6.4 Knowledge Check - tools package __init__",
 		"showName": false,
 		"instructions": "**Lab 3.1 registers `tools_module: \"tools\"`. For Python to treat `level5/tools/` as the `tools` package, what else must exist besides `banking_tools.py`?**",
 		"multipleResponse": false,

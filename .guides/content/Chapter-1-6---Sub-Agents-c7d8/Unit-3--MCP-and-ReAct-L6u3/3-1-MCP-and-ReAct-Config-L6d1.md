@@ -25,4 +25,4 @@ mcp_servers:
 
 The starter **`endpoints.yml`** may show these lines **commented out** so you uncomment or type them in the lab—follow your instructor’s starter.
 
-In **Lab 3.1** you complete a **Fill in the blanks** for the **`mcp_servers`** block, **merge** it into **`endpoints.yml`**, then run the **Code Test** (same pattern as **Chapter 1.5 Lab 3.1**). The MCP implementation **`mcp_server/banking.py`** is **provided** in the repo; the lab checks that **`endpoints.yml`** registers it.
+In **Lab 3.1** you complete a **Fill in the blanks** for the **`mcp_servers`** block, **merge** it into **`endpoints.yml`**, then run the **Code Test** (same pattern as **Level 5 Lab 3.1**). The MCP implementation **`mcp_server/banking.py`** is **provided** in the repo; the lab checks that **`endpoints.yml`** registers it.

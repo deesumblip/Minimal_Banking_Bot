@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Lab 4.1: Creating the Transfer Flow - Grader Script
-Output format matches Chapter 1.2 Lab 6.2 template.
+Output format matches Level 2 Lab 6.2 template.
 
 Checks level4/data/basics/transfer_money.yml for: file exists, valid YAML with flows:,
 flow with collect: amount, collect: recipient, collect: account_from, action: action_process_transfer.

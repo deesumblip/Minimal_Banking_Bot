@@ -1,10 +1,10 @@
-# Chapter 1.1 — Lauren markdown vs student guide (diff & merge notes)
+# Level 1 — Lauren markdown vs student guide (diff & merge notes)
 
 This document compares **`Lauren_Markdown_Edits/Chapter_1.1_Markdowns/`** to the latest student-facing guide **`.guides/content/Chapter-1-1---Just-Responses-d3b4/`**. The mirror branch **`origin/lauren-markdown-edits-only`** matches the Lauren folder in this repo; the **guide** evolves separately (assessments, Codio wording, lab renumbering, LLM IDs).
 
 ## Page titles (Codio)
 
-**Page titles** below match the student-facing **`title`** in each page’s **`.json`** file beside the markdown (e.g. `0-3-Getting-Help-8218.json` → `"0.3 Getting Help"`). The chapter root title is **`Chapter 1.1 - Just Responses`** (see `.guides/content/Chapter-1-1---Just-Responses-d3b4/index.json`).
+**Page titles** below match the student-facing **`title`** in each page’s **`.json`** file beside the markdown (e.g. `0-3-Getting-Help-8218.json` → `"0.3 Getting Help"`). The chapter root title is **`Level 1 - Just Responses`** (see `.guides/content/Chapter-1-1---Just-Responses-d3b4/index.json`).
 
 **Regenerate full diffs** (PowerShell, from repo root):
 

@@ -20,7 +20,7 @@ Add an `actions:` section to `domain/basics.yml` and register **both**:
 - **action_bank_hours** – the example action you studied in the units  
 - **action_holiday_hours** – the action you created in Lab 3.1  
 
-The Chapter 1.2 starter does **not** include an `actions:` section yet; you add it in this lab. Each action must appear as a list item under `actions:` (e.g. `- action_bank_hours`).
+The Level 2 starter does **not** include an `actions:` section yet; you add it in this lab. Each action must appear as a list item under `actions:` (e.g. `- action_bank_hours`).
 
 ---
 

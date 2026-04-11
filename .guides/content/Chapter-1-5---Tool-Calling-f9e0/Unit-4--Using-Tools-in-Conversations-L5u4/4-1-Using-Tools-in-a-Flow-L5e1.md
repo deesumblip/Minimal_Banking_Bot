@@ -1,6 +1,6 @@
-**Starting point:** Work in **`level5/`** with **Labs 2.0, 2.1, and 3.1** complete (**`prompt_template`**, **`tools/`**, **`tools:`** in **`endpoints.yml`**). **Unit 0.1** describes the Chapter 1.4 baseline if you need context.
+**Starting point:** Work in **`level5/`** with **Labs 2.0, 2.1, and 3.1** complete (**`prompt_template`**, **`tools/`**, **`tools:`** in **`endpoints.yml`**). **Unit 0.1** describes the Level 4 baseline if you need context.
 
-To use tools in dialogue, you need a **flow** that reaches a step where the LLM may call them. In Chapter 1.5 that means:
+To use tools in dialogue, you need a **flow** that reaches a step where the LLM may call them. In Level 5 that means:
 
 1. A **flow** that collects the same slots as **`transfer_money`** (**amount**, **recipient**, **account_from**) so context is available.
 2. A **step** that runs one **action** (`action_process_transfer_with_tools`) in a tool-calling context.

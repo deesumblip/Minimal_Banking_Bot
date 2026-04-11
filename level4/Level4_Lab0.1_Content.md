@@ -20,7 +20,7 @@ Students do **not** need the virtual environment for this lab—**Check It!** on
    - Assessment JSON: `.guides/assessments/code-output-compare-401010001.json`  
    - Grader: `.guides/secure/level4_graders/lab_0.1_grader.py`
 
-**Guide:** **Lab 0.1** (pipeline) in Chapter 1.4, Unit 0.
+**Guide:** **Lab 0.1** (pipeline) in Level 4, Unit 0.
 
 **Prerequisite.** None (first hands-on lab in **`level4/`**). **Lab 2.1** requires this lab completed.
 

@@ -177,7 +177,7 @@ For Unit 6 (Testing with Actions), configure the terminal so students can "jump 
 
 ### Implementation Files
 - `Level2_Implementation_Overview.md` - This file (for Codio team)
-- `LEVEL2_STARTER_STATE.md` - Canonical list of **starter** vs **Chapter 1.2 completion** bot files (aligns `level2/` with lab narrative)
+- `LEVEL2_STARTER_STATE.md` - Canonical list of **starter** vs **Level 2 completion** bot files (aligns `level2/` with lab narrative)
 
 ---
 

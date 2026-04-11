@@ -2,7 +2,7 @@
 	"type": "multiple-choice",
 	"taskId": "multiple-choice-401040103",
 	"source": {
-		"name": "Chapter 1.4: 1.4 Test Your Knowledge - transfer flow slots",
+		"name": "Level 4: 1.4 Test Your Knowledge - transfer flow slots",
 		"showName": false,
 		"instructions": "**For the transfer flow, which slots do we collect before running the action?**",
 		"multipleResponse": false,

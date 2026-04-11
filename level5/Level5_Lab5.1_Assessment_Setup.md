@@ -6,7 +6,7 @@
 
 **Task.** From project root activate venv, `cd level5`, run `rasa train`. Run the assessment when done.
 
-**Codio guide (Chapter 1.5).** The Lab 5.1 page in the Chapter 1.5 guide includes: `{Check It!|assessment}(code-output-compare-501050001)`. Assessment JSON: `.guides/assessments/code-output-compare-501050001.json`.
+**Codio guide (Level 5).** The Lab 5.1 page in the Level 5 guide includes: `{Check It!|assessment}(code-output-compare-501050001)`. Assessment JSON: `.guides/assessments/code-output-compare-501050001.json`.
 
 ---
 

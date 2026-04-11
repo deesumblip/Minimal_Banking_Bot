@@ -1,6 +1,6 @@
-**Starting point:** Work in **`level5/`** from the Chapter 1.4 completion baseline (**Unit 0.1**).
+**Starting point:** Work in **`level5/`** from the Level 4 completion baseline (**Unit 0.1**).
 
-In Chapter 1.4, **custom actions** are what the flow names at an **`action:`** step—for example **`- action: action_process_transfer`**. When execution reaches that step, that action **always** runs.
+In Level 4, **custom actions** are what the flow names at an **`action:`** step—for example **`- action: action_process_transfer`**. When execution reaches that step, that action **always** runs.
 
 **Collect** steps use **`utter_ask_*`** responses (for example **`utter_ask_amount`**). Those names appear under **`actions:`** in the domain. **`action:`** steps point at **Python** classes in **`actions/`**.
 
@@ -15,13 +15,13 @@ In Chapter 1.4, **custom actions** are what the flow names at an **`action:`** s
 | **Definition** | Python class in `actions/`, registered in domain | Python functions in `tools/`, registered in endpoints.yml |
 | **Use case** | Predictable, required steps (e.g. "always run transfer after collecting slots") | Flexible operations (e.g. "user asked for balance? call check_balance") |
 
-Chapter 1.5 adds **tools** next to your existing actions. The **`transfer_money_tools`** flow still collects slots, then runs one **action** (`action_process_transfer_with_tools`).
+Level 5 adds **tools** next to your existing actions. The **`transfer_money_tools`** flow still collects slots, then runs one **action** (`action_process_transfer_with_tools`).
 
 In that step’s context, the **LLM** may call your **tools** (`check_balance`, `process_transfer`, `get_account_info`, …) as needed.
 
 ## Example: Actions in a flow
 
-In Chapter 1.4 a flow step explicitly calls an action. For example, in a transfer flow you might see:
+In Level 4 a flow step explicitly calls an action. For example, in a transfer flow you might see:
 
 ```yaml
 steps:

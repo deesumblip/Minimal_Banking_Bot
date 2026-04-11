@@ -1,6 +1,6 @@
-# Chapter 1.6 (Level 6) – Codio Sync
+# Level 6 – Codio Sync
 
-**Chapter ID:** Chapter-1-6---Sub-Agents-c7d8
+**Codio guide folder ID (Level 6):** `Chapter-1-6---Sub-Agents-c7d8`
 
 **Content:** All unit and lab pages live under this folder. Map them to Codio guide pages in order:
 

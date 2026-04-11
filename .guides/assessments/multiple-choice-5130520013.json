@@ -2,7 +2,7 @@
 	"type": "multiple-choice",
 	"taskId": "multiple-choice-5130520013",
 	"source": {
-		"name": "Chapter 1.3 - Unit 5.2 - Collect step when slot already filled",
+		"name": "Level 3 - Unit 5.2 - Collect step when slot already filled",
 		"showName": false,
 		"instructions": "**A flow reaches a `collect: account` step, but the `account` slot already has a value from earlier in the conversation. What happens next?**",
 		"multipleResponse": false,

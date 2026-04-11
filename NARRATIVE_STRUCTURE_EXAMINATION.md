@@ -1,6 +1,6 @@
-# Narrative Structure Examination: All Levels / Chapters
+# Narrative Structure Examination: All Levels
 
-This document examines the narrative structure of Levels 1–6 (Chapters 1.1–1.6) and suggests where things could be improved.
+This document examines the narrative structure of Levels 1–6 and suggests where things could be improved.
 
 ---
 
@@ -33,7 +33,7 @@ Level 2 uses **7 units** (0–6) with integration walkthrough and knowledge chec
 **Improvements**
 
 - **Optional:** Add a one-line design note in the course outline or CONTENT_LABS doc explaining why Level 1/2/3 use 7–9 units (more concepts, first exposure) and Level 4/5/6 use 7 (0–6) with a single “Summary and Next Steps” unit. No structural change required; this only clarifies intent.
-- **Level 2:** Chapter 1.2 ends with **Unit 6**; **6.4** covers integration, review, and the knowledge check; **6.5** covers recap, limitations, Level 3 preview, and readiness (former Unit 7 / Unit 8 material split across these two pages).
+- **Level 2:** Level 2 ends with **Unit 6**; **6.4** covers integration, review, and the knowledge check; **6.5** covers recap, limitations, Level 3 preview, and readiness (former Unit 7 / Unit 8 material split across these two pages).
 
 ---
 

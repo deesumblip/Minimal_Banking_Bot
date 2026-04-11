@@ -31,7 +31,7 @@ flows:
       - action: action_process_transfer
 ```
 
-**`always_include_in_prompt`** / **`if`** help keep this flow visible to the command generator (see **Unit 0.2** section 2 in Chapter 1.4). Each **`collect:`** **`description:`** should stay **short** and clear. **Retrain** after saving.
+**`always_include_in_prompt`** / **`if`** help keep this flow visible to the command generator (see **Unit 0.2** section 2 in Level 4). Each **`collect:`** **`description:`** should stay **short** and clear. **Retrain** after saving.
 
 3. **Verify.** The file is in `data/basics/`, and the flow has `name`, `description`, and `steps` with the three collect steps and the action step.
 

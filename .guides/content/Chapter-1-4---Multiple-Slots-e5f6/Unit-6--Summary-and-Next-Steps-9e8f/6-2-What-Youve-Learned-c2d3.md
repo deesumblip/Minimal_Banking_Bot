@@ -1,6 +1,6 @@
 **Starting point:** Work in **`level4/`** (see **Unit 0.1**).
 
-## What you added in Chapter 1.4
+## What you added in Level 4
 
 You followed **Lab 0.1** (pipeline YAML), **Labs 2.1–4.1** (domain, action, flow), then **Labs 5.1–5.2** (train and verify). The **step-by-step lab list and deliverables table** live in **Unit 0.2** (sections 2–4) and on each lab page—use those as the canonical checklist; this page only pulls out **ideas**.
 

@@ -2,7 +2,7 @@
 	"type": "multiple-choice",
 	"taskId": "multiple-choice-401040108",
 	"source": {
-		"name": "Chapter 1.4: 6.4 Knowledge Check - domain slot and response",
+		"name": "Level 4: 6.4 Knowledge Check - domain slot and response",
 		"showName": false,
 		"instructions": "**What must be in the domain for each new slot used in a flow?**",
 		"multipleResponse": false,

@@ -2,7 +2,7 @@
 	"type": "multiple-choice",
 	"taskId": "multiple-choice-2496482437",
 	"source": {
-		"name": "Chapter 1.1: 5.1 - Config File Purpose",
+		"name": "Level 1: 5.1 - Config File Purpose",
 		"showName": false,
 		"instructions": "**What is the primary purpose of the `config.yml` file in a Rasa agent project?**",
 		"multipleResponse": false,

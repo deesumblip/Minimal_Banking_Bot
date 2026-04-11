@@ -1,19 +1,19 @@
 **Work in `level5/`:** Every lab path in this chapter sits under **`level5/`** in the repo.
 
-Chapter 1.5 builds on the **Chapter 1.4 completion** agent (see **Unit 0.1**).
+Level 5 builds on the **Level 4 completion** agent (see **Unit 0.1**).
 
 **Tool calling** is the new layer: the LLM can choose and run **tools**—Python functions you register—based on context, instead of only following **action** steps named in your flows.
 
 **How to read this page**
 
-Your **starting point** is **Chapter 1.4 completion** in **`level5/`**. Until you finish the labs, that baseline does **not** yet include:
+Your **starting point** is **Level 4 completion** in **`level5/`**. Until you finish the labs, that baseline does **not** yet include:
 
 - **`prompt_template`** in **`config.yml`** (the Jinja2 file to copy is in **`resources/`**, not yet under **`data/prompts/`**)
 - A **`tools/`** module
 - A **`tools:`** block in **`endpoints.yml`**
 - **`transfer_money_tools`** flow YAML or **`action_process_transfer_with_tools`**
 
-The sections below are the **checklist** from that baseline through **Chapter 1.5 end**. Step-by-step instructions live on each lab page.
+The sections below are the **checklist** from that baseline through **Level 5 end**. Step-by-step instructions live on each lab page.
 
 **Implementation order** (each lab page has the full steps):
 
@@ -37,6 +37,6 @@ The sections below are the **checklist** from that baseline through **Chapter 1.
 | **5.1** | Train; model under **`level5/models/`**. |
 | **5.2** | Completion check; optional Inspector smoke test. |
 
-**Unchanged in spirit.** Chapter 1.4 responses, flows, and actions remain in **`level5/`**; you **add** the rows above, including the **`transfer_money_tools`** path.
+**Unchanged in spirit.** Level 4 responses, flows, and actions remain in **`level5/`**; you **add** the rows above, including the **`transfer_money_tools`** path.
 
 **Done when:** Labs **2.0** through **5.2** pass, **`level5/`** matches the deliverables in the table (including a trained model from **Lab 5.1**), and you can exercise **`transfer_money_tools`** as described on **Lab 5.2** (optional).

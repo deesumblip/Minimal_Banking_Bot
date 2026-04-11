@@ -2,7 +2,7 @@
 
 These items stress **integration**—domain slot conditions, flow shape, the **`tools`** package, the command-generator prompt, and training. They do **not** repeat the **Unit 1** (Test Your Knowledge) quiz on basic definitions.
 
-Answer the following to solidify Chapter 1.5 (tool calling).
+Answer the following to solidify Level 5 (tool calling).
 
 {Check It!|assessment}(multiple-choice-501030105)
 

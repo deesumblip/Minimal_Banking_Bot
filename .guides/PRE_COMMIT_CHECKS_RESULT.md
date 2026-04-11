@@ -7,19 +7,19 @@ Run date: (generated when checks were run)
 ## 1. Global course JSON
 
 - **File:** `.guides/content/index.json`
-- **Check:** `order` lists 5 chapter ids; each must have a matching chapter folder with `index.json`.
-- **Result:** **PASS** – All 5 chapters (1.1–1.5) exist with `index.json`. Order matches.
+- **Check:** `order` lists six level guide folder ids; each must have a matching folder with `index.json`.
+- **Result:** **PASS** – All six levels (Levels 1–6) exist with `index.json`. Order matches.
 
 ---
 
-## 2. Chapter 1.5 – Unit 6 (no orphans)
+## 2. Level 5 – Unit 6 (no orphans)
 
 - **Check:** Unit 6 should have no orphan files; only 6.1–6.7 as in index order (6.5 = Limitations, 6.7 = Checklist).
 - **Result:** **PASS** – Only `6-5-Limitations-of-Level-5-L5g5` present (no old `6-5-Course-Completion-Checklist-L5g5`). Unit 6 index order lists 7 pages; all have .md and .json.
 
 ---
 
-## 3. Chapter 1.5 – Unit 1 (1.3 Test Your Knowledge)
+## 3. Level 5 – Unit 1 (1.3 Test Your Knowledge)
 
 - **Check:** Unit 1 `order` includes `1-3-Test-Your-Knowledge-L5b3`; matching .md and .json must exist.
 - **Result:** **PASS** – Missing files were created: `1-3-Test-Your-Knowledge-L5b3.md` and `1-3-Test-Your-Knowledge-L5b3.json` in `Unit-1--Introduction-to-Tools-L5u1/`.
@@ -59,13 +59,13 @@ Run date: (generated when checks were run)
 | Check                    | Status |
 |--------------------------|--------|
 | Global course JSON       | PASS   |
-| Chapter 1.5 Unit 6       | PASS   |
-| Chapter 1.5 Unit 1 (1.3)| PASS (files created) |
+| Level 5 Unit 6       | PASS   |
+| Level 5 Unit 1 (1.3)| PASS (files created) |
 | Level 5 assessment JSONs | PASS   |
 | Level 5 graders          | PASS   |
 | Secrets / .env           | PASS   |
 | .gitignore               | PASS   |
 
-**Action taken during run:** Created missing `1-3-Test-Your-Knowledge-L5b3.md` and `.json` in Chapter 1.5 Unit 1 so index order is coherent.
+**Action taken during run:** Created missing `1-3-Test-Your-Knowledge-L5b3.md` and `.json` in Level 5 Unit 1 so index order is coherent.
 
 You can commit and push after reviewing `git status` and staging the intended files.

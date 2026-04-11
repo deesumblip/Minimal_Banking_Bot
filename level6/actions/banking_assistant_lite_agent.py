@@ -3,7 +3,7 @@
 The default ReAct loop passes ``tools=`` on every LLM call. The Rasa tutorial host
 (``provider: rasa``) does not accept that API shape. This class routes user text to
 MCP tools with simple rules, then uses the same ``model_group`` for **text-only**
-completions so Chapter 1.6 demos work with ``RASA_LICENSE`` only.
+completions so Level 6 demos work with ``RASA_LICENSE`` only.
 """
 
 from __future__ import annotations

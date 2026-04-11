@@ -6,7 +6,7 @@
 
 **Task**: Create `data/basics/check_balance.yml` in the `level3` folder with a flow that has `collect: account` and `action: action_check_balance_simple`. Run the assessment when done.
 
-**Codio guide (Chapter 1.3).** The Lab 5.1 page includes: `{Check It!|assessment}(code-output-compare-1235165472)`. Assessment JSON: `.guides/assessments/code-output-compare-1235165472.json`.
+**Codio guide (Level 3).** The Lab 5.1 page includes: `{Check It!|assessment}(code-output-compare-1235165472)`. Assessment JSON: `.guides/assessments/code-output-compare-1235165472.json`.
 
 ---
 

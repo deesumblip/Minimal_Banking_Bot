@@ -2,7 +2,7 @@
 	"type": "multiple-choice",
 	"taskId": "multiple-choice-401040106",
 	"source": {
-		"name": "Chapter 1.4: 6.4 Knowledge Check - reading multiple slots in action",
+		"name": "Level 4: 6.4 Knowledge Check - reading multiple slots in action",
 		"showName": false,
 		"instructions": "**How does an action read multiple slots?**",
 		"multipleResponse": false,

@@ -6,7 +6,7 @@
 
 **Task.** Add a `tools:` section to `level5/endpoints.yml` with `tools_module: "tools"`. Run the assessment when done.
 
-**Codio guide (Chapter 1.5).** The Lab 3.1 page in the Chapter 1.5 guide includes: `{Check It!|assessment}(code-output-compare-501030001)`. Assessment JSON: `.guides/assessments/code-output-compare-501030001.json`.
+**Codio guide (Level 5).** The Lab 3.1 page in the Level 5 guide includes: `{Check It!|assessment}(code-output-compare-501030001)`. Assessment JSON: `.guides/assessments/code-output-compare-501030001.json`.
 
 ---
 

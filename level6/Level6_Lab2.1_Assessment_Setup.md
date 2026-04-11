@@ -4,13 +4,13 @@
 
 **Placement.** This lab follows Unit 2 (Sub-Agent Layout and Config), Level 6.
 
-**Sequence (Chapter 1.5–style).**
+**Sequence (Level 5–style).**
 
 1. **Fill in the blanks** — `fill-in-the-blanks-501060111` (`.guides/assessments/fill-in-the-blanks-501060111.json`). Produces complete **`config.yml`** YAML.
 2. **Copy** the passed YAML to **`level6/sub_agents/banking_assistant/config.yml`**.
 3. **Code Test** — `{Check It!|assessment}(code-output-compare-501060001)`.
 
-**Codio guide (Chapter 1.6).** Lab 2.1 page lists both assessments in order.
+**Codio guide (Level 6).** Lab 2.1 page lists both assessments in order.
 
 ---
 

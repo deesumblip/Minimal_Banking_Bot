@@ -14,7 +14,7 @@
 ### Unit 0: Recap - What you built in Level 4
 **Type**: Content Page | **Assessment**: None
 **Sections**: 0.1 Your Level 4 Banking Agent | 0.2 What Level 5 Adds
-**Key Concepts**: Recap of Level 4 / Chapter 1.4 completion; **`level5/`** as the working tree; how git **`level4/`** relates to **`level5/`** (page 0.1); what Chapter 1.5 adds (tools, `tools_module`, `transfer_money_tools` flow).
+**Key Concepts**: Recap of Level 4 / Level 4 completion; **`level5/`** as the working tree; how git **`level4/`** relates to **`level5/`** (page 0.1); what Level 5 adds (tools, `tools_module`, `transfer_money_tools` flow).
 
 ### Unit 1: Introduction to Tools
 **Type**: Content Page | **Assessment**: None
@@ -51,7 +51,7 @@
 ## Assessment Summary
 Labs 2.1, 3.1, 4.1, 5.1, 5.2 - each 10 points, total 50. Graders in .guides/secure/level5_graders/.
 
-## Codio Chapter ID
+## Codio guide folder ID
 Use unique ID for Level 5: e.g. Chapter-1-5---Tool-Calling-f9e0 (suffix f9e0; do not reuse d3b4, 30d6, a4b5, e5f6).
 
 ---
@@ -74,7 +74,7 @@ Use unique ID for Level 5: e.g. Chapter-1-5---Tool-Calling-f9e0 (suffix f9e0; do
 
 All source files live in **level5/**. When creating the Level 5 chapter in Codio, use a **unique chapter ID** so it does not overlap with existing content in `.guides/content/`.
 
-### Codio Chapter ID (do not overlap)
+### Codio guide folder ID (do not overlap)
 
 Existing: Chapter-1-1 (d3b4), Chapter-1-2 (30d6), Chapter-1-3 (a4b5), Chapter-1-4 (e5f6). Use **Chapter-1-5---Tool-Calling-f9e0** (suffix f9e0). Ensure unit and page IDs under this chapter are also unique.
 

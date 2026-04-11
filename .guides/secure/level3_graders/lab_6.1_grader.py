@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Lab 6.1: Training and Testing with Slots - Grader Script
-Output format matches Chapter 1.2 Lab 6.2 / Level 3 Lab 3.1: Check 1–5 (1-based),
+Output format matches Level 2 Lab 6.2 / Level 3 Lab 3.1: Check 1–5 (1-based),
 leading space on PASSED lines, ========== summary band.
 
 Runs from workspace root; expects /home/codio/workspace.

@@ -134,7 +134,7 @@ fi
 
 ### Example student deliverable (for grading reference)
 
-Students create **`data/basics/hours.yml`** and **`data/basics/holiday_hours.yml`** (neither is in the Chapter 1.2 starter). Example contents:
+Students create **`data/basics/hours.yml`** and **`data/basics/holiday_hours.yml`** (neither is in the Level 2 starter). Example contents:
 
 **`data/basics/hours.yml`** (example flow; Lab 5.1):
 

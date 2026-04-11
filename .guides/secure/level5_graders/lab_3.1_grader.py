@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Lab 3.1: Registering Tools in endpoints.yml - Grader Script (Level 5 / Chapter 1.5)
-Output format matches Chapter 1.2 Lab 6.2 template.
+Lab 3.1: Registering Tools in endpoints.yml - Grader Script (Level 5 / Level 5)
+Output format matches Level 2 Lab 6.2 template.
 
 Checks level5/endpoints.yml for: tools: section and tools_module: "tools".
 Runs from workspace root; expects /home/codio/workspace.

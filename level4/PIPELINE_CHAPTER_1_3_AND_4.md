@@ -1,14 +1,14 @@
-# Pipeline: Chapter 1.3 vs Chapter 1.4
+# Pipeline: Level 3 vs Level 4
 
-**Chapter 1.3 (Level 3) is unchanged:** `level3/config.yml` uses **`SearchReadyLLMCommandGenerator`** + **`FlowPolicy`**, same as before.
+**Level 3 is unchanged:** `level3/config.yml` uses **`SearchReadyLLMCommandGenerator`** + **`FlowPolicy`**, same as before.
 
-**Starter `level4/` in this repo:** The checked-in **`level4/config.yml`** and **`level4/endpoints.yml`** match **`level3/`** so you start Chapter 1.4 from the **same** Chapter 1.3 completion state. **Lab 0.1** is where you switch to **`CompactLLMCommandGenerator`** and the Chapter 1.4 **`endpoints.yml`** settings below.
+**Starter `level4/` in this repo:** The checked-in **`level4/config.yml`** and **`level4/endpoints.yml`** match **`level3/`** so you start Level 4 from the **same** Level 3 completion state. **Lab 0.1** is where you switch to **`CompactLLMCommandGenerator`** and the Level 4 **`endpoints.yml`** settings below.
 
 ---
 
 ## Why Level 4’s `config.yml` differs after Lab 0.1
 
-**Chapter 1.4 multi-slot flows** (amount → recipient → account_from) need reliable **free-text slot fills**. With **`SearchReadyLLMCommandGenerator`**, it is common to see:
+**Level 4 multi-slot flows** (amount → recipient → account_from) need reliable **free-text slot fills**. With **`SearchReadyLLMCommandGenerator`**, it is common to see:
 
 - Amount OK (“250 dollars”)  
 - Then **“I’m sorry I am unable to understand you…”** on short names (**“MC Hammer”**, **“JFK”**), etc.
@@ -25,7 +25,7 @@ After **Lab 0.1**, **`level4/config.yml`** uses **`CompactLLMCommandGenerator`**
 | `level4/` starter (before Lab 0.1) | `SearchReadyLLMCommandGenerator` (same as Level 3) |
 | `level4/` after Lab 0.1 | `CompactLLMCommandGenerator` |
 
-The **`recipe`**, **`.env`**, and overall **`endpoints.yml`** layout match Level 3 at the **starter**; after Lab 0.1, the **`model_groups`** entry for command generation is **tuned in `level4/endpoints.yml`** (model + temperature)—see **Unit 0.2** in Chapter 1.4 for the full Chapter 1.3 → 1.4 checklist.
+The **`recipe`**, **`.env`**, and overall **`endpoints.yml`** layout match Level 3 at the **starter**; after Lab 0.1, the **`model_groups`** entry for command generation is **tuned in `level4/endpoints.yml`** (model + temperature)—see **Unit 0.2** in Level 4 for the full Level 3 → 1.4 checklist.
 
 **`endpoints.yml` model** — The **`openai-gpt-5-1`** *group id* ties **`config.yml`**’s **`model_group`** to the **`model_groups`** entry in **`endpoints.yml`**. For Level 4, keep **`model: openai-gpt-5-1`** with **`temperature: 0.1`** so free-text **recipient** **FillSlot** / CALM command DSL stays steadier; a **higher** **`temperature`** or a **`model:`** line that does not match the course value often mis-generates slot fills even when **`CompactLLMCommandGenerator`** is correct. NLG rephrase uses the same group.
 
@@ -37,8 +37,8 @@ The **`recipe`**, **`.env`**, and overall **`endpoints.yml`** layout match Level
 
 ## What students do
 
-- Finish **Chapter 1.3** in **`level3/`** — no change.
-- In **Chapter 1.4**, work in **`level4/`** and align **`level4/config.yml`** (**`CompactLLMCommandGenerator`**) and **`level4/endpoints.yml`** with this repo: the **`openai-gpt-5-1`** model group must point at **`openai-gpt-5-1`** with **`temperature: 0.1`** (see **Unit 0.2**). Updating only **`config.yml`** without **`endpoints.yml`** can still give flaky **recipient** **FillSlot** behavior.
+- Finish **Level 3** in **`level3/`** — no change.
+- In **Level 4**, work in **`level4/`** and align **`level4/config.yml`** (**`CompactLLMCommandGenerator`**) and **`level4/endpoints.yml`** with this repo: the **`openai-gpt-5-1`** model group must point at **`openai-gpt-5-1`** with **`temperature: 0.1`** (see **Unit 0.2**). Updating only **`config.yml`** without **`endpoints.yml`** can still give flaky **recipient** **FillSlot** behavior.
 
 **Domain, flows, and actions** are still where multiple slots are defined; the **config + endpoints** alignment is so the LLM can fill those slots consistently.
 

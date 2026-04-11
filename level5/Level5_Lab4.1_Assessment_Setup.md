@@ -6,7 +6,7 @@
 
 **Task.** Create `level5/data/basics/transfer_money_tools.yml` with a flow that collects amount, recipient, account_from and then runs `action_process_transfer_with_tools`. Create `level5/actions/action_process_transfer_with_tools.py` and add `action_process_transfer_with_tools` to the domain `actions:` list. Run the assessment when done.
 
-**Codio guide (Chapter 1.5).** The Lab 4.1 page in the Chapter 1.5 guide includes: `{Check It!|assessment}(code-output-compare-501040001)`. Assessment JSON: `.guides/assessments/code-output-compare-501040001.json`.
+**Codio guide (Level 5).** The Lab 4.1 page in the Level 5 guide includes: `{Check It!|assessment}(code-output-compare-501040001)`. Assessment JSON: `.guides/assessments/code-output-compare-501040001.json`.
 
 ---
 

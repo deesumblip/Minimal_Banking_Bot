@@ -12,18 +12,18 @@
 **Left (<) and right (>) guide navigation often land on wrong or random pages** instead of the actual previous/next page in sequence. Users cannot reliably step through the guide in order.
 
 - From many pages, pressing **<** or **>** jumps to a different chapter or an unrelated page.
-- One reproducible example: from **Chapter 1.2, Unit 8, page 8.5**, pressing **<** goes to **Chapter 1.1, Unit 0, page 0.1** instead of **Chapter 1.2, Unit 8, page 8.4**.
+- One reproducible example: from **Level 2, Unit 8, page 8.5**, pressing **<** goes to **Level 1, Unit 0, page 0.1** instead of **Level 2, Unit 8, page 8.4**.
 - The problem is not limited to Unit 7/8; navigation is unreliable across the guide.
 
 ---
 
 ## Steps to Reproduce
 
-1. Open a Codio assignment that uses a **Guides** structure with multiple chapters, each containing multiple units and pages (e.g. Chapter 1.1, 1.2, 1.3, …).
-2. Navigate to **Chapter 1.2 (Custom Actions), Unit 8 (Assessment and Next Steps), last page (8.5 Course Completion Checklist)**.
+1. Open a Codio assignment that uses a **Guides** structure with multiple chapters, each containing multiple units and pages (e.g. Level 1, 1.2, 1.3, …).
+2. Navigate to **Level 2 (Custom Actions), Unit 8 (Assessment and Next Steps), last page (8.5 Course Completion Checklist)**.
 3. Press the **previous (<)** navigation button.
-4. **Observed:** The view jumps to **Chapter 1.1, Unit 0, page 0.1** (first page of the guide).
-5. **Expected:** The view should go to **Chapter 1.2, Unit 8, page 8.4** (previous page in the same unit).
+4. **Observed:** The view jumps to **Level 1, Unit 0, page 0.1** (first page of the guide).
+5. **Expected:** The view should go to **Level 2, Unit 8, page 8.4** (previous page in the same unit).
 
 In general, **both < and >** can land on random or wrong pages anywhere in the guide, not just in Unit 7/8.
 
@@ -33,10 +33,10 @@ In general, **both < and >** can land on random or wrong pages anywhere in the g
 
 We believe the guide viewer identifies the **current page** using a value that is **not unique** across the whole guide, for example:
 
-- **Page title** (e.g. `"8.5 Course Completion Checklist"`), which is the same in Chapter 1.1, 1.2, 1.3, etc., or  
+- **Page title** (e.g. `"8.5 Course Completion Checklist"`), which is the same in Level 1, 1.2, 1.3, etc., or  
 - A **path or URL** that does not include the chapter (e.g. only unit + page).
 
-When the user is on a given page, the app may resolve “current page” using a **non-unique** key (e.g. title or a path without chapter). It then picks the wrong index in the flattened page list (e.g. the first match), so prev/next are computed from the wrong position and land on random pages. For example, on **Chapter 1.2, 8.5**, the viewer may treat the current page as **Chapter 1.1, 8.5**, so “previous” goes 1.1 → 8.4 → … → 0.1.
+When the user is on a given page, the app may resolve “current page” using a **non-unique** key (e.g. title or a path without chapter). It then picks the wrong index in the flattened page list (e.g. the first match), so prev/next are computed from the wrong position and land on random pages. For example, on **Level 2, 8.5**, the viewer may treat the current page as **Level 1, 8.5**, so “previous” goes 1.1 → 8.4 → … → 0.1.
 
 ---
 
@@ -63,7 +63,7 @@ so that the “current page” is always the one the user is actually viewing, a
 
 ## Workaround we applied (content-side)
 
-We made Chapter 1.2 Unit 7 and Unit 8 **page titles** unique by appending `" (Level 2)"` where they would otherwise match other chapters. This may help if the viewer matches by title; if it matches by path/URL only, the fix needs to be in the Codio guide viewer.
+We made Level 2 Unit 7 and Unit 8 **page titles** unique by appending `" (Level 2)"` where they would otherwise match other chapters. This may help if the viewer matches by title; if it matches by path/URL only, the fix needs to be in the Codio guide viewer.
 
 ---
 

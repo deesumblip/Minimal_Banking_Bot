@@ -2,7 +2,7 @@
 	"type": "multiple-choice",
 	"taskId": "multiple-choice-1202300001",
 	"source": {
-		"name": "Chapter 1.2: 2.3 Test Your Knowledge - run() Parameters",
+		"name": "Level 2: 2.3 Test Your Knowledge - run() Parameters",
 		"showName": false,
 		"instructions": "**What are the three parameters passed to an action's run() method?**",
 		"multipleResponse": false,

@@ -1,8 +1,8 @@
-# Chapter 1.3: Content and Assessment Progression — Gap Analysis
+# Level 3: Content and Assessment Progression — Gap Analysis
 
-This document summarizes gaps and inconsistencies found in Chapter 1.3 (Slot Collection) content and assessment progression. Recommendations are at the end.
+This document summarizes gaps and inconsistencies found in Level 3 (Slot Collection) content and assessment progression. Recommendations are at the end.
 
-**Resolved in repo (items 1–5):** (1) 4.2 now states Lab 4.1 has a graded code assessment. (2) 3.1 domain example includes all three actions (`action_bank_hours`, `action_holiday_hours`, `action_check_balance_simple`) with prose that the starter preloads the Level 2 actions. (3) Lab 6.1 references **Lab 0.1 in Chapter 1.1** for venv/Rasa Pro and `.env`. (4) Unit 5.2 uses new MCQ `multiple-choice-5130520013` (slot already filled); Unit 2.3 still uses `multiple-choice-3629141196` (empty slot). (5) Unit 0.1 states **`action_holiday_hours.py`** is **preloaded** at the start of Chapter 1.3; Lab 3.1 grader and rubric expect all three action names in `domain/basics.yml`.
+**Resolved in repo (items 1–5):** (1) 4.2 now states Lab 4.1 has a graded code assessment. (2) 3.1 domain example includes all three actions (`action_bank_hours`, `action_holiday_hours`, `action_check_balance_simple`) with prose that the starter preloads the Level 2 actions. (3) Lab 6.1 references **Lab 0.1 in Level 1** for venv/Rasa Pro and `.env`. (4) Unit 5.2 uses new MCQ `multiple-choice-5130520013` (slot already filled); Unit 2.3 still uses `multiple-choice-3629141196` (empty slot). (5) Unit 0.1 states **`action_holiday_hours.py`** is **preloaded** at the start of Level 3; Lab 3.1 grader and rubric expect all three action names in `domain/basics.yml`.
 
 ---
 
@@ -23,17 +23,17 @@ This document summarizes gaps and inconsistencies found in Chapter 1.3 (Slot Col
 
 - **Where:** `Unit-3--Defining-Slots-in-the-Domain-6f7a/3-1-The-Slots-Section-4b5c.md` (and Lab 3.1).
 - **Former issue:** Example sometimes showed only `action_bank_hours` + `action_check_balance_simple`, which encouraged dropping **`action_holiday_hours`** and breaking training.
-- **Current:** The unit snippet lists **`action_bank_hours`**, **`action_holiday_hours`**, and **`action_check_balance_simple`**. Unit 0.1 and Lab 3.1 state that **`action_holiday_hours.py`** is **preloaded** with the Chapter 1.3 starter; assessments expect the full three-name `actions:` list.
+- **Current:** The unit snippet lists **`action_bank_hours`**, **`action_holiday_hours`**, and **`action_check_balance_simple`**. Unit 0.1 and Lab 3.1 state that **`action_holiday_hours.py`** is **preloaded** with the Level 3 starter; assessments expect the full three-name `actions:` list.
 
 ---
 
 ### 1.3 Cross-chapter reference to “Lab 0.1” (prerequisites) — fixed in Lab 6.1
 
-- **Where:** `Unit-6--Training-and-Testing-with-Slots-2f3a/Lab-6-1-Training-and-Testing-d7e8.md` (and similarly in Ch 1.4)
-- **Issue:** Lab 6.1 says: “If RASA_LICENSE or OPENAI_API_KEY is not set, check Lab 0.1 or ask your instructor.” Lab 0.1 lives in **Chapter 1.1** (Just Responses), not in Chapter 1.3.
+- **Where:** `Unit-6--Training-and-Testing-with-Slots-2f3a/Lab-6-1-Training-and-Testing-d7e8.md` (and similarly in Level 4)
+- **Issue:** Lab 6.1 says: “If RASA_LICENSE or OPENAI_API_KEY is not set, check Lab 0.1 or ask your instructor.” Lab 0.1 lives in **Level 1** (Just Responses), not in Level 3.
 - **Gap:** If the course is taken out of order or 1.3 is used standalone, “Lab 0.1” is ambiguous (which chapter? which unit?).
 
-**Recommendation:** Either (a) add a short prerequisite note at the start of Chapter 1.3 (e.g. in Unit 0) that “Lab 0.1 in Chapter 1.1 covers venv and Rasa Pro setup,” or (b) phrase the reference as “Lab 0.1 in Chapter 1.1 (Prerequisites)” so the location is clear.
+**Recommendation:** Either (a) add a short prerequisite note at the start of Level 3 (e.g. in Unit 0) that “Lab 0.1 in Level 1 covers venv and Rasa Pro setup,” or (b) phrase the reference as “Lab 0.1 in Level 1 (Prerequisites)” so the location is clear.
 
 ---
 
@@ -87,8 +87,8 @@ No missing dependencies; only the Lab 0.1 reference needs clarification (1.3).
 
 1. ~~**4.2 Placeholder-Handling:**~~ Done.
 2. ~~**3.1 The-Slots-Section:**~~ Done.
-3. ~~**Lab 6.1:**~~ Done (Chapter 1.1 cited). Optional: add the same Chapter 1.1 pointer in **Unit 0** for students who jump straight to Chapter 1.3.
+3. ~~**Lab 6.1:**~~ Done (Level 1 cited). Optional: add the same Level 1 pointer in **Unit 0** for students who jump straight to Level 3.
 4. ~~**Assessment ID 3629141196 / 5.2:**~~ Done — 5.2 uses `multiple-choice-5130520013` (already-filled slot); 2.3 keeps `multiple-choice-3629141196` (empty slot).
 5. **Labs 6.2 and 7.1:** Optionally clarify that “no graded assessment” means no code test but may include knowledge-check questions.
 
-Chapter 1.3 content and assessments for items 1–4 are now aligned as described above.
+Level 3 content and assessments for items 1–4 are now aligned as described above.

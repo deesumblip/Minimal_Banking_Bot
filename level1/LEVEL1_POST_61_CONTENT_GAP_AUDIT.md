@@ -1,4 +1,4 @@
-# Chapter 1.1 (Level 1) content gap audit: Lab 6.1 onwards
+# Level 1 content gap audit: Lab 6.1 onwards
 
 **Question**: Do any assignments from Lab 6.1 onwards assume students have already created something that was never actually created in an earlier lab?
 

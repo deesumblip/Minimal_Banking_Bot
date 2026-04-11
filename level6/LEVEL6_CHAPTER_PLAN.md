@@ -1,6 +1,6 @@
-# Level 6 / Chapter 1.6: What to Do (Based on Levels 4 & 5)
+# Level 6 / Level 6: What to Do (Based on Levels 4 & 5)
 
-This document lists what to do for **Level 6** (Sub-Agents) and **Chapter 1.6** so they follow the same principles and structure as Level 4 and Level 5.
+This document lists what to do for **Level 6** (Sub-Agents) and **Level 6** so they follow the same principles and structure as Level 4 and Level 5.
 
 ---
 
@@ -10,7 +10,7 @@ This document lists what to do for **Level 6** (Sub-Agents) and **Chapter 1.6** 
 |-----------|-------------|-------------------|
 | **Examples before labs** | Each unit that leads to a “create” lab shows a **full example** (YAML, Python, or config) of the thing students will create. | For every lab that asks students to create or add something, ensure the **preceding unit content** includes a complete example of that thing. |
 | **Lab objectives tie to content** | Lab objectives say: “In Unit X you saw an example of … In this lab you will create your own version …” | Use the same wording pattern so labs explicitly reference the examples students saw. |
-| **Source content in level folder** | Unit content lives in `level4/Level4_Unit*_Content_*.md` and `level5/Level5_Unit*_Content_*.md`; labs in `Level*_Lab*_Content.md`. | Create `level6/Level6_Unit*_Content_*.md` and `Level6_Lab*_Content.md`; keep in sync with `.guides` Chapter 1.6. |
+| **Source content in level folder** | Unit content lives in `level4/Level4_Unit*_Content_*.md` and `level5/Level5_Unit*_Content_*.md`; labs in `Level*_Lab*_Content.md`. | Create `level6/Level6_Unit*_Content_*.md` and `Level6_Lab*_Content.md`; keep in sync with `.guides` Level 6. |
 | **TUTORIAL.md** | level4 and level5 have TUTORIAL.md with ToC and short module summaries. | Add `level6/TUTORIAL.md` with ToC (Modules 0–6) and one-paragraph summaries per module. |
 | **CONTENT_LABS_AND_ASSESSMENTS** | level4 has LEVEL4_CONTENT_LABS_AND_ASSESSMENTS.md; level5 has LEVEL5_CONTENT_LABS_AND_ASSESSMENTS.md (mapping, task IDs, grader paths). | Add `level6/LEVEL6_CONTENT_LABS_AND_ASSESSMENTS.md` with Level 5→6 mapping, unit/lab list, task IDs (e.g. 501060001…), grader paths `.guides/secure/level6_graders/`. |
 | **Graders under .guides/secure** | All graders in `.guides/secure/level*_graders/`. | Put Level 6 graders in `.guides/secure/level6_graders/`; reference only that path in docs and assessment JSONs. |
@@ -18,7 +18,7 @@ This document lists what to do for **Level 6** (Sub-Agents) and **Chapter 1.6** 
 
 ---
 
-## 2. Chapter 1.6 and level6 Structure (Proposed)
+## 2. Level 6 and level6 Structure (Proposed)
 
 **Starter:** level6 folder = Level 5 end state (no Level 6–only content pre-added). Students add sub-agent(s), flow(s) that call them, and any MCP/config.
 
@@ -77,11 +77,11 @@ This document lists what to do for **Level 6** (Sub-Agents) and **Chapter 1.6** 
 
 ## 4. Summary
 
-For Level 6 / Chapter 1.6, do the following **on the basis of what we’ve done for each chapter/level**:
+For Level 6 / Level 6, do the following **on the basis of what we’ve done for each chapter/level**:
 
 1. **Content first, then labs** — For every “create” or “add” lab, the preceding unit has a **full example** of the artifact (config, flow YAML, etc.).
 2. **Lab wording** — Labs explicitly say “you saw an example in Unit X” and “create/add your own version.”
-3. **Single source in level6** — All unit and lab narrative content lives in `level6/` (Level6_Unit*_Content_*.md, Level6_Lab*_Content.md) and is kept in sync with `.guides` Chapter 1.6.
+3. **Single source in level6** — All unit and lab narrative content lives in `level6/` (Level6_Unit*_Content_*.md, Level6_Lab*_Content.md) and is kept in sync with `.guides` Level 6.
 4. **TUTORIAL + CONTENT_LABS doc** — level6/TUTORIAL.md and level6/LEVEL6_CONTENT_LABS_AND_ASSESSMENTS.md, following level4/level5.
 5. **Secure graders** — All Level 6 graders under `.guides/secure/level6_graders/`; all references point there.
 6. **Unit 6 bookend** — Full Unit 6 set (6.1–6.7) in both .guides and level6.

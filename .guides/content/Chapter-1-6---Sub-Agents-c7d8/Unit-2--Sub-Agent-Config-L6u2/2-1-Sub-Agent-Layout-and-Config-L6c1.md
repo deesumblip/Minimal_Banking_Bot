@@ -16,4 +16,4 @@ You **author** this file in the lab; it is not copy-pasted from the starter tree
 
 **Why `module`:** The default ReAct sub-agent sends **tool definitions** on every LLM call; the tutorial host does not support that API shape. The **Lite** agent routes user text to MCP tools with simple rules and uses the same **`model_group`** for **text-only** completions.
 
-In **Lab 2.1** you first complete a **Fill in the blanks** exercise (full **`config.yml`** skeleton), **copy** the passed YAML into **`level6/sub_agents/banking_assistant/config.yml`**, then run the **Code Test** — same **fill-in → copy → Check It!** pattern as **Chapter 1.5 Lab 2.1** (`banking_tools.py`).
+In **Lab 2.1** you first complete a **Fill in the blanks** exercise (full **`config.yml`** skeleton), **copy** the passed YAML into **`level6/sub_agents/banking_assistant/config.yml`**, then run the **Code Test** — same **fill-in → copy → Check It!** pattern as **Level 5 Lab 2.1** (`banking_tools.py`).

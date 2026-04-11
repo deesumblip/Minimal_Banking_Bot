@@ -1,8 +1,8 @@
-# Chapter 1.4 (Lab 0.1, Unit 0.2) has you finish level4/config.yml with CompactLLMCommandGenerator,
+# Level 4 (Lab 0.1, Unit 0.2) has you finish level4/config.yml with CompactLLMCommandGenerator,
 # flow_retrieval, and minimize_num_calls: false. This level5 starter uses SearchReadyLLMCommandGenerator
-# instead: Chapter 1.5 Lab 2.0 wires prompt_template on this step (graders expect SearchReady here).
+# instead: Level 5 Lab 2.0 wires prompt_template on this step (graders expect SearchReady here).
 # If you continue from your own finished level4/ tree, either use this repo's level5/config.yml as
-# the Chapter 1.5 baseline or migrate prompt_template onto Compact—do not mix undocumented guesses.
+# the Level 5 baseline or migrate prompt_template onto Compact—do not mix undocumented guesses.
 #
 # assistant_id is level5-agent so trained models do not collide with level4-agent.
 

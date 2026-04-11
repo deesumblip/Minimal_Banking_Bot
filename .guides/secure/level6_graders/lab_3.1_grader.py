@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Lab 3.1: Registering MCP - Grader (Level 6)
-Output format matches Chapter 1.2 Lab 6.2 template.
+Output format matches Level 2 Lab 6.2 template.
 
 Checks level6/endpoints.yml contains mcp_servers with at least one entry (name, url, type).
 """

@@ -13,7 +13,7 @@
 
 **Important:** This level builds on your Level 2 banking agent. You don't start from scratch. You use the **same virtual environment** created in Level 1 (in the **project root**). There is no new `.venv` inside `level3/`.
 
-The **level3** folder is set up as a Chapter 1.2–equivalent copy of your Level 2 agent. **`action_bank_hours.py`** and **`action_holiday_hours.py`** are **preloaded** in `level3/actions/` from the start of Chapter 1.3 (you do not recreate the holiday action in this chapter). You add the following in the labs.
+The **level3** folder is set up as a Level 2–equivalent copy of your Level 2 agent. **`action_bank_hours.py`** and **`action_holiday_hours.py`** are **preloaded** in `level3/actions/` from the start of Level 3 (you do not recreate the holiday action in this chapter). You add the following in the labs.
 
 **What stays the same:** All Level 1 and Level 2 responses, flows, and the two preloaded custom actions. In Lab 3.1 you extend `actions:` so it lists the existing `action_bank_hours` and `action_holiday_hours` plus the new name.
 

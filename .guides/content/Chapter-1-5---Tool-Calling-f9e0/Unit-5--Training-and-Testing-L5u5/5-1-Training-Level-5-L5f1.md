@@ -1,6 +1,6 @@
 **Starting point:** Work in **`level5/`** with **Labs 2.0–4.1** complete (**`prompt_template`**, **`data/prompts/`**, **`tools/`**, **`tools:`** in **`endpoints.yml`**, **`transfer_money_tools`**, **`action_process_transfer_with_tools`**).
 
-With tools, endpoints, flow, and action in place, **train** the Chapter 1.5 agent.
+With tools, endpoints, flow, and action in place, **train** the Level 5 agent.
 
 ## Steps
 

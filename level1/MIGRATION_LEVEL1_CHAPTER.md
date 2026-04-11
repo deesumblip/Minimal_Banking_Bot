@@ -8,7 +8,7 @@ We use **Chapter-1-1---Just-Responses-d3b4** as the single source of truth for L
 
 1. **Parked** `.guides/content/Level-1-1-d3b4` → **level1/old_duplicates/Level-1-1-d3b4** (no longer in the guide order).
 2. **Course order** in `.guides/content/index.json` now points to **Chapter-1-1---Just-Responses-d3b4** instead of Level-1-1-d3b4.
-3. **Chapter folder** `.guides/content/Chapter-1-1---Just-Responses-d3b4/` in the repo holds **Units 0–8** (nine units), page `.md`/`.json` pairs, and per-unit `index.json` files. Treat this folder as the ground truth alongside Codio; use the steps below if you need to **re-sync** from a Codio export.
+3. **Level 1 guide folder** `.guides/content/Chapter-1-1---Just-Responses-d3b4/` in the repo holds **Units 0–8** (nine units), page `.md`/`.json` pairs, and per-unit `index.json` files. Treat this folder as the ground truth alongside Codio; use the steps below if you need to **re-sync** from a Codio export.
 
 ---
 

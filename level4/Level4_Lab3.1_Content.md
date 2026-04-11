@@ -18,7 +18,7 @@ Students do **not** need to activate the virtual environment for this lab—**Ch
    - Assessment JSON: `.guides/assessments/code-output-compare-401030001.json`  
    - Grader: `.guides/secure/level4_graders/lab_3.1_grader.py`
 
-**Guide:** **Lab 3.1** in Chapter 1.4, Unit 3.
+**Guide:** **Lab 3.1** in Level 4, Unit 3.
 
 **Prerequisite.** Domain from Lab 2.1 lists `action_process_transfer` under `actions:`.
 

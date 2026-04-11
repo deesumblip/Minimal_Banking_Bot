@@ -1,18 +1,18 @@
-## Level 5 starter: Chapter 1.4 completion (before Chapter 1.5 labs)
+## Level 5 starter: Level 4 completion (before Level 5 labs)
 #
-# Same banking agent as the end of Chapter 1.4: transfer slots, flows, and actions.
-# Chapter 1.5 labs add: tools/, tools: in endpoints.yml, transfer_money_tools flow,
+# Same banking agent as the end of Level 4: transfer slots, flows, and actions.
+# Level 5 labs add: tools/, tools: in endpoints.yml, transfer_money_tools flow,
 # action_process_transfer_with_tools, and domain updates for transfer_money_tools.
 #
-# --- vs. the minimal Chapter 1.4 Lab 2.1 paste ---
+# --- vs. the minimal Level 4 Lab 2.1 paste ---
 #
 # Slots: Lab 2.1 adds amount / recipient / account_from as plain type: text. This file adds
 # from_llm + active_flow so FillSlot updates apply while the matching flow runs (check_balance
-# vs transfer_money). Chapter 1.5 Lab 4.1 extends the same slots for transfer_money_tools.
+# vs transfer_money). Level 5 Lab 4.1 extends the same slots for transfer_money_tools.
 #
 # utter_ask_* (transfer): Lab 2.1 / solution reference prefer rephrase: False on the three
 # transfer asks to reduce NLG/slot bugs. This baseline uses rephrase: True for consistency with
-# other responses; switch those three to False if collection misbehaves (Chapter 1.4 Unit 0.2).
+# other responses; switch those three to False if collection misbehaves (Level 4 Unit 0.2).
 #
 # actions: Short lab examples list only custom actions. Rasa requires every flow step name,
 # including utter_*, to appear under actions: (validation / training).

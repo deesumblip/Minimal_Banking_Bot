@@ -6,7 +6,7 @@
 
 **Task.** Create `level3/actions/action_check_balance_simple.py`: a custom action that reads the `account` slot, treats placeholder values (e.g. "account number", "<missing>") as invalid and re-prompts with `utter_ask_account`, and otherwise sends a demo balance message. The domain already lists `action_check_balance_simple` from Lab 3.1. Students complete the **Fill in the blanks** assessment first (same script they paste into the file), then run the **Code Test**.
 
-**Codio guide (Chapter 1.3).** The Lab 4.1 page includes:
+**Codio guide (Level 3).** The Lab 4.1 page includes:
 
 - `{Check It!|assessment}(fill-in-the-blanks-2346557111)` — Fill in the blanks (5 pts). JSON: `.guides/assessments/fill-in-the-blanks-2346557111.json`.
 - `{Check It!|assessment}(code-output-compare-2346557110)` — Code Output Compare (10 pts). JSON: `.guides/assessments/code-output-compare-2346557110.json`. Grader: `.guides/secure/level3_graders/lab_4.1_grader.py`.
@@ -41,7 +41,7 @@ This assessment verifies that the student has created `level3/actions/action_che
 
 ### Option B: Standard Code Test (Python script)
 
-Use a Python grader for faster feedback. Output matches **Chapter 1.3 Lab 3.1** / **Chapter 1.2 Lab 6.2**: **Check 1–7** with leading-space **` Check N: PASSED`** lines, **`==========================================`** summary, **` PASS: Lab 4.1 verification complete! Score: 10/10`** on success. The assessment JSON uses a **sequence** of **`Check 1: PASSED`** … **`Check 7: PASSED`** with **`showFeedback`: false** (same Codio UI as Lab 3.1). Checks are flexible (e.g. placeholder list contents can vary).
+Use a Python grader for faster feedback. Output matches **Level 3 Lab 3.1** / **Level 2 Lab 6.2**: **Check 1–7** with leading-space **` Check N: PASSED`** lines, **`==========================================`** summary, **` PASS: Lab 4.1 verification complete! Score: 10/10`** on success. The assessment JSON uses a **sequence** of **`Check 1: PASSED`** … **`Check 7: PASSED`** with **`showFeedback`: false** (same Codio UI as Lab 3.1). Checks are flexible (e.g. placeholder list contents can vary).
 
 **Grader script location (in repo):**
 

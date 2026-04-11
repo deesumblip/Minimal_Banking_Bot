@@ -1,4 +1,4 @@
-## 5.1 Training (Lab 5.1) — mirror of Chapter 1.6 guide
+## 5.1 Training (Lab 5.1) — mirror of Level 6 guide
 
 After Labs 2.1–4.1, train from **`level6/`** so the model includes the sub-agent, **`mcp_servers`**, and **`ask_banking_assistant`**.
 
@@ -10,4 +10,4 @@ cd level6
 rasa train
 ```
 
-Then run **Lab 5.1** (**`code-output-compare-501060004`**) in Codio. Full wording: Chapter 1.6 Unit 5 page **`5-1-Training-Level-6-L6f1`**.
+Then run **Lab 5.1** (**`code-output-compare-501060004`**) in Codio. Full wording: Level 6 Unit 5 page **`5-1-Training-Level-6-L6f1`**.

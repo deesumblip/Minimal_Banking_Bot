@@ -2,7 +2,7 @@
 
 Use this file as the **Instructor Provided Solution** for Lab 4.1 (Writing the Action That Uses the Slot) if you add an LLM Rubric. Students also complete **`fill-in-the-blanks-2346557111`** (Codio) before the **Code Output Compare** grader (`lab_4.1_grader.py`).
 
-**Standard Code Test (Codio):** The Python grader prints **Check 1–7** in the same style as **Lab 3.1** / **Chapter 1.2 Lab 6.2** (leading space on PASSED lines). Assessment **`code-output-compare-2346557110.json`** uses a **sequence** of **`Check 1: PASSED`** … **`Check 7: PASSED`**.
+**Standard Code Test (Codio):** The Python grader prints **Check 1–7** in the same style as **Lab 3.1** / **Level 2 Lab 6.2** (leading space on PASSED lines). Assessment **`code-output-compare-2346557110.json`** uses a **sequence** of **`Check 1: PASSED`** … **`Check 7: PASSED`**.
 
 ---
 

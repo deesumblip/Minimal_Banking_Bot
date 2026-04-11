@@ -55,4 +55,4 @@ Working Directory: `/home/codio/workspace` (or project root).
 
 ### Task ID
 
-Create or use a code-output-compare assessment with a unique taskId (e.g. `code-output-compare-lab-3-5`) and attach it to the Lab 3.5 section in the Chapter 1.1 guide.
+Create or use a code-output-compare assessment with a unique taskId (e.g. `code-output-compare-lab-3-5`) and attach it to the Lab 3.5 section in the Level 1 guide.

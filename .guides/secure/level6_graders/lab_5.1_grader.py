@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Lab 5.1: Training Level 6 - Grader
-Output format matches Chapter 1.2 Lab 6.2 template.
+Output format matches Level 2 Lab 6.2 template.
 
 Checks level6/models/ exists and contains at least one model file (.tar.gz).
 """

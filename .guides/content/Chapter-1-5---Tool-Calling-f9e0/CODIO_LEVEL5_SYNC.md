@@ -1,12 +1,12 @@
-# Chapter 1.5 - Tool Calling: Codio Sync
+# Level 5 - Tool Calling: Codio Sync
 
-This folder mirrors Level 5 teaching content (aligned with **`level5/`**) for Codio sync, same pattern as Chapter 1.4.
+This folder mirrors Level 5 teaching content (aligned with **`level5/`**) for Codio sync, same pattern as Level 4.
 
-**Pedagogy:** Chapter 1.5 content assumes students **extend the Chapter 1.4–complete agent** under **`level5/`** (see **Unit 0.1** and **Unit 0.2** in the guides).
+**Pedagogy:** Level 5 content assumes students **extend the Level 4–complete agent** under **`level5/`** (see **Unit 0.1** and **Unit 0.2** in the guides).
 
 **Student working directory:** All steps assume the agent under **`level5/`**. For training and CLI runs, activate the venv at **project root**, then **`cd level5`** before **`python -m rasa …`**. Graded labs use on-disk checks (fill-in-the-blanks and code tests read **`level5/`**); the venv is **not** required to pass Lab 2.1 file checks.
 
-**Lab order** (Chapter 1.4 completion → Chapter 1.5 done):
+**Lab order** (Level 4 completion → Level 5 done):
 
 1. **Lab 2.0** — Copy **`command_prompt_v3_slot_names.jinja2`** from **`level5/resources/`** to **`level5/data/prompts/`**; set **`prompt_template`** in **`config.yml`**.
 2. **Lab 2.1** — Tools package (**`tools/`**, **`banking_tools.py`**).
@@ -17,7 +17,7 @@ This folder mirrors Level 5 teaching content (aligned with **`level5/`**) for Co
 
 **Graders:** **Lab 2.0** uses task **`code-output-compare-501020000`**. **Lab 5.1** and **Lab 5.2** still include a **Lab 2.0** check (prompt file + **`prompt_template`**).
 
-**Guide page JSON (`*.json` next to each `.md`):** Pages use **`"path": ["level5"]`** (and **`"layout": "2-panels-tree-guides-left"`** where set) so the IDE tree highlights **`level5/`**, like **`level4/`** in Chapter 1.4.
+**Guide page JSON (`*.json` next to each `.md`):** Pages use **`"path": ["level5"]`** (and **`"layout": "2-panels-tree-guides-left"`** where set) so the IDE tree highlights **`level5/`**, like **`level4/`** in Level 4.
 
 ## Structure
 
@@ -30,7 +30,7 @@ Each unit has an `index.json` and each page has a `.md` and `.json`. **IDs use t
 
 ## Root index
 
-The main guide index at `.guides/content/index.json` includes `Chapter-1-5---Tool-Calling-f9e0` in its `order` array so this chapter appears after Chapter 1.4.
+The main guide index at `.guides/content/index.json` includes `Chapter-1-5---Tool-Calling-f9e0` in its `order` array so this chapter appears after Level 4.
 
 ## Assessments
 

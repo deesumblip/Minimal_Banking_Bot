@@ -2,7 +2,7 @@
 	"type": "multiple-choice",
 	"taskId": "multiple-choice-401040101",
 	"source": {
-		"name": "Chapter 1.4: 1.4 Test Your Knowledge - order of collect steps",
+		"name": "Level 4: 1.4 Test Your Knowledge - order of collect steps",
 		"showName": false,
 		"instructions": "**Why does the order of `collect:` steps in a flow matter?**",
 		"multipleResponse": false,

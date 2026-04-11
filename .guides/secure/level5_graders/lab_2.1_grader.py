@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Lab 2.1: Creating the Tools Folder and banking_tools.py - Grader Script (Level 5 / Chapter 1.5)
-Output format matches Chapter 1.2 Lab 6.2 template.
+Lab 2.1: Creating the Tools Folder and banking_tools.py - Grader Script (Level 5 / Level 5)
+Output format matches Level 2 Lab 6.2 template.
 
 Checks level5/tools/ and level5/tools/banking_tools.py for: check_balance, process_transfer,
 get_account_info, __all__. Runs from workspace root; expects /home/codio/workspace.

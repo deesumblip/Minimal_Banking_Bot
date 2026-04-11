@@ -1,4 +1,4 @@
-This page of **Unit 6** walks through a **full conversation** (Level 1 plus the example action and your Lab 3.1 action), maps **where your files live**, suggests **practices** for testing and maintenance, and ends with a short **knowledge check** (use **Check It!** for each question). **6.5** adds a brief Level 2 checkpoint and readiness list; **Chapter 1.3 Unit 0** carries the full “what you built / what slots add” recap so it is not repeated here.
+This page of **Unit 6** walks through a **full conversation** (Level 1 plus the example action and your Lab 3.1 action), maps **where your files live**, suggests **practices** for testing and maintenance, and ends with a short **knowledge check** (use **Check It!** for each question). **6.5** adds a brief Level 2 checkpoint and readiness list; **Level 3 Unit 0** carries the full “what you built / what slots add” recap so it is not repeated here.
 
 #### A complete conversation
 
@@ -88,6 +88,6 @@ Answer the five questions using **Check It!** below. Questions, choices, and fee
 
 {Check It!|assessment}(multiple-choice-1208100005)
 
-**Next:** Open **6.5 Before you continue**, then **Chapter 1.3 Unit 0** for the Level 3 overview.
+**Next:** Open **6.5 Before you continue**, then **Level 3 Unit 0** for the Level 3 overview.
 
 ---

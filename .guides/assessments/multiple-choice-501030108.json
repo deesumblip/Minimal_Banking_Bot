@@ -2,7 +2,7 @@
 	"type": "multiple-choice",
 	"taskId": "multiple-choice-501030108",
 	"source": {
-		"name": "Chapter 1.5: 6.4 Knowledge Check - command prompt template",
+		"name": "Level 5: 6.4 Knowledge Check - command prompt template",
 		"showName": false,
 		"instructions": "**In this course’s `level5/config.yml`, `SearchReadyLLMCommandGenerator` may set `prompt_template` to `data/prompts/command_prompt_v3_slot_names.jinja2`. What is the main purpose of that prompt file?**",
 		"multipleResponse": false,

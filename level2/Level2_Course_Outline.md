@@ -158,7 +158,7 @@
   - Full conversation example (Level 1 + example action + your Lab 3.1 action)
   - Project structure at a glance; best practices; **5×** Check It! MCQs
 - **6.5 Before you continue** (stem `6-5-Core-Ideas-and-Level-3-Readiness-b91a`; no assessments)
-  - Short L2 checkpoint; readiness bullets; points to Chapter 1.3 Unit 0 for full recap (avoids overlap with **0-1** / **0-2**)
+  - Short L2 checkpoint; readiness bullets; points to Level 3 Unit 0 for full recap (avoids overlap with **0-1** / **0-2**)
 
 **Key Concepts**: Training, testing, debugging, Rasa Inspector, port forwarding; integration, review, next level
 
@@ -227,7 +227,7 @@
 **Codio: Grader updates from GitHub**  
 When you set up or edit assessments on Codio, configure each Code Test to **run the grader script from the workspace** (e.g. `bash /home/codio/workspace/.guides/secure/level2_graders/lab_5.1_grader.sh`). Do **not** upload or paste the script content into the assessment. That way, when you push grader changes to GitHub and pull on Codio, the assessment will use the updated script automatically.
 
-**Chapter 1.2 (Codio guide)**: Code-output-compare Check It! tags are on Labs 3.1, 4.1, 5.1, 6.1, 6.2. Multiple-choice Check It! tags are on content pages: 1.1, 1.4, 2.2, 2.3, Lab 2.1, 3.1 (fill-in + code test), **6.4** *See it all together* (knowledge check; former 8.1-style MCQs; **6.5** *Before you continue* has no Check It!; see `.guides/content/Chapter-1-2---Custom-Actions-30d6/`).
+**Level 2 (Codio guide)**: Code-output-compare Check It! tags are on Labs 3.1, 4.1, 5.1, 6.1, 6.2. Multiple-choice Check It! tags are on content pages: 1.1, 1.4, 2.2, 2.3, Lab 2.1, 3.1 (fill-in + code test), **6.4** *See it all together* (knowledge check; former 8.1-style MCQs; **6.5** *Before you continue* has no Check It!; see `.guides/content/Chapter-1-2---Custom-Actions-30d6/`).
 
 ---
 
@@ -273,7 +273,7 @@ Unit 4: Registering Actions (Hands-on Lab) ✓ Lab 4.1 Assessment
     ↓
 Unit 5: Using Actions in Flows (Hands-on Lab) ✓ Lab 5.1 Assessment
     ↓
-Unit 6: Training, Testing, and Level 2 Wrap-Up (Hands-on Labs + **6.4** *See it all together* + **6.5** *Before you continue*) ✓ Lab 6.1 & Lab 6.2 Assessments; **6.4** = integration + knowledge check; **6.5** = readiness handoff to Chapter 1.3
+Unit 6: Training, Testing, and Level 2 Wrap-Up (Hands-on Labs + **6.4** *See it all together* + **6.5** *Before you continue*) ✓ Lab 6.1 & Lab 6.2 Assessments; **6.4** = integration + knowledge check; **6.5** = readiness handoff to Level 3
 ```
 
 **Note:** Lab 2.1 (Exploring the Actions Folder) is optional and fits after Unit 2. It reinforces the action class structure with multiple-choice and fill-in-the-blank questions; the main sequence continues with Unit 3 and Lab 3.1.

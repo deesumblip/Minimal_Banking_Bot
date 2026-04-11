@@ -2,7 +2,7 @@
 	"type": "multiple-choice",
 	"taskId": "multiple-choice-501030102",
 	"source": {
-		"name": "Chapter 1.5: 1.3 Test Your Knowledge - tools module __all__",
+		"name": "Level 5: 1.3 Test Your Knowledge - tools module __all__",
 		"showName": false,
 		"instructions": "**What must be in your tools module for Rasa to discover the tool functions?**",
 		"multipleResponse": false,

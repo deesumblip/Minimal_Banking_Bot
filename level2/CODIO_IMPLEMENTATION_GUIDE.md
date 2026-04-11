@@ -81,7 +81,7 @@ Level 2 introduces **Actions** - custom Python code that your agent can execute.
 
 #### What's New in Level 2
 
-**In the Chapter 1.2 starter (before Lab 3.1)**:
+**In the Level 2 starter (before Lab 3.1)**:
 - `actions/` folder with `__init__.py` and **`action_bank_hours.py`** (example you study in Units 2–3; not registered in the domain until Lab 4.1)
 
 **Added as students complete labs**:
@@ -368,7 +368,7 @@ For Level 2, you typically don't need to access the domain directly.
 
 ### Lab 3.1 (Codio guide): Create Your Own Action
 
-The guide no longer has a separate “3.1 Step-by-Step” page. Students use **Unit 2.1** (*The Action Class Deep Dive*) for the full **`action_bank_hours.py`** example. **Lab 3.1** is the first page in Unit 3: **Fill in the blanks** for **`action_holiday_hours`**, paste into **`level2/actions/action_holiday_hours.py`**, then the **Code Test**—same **fill-in → paste → grader** flow as Chapter 1.4 Lab 3.1.
+The guide no longer has a separate “3.1 Step-by-Step” page. Students use **Unit 2.1** (*The Action Class Deep Dive*) for the full **`action_bank_hours.py`** example. **Lab 3.1** is the first page in Unit 3: **Fill in the blanks** for **`action_holiday_hours`**, paste into **`level2/actions/action_holiday_hours.py`**, then the **Code Test**—same **fill-in → paste → grader** flow as Level 4 Lab 3.1.
 
 **Codio taskIds / grader:** **`fill-in-the-blanks-201030010`** (5 pts) → **`code-output-compare-2266471391`** (8 pts). The Code Test runs **`bash …/level2_graders/lab_3.2_grader.sh`** (on-disk name; script banner says Lab 3.1).
 
@@ -569,7 +569,7 @@ flows:
 
 ## Unit 6: Training, Testing, and Level 2 Wrap-Up
 
-**Codio guide:** Student-facing pages include **Lab 6.1** (`Lab-6-1--Training-and-Testing-with-Actions-7710.md`), **6.2**, **Lab 6.2**, **6.3**, **6.4** *See it all together* (`6-4-Level-2-Wrap-Up-d798.md` — integration, practices, knowledge check), and **6.5** *Before you continue* (`6-5-Core-Ideas-and-Level-3-Readiness-b91a.md` — short checkpoint; handoff to Chapter 1.3 Unit 0). The subsections below are the full instructor reference (including local PowerShell).
+**Codio guide:** Student-facing pages include **Lab 6.1** (`Lab-6-1--Training-and-Testing-with-Actions-7710.md`), **6.2**, **Lab 6.2**, **6.3**, **6.4** *See it all together* (`6-4-Level-2-Wrap-Up-d798.md` — integration, practices, knowledge check), and **6.5** *Before you continue* (`6-5-Core-Ideas-and-Level-3-Readiness-b91a.md` — short checkpoint; handoff to Level 3 Unit 0). The subsections below are the full instructor reference (including local PowerShell).
 
 ### 6.1 Training with Actions
 
@@ -708,7 +708,7 @@ Align **6.4** prose with `Level2_Unit6_Content_6.4_Level-2-Wrap-Up.md` / `.guide
 
 ### 6.5 Before you continue
 
-Student-facing page (`6-5-Core-Ideas-and-Level-3-Readiness-b91a`; Codio title **6.5 Before you continue**): short Level 2 skills recap, one paragraph on limits (slots vs not), readiness bullets, and a pointer to **Chapter 1.3 Unit 0** for the full agent recap and Level 3 roadmap (avoid duplicating **0-1** / **0-2**). Align with `Level2_Unit6_Content_6.5_Core-Ideas-and-Level-3-Readiness.md` / `.guides/.../6-5-Core-Ideas-and-Level-3-Readiness-b91a.md`.
+Student-facing page (`6-5-Core-Ideas-and-Level-3-Readiness-b91a`; Codio title **6.5 Before you continue**): short Level 2 skills recap, one paragraph on limits (slots vs not), readiness bullets, and a pointer to **Level 3 Unit 0** for the full agent recap and Level 3 roadmap (avoid duplicating **0-1** / **0-2**). Align with `Level2_Unit6_Content_6.5_Core-Ideas-and-Level-3-Readiness.md` / `.guides/.../6-5-Core-Ideas-and-Level-3-Readiness-b91a.md`.
 
 **Former Unit 7** page stem `7-1-Complete-Agent-Walkthrough-d798` was retired; closing material for Unit 6 is split across **6.4** and **6.5**. **Former Unit 8** content was merged into that closing pair earlier.
 

@@ -11,9 +11,9 @@ Always validate slot values before you trust them in business logic or user-faci
 
 #### Quick review
 
-Lab 4.1 is the next page in this unit. It uses only ideas you have already seen in Chapter 1.2 and earlier pages in Chapter 1.3.
+Lab 4.1 is the next page in this unit. It uses only ideas you have already seen in Level 2 and earlier pages in Level 3.
 
-**Level 2 reference.** Open `action_bank_hours.py` in Chapter 1.2, in the lesson called *The Action Class Deep Dive*. That file shows the imports from `typing`, `rasa_sdk`, and `rasa_sdk.executor`. It shows a class that subclasses `Action`, a `name()` method whose string matches the domain, and a `run()` method with return type `List[Dict[Text, Any]]`. Most simple actions end `run()` with `return []`.
+**Level 2 reference.** Open `action_bank_hours.py` in Level 2, in the lesson called *The Action Class Deep Dive*. That file shows the imports from `typing`, `rasa_sdk`, and `rasa_sdk.executor`. It shows a class that subclasses `Action`, a `name()` method whose string matches the domain, and a `run()` method with return type `List[Dict[Text, Any]]`. Most simple actions end `run()` with `return []`.
 
 **Lab 4.1 naming.** Use the same pattern with new names. The class is `ActionCheckBalanceSimple`. The string from `name()` is `action_check_balance_simple`. That mirrors how `ActionBankHours` pairs with `action_bank_hours`.
 

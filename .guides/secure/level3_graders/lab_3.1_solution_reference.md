@@ -2,7 +2,7 @@
 
 Use this file as the **Instructor Provided Solution File** in Codio's LLM Rubric Autograde for Lab 3.1 (Defining a Slot in the Domain).
 
-**Standard Code Test:** The Python grader (`.guides/secure/level3_graders/lab_3.1_grader.py`) follows the **Chapter 1.2 Lab 6.2** template (`lab_4.1_grader.sh`): **Check 1–8** (1-based), **PASSED** lines with a **leading space** (no emoji on pass), **❌** / **⚠️** on fail/partial, **`==========================================`** band, then **` PASS: Lab 3.1 verification complete! Score: 10/10`** on full score.
+**Standard Code Test:** The Python grader (`.guides/secure/level3_graders/lab_3.1_grader.py`) follows the **Level 2 Lab 6.2** template (`lab_4.1_grader.sh`): **Check 1–8** (1-based), **PASSED** lines with a **leading space** (no emoji on pass), **❌** / **⚠️** on fail/partial, **`==========================================`** band, then **` PASS: Lab 3.1 verification complete! Score: 10/10`** on full score.
 
 **Codio Code Output Compare:** `code-output-compare-3187585640.json` uses the same **sequence** pattern as **`code-output-compare-1597644299`** (Lab 6.2): **`Check 1: PASSED`** through **`Check 8: PASSED`**, **`showFeedback`: false**, **`showGuidanceAfterResponseOption`: Never**, **`showExpectedAnswerOption`: Always**.
 
@@ -31,7 +31,7 @@ responses:
         rephrase: True
 ```
 
-4. **actions: list** – The Chapter 1.3 `level3` starter preloads **`action_bank_hours.py`** and **`action_holiday_hours.py`**. The finished `actions:` list includes **`action_bank_hours`**, **`action_holiday_hours`**, and **`action_check_balance_simple`** (Python file for the latter created in Lab 4.1). Example:
+4. **actions: list** – The Level 3 `level3` starter preloads **`action_bank_hours.py`** and **`action_holiday_hours.py`**. The finished `actions:` list includes **`action_bank_hours`**, **`action_holiday_hours`**, and **`action_check_balance_simple`** (Python file for the latter created in Lab 4.1). Example:
 
 ```yaml
 actions:

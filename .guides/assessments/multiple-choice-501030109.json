@@ -2,7 +2,7 @@
 	"type": "multiple-choice",
 	"taskId": "multiple-choice-501030109",
 	"source": {
-		"name": "Chapter 1.5: 6.4 Knowledge Check - train Level 5",
+		"name": "Level 5: 6.4 Knowledge Check - train Level 5",
 		"showName": false,
 		"instructions": "**From where do you train the Level 5 agent?**",
 		"multipleResponse": false,

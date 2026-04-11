@@ -10,7 +10,7 @@
 
 The terminal opens in your workspace root. If **`ls`** does not show **`level3`**, **`level2`**, and **`.guides`**, change directory to your main project folder first.
 
-Use one continuous sequence from the project root. The venv from **Lab 0.1** in **Chapter 1.1** lives next to **`level3`**, not inside it.
+Use one continuous sequence from the project root. The venv from **Lab 0.1** in **Level 1** lives next to **`level3`**, not inside it.
 
 ```bash
 ls -la .venv
@@ -55,7 +55,7 @@ If training fails, Rasa usually prints a file path and line number for YAML prob
 | **Slot not defined** | Ensure **`slots:`** in the domain lists the slot you collect, with a valid type. |
 | **Response `utter_…` or action not found** | Align **`domain/basics.yml`** with your flows and **`actions/`** files. |
 | **No module named `rasa`** | Activate the venv from the project root, **`cd level3`**, then run **`pip install rasa-pro`** if needed. |
-| **`RASA_LICENSE` or `OPENAI_API_KEY` not set** | See **Lab 0.1** in **Chapter 1.1**, or ask your instructor. Level 3 may use a **`.env`** file under **`level3`** in local setups. |
+| **`RASA_LICENSE` or `OPENAI_API_KEY` not set** | See **Lab 0.1** in **Level 1**, or ask your instructor. Level 3 may use a **`.env`** file under **`level3`** in local setups. |
 
 ---
 

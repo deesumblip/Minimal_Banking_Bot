@@ -2,7 +2,7 @@
 	"type": "multiple-choice",
 	"taskId": "multiple-choice-501030106",
 	"source": {
-		"name": "Chapter 1.5: 6.4 Knowledge Check - last step of transfer_money_tools",
+		"name": "Level 5: 6.4 Knowledge Check - last step of transfer_money_tools",
 		"showName": false,
 		"instructions": "**What is the last step in the `transfer_money_tools` flow (as built in Lab 4.1)?**",
 		"multipleResponse": false,

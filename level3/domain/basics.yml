@@ -1,7 +1,7 @@
 ## Level 3: Responses + Actions + Slots
 #
 # Preloaded: action_bank_hours.py and action_holiday_hours.py are in actions/
-# (Chapter 1.2–equivalent).
+# (Level 2–equivalent).
 #
 # In Lab 3.1 you will add:
 # - slots: section (with account) and utter_ask_account response

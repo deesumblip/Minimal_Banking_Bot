@@ -2,7 +2,7 @@
 	"type": "multiple-choice",
 	"taskId": "multiple-choice-1201800004",
 	"source": {
-		"name": "Chapter 1.2: 8.1 Knowledge Check - Sending messages from an action",
+		"name": "Level 2: 8.1 Knowledge Check - Sending messages from an action",
 		"showName": false,
 		"instructions": "**How does an action send a text message to the user?**",
 		"multipleResponse": false,

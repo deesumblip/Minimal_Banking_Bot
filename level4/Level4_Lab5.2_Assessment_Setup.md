@@ -6,7 +6,7 @@
 
 **Task.** Students run **Check It!** (completion check) first; it verifies domain (including legacy Level 2–3 actions and Level 3 **`account`** / **`utter_ask_account`**), action file, flow file, model, **`level4/config.yml`** pipeline, and **`level4/endpoints.yml`** **`model_groups`** (same pattern as Lab 0.1)—**without** starting Rasa. **Optional:** Start the agent (`rasa inspect` / `rasa run`), open **Rasa Inspect**, walk through the transfer flow, and confirm `action_process_transfer`. Guide page order: Part 1 = assessment, Part 2–3 = Inspector (optional).
 
-**Codio guide (Chapter 1.4).** The Lab 5.2 page in the Chapter 1.4 guide includes: `{Check It!|assessment}(code-output-compare-401050002)`. Assessment JSON: `.guides/assessments/code-output-compare-401050002.json`.
+**Codio guide (Level 4).** The Lab 5.2 page in the Level 4 guide includes: `{Check It!|assessment}(code-output-compare-401050002)`. Assessment JSON: `.guides/assessments/code-output-compare-401050002.json`.
 
 ---
 

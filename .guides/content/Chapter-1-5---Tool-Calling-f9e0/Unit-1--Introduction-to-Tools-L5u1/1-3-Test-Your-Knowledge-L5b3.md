@@ -1,4 +1,4 @@
-**Starting point:** Work in **`level5/`** with the Chapter 1.4 baseline (**Unit 0.1**).
+**Starting point:** Work in **`level5/`** with the Level 4 baseline (**Unit 0.1**).
 
 Answer the questions below to check your understanding of the recap and introduction to tools (Units 0–1).
 

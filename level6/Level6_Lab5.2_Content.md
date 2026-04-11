@@ -1,1 +1,1 @@
-**Lab 5.2** is merged into the Chapter 1.6 Unit **5.2** guide page (completion check + optional Inspector). **Assessment:** `code-output-compare-501060005`. See **`Level6_Unit5_Content_5.2_Testing-Sub-Agents.md`** and `.guides/.../5-2-Testing-Sub-Agents-L6f2.md`.
+**Lab 5.2** is merged into the Level 6 Unit **5.2** guide page (completion check + optional Inspector). **Assessment:** `code-output-compare-501060005`. See **`Level6_Unit5_Content_5.2_Testing-Sub-Agents.md`** and `.guides/.../5-2-Testing-Sub-Agents-L6f2.md`.

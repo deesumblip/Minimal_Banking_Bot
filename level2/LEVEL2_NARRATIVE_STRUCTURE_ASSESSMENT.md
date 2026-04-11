@@ -91,7 +91,7 @@ Assessment of the **Level2_*** content and lab files read in sequence from start
 | Lab 5.1 | ✓ | "example flow" + "your flow" | — |
 | Unit 6 | ✓ | 6.3 tests both flows | 6.1: mention holiday_hours.yml / action_holiday_hours in training |
 | Lab 6.1 | ✓ | — | — |
-| 6.4 / 6.5 | ✓ | **6.4** *See it all together*: trace + map + practices + MC check; **6.5** *Before you continue*: readiness + Ch 1.3 handoff | — |
+| 6.4 / 6.5 | ✓ | **6.4** *See it all together*: trace + map + practices + MC check; **6.5** *Before you continue*: readiness + Level 3 handoff | — |
 
 ---
 

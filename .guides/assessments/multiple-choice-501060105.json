@@ -2,7 +2,7 @@
 	"type": "multiple-choice",
 	"taskId": "multiple-choice-501060105",
 	"source": {
-		"name": "Chapter 1.6: 1.3 Test Your Knowledge - BankingAssistantLiteAgent",
+		"name": "Level 6: 1.3 Test Your Knowledge - BankingAssistantLiteAgent",
 		"showName": false,
 		"instructions": "**Why does this course set `configuration.module` to `BankingAssistantLiteAgent` in the sub-agent `config.yml`?**",
 		"multipleResponse": false,

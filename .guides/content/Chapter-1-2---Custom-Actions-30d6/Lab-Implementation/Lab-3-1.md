@@ -8,7 +8,7 @@
 
 ### Your Task
 
-Students complete a **Fill in the blanks** exercise that matches the course solution (`level3/actions/action_holiday_hours.py`), then **paste** the completed script into **`level2/actions/action_holiday_hours.py`** and run the **Code Test**. Same **fill-in → paste → Check It!** pattern as **Chapter 1.4 Lab 3.1** (`fill-in-the-blanks-401030010` → `code-output-compare-401030001`) and **Chapter 1.5 Lab 2.1**.
+Students complete a **Fill in the blanks** exercise that matches the course solution (`level3/actions/action_holiday_hours.py`), then **paste** the completed script into **`level2/actions/action_holiday_hours.py`** and run the **Code Test**. Same **fill-in → paste → Check It!** pattern as **Level 4 Lab 3.1** (`fill-in-the-blanks-401030010` → `code-output-compare-401030001`) and **Level 5 Lab 2.1**.
 
 ---
 
@@ -48,7 +48,7 @@ Students first complete a **Fill in the blanks** assessment (`.guides/assessment
 
 ### Assessment Type
 
-1. **Fill in the Blanks** — taskId **`fill-in-the-blanks-201030010`** (13 blanks; `tokens.text` uses literal `0` for each blank, sequential — same pattern as Chapter 1.4 `fill-in-the-blanks-401030010`).
+1. **Fill in the Blanks** — taskId **`fill-in-the-blanks-201030010`** (13 blanks; `tokens.text` uses literal `0` for each blank, sequential — same pattern as Level 4 `fill-in-the-blanks-401030010`).
 2. **Standard Code Test** (Bash script) — taskId **`code-output-compare-2266471391`**
 
 ## Grader Script Location

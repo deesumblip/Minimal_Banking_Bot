@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Lab 5.2: Testing / Completion Check - Grader Script (Level 5)
-Output format matches Chapter 1.2 Lab 6.2 template (⚠️ for partial on model).
+Output format matches Level 2 Lab 6.2 template (⚠️ for partial on model).
 
 Verifies all Level 5 artifacts: tools/, endpoints.yml tools, Lab 2.0 prompt,
 transfer_money_tools.yml, action_process_transfer_with_tools, domain, and model.

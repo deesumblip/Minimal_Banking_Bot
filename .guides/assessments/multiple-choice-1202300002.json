@@ -2,7 +2,7 @@
 	"type": "multiple-choice",
 	"taskId": "multiple-choice-1202300002",
 	"source": {
-		"name": "Chapter 1.2: 2.3 Test Your Knowledge - Sending Messages from an Action",
+		"name": "Level 2: 2.3 Test Your Knowledge - Sending Messages from an Action",
 		"showName": false,
 		"instructions": "**How does an action send a text message to the user?**",
 		"multipleResponse": false,

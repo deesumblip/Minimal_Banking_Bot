@@ -2,7 +2,7 @@
 
 These items stress **integration**—**`call:`** steps, MCP registration, sub-agent config location, and how the main agent relates to the specialist. They complement the **Unit 1** (Test Your Knowledge) questions on the tutorial **`module`** and demo phrasing.
 
-Answer the following to solidify Chapter 1.6 (Level 6).
+Answer the following to solidify Level 6.
 
 {Check It!|assessment}(multiple-choice-501060100)
 

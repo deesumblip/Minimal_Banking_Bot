@@ -1,4 +1,4 @@
-"""Check Chapter 1.5 unit index.json order matches .md and .json page files."""
+"""Check Level 5 unit index.json order matches .md and .json page files."""
 import json
 from pathlib import Path
 
@@ -35,4 +35,4 @@ for unit_dir in sorted(base.iterdir()):
 for loc, msg in issues:
     print(f"{loc}: {msg}")
 if not issues:
-    print("OK: Chapter 1.5 all units coherent (order matches .md and .json)")
+    print("OK: Level 5 all units coherent (order matches .md and .json)")

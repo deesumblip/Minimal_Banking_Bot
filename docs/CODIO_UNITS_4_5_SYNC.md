@@ -2,7 +2,7 @@
 
 ## Duplicate units (e.g. two Unit 5s)
 
-If you see **two Unit 5s** in the Chapter 1.3 guide, for example `Unit-5--Collecting-Slots-in-Flows-8b9c` and **`Unit-5--Reading-Slots-in-Actions-0d1e`**, the extra one is a **Codio leftover** from an older structure. The repo has only one Unit 4 and one Unit 5:
+If you see **two Unit 5s** in the Level 3 guide, for example `Unit-5--Collecting-Slots-in-Flows-8b9c` and **`Unit-5--Reading-Slots-in-Actions-0d1e`**, the extra one is a **Codio leftover** from an older structure. The repo has only one Unit 4 and one Unit 5:
 
 - **Unit 4:** `Unit-4--Reading-Slots-in-Actions-0d1e`
 - **Unit 5:** `Unit-5--Collecting-Slots-in-Flows-8b9c`
@@ -13,11 +13,11 @@ If you see **two Unit 5s** in the Chapter 1.3 guide, for example `Unit-5--Collec
 
 ## Units 4 and 5 not showing
 
-If **Unit 4** (Reading Slots in Actions) and **Unit 5** (Collecting Slots in Flows) do not appear in the Chapter 1.3 guide in Codio after pulling from Git, the guide structure in Codio is likely still using an older snapshot.
+If **Unit 4** (Reading Slots in Actions) and **Unit 5** (Collecting Slots in Flows) do not appear in the Level 3 guide in Codio after pulling from Git, the guide structure in Codio is likely still using an older snapshot.
 
 ## What’s in the repo
 
-- **Chapter 1.3** (`.guides/content/Chapter-1-3---Slot-Collection-a4b5/`) includes:
+- **Level 3** (`.guides/content/Chapter-1-3---Slot-Collection-a4b5/`) includes:
   - `Unit-4--Reading-Slots-in-Actions-0d1e/` with `index.json` and page `.json` + `.md` for 4.1, 4.2, Lab 4.1
   - `Unit-5--Collecting-Slots-in-Flows-8b9c/` with `index.json` and page `.json` + `.md` for 5.1, 5.2, 5.3, Lab 5.1
 - The chapter `index.json` lists both units in `order`.

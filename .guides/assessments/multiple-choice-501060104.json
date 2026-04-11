@@ -2,7 +2,7 @@
 	"type": "multiple-choice",
 	"taskId": "multiple-choice-501060104",
 	"source": {
-		"name": "Chapter 1.6: 6.4 Knowledge Check - when to use sub-agent",
+		"name": "Level 6: 6.4 Knowledge Check - when to use sub-agent",
 		"showName": false,
 		"instructions": "**When should you use a sub-agent instead of tools in the main agent?**",
 		"multipleResponse": false,

@@ -8,16 +8,16 @@ Level 6 adds **orchestration with sub-agents**:
 
 ---
 
-## Delta checklist: end of Chapter 1.5 → end of Chapter 1.6
+## Delta checklist: end of Level 5 → end of Level 6
 
-Use this as a **linear** checklist. Items above the line are Chapter 1.5; below the line is what you add in **`level6/`** for Chapter 1.6.
+Use this as a **linear** checklist. Items above the line are Level 5; below the line is what you add in **`level6/`** for Level 6.
 
-**Already true when you finish Chapter 1.5 (in `level5/`):**
+**Already true when you finish Level 5 (in `level5/`):**
 
 - [ ] SearchReady + **`prompt_template`** and trained model under **`level5/`**
 - [ ] **`tools/`** + **`endpoints.yml`** **`tools:`** + **`transfer_money_tools`** flow and actions
 
-**Add for Chapter 1.6 (in `level6/`):** (each lab: **Fill in the blanks** in the guide → **copy/merge** into the file → **Code Test**)
+**Add for Level 6 (in `level6/`):** (each lab: **Fill in the blanks** in the guide → **copy/merge** into the file → **Code Test**)
 
 - [ ] **Lab 2.1:** Pass **`fill-in-the-blanks-501060111`**, copy YAML to **`sub_agents/banking_assistant/config.yml`**, pass **`code-output-compare-501060001`**
 - [ ] **Lab 3.1:** Pass **`fill-in-the-blanks-501060112`**, merge **`mcp_servers`** into **`endpoints.yml`**, pass **`code-output-compare-501060002`**

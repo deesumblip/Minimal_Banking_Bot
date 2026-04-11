@@ -1,4 +1,4 @@
-**Starting point:** Work in **`level5/`** with the Chapter 1.4 baseline (**Unit 0.1**) and **Unit 0.2** (overview). This page is a short rule of thumb for **tool** versus **action**.
+**Starting point:** Work in **`level5/`** with the Level 4 baseline (**Unit 0.1**) and **Unit 0.2** (overview). This page is a short rule of thumb for **tool** versus **action**.
 
 ## When to use tools
 
@@ -8,7 +8,7 @@ Choose **tools** when the **LLM** should pick what to do from context—the user
 
 Choose **actions** when you need a **fixed step**: after **amount**, **recipient**, and **account_from** are collected, the flow should **always** run **`action_process_transfer`**. The flow enforces that order.
 
-## How Chapter 1.5 combines both
+## How Level 5 combines both
 
 This chapter uses **both**. The **flow** collects slots, then runs one **action** (`action_process_transfer_with_tools`).
 

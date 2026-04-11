@@ -2,7 +2,7 @@
 	"type": "multiple-choice",
 	"taskId": "multiple-choice-501060106",
 	"source": {
-		"name": "Chapter 1.6: 1.3 Test Your Knowledge - MCP url path",
+		"name": "Level 6: 1.3 Test Your Knowledge - MCP url path",
 		"showName": false,
 		"instructions": "**For the FastMCP banking server in this repo (`mcp_server/banking.py`), which statement about `mcp_servers` → `url` in `endpoints.yml` is correct?**",
 		"multipleResponse": false,

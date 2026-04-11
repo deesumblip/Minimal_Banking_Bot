@@ -4,7 +4,7 @@
 
 **Title**: Level 4: Multiple Slots  
 **Description**: Adding a Transfer Flow with Multiple Slot Collection  
-**Prerequisites**: Level 1, Level 2, and Level 3 must be completed (Chapter 1.4 **assumes** the **final banking agent at the end of Chapter 1.3** described in Unit 0.1)  
+**Prerequisites**: Level 1, Level 2, and Level 3 must be completed (Level 4 **assumes** the **final banking agent at the end of Level 3** described in Unit 0.1)  
 **Learning Objective**: Students learn to add multiple slots, multiple ask responses, one new action that uses all slots, and one flow that collects several slots then runs the action. They first **build** **`level4/config.yml`** and **`level4/endpoints.yml`** in **Lab 0.1** (fill-in-the-blanks + code test), then align domain and flows in later labs. Lab order: **pipeline (Lab 0.1)** → domain (Lab 2.1) → action (Lab 3.1) → flow (Lab 4.1) → train (Lab 5.1) → completion check (Lab 5.2).
 
 ---
@@ -17,7 +17,7 @@
 
 **Sections**:
 - 0.1 Your Level 3 Banking Agent
-- 0.2 What Level 4 Adds — full Chapter 1.3 end → Chapter 1.4 end checklist, pipeline, labs, and summary
+- 0.2 What Level 4 Adds — full Level 3 end → Level 4 end checklist, pipeline, labs, and summary
 
 **Key Concepts**: Recap Level 3, **`level4/`** baseline, pipeline + lab delta in **0.2**, transfer flow
 
@@ -123,7 +123,7 @@ All source files live in **level4/** so you can push to GitHub and sync the same
 
 ### Unit content (mirror under **level4/**) — 7 units (0–6)
 
-| Unit | Guide page (Chapter 1.4) |
+| Unit | Guide page (Level 4) |
 |------|-------------------------|
 | 0.1 | Your Level 3 Banking Agent |
 | 0.2 | What Level 4 Adds |

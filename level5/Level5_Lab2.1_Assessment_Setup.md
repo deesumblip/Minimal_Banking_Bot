@@ -6,7 +6,7 @@
 
 **Task.** Part 1: Complete the fill-in-the-blanks for `banking_tools.py`. Part 2: Create `level5/tools/`, `level5/tools/__init__.py`, and `level5/tools/banking_tools.py` with your completed script. Part 3: Run the code test. (The grader reads files only; no terminal commands are required for grading.)
 
-**Codio guide (Chapter 1.5).** The Lab 2.1 page includes, in order:
+**Codio guide (Level 5).** The Lab 2.1 page includes, in order:
 
 1. `{Check It!|assessment}(fill-in-the-blanks-501020010)` — **5 points**
 2. `{Check It!|assessment}(code-output-compare-501020001)` — **10 points**

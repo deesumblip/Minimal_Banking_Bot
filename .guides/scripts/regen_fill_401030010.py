@@ -24,7 +24,7 @@ blanks = [
     "[]",
 ]
 
-# Codio: same as Chapter 1.3 Lab 4.1 (fill-in-the-blanks-2346557111) — every blank uses
+# Codio: same as Level 3 Lab 4.1 (fill-in-the-blanks-2346557111) — every blank uses
 # literal 0 in tokens.text (sequential blanks), not 0..n index references.
 parts = [
     "Complete the action that reads the three transfer slots (`amount`, `recipient`, `account_from`), "

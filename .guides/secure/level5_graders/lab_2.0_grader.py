@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Lab 2.0: Command-generator prompt - Grader Script (Level 5 / Chapter 1.5)
-Output format matches Chapter 1.2 Lab 6.2 template.
+Lab 2.0: Command-generator prompt - Grader Script (Level 5 / Level 5)
+Output format matches Level 2 Lab 6.2 template.
 
 Checks level5/data/prompts/command_prompt_v3_slot_names.jinja2 and
 prompt_template on SearchReadyLLMCommandGenerator in config.yml.

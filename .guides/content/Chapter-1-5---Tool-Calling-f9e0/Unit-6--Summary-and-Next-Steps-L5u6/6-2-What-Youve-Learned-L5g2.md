@@ -1,6 +1,6 @@
-**Starting point:** Work in **`level5/`** with the Chapter 1.4 baseline (**Unit 0.1**) plus the labs you finished in this chapter.
+**Starting point:** Work in **`level5/`** with the Level 4 baseline (**Unit 0.1**) plus the labs you finished in this chapter.
 
-## What you added in Chapter 1.5
+## What you added in Level 5
 
 You added the **command prompt** (**Lab 2.0**), the **`tools/`** module (**Lab 2.1**), **`tools:`** registration (**Lab 3.1**), and the **`transfer_money_tools`** flow with **`action_process_transfer_with_tools`** (**Lab 4.1**), then trained and tested (**Labs 5.1–5.2**). The **full lab order and deliverables** are in **Unit 0.2** (summary table)—read there for filenames and steps; do not treat this page as a second copy of that table.
 

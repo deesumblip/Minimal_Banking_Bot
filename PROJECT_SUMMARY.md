@@ -1,6 +1,6 @@
 ## Project Summary: Minimal Banking Agent (Codio + Rasa Pro)
 
-This file captures high-level context and recent structural decisions so future collaborators (or AI sessions) can quickly re-orient on this repo, especially around **Chapter 1.2 – Custom Actions** and Codio integration.
+This file captures high-level context and recent structural decisions so future collaborators (or AI sessions) can quickly re-orient on this repo, especially around **Level 2 – Custom Actions** and Codio integration.
 
 ---
 
@@ -8,26 +8,26 @@ This file captures high-level context and recent structural decisions so future 
 
 - **Repo:** `Minimal_Banking_Agent` – multi-level Rasa Pro + CALM course.
 - **Codio guides:** Live under `.guides/content/` with:
-  - Root chapter index: `.guides/content/index.json`.
-  - Per-chapter folders, e.g. `Chapter-1-2---Custom-Actions-30d6/`.
+  - Root guide index: `.guides/content/index.json`.
+  - Per-level guide folders (Codio folder names unchanged), e.g. `Chapter-1-2---Custom-Actions-30d6/`.
   - Each unit has an `index.json` listing pages in `order`.
 - **Assessments:** Live under `.guides/assessments/`:
   - Types: `code-output-compare`, `multiple-choice`, `fill-in-the-blanks`.
   - Pages reference assessments via `{Check It!|assessment}(taskId)`.
   - Task IDs and JSON filenames must match (e.g. `{Check It!|assessment}(code-output-compare-2266471391)` ↔ `.guides/assessments/code-output-compare-2266471391.json`).
 
-For a full mapping of Level 2 (Chapter 1.2) content, labs, and graders, see `level2/LEVEL2_CONTENT_LABS_AND_ASSESSMENTS.md`.
+For a full mapping of Level 2 content, labs, and graders, see `level2/LEVEL2_CONTENT_LABS_AND_ASSESSMENTS.md`.
 
 ---
 
-### 2. Chapter 1.2 – Custom Actions (Current State)
+### 2. Level 2 – Custom Actions (Current State)
 
 #### 2.1 Structure (global JSONs)
 
 - Root `.guides/content/index.json` includes:
   - `Chapter-1-2---Custom-Actions-30d6` in the `order` array.
-- Chapter index: `.guides/content/Chapter-1-2---Custom-Actions-30d6/index.json`:
-  - `type: "chapter"`, title `"Chapter 1.2 - Custom Actions"`.
+- Level 2 guide index: `.guides/content/Chapter-1-2---Custom-Actions-30d6/index.json`:
+  - `type: "chapter"`, title `"Level 2 - Custom Actions"`.
   - `order` (units): Unit-0 … Unit-6 (7 units; Unit 6 closes with **6.4** *See it all together* then **6.5** *Before you continue*):
     - `Unit-0--Recap--What-You-Built-in-Level-1-d9e8`
     - `Unit-1--Introduction-to-Actions-aa31`
@@ -106,7 +106,7 @@ All corresponding JSONs exist under `.guides/assessments/` with matching `taskId
 
 ---
 
-### 4. Other Chapter 1.2 Lab Assessments
+### 4. Other Level 2 Lab Assessments
 
 - **Lab 4.1 – Registering Actions in the Domain**
   - Guide: `Unit-4--Registering-Actions-in-the-Domain-a7fc/Lab-4-1--Registering-Actions-in-the-Domain-3406.md`.
@@ -166,5 +166,5 @@ When opening this repo in a new Cursor / AI session, you can quickly re-establis
 - Mentioning key constraints:
   - **Do not** reintroduce removed Lab 2.1 MCQs or the duplicate Lab 3.1 page pair.
   - Always keep `{Check It!|assessment}(taskId)` in sync with `.guides/assessments/` JSON filenames and `taskId` fields.
-  - Maintain the current Chapter 1.2 unit order and Lab placements as reflected in the chapter and unit `index.json` files.
+  - Maintain the current Level 2 unit order and Lab placements as reflected in the chapter and unit `index.json` files.
 

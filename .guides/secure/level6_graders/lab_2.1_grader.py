@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Lab 2.1: Sub-Agent Config - Grader (Level 6 / Chapter 1.6)
-Output format matches Chapter 1.2 Lab 6.2 template.
+Lab 2.1: Sub-Agent Config - Grader (Level 6 / Level 6)
+Output format matches Level 2 Lab 6.2 template.
 
 Checks level6/sub_agents/banking_assistant/config.yml exists and has agent name, protocol,
 mcp_servers, and configuration.module for BankingAssistantLiteAgent (course / tutorial LLM).

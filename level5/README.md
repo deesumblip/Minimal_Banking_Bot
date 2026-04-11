@@ -12,13 +12,13 @@
 - How the LLM dynamically chooses which tools to call
 - When to use tools vs. actions
 
-## Building on Level 4 (Chapter 1.4 completion)
+## Building on Level 4 completion
 
-**Important:** Chapter 1.5 assumes you **finished Chapter 1.4**—the banking agent with **multiple slots**, **`transfer_money`**, **`action_process_transfer`**, and the **Compact** pipeline from **Lab 0.1**. You do not start from scratch.
+**Important:** Level 5 assumes you **finished Level 4**—the banking agent with **multiple slots**, **`transfer_money`**, **`action_process_transfer`**, and the **Compact** pipeline from **Lab 0.1**. You do not start from scratch.
 
-**Repository note:** In this course repo, **`level5/`** is aligned with that **final Chapter 1.4 bot** (same domain shape and flows as **`level4/`** after the Chapter 1.4 labs, including **`goodbye`** and **`holiday_hours`**). **Do Chapter 1.5 work in `level5/`**; keep **`level4/`** as the Chapter 1.4 reference. You do **not** need to copy **`level4/`** into **`level5/`** yourself.
+**Repository note:** In this course repo, **`level5/`** is aligned with that **final Level 4 bot** (same domain shape and flows as **`level4/`** after the Level 4 labs, including **`goodbye`** and **`holiday_hours`**). **Do Level 5 work in `level5/`**; keep **`level4/`** as the Level 4 reference. You do **not** need to copy **`level4/`** into **`level5/`** yourself.
 
-**What stays the same from Chapter 1.4:**
+**What stays the same from Level 4:**
 - Responses (including **`utter_goodbye`** and transfer **`utter_ask_*`**)
 - Flows: `greet`, `help`, `contact`, `goodbye`, `hours`, `holiday_hours`, `check_balance`, `transfer_money`
 - Actions: `action_bank_hours`, `action_holiday_hours`, `action_check_balance_simple`, `action_process_transfer`

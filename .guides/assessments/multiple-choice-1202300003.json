@@ -2,7 +2,7 @@
 	"type": "multiple-choice",
 	"taskId": "multiple-choice-1202300003",
 	"source": {
-		"name": "Chapter 1.2: 2.3 Test Your Knowledge - name() and Domain",
+		"name": "Level 2: 2.3 Test Your Knowledge - name() and Domain",
 		"showName": false,
 		"instructions": "**The string returned by an action's name() method must:**",
 		"multipleResponse": false,
