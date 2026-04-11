@@ -9,11 +9,11 @@ If you've deleted Level 3 from the guide or the workspace, sync it back from the
   ```bash
   cd /home/codio/workspace
   git fetch origin
-  git checkout origin/main -- .guides/content/Chapter-1-3---Slot-Collection-a4b5
+  git checkout origin/main -- .guides/content/Level-3---Slot-Collection-a4b5
   ```
-  That restores the entire `Chapter-1-3---Slot-Collection-a4b5` folder (and all **9 unit subfolders** and their `.json`/`.md` files) from the current `main` branch without touching the rest of the project.
+  That restores the entire `Level-3---Slot-Collection-a4b5` folder (and all **9 unit subfolders** and their `.json`/`.md` files) from the current `main` branch without touching the rest of the project.
 
-- **If the chapter folder exists but has no unit folders inside:** the same `git checkout` command above will populate it from the repo. After running it, you should see `Unit-0--...` through `Unit-8--...` under `Chapter-1-3---Slot-Collection-a4b5`.
+- **If the chapter folder exists but has no unit folders inside:** the same `git checkout` command above will populate it from the repo. After running it, you should see `Unit-0--...` through `Unit-8--...` under `Level-3---Slot-Collection-a4b5`.
 
 - Or do a full refresh from Git:
   ```bash
@@ -24,13 +24,13 @@ If you've deleted Level 3 from the guide or the workspace, sync it back from the
 ## 2. Make sure the guide shows Level 3
 
 - The course index is in **`.guides/content/index.json`**. It should list:
-  - `Chapter-1-1---Just-Responses-d3b4`
-  - `Chapter-1-2---Custom-Actions-30d6`
-  - `Chapter-1-3---Slot-Collection-a4b5`
+  - `Level-1---Just-Responses-d3b4`
+  - `Level-2---Custom-Actions-30d6`
+  - `Level-3---Slot-Collection-a4b5`
 
 - If Level 3 still doesn’t appear in the Guide tab after pulling:
   - Use **Tools → Guide → Edit** and check the Table of Contents (index).
-  - If the chapter is missing from the list, add a section that points to the folder **`Chapter-1-3---Slot-Collection-a4b5`** (or re-import the project from Git so Codio rebuilds the guide from the repo).
+  - If the chapter is missing from the list, add a section that points to the folder **`Level-3---Slot-Collection-a4b5`** (or re-import the project from Git so Codio rebuilds the guide from the repo).
 
 ## 3. Re-import (alternative)
 
@@ -39,7 +39,7 @@ If you've deleted Level 3 from the guide or the workspace, sync it back from the
 
 ## What’s in the repo
 
-- **`.guides/content/Chapter-1-3---Slot-Collection-a4b5/`**
+- **`.guides/content/Level-3---Slot-Collection-a4b5/`**
   - `index.json` (chapter with 9 units in order)
   - `Unit-0--Recap-What-You-Built-in-Level-2-c2a1/` … through `Unit-8--Assessment-and-Next-Steps-6d7e/`
   - Each unit has `index.json` and page `.json` + `.md` files.

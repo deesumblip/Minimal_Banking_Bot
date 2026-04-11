@@ -17,7 +17,7 @@ If **Unit 4** (Reading Slots in Actions) and **Unit 5** (Collecting Slots in Flo
 
 ## What’s in the repo
 
-- **Level 3** (`.guides/content/Chapter-1-3---Slot-Collection-a4b5/`) includes:
+- **Level 3** (`.guides/content/Level-3---Slot-Collection-a4b5/`) includes:
   - `Unit-4--Reading-Slots-in-Actions-0d1e/` with `index.json` and page `.json` + `.md` for 4.1, 4.2, Lab 4.1
   - `Unit-5--Collecting-Slots-in-Flows-8b9c/` with `index.json` and page `.json` + `.md` for 5.1, 5.2, 5.3, Lab 5.1
 - The chapter `index.json` lists both units in `order`.
@@ -37,7 +37,7 @@ So the repo is the source of truth and is complete.
 
 3. **If re-import is not available**  
    In **Tools → Guide → Edit**, open the Table of Contents (Index icon) and manually add **Unit 4** and **Unit 5** as sections, then add each page (4.1, 4.2, Lab 4.1, 5.1, 5.2, 5.3, Lab 5.1) and set each page’s content to the corresponding `.md` file under  
-   `.guides/content/Chapter-1-3---Slot-Collection-a4b5/Unit-4--.../` and `.../Unit-5--.../`.
+   `.guides/content/Level-3---Slot-Collection-a4b5/Unit-4--.../` and `.../Unit-5--.../`.
 
 ## Reference
 
