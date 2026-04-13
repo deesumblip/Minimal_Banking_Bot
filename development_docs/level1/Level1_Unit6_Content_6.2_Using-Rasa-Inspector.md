@@ -1,4 +1,4 @@
-### 6.3 Using Rasa Inspector
+### 6.2 Using Rasa Inspector
 
 **Inspector** is Rasa's built-in testing interface. It lets you chat with your agent in a web page so you can see how it responds. You start it from the **terminal**, then open the chat from the **Rasa Inspect** tab in the top menu.
 

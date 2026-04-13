@@ -77,7 +77,7 @@ Success means the same thing as in Codio: training completes with no errors and 
 
 ---
 
-**Next**: In **Lab 6.3**, start Rasa Inspector and chat with the model you just built.
+**Next**: In **Lab 6.2**, start Rasa Inspector and chat with the model you just built.
 
 **Check It!** runs in the course workspace after you have a new model under **`level1/models/`**. Click **Check It!** below when you are ready.
 

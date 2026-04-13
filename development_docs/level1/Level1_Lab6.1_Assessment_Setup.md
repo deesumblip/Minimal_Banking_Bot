@@ -31,7 +31,7 @@ Run **Check It!** from the same course workspace after training completes.
 
 #### Review in Inspector (optional)
 
-After the assessment, open Rasa Inspector (**Lab 6.2**) and use **6.3 Testing Your Agent** for a fuller test pass. Try "hello", "help", and "contact" to confirm the correct flows trigger.
+After the assessment, open Rasa Inspector (**Lab 6.2**) and use the reading **6.2 Testing Your Agent** for a fuller test pass. Try "hello", "help", and "contact" to confirm the correct flows trigger.
 
 ---
 

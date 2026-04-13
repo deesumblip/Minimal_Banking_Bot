@@ -114,11 +114,11 @@
 - 6.1 Training: What It Does and How to Run It
 - Lab 6.1: Training Your Agent
 - Lab 6.2: Using Rasa Inspector
-- 6.3 Testing Your Agent
+- 6.2 Testing Your Agent (reading; testing workflow)
 
 **Key Concepts**: Training, Inspector, testing workflow
 
-**Note:** The former guide page **6.4 Understanding Agent Behavior** was removed from the Codio TOC. Mirror files `Level1_Unit6_Content_6.3_Using-Rasa-Inspector.md`, `Level1_Unit6_Content_6.4_Testing-Your-Agent.md`, and `Level1_Unit6_Content_6.5_Understanding-Agent-Behavior.md` may still exist under `level1/`; numbering does not match Codio page slugs one-to-one. **`Level1_Lab6.3_Content.md`** is not linked as a separate Codio page in the current unit order.
+**Note:** The former guide page **6.4 Understanding Agent Behavior** was removed from the Codio TOC. Mirror files `Level1_Unit6_Content_6.2_Using-Rasa-Inspector.md`, `Level1_Unit6_Content_6.4_Testing-Your-Agent.md`, and `Level1_Unit6_Content_6.5_Understanding-Agent-Behavior.md` may still exist under `level1/`; numbering does not match Codio page slugs one-to-one. **`Level1_Lab6.3_Content.md`** is not linked as a separate Codio page in the current unit order.
 
 ---
 

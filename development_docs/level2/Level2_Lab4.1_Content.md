@@ -64,4 +64,4 @@ Important:
 
 Run the assessment when you're done.
 
-Optional: after the assessment, see Unit 6.3 to try the agent in the Inspector.
+Optional: after the assessment, see Level 1 **Lab 6.2** to try the agent in the Inspector.

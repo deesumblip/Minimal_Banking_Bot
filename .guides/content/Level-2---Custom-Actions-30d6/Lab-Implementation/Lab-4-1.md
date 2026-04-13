@@ -33,7 +33,7 @@ Run the assessment when you’re done.
 
 #### Review in Inspector (optional)
 
-After the assessment, train and open the Rasa Inspector GUI (see Unit 6.3). In the chat, try **"What are your hours?"** (should work if the `hours` flow exists) and **"What are your holiday hours?"** (likely not yet, you'll add that flow in Unit 5).
+After the assessment, train and open the Rasa Inspector GUI (see Level 1 **Lab 6.2**). In the chat, try **"What are your hours?"** (should work if the `hours` flow exists) and **"What are your holiday hours?"** (likely not yet, you'll add that flow in Unit 5).
 
 ---
 

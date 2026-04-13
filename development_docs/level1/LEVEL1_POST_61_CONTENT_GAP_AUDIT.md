@@ -36,11 +36,11 @@ So after Lab 3.5, students have: greet, help, contact, goodbye, hours, balance (
 
 ---
 
-## Lab 6.3 – Testing Your Agent
+## 6.2 Testing Your Agent
 
 - **Assumes**: greet, help, contact flows (and optionally goodbye).
-- **Gap?** **No.** Greet/help/contact are in the repo; goodbye is created in Lab 3.2. Lab 6.3 says "Test the goodbye flow (if you created it)".
-- **Note**: Lab 6.3 does not ask students to test hours or balance; that’s a design choice, not a missing prerequisite.
+- **Gap?** **No.** Greet/help/contact are in the repo; goodbye is created in Lab 3.2. The **6.2 Testing Your Agent** reading says "Test the goodbye flow (if you created it)".
+- **Note**: That reading does not ask students to test hours or balance; that’s a design choice, not a missing prerequisite.
 
 ---
 

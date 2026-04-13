@@ -1,4 +1,4 @@
-# Lab 6.3: Testing Your Agent
+# Practice: Testing Your Agent (flow checklist)
 
 **Objective**: Test your agent thoroughly with multiple variations.
 

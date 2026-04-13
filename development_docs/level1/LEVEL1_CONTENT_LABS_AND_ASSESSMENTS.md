@@ -37,8 +37,8 @@ Level 1 uses **9 units** (0–8): Setup → Domain → Flows → Patterns → Co
 | `Level1_Unit5_Content_5.2_credentials-yml.md` | credentials.yml |
 | `Level1_Unit5_Content_5.3_endpoints-yml.md` | endpoints.yml |
 | `Level1_Unit6_Content_6.1_What-is-Training.md` | Training concept, `python -m rasa train`, success criteria (merged former 6.1 + 6.2) |
-| `Level1_Unit6_Content_6.3_Using-Rasa-Inspector.md` | Inspector |
-| `Level1_Unit6_Content_6.4_Testing-Your-Agent.md` | Testing (Codio page **6.3** Testing Your Agent) |
+| `Level1_Unit6_Content_6.2_Using-Rasa-Inspector.md` | Inspector |
+| `Level1_Unit6_Content_6.4_Testing-Your-Agent.md` | Testing (Codio reading **6.2** Testing Your Agent) |
 | `Level1_Unit7_Content_7.1_Complete-Agent-Walkthrough.md` | Walkthrough |
 | `Level1_Unit7_Content_7.2_Your-Level-1-Banking-Agent-Summary.md` | Summary |
 | `Level1_Unit8_Content_8.1_Knowledge-Check.md` | Knowledge check |
@@ -63,7 +63,7 @@ Level 1 uses **9 units** (0–8): Setup → Domain → Flows → Patterns → Co
 | 5.1 | Level1_Lab5.1_Content.md | — | Config |
 | 6.1 | Level1_Lab6.1_Content.md | Level1_Lab6.1_Assessment_Setup.md | `rasa train` from `level1`; Codio primary path; optional “Not using Codio?” local training section mirrors guide |
 | 6.2 | Level1_Lab6.2_Content.md | — | Inspector; Codio **Rasa Inspect** tab; optional local **localhost** section mirrors guide |
-| 6.3 | Level1_Lab6.3_Content.md | — | Test flows |
+| 6.3 | Level1_Lab6.3_Content.md | — | Test-flow checklist (pairs with reading **6.2 Testing Your Agent**) |
 | 7.1 | Level1_Lab7.1_Content.md | — | Walkthrough |
 | 7.2 | Level1_Lab7.2_Content.md | Level1_Lab7.2_Assessment_Setup.md | Build your own feature |
 

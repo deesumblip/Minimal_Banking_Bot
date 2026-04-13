@@ -3,7 +3,7 @@
 
 #### Basic testing workflow
 
-1. **Start Inspector** (see Lab 6.3 if you need to run it manually).
+1. **Start Inspector** (see **Lab 6.2** if you need to run it manually).
 2. **Test each flow**:
    - Type "hello" (or "hi", "hey") → should trigger the `greet` flow
    - Type "help" or "what can you do?" → should trigger the `help` flow

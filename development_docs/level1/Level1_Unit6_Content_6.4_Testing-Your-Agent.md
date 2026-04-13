@@ -4,7 +4,7 @@
 
 #### Basic Testing Workflow
 
-1. **Start Inspector** (see 6.3).
+1. **Start Inspector** (see **Lab 6.2**).
 2. **Test each flow**:
    - Type "hello" → Should trigger `greet` flow
    - Type "help" → Should trigger `help` flow
