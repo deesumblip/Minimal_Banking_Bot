@@ -35,6 +35,6 @@ The **`description`** field on each flow is **critical** because the LLM uses it
 
 The model treats these as the same kind of opening because the description names the **situation**, not a single keyword.
 
-**Next:** In **Lab 3.4**, complete the hours and balance flow YAML with the fill-in-the-blank exercises. In **Lab 3.5**, add those flows and their responses to your **`level1`** project.
+**Next:** In **Lab 3.5**, complete the hours and balance flow YAML with the fill-in-the-blank exercises. In **Lab 3.6**, add those flows and their responses to your **`level1`** project.
 
 ---

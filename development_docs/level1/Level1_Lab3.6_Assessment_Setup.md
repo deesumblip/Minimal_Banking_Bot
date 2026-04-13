@@ -1,10 +1,10 @@
-# Lab 3.5: Adding New Flows - Assessment Setup
+# Lab 3.6: Complete Your Agent for Training - Assessment Setup
 
 ## Guide Content (For Students)
 
-**Placement**: After Lab 3.4 (Flow Descriptions and LLM Matching), before Unit 4 and Lab 6.1.
+**Placement**: After Lab 3.5 (Flow Descriptions and LLM Matching), before Unit 4 and Lab 6.1.
 
-**Objective**: Add flows that use `utter_hours` and `utter_balance` by pasting pre-written response text and flow files so the assessment for this section can verify the project. (If Lab 3.4 passed, students' own responses were valid; here they use the exact versions required to pass the Lab 3.5 assessment.)
+**Objective**: Add flows that use `utter_hours` and `utter_balance` by pasting pre-written response text and flow files so the assessment for this section can verify the project. (If Lab 3.5 passed, students' own responses were valid; here they use the exact versions required to pass the Lab 3.6 assessment.)
 
 Students paste the provided YAML into `domain/basics.yml` and create `data/basics/hours.yml` and `data/basics/balance.yml`, then run the assessment.
 
@@ -14,7 +14,7 @@ Students paste the provided YAML into `domain/basics.yml` and create `data/basic
 
 ### Overview
 
-This assessment verifies that the student has completed Lab 3.5: domain contains `utter_hours` and `utter_balance`, and `hours.yml` and `balance.yml` exist with the correct flow structure.
+This assessment verifies that the student has completed Lab 3.6: domain contains `utter_hours` and `utter_balance`, and `hours.yml` and `balance.yml` exist with the correct flow structure.
 
 ### Assessment Type
 
@@ -23,7 +23,7 @@ This assessment verifies that the student has completed Lab 3.5: domain contains
 ### Grader Script Location
 
 ```
-.guides/secure/level1_graders/lab_3.5_grader.py
+.guides/secure/level1_graders/lab_3.6_grader.py
 ```
 
 ### Command (Codio)
@@ -31,7 +31,7 @@ This assessment verifies that the student has completed Lab 3.5: domain contains
 From **workspace root** (`/home/codio/workspace`):
 
 ```
-python3 /home/codio/workspace/.guides/secure/level1_graders/lab_3.5_grader.py
+python3 /home/codio/workspace/.guides/secure/level1_graders/lab_3.6_grader.py
 ```
 
 Working Directory: `/home/codio/workspace` (or project root).
@@ -55,4 +55,4 @@ Working Directory: `/home/codio/workspace` (or project root).
 
 ### Task ID
 
-Create or use a code-output-compare assessment with a unique taskId (e.g. `code-output-compare-lab-3-5`) and attach it to the Lab 3.5 section in the Level 1 guide.
+Create or use a code-output-compare assessment with a unique taskId (e.g. `code-output-compare-350500005`) and attach it to the Lab 3.6 section in the Level 1 guide.

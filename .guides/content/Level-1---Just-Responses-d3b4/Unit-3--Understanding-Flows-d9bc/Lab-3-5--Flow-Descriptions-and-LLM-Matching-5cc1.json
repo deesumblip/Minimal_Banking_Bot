@@ -1,6 +1,6 @@
 {
 	"id": "5cc1e46b-475d-fad0-3dac-7c02ca3970f0",
-	"title": "Lab 3.4: Flow Descriptions and LLM Matching",
+	"title": "Lab 3.5: Flow Descriptions and LLM Matching",
 	"files": [
 		{
 			"path": "#tabs",
@@ -21,5 +21,5 @@
 	"content": "",
 	"teacherOnly": false,
 	"closeTerminalSession": true,
-	"learningObjectives": "Complete hours and balance flows by applying description-writing concepts from section 3.4."
+	"learningObjectives": "Complete hours and balance flows by applying description-writing concepts from section 3.3."
 }

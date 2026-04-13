@@ -59,7 +59,7 @@
 
 ### Unit 3: Understanding Flows
 **Type**: Content + Labs  
-**Assessments**: Lab 3.1–3.5 (as configured)
+**Assessments**: Lab 3.1–3.6 (as configured)
 
 **Sections**:
 - 3.1 What is a Flow?
@@ -67,10 +67,10 @@
 - 3.2 Flow Structure Deep Dive
 - Lab 3.2: Creating Your First Flow
 - Lab 3.3: Multi-Step Flow
-- 3.4 Flow Descriptions and LLM Understanding
-- Lab 3.4: Flow Descriptions and LLM Matching
-- Lab 3.5: Adding New Flows
-- 3.6 Test Your Knowledge
+- 3.3 Flow Descriptions and LLM Understanding
+- Lab 3.5: Flow Descriptions and LLM Matching
+- Lab 3.6: Complete Your Agent for Training
+- 3.4 Test Your Knowledge
 
 **Key Concepts**: Flows, steps, flow descriptions, LLM matching
 

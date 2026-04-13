@@ -1,4 +1,4 @@
-### 3.4 Flow Descriptions and LLM Understanding
+### 3.3 Flow Descriptions and LLM Understanding
 
 The `description` field is **critical** because the LLM uses it to match user messages to flows.
 

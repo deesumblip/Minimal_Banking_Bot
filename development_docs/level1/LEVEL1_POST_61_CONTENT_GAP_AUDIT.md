@@ -4,8 +4,8 @@
 
 **Sequentiality**: Each graded lab must not be passable using only the previous lab's configuration. Changes made:
 - **Starter domain**: `utter_goodbye` removed from `level1/domain/basics.yml` so Lab 2.2 (Creating Your First Response) cannot be passed with the starter alone; students must add `utter_goodbye`.
-- **Lab 3.5 grader**: Step 1 now requires key phrases from the Lab 3.5 handout in the domain (`Monday` or `9am` for `utter_hours`; `account number` for `utter_balance`) so Lab 3.5 cannot be passed with only Lab 3.4's student-written content.
-- **Lab 7.2 grader**: `hours.yml` and `balance.yml` are in the known-files list so Lab 7.2 requires a new flow beyond those from Lab 3.5.
+- **Lab 3.6 grader**: Step 1 now requires key phrases from the Lab 3.6 handout in the domain (`Monday` or `9am` for `utter_hours`; `account number` for `utter_balance`) so Lab 3.6 cannot be passed with only Lab 3.5's student-written content.
+- **Lab 7.1 grader**: `hours.yml` and `balance.yml` are in the known-files list so Lab 7.1 requires a new flow beyond those from Lab 3.6.
 
 ---
 
@@ -15,17 +15,17 @@
 |------------|--------|-------------------|
 | **Starter repo** | utter_greet, utter_help, utter_contact, utter_goodbye | greet.yml, help.yml, contact.yml |
 | Lab 3.2 | — | goodbye.yml |
-| Lab 3.4 | (optional / student-written) | hours.yml, balance.yml (student content) |
-| Lab 3.5 | utter_hours, utter_balance | Replace hours.yml, balance.yml with given content |
+| Lab 3.5 | (optional / student-written) | hours.yml, balance.yml (student content) |
+| Lab 3.6 | utter_hours, utter_balance | Replace hours.yml, balance.yml with given content |
 
-So after Lab 3.5, students have: greet, help, contact, goodbye, hours, balance (flows + domain responses for all).
+So after Lab 3.6, students have: greet, help, contact, goodbye, hours, balance (flows + domain responses for all).
 
 ---
 
 ## Lab 6.1 – Training Your Agent
 
-- **Assumes**: Lab 3.5 done (domain + hours/balance flows) so `rasa train` passes validation.
-- **Gap?** **No.** Lab 6.1 text says "Before you begin: Complete Lab 3.5 (Adding New Flows)".
+- **Assumes**: Lab 3.6 done (domain + hours/balance flows) so `rasa train` passes validation.
+- **Gap?** **No.** Lab 6.1 text says "Before you begin: Finish Lab 3.6" (complete agent).
 
 ---
 

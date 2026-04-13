@@ -1,98 +1,76 @@
 #!/usr/bin/env python3
 """
-Lab 3.5: Complete Your Agent for Training — grader (Level 1 Unit 3).
-Runs from workspace root. Checks: domain has utter_hours and utter_balance;
-hours.yml and balance.yml exist with correct flow structure.
+Optional structure check for Lab 3.5 fill-in (hours.yml, balance.yml) — Level 1 Unit 3.
+Runs from workspace root. Checks level1/data/basics/hours.yml and balance.yml exist
+with flows:, flow name, name:, description: (non-empty, at least 20 chars), steps: with at least one action.
+Uses only stdlib. (Not wired to Codio assessments by default.)
 """
 
 import os
+import re
 import sys
 from pathlib import Path
 
 WORKSPACE_ROOT = Path(os.environ.get("CODIO_WORKSPACE", os.getcwd()))
 if not WORKSPACE_ROOT.is_absolute():
     WORKSPACE_ROOT = Path.cwd()
-LEVEL1_DIR = WORKSPACE_ROOT / "level1"
-DOMAIN_FILE = LEVEL1_DIR / "domain" / "basics.yml"
-DATA_BASICS = LEVEL1_DIR / "data" / "basics"
+LEVEL1 = WORKSPACE_ROOT / "level1"
+DATA_BASICS = LEVEL1 / "data" / "basics"
 HOURS_FILE = DATA_BASICS / "hours.yml"
 BALANCE_FILE = DATA_BASICS / "balance.yml"
+MIN_DESC_LEN = 20
 
-score = 0
-max_score = 3
 
-print("Running Lab 3.5 Assessment Checks...")
-print("")
+def check_flow_file(path, flow_name, action_hint):
+    """Check a flow file has flows:, flow_name:, name:, description: (>= MIN_DESC_LEN), steps: with action."""
+    if not path.is_file():
+        print(f"FAIL")
+        print(f"File not found: {path.relative_to(WORKSPACE_ROOT)}", file=sys.stderr)
+        sys.exit(1)
+    content = path.read_text(encoding="utf-8").replace("\r\n", "\n").replace("\r", "\n")
+    if "flows:" not in content:
+        print("FAIL")
+        print(f"{path.name} must contain a top-level flows: section.", file=sys.stderr)
+        sys.exit(1)
+    if f"{flow_name}:" not in content:
+        print("FAIL")
+        print(f"{path.name} must define flow '{flow_name}:' under flows:.", file=sys.stderr)
+        sys.exit(1)
+    if "name:" not in content:
+        print("FAIL")
+        print(f"{path.name} flow must have a name: field.", file=sys.stderr)
+        sys.exit(1)
+    if "description:" not in content:
+        print("FAIL")
+        print(f"{path.name} flow must have a description: field (at least {MIN_DESC_LEN} characters).", file=sys.stderr)
+        sys.exit(1)
+    # Extract description value (simple: first quoted or unquoted string after description:)
+    desc_m = re.search(r"description:\s*[\"']?(.+?)[\"']?(?=\s*\n|\s*#|$)", content, re.DOTALL)
+    if not desc_m:
+        desc_m = re.search(r"description:\s*(.+)", content)
+    if desc_m:
+        desc_text = desc_m.group(1).strip().replace("\n", " ")
+        if len(desc_text) < MIN_DESC_LEN:
+            print("FAIL")
+            print(f"{path.name} description must be at least {MIN_DESC_LEN} characters (clear and specific).", file=sys.stderr)
+            sys.exit(1)
+    if "steps:" not in content:
+        print("FAIL")
+        print(f"{path.name} flow must have a steps: section.", file=sys.stderr)
+        sys.exit(1)
+    if "action:" not in content:
+        print("FAIL")
+        print(f"{path.name} steps must include at least one - action: (e.g. {action_hint}).", file=sys.stderr)
+        sys.exit(1)
+    return True
 
-# Step 1: Domain has utter_hours and utter_balance with Lab 3.5 handout content (1 point)
-# Require key phrases so Lab 3.5 cannot be passed with only Lab 3.4's configuration.
-print("Step 1: Checking domain for utter_hours and utter_balance (Lab 3.5 content)...")
-if not DOMAIN_FILE.is_file():
-    print("❌ Step 1: FAILED - domain/basics.yml not found (0 points)")
-    print("FAIL")
-    sys.exit(1)
-text = DOMAIN_FILE.read_text(encoding="utf-8")
-if "utter_hours" not in text or "utter_balance" not in text:
-    print("❌ Step 1: FAILED - domain must define utter_hours and utter_balance under responses: (0 points)")
-    print("Hint: Add both response blocks in Lab 3.5 Step 1.")
-    print("FAIL")
-    sys.exit(1)
-# Require handout phrases so 3.4-only (student-written) content does not pass.
-if "Monday" not in text and "9am" not in text:
-    print("❌ Step 1: FAILED - utter_hours must use the Lab 3.5 handout text (e.g. Monday, 9am). (0 points)")
-    print("Hint: Paste the exact utter_hours block from Lab 3.5 Step 1.")
-    print("FAIL")
-    sys.exit(1)
-if "account number" not in text:
-    print("❌ Step 1: FAILED - utter_balance must use the Lab 3.5 handout text (include 'account number'). (0 points)")
-    print("Hint: Paste the exact utter_balance block from Lab 3.5 Step 1.")
-    print("FAIL")
-    sys.exit(1)
-print("✅ Step 1: PASSED - Domain has utter_hours and utter_balance (1 point)")
-score += 1
-print("")
 
-# Step 2: hours.yml exists with flow hours and action utter_hours (1 point)
-print("Step 2: Checking data/basics/hours.yml...")
-if not HOURS_FILE.is_file():
-    print("❌ Step 2: FAILED - data/basics/hours.yml not found (0 points)")
-    print("Hint: Create hours.yml with content from Lab 3.5 Step 2.")
-    print("FAIL")
-    sys.exit(1)
-hours_text = HOURS_FILE.read_text(encoding="utf-8")
-if "hours" not in hours_text or "utter_hours" not in hours_text or "flows:" not in hours_text:
-    print("❌ Step 2: FAILED - hours.yml must contain flow 'hours' with step utter_hours (0 points)")
-    print("FAIL")
-    sys.exit(1)
-print("✅ Step 2: PASSED - hours.yml has correct structure (1 point)")
-score += 1
-print("")
-
-# Step 3: balance.yml exists with flow balance and action utter_balance (1 point)
-print("Step 3: Checking data/basics/balance.yml...")
-if not BALANCE_FILE.is_file():
-    print("❌ Step 3: FAILED - data/basics/balance.yml not found (0 points)")
-    print("Hint: Create balance.yml with content from Lab 3.5 Step 3.")
-    print("FAIL")
-    sys.exit(1)
-balance_text = BALANCE_FILE.read_text(encoding="utf-8")
-if "balance" not in balance_text or "utter_balance" not in balance_text or "flows:" not in balance_text:
-    print("❌ Step 3: FAILED - balance.yml must contain flow 'balance' with step utter_balance (0 points)")
-    print("FAIL")
-    sys.exit(1)
-print("✅ Step 3: PASSED - balance.yml has correct structure (1 point)")
-score += 1
-print("")
-
-print("==========================================")
-if score >= max_score:
-    print(f"✅ PASS: Lab 3.5 complete! Score: {score}/{max_score}")
-    print("Your agent is ready for training (Lab 6.1).")
-    print("==========================================")
+def main():
+    check_flow_file(HOURS_FILE, "hours", "utter_hours")
+    check_flow_file(BALANCE_FILE, "balance", "utter_balance or utter_balance_help")
     print("PASS")
     sys.exit(0)
-else:
-    print(f"❌ FAIL: Lab 3.5 incomplete. Score: {score}/{max_score}")
-    print("==========================================")
-    print("FAIL")
-    sys.exit(1)
+
+
+if __name__ == "__main__":
+    main()

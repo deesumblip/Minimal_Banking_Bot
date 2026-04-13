@@ -30,7 +30,7 @@ Save the file.
 
 ## Step 2: Replace the hours flow
 
-Open **`data/basics/hours.yml`** (you created this in Lab 3.4). Replace all of its contents with the following. If the file doesn’t exist yet, create it with this content.
+Open **`data/basics/hours.yml`** (you created this in Lab 3.5). Replace all of its contents with the following. If the file doesn’t exist yet, create it with this content.
 
 ```yaml
 flows:
@@ -47,7 +47,7 @@ Save the file.
 
 ## Step 3: Replace the balance flow
 
-Open **`data/basics/balance.yml`** (you created this in Lab 3.4). Replace all of its contents with the following. If the file doesn’t exist yet, create it with this content.
+Open **`data/basics/balance.yml`** (you created this in Lab 3.5). Replace all of its contents with the following. If the file doesn’t exist yet, create it with this content.
 
 ```yaml
 flows:

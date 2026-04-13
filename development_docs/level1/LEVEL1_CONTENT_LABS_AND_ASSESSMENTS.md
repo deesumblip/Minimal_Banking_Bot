@@ -28,7 +28,7 @@ Level 1 uses **9 units** (0–8): Setup → Domain → Flows → Patterns → Co
 | `Level1_Unit2_Content_2.3_Response-Variations.md` | Multiple text variations |
 | `Level1_Unit3_Content_3.1_What-is-a-Flow.md` | Flow concept |
 | `Level1_Unit3_Content_3.2_Flow-Structure-Deep-Dive.md` | greet.yml structure |
-| `Level1_Unit3_Content_3.4_Flow-Descriptions-and-LLM-Understanding.md` | Descriptions, LLM matching (Codio page **3.4**) |
+| `Level1_Unit3_Content_3.3_Flow-Descriptions-and-LLM-Understanding.md` | Descriptions, LLM matching (Codio page **3.3**) |
 | `Level1_Unit4_Content_4.1_What-are-System-Patterns.md` | Patterns intro |
 | `Level1_Unit4_Content_4.2_Session-Start-Pattern.md` | pattern_session_start |
 | `Level1_Unit4_Content_4.3_Pattern-Completed.md` | pattern_completed |
