@@ -316,7 +316,6 @@ else:
     print(
         "Hint: From the project root, create .env with a real RASA_LICENSE= line, for example:\n"
         "  echo 'RASA_LICENSE=your-actual-license-key' > .env\n"
-        "If your key contains special characters, use: printf 'RASA_LICENSE=%s\\n' 'your-key' > .env\n"
         "The file must live at the project root (next to level1/), not inside level1/. "
         "Then run Check It! again."
     )

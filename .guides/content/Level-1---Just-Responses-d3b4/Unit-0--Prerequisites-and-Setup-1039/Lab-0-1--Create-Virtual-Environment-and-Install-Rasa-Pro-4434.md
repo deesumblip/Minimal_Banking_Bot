@@ -83,17 +83,11 @@ Stay in the **project root** (the folder that contains `level1/`, `level2/`, `.g
 echo 'RASA_LICENSE=YOUR_LICENSE_KEY' > .env
 ```
 
-If your key contains characters that confuse the shell, use:
-
-```bash
-printf 'RASA_LICENSE=%s\n' 'YOUR_LICENSE_KEY' > .env
-```
-
-This creates **`.env`** next to `level1/`. The automated **Check It!** test reads this file (the grader never prints your key). Do **not** commit `.env` — it is listed in `.gitignore`.
+This creates **`.env`** next to `level1/`. The automated **Check It!** test reads this file (the grader never prints your key).
 
 **5. Verify installation**
 
-Load the license into your **current** shell session, then run Rasa:
+Now load the license into your current shell session, then run Rasa by running the following:
 
 ```bash
 set -a
@@ -162,7 +156,7 @@ From the **project root** (the folder that contains `level1/`), create `.env` wi
 Set-Content -Path .env -Value "RASA_LICENSE=YOUR_LICENSE_KEY" -Encoding utf8
 ```
 
-Or use a here-string if you prefer. Do **not** commit `.env` (it is in `.gitignore`).
+Or use a here-string if you prefer.
 
 **5. Verify installation**
 
@@ -232,8 +226,6 @@ From the **project root**, create `.env` (same steps as **On Codio** above):
 echo 'RASA_LICENSE=YOUR_LICENSE_KEY' > .env
 ```
 
-Do **not** commit `.env` (it is in `.gitignore`).
-
 **5. Verify installation**
 
 ```bash
@@ -299,8 +291,6 @@ From the **project root**:
 echo 'RASA_LICENSE=YOUR_LICENSE_KEY' > .env
 ```
 
-Do **not** commit `.env` (it is in `.gitignore`).
-
 **5. Verify installation**
 
 ```bash
@@ -340,7 +330,5 @@ Confirm that the **domain/** and **data/** directories exist and that the three 
 
 - **Project-root `.env`** contains a real **`RASA_LICENSE=...`** line (not a placeholder), and you can run `rasa --version` successfully after loading `.env` in your shell.
 - The `level1` folder has the expected structure (domain, data, config files).
-
-For **later labs**: Use the same `.venv` from the project root for every level. Activate it from the root, load your license (`set -a; source .env; set +a` on bash, or your PowerShell equivalent), then `cd` into the level folder you're working in (e.g. `cd level1`).
 
 ---
