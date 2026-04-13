@@ -1,6 +1,6 @@
 **Objective**: Train your agent and verify it works.
 
-**Before you begin**: Finish **Lab 3.6** so your domain and flows include **hours** and **balance**. Training will fail validation if those pieces are missing.
+**Before you begin**: Finish **Lab 3.5** so your domain and flows include **hours** and **balance**. Training will fail validation if those pieces are missing.
 
 **Where training runs**: Run `python -m rasa train` only from the **`level1`** folder with your virtual environment active. Rasa needs `config.yml`, `domain/`, and `data/` from **`level1`**. Do not run the command from the repository root, which is the folder that contains **`level1`** and **`level2`**.
 
@@ -77,7 +77,7 @@ Success means the same thing as in Codio: training completes with no errors and 
 
 ---
 
-**Next**: In **Lab 6.2**, start Rasa Inspector and chat with the model you just built.
+**Next**: In **Lab 6.3**, start Rasa Inspector and chat with the model you just built.
 
 **Check It!** runs in the course workspace after you have a new model under **`level1/models/`**. Click **Check It!** below when you are ready.
 

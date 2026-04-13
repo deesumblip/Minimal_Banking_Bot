@@ -2,7 +2,7 @@
 	"type": "multiple-choice",
 	"taskId": "multiple-choice-3124300279",
 	"source": {
-		"name": "Level 1: Lab 3.1 - effective flow descriptions",
+		"name": "Level 1: Unit 3 — Effective flow descriptions (MCQ)",
 		"showName": false,
 		"instructions": "**What makes a flow description effective for LLM matching? (Select all that apply)**",
 		"multipleResponse": true,

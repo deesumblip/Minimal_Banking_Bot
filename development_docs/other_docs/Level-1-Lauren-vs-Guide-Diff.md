@@ -29,11 +29,11 @@ Some stems differ only by numbering or article ("the" vs "a"). The **guide title
 | **Lab 2.1: Creating Your First Response** | `Lab-2-2--Creating-Your-First-Response-a598.md` | `Lab-2-1--...a598.md` |
 | **Lab 2.2: Add Response Variations** | `Lab-2-3--Add-Response-Variations-a630.md` | `Lab-2-2--...a630.md` |
 | **3.4 Flow Descriptions and LLM Understanding** | `3-3-Flow-Descriptions-and-LLM-Understanding-f72a.md` | `3-4-...f72a.md` |
-| **3.7 Test Your Knowledge** | `3-6--Test-Your-Knowledge-26ac.md` | `3-7--Test-Your-Knowledge-26ac.md` |
-| **Lab 3.5: Flow Descriptions and LLM Matching** | `Lab-3-4--Flow-Descriptions-and-LLM-Matching-5cc1.md` | `Lab-3-5--...5cc1.md` |
-| **Lab 3.6: Complete Your Agent for Training** | `Lab-3-5--Complete-Your-Agent-for-Training-c4f0.md` | `Lab-3-6--...c4f0.md` |
+| **3.5 Test Your Knowledge** | `3-7--Test-Your-Knowledge-26ac.md` (older Lauren) | `3-5--Test-Your-Knowledge-26ac.md` |
+| **Lab 3.4: Flow Descriptions and LLM Matching** | `Lab-3-5--Flow-Descriptions-and-LLM-Matching-5cc1.md` (older Lauren) | `Lab-3-4--Flow-Descriptions-and-LLM-Matching-5cc1.md` |
+| **Lab 3.5: Complete Your Agent for Training** | `Lab-3-6--Complete-Your-Agent-for-Training-c4f0.md` (older Lauren) | `Lab-3-5--Complete-Your-Agent-for-Training-c4f0.md` |
 | **8.2 Limitations of Level 1** | `8-3-Limitations-of-Level-1-f9a1.md` | `8-2-Limitations-of-Level-1-f9a1.md` |
-| **Lab 7.4: Build Your Own Feature** | `Lab-7-1-Build-Your-Own-Feature-b5c6.md` | `Lab-7-4-Build-Your-Own-Feature-b5c6.md` |
+| **Lab 7.1: Build Your Own Feature** | `Lab-7-1-Build-Your-Own-Feature-b5c6.md` | `Lab-7-1-Build-Your-Own-Feature-b5c6.md` |
 
 **Guide-only / restructure:** the standalone **`6.2`** reading page was merged into **`6.1 Training: What It Does and How to Run It`**; Lauren still has **`6-2-How-to-Train-Your-Agent-b2c3.md`** (short lab pointer only).
 

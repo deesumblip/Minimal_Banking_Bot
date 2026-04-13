@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """
-Lab 3.4: Flow Descriptions and LLM Matching (hours.yml, balance.yml) - Grader Script (Codio)
+Optional structure check for Lab 3.4 fill-in (hours.yml, balance.yml) — Level 1 Unit 3.
 Runs from workspace root. Checks level1/data/basics/hours.yml and balance.yml exist
 with flows:, flow name, name:, description: (non-empty, at least 20 chars), steps: with at least one action.
-Uses only stdlib.
+Uses only stdlib. (Not wired to Codio assessments by default.)
 """
 
 import os

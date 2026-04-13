@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Lab 3.5: Adding New Flows - Grader Script
+Lab 3.5: Complete Your Agent for Training — grader (Level 1 Unit 3).
 Runs from workspace root. Checks: domain has utter_hours and utter_balance;
 hours.yml and balance.yml exist with correct flow structure.
 """

@@ -1,6 +1,6 @@
 **Objective**: Add the hours and balance flows (and their responses) to your `level1` project so your agent is ready for training.
 
-**Before You Begin**: You've passed both fill-in-the-blank checks in Lab 3.5 (hours flow and balance flow). You are in the `level1` project (folder that contains `domain/`, `data/`, `config.yml`).
+**Before You Begin**: You've passed both fill-in-the-blank checks in **Lab 3.4** (hours flow and balance flow). You are in the `level1` project (folder that contains `domain/`, `data/`, `config.yml`).
 
 ---
 
@@ -26,7 +26,7 @@ Save the file.
 
 #### Step 2: Create the hours flow file
 
-Create **`level1/data/basics/hours.yml`** with this content (same as the flow you completed in Lab 3.5 Part 1):
+Create **`level1/data/basics/hours.yml`** with this content (same as the flow you completed in Lab 3.4 Part 1):
 
 ```yaml
 flows:
@@ -43,7 +43,7 @@ Save the file.
 
 #### Step 3: Create the balance flow file
 
-Create **`level1/data/basics/balance.yml`** with this content (same as the flow you completed in Lab 3.5 Part 2):
+Create **`level1/data/basics/balance.yml`** with this content (same as the flow you completed in Lab 3.4 Part 2):
 
 ```yaml
 flows:

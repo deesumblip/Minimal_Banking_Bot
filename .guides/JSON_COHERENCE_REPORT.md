@@ -37,7 +37,7 @@ For each unit, the `order` array should list page ids that have a matching `.md`
 
 ### Spot checks (sample units)
 
-- **Level 1 Unit 6:** `order` = `6-1-What-is-Training-a1b2`, `Lab-6-1-Training-Your-Agent-c3d4`, `Lab-6-2-Using-Rasa-Inspector-e5f6`, `6-3-Testing-Your-Agent-f6a7`. Stem **`6-2-How-to-Train-Your-Agent-b2c3`** was merged into **6.1** (see §8).
+- **Level 1 Unit 6:** `order` = `6-1-What-is-Training-a1b2`, `Lab-6-1-Training-Your-Agent-c3d4`, `Lab-6-3-Using-Rasa-Inspector-e5f6`, `6-2-Testing-Your-Agent-f6a7`. Stem **`6-2-How-to-Train-Your-Agent-b2c3`** was merged into **6.1** (see §8).
 - **Level 4 Unit 0:** `order` = `["0-1-Your-Level-3-Banking-Agent-e4f5","0-2-What-Level-4-Adds-f5a6"]`; Unit-0 folder has matching .md and .json for both. Coherent.
 - **Level 4 Unit 1:** order includes 1-1, 1-2, 1-3, 1-4-Test-Your-Knowledge-e4f5; all have .md and .json. Coherent.
 - **Level 2 Unit 3:** `order` = `["Lab-3-1--Create-Your-Own-Action-04c0"]` only (one guide page). Removed stems (no longer in TOC): `3-1-Step-by-Step-Creating-an-Action-05dc`, `3-2-Understanding-Action-Execution-199d`; execution prose merged into **Lab 3.1**.
