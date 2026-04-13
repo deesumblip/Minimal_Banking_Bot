@@ -30,8 +30,8 @@ Some stems differ only by numbering or article ("the" vs "a"). The **guide title
 | **Lab 2.2: Add Response Variations** | `Lab-2-3--Add-Response-Variations-a630.md` | `Lab-2-2--...a630.md` |
 | **3.3 Flow Descriptions and LLM Understanding** | `3-3-Flow-Descriptions-and-LLM-Understanding-f72a.md` | `3-3-...f72a.md` |
 | **3.4 Test Your Knowledge** | `3-7--Test-Your-Knowledge-26ac.md` (older Lauren) | `3-4--Test-Your-Knowledge-26ac.md` |
-| **Lab 3.5: Flow Descriptions and LLM Matching** | `Lab-3-5--Flow-Descriptions-and-LLM-Matching-5cc1.md` (older Lauren) | `Lab-3-5--Flow-Descriptions-and-LLM-Matching-5cc1.md` |
-| **Lab 3.6: Complete Your Agent for Training** | `Lab-3-6--Complete-Your-Agent-for-Training-c4f0.md` (older Lauren) | `Lab-3-6--Complete-Your-Agent-for-Training-c4f0.md` |
+| **Lab 3.4: Flow Descriptions and LLM Matching** | `Lab-3-5--Flow-Descriptions-and-LLM-Matching-5cc1.md` (older Lauren) | `Lab-3-4--Flow-Descriptions-and-LLM-Matching-5cc1.md` |
+| **Lab 3.5: Complete Your Agent for Training** | `Lab-3-6--Complete-Your-Agent-for-Training-c4f0.md` (older Lauren) | `Lab-3-5--Complete-Your-Agent-for-Training-c4f0.md` |
 | **8.2 Limitations of Level 1** | `8-3-Limitations-of-Level-1-f9a1.md` | `8-2-Limitations-of-Level-1-f9a1.md` |
 | **Lab 7.1: Build Your Own Feature** | `Lab-7-1-Build-Your-Own-Feature-b5c6.md` | `Lab-7-1-Build-Your-Own-Feature-b5c6.md` |
 
@@ -59,10 +59,10 @@ Approximate line churn (numstat: first column ≈ lines only in Lauren, second �
 | **Lab 2.2: Add Response Variations** | Small (prerequisite lab numbers; Lauren longer "what this means") |
 | **3.1 What is a Flow?** | Small (Lauren: autonomy paragraph; "activated" vs "triggered") |
 | **3.2 Flow Structure Deep Dive** | Small (Lauren typo `doesgggh`; guide fixes; activate/trigger wording) |
-| **3.3 Flow Descriptions and LLM Understanding** | Trivial (cross-refs to Lab 3.5/3.6 vs Lauren older numbering) |
+| **3.3 Flow Descriptions and LLM Understanding** | Trivial (cross-refs to Lab 3.4/3.5 vs Lauren older numbering) |
 | **3.4 Test Your Knowledge** | IDENTICAL |
 | **Lab 3.1: Exploring Existing Flows** | IDENTICAL |
-| **Lab 3.2** – **Lab 3.6** | Small (lab number cross-refs; **Check It!** phrasing; Unit 3 ends with **3.4 Test Your Knowledge** after Lab 3.6) |
+| **Lab 3.2** – **Lab 3.5** | Small (lab number cross-refs; **Check It!** phrasing; Unit 3 ends with **3.4 Test Your Knowledge** after Lab 3.5) |
 | **4.1** – **4.4**, **4.5 Test Your Knowledge**, **Lab 4.1** | IDENTICAL |
 | **4.2 Session Start Pattern** | Trivial (code fence `text`) |
 | **Lab 4.2: Modifying System Patterns** | Trivial (blank line before yaml) |
@@ -114,9 +114,9 @@ Recommendations assume keeping the guide's lab numbering, assessments, **`openai
 |------------------|------------------------------|-----------------|
 | **3.1 What is a Flow?** | Extra paragraph on guided flows vs LLM improvisation; "activated" wording. Guide: shorter "script" definition; "triggered." | **Optional** — short callout on when flows are the right tool. |
 | **3.2 Flow Structure Deep Dive** | Typo **doesgggh**; "outline of actions"; "activate your flow." Guide: corrected text; "trigger." | **No** — take guide. |
-| **3.3 Flow Descriptions and LLM Understanding** | "Next: Lab 3.4 / 3.5" in Lauren numbering. Guide: Lab 3.5 / 3.6. | **No** — use guide numbers. |
+| **3.3 Flow Descriptions and LLM Understanding** | "Next: Lab 3.4 / 3.5" in Lauren numbering. Guide: Lab 3.4 / 3.5. | **No** — use guide numbers. |
 | **3.4 Test Your Knowledge** | Same as guide. | **N/A** |
-| **Lab 3.1** – **Lab 3.6** | Mostly lab index cross-refs (2.1 vs 2.2, 3.4 vs 3.5, etc.) and "Run assessment" vs **Check It!** on Lab 3.6. | **No** — guide numbering canonical. |
+| **Lab 3.1** – **Lab 3.5** | Mostly lab index cross-refs (2.1 vs 2.2, 3.4 vs 3.5, etc.) and "Run assessment" vs **Check It!** on Lab 3.5. | **No** — guide numbering canonical. |
 
 ### Unit 4: System Patterns
 
@@ -138,7 +138,7 @@ Recommendations assume keeping the guide's lab numbering, assessments, **`openai
 | Guide page title | What Lauren wrote (vs guide) | Merge to guide? |
 |------------------|------------------------------|-----------------|
 | **6.1 Training: What It Does and How to Run It** | Shorter conceptual open; guide adds bridge to Lab 6.1, `rasa train` example, success line. Lauren's separate **6-2** file is redundant with merged guide page. | **No** — guide supersedes. |
-| **Lab 6.1: Training Your Agent** | Split **Part 1: Codio** / **Part 2: Running locally**; shorter troubleshooting. Guide: single long Codio-first flow, success checklist, error table, prerequisite Lab 3.6. | **Partial** — reintroduce **local training** subsection if non-Codio students are in scope. |
+| **Lab 6.1: Training Your Agent** | Split **Part 1: Codio** / **Part 2: Running locally**; shorter troubleshooting. Guide: single long Codio-first flow, success checklist, error table, prerequisite Lab 3.5. | **Partial** — reintroduce **local training** subsection if non-Codio students are in scope. |
 | **Lab 6.2: Using Rasa Inspector** | Codio + **long "Launching Inspector locally"** (Windows/macOS/Linux, localhost URLs, port troubleshooting); AI Coach. Guide: emphasize **Rasa Inspect** tab; dropped entire local section. | **Partial** — merge **local Inspector** steps for off-Codio learners; skip AI Coach if policy forbids. |
 | **6.3 Testing Your Agent** | Extra **AI Coach** suggestion line. Guide: omitted. | **Conditional** on AI Coach policy. |
 | **`CODIO_AUTO_START_INSPECTOR.md` (Lauren only)** | Step-by-step Codio Layout command to run `start_rasa_inspect.sh` when opening testing page. | **Instructor/author doc**, not a student page. |

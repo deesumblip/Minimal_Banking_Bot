@@ -40,6 +40,6 @@ flows:
 
 This creates a more helpful greeting experience!
 
-**Next:** Read **3.3 Flow Descriptions and LLM Understanding** for how the `description` field helps the LLM match user messages to flows. Then apply that in **Lab 3.5** with the hours and balance fill-in exercises.
+**Next:** Read **3.3 Flow Descriptions and LLM Understanding** for how the `description` field helps the LLM match user messages to flows. Then apply that in **Lab 3.4** with the hours and balance fill-in exercises.
 
 {Check It!|assessment}(code-output-compare-303300002)

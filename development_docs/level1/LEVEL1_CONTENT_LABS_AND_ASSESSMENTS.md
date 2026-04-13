@@ -56,8 +56,8 @@ Level 1 uses **9 units** (0–8): Setup → Domain → Flows → Patterns → Co
 | 3.1 | Level1_Lab3.1_Content.md | — | Explore flows |
 | 3.2 | Level1_Lab3.2_Content.md | — | Create goodbye.yml flow |
 | 3.3 | Level1_Lab3.3_Content.md | — | Multi-step flow |
-| 3.5 | Level1_Lab3.5_Content.md | — | Hours and balance flow YAML (fill-in-the-blank; assessments embedded in Codio guide) |
-| 3.6 | Level1_Lab3.6_Content.md | Level1_Lab3.6_Assessment_Setup.md | Add hours/balance responses and flows to `level1`; Check It! in guide Lab 3.6 |
+| 3.4 | Level1_Lab3.4_Content.md | — | Hours and balance flow YAML (fill-in-the-blank; assessments embedded in Codio guide) |
+| 3.5 | Level1_Lab3.5_Content.md | Level1_Lab3.5_Assessment_Setup.md | Add hours/balance responses and flows to `level1`; Check It! in guide Lab 3.5 |
 | 4.1 | Level1_Lab4.1_Content.md | — | Explore system patterns |
 | 4.2 | Level1_Lab4.2_Content.md | — | Modify patterns |
 | 5.1 | Level1_Lab5.1_Content.md | — | Config |
