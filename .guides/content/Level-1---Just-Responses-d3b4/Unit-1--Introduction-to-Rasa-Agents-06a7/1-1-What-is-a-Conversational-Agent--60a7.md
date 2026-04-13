@@ -1,13 +1,13 @@
 
-Chatbots, digital assistants, virtual agents—the labels change, but the idea is steady: software that talks with people in **natural language**. This course uses **conversational agent**, or **agent** for short.
+Chatbots, digital assistants, virtual agents. The labels change, but the idea is steady: software that talks with people in **natural language**. This course uses **conversational agent**, or **agent** for short.
 
-Shipping one is harder than it sounds. Users paraphrase, change their minds, and expect the system to track what they just said. **Rasa** exists to build **dialogue systems** that can span the whole range from **guided, step-by-step flows** to behavior that **reasons and uses tools**—not canned replies or a decision tree with a thin coat of “AI.”
+Shipping one is harder than it sounds. Users paraphrase, change their minds, and expect the system to track what they just said. **Rasa** exists to build **dialogue systems** that can span the whole range from **guided, step-by-step flows** to behavior that **reasons and uses tools**. Not canned replies or a decision tree with a thin coat of “AI.”
 
 #### What good agents get right
 
-First, **understanding**: mapping many phrasings to the same goal and using **context** so follow-ups still make sense. For example, someone might say “What are your hours?”, then “And on Sundays?”, then “When can I stop by?” A brittle system treats those as unrelated strings; a capable agent treats them as one conversation.
+First, **understanding**: mapping many phrasings to the same goal and using **context** so follow-ups still make sense. For example, someone might say “What are your hours?”, then “And on Sundays?”, then “When can I stop by?” A brittle system treats those as unrelated strings. A capable agent treats them as one conversation.
 
-Second, **memory**: state carried from turn to turn so people are not repeating themselves. Rasa supports this; **rich memory** appears in **Level 3**, while **Level 1** stays deliberately small.
+Second, **memory**: state carried from turn to turn so people are not repeating themselves. Rasa supports this. **rich memory** appears in **Level 3**, while **Level 1** stays deliberately small.
 
 Third, **dialogue management**: the layer that decides each turn whether to clarify, move a flow forward, call a **tool**, or end. Without those decisions, you have a lookup table, not an agent.
 
@@ -19,10 +19,10 @@ Design is a tradeoff about how much freedom you give the system. **Rule-based** 
 
 #### Why Rasa Pro and CALM
 
-Rasa has years of production use. The framework is built for **dialogue**—understanding, memory, reasoning, and orchestration in one place—instead of generic ML pieces you wire up yourself. **Rasa Pro** with **CALM** adds **LLM-powered understanding** and **flow-based structure**, so you can start with a modest agent and grow without throwing your work away.
+Rasa has years of production use. The framework is built for **dialogue**. Understanding, memory, reasoning, and orchestration in one place. Instead of generic ML pieces you wire up yourself. **Rasa Pro** with **CALM** adds **LLM-powered understanding** and **flow-based structure**, so you can start with a modest agent and grow without throwing your work away.
 
 #### What you will do in this course
 
-The levels stack. **Level 1** gives you concepts, terminology, **flows**, and **responses**—the mental model for everything after. As you continue, you will move toward agents that cover varied phrasing, dependable flows, tools where they matter, and stronger context, wired together as **one orchestrated system**.
+The levels stack. **Level 1** gives you concepts, terminology, **flows**, and **responses**. The mental model for everything after. As you continue, you will move toward agents that cover varied phrasing, dependable flows, tools where they matter, and stronger context, wired together as **one orchestrated system**.
 
 ---

@@ -1,4 +1,4 @@
-Create a virtual environment in the **project root**, install Rasa Pro, configure **your own** Rasa Pro license using the **`RASA_LICENSE`** variable, and confirm the tools work. This is your first lab; complete it before any other hands-on work.
+Create a virtual environment in the **project root**, install Rasa Pro, configure **your own** Rasa Pro license using the **`RASA_LICENSE`** variable, and confirm the tools work. This is your first lab. Complete it before any other hands-on work.
 
 This course expects a valid **`RASA_LICENSE`** for Rasa Pro.
 
@@ -77,7 +77,7 @@ Installation takes 2–5 minutes.
 
 **4. Create `.env` in the project root with `RASA_LICENSE`**
 
-Stay in the **project root** (the folder that contains `level1/`, `level2/`, `.guides/` — **not** inside `level1`). Replace `YOUR_LICENSE_KEY` with your actual Rasa Pro license (paste the whole key):
+Stay in the **project root** (the folder that contains `level1/`, `level2/`, `.guides/`, **not** inside `level1`). Replace `YOUR_LICENSE_KEY` with your actual Rasa Pro license (paste the whole key):
 
 ```bash
 echo 'RASA_LICENSE=YOUR_LICENSE_KEY' > .env

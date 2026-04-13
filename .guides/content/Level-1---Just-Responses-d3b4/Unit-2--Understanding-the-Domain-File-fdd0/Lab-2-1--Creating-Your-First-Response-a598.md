@@ -33,7 +33,7 @@ Each response name uses the `utter_` prefix and sits under **`responses:`** with
 
 1. After the **last** response block, add a blank line, then add your new response. You may change the farewell text, but keep the same shape as the other responses:
 
-   ```yaml
+ ```yaml
    utter_goodbye:
      - text: "Goodbye! Have a great day!"
        metadata:
@@ -89,7 +89,7 @@ responses:
 #### Common mistakes
 
 1. **Missing `-`** before **`text:`**. YAML expects each message to be a list item.
-2. **Wrong indentation.** YAML is strict; use two spaces per level and do not mix tabs.
+2. **Wrong indentation.** YAML is strict. Use two spaces per level and do not mix tabs.
 3. **Missing `:`** after the response name, for example **`utter_goodbye:`**.
 4. **`metadata:`** must line up with **`text:`**, not with the leading **`-`**.
 

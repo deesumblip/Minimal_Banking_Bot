@@ -12,12 +12,12 @@
 ## Part 1: Completion check (Codio)
 
 1. Use **Check It!** below. The grader verifies:
-   - **Domain:** slots `amount`, `recipient`, `account_from`, `account`; `utter_ask_amount`, `utter_ask_recipient`, `utter_ask_account_from`, `utter_ask_account`; `action_bank_hours`, `action_holiday_hours`, `action_check_balance_simple`, and `action_process_transfer` in `actions:` (see Lab 2.1)
-   - **Action:** `level4/actions/action_process_transfer.py` reads the three transfer slots (via `get_slot`)
-   - **Flow:** `level4/data/basics/transfer_money.yml` has the three `collect:` steps and `action: action_process_transfer`
-   - **Model:** at least one `.tar.gz` under `level4/models/`
-   - **Config:** `level4/config.yml` **`pipeline:`** uses **`CompactLLMCommandGenerator`** (not **`SearchReadyLLMCommandGenerator`**)
-   - **Endpoints:** `level4/endpoints.yml` — under **`model_groups`**, **`id: openai-gpt-5-1`** uses **`model: openai-gpt-5-1`** and **`temperature: 0.1`** (**Unit 0.2** / Lab 0.1)
+ - **Domain:** slots `amount`, `recipient`, `account_from`, `account`. `utter_ask_amount`, `utter_ask_recipient`, `utter_ask_account_from`, `utter_ask_account`. `action_bank_hours`, `action_holiday_hours`, `action_check_balance_simple`, and `action_process_transfer` in `actions:` (see Lab 2.1)
+ - **Action:** `level4/actions/action_process_transfer.py` reads the three transfer slots (via `get_slot`)
+ - **Flow:** `level4/data/basics/transfer_money.yml` has the three `collect:` steps and `action: action_process_transfer`
+ - **Model:** at least one `.tar.gz` under `level4/models/`
+ - **Config:** `level4/config.yml` **`pipeline:`** uses **`CompactLLMCommandGenerator`** (not **`SearchReadyLLMCommandGenerator`**)
+ - **Endpoints:** `level4/endpoints.yml`, under **`model_groups`**, **`id: openai-gpt-5-1`** uses **`model: openai-gpt-5-1`** and **`temperature: 0.1`** (**Unit 0.2** / Lab 0.1)
 
 **Inspector:** If the completion check passes but **Part 2** still mis-fills **recipient**, double-check **`endpoints.yml`** and **`config.yml`** against **Unit 0.2** and retrain from **`level4/`**.
 
@@ -37,8 +37,8 @@
 
 - `cd` to **`level4`** (same shell pattern as **Lab 5.1**).
 - Start Rasa from **`level4`**, for example:
-  - `python -m rasa inspect --debug --log-file logs/logs.out` — logs under **`level4/logs/`** for debugging.
-  - Or chat-only: `python -m rasa run` from **`level4`**.
+ - `python -m rasa inspect --debug --log-file logs/logs.out`, logs under **`level4/logs/`** for debugging.
+ - Or chat-only: `python -m rasa run` from **`level4`**.
 - Always use **`python -m rasa …`** from the **venv**, not a global `rasa` binary.
 - **Leave the process running** while you use the UI below.
 
@@ -56,9 +56,9 @@ Goal: exercise **amount → recipient → account_from → confirmation** in one
 | Step | You type (example) | What you’re checking |
 |------|--------------------|----------------------|
 | 1 | `Can I transfer some money?` | Agent enters the transfer flow (may greet first). |
-| 2 | `let's say 300 dollars` | **Amount** slot filled; agent asks for recipient. |
-| 3 | `Alice` *(or any short free text, e.g. `MC hammer`)* | **Recipient** is stored as plain text (up to **100** chars in action + flow); agent asks for source account. |
-| 4 | `savings` *(or e.g. `1234`)* | **account_from** filled; agent runs **`action_process_transfer`**. |
+| 2 | `let's say 300 dollars` | **Amount** slot filled. The agent asks for recipient. |
+| 3 | `Alice` *(or any short free text, e.g. `MC hammer`)* | **Recipient** is stored as plain text (up to **100** chars in action + flow). The agent asks for source account. |
+| 4 | `savings` *(or e.g. `1234`)* | **account_from** filled. The agent runs **`action_process_transfer`**. |
 | 5 | *(read only)* | Final line should match the demo pattern: **`(Demo) Transfer of $… from account … to … has been processed successfully.`** |
 
 ### Optional: other flows
@@ -69,10 +69,10 @@ Try **“What’s my balance?”** or **“What are your hours?”** to confirm 
 
 Work through these in order (domain → flow → pipeline):
 
-1. **Domain** — In **`level4/domain/basics.yml`**, set **`metadata: rephrase: False`** on **`utter_ask_amount`**, **`utter_ask_recipient`**, and **`utter_ask_account_from`** (Lab 2.1).
-2. **Flow** — In **`level4/data/basics/transfer_money.yml`**, each **`collect:`** step needs a clear **`description:`** (Lab 4.1: amount; **1–100** chars for recipient; **1–120** for account_from). **Retrain** after edits.
-3. **Pipeline** *(most common for repeated failures)* — Use **`level4/config.yml`** with **`CompactLLMCommandGenerator`** (this repo’s Lab 0.1 pattern). **`SearchReadyLLMCommandGenerator`** can emit commands like **`set slot transfer_money_amount …`** while your slots are **`amount`**, **`recipient`**, **`account_from`** only—Rasa **drops** those commands (see **`skip_command_slot_not_in_domain`** in logs) and you get *unable to understand you*. **Fix:** align **`config.yml`** with this repo, run **`python -m rasa train`** from **`level4`**, **restart** Inspector so it loads the new **`.tar.gz`**. Details: **Unit 0.2** (section 2).
-4. **Logs (optional)** — If you see **`SetSlotCommand(name='transfer_money_amount', …)`** or **`transfer_money_recipient`** but your domain uses **`amount`** / **`recipient`**, that is the mismatch above—**retrain** with **`CompactLLMCommandGenerator`**, not a domain rename.
+1. **Domain**, In **`level4/domain/basics.yml`**, set **`metadata: rephrase: False`** on **`utter_ask_amount`**, **`utter_ask_recipient`**, and **`utter_ask_account_from`** (Lab 2.1).
+2. **Flow**, In **`level4/data/basics/transfer_money.yml`**, each **`collect:`** step needs a clear **`description:`** (Lab 4.1: amount. **1–100** chars for recipient. **1–120** for account_from). **Retrain** after edits.
+3. **Pipeline** *(most common for repeated failures)*, Use **`level4/config.yml`** with **`CompactLLMCommandGenerator`** (this repo’s Lab 0.1 pattern). **`SearchReadyLLMCommandGenerator`** can emit commands like **`set slot transfer_money_amount …`** while your slots are **`amount`**, **`recipient`**, **`account_from`** only. Rasa **drops** those commands (see **`skip_command_slot_not_in_domain`** in logs) and you get *unable to understand you*. **Fix:** align **`config.yml`** with this repo, run **`python -m rasa train`** from **`level4`**, **restart** Inspector so it loads the new **`.tar.gz`**. Details: **Unit 0.2** (section 2).
+4. **Logs (optional)**, If you see **`SetSlotCommand(name='transfer_money_amount', …)`** or **`transfer_money_recipient`** but your domain uses **`amount`** / **`recipient`**, that is the mismatch above. **retrain** with **`CompactLLMCommandGenerator`**, not a domain rename.
 
 ---
 

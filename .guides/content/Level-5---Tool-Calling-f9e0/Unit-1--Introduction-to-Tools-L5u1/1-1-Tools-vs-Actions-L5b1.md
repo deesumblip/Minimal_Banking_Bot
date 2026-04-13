@@ -1,6 +1,6 @@
 **Starting point:** Work in **`level5/`** from the Level 4 completion baseline (**Unit 0.1**).
 
-In Level 4, **custom actions** are what the flow names at an **`action:`** step—for example **`- action: action_process_transfer`**. When execution reaches that step, that action **always** runs.
+In Level 4, **custom actions** are what the flow names at an **`action:`** step. For example **`- action: action_process_transfer`**. When execution reaches that step, that action **always** runs.
 
 **Collect** steps use **`utter_ask_*`** responses (for example **`utter_ask_amount`**). Those names appear under **`actions:`** in the domain. **`action:`** steps point at **Python** classes in **`actions/`**.
 

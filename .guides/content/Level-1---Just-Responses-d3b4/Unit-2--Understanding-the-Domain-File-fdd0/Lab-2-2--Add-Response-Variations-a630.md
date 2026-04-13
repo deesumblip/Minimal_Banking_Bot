@@ -23,7 +23,7 @@ utter_goodbye:
 
 #### How to verify
 
-Both **`- text:`** lines should sit at the same indent. **`metadata:`** should align with **`text:`**, and **`rephrase: True`** should nest under **`metadata:`**. When you later run **`python -m rasa train`** from **`level1`** in Unit 6, valid YAML will train successfully; if training fails with a parse error, open the file at the line number in the message and fix indentation.
+Both **`- text:`** lines should sit at the same indent. **`metadata:`** should align with **`text:`**, and **`rephrase: True`** should nest under **`metadata:`**. When you later run **`python -m rasa train`** from **`level1`** in Unit 6, valid YAML will train successfully. If training fails with a parse error, open the file at the line number in the message and fix indentation.
 
 #### What this does
 

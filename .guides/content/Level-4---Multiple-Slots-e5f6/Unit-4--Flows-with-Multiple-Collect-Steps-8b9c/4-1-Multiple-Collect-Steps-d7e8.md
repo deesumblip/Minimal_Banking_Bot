@@ -1,4 +1,4 @@
-**Starting point:** Work in **`level4/`** (starter agent in **Unit 0.1**; pipeline in **Unit 0.2**).
+**Starting point:** Work in **`level4/`** (starter agent in **Unit 0.1**. Pipeline in **Unit 0.2**).
 
 **check_balance** uses one `collect:` step (`account`) and one action step. The **transfer** flow uses **three** `collect:` steps and then the action step.
 

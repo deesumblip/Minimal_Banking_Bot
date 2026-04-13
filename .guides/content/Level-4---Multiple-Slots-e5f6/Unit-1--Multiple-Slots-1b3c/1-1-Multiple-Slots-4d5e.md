@@ -1,4 +1,4 @@
-**Starting point:** Work in **`level4/`** (starter agent in **Unit 0.1**; pipeline in **Unit 0.2**).
+**Starting point:** Work in **`level4/`** (starter agent in **Unit 0.1**. Pipeline in **Unit 0.2**).
 
 You already have a single-slot flow (`account` for **check_balance**). In Level 4 you will use **multiple slots** in one flow so the agent can remember several values at once.
 

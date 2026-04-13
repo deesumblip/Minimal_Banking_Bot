@@ -2,7 +2,7 @@
 
 ## What you added in Level 4
 
-You followed **Lab 0.1** (pipeline YAML), **Labs 2.1–4.1** (domain, action, flow), then **Labs 5.1–5.2** (train and verify). The **step-by-step lab list and deliverables table** live in **Unit 0.2** (sections 2–4) and on each lab page—use those as the canonical checklist; this page only pulls out **ideas**.
+You followed **Lab 0.1** (pipeline YAML), **Labs 2.1–4.1** (domain, action, flow), then **Labs 5.1–5.2** (train and verify). The **step-by-step lab list and deliverables table** live in **Unit 0.2** (sections 2–4) and on each lab page. Use those as the canonical checklist. This page only pulls out **ideas**.
 
 ## Key ideas
 

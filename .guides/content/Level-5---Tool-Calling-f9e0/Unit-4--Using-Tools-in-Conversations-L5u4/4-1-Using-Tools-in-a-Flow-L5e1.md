@@ -12,7 +12,7 @@ That action runs in a context where the LLM can still call registered tools (**`
 
 ## Example: The transfer_money_tools flow
 
-Below is the structure you build in **Lab 4.1**. The **`transfer_money_tools`** key is the **flow id**; it must match **`active_flow`** in the domain for the transfer slots.
+Below is the structure you build in **Lab 4.1**. The **`transfer_money_tools`** key is the **flow id**. It must match **`active_flow`** in the domain for the transfer slots.
 
 ```yaml
 flows:
@@ -26,16 +26,16 @@ flows:
       - collect: amount
         description: |
           The transfer amount in dollars. Extract from this message if the user already said it
-          (same turn as starting the flow). Accept digits with or without $; commas may appear;
-          phrases like "hundred" or "twenty dollars" are acceptable.
+          (same turn as starting the flow). Accept digits with or without $. Commas may appear.
+          Phrases like "hundred" or "twenty dollars" are acceptable.
       - collect: recipient
         description: |
           Name or account identifier of who receives the money. Short reply (e.g. "Jamie" or an account number).
           Extract from this turn if they already named the recipient.
       - collect: account_from
         description: |
-          Source account number or ID the money is sent from. Digits or short label;
-          extract from this turn if the user already gave the source account.
+          Source account number or ID the money is sent from. Digits or short label.
+          Extract from this turn if the user already gave the source account.
       - action: action_process_transfer_with_tools
 ```
 
@@ -47,4 +47,4 @@ The last step runs an **action**, not the tools directly. That action should rea
 
 You also list **`action_process_transfer_with_tools`** under domain **`actions:`** in the same lab.
 
-**Reminder:** **Lab 2.0** prompt wiring must stay in place through **Labs 5.2** so **`set slot`** matches domain names—see **Unit 0.1** (Config) if you need to verify **`data/prompts/`** and **`prompt_template`**.
+**Reminder:** **Lab 2.0** prompt wiring must stay in place through **Labs 5.2** so **`set slot`** matches domain names. See **Unit 0.1** (Config) if you need to verify **`data/prompts/`** and **`prompt_template`**.

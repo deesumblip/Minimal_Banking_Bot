@@ -2,7 +2,7 @@ You define slots in the domain file, in the same file where you already keep res
 
 ## Domain structure after Lab 3.1
 
-The example below shows how your domain will look after you finish Lab 3.1. You add the `slots:` block and the `utter_ask_account` response. You also add `action_check_balance_simple` to the `actions:` list. The Level 3 starter already lists **`action_bank_hours`** and **`action_holiday_hours`**; after Lab 3.1 all three names below should be present so flows such as **`holiday_hours.yml`** validate when you train.
+The example below shows how your domain will look after you finish Lab 3.1. You add the `slots:` block and the `utter_ask_account` response. You also add `action_check_balance_simple` to the `actions:` list. The Level 3 starter already lists **`action_bank_hours`** and **`action_holiday_hours`**. After Lab 3.1 all three names below should be present so flows such as **`holiday_hours.yml`** validate when you train.
 
 ```yaml
 version: "3.1"
@@ -15,10 +15,10 @@ responses:                # From Level 1 & 2 (unchanged) plus one new response
   utter_greet:
     - text: "Hi! I'm a banking assistant..."
   # ... other responses
-  utter_ask_account:      # You add this in Lab 3.1; Rasa uses it when collecting the account slot
+  utter_ask_account:      # You add this in Lab 3.1. Rasa uses it when collecting the account slot
     - text: "What is your account number?"
 
-actions:                  # Starter includes Level 2 actions; you add action_check_balance_simple in Lab 3.1
+actions:                  # Starter includes Level 2 actions. You add action_check_balance_simple in Lab 3.1
   - action_bank_hours
   - action_holiday_hours
   - action_check_balance_simple

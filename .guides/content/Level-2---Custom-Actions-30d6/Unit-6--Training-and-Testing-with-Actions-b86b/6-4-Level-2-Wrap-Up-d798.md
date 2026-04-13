@@ -1,8 +1,8 @@
-This page of **Unit 6** walks through a **full conversation** (Level 1 plus the example action and your Lab 3.1 action), maps **where your files live**, suggests **practices** for testing and maintenance, and ends with a short **knowledge check** (use **Check It!** for each question). **6.5** adds a brief Level 2 checkpoint and readiness list; **Level 3 Unit 0** carries the full “what you built / what slots add” recap so it is not repeated here.
+This page of **Unit 6** walks through a **full conversation** (Level 1 plus the example action and your Lab 3.1 action), maps **where your files live**, suggests **practices** for testing and maintenance, and ends with a short **knowledge check** (use **Check It!** for each question). **6.5** adds a brief Level 2 checkpoint and readiness list. **Level 3 Unit 0** carries the full “what you built / what slots add” recap so it is not repeated here.
 
 #### A complete conversation
 
-The trace below shows static responses, the course example action (`action_bank_hours` / `hours`), and the action you added in Lab 3.1 (`action_holiday_hours` / `holiday_hours`). Replay the same turns in Rasa Inspector to watch which flow and step run after each message—that is how domain entries, flow YAML, and Python under `actions/` show up in the running agent.
+The trace below shows static responses, the course example action (`action_bank_hours` / `hours`), and the action you added in Lab 3.1 (`action_holiday_hours` / `holiday_hours`). Replay the same turns in Rasa Inspector to watch which flow and step run after each message. That is how domain entries, flow YAML, and Python under `actions/` show up in the running agent.
 
 ```text
 [User opens chat - new session starts]
@@ -56,21 +56,21 @@ Agent: "You can reach us at support@bank.com or call 1-800-BANK-123."
 
 #### Your project at a glance
 
-This matches the **Level 1 baseline** described in **Unit 0.1**, plus the Level 2 actions and flows you added in the labs—listed here so you can read it beside the **conversation trace** above. You have extended Level 1 with custom Python. Structurally, the Level 2 agent looks like this:
+This matches the **Level 1 baseline** described in **Unit 0.1**, plus the Level 2 actions and flows you added in the labs. Listed here so you can read it beside the **conversation trace** above. You have extended Level 1 with custom Python. Structurally, the Level 2 agent looks like this:
 
-**Domain (`domain/basics.yml`)** — Level 1 responses (`utter_greet`, `utter_help`, `utter_contact`, `utter_goodbye`) plus an `actions:` section listing `action_bank_hours` and `action_holiday_hours` (after Lab 4.1).
+**Domain (`domain/basics.yml`)**, Level 1 responses (`utter_greet`, `utter_help`, `utter_contact`, `utter_goodbye`) plus an `actions:` section listing `action_bank_hours` and `action_holiday_hours` (after Lab 4.1).
 
-**Flows (`data/basics/`)** — Level 1 flows (`greet`, `help`, `contact`, `goodbye`), the example `hours` flow that calls `action_bank_hours`, and your `holiday_hours` flow that calls `action_holiday_hours`.
+**Flows (`data/basics/`)**, Level 1 flows (`greet`, `help`, `contact`, `goodbye`), the example `hours` flow that calls `action_bank_hours`, and your `holiday_hours` flow that calls `action_holiday_hours`.
 
-**Actions (`actions/`)** — `action_bank_hours.py` (example: hours vary by day) and `action_holiday_hours.py` (yours: holiday logic and messaging from Lab 3.1).
+**Actions (`actions/`)**, `action_bank_hours.py` (example: hours vary by day) and `action_holiday_hours.py` (yours: holiday logic and messaging from Lab 3.1).
 
-**System patterns and configuration** — Same as Level 1 aside from any small `endpoints.yml` updates you made for actions.
+**System patterns and configuration**, Same as Level 1 aside from any small `endpoints.yml` updates you made for actions.
 
-Together, the agent still does everything Level 1 did, and it can run custom code for dynamic answers—processing data, branching on dates, and returning calculated or conditional text.
+Together, the agent still does everything Level 1 did, and it can run custom code for dynamic answers. Processing data, branching on dates, and returning calculated or conditional text.
 
 #### Practices that pay off
 
-Organize **flows** so each lives in its own file when practical, use descriptive names, and group related YAML in folders if the project grows. Keep **responses** clear and concise; add variations where the platform supports them, and give users a hint toward the next useful step when it helps. Write **flow descriptions** so they are specific: say what information the user gets, using action-oriented wording—good descriptions make it easier for the policy to match the right flow.
+Organize **flows** so each lives in its own file when practical, use descriptive names, and group related YAML in folders if the project grows. Keep **responses** clear and concise. Add variations where the platform supports them, and give users a hint toward the next useful step when it helps. Write **flow descriptions** so they are specific: say what information the user gets, using action-oriented wording. Good descriptions make it easier for the policy to match the right flow.
 
 When **testing**, cover one flow at a time, try alternate phrasings, then run a longer conversation that mixes Level 1 and Level 2 paths. Use Inspector to confirm which flow and action fired, and use `--debug` and logs when something fails to trigger, stays silent, or raises a Python error.
 

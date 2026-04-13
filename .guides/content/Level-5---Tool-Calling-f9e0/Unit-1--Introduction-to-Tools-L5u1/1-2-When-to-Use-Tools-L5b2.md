@@ -2,7 +2,7 @@
 
 ## When to use tools
 
-Choose **tools** when the **LLM** should pick what to do from context—the user might ask for a balance, a transfer, or both in one turn. The model selects which tool(s) to run and with which arguments.
+Choose **tools** when the **LLM** should pick what to do from context. The user might ask for a balance, a transfer, or both in one turn. The model selects which tool(s) to run and with which arguments.
 
 ## When to use actions
 
@@ -14,4 +14,4 @@ This chapter uses **both**. The **flow** collects slots, then runs one **action*
 
 Inside that action’s context, the **LLM** may call one or more **tools** (`check_balance`, `process_transfer`, `get_account_info`, …), depending on the dialogue.
 
-The **flow** stays predictable: collect, then action. **Flexibility** sits in that action step—which tools run, and when.
+The **flow** stays predictable: collect, then action. **Flexibility** sits in that action step. Which tools run, and when.

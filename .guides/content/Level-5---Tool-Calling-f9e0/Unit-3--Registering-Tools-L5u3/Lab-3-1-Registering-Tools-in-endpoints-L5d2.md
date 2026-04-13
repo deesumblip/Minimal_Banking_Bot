@@ -4,7 +4,7 @@
 
 ## Step-by-Step Instructions
 
-**Step 1.** Confirm **`level5/tools/__init__.py`** exists (from Lab 2.1). Rasa imports **`tools`** as a package; missing **`__init__.py`** can break registration.
+**Step 1.** Confirm **`level5/tools/__init__.py`** exists (from Lab 2.1). Rasa imports **`tools`** as a package. Missing **`__init__.py`** can break registration.
 
 **Step 2.** Open **`level5/endpoints.yml`**. Leave **`action_endpoint`**, **`nlg`**, and **`model_groups`** intact.
 

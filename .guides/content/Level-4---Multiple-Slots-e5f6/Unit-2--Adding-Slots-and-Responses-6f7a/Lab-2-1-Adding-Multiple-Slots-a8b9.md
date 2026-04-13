@@ -47,11 +47,11 @@ Use two-space indentation. Each slot uses `type: text`.
 
 Naming: `utter_ask_<slot_name>` for each slot.
 
-**Why `rephrase: False` here?** With Rasa Pro (CALM), slot collection works best when these ask prompts stay fixed. If `rephrase: True` on `utter_ask_*` during collection, the model may reword the question; the command generator can then mis-map the user’s reply (especially free-text **recipient** or **account_from**) and respond with *“I’m sorry I am unable to understand you…”*. **`level4/config.yml`** must use **`CompactLLMCommandGenerator`** for this chapter (**Unit 0.2**). Keep **`rephrase: False`** on these three responses. You can leave `rephrase: True` on greetings and help text if you prefer.
+**Why `rephrase: False` here?** With Rasa Pro (CALM), slot collection works best when these ask prompts stay fixed. If `rephrase: True` on `utter_ask_*` during collection, the model may reword the question. The command generator can then mis-map the user’s reply (especially free-text **recipient** or **account_from**) and respond with *“I’m sorry I am unable to understand you…”*. **`level4/config.yml`** must use **`CompactLLMCommandGenerator`** for this chapter (**Unit 0.2**). Keep **`rephrase: False`** on these three responses. You can leave `rephrase: True` on greetings and help text if you prefer.
 
 **Step 4.** Add `action_process_transfer` to the `actions:` list.
 
-**Important:** Keep **every** action your existing flows still use. The `holiday_hours` flow calls `action_holiday_hours`; if you drop it from the domain, `rasa train` will fail with *action … is not listed in the domain*. Your `actions:` list should include the existing actions **and** the new transfer action, for example:
+**Important:** Keep **every** action your existing flows still use. The `holiday_hours` flow calls `action_holiday_hours`. If you drop it from the domain, `rasa train` will fail with *action … is not listed in the domain*. Your `actions:` list should include the existing actions **and** the new transfer action, for example:
 
 ```yaml
 actions:
@@ -61,7 +61,7 @@ actions:
   - action_process_transfer
 ```
 
-You will create the file `action_process_transfer.py` in Lab 3.1; here you only add its name.
+You will create the file `action_process_transfer.py` in Lab 3.1. Here you only add its name.
 
 **Step 5.** Verify. Your domain should have:
 
@@ -74,7 +74,7 @@ You will create the file `action_process_transfer.py` in Lab 3.1; here you only 
 
 ## Part 1: In Codio
 
-You do **not** need to activate the virtual environment for this lab — **Check It!** only checks your saved file.
+You do **not** need to activate the virtual environment for this lab, **Check It!** only checks your saved file.
 
 1. **Open** `level4/domain/basics.yml` in the editor (from the file tree).
 2. **Follow Steps 2–4 above** to add the three slots, the three ask responses, and `action_process_transfer` to the actions list.

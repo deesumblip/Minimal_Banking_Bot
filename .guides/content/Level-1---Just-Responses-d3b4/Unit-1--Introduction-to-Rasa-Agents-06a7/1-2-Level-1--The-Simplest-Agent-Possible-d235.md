@@ -1,13 +1,13 @@
 
-Level 1 is the **absolute minimum** a working Rasa agent needs: **responses**, **flows**, and **configuration**—nothing else. We start here so the core ideas stick before you add memory, tools, and richer logic.
+Level 1 is the **absolute minimum** a working Rasa agent needs: **responses**, **flows**, and **configuration**. Nothing else. We start here so the core ideas stick before you add memory, tools, and richer logic.
 
 #### What Level 1 includes
 
 You work with three building blocks:
 
-- **Responses** — predefined messages the agent can send.
-- **Flows** — simple conversation scripts that decide **when** to send which response.
-- **Basic configuration** — files that tell Rasa how to assemble and run the agent.
+- **Responses**, predefined messages the agent can send.
+- **Flows**, simple conversation scripts that decide **when** to send which response.
+- **Basic configuration**, files that tell Rasa how to assemble and run the agent.
 
 #### What Level 1 does not include
 

@@ -4,7 +4,7 @@ In Unit 4 you saw an example `transfer_money` flow: YAML with three `collect:` s
 
 ## Part 1: In Codio
 
-1. **Create** the file `data/basics/transfer_money.yml` under the `level4` folder (use the file tree / editor, you do not need to activate the virtual environment for this lab; **Check It!** only checks your saved YAML).
+1. **Create** the file `data/basics/transfer_money.yml` under the `level4` folder (use the file tree / editor, you do not need to activate the virtual environment for this lab. **Check It!** only checks your saved YAML).
 
 2. **Add** the following flow:
 

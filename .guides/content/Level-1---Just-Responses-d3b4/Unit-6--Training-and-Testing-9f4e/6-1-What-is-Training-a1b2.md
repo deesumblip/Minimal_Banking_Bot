@@ -1,6 +1,6 @@
-**Training** is the process of building your agent's "brain" — converting your flows, domain, and configuration into a runnable model.
+**Training** is the process of building your agent's "brain", converting your flows, domain, and configuration into a runnable model.
 
-Until you train, Rasa only has your YAML files; it needs a packaged model to run the agent. When you change the domain or flows, train again so the model matches your latest edits. Training is the bridge between editing files and running the agent (for example in Rasa Inspector after you have a model).
+Until you train, Rasa only has your YAML files. It needs a packaged model to run the agent. When you change the domain or flows, train again so the model matches your latest edits. Training is the bridge between editing files and running the agent (for example in Rasa Inspector after you have a model).
 
 #### What Happens During Training
 
@@ -11,7 +11,7 @@ When you run `rasa train`, Rasa:
 3. **Applies configuration** from `config.yml` – pipeline, policies, language.
 4. **Creates a model file** – saves to `models/` with a timestamped name (e.g. `20250112-120817-descent-lard.tar.gz`). This is the "compiled" version of your agent.
 
-**Analogy**: Training is like compiling code. Your flows/domain are source code; training creates the executable.
+**Analogy**: Training is like compiling code. Your flows/domain are source code. Training creates the executable.
 
 #### What you'll do in Lab 6.1
 

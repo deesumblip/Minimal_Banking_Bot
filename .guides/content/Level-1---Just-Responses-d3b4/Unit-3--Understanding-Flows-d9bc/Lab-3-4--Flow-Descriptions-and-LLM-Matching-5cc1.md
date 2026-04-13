@@ -11,7 +11,7 @@
 
 #### Why these flows?
 
-**Reading 3.3 — Flow Descriptions and LLM Understanding** explains why **`description`** text matters. The LLM uses it to pick the right flow when users ask things like “What are your hours?” or “How do I check my balance?” In **Lab 3.4** you practice that idea on two skeleton flows named **hours** and **balance**. After you pass both fill-in-the-blank checks here, **Lab 3.5** walks you through copying the finished YAML into your project and adding the matching responses.
+**Reading 3.3: Flow Descriptions and LLM Understanding** explains why **`description`** text matters. The LLM uses it to pick the right flow when users ask things like “What are your hours?” or “How do I check my balance?” In **Lab 3.4** you practice that idea on two skeleton flows named **hours** and **balance**. After you pass both fill-in-the-blank checks here, **Lab 3.5** walks you through copying the finished YAML into your project and adding the matching responses.
 
 ---
 

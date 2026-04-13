@@ -4,7 +4,7 @@ You finish **`banking_tools.py`** in the fill-in-the-blanks exercise. Then you c
 
 The module must define **`check_balance`**, **`process_transfer`**, and **`get_account_info`**, list them in **`__all__`**, and match **Unit 2.1** (type hints, docstrings, return dicts).
 
-You do **not** need the virtual environment for this lab; **Check It!** reads your saved files only.
+You do **not** need the virtual environment for this lab. **Check It!** reads your saved files only.
 
 ---
 
@@ -43,7 +43,7 @@ The grader checks that **`level5/tools/`** exists, **`banking_tools.py`** is pre
 
 ---
 
-**Success criteria.** Code test passes (**10/10**). Then continue to **Lab 3.1** (register **`tools:`** in **`endpoints.yml`**). (If you skipped **Lab 2.0**, go back and add the **prompt template** first—**Lab 3.1** assumes **Lab 2.0** and **Lab 2.1** are done.)
+**Success criteria.** Code test passes (**10/10**). Then continue to **Lab 3.1** (register **`tools:`** in **`endpoints.yml`**). (If you skipped **Lab 2.0**, go back and add the **prompt template** first. **Lab 3.1** assumes **Lab 2.0** and **Lab 2.1** are done.)
 
 ---
 

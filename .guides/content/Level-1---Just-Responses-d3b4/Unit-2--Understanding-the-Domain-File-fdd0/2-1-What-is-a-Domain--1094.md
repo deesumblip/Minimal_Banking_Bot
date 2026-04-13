@@ -7,7 +7,7 @@ The **domain file** is the agent’s knowledge base. It defines everything the a
 
 **Where it lives:** `domain/basics.yml`.
 
-**Analogy:** The domain is like a dictionary of the phrases the agent is permitted to use. Flows choose *when* to speak; the domain defines *what* can be said.
+**Analogy:** The domain is like a dictionary of the phrases the agent is permitted to use. Flows choose *when* to speak. The domain defines *what* can be said.
 
 #### Domain structure
 
@@ -26,6 +26,6 @@ actions:              # ← Level 2: Custom Python code (not used in Level 1)
                       # Custom Python code goes here
 ```
 
-⚠️ **For Level 1:** Put all canned messages under **`responses:`**. Leave **`slots:`** and **`actions:`** empty for now; later units introduce memory and custom code when you are ready.
+⚠️ **For Level 1:** Put all canned messages under **`responses:`**. Leave **`slots:`** and **`actions:`** empty for now. Later units introduce memory and custom code when you are ready.
 
 ---

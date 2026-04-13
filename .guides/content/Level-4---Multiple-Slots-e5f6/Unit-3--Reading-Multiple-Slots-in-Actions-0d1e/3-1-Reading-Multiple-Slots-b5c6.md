@@ -1,4 +1,4 @@
-**Starting point:** Work in **`level4/`** (starter agent in **Unit 0.1**; pipeline in **Unit 0.2**).
+**Starting point:** Work in **`level4/`** (starter agent in **Unit 0.1**. Pipeline in **Unit 0.2**).
 
 In `action_check_balance_simple` you read one slot with `tracker.get_slot("account")`. In **`action_process_transfer`** you will read **three** slots.
 

@@ -11,7 +11,7 @@ With tools, endpoints, flow, and action in place, **train** the Level 5 agent.
 
 If training fails, check:
 
-1. **`domain/basics.yml`** — lists **`action_process_transfer_with_tools`**; **`amount`**, **`recipient`**, and **`account_from`** each include **`active_flow: transfer_money_tools`** under **`from_llm`** (**Lab 4.1**).
-2. **`endpoints.yml`** — has **`tools:`** with **`tools_module: "tools"`**.
-3. **`tools/banking_tools.py`** — valid Python with **`__all__`**.
-4. **`config.yml`** and **`data/prompts/`** — **`prompt_template`** points at **`data/prompts/command_prompt_v3_slot_names.jinja2`** and the file exists (**Lab 2.0**).
+1. **`domain/basics.yml`**, lists **`action_process_transfer_with_tools`**. **`amount`**, **`recipient`**, and **`account_from`** each include **`active_flow: transfer_money_tools`** under **`from_llm`** (**Lab 4.1**).
+2. **`endpoints.yml`**, has **`tools:`** with **`tools_module: "tools"`**.
+3. **`tools/banking_tools.py`**, valid Python with **`__all__`**.
+4. **`config.yml`** and **`data/prompts/`**, **`prompt_template`** points at **`data/prompts/command_prompt_v3_slot_names.jinja2`** and the file exists (**Lab 2.0**).

@@ -8,4 +8,4 @@ You should be able to:
 - Connect **`transfer_money_tools`**, **`from_llm`** conditions, and an action that reads slots and may invoke tools (**Lab 4.1**).
 - Train from **`level5/`** and pass **Lab 5.2**.
 
-**Next:** **Level 6 Unit 0** walks through **`level6/`** and sub-agent labs—open it when you are ready for orchestration.
+**Next:** **Level 6 Unit 0** walks through **`level6/`** and sub-agent labs. Open it when you are ready for orchestration.

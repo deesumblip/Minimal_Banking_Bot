@@ -2,27 +2,27 @@
 
 Rasa’s **`SearchReadyLLMCommandGenerator`** turns model output into commands, including **`set slot`**. It follows **examples in its prompt**.
 
-If those examples don’t match your **domain slot names**—for example the model emits `transfer_money_amount` instead of **`amount`**—Rasa **ignores** the command. Debug logs may show **`skip_command_slot_not_in_domain`**, and slot collection stops working as expected.
+If those examples don’t match your **domain slot names**. For example the model emits `transfer_money_amount` instead of **`amount`**. Rasa **ignores** the command. Debug logs may show **`skip_command_slot_not_in_domain`**, and slot collection stops working as expected.
 
 **This lab** aligns prompt examples with your slots. The repo ships **`level5/resources/command_prompt_v3_slot_names.jinja2`**, which teaches the model to use real slot names (`amount`, `recipient`, `account_from`, `account`). You copy it under **`data/prompts/`** and set **`prompt_template`** on **`SearchReadyLLMCommandGenerator`** in **`config.yml`** so **`set slot`** stays reliable through Labs **2.1–5.2**.
 
-Do this lab **before Lab 2.1** (the **`tools/`** module). Copying files does not need the venv; activate it when you run **`rasa train`** (Part C).
+Do this lab **before Lab 2.1** (the **`tools/`** module). Copying files does not need the venv. Activate it when you run **`rasa train`** (Part C).
 
 ---
 
-## Part A — Add the prompt file
+## Part A, Add the prompt file
 
 1. **Create the folder** (if needed): under `level5/`, ensure `data/prompts/` exists.
 
 2. **Copy the template** using the exact filename `command_prompt_v3_slot_names.jinja2`:
-   - From: `level5/resources/command_prompt_v3_slot_names.jinja2`
-   - To: `level5/data/prompts/command_prompt_v3_slot_names.jinja2`
+ - From: `level5/resources/command_prompt_v3_slot_names.jinja2`
+ - To: `level5/data/prompts/command_prompt_v3_slot_names.jinja2`
 
-3. **Confirm:** `level5/data/prompts/command_prompt_v3_slot_names.jinja2` exists. Rasa reads the prompt from `data/prompts/` at runtime; `level5/resources/` holds the copy that ships with the repo.
+3. **Confirm:** `level5/data/prompts/command_prompt_v3_slot_names.jinja2` exists. Rasa reads the prompt from `data/prompts/` at runtime. `level5/resources/` holds the copy that ships with the repo.
 
 ---
 
-## Part B — Point `config.yml` at the template
+## Part B, Point `config.yml` at the template
 
 1. Open `level5/config.yml`.
 
@@ -47,12 +47,12 @@ pipeline:
 
 - Open a terminal at **project root** (the folder that contains `level5/` and `.venv/`).
 - Activate the virtual environment:
-  - Codio / Linux / macOS: `source .venv/bin/activate`
-  - Windows (PowerShell): `.\.venv\Scripts\Activate.ps1`
+ - Codio / Linux / macOS: `source .venv/bin/activate`
+ - Windows (PowerShell): `.\.venv\Scripts\Activate.ps1`
 - Change into the agent folder: `cd level5`
 - Run: `python -m rasa train`
 
-Training should finish; a bad `prompt_template` path usually shows up here or on the next train.
+Training should finish. A bad `prompt_template` path usually shows up here or on the next train.
 
 ---
 

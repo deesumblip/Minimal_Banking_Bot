@@ -8,7 +8,7 @@ You will create:
 - **YAML** for the **flow** (paste as specified)
 - **Python** for the **action** (or an equivalent that satisfies the grader)
 
-You do **not** need the venv for the fill-in-the-blanks; you need it when you **train** later in the chapter.
+You do **not** need the venv for the fill-in-the-blanks. You need it when you **train** later in the chapter.
 
 ---
 
@@ -20,7 +20,7 @@ Level 4 already maps **`amount`**, **`recipient`**, and **`account_from`** when 
 
 ---
 
-## Part A — Domain slot conditions (fill in the blanks)
+## Part A, Domain slot conditions (fill in the blanks)
 
 Complete the exercise, then open **`level5/domain/basics.yml`** and align the **`amount`**, **`recipient`**, and **`account_from`** blocks with your answers (so **`transfer_money`** and **`transfer_money_tools`** both appear under **`conditions`**). If the file already matches, skim to confirm.
 
@@ -28,13 +28,13 @@ Complete the exercise, then open **`level5/domain/basics.yml`** and align the **
 
 ---
 
-## Part B — Register the action name in the domain
+## Part B, Register the action name in the domain
 
-In **`level5/domain/basics.yml`**, under **`actions:`**, add **`action_process_transfer_with_tools`** if it is missing—keep all existing action names.
+In **`level5/domain/basics.yml`**, under **`actions:`**, add **`action_process_transfer_with_tools`** if it is missing. Keep all existing action names.
 
 ---
 
-## Part C — Create the flow file
+## Part C, Create the flow file
 
 Create **`level5/data/basics/transfer_money_tools.yml`** with the following content. The flow **`id`** (**`transfer_money_tools`**) must match the **`active_flow`** values you set in Part A. The **`collect:`** descriptions help the LLM fill slots in one turn when the user already gave part of the information.
 
@@ -51,24 +51,24 @@ flows:
       - collect: amount
         description: |
           The transfer amount in dollars. Extract from this message if the user already said it
-          (same turn as starting the flow). Accept digits with or without $; commas may appear;
-          phrases like "hundred" or "twenty dollars" are acceptable.
+          (same turn as starting the flow). Accept digits with or without $. Commas may appear.
+          Phrases like "hundred" or "twenty dollars" are acceptable.
       - collect: recipient
         description: |
           Name or account identifier of who receives the money. Short reply (e.g. "Jamie" or an account number).
           Extract from this turn if they already named the recipient.
       - collect: account_from
         description: |
-          Source account number or ID the money is sent from. Digits or short label;
-          extract from this turn if the user already gave the source account.
+          Source account number or ID the money is sent from. Digits or short label.
+          Extract from this turn if the user already gave the source account.
       - action: action_process_transfer_with_tools
 ```
 
-Save the file. Tools stay registered in **`endpoints.yml`**; the flow lists only the **action** step, not individual tool names.
+Save the file. Tools stay registered in **`endpoints.yml`**. The flow lists only the **action** step, not individual tool names.
 
 ---
 
-## Part D — Create the custom action
+## Part D, Create the custom action
 
 Create **`level5/actions/action_process_transfer_with_tools.py`**. The grader expects a real **`run()`** that reads **`amount`**, **`recipient`**, and **`account_from`** from the tracker and sends at least one **`dispatcher.utter_message`** (for example a short demo confirmation). Use the script below as your reference implementation, or type an equivalent yourself.
 
@@ -125,7 +125,7 @@ Save the file.
 
 ---
 
-## Part E — Run the code assessment
+## Part E, Run the code assessment
 
 **In Codio**, run **Check It!** below when Parts A–D are saved. The grader checks flow YAML, the action, the domain **`actions:`** list, and **`from_llm`** conditions for **`transfer_money_tools`**.
 

@@ -4,15 +4,15 @@
 
 ### Your Task
 
-Create **`action_holiday_hours`**: the bank's holiday schedule **based on today's date**. If today is a holiday, say we're closed today; otherwise return the general holiday schedule. That requires an action, not a single `utter_*` response.
+Create **`action_holiday_hours`**: the bank's holiday schedule **based on today's date**. If today is a holiday, say we're closed today. Otherwise return the general holiday schedule. That requires an action, not a single `utter_*` response.
 
-You do **not** need to activate the virtual environment for the assessments below; **Check It!** checks your saved file on disk (and the fill-in exercise). Keep **`action_bank_hours.py`** open on the right if you want to compare while you work.
+You do **not** need to activate the virtual environment for the assessments below. **Check It!** checks your saved file on disk (and the fill-in exercise). Keep **`action_bank_hours.py`** open on the right if you want to compare while you work.
 
 ---
 
 #### Complete the action file (fill in the blanks)
 
-The exercise matches the **`action_bank_hours`** structure from **Unit 2.1**—imports, class, `name()`, `run()` return type, `datetime.now()`, holiday date checks, `dispatcher.utter_message`, and `return []`. **Thirteen blanks** cover those pieces. Complete every blank, then **copy the full script** from the exercise into `level2/actions/action_holiday_hours.py`. Run the **Code Test** when the file is saved.
+The exercise matches the **`action_bank_hours`** structure from **Unit 2.1**. Imports, class, `name()`, `run()` return type, `datetime.now()`, holiday date checks, `dispatcher.utter_message`, and `return []`. **Thirteen blanks** cover those pieces. Complete every blank, then **copy the full script** from the exercise into `level2/actions/action_holiday_hours.py`. Run the **Code Test** when the file is saved.
 
 {Check It!|assessment}(fill-in-the-blanks-201030010)
 

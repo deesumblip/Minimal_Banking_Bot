@@ -13,4 +13,4 @@ tools:
 
 This points Rasa at the Python package **`tools`** (the **`tools/`** folder with **`__init__.py`** and **`banking_tools.py`**). Functions listed in **`__all__`** become available to the LLM.
 
-Leave **`action_endpoint`**, **`nlg`**, and **`model_groups`** as they are; **append** the **`tools:`** block. **Lab 3.1** has you save this and run the code check.
+Leave **`action_endpoint`**, **`nlg`**, and **`model_groups`** as they are. **append** the **`tools:`** block. **Lab 3.1** has you save this and run the code check.

@@ -1,6 +1,6 @@
 **Starting point:** Work in **`level4/`** (see **Unit 0.1**).
 
-You now have one assistant under **`level4/`** that keeps Levels **1–3** behavior and adds the **transfer** path: ordered **`collect:`** steps for **`amount`**, **`recipient`**, **`account_from`**, then **`action_process_transfer`**. Train **once**; one model covers every flow.
+You now have one assistant under **`level4/`** that keeps Levels **1–3** behavior and adds the **transfer** path: ordered **`collect:`** steps for **`amount`**, **`recipient`**, **`account_from`**, then **`action_process_transfer`**. Train **once**. One model covers every flow.
 
 ## What your agent can do
 
@@ -13,4 +13,4 @@ You now have one assistant under **`level4/`** that keeps Levels **1–3** behav
 
 ## Verify in Inspector
 
-Use the **scripted transfer**, expected turns, and troubleshooting from **Lab 5.2** (Unit 5)—that page is the single place for the example dialogue and confirmation line. This walkthrough is the **layer map** only.
+Use the **scripted transfer**, expected turns, and troubleshooting from **Lab 5.2** (Unit 5). That page is the single place for the example dialogue and confirmation line. This walkthrough is the **layer map** only.

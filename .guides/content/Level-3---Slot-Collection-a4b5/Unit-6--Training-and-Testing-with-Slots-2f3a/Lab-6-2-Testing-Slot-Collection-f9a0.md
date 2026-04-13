@@ -70,9 +70,9 @@ Use this when you run the course on your own machine. You need **`level3`**, Ras
 
 **Local troubleshooting**
 
-- **`No module named 'rasa'`** — Reactivate the venv, **`cd level3`**, install **`rasa-pro`** if needed.
-- **License or API key errors** — Match your **Lab 6.1** environment. Fix **`.env`** or shell exports, open a fresh terminal, **`cd level3`**, run **`python -m rasa inspect`** again.
-- **Port 5005 in use** — Stop other Rasa processes or run  
+- **`No module named 'rasa'`**, Reactivate the venv, **`cd level3`**, install **`rasa-pro`** if needed.
+- **License or API key errors**, Match your **Lab 6.1** environment. Fix **`.env`** or shell exports, open a fresh terminal, **`cd level3`**, run **`python -m rasa inspect`** again.
+- **Port 5005 in use**, Stop other Rasa processes or run  
   **`python -m rasa inspect --debug --log-file logs/logs.out --port 5006`**  
   and open **http://localhost:5006** or **http://localhost:5006/webhooks/socketio/inspect.html**.
 

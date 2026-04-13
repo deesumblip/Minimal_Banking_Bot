@@ -15,12 +15,12 @@
 
 - Open **two terminals** with the venv active and your working directory set to **`level5/`**.
 - In **Terminal A**, start the action server:
-  - `python -m rasa run actions`
+ - `python -m rasa run actions`
 - In **Terminal B**, create a logs folder (if it does not exist yet):
-  - Linux / macOS / Codio: `mkdir -p logs`
-  - Windows (PowerShell): `if (-not (Test-Path logs)) { New-Item -ItemType Directory -Path logs }`
+ - Linux / macOS / Codio: `mkdir -p logs`
+ - Windows (PowerShell): `if (-not (Test-Path logs)) { New-Item -ItemType Directory -Path logs }`
 - In **Terminal B**, start Inspector **with debug logging enabled**:
-  - `python -m rasa inspect --debug --log-file logs/inspect.log`
+ - `python -m rasa inspect --debug --log-file logs/inspect.log`
 
 Then open Inspector in your browser and run a quick tool-calling smoke test.
 
@@ -28,8 +28,8 @@ Then open Inspector in your browser and run a quick tool-calling smoke test.
 
 Use prompts that reliably exercise the course setup. (You can also open `logs/inspect.log` and look for tool-related lines.)
 
-- **Balance (`check_balance`)** — Ask: *“What’s my balance for account 123?”* You should get a short demo-style balance reply (this path is stable in Inspector).
-- **`transfer_money_tools` flow** — Start with: *“Transfer 25 dollars to Alex from account 111.”* The assistant may still ask you to confirm **amount**, **recipient**, and **account_from** one at a time; answer plainly (e.g. *“25 dollars”*, *“Alex”*, then your **from** account when asked). You should end with a **demo transfer processed** message. That end-to-end path is what this lab expects you to verify—not that every slot is filled from the first user turn.
+- **Balance (`check_balance`)**, Ask: *“What’s my balance for account 123?”* You should get a short demo-style balance reply (this path is stable in Inspector).
+- **`transfer_money_tools` flow**, Start with: *“Transfer 25 dollars to Alex from account 111.”* The assistant may still ask you to confirm **amount**, **recipient**, and **account_from** one at a time. Answer plainly (e.g. *“25 dollars”*, *“Alex”*, then your **from** account when asked). You should end with a **demo transfer processed** message. That end-to-end path is what this lab expects you to verify. Not that every slot is filled from the first user turn.
 
 **Step 3.** **In Codio**, use **Check It!**.
 

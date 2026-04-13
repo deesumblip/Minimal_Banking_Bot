@@ -16,7 +16,7 @@ Use these in the Inspector chat to check that the most recent implementations wo
 
 #### Formal testing workflow
 
-1. **Train your agent** — From the `level2` folder (with the virtual environment activated):
+1. **Train your agent**, From the `level2` folder (with the virtual environment activated):
 
 ```bash
 python -m rasa train
@@ -24,15 +24,15 @@ python -m rasa train
 
 Wait for training to finish.
 
-2. **Start Inspector** — Leave the server running and open Inspector in your browser (Codio port forwarding or local URL: **Lab 6.2**).
+2. **Start Inspector**, Leave the server running and open Inspector in your browser (Codio port forwarding or local URL: **Lab 6.2**).
 
 ```bash
 python -m rasa inspect --debug --log-file logs/logs.out
 ```
 
-3. **Run through the table** — For each row, confirm the **flow** and **action** (or Level 1 behavior) match. Pay special attention to **`hours`** vs **`holiday_hours`** so you see both the example action and your Lab 3.1 action.
+3. **Run through the table**, For each row, confirm the **flow** and **action** (or Level 1 behavior) match. Pay special attention to **`hours`** vs **`holiday_hours`** so you see both the example action and your Lab 3.1 action.
 
-4. **Watch routing in Inspector** — For the same user goal, compare phrasing (e.g. hours vs holiday hours) and observe how **flow** and **action** change—that reflects your **domain** and **flow YAML**.
+4. **Watch routing in Inspector**, For the same user goal, compare phrasing (e.g. Hours vs holiday hours) and observe how **flow** and **action** change. That reflects your **domain** and **flow YAML**.
 
 **Key point**: All Level 1 paths should still work. If your new action does not trigger, check **domain** registration and a clear **`description`** on the flow.
 
@@ -42,8 +42,8 @@ With **`--debug`** and the log file from step 2, use Inspector’s **debug** out
 
 #### Common issues
 
-1. **Action doesn't trigger** — Does the flow **`description`** match what the user said? Is the action in **`domain/`**? Does the file exist under **`actions/`**?
-2. **Action runs but no message** — Is **`dispatcher.utter_message()`** called? Check the terminal or **`logs/`** for Python errors in the action.
-3. **Python errors** — Fix syntax, imports, and method names (`name()`, `run()`, etc.).
+1. **Action doesn't trigger**, Does the flow **`description`** match what the user said? Is the action in **`domain/`**? Does the file exist under **`actions/`**?
+2. **Action runs but no message**, Is **`dispatcher.utter_message()`** called? Check the terminal or **`logs/`** for Python errors in the action.
+3. **Python errors**, Fix syntax, imports, and method names (`name()`, `run()`, etc.).
 
 ---

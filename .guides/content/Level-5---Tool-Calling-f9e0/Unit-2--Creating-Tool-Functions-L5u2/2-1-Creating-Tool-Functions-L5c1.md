@@ -1,4 +1,4 @@
-**Starting point:** Work in **`level5/`** with **Lab 2.0** done (**`data/prompts/command_prompt_v3_slot_names.jinja2`** and **`prompt_template`** in **`config.yml`**). **Lab 2.1** next adds **`tools/banking_tools.py`**; this page covers the pattern. See **Unit 0.1** for the Level 4 baseline if needed.
+**Starting point:** Work in **`level5/`** with **Lab 2.0** done (**`data/prompts/command_prompt_v3_slot_names.jinja2`** and **`prompt_template`** in **`config.yml`**). **Lab 2.1** next adds **`tools/banking_tools.py`**. This page covers the pattern. See **Unit 0.1** for the Level 4 baseline if needed.
 
 Tool functions are ordinary Python functions the LLM can call. They live in a **`tools`** module (for example **`tools/banking_tools.py`**).
 
@@ -10,7 +10,7 @@ Tool functions are ordinary Python functions the LLM can call. They live in a **
 
 ## Example: One complete tool function
 
-Below is one full example. The LLM uses the **function name** and **docstring** to decide when to call it. You will create a module with at least three tools (**`check_balance`**, **`process_transfer`**, **`get_account_info`**); this shows the pattern for one of them.
+Below is one full example. The LLM uses the **function name** and **docstring** to decide when to call it. You will create a module with at least three tools (**`check_balance`**, **`process_transfer`**, **`get_account_info`**). This shows the pattern for one of them.
 
 In **`tools/banking_tools.py`** you might define:
 
@@ -40,7 +40,7 @@ def check_balance(account: str):
 
 Add two more functions in the same style:
 
-- **`process_transfer(amount, from_account, to_account)`** — return a dict with success/message-style fields.
-- **`get_account_info(account)`** — return a dict with account details.
+- **`process_transfer(amount, from_account, to_account)`**, return a dict with success/message-style fields.
+- **`get_account_info(account)`**, return a dict with account details.
 
 Each needs a docstring that tells the model when to use it. The **`__all__`** list names the functions Rasa exposes as tools. **Lab 2.1** has you create **`tools/`** and **`banking_tools.py`** with all three functions and **`__all__`**.

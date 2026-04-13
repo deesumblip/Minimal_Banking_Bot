@@ -12,15 +12,15 @@ utter_greet:
 
 #### What each part does
 
-**Name — `utter_greet`.** Every response name starts with the `utter_` prefix. The part after the underscore is yours to choose. Flows reference this name when they want the agent to speak.
+**Name, `utter_greet`.** Every response name starts with the `utter_` prefix. The part after the underscore is yours to choose. Flows reference this name when they want the agent to speak.
 
-**List item — `- text: "..."`.** The dash means this entry is one item in a **list**. That matters because a single response can list several `text` lines; Rasa can pick among them. More on that below.
+**List item, `- text: "..."`.** The dash means this entry is one item in a **list**. That matters because a single response can list several `text` lines. Rasa can pick among them. More on that below.
 
-**Optional metadata — `rephrase: True`.** When this is set, the **LLM** may rephrase the wording while keeping the meaning. You can tune the rephraser in Rasa if you need tighter control. Without **`rephrase: True`**, the agent repeats the same string every time. Users notice when an agent sounds like a broken record.
+**Optional metadata, `rephrase: True`.** When this is set, the **LLM** may rephrase the wording while keeping the meaning. You can tune the rephraser in Rasa if you need tighter control. Without **`rephrase: True`**, the agent repeats the same string every time. Users notice when an agent sounds like a broken record.
 
-With rephrasing enabled, “Hi! I'm a banking assistant.” might become “Hello! What can I help you with today?” on the next turn—same intent, different words, and a less robotic feel.
+With rephrasing enabled, “Hi! I'm a banking assistant.” might become “Hello! What can I help you with today?” on the next turn. Same intent, different words, and a less robotic feel.
 
-⚠️ **Important:** `rephrase: True` is optional, but it is the main lever for natural variation at Level 1. Real conversations are not perfectly repetitive; this setting helps your agent match that expectation.
+⚠️ **Important:** `rephrase: True` is optional, but it is the main lever for natural variation at Level 1. Real conversations are not perfectly repetitive. This setting helps your agent match that expectation.
 
 #### Why responses are lists
 

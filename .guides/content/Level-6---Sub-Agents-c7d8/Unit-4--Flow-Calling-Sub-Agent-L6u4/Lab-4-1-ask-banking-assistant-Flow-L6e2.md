@@ -8,7 +8,7 @@
 
 {Check It!|assessment}(fill-in-the-blanks-501060110)
 
-**Step 3.** Copy your **passed** YAML into **`level6/data/basics/ask_banking_assistant.yml`**. Save. (You may refine **`description`** later for SearchReady; the fill-in gives a course-correct baseline.)
+**Step 3.** Copy your **passed** YAML into **`level6/data/basics/ask_banking_assistant.yml`**. Save. (You may refine **`description`** later for SearchReady. The fill-in gives a course-correct baseline.)
 
 **Step 4.** **Use Check It!** below for the graded **Code Test** (Codio).
 

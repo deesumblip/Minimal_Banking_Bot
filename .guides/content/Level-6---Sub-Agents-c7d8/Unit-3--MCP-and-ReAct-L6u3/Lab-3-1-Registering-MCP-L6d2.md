@@ -16,7 +16,7 @@
 
 ## Running locally
 
-From project root activate the venv. After merging **`endpoints.yml`**, start the MCP server from **`level6/`** (separate terminal; needed before Inspector tests):
+From project root activate the venv. After merging **`endpoints.yml`**, start the MCP server from **`level6/`** (separate terminal. Needed before Inspector tests):
 
 ```bash
 cd level6

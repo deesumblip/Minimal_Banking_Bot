@@ -1,16 +1,16 @@
-A **sub-agent** is a separate agent that the main agent can **call** from a flow. When a flow step runs `call: agent_name`, the main agent hands off to that sub-agent; the sub-agent runs (e.g. using its own LLM and tools) until it signals completion (e.g. `task_completed`), then control returns to the main flow.
+A **sub-agent** is a separate agent that the main agent can **call** from a flow. When a flow step runs `call: agent_name`, the main agent hands off to that sub-agent. The sub-agent runs (e.g. Using its own LLM and tools) until it signals completion (e.g. `task_completed`), then control returns to the main flow.
 
 ## Comparison
 
 | | Main agent only (Level 5) | With sub-agent (Level 6) |
 |--|---------------------------|---------------------------|
-| **Who does the work** | One agent; tools called in one action context | Main agent can delegate a **whole task** to another agent |
+| **Who does the work** | One agent. Tools run in one action context. | Main agent can delegate a **whole task** to another agent |
 | **Flow step** | `action: action_process_transfer_with_tools` | `call: banking_assistant` (sub-agent runs until done) |
 | **Use case** | Single conversation with tool calls | Orchestration: "let the banking assistant handle this" |
 
 ## Example: What a call step looks like
 
-In Level 6 you will add a flow whose steps include **calling** a sub-agent. The flow does not list the sub-agent’s internal steps; it has one step that hands off (you author the full flow YAML in **Lab 4.1**):
+In Level 6 you will add a flow whose steps include **calling** a sub-agent. The flow does not list the sub-agent’s internal steps. It has one step that hands off (you author the full flow YAML in **Lab 4.1**):
 
 ```yaml
 steps:

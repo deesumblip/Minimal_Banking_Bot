@@ -1,4 +1,4 @@
-**Starting point:** Work in **`level4/`** (starter agent in **Unit 0.1**; pipeline in **Unit 0.2**).
+**Starting point:** Work in **`level4/`** (starter agent in **Unit 0.1**. Pipeline in **Unit 0.2**).
 
 The order of `collect:` steps in the flow is the order in which the agent asks for values when a slot is still empty.
 

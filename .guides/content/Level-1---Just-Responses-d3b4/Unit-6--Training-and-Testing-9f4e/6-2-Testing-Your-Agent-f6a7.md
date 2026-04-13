@@ -1,13 +1,13 @@
-> To restart your agent, click **[Start Rasa Inspector](open_terminal panel=1; cmd bash /home/codio/workspace/.guides/scripts/start_rasa_inspect.sh)**.
+> To restart your agent, click **[Start Rasa Inspector](open_terminal panel=1. Cmd bash /home/codio/workspace/.guides/scripts/start_rasa_inspect.sh)**.
 > Then click **Rasa Inspect** in the main toolbar above to load the chat tab.
 
 #### Basic testing workflow
 
 1. **Start Inspector** (see **Lab 6.2** if you need to run it manually).
 2. **Test each flow**:
-   - Type "hello" (or "hi", "hey") → should trigger the `greet` flow
-   - Type "help" or "what can you do?" → should trigger the `help` flow
-   - Type "contact" or "how do I reach support?" → should trigger the `contact` flow
+ - Type "hello" (or "hi", "hey") → should trigger the `greet` flow
+ - Type "help" or "what can you do?" → should trigger the `help` flow
+ - Type "contact" or "how do I reach support?" → should trigger the `contact` flow
 3. **Observe**: Did the correct flow run? Did you get the expected response? Any errors?
 
 #### Test thoroughly with variations

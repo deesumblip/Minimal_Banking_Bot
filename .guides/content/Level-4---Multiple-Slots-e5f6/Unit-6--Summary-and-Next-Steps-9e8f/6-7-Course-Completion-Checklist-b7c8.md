@@ -8,4 +8,4 @@ Before **Level 5**, you should be able to:
 - Author **`transfer_money.yml`** with ordered **`collect:`** steps and a final **`action:`** step.
 - Train from **`level4/`** and complete **Lab 5.2** (including the **scripted transfer**).
 
-**Next:** **Level 5 Unit 0** covers tool-calling readiness and **`level5/`** setup in depth—use it as the continuation checklist.
+**Next:** **Level 5 Unit 0** covers tool-calling readiness and **`level5/`** setup in depth. Use it as the continuation checklist.

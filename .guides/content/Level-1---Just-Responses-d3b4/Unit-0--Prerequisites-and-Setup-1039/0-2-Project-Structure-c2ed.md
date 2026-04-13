@@ -20,15 +20,15 @@ level1/
 │   └── system/
 │       └── patterns/
 │           └── patterns.yml # System patterns (session start, completed)
-├── logs/ # Log files (e.g. when running Inspector; may be empty at first)
+├── logs/ # Log files (e.g. when running Inspector). May be empty at first.
 └── models/ # Generated during training (don't edit)
 ```
 
 The layout above is the **starter** Level 1 agent before most labs. As you work through the chapter you will add more flows and domain responses. After you run **`rasa train`**, a packaged model appears under **`models/`**.
 
-The tree lists only the **agent** files. Your real **`level1/`** folder may also include course notes as **`.md`** files, helper scripts, **`.guides`**, **`.rasa`**, and other items. Those extras support the course; they are not part of the agent definition above.
+The tree lists only the **agent** files. Your real **`level1/`** folder may also include course notes as **`.md`** files, helper scripts, **`.guides`**, **`.rasa`**, and other items. Those extras support the course. They are not part of the agent definition above.
 
-**Note for Codio Students**: Credentials are pre-configured via environment variables. The `.env` file may not be visible in your project; that's expected.
+**Note for Codio Students**: Credentials are pre-configured via environment variables. The `.env` file may not be visible in your project. That's expected.
 
 ---
 

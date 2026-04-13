@@ -1,4 +1,4 @@
-**Starting point:** Work in **`level4/`** (starter agent in **Unit 0.1**; pipeline in **Unit 0.2**).
+**Starting point:** Work in **`level4/`** (starter agent in **Unit 0.1**. Pipeline in **Unit 0.2**).
 
 The same naming conventions you used for **`account`** and **`utter_ask_account`** apply when you add multiple slots.
 
@@ -6,9 +6,9 @@ The same naming conventions you used for **`account`** and **`utter_ask_account`
 
 - Use clear, lowercase names: `amount`, `recipient`, `account_from`.
 - Slot names must match exactly between:
-  - The **domain** (`slots:` section)
-  - The **flow** (`collect: slot_name` in steps)
-  - The **action** (`tracker.get_slot("slot_name")`)
+ - The **domain** (`slots:` section)
+ - The **flow** (`collect: slot_name` in steps)
+ - The **action** (`tracker.get_slot("slot_name")`)
 
 ## Ask Responses
 

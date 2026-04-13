@@ -65,12 +65,12 @@ Follow the same rules: activate the venv from the **project root**, then **`cd l
 
 1. Open a terminal and go to the **project root**, the folder that contains **`level1`**, **`level2`**, **`level3`**, and **`.guides`**.
 2. Activate the virtual environment. The **`.venv`** folder sits in the project root.
-   - **Windows PowerShell**: `.\.venv\Scripts\Activate.ps1`
-   - **Windows Command Prompt**: `.venv\Scripts\activate.bat`
-   - **macOS or Linux**: `source .venv/bin/activate`  
-   Your prompt should show **`(.venv)`**.
+ - **Windows PowerShell**: `.\.venv\Scripts\Activate.ps1`
+ - **Windows Command Prompt**: `.venv\Scripts\activate.bat`
+ - **macOS or Linux**: `source .venv/bin/activate` 
+ Your prompt should show **`(.venv)`**.
 3. Run **`cd level3`**. Confirm with **`pwd`** that you are inside **`level3`**.
-4. Ensure **`RASA_LICENSE`** and **`OPENAI_API_KEY`** are available to the process. **Lab 0.1** describes patterns; many local setups use a **`.env`** file in **`level3`**.
+4. Ensure **`RASA_LICENSE`** and **`OPENAI_API_KEY`** are available to the process. **Lab 0.1** describes patterns. Many local setups use a **`.env`** file in **`level3`**.
 5. From **`level3`**, run **`python -m rasa train`**. Wait until you see **Successfully saved model**.
 6. Confirm that a new **`.tar.gz`** appears under **`level3/models/`**.
 
