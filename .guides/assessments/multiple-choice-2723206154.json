@@ -21,7 +21,7 @@
 			{
 				"_id": "e5b0146b-4706-a4e1-20f3-d57c5de2acf1",
 				"correct": true,
-				"answer": "```yaml-hide-clipboard\nflows:\n  greet:\n    name: Greeting Flow\n    description: >\n      A simple flow that greets the user.\n    steps:\n      - action: Hello, how can I help you today?\n```"
+				"answer": "```yaml-hide-clipboard\nflows:\n  greet:\n    name: Greeting Flow\n    description: A simple flow that greets the user.\n    steps:\n      - action: Hello, how can I help you today?\n```"
 			},
 			{
 				"_id": "ec9f30d6-5fc9-1224-e9bb-e6f562dfdcc9",
@@ -41,7 +41,7 @@
 		},
 		"bloomsObjectiveLevel": "2",
 		"learningObjectives": "SWBAT identify the correct structure of a flow file",
-		"guidance": "The correct structure for a flow file begins with the `flows:` key, followed by a flow identifier (in this case, `greet:`). Under the flow identifier, we have the `name:`, `description:`, and `steps:` fields in that order. The description often uses the block scalar indicator `>` which allows for multi-line text while treating line breaks as spaces.",
+		"guidance": "The correct structure for a flow file begins with the `flows:` key, followed by a flow identifier (in this case, `greet:`). Under the flow identifier, we have the `name:`, `description:`, and `steps:` fields in that order.",
 		"showGuidanceAfterResponseOption": {
 			"type": "Attempts",
 			"passedFrom": 1
