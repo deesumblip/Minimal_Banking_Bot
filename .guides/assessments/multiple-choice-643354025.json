@@ -21,7 +21,7 @@
 			{
 				"_id": "69b5cdda-d8cc-0db6-91ca-abfbf0f8b21d",
 				"correct": true,
-				"answer": "To automatically trigger an action when a conversation begins without requiring a user message"
+				"answer": "To automatically trigger the action of utter_greet when a conversation begins without requiring a user message"
 			},
 			{
 				"_id": "233c0076-a227-a3c4-07d2-bde2d48f78bd",
@@ -41,7 +41,7 @@
 		},
 		"bloomsObjectiveLevel": "3",
 		"learningObjectives": "SWBAT understand the purpose of system patterns in conversation flow",
-		"guidance": "The correct answer is that `pattern_session_start` automatically triggers an action when a conversation begins without requiring a user message. This is indicated by the `nlu_trigger: - intent: session_start` in the pattern definition, showing that it responds to the session_start intent, which is a system intent that fires automatically when a new conversation begins. The other options are incorrect because: ending conversations is handled by `pattern_completed` with its `noop: true` and `next: END` attributes; the file doesn't mention error handling; and there's no indication of database storage in the provided information.",
+		"guidance": "The correct answer is that `pattern_session_start` automatically triggers the **`utter_greet`** response action when a conversation begins without requiring a user message (as in the `- action: utter_greet` step in `patterns.yml`). The `nlu_trigger` with `intent: session_start` ties this to the system session-start intent. The other options are incorrect because: ending conversations is handled by `pattern_completed` with its `noop: true` and `next: END` attributes; the file doesn't mention error handling; and there's no indication of database storage in the provided information.",
 		"showGuidanceAfterResponseOption": {
 			"type": "Attempts",
 			"passedFrom": 1
