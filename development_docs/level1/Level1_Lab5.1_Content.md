@@ -11,11 +11,9 @@ Answer these questions by examining the configuration files:
 1. What language is the agent configured for?
 2. What LLM model is being used?
 3. Where would Rasa look for custom actions?
-4. What does `temperature: 0.3` mean for the LLM?
 
 #### Answers
 
 1. English (`language: en`)
 2. **`openai-gpt-5-1`**. In **`endpoints.yml`** (under **`model_groups`**) you'll see **`model: openai-gpt-5-1`** (and the same group id in **`config.yml`** as **`model_group`**).
 3. The `actions/` folder. The config uses `actions_module: "actions"` to point to it.
-4. The LLM will be somewhat creative but mostly consistent. A value of 0.3 is relatively low, meaning less randomness.
