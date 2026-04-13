@@ -9,6 +9,42 @@ import sys
 import subprocess
 from pathlib import Path
 
+_LICENSE_PLACEHOLDERS = frozenset(
+    {
+        "rasaxxx-your-license-here",
+        "your-license-here",
+        "",
+    }
+)
+
+
+def _license_value_is_valid(value: str) -> bool:
+    v = (value or "").strip()
+    return bool(v) and v.lower() not in _LICENSE_PLACEHOLDERS
+
+
+def _parse_rasa_license_from_dotenv_file(env_path: Path) -> str:
+    """Return the RASA_LICENSE value from a KEY=VAL .env file, or ''."""
+    if not env_path.is_file():
+        return ""
+    try:
+        text = env_path.read_text(encoding="utf-8")
+    except OSError:
+        return ""
+    for raw in text.splitlines():
+        line = raw.strip()
+        if not line or line.startswith("#"):
+            continue
+        # RASA_LICENSE=... or export RASA_LICENSE=...
+        if "RASA_LICENSE=" in line:
+            val = line.split("RASA_LICENSE=", 1)[-1].strip()
+            # strip optional surrounding quotes
+            if (val.startswith('"') and val.endswith('"')) or (val.startswith("'") and val.endswith("'")):
+                val = val[1:-1]
+            return val
+    return ""
+
+
 # Workspace root (Codio: /home/codio/workspace; local: use cwd)
 WORKSPACE_ROOT = Path(os.environ.get("CODIO_WORKSPACE", os.getcwd()))
 if not WORKSPACE_ROOT.is_absolute():
@@ -256,33 +292,34 @@ else:
     score += 1
 print("")
 
-# Step 4: RASA_LICENSE is set (1 point) - check presence only, never print value
-print("Step 4: Verifying RASA_LICENSE is set...")
-rasa_license_ok = False
+# Step 4: RASA_LICENSE in project-root .env (primary) or environment (1 point) — never print value
+print("Step 4: Verifying RASA_LICENSE (project-root .env or environment)...")
+env_file = WORKSPACE_ROOT / ".env"
+file_val = _parse_rasa_license_from_dotenv_file(env_file)
 env_val = os.environ.get("RASA_LICENSE", "").strip()
-if env_val and env_val.lower() not in ("rasaxxx-your-license-here", "your-license-here"):
+
+rasa_license_ok = False
+license_source = ""
+
+if _license_value_is_valid(file_val):
     rasa_license_ok = True
-if not rasa_license_ok:
-    # Fallback: .env in project root with non-placeholder RASA_LICENSE (grader may run in fresh process)
-    env_file = WORKSPACE_ROOT / ".env"
-    if env_file.is_file():
-        try:
-            with open(env_file, "r") as f:
-                for line in f:
-                    line = line.strip()
-                    if line.startswith("RASA_LICENSE="):
-                        val = line.split("=", 1)[-1].strip()
-                        if val and val.lower() not in ("rasaxxx-your-license-here", "your-license-here"):
-                            rasa_license_ok = True
-                        break
-        except Exception:
-            pass
+    license_source = "project-root .env"
+elif _license_value_is_valid(env_val):
+    rasa_license_ok = True
+    license_source = "environment variable"
+
 if rasa_license_ok:
-    print("✅ Step 4: PASSED - RASA_LICENSE is set (1 point)")
+    print(f"✅ Step 4: PASSED - RASA_LICENSE is set ({license_source}) (1 point)")
     score += 1
 else:
-    print("❌ Step 4: FAILED - RASA_LICENSE is not set or still placeholder (0 points)")
-    print("Hint: Set RASA_LICENSE for this session: 'export RASA_LICENSE=your-actual-license' (or use a .env file and source it). On Codio you may use Environment Variables in project settings.")
+    print("❌ Step 4: FAILED - No valid RASA_LICENSE in project-root .env or environment (0 points)")
+    print(
+        "Hint: From the project root, create .env with a real RASA_LICENSE= line, for example:\n"
+        "  echo 'RASA_LICENSE=your-actual-license-key' > .env\n"
+        "If your key contains special characters, use: printf 'RASA_LICENSE=%s\\n' 'your-key' > .env\n"
+        "The file must live at the project root (next to level1/), not inside level1/. "
+        "Then run Check It! again."
+    )
 print("")
 
 # Final summary

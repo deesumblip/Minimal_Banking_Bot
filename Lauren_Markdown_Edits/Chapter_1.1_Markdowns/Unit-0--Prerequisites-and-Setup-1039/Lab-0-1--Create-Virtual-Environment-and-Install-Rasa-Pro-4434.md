@@ -1,19 +1,17 @@
-Create a virtual environment in the **project root**, install Rasa, set up **your own** Rasa developer edition license (`RASA_LICENSE`), and verify everything works. This is your first step—you need this setup before any other lab. 
+Create a virtual environment in the **project root**, install Rasa Pro, configure **your own** Rasa Pro license using the **`RASA_LICENSE`** variable, and confirm the tools work. This is your first lab; complete it before any other hands-on work.
 
-This course uses:
-
-- `RASA_LICENSE` (Rasa license)
+This course expects a valid **`RASA_LICENSE`** for Rasa Pro.
 
 ---
 
 ## In this lab you will
 
-1. Check Python and pip
-2. Create a virtual environment (`.venv`) in the **project root** — this same `.venv` is used across **all levels** (level1, level2, level3, etc.)
-3. Install Rasa in that venv
-4. Set up **RASA_LICENSE** (your own Rasa license)
-5. Verify the installation with `rasa --version` (after your environment variable is loaded)
-6. Confirm the `level1` project structure is present
+1. Check Python and pip.
+2. Create a virtual environment named **`.venv`** in the **project root**. You reuse this same environment for **level1**, **level2**, **level3**, and the rest of the course.
+3. Install Rasa Pro inside that virtual environment.
+4. Create a **`.env`** file in the **project root** with your **`RASA_LICENSE`** (via the terminal).
+5. Run **`rasa --version`** after loading the license from `.env` into your shell.
+6. Confirm the **`level1`** project layout is present.
 
 ---
 
@@ -77,27 +75,36 @@ pip install --no-cache-dir rasa-pro
 
 Installation takes 2–5 minutes.
 
-**4. Set RASA_LICENSE**
+**4. Create `.env` in the project root with `RASA_LICENSE`**
 
-Replace `YOUR_LICENSE_KEY` with your actual Rasa developer edition license key you recieved via email:
+Stay in the **project root** (the folder that contains `level1/`, `level2/`, `.guides/` — **not** inside `level1`). Replace `YOUR_LICENSE_KEY` with your actual Rasa Pro license (paste the whole key):
 
 ```bash
-export RASA_LICENSE=YOUR_LICENSE_KEY
+echo 'RASA_LICENSE=YOUR_LICENSE_KEY' > .env
 ```
 
-Then run `rasa --version` (step 5).
+If your key contains characters that confuse the shell, use:
 
-**To have RASA_LICENSE in every new terminal:** Create a `.env` file in the project root with `RASA_LICENSE=your-license`, then at the start of each session run `set -a; source .env; set +a`. Do **not** commit `.env` (it is in `.gitignore`). On Codio you can also add `RASA_LICENSE` in **Environment Variables** / **Settings** if available.
+```bash
+printf 'RASA_LICENSE=%s\n' 'YOUR_LICENSE_KEY' > .env
+```
+
+This creates **`.env`** next to `level1/`. The automated **Check It!** test reads this file (the grader never prints your key). Do **not** commit `.env` — it is listed in `.gitignore`.
 
 **5. Verify installation**
 
+Load the license into your **current** shell session, then run Rasa:
+
 ```bash
+set -a
+source .env
+set +a
 rasa --version
 ```
 
 You should see version information with no errors.
 
-Run the assessment for this lab to confirm your setup.
+**In Codio**, use **Check It!** for this lab after step 4 (`.env` exists) to confirm your setup.
 
 {Check It!|assessment}(code-output-compare-3333363688)
 
@@ -147,19 +154,26 @@ pip install --no-cache-dir rasa-pro
 
 Installation takes 2–5 minutes.
 
-**4. Set RASA_LICENSE**
+**4. Create `.env` in the project root with `RASA_LICENSE`**
 
-Replace `YOUR_LICENSE_KEY` with your actual license:
+From the **project root** (the folder that contains `level1/`), create `.env` with your actual license:
 
 ```powershell
-$env:RASA_LICENSE = "YOUR_LICENSE_KEY"
+Set-Content -Path .env -Value "RASA_LICENSE=YOUR_LICENSE_KEY" -Encoding utf8
 ```
 
-Then run `rasa --version` (step 5). To have it in every new terminal, set the user environment variable (e.g. **System → Environment Variables**) or use a `.env` file and load it in your profile.
+Or use a here-string if you prefer. Do **not** commit `.env` (it is in `.gitignore`).
 
 **5. Verify installation**
 
+Load the license for this PowerShell session, then run Rasa:
+
 ```powershell
+Get-Content .env | ForEach-Object {
+  if ($_ -match '^\s*RASA_LICENSE\s*=\s*(.+)\s*$') {
+    $env:RASA_LICENSE = $matches[1].Trim([char]0x22, [char]0x27)
+  }
+}
 rasa --version
 ```
 
@@ -210,19 +224,22 @@ pip install --no-cache-dir rasa-pro
 
 Installation takes 2–5 minutes.
 
-**4. Set RASA_LICENSE**
+**4. Create `.env` in the project root with `RASA_LICENSE`**
 
-Replace `YOUR_LICENSE_KEY` with your actual license:
+From the **project root**, create `.env` (same steps as **On Codio** above):
 
 ```bash
-export RASA_LICENSE=YOUR_LICENSE_KEY
+echo 'RASA_LICENSE=YOUR_LICENSE_KEY' > .env
 ```
 
-Then run `rasa --version` (step 5). **To have RASA_LICENSE in every new terminal:** Create a `.env` file in the project root with `RASA_LICENSE=your-license`, then at the start of each session run `set -a; source .env; set +a`. Do **not** commit `.env` (it is in `.gitignore`).
+Do **not** commit `.env` (it is in `.gitignore`).
 
 **5. Verify installation**
 
 ```bash
+set -a
+source .env
+set +a
 rasa --version
 ```
 
@@ -274,19 +291,22 @@ pip install --no-cache-dir rasa-pro
 
 Installation takes 2–5 minutes.
 
-**4. Set RASA_LICENSE**
+**4. Create `.env` in the project root with `RASA_LICENSE`**
 
-Replace `YOUR_LICENSE_KEY` with your actual license:
+From the **project root**:
 
 ```bash
-export RASA_LICENSE=YOUR_LICENSE_KEY
+echo 'RASA_LICENSE=YOUR_LICENSE_KEY' > .env
 ```
 
-Then run `rasa --version` (step 5). **To have RASA_LICENSE in every new terminal:** Create a `.env` file in the project root with `RASA_LICENSE=your-license`, then at the start of each session run `set -a; source .env; set +a`. Do **not** commit `.env` (it is in `.gitignore`).
+Do **not** commit `.env` (it is in `.gitignore`).
 
 **5. Verify installation**
 
 ```bash
+set -a
+source .env
+set +a
 rasa --version
 ```
 
@@ -318,9 +338,9 @@ Confirm that the **domain/** and **data/** directories exist and that the three 
 
 ## Success criteria
 
-- **RASA_LICENSE is set** and you can run `rasa --version` successfully.
+- **Project-root `.env`** contains a real **`RASA_LICENSE=...`** line (not a placeholder), and you can run `rasa --version` successfully after loading `.env` in your shell.
 - The `level1` folder has the expected structure (domain, data, config files).
 
-For **later labs**: Use the same `.venv` from the project root for every level. Activate it from the root, ensure `RASA_LICENSE` is loaded, then `cd` into the level folder you're working in (e.g. `cd level1`).
+For **later labs**: Use the same `.venv` from the project root for every level. Activate it from the root, load your license (`set -a; source .env; set +a` on bash, or your PowerShell equivalent), then `cd` into the level folder you're working in (e.g. `cd level1`).
 
 ---

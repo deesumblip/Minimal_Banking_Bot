@@ -77,5 +77,3 @@ Agent responds
 - **System patterns** control the conversation lifecycle
 
 {Check It!|assessment}(multiple-choice-2989489112)
-
-{Check It!|assessment}(multiple-choice-1308821528)

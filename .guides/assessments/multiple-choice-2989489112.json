@@ -4,7 +4,7 @@
 	"source": {
 		"name": "File Structure Basics",
 		"showName": true,
-		"instructions": "**Which file contains the actual responses that the chat agent can say to users?**",
+		"instructions": "**Which file contains the template responses that the agent can use for more guided conversation with users?**",
 		"multipleResponse": false,
 		"isRandomized": false,
 		"answers": [
@@ -41,7 +41,7 @@
 		},
 		"bloomsObjectiveLevel": "1",
 		"learningObjectives": "SWBAT identify the purpose of different files in a chat agent project structure",
-		"guidance": "The correct answer is `domain/basics.yml`. As explained in the file purpose overview, this file serves as \"the agent's knowledge base—defines all responses the agent can say\". The other files have different purposes: `config.yml` defines how the agent is built, `data/basics/greet.yml` contains conversation flows/scripts, and `endpoints.yml` defines where to find custom actions and LLM configurations.",
+		"guidance": "The correct answer is `domain/basics.yml`. As explained in the file purpose overview, this file is the agent's knowledge base: it defines the response templates the agent can draw on. Flows in `data/` orchestrate the conversation; `config.yml` defines how the agent is built; `data/basics/greet.yml` holds flow scripts; and `endpoints.yml` defines where to find custom actions and LLM configurations.",
 		"showGuidanceAfterResponseOption": {
 			"type": "Attempts",
 			"passedFrom": 1
