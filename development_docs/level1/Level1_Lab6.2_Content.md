@@ -125,7 +125,7 @@ Use this path when you run the course on your own machine instead of the Codio w
 
 ### Local troubleshooting
 
-- **`No module named 'rasa'`** — Activate the venv again, **`cd level1`**, and install Rasa Pro if needed: **`pip install rasa-pro`**.
+- **`No module named 'rasa'`** — Activate the venv again, **`cd level1`**, and install Rasa Pro if needed: **`pip install rasa-pro==3.16.3`**.
 - **`RASA_LICENSE` not set** — Set the variable the same way you did for training. **Lab 0.1** covers local options. Fix the environment, open a new terminal if needed, **`cd`** to **`level1`**, and run **`python -m rasa inspect`** again.
 - **Address already in use or port 5005 in use** — Another process owns the port. Stop other Rasa or Python servers, or pick another port, for example:
 

@@ -41,7 +41,7 @@
 		},
 		"bloomsObjectiveLevel": "3",
 		"learningObjectives": "SWBAT understand the purpose and structure of the endpoints.yml file in a Rasa project",
-		"guidance": "The `endpoints.yml` file in Rasa serves two main purposes:\n\n1. It defines where Rasa can find custom actions through the `action_endpoint` or `actions_module` configuration\n2. It configures LLM settings for natural language generation through the `nlg` and `model_groups` sections\n\nThe file does NOT contain training data for the NLU pipeline (that would be in the `nlu.yml` file) or conversation flows (those would be in the `flows.yml` file). The `endpoints.yml` file is specifically for connecting Rasa to external services and configuring how responses are generated.",
+		"guidance": "The `endpoints.yml` file in Rasa serves two main purposes:\n\n1. It defines where Rasa can find custom actions through the `action_endpoint` or `actions_module` configuration\n2. It configures LLM settings for natural language generation through the `nlg` and `model_groups` sections\n\nThe file does **not** hold NLU training data or your flow definitions. In this course, flows live in YAML under **`level1/data/`** (and related folders), not in `endpoints.yml`. Classic NLU training examples, when used, live in separate data files—not in `endpoints.yml`. The `endpoints.yml` file is for action wiring and LLM/NLG configuration.",
 		"showGuidanceAfterResponseOption": {
 			"type": "Attempts",
 			"passedFrom": 1

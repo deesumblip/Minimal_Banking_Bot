@@ -23,7 +23,7 @@ python -m rasa --version
 python -m rasa train
 ```
 
-Your prompt should show **`(.venv)`**, and **`pwd`** should end with **`level3`**. If **`python -m rasa --version`** fails, install Rasa Pro with the venv active: **`pip install rasa-pro`**.
+Your prompt should show **`(.venv)`**, and **`pwd`** should end with **`level3`**. If **`python -m rasa --version`** fails, install Rasa Pro with the venv active: **`pip install rasa-pro==3.16.3`**.
 
 Training can take **several minutes** the first time. Log output is normal. Wait until the command finishes. Do not close the terminal while it runs.
 
@@ -54,7 +54,7 @@ If training fails, Rasa usually prints a file path and line number for YAML prob
 | **Missing `utter_ask_*` for a collected slot** | Every `collect:` step needs a matching **`utter_ask_<slot_name>`** response in the domain. Add or rename it in **`domain/basics.yml`**. |
 | **Slot not defined** | Ensure **`slots:`** in the domain lists the slot you collect, with a valid type. |
 | **Response `utter_…` or action not found** | Align **`domain/basics.yml`** with your flows and **`actions/`** files. |
-| **No module named `rasa`** | Activate the venv from the project root, **`cd level3`**, then run **`pip install rasa-pro`** if needed. |
+| **No module named `rasa`** | Activate the venv from the project root, **`cd level3`**, then run **`pip install rasa-pro==3.16.3`** if needed. |
 | **`RASA_LICENSE` or `OPENAI_API_KEY` not set** | See **Lab 0.1** in **Level 1**, or ask your instructor. Level 3 may use a **`.env`** file under **`level3`** in local setups. |
 
 ---

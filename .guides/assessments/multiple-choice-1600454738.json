@@ -31,7 +31,7 @@
 		},
 		"bloomsObjectiveLevel": "2",
 		"learningObjectives": "SWBAT identify the appropriate uses and limitations of Level 1 agents",
-		"guidance": "This statement is False. Level 1 agents are designed to provide static information but cannot remember context from previous messages or perform complex actions. They're ideal for simple FAQs, company information, and basic help systems where each interaction is independent. These agents respond to individual queries without maintaining conversation history or performing multi-step processes.",
+		"guidance": "This statement is False **for how this course defines Level 1**: there are **no slots** (no long-term memory of user-specific facts) and **no custom actions**, so the assistant cannot remember things like “my account number” across the conversation or run arbitrary code for complex tasks. Rasa still keeps normal **dialogue state** for the session, and the LLM can use **recent turns** for routing—but the chapter’s “Level 1” scope is **static responses and simple flows**, not memory-heavy or code-heavy multi-step automation.",
 		"showGuidanceAfterResponseOption": {
 			"type": "Attempts",
 			"passedFrom": 1

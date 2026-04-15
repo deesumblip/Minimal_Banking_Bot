@@ -23,7 +23,7 @@ python -m rasa --version
 python -m rasa train
 ```
 
-Your prompt should show **`(.venv)`**, and **`pwd`** should end with **`level1`**. If `python -m rasa --version` fails, install Rasa Pro with the venv active: **`pip install rasa-pro`**.
+Your prompt should show **`(.venv)`**, and **`pwd`** should end with **`level1`**. If `python -m rasa --version` fails, install Rasa Pro with the venv active: **`pip install rasa-pro==3.16.3`**.
 
 Training can take **several minutes** the first time. Log output is normal. Wait until the command finishes. Do not close the terminal while it runs.
 
@@ -53,7 +53,7 @@ If training fails, Rasa usually prints a file path and line number for YAML prob
 | **YAML or parse error with a file path and line** | Open the file at that line. Use **2 spaces**, not tabs. Check colons after keys and list items that start with **`-`**. Save and train again from **`level1`**. |
 | **YAML syntax such as “block mapping”** | Fix indentation and structure, save, train again from **`level1`**. |
 | **Response `utter_…` not found** | A flow references a response that is not in the domain, often **`domain/basics.yml`**. Add the response or correct the name in the flow. |
-| **No module named `rasa`** | Activate the venv from the project root, **`cd level1`**, then run **`pip install rasa-pro`** if needed. |
+| **No module named `rasa`** | Activate the venv from the project root, **`cd level1`**, then run **`pip install rasa-pro==3.16.3`** if needed. |
 | **RASA_LICENSE not set** | See **Lab 0.1** for setting **`RASA_LICENSE`**, or ask your instructor. |
 
 ---

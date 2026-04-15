@@ -115,6 +115,6 @@ Existing guide folders: **Level-1---Just-Responses-d3b4**, **Level-2---Custom-Ac
 
 - **Environment**: Same as Level 4 (Codio or local)
 - **Virtual environment**: One .venv in project root. Activate from root, then `cd level5`.
-- **Rasa**: Rasa Pro (latest stable)
+- **Rasa**: Rasa Pro 3.16.3 (`rasa-pro==3.16.3`)
 - **Inspector on Codio**: Use Rasa Inspect tab (no Ports / 5005).
 - **Prerequisites**: Level 1, 2, 3, and 4 completed.

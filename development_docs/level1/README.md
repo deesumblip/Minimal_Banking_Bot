@@ -19,7 +19,7 @@
 
 2. **Install Rasa Pro:**
    ```powershell
-   python -m pip install --no-cache-dir rasa-pro
+   python -m pip install --no-cache-dir rasa-pro==3.16.3
    ```
 
 3. **Set `RASA_LICENSE`:** Create a `.env` file in the project root with your license (Lab 0.1). Level 1 uses the tutorial LLM configured in **`level1/endpoints.yml`** (`https://tutorial-llm.rasa.ai`); you do not need an OpenAI API key for this level.

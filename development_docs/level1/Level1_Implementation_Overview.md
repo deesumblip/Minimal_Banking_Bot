@@ -46,7 +46,7 @@ This document provides implementation guidance for **Level 1: Just Responses** o
 
 ### Lab Environment
 - **Base**: Linux (Ubuntu 22.04 or similar), Python 3.11
-- **Rasa**: Rasa Pro (latest stable)
+- **Rasa**: Rasa Pro 3.16.3 (`rasa-pro==3.16.3`)
 - **Port**: 5005 for Rasa Inspector (port forwarding required on Codio for Unit 6)
 
 ### Project Structure (Level 1)

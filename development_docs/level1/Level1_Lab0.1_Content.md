@@ -7,6 +7,7 @@ In this lab you will create a virtual environment in the **project root**, insta
 This course uses:
 
 - `RASA_LICENSE` (Rasa Pro license)
+- **`rasa-pro==3.16.3`** (pinned Rasa Pro package; use the `pip install` lines below exactly)
 
 ---
 
@@ -76,7 +77,7 @@ Your prompt should show `(.venv)` at the start.
 **3. Install Rasa Pro**
 
 ```bash
-pip install --no-cache-dir rasa-pro
+pip install --no-cache-dir rasa-pro==3.16.3
 ```
 
 Installation takes 2–5 minutes.
@@ -144,7 +145,7 @@ Your prompt should show `(.venv)` at the start.
 **3. Install Rasa Pro**
 
 ```powershell
-pip install --no-cache-dir rasa-pro
+pip install --no-cache-dir rasa-pro==3.16.3
 ```
 
 Installation takes 2–5 minutes.
@@ -207,7 +208,7 @@ Your prompt should show `(.venv)` at the start.
 **3. Install Rasa Pro**
 
 ```bash
-pip install --no-cache-dir rasa-pro
+pip install --no-cache-dir rasa-pro==3.16.3
 ```
 
 Installation takes 2–5 minutes.
@@ -271,7 +272,7 @@ Your prompt should show `(.venv)` at the start.
 **3. Install Rasa Pro**
 
 ```bash
-pip install --no-cache-dir rasa-pro
+pip install --no-cache-dir rasa-pro==3.16.3
 ```
 
 Installation takes 2–5 minutes.

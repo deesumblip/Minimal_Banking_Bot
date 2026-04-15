@@ -39,7 +39,7 @@
 
 2. **Install Rasa Pro:**
    ```powershell
-   python -m pip install --no-cache-dir rasa-pro
+   python -m pip install --no-cache-dir rasa-pro==3.16.3
    ```
 
 3. **Create `.env` file:**

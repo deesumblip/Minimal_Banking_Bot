@@ -298,7 +298,7 @@ By the end of Level 2, students should be able to:
 
 - **Environment**: Codio (Linux Ubuntu 22.04)
 - **Python**: 3.11
-- **Rasa**: Rasa Pro (latest stable)
+- **Rasa**: Rasa Pro 3.16.3 (`rasa-pro==3.16.3`)
 - **Port Forwarding**: Required for Unit 6 (Rasa Inspector)
 - **Prerequisites**: Level 1 completed
 

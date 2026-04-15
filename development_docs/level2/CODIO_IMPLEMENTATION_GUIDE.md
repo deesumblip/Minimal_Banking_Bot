@@ -638,7 +638,7 @@ ImportError: cannot import name 'Action' from 'rasa_sdk'
 **What this means**: Rasa SDK is not installed or wrong version.
 
 **How to fix**:
-1. Make sure Rasa Pro is installed: `python -m pip install rasa-pro`
+1. Make sure Rasa Pro is installed: `python -m pip install rasa-pro==3.16.3`
 2. Check your virtual environment is activated
 3. Verify Rasa SDK is included with Rasa Pro
 
@@ -760,7 +760,7 @@ Student-facing page (`6-5-Core-Ideas-and-Level-3-Readiness-b91a`; Codio title **
 3. Rasa Pro not properly installed
 
 **Solutions**:
-1. Install Rasa Pro: `python -m pip install rasa-pro`
+1. Install Rasa Pro: `python -m pip install rasa-pro==3.16.3`
 2. Activate correct virtual environment
 3. Verify installation: `python -m rasa --version`
 
@@ -860,7 +860,7 @@ This document is a **combined student course + Codio implementation guide** for 
 
 **Pre-Installed Software**:
 - Python 3.11 + pip (latest)
-- `rasa-pro` (latest stable)
+- `rasa-pro==3.16.3` (pinned)
 - `git` (optional)
 
 **Pre-Configured Project Structure** (representative):

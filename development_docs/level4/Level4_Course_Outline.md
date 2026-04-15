@@ -158,6 +158,6 @@ Instructor-facing copy and Codio configuration notes live under **`level4/`** al
 
 - **Environment**: Same as Level 3 (Codio or local)
 - **Virtual environment**: One .venv in project root. Activate from root, then `cd level4`.
-- **Rasa**: Rasa Pro (latest stable)
+- **Rasa**: Rasa Pro 3.16.3 (`rasa-pro==3.16.3`)
 - **Inspector on Codio**: Use Rasa Inspect tab when "Starting Worker" is shown (no Ports / 5005).
 - **Prerequisites**: Level 1, 2, and 3 completed.

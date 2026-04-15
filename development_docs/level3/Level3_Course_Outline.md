@@ -221,6 +221,6 @@ Code-output-compare Check It! tags are on Labs 3.1, 4.1, 5.1, 6.1 in `.guides/co
 
 - **Environment**: Same as L1/L2 (Codio or local)
 - **Virtual environment**: **One .venv in project root** (created in Lab 0.1). Activate from root, then `cd level3`.
-- **Rasa**: Rasa Pro (latest stable)
+- **Rasa**: Rasa Pro 3.16.3 (`rasa-pro==3.16.3`)
 - **Inspector on Codio**: Use **Rasa Inspect** tab (no Ports / port 5005).
 - **Prerequisites**: Level 1 and Level 2 completed.

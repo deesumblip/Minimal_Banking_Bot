@@ -4,7 +4,7 @@
 	"source": {
 		"name": "Lab 0.1 Virtual Environment and Rasa Pro Install",
 		"showName": true,
-		"instructions": "To pass this assessment, all of the following checks must pass:\n\n• Check 1: Virtual environment (.venv) is in the project root.\n• Check 2: Rasa Pro is installed in the virtual environment.\n• Check 3: Project structure is correct (level1/domain/, level1/data/ exist).\n• Check 4: Project-root `.env` contains a valid `RASA_LICENSE=...` (or the variable is set in the environment).",
+		"instructions": "To pass this assessment, all of the following checks must pass:\n\n• Check 1: Virtual environment (.venv) is in the project root.\n• Check 2: **`rasa-pro` 3.16.3** is installed in the virtual environment (matches the course pin).\n• Check 3: Project structure is correct (level1/domain/, level1/data/ exist).\n• Check 4: Project-root `.env` contains a valid `RASA_LICENSE=...` (or the variable is set in the environment).",
 		"command": "python3 /home/codio/workspace/.guides/secure/level1_graders/lab_0.1_grader.py",
 		"preExecuteCommand": "",
 		"options": {
@@ -57,7 +57,7 @@
 				"input": "",
 				"output": "Step 2: PASSED",
 				"showFeedback": true,
-				"feedback": "Rasa Pro is installed in the virtual environment."
+				"feedback": "rasa-pro 3.16.3 is installed in the virtual environment."
 			},
 			{
 				"arguments": "",

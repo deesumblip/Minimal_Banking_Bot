@@ -2,7 +2,7 @@
 	"type": "code-output-compare",
 	"taskId": "code-output-compare-401010001",
 	"source": {
-		"name": "Lab 0.1: Pipeline Config and Endpoints — Code Test",
+		"name": "Level 4 Lab 0.1: Pipeline Config — Code Test",
 		"showName": true,
 		"instructions": "Paste your completed **`config.yml`** and **`endpoints.yml`** from the fill-in-the-blanks exercise into **`level4/`**, save both files, then run this check.\n\n• Check 1: `level4/config.yml` exists; **`assistant_id`** is **`level4-agent`**.\n• Check 2: **`pipeline:`** uses **`CompactLLMCommandGenerator`** (not SearchReady).\n• Check 3: **`minimize_num_calls: false`**; **`flow_retrieval`** has **`turns_to_embed: 5`**, **`num_flows: 20`**.\n• Check 4: **`endpoints.yml`** has **`action_endpoint`**, **`nlg`** rephrase, **`model_group: openai-gpt-5-1`**.\n• Check 5: **`model_groups`** for **`openai-gpt-5-1`** uses **`model: openai-gpt-5-1`**, **`temperature: 0.1`**.\n\nFull score: 10/10.",
 		"command": "bash /home/codio/workspace/.guides/scripts/run_python_grader.sh /home/codio/workspace/.guides/secure/level4_graders/lab_0.1_grader.py",

@@ -70,7 +70,7 @@ Use this when you run the course on your own machine. You need **`level3`**, Ras
 
 **Local troubleshooting**
 
-- **`No module named 'rasa'`**, Reactivate the venv, **`cd level3`**, install **`rasa-pro`** if needed.
+- **`No module named 'rasa'`**, Reactivate the venv, **`cd level3`**, install **`rasa-pro==3.16.3`** if needed.
 - **License or API key errors**, Match your **Lab 6.1** environment. Fix **`.env`** or shell exports, open a fresh terminal, **`cd level3`**, run **`python -m rasa inspect`** again.
 - **Port 5005 in use**, Stop other Rasa processes or run  
   **`python -m rasa inspect --debug --log-file logs/logs.out --port 5006`**  

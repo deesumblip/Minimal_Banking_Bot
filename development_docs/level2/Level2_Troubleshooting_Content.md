@@ -44,7 +44,7 @@
 3. Rasa Pro not properly installed
 
 **Solutions**:
-1. Install Rasa Pro: `python -m pip install rasa-pro`
+1. Install Rasa Pro: `python -m pip install rasa-pro==3.16.3`
 2. Activate correct virtual environment
 3. Verify installation: `python -m rasa --version`
 

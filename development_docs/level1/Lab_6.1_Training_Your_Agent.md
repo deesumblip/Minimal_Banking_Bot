@@ -19,7 +19,7 @@
 
 **3. Install Rasa Pro (if not already installed)**
 
-- With the venv active, run `python -m rasa --version`. If you see an error (e.g. "No module named 'rasa'"): `python -m pip install --no-cache-dir rasa-pro`.
+- With the venv active, run `python -m rasa --version`. If you see an error (e.g. "No module named 'rasa'"): `python -m pip install --no-cache-dir rasa-pro==3.16.3`.
 
 **4. Run the training command**
 
@@ -64,7 +64,7 @@ The assessment expects a **recent** model (about **10 minutes**). Re-run `python
 | **YAML / parse error with file path and line** | Open that file at the line; fix indentation (2 spaces), save, train again from `level1`. |
 | **YAML syntax** (e.g. "block mapping") | Fix structure and spacing, save, train again. |
 | **Response `utter_xyz` not found** | Add the response in `domain/basics.yml` or fix the flow name. |
-| **No module named 'rasa'** | `source .venv/bin/activate` from project root, `cd level1`, install `rasa-pro` if needed. |
+| **No module named 'rasa'** | `source .venv/bin/activate` from project root, `cd level1`, install `rasa-pro==3.16.3` if needed. |
 | **RASA_LICENSE not set** | Credentials may be pre-configured in the course environment. Run Lab 0.1 verification; ask your instructor if needed. |
 
 ---

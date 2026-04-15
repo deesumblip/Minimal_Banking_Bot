@@ -37,7 +37,7 @@ This document provides implementation guidance for **Level 2: Simple Actions** o
 
 **Pre-Installed Software**:
 - Python 3.11 + pip (latest)
-- `rasa-pro` (latest stable)
+- `rasa-pro==3.16.3` (pinned)
 - `git` (optional)
 
 **Pre-Configured Project Structure** (representative):

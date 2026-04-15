@@ -1073,7 +1073,7 @@ This document is a **combined student course + Codio implementation guide** for 
 
 **Pre-Installed Software**:
 - Python 3.11 + pip (latest)
-- `rasa-pro` (latest stable)
+- `rasa-pro==3.16.3` (pinned)
 - `git` (optional)
 
 **Pre-Configured Project Structure** (representative):

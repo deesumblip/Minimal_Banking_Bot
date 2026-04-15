@@ -2,6 +2,8 @@ Create a virtual environment in the **project root**, install Rasa Pro, configur
 
 This course expects a valid **`RASA_LICENSE`** for Rasa Pro.
 
+Install the **`rasa-pro`** package at version **3.16.3** (pinned in the commands below) so your environment matches the course materials.
+
 ---
 
 ## In this lab you will
@@ -70,7 +72,7 @@ Your prompt should show `(.venv)` at the start.
 **3. Install Rasa**
 
 ```bash
-pip install --no-cache-dir rasa-pro
+pip install --no-cache-dir rasa-pro==3.16.3
 ```
 
 Installation takes 2–5 minutes.
@@ -143,7 +145,7 @@ Your prompt should show `(.venv)` at the start.
 **3. Install Rasa Pro**
 
 ```powershell
-pip install --no-cache-dir rasa-pro
+pip install --no-cache-dir rasa-pro==3.16.3
 ```
 
 Installation takes 2–5 minutes.
@@ -213,7 +215,7 @@ Your prompt should show `(.venv)` at the start.
 **3. Install Rasa Pro**
 
 ```bash
-pip install --no-cache-dir rasa-pro
+pip install --no-cache-dir rasa-pro==3.16.3
 ```
 
 Installation takes 2–5 minutes.
@@ -278,7 +280,7 @@ Your prompt should show `(.venv)` at the start.
 **3. Install Rasa Pro**
 
 ```bash
-pip install --no-cache-dir rasa-pro
+pip install --no-cache-dir rasa-pro==3.16.3
 ```
 
 Installation takes 2–5 minutes.

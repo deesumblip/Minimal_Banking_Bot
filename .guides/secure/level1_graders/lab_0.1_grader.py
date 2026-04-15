@@ -8,6 +8,47 @@ import os
 import sys
 import subprocess
 from pathlib import Path
+from typing import Optional
+
+EXPECTED_RASA_PRO_VERSION = "3.16.3"
+
+
+def _rasa_pro_package_version(venv_python: Path, env: dict, workspace: Path) -> Optional[str]:
+    """Return installed rasa-pro version string, or None if unavailable."""
+    try:
+        result = subprocess.run(
+            [str(venv_python), "-m", "pip", "show", "rasa-pro"],
+            capture_output=True,
+            text=True,
+            timeout=15,
+            cwd=str(workspace),
+            env=env,
+        )
+        if result.returncode == 0:
+            for line in result.stdout.splitlines():
+                if line.startswith("Version:"):
+                    return line.split(":", 1)[1].strip()
+    except Exception:
+        pass
+    try:
+        result = subprocess.run(
+            [
+                str(venv_python),
+                "-c",
+                "from importlib.metadata import version; print(version('rasa-pro'))",
+            ],
+            capture_output=True,
+            text=True,
+            timeout=10,
+            cwd=str(workspace),
+            env=env,
+        )
+        if result.returncode == 0 and result.stdout.strip():
+            return result.stdout.strip()
+    except Exception:
+        pass
+    return None
+
 
 _LICENSE_PLACEHOLDERS = frozenset(
     {
@@ -271,11 +312,20 @@ if not rasa_found:
         pass
 
 if rasa_found:
-    print(f"✅ Step 2: PASSED - Rasa Pro installed successfully: {version_info} (3 points)")
+    rp_ver = _rasa_pro_package_version(VENV_PYTHON, env, WORKSPACE_ROOT) if VENV_PYTHON else None
+    if rp_ver != EXPECTED_RASA_PRO_VERSION:
+        print(
+            f"❌ Step 2: FAILED - rasa-pro version is {rp_ver or 'unknown (could not read)'}; "
+            f"expected {EXPECTED_RASA_PRO_VERSION} (0 points)"
+        )
+        print("Hint: With venv activated from project root, run 'pip install --no-cache-dir rasa-pro==3.16.3'")
+        print("FAIL")
+        sys.exit(1)
+    print(f"✅ Step 2: PASSED - rasa-pro {rp_ver} installed (3 points)")
     score += 3
 else:
     print("❌ Step 2: FAILED - Rasa Pro not installed or not accessible (0 points)")
-    print("Hint: With venv activated from project root, run 'pip install --no-cache-dir rasa-pro'")
+    print("Hint: With venv activated from project root, run 'pip install --no-cache-dir rasa-pro==3.16.3'")
     print("FAIL")
     sys.exit(1)
 print("")

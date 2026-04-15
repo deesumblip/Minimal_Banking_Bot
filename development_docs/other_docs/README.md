@@ -40,7 +40,7 @@ Each level is a **complete, runnable agent** that you can train and test indepen
 
 3. **Install Rasa Pro:**
    ```powershell
-   python -m pip install --no-cache-dir rasa-pro
+   python -m pip install --no-cache-dir rasa-pro==3.16.3
    ```
 
 4. **Create `.env` file** in the level folder:
@@ -179,7 +179,7 @@ If you encounter permission errors or conflicts:
 1. Deactivate any active virtual environment
 2. Delete the `.venv` folder: `Remove-Item -Recurse -Force .\.venv`
 3. Create a fresh venv: `py -3.11 -m venv .venv`
-4. Activate and reinstall: `.\.venv\Scripts\Activate.ps1` then `python -m pip install --no-cache-dir rasa-pro`
+4. Activate and reinstall: `.\.venv\Scripts\Activate.ps1` then `python -m pip install --no-cache-dir rasa-pro==3.16.3`
 
 ---
 

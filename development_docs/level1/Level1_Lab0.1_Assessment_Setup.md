@@ -12,7 +12,7 @@ Complete **Lab 0.1** (Steps 1–6 in the lab guide). In short:
 
 1. **Step 1:** Check Python and pip: `python --version`, `pip --version` (Linux/Mac); on Windows use `py -3.11 --version`, `py -m pip --version`.
 2. **Step 2:** Create a virtual environment in the **project root**: `python3.11 -m venv .venv` then activate it (`source .venv/bin/activate` on Linux/Mac, `.\.venv\Scripts\Activate.ps1` on Windows PowerShell). This same `.venv` is used for every level.
-3. **Step 3:** Install Rasa Pro: `pip install --no-cache-dir rasa-pro`.
+3. **Step 3:** Install Rasa Pro: `pip install --no-cache-dir rasa-pro==3.16.3`.
 4. **Step 4–5:** Set **RASA_LICENSE**: `export RASA_LICENSE=YOUR_LICENSE_KEY` (Linux/macOS/Codio) or `$env:RASA_LICENSE = "YOUR_LICENSE_KEY"` (Windows). Then verify with `rasa --version` (lab Step 5).
 5. **Step 6:** Confirm `level1` has the expected structure: `domain/`, `data/`, and the three config files (`config.yml`, `credentials.yml`, `endpoints.yml`). See the lab guide for the expected file tree.
 

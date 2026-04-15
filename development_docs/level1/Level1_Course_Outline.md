@@ -214,7 +214,7 @@ By the end of Level 1, students should be able to:
 ## Technical Requirements
 
 - **Environment**: Codio (Linux) or local (Python 3.11)
-- **Rasa**: Rasa Pro (latest stable)
+- **Rasa**: Rasa Pro 3.16.3 (`rasa-pro==3.16.3`)
 - **Port Forwarding**: Required for Unit 6 (Rasa Inspector, port 5005)
 
 ---

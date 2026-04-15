@@ -4,7 +4,7 @@
 	"source": {
 		"name": "Level 1:Lab 5.1 - Exploring the Configuration Files - LLM Model Identification",
 		"showName": false,
-		"instructions": "**What LLM model is being used in the configuration?**",
+		"instructions": "**What LLM model id is configured for this agent?** (Check **`endpoints.yml`** under **`model_groups`** → **`model:`**.)",
 		"multipleResponse": false,
 		"isRandomized": true,
 		"answers": [
@@ -40,7 +40,7 @@
 			"opened": []
 		},
 		"bloomsObjectiveLevel": "1",
-		"learningObjectives": "SWBAT identify the LLM model being used in the configuration file",
+		"learningObjectives": "SWBAT identify the LLM model id configured in endpoints.yml (model_groups)",
 		"guidance": "In **`endpoints.yml`**, under **`model_groups`**, the **`model:`** field is **`rasa/command-generator-llama-3.1-8b-instruct`** (Rasa tutorial provider at **`https://tutorial-llm.rasa.ai`**). That is the LLM id used for this agent’s configured model group.",
 		"showGuidanceAfterResponseOption": {
 			"type": "Attempts",
