@@ -13,11 +13,10 @@ from typing import Optional
 EXPECTED_RASA_PRO_VERSION = "3.16.3"
 
 
-def _rasa_pro_package_version(venv_python: Path, env: dict, workspace: Path) -> Optional[str]:
-    """Return installed rasa-pro version string, or None if unavailable."""
+def _version_from_pip_show(venv_python: Path, env: dict, workspace: Path, package: str) -> Optional[str]:
     try:
         result = subprocess.run(
-            [str(venv_python), "-m", "pip", "show", "rasa-pro"],
+            [str(venv_python), "-m", "pip", "show", package],
             capture_output=True,
             text=True,
             timeout=15,
@@ -30,12 +29,96 @@ def _rasa_pro_package_version(venv_python: Path, env: dict, workspace: Path) -> 
                     return line.split(":", 1)[1].strip()
     except Exception:
         pass
+    return None
+
+
+def _version_from_pip_list(venv_python: Path, env: dict, workspace: Path) -> Optional[str]:
+    """Parse `pip list` for rasa-pro (Codio-friendly; works when pip show name differs)."""
+    try:
+        result = subprocess.run(
+            [str(venv_python), "-m", "pip", "list"],
+            capture_output=True,
+            text=True,
+            timeout=20,
+            cwd=str(workspace),
+            env=env,
+        )
+        if result.returncode != 0:
+            return None
+        for raw in result.stdout.splitlines():
+            line = raw.strip()
+            if not line or line.lower().startswith("package"):
+                continue
+            # First column may be "rasa-pro" or "Rasa-Pro"; second column is version
+            parts = line.split()
+            if len(parts) < 2:
+                continue
+            name_norm = parts[0].replace("_", "-").lower()
+            if name_norm == "rasa-pro":
+                return parts[1].strip()
+    except Exception:
+        pass
+    return None
+
+
+def _version_from_pip_freeze(venv_python: Path, env: dict, workspace: Path) -> Optional[str]:
+    try:
+        result = subprocess.run(
+            [str(venv_python), "-m", "pip", "freeze"],
+            capture_output=True,
+            text=True,
+            timeout=25,
+            cwd=str(workspace),
+            env=env,
+        )
+        if result.returncode != 0:
+            return None
+        for raw in result.stdout.splitlines():
+            line = raw.strip()
+            for prefix in ("rasa-pro==", "Rasa-Pro==", "rasa_pro=="):
+                if line.startswith(prefix):
+                    return line.split("==", 1)[1].strip()
+    except Exception:
+        pass
+    return None
+
+
+def _version_from_importlib(venv_python: Path, env: dict, workspace: Path) -> Optional[str]:
+    script = (
+        "from importlib.metadata import PackageNotFoundError, version\n"
+        "for d in ('rasa-pro', 'rasa_pro', 'Rasa-Pro'):\n"
+        "    try:\n"
+        "        print(version(d))\n"
+        "        break\n"
+        "    except PackageNotFoundError:\n"
+        "        pass\n"
+        "else:\n"
+        "    raise SystemExit(1)\n"
+    )
+    try:
+        result = subprocess.run(
+            [str(venv_python), "-c", script],
+            capture_output=True,
+            text=True,
+            timeout=10,
+            cwd=str(workspace),
+            env=env,
+        )
+        if result.returncode == 0 and result.stdout.strip():
+            return result.stdout.strip()
+    except Exception:
+        pass
+    return None
+
+
+def _version_from_rasa_module(venv_python: Path, env: dict, workspace: Path) -> Optional[str]:
+    """Rasa Pro ships the `rasa` package; __version__ tracks the install (matches pip for normal installs)."""
     try:
         result = subprocess.run(
             [
                 str(venv_python),
                 "-c",
-                "from importlib.metadata import version; print(version('rasa-pro'))",
+                "import rasa; print(rasa.__version__)",
             ],
             capture_output=True,
             text=True,
@@ -48,6 +131,24 @@ def _rasa_pro_package_version(venv_python: Path, env: dict, workspace: Path) -> 
     except Exception:
         pass
     return None
+
+
+def _rasa_pro_package_version(venv_python: Path, env: dict, workspace: Path) -> Optional[str]:
+    """Return installed rasa-pro version string, or None if unavailable."""
+    for pkg in ("rasa-pro", "rasa_pro"):
+        v = _version_from_pip_show(venv_python, env, workspace, pkg)
+        if v:
+            return v
+    v = _version_from_pip_list(venv_python, env, workspace)
+    if v:
+        return v
+    v = _version_from_pip_freeze(venv_python, env, workspace)
+    if v:
+        return v
+    v = _version_from_importlib(venv_python, env, workspace)
+    if v:
+        return v
+    return _version_from_rasa_module(venv_python, env, workspace)
 
 
 _LICENSE_PLACEHOLDERS = frozenset(
@@ -313,6 +414,8 @@ if not rasa_found:
 
 if rasa_found:
     rp_ver = _rasa_pro_package_version(VENV_PYTHON, env, WORKSPACE_ROOT) if VENV_PYTHON else None
+    if rp_ver:
+        rp_ver = rp_ver.strip()
     if rp_ver != EXPECTED_RASA_PRO_VERSION:
         print(
             f"❌ Step 2: FAILED - rasa-pro version is {rp_ver or 'unknown (could not read)'}; "
