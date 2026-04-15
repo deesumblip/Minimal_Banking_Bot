@@ -4,13 +4,100 @@ Lab 0.1: Create Virtual Environment and Install Rasa Pro - Grader Script
 Runs from workspace root. Checks: venv in root, Rasa Pro installed, project structure.
 """
 
+import json
 import os
+import re
 import sys
 import subprocess
 from pathlib import Path
 from typing import Optional
 
 EXPECTED_RASA_PRO_VERSION = "3.16.3"
+
+
+def _version_from_pip_list_json(venv_python: Path, env: dict, workspace: Path) -> Optional[str]:
+    """Machine-readable pip list; most reliable across pip/Codio layouts."""
+    try:
+        result = subprocess.run(
+            [str(venv_python), "-m", "pip", "list", "--format=json"],
+            capture_output=True,
+            text=True,
+            timeout=30,
+            cwd=str(workspace),
+            env=env,
+            stdin=subprocess.DEVNULL,
+        )
+        if result.returncode != 0 or not result.stdout.strip():
+            return None
+        data = json.loads(result.stdout)
+        for entry in data:
+            name = (entry.get("name") or "").replace("_", "-").lower()
+            if name == "rasa-pro":
+                ver = (entry.get("version") or "").strip()
+                if ver:
+                    return ver
+    except Exception:
+        pass
+    return None
+
+
+def _version_from_dist_info_folder(venv_python: Path, env: dict, workspace: Path) -> Optional[str]:
+    """Read version from rasa*-pro-*.dist-info directory name (no pip I/O beyond one python -c)."""
+    script = r"""
+import os, re, site, sys
+pat = re.compile(r"(?i)^rasa[-_]pro-(.+)\.dist-info$")
+candidates = []
+try:
+    candidates.extend(site.getsitepackages())
+except Exception:
+    pass
+bindir = os.path.dirname(sys.executable)
+candidates.append(
+    os.path.join(bindir, "..", "lib", "python%d.%d" % sys.version_info[:2], "site-packages")
+)
+seen = set()
+for raw in candidates:
+    root = os.path.abspath(os.path.normpath(raw))
+    if root in seen or not os.path.isdir(root):
+        continue
+    seen.add(root)
+    try:
+        for name in os.listdir(root):
+            m = pat.match(name)
+            if m:
+                v = m.group(1)
+                # PEP 440 local segment
+                v = v.split("+", 1)[0]
+                print(v)
+                raise SystemExit(0)
+    except OSError:
+        pass
+raise SystemExit(1)
+"""
+    try:
+        result = subprocess.run(
+            [str(venv_python), "-c", script],
+            capture_output=True,
+            text=True,
+            timeout=15,
+            cwd=str(workspace),
+            env=env,
+            stdin=subprocess.DEVNULL,
+        )
+        if result.returncode == 0 and result.stdout.strip():
+            return result.stdout.strip()
+    except Exception:
+        pass
+    return None
+
+
+def _normalize_version_for_compare(v: str) -> str:
+    """Match 3.16.3 against 3.16.3.post0 / 3.16.3rc1 style strings from metadata."""
+    v = (v or "").strip()
+    m = re.match(r"^(\d+\.\d+\.\d+)", v)
+    if m:
+        return m.group(1)
+    return v
 
 
 def _version_from_pip_show(venv_python: Path, env: dict, workspace: Path, package: str) -> Optional[str]:
@@ -22,6 +109,7 @@ def _version_from_pip_show(venv_python: Path, env: dict, workspace: Path, packag
             timeout=15,
             cwd=str(workspace),
             env=env,
+            stdin=subprocess.DEVNULL,
         )
         if result.returncode == 0:
             for line in result.stdout.splitlines():
@@ -42,6 +130,7 @@ def _version_from_pip_list(venv_python: Path, env: dict, workspace: Path) -> Opt
             timeout=20,
             cwd=str(workspace),
             env=env,
+            stdin=subprocess.DEVNULL,
         )
         if result.returncode != 0:
             return None
@@ -70,6 +159,7 @@ def _version_from_pip_freeze(venv_python: Path, env: dict, workspace: Path) -> O
             timeout=25,
             cwd=str(workspace),
             env=env,
+            stdin=subprocess.DEVNULL,
         )
         if result.returncode != 0:
             return None
@@ -103,6 +193,7 @@ def _version_from_importlib(venv_python: Path, env: dict, workspace: Path) -> Op
             timeout=10,
             cwd=str(workspace),
             env=env,
+            stdin=subprocess.DEVNULL,
         )
         if result.returncode == 0 and result.stdout.strip():
             return result.stdout.strip()
@@ -125,6 +216,7 @@ def _version_from_rasa_module(venv_python: Path, env: dict, workspace: Path) -> 
             timeout=10,
             cwd=str(workspace),
             env=env,
+            stdin=subprocess.DEVNULL,
         )
         if result.returncode == 0 and result.stdout.strip():
             return result.stdout.strip()
@@ -135,6 +227,9 @@ def _version_from_rasa_module(venv_python: Path, env: dict, workspace: Path) -> 
 
 def _rasa_pro_package_version(venv_python: Path, env: dict, workspace: Path) -> Optional[str]:
     """Return installed rasa-pro version string, or None if unavailable."""
+    v = _version_from_pip_list_json(venv_python, env, workspace)
+    if v:
+        return v
     for pkg in ("rasa-pro", "rasa_pro"):
         v = _version_from_pip_show(venv_python, env, workspace, pkg)
         if v:
@@ -143,6 +238,9 @@ def _rasa_pro_package_version(venv_python: Path, env: dict, workspace: Path) -> 
     if v:
         return v
     v = _version_from_pip_freeze(venv_python, env, workspace)
+    if v:
+        return v
+    v = _version_from_dist_info_folder(venv_python, env, workspace)
     if v:
         return v
     v = _version_from_importlib(venv_python, env, workspace)
@@ -416,9 +514,13 @@ if rasa_found:
     rp_ver = _rasa_pro_package_version(VENV_PYTHON, env, WORKSPACE_ROOT) if VENV_PYTHON else None
     if rp_ver:
         rp_ver = rp_ver.strip()
-    if rp_ver != EXPECTED_RASA_PRO_VERSION:
+    rp_cmp = _normalize_version_for_compare(rp_ver) if rp_ver else ""
+    if rp_cmp != EXPECTED_RASA_PRO_VERSION:
+        detail = rp_ver or "unknown (could not read)"
+        if rp_ver and rp_cmp != rp_ver.strip():
+            detail = f"{rp_ver} (→ {rp_cmp} for check)"
         print(
-            f"❌ Step 2: FAILED - rasa-pro version is {rp_ver or 'unknown (could not read)'}; "
+            f"❌ Step 2: FAILED - rasa-pro version is {detail}; "
             f"expected {EXPECTED_RASA_PRO_VERSION} (0 points)"
         )
         print("Hint: With venv activated from project root, run 'pip install --no-cache-dir rasa-pro==3.16.3'")
