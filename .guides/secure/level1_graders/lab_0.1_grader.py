@@ -100,6 +100,50 @@ def _normalize_version_for_compare(v: str) -> str:
     return v
 
 
+def _version_from_venv_dist_info_fs(workspace: Path) -> Optional[str]:
+    """
+    Read rasa-pro version from .venv/**/*.dist-info (name or METADATA).
+    No subprocess — works when Codio sandboxes child Python/pip calls.
+    """
+    venv = workspace / ".venv"
+    if not venv.is_dir():
+        return None
+    pat = re.compile(r"(?i)^rasa[-_]pro-(.+)\.dist-info$")
+
+    def _parse_metadata(meta_path: Path) -> Optional[str]:
+        try:
+            text = meta_path.read_text(encoding="utf-8", errors="replace")
+        except OSError:
+            return None
+        pkg_name = None
+        pkg_ver = None
+        for line in text.splitlines():
+            if line.startswith("Name: "):
+                pkg_name = line.split(":", 1)[1].strip().replace("_", "-").lower()
+            elif line.startswith("Version: "):
+                pkg_ver = line.split(":", 1)[1].strip()
+            if pkg_name and pkg_ver:
+                break
+        if pkg_name == "rasa-pro" and pkg_ver:
+            return pkg_ver.split("+", 1)[0]
+        return None
+
+    try:
+        for d in venv.rglob("*.dist-info"):
+            if not d.is_dir():
+                continue
+            m = pat.match(d.name)
+            if m:
+                return m.group(1).strip().split("+", 1)[0]
+            # METADATA catches nonstandard directory names (still Name: rasa-pro)
+            mv = _parse_metadata(d / "METADATA")
+            if mv:
+                return mv
+    except OSError:
+        pass
+    return None
+
+
 def _version_from_pip_show(venv_python: Path, env: dict, workspace: Path, package: str) -> Optional[str]:
     try:
         result = subprocess.run(
@@ -227,6 +271,9 @@ def _version_from_rasa_module(venv_python: Path, env: dict, workspace: Path) -> 
 
 def _rasa_pro_package_version(venv_python: Path, env: dict, workspace: Path) -> Optional[str]:
     """Return installed rasa-pro version string, or None if unavailable."""
+    v = _version_from_venv_dist_info_fs(workspace)
+    if v:
+        return v
     v = _version_from_pip_list_json(venv_python, env, workspace)
     if v:
         return v
