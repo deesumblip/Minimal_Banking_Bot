@@ -115,17 +115,16 @@ def _version_from_venv_dist_info_fs(workspace: Path) -> Optional[str]:
             text = meta_path.read_text(encoding="utf-8", errors="replace")
         except OSError:
             return None
-        pkg_name = None
-        pkg_ver = None
-        for line in text.splitlines():
-            if line.startswith("Name: "):
-                pkg_name = line.split(":", 1)[1].strip().replace("_", "-").lower()
-            elif line.startswith("Version: "):
-                pkg_ver = line.split(":", 1)[1].strip()
-            if pkg_name and pkg_ver:
-                break
-        if pkg_name == "rasa-pro" and pkg_ver:
-            return pkg_ver.split("+", 1)[0]
+        lines = text.splitlines()
+        for i, line in enumerate(lines):
+            if not line.startswith("Name: "):
+                continue
+            n = line.split(":", 1)[1].strip().replace("_", "-").lower()
+            if n != "rasa-pro":
+                continue
+            for j in range(i + 1, min(i + 40, len(lines))):
+                if lines[j].startswith("Version: "):
+                    return lines[j].split(":", 1)[1].strip().split("+", 1)[0]
         return None
 
     try:
