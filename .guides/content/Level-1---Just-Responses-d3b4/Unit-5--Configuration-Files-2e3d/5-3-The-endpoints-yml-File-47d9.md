@@ -13,14 +13,14 @@ action_endpoint:
 nlg:
   type: rephrase
   llm:
-    model_group: openai-gpt-5-1
+    model_group: rasa_command_generation_model
 
 model_groups:
-  - id: openai-gpt-5-1
+  - id: rasa_command_generation_model
     models:
-      - provider: openai
-        model: openai-gpt-5-1
-        temperature: 0.3
+      - provider: rasa
+        model: rasa/command-generator-llama-3.1-8b-instruct
+        api_base: "https://tutorial-llm.rasa.ai"
 ```
 
 #### Section-by-Section Explanation
@@ -32,12 +32,12 @@ model_groups:
 
 2. **`nlg:`** (Natural Language Generation)
    - `type: rephrase` enables response rephrasing when a response has `metadata: rephrase: True`
-   - `model_group: openai-gpt-5-1` selects which model group to use for rephrasing
+   - `model_group: rasa_command_generation_model` selects which model group to use for rephrasing (same group id as in `config.yml`)
 
 3. **`model_groups:`**
-   - Declares which LLM provider/model to use
-   - `provider: openai` means the OpenAI API is used (requires `OPENAI_API_KEY`)
-   - `temperature: 0.3` controls how “creative” the model is
+   - Declares which LLM provider and model to use
+   - `provider: rasa` with `api_base: "https://tutorial-llm.rasa.ai"` uses the **course tutorial** hosted model (no personal OpenAI API key required for this setup)
+   - `model: rasa/command-generator-llama-3.1-8b-instruct` is the model id served for command generation and related LLM features
 
 #### Understanding `actions_module`
 

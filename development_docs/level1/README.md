@@ -22,12 +22,7 @@
    python -m pip install --no-cache-dir rasa-pro
    ```
 
-3. **Set `RASA_LICENSE` and `OPENAI_API_KEY`:** Create a `.env` file in the project root with:
-   ```text
-   RASA_LICENSE=rasaxxx-your-license-here
-   OPENAI_API_KEY=sk-your-openai-key-here
-   ```
-   Replace with your actual values. See Lab 0.1 for Codio vs local (Windows/macOS/Linux).
+3. **Set `RASA_LICENSE`:** Create a `.env` file in the project root with your license (Lab 0.1). Level 1 uses the tutorial LLM configured in **`level1/endpoints.yml`** (`https://tutorial-llm.rasa.ai`); you do not need an OpenAI API key for this level.
 
 4. **Train and run:**
    ```powershell

@@ -17,7 +17,7 @@ cd path\to\Minimal_Banking_Bot\level1
 
 After that, commands you run in that terminal (e.g. `python -m rasa train`) can see `RASA_LICENSE` and any other keys you put in `.env`.
 
-**Why use it:** On Windows, students often keep secrets in `.env` instead of exporting variables manually each time. This script avoids copy-paste errors for `RASA_LICENSE` (and optional keys like `OPENAI_API_KEY`).
+**Why use it:** On Windows, students often keep secrets in `.env` instead of exporting variables manually each time. This script avoids copy-paste errors for `RASA_LICENSE` (and optional keys you might add for later levels).
 
 **If it fails:** You must have a `.env` file in **`level1/`** and a line that defines `RASA_LICENSE=...`.
 

@@ -12,7 +12,9 @@ assistant_id: level1-agent
 pipeline:
   - name: SearchReadyLLMCommandGenerator
     llm:
-      model_group: openai-gpt-5-1
+      model_group: rasa_command_generation_model
+    flow_retrieval:
+      active: false
 
 policies:
   - name: FlowPolicy
@@ -38,7 +40,8 @@ policies:
 4. **`pipeline:`**
    - Defines how Rasa understands user messages
    - `SearchReadyLLMCommandGenerator`: Uses an LLM to understand messages and start the right flow.
-   - `model_group: openai-gpt-5-1`: Which model group to use (configured in `endpoints.yml`).
+   - `model_group: rasa_command_generation_model`: Which model group to use (configured in `endpoints.yml`).
+   - `flow_retrieval`: Here it is set to `active: false` so this level does not use flow retrieval (later levels may turn it on).
 
 5. **`policies:`**
    - Defines how Rasa decides what to do next
@@ -52,7 +55,7 @@ config.yml = "How to build this agent"
   ├── recipe: "Use Rasa Pro standard recipe"
   ├── language: "English"
   ├── assistant_id: "level1-agent (unique name)"
-  ├── pipeline: "Use an LLM to start flows"
+  ├── pipeline: "Use an LLM to start flows (tutorial model group; flow retrieval off)"
   └── policies: "Use flows to decide responses"
 ```
 

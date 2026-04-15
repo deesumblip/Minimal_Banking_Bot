@@ -42,7 +42,7 @@ Introduce one coding/check step so there is something concrete between Lab 4.2 a
 **Option A – Extend Lab 5.1 with Part 2 (recommended)**
 
 - **Part 1 (unchanged)**  
-  - Multiple-choice / short-answer questions about config (language, LLM model, actions module, temperature).
+  - Multiple-choice / short-answer questions about config (language, LLM model, actions module, model group / tutorial endpoint).
 
 - **Part 2 – Project readiness for training**  
   - Short checklist:

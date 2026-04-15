@@ -11,7 +11,7 @@ The `config.yml` file tells Rasa **how to build your agent**. It's the blueprint
 - **`recipe: default.v1`** – Standard Rasa Pro recipe
 - **`language: en`** – Agent language, such as `en`, `es`, or `fr`
 - **`assistant_id: level1-agent`** – Unique identifier for this agent
-- **`pipeline:`** – How Rasa understands user messages (LLM-based command generator)
+- **`pipeline:`** – How Rasa understands user messages (`SearchReadyLLMCommandGenerator` with **`model_group: rasa_command_generation_model`**, and **`flow_retrieval.active: false`** for this level)
 - **`policies:`** – How Rasa decides what to do next; for example, `FlowPolicy` uses your flows.
 
 **Mental model**: config.yml defines how to build the agent: recipe, language, pipeline, and policies.

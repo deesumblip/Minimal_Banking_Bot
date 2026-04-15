@@ -15,5 +15,5 @@ Answer these questions by examining the configuration files:
 #### Answers
 
 1. English (`language: en`)
-2. **`openai-gpt-5-1`**. In **`endpoints.yml`** (under **`model_groups`**) you'll see **`model: openai-gpt-5-1`** (and the same group id in **`config.yml`** as **`model_group`**).
+2. **`rasa/command-generator-llama-3.1-8b-instruct`**. In **`endpoints.yml`** (under **`model_groups`**) you'll see that model id with **`provider: rasa`** and **`api_base: "https://tutorial-llm.rasa.ai"`** (and the same group id **`rasa_command_generation_model`** in **`config.yml`** as **`model_group`**).
 3. The `actions/` folder. The config uses `actions_module: "actions"` to point to it.
