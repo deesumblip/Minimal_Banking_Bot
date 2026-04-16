@@ -9,7 +9,7 @@ This document examines the narrative structure of Levels 1–6 and suggests wher
 | Level | Unit 0 title | Content |
 |-------|----------------|--------|
 | **1** | Prerequisites and Setup | 0.1 What You Need, 0.2 Environment Setup, 0.3 YAML, 0.4 File Structure, 0.5 Verifying, 0.6 Getting Help — **no “recap previous level”** (first level) |
-| **2** | Recap - What you built in Level 1 | 0.1 Your Level 1 Agent, 0.2 What Level 2 Adds |
+| **2** | Recap - What you built in Level 1 | 0.1 Your Level 1 agent — and what Level 2 adds (single page) |
 | **3** | Recap - What you built in Level 2 | 0.1 Your Level 2 Agent, 0.2 What Level 3 Adds |
 | **4** | Recap - What you built in Level 3 | 0.1 Your Level 3 Agent, 0.2 What Level 4 Adds |
 | **5** | Recap - What you built in Level 4 | 0.1 Your Level 4 Agent, 0.2 What Level 5 Adds |

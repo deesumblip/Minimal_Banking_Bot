@@ -16,14 +16,10 @@
 **Assessment**: None
 
 **Sections**:
-- 0.1 Your Level 1 Banking Agent
+- 0.1 Your Level 1 Banking Agent — and what Level 2 adds
   - What you have from Level 1 (domain, flows, patterns, config)
   - What Level 1 couldn't do (limitations)
-- 0.2 What Level 2 Adds
-  - Introduction to Actions
-  - New files in Level 2
-  - Modified files in Level 2
-  - Unchanged files (Level 1 content remains)
+  - What Level 2 adds (actions, starter vs labs, modified and unchanged files, configuration)
 
 **Key Concepts**: Recap, building on existing work
 
@@ -235,7 +231,7 @@ When you set up or edit assessments on Codio, configure each Code Test to **run 
 
 ### Content Files (Copy/Paste into Codio)
 Content is split by subsection (one file per numbered subsection). Examples:
-- **Unit 0**: `Level2_Unit0_Content_0.1_*.md`, `Level2_Unit0_Content_0.2_*.md`
+- **Unit 0**: `Level2_Unit0_Content_0.1_Your-Level-1-Banking-Agent.md` (recap + what Level 2 adds)
 - **Unit 1**: `Level2_Unit1_Content_1.1_*.md` … `1.3_*.md`
 - **Unit 2**: `Level2_Unit2_Content_2.1_*.md`, `2.2_*.md`
 - **Unit 3**: Lab 3.1 only in the guide (execution summary at end of that page). Mirror: `Level2_Lab3.1_Content.md`; `action_bank_hours` example in Unit 2.1 / `Level2_Unit2_Content_2.1_*.md`. The old `Level2_Unit3_Content_3.2_*.md` stub notes content merged into Lab 3.1.

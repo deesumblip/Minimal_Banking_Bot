@@ -16,7 +16,7 @@ Level 2 uses **7 units** (0–6): Recap → Introduction to Actions → Action C
 
 | File | Purpose |
 |------|---------|
-| `Level2_Unit0_Content_0.1_*.md`, `0.2_*.md` | Recap Level 1, What Level 2 adds |
+| `Level2_Unit0_Content_0.1_Your-Level-1-Banking-Agent.md` | Recap Level 1 and what Level 2 adds (single page) |
 | `Level2_Unit1_Content_1.1_*.md` … `1.3_*.md` | What is an action, how they work, action class structure |
 | `Level2_Unit2_Content_2.1_*.md`, `2.2_*.md` | Action class deep dive, parameters (dispatcher, tracker, domain) |
 | `Level2_Unit3_Content_3.1_Step-by-Step-Creating-an-Action.md` | **Deprecated:** duplicate of Unit 2.1; Codio guide opens with **Lab 3.1** instead. Keep file as stub or delete locally. |

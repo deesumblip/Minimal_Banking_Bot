@@ -8,7 +8,7 @@ Assessment of the **Level2_*** content and lab files read in sequence from start
 
 | Phase | Content | Narrative role |
 |-------|---------|-----------------|
-| **Setup** | Unit 0 (0.1, 0.2) | Recap Level 1; set expectation: "you'll build action_holiday_hours in Lab 3.1, then register and add flow in Labs 4.1 and 5.1." |
+| **Setup** | Unit 0 (0.1) | Recap Level 1; set expectation: "you'll build action_holiday_hours in Lab 3.1, then register and add flow in Labs 4.1 and 5.1." |
 | **Concepts** | Unit 1 (1.1–1.3), Unit 2 (2.1–2.2) | What actions are; how they work; full example `action_bank_hours`. No hands-on yet. |
 | **Explore (optional)** | Lab 2.1 | Explore `actions/` and `action_bank_hours.py`; MC/FIB. Fits after Unit 2. |
 | **Create** | Lab 3.1 (Unit 3) | **Unit 3 has only this page:** create `action_holiday_hours`; fill-in + paste + code test; **When Rasa executes your action** (execution model) at end of the same page. |
@@ -23,7 +23,7 @@ Assessment of the **Level2_*** content and lab files read in sequence from start
 ## 2. Forward and Backward References
 
 ### Strong handoffs
-- **0.2** → "In Lab 3.1 you'll create … action_holiday_hours; Labs 4.1 and 5.1 … register and add flow."
+- **0.1 (What Level 2 adds)** → "In Lab 3.1 you'll create … action_holiday_hours; Labs 4.1 and 5.1 … register and add flow."
 - **1.3** → "In Unit 2 you'll see the full action_bank_hours…"
 - **Lab 3.1 (Unit 3)** → Names action_holiday_hours and "Later (Labs 4.1 and 5.1) you'll register it and add a flow"; "Next: Unit 4 / Lab 4.1 … Unit 5 / Lab 5.1."
 - **4.2, 4.3, 4.4** → "the action you created in Lab 3.1", "action_holiday_hours."
@@ -46,7 +46,7 @@ Assessment of the **Level2_*** content and lab files read in sequence from start
 ## 3. Consistency of Terminology and Voice
 
 - **"You" / "your":** Used consistently (your action, your flow, you created, you'll register).
-- **"Example" vs "yours":** Clear in 0.2, Lab 3.1, 4.4, Lab 5.1, 6.4 (action_bank_hours / hours = example; action_holiday_hours / holiday_hours = yours).
+- **"Example" vs "yours":** Clear in Unit 0.1, Lab 3.1, 4.4, Lab 5.1, 6.4 (action_bank_hours / hours = example; action_holiday_hours / holiday_hours = yours).
 - **Lab and unit names:** "Lab 3.1," "Unit 4," "Lab 4.1," etc. used consistently.
 - **File/action names:** action_holiday_hours, holiday_hours.yml, action_bank_hours, hours.yml used consistently.
 
@@ -80,7 +80,7 @@ Assessment of the **Level2_*** content and lab files read in sequence from start
 
 | Segment | Fits arc? | Forward/back references | Suggested tweaks |
 |---------|-----------|--------------------------|-------------------|
-| Unit 0 | ✓ | 0.2 sets full journey | — |
+| Unit 0 | ✓ | 0.1 sets full journey (merged recap + what Level 2 adds) | — |
 | Unit 1 | ✓ | 1.3 → Unit 2 | — |
 | Unit 2 | ✓ | — | Add one-line forward to Lab 3.1 at end of 2.2 |
 | Lab 2.1 | ✓ | "After Action Class Structure" | Clarify in outline: optional or explicit step |
