@@ -23,7 +23,7 @@ Assessment of the **Level2_*** content and lab files read in sequence from start
 ## 2. Forward and Backward References
 
 ### Strong handoffs
-- **0.1 (What Level 2 adds)** → "In Lab 3.1 you'll create … action_holiday_hours; Labs 4.1 and 5.1 … register and add flow."
+- **0.1** → "In Lab 3.1 you'll create … action_holiday_hours; Labs 4.1 and 5.1 … register and add flow."
 - **1.3** → "In Unit 2 you'll see the full action_bank_hours…"
 - **Lab 3.1 (Unit 3)** → Names action_holiday_hours and "Later (Labs 4.1 and 5.1) you'll register it and add a flow"; "Next: Unit 4 / Lab 4.1 … Unit 5 / Lab 5.1."
 - **4.2, 4.3, 4.4** → "the action you created in Lab 3.1", "action_holiday_hours."
@@ -80,7 +80,7 @@ Assessment of the **Level2_*** content and lab files read in sequence from start
 
 | Segment | Fits arc? | Forward/back references | Suggested tweaks |
 |---------|-----------|--------------------------|-------------------|
-| Unit 0 | ✓ | 0.1 sets full journey (merged recap + what Level 2 adds) | — |
+| Unit 0 | ✓ | 0.1 sets full journey (recap + what's new in Level 2) | — |
 | Unit 1 | ✓ | 1.3 → Unit 2 | — |
 | Unit 2 | ✓ | — | Add one-line forward to Lab 3.1 at end of 2.2 |
 | Lab 2.1 | ✓ | "After Action Class Structure" | Clarify in outline: optional or explicit step |

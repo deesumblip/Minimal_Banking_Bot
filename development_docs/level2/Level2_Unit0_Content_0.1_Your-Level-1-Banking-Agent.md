@@ -1,4 +1,4 @@
-### 0.1 Your Level 1 Banking Agent — and what Level 2 adds
+### 0.1 Your Level 1 Banking Agent
 
 Before we add actions, let's recap what you've already built in Level 1. **All of this remains unchanged** — Level 2 builds on top of it!
 
@@ -36,7 +36,7 @@ Your Level 1 agent was limited to **static responses** - predefined text that ne
 
 **Example**: If a user asked "What are your bank hours?", your Level 1 agent would need a static `utter_hours` response. It couldn't check the current day or calculate if the bank is currently open.
 
-#### What Level 2 Adds
+#### What's new in Level 2
 
 Level 2 introduces **Actions** — custom Python code that your agent can execute. This enables:
 
@@ -46,8 +46,6 @@ Level 2 introduces **Actions** — custom Python code that your agent can execut
 - Custom business logic
 
 **Your existing Level 1 agent continues to work** — Level 2 adds actions on top of it!
-
-##### What's New in Level 2
 
 **Already in the project before Lab 3.1** (starter):
 - `actions/` folder, `actions/__init__.py`, and `actions/action_bank_hours.py` — example action you study in Units 2–3 (the domain does not list it until **Lab 4.1**).
