@@ -1,6 +1,6 @@
 ### 6.3 Testing and Debugging Your Action
 
-You can use Rasa Inspector as in **Lab 5.1** (optional) or **Lab 6.2** to explore your agent. This section formalizes the testing workflow and gives you a checklist against the table below.
+You can use Rasa Inspector as in **Lab 6.2** (optional walkthrough) before this section. This section formalizes the testing workflow and gives you a checklist against the table below.
 
 **Setup reminder**: If you need to review Inspector setup (go to main folder → activate virtual environment → `cd level2` → train → start Inspector), see **Lab 6.2** for the full step-by-step instructions.
 

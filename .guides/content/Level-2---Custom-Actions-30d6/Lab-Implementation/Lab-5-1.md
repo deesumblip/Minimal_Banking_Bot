@@ -6,7 +6,7 @@
 
 **Where to work:** Students do this lab from the **level2** folder. All file paths are relative to `level2`. In Codio, the terminal opens in the workspace (`~/workspace`); they run `cd level2`. Locally, they open the terminal in the main project folder (contains `level1`, `level2`, `.guides`), then run `cd level2`.
 
-**Full instructions:** See **Level2_Lab5.1_Content.md** (and Codio Lab 5.1 guide) for the complete step-by-step: (1) go to `data/basics/`, (2) create `hours.yml` with the `hours` flow and `action_bank_hours`, (3) create `holiday_hours.yml` with the `holiday_hours` flow and `action_holiday_hours`, (4) verify both files, then run the assessment. Optional: Review in Inspector (Lab 6.2 steps; example questions: hours, holiday hours, hello).
+**Full instructions:** See **Level2_Lab5.1_Content.md** (and Codio Lab 5.1 guide) for the complete step-by-step: (1) go to `data/basics/`, (2) create `hours.yml` with the `hours` flow and `action_bank_hours`, (3) create `holiday_hours.yml` with the `holiday_hours` flow and `action_holiday_hours`, (4) verify both files, then run the assessment. In Unit 6, **section 6.3** and optional **Lab 6.2** cover Inspector and example questions (not on the Lab 5.1 student page).
 
 ---
 
@@ -14,7 +14,7 @@
 
 ## Overview
 
-This assessment verifies that students can create flow files that use actions: the example `hours.yml` (action_bank_hours) and their own `holiday_hours.yml` (action_holiday_hours), with correct YAML structure. The lab instructs students to work from the **level2** folder (main project folder, then `cd level2`). The grader runs from `level2` and checks files under that directory. Optional Inspector review directs students to Lab 6.2 for train/Inspector steps.
+This assessment verifies that students can create flow files that use actions: the example `hours.yml` (action_bank_hours) and their own `holiday_hours.yml` (action_holiday_hours), with correct YAML structure. The lab instructs students to work from the **level2** folder (main project folder, then `cd level2`). The grader runs from `level2` and checks files under that directory.
 
 ### Assessment Type
 

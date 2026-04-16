@@ -6,7 +6,7 @@ You've now registered both actions in the domain (Unit 4) and trained (Lab 6.1).
 
 #### Review in Inspector (optional)
 
-After you run the Lab 4.1 assessment, you can see how registration affects the agent. **In the terminal** use the **virtual environment in the main folder** (project root); then go into `level2` and run the Level 2 agent from there so it uses your Level 2 changes (domain, flows, actions).
+To try the agent in Inspector, use the **virtual environment in the main folder** (project root); then go into `level2` and run train and Inspector from here so Rasa uses your Level 2 domain, flows, and actions.
 
 1. **Go to the main folder** (the project root, one level *above* `level2`—the folder that contains `level1`, `level2`, and `.guides`). If you're inside `level2` or a subfolder, run `cd ..` (or `cd ../..` as needed) until you're in that main folder.
 2. **Activate the virtual environment** (it lives in the main folder at the project root, e.g. `.venv`). Your prompt should show `(.venv)` when active.
@@ -26,7 +26,10 @@ After you run the Lab 4.1 assessment, you can see how registration affects the a
 
 In the Inspector chat, try:
 
-- **"What are your hours?"** — If the `hours` flow exists, the agent should use `action_bank_hours` and reply with bank hours.
-- **"What are your holiday hours?"** — The agent likely won't handle this yet, because there's no flow that uses your action. You'll add that flow in Unit 5.
+- **"What are your hours?"** — Should trigger the `hours` flow and `action_bank_hours`.
+- **"What are your holiday hours?"** or **"Are you open on Christmas?"** — Should trigger the `holiday_hours` flow and `action_holiday_hours` (you added this flow in **Lab 5.1**).
+- **"Hello"** — Should trigger the Level 1 `greet` flow.
 
----
+See **section 6.3** (*Testing Your Action*) for the full question table, debug panel, and common issues.
+
+Submit the **Check It!** in the Codio guide once you meet the checks (domain registration and a trained model; assessment `code-output-compare-1597644299`).

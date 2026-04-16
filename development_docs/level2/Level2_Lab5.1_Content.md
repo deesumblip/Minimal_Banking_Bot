@@ -52,10 +52,4 @@ flows:
 - Each flow has `name:`, `description:`, and `steps:` with the correct action
 - YAML syntax is correct (spaces, no tabs)
 
-Run the **Lab 5.1 assessment** when you're done. In Unit 6 you'll train and test both flows.
-
-#### Review in Inspector (optional)
-
-Follow the steps in **Lab 6.2** (go to main folder → activate the virtual environment → `cd level2` → train → start Inspector and open the GUI) to see if your agent is working. Then try: **"What are your hours?"** (should trigger `hours` and `action_bank_hours`), **"What are your holiday hours?"** or **"Are you open on Christmas?"** (should trigger `holiday_hours` and `action_holiday_hours`), and **"Hello"** (Level 1 greet). If something doesn't trigger, check the flow's `description` and re-train; see **section 6.3** (Testing Your Action—debug panel and common issues at the end of that page).
-
-**Optional:** You can edit the `utter_help` response in the domain to include "Holiday hours" so users know they can ask about it.
+Run the **Lab 5.1 assessment** when you're done. In Unit 6 you'll train and test both flows; **section 6.3** and optional **Lab 6.2** walk through Inspector and example questions.
