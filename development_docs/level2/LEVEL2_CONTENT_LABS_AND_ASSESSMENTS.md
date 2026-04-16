@@ -22,7 +22,7 @@ Level 2 uses **7 units** (0–6): Recap → Introduction to Actions → Action C
 | `Level2_Unit3_Content_3.1_Step-by-Step-Creating-an-Action.md` | **Deprecated:** duplicate of Unit 2.1; Codio guide opens with **Lab 3.1** instead. Keep file as stub or delete locally. |
 | `Level2_Unit3_Content_3.2_Understanding-Action-Execution.md` | **Deprecated:** merged into end of Lab 3.1 in the guide. |
 | `Level2_Unit4_Content_4.1_Why-Register-Actions.md` | Domain registration, Lab 4.1 |
-| `Level2_Unit5_Content_5.1_Actions-vs-Responses-in-Flows.md` | Actions in flows, hours example |
+| `Level2_Unit5_Content_5.1_Actions-vs-Responses-in-Flows.md` | Actions vs responses in flows; mixing both in one flow (former 5.2 merged here) |
 | `Level2_Unit6_Content_6.2_*.md`, `6.3_*.md` | Common training errors; testing and debugging (former **6.4 debugging** page merged into **6.3**); **Lab 6.1** is **`Level2_Lab6.1_Content.md`** only |
 | `Level2_Unit6_Content_6.4_Level-2-Wrap-Up.md` | Codio title **6.4 See it all together** — walkthrough, structure, practices, **5× MC knowledge check** |
 | `Level2_Unit6_Content_6.5_Core-Ideas-and-Level-3-Readiness.md` | Codio title **6.5 Before you continue** — short checkpoint; detailed Level 3 handoff is Level 3 **0-1** / **0-2** |

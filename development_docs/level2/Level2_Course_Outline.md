@@ -120,10 +120,9 @@
 - 5.1 Actions vs. Responses in Flows
   - Level 1 flow (response) example
   - Level 2 flow (action) example
-  - Key differences
+  - How `utter_*` vs `action_*` names are resolved
+  - Mixing responses and actions in one flow (chained steps)
 - Lab 5.1 — create flows (hours.yml, holiday_hours.yml); see lab for full steps
-- 5.2 Mixing Responses and Actions
-  - Using both in the same flow
 
 **Key Concepts**: Flow creation, action references in flows, mixing responses and actions
 

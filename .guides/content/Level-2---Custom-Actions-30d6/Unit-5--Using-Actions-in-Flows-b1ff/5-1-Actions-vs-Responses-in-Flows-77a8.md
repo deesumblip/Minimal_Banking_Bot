@@ -1,6 +1,6 @@
-Now that your actions are registered in the domain (Lab 4.1), you need flows that use them, the example **hours** flow and your **holiday_hours** flow. In Level 1, flows used `utter_*` responses. In Level 2, flows can use `action_*` actions.
+Now that your actions are registered in the domain (Lab 4.1), you need flows that call them: the example **hours** flow and your **holiday_hours** flow. In Level 1, flows used only `utter_*` responses. In Level 2, flows can also call `action_*` custom actions.
 
-#### Level 1 Flow (Response)
+#### Level 1 flow (response)
 
 ```yaml
 flows:
@@ -11,7 +11,7 @@ flows:
       - action: utter_greet  # ← Uses a response
 ```
 
-#### Level 2 Flow (Action)
+#### Level 2 flow (action)
 
 ```yaml
 flows:
@@ -22,10 +22,25 @@ flows:
       - action: action_bank_hours  # ← Uses an action
 ```
 
-**Key Difference**: 
-- `utter_*` = Predefined text (response)
-- `action_*` = Custom Python code (action)
+**What changes:** names starting with `utter_` refer to predefined text in the domain; names starting with `action_` refer to Python in `actions/`. In both cases you still write `- action:` under `steps:`—Rasa decides which kind of step it is from the name.
 
-Both use `- action:` in the flow, but Rasa knows the difference based on the name.
+#### Mixing responses and actions in one flow
+
+The same flow can chain both kinds of step. For example, you might run an action for dynamic content, then a response for static text:
+
+```yaml
+flows:
+  hours_and_contact:
+    name: hours and contact
+    description: Tell the user bank hours and provide contact information.
+    steps:
+      - action: action_bank_hours      # ← Action (custom code)
+      - action: utter_contact          # ← Response (predefined text)
+```
+
+**Execution order**
+
+1. **`action_bank_hours`** runs first (dynamic hours message).
+2. **`utter_contact`** runs next (static contact text).
 
 ---

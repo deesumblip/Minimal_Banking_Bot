@@ -1,9 +1,5 @@
-## Level 2 entry: end of Level 1 + example action (not wired yet)
-#
-# - Responses only: no `actions:` section yet (students add it in Lab 4.1).
-# - Example Python for Units 2–3: `actions/action_bank_hours.py` (study only until registered).
-# - Students add: `action_holiday_hours.py` (Lab 3.1), domain `actions:` (Lab 4.1),
-#   `hours.yml` and `holiday_hours.yml` (Lab 5.1).
+# Responses for your Level 2 banking assistant.
+# When you add custom actions, register their names in an `actions:` section below.
 
 version: "3.1"
 

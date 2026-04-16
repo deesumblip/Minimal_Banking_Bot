@@ -26,7 +26,7 @@
 **Content changes:**
 - **5.1:** Keep the comparison of responses vs actions; keep `hours` / `action_bank_hours` as the example.
 - **Lab 5.1:** Create both flows — (a) *"The example: hours.yml"* (uses `action_bank_hours`) and (b) *"Your flow: holiday_hours.yml"* (`action_holiday_hours`), with clear descriptions so the LLM can match user questions. Full steps in the lab.
-- **5.2:** Mixing responses and actions; use `action_bank_hours` and `utter_contact` as the example.
+- **5.1:** Mixing responses and actions (same page as actions vs responses); use `action_bank_hours` and `utter_contact` as the example.
 
 **Lab 5.1 grader:**
 - Keep checks for `hours.yml` and `action_bank_hours` (so the example flow stays).
