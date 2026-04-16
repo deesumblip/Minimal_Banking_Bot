@@ -64,8 +64,8 @@ project/
 ```
 
 **Environment Variables**:
-- `RASA_LICENSE=...`
-- `OPENAI_API_KEY=...`
+- `RASA_LICENSE=...` (required)
+- No separate LLM API key for Level 2: `config.yml` / `endpoints.yml` use the **Rasa tutorial** command generator (`rasa_command_generation_model` → `https://tutorial-llm.rasa.ai`), same pattern as Level 1.
 
 **Port Configuration**:
 - Rasa Inspector: 5005 (default)
@@ -191,7 +191,7 @@ For Unit 6 (Testing with Actions), configure the terminal so students can "jump 
 
 **Not Required**:
 - SSH access (port forwarding handles Inspector access)
-- External API keys beyond RASA_LICENSE and OPENAI_API_KEY
+- `OPENAI_API_KEY` or other third-party LLM keys for this level (tutorial LLM is configured in `endpoints.yml`)
 
 ---
 

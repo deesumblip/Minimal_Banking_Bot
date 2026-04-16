@@ -23,6 +23,6 @@ Level 2 introduces **Actions** - custom Python code that your agent can execute.
 **Unchanged Files**:
 - All Level 1 responses remain
 - All Level 1 flows remain
-- All configuration files remain (with minor updates to endpoints.yml)
+- **Configuration** — Same **tutorial LLM** setup as Level 1 (`SearchReadyLLMCommandGenerator`, `rasa_command_generation_model`, `flow_retrieval.active: false` in `config.yml`; `https://tutorial-llm.rasa.ai` in `endpoints.yml`). Level 2’s `endpoints.yml` also defines **`action_endpoint`** so Rasa loads custom actions from the **`actions`** package.
 
 ---

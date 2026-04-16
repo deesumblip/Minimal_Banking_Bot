@@ -64,7 +64,7 @@ This matches the **Level 1 baseline** described in **Unit 0.1**, plus the Level 
 
 **Actions (`actions/`)**, `action_bank_hours.py` (example: hours vary by day) and `action_holiday_hours.py` (yours: holiday logic and messaging from Lab 3.1).
 
-**System patterns and configuration**, Same as Level 1 aside from any small `endpoints.yml` updates you made for actions.
+**System patterns and configuration**, Same pipeline and tutorial LLM as Level 1. **`endpoints.yml`** adds the **action** endpoint (Python `actions` module) and keeps **NLG** on the same **`rasa_command_generation_model`** group as Level 1.
 
 Together, the agent still does everything Level 1 did, and it can run custom code for dynamic answers. Processing data, branching on dates, and returning calculated or conditional text.
 

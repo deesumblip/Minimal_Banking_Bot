@@ -11,7 +11,7 @@ The repo’s **`level2/`** folder matches **Level 1 complete** plus one teaching
 | **Domain** | `domain/basics.yml` — `responses:` only (`utter_greet`, `utter_help`, `utter_contact`, `utter_goodbye`). **No** `actions:` section. |
 | **Flows** | `data/basics/greet.yml`, `help.yml`, `contact.yml`, `goodbye.yml` only. **No** `hours.yml`, **no** `holiday_hours.yml`. |
 | **Patterns** | `data/system/patterns/patterns.yml` |
-| **Config** | `config.yml`, `credentials.yml`, `endpoints.yml` |
+| **Config** | `config.yml`, `credentials.yml`, `endpoints.yml` — same **tutorial LLM** pattern as Level 1 (`rasa_command_generation_model`); `endpoints.yml` adds **`action_endpoint`** for the `actions` package. |
 | **Actions (Python)** | `actions/__init__.py`, `actions/action_bank_hours.py` (example for Units 2–3). **No** `action_holiday_hours.py`. |
 
 Students need a working **Level 1** agent (above), **Rasa Pro** + env (`.env`, venv), and the example action file so they can study and copy the pattern. Nothing is missing to complete Labs **3.1 → 4.1 → 5.1** in order.

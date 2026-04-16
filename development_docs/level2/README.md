@@ -42,11 +42,7 @@
    python -m pip install --no-cache-dir rasa-pro==3.16.3
    ```
 
-3. **Create `.env` file:**
-   ```text
-   RASA_LICENSE=your-rasa-pro-license
-   OPENAI_API_KEY=your-openai-api-key
-   ```
+3. **Set `RASA_LICENSE`:** Create a `.env` file in the project root with your license (Lab 0.1). Level 2 uses the **tutorial LLM** configured in **`level2/endpoints.yml`** (`https://tutorial-llm.rasa.ai`); you do not need an OpenAI API key for this level.
 
 4. **Train and run:**
    ```powershell

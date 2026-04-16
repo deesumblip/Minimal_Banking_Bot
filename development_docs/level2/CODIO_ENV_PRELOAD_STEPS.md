@@ -1,6 +1,6 @@
 # Preloading environment variables in Codio (instructor + students)
 
-**Goal:** Env vars (e.g. `RASA_LICENSE`, `OPENAI_API_KEY`) are loaded in every terminal for the course, and kept as hidden as possible from students.
+**Goal:** Env vars (at minimum `RASA_LICENSE`) are loaded in every terminal for the course, and kept as hidden as possible from students. **Levels 1 and 2** in this repository use the **tutorial LLM** configured in each level’s `endpoints.yml` (`https://tutorial-llm.rasa.ai`); students do **not** need `OPENAI_API_KEY` for those levels. Add **`OPENAI_API_KEY`** when the unit’s `endpoints.yml` uses an OpenAI-backed `model_groups` entry (e.g. **Level 3+** stacks in this course).
 
 **Important Codio limitation:** Environment variables you set in **Codio > Preferences > Environment Variables** are **not** passed to student assignments. So students do **not** get those vars unless you use one of the workarounds below.
 
@@ -17,8 +17,7 @@ Use this so **your** terminals always have the vars and students never see them 
 3. Click **Add** (or similar) and add:
    - **Name:** `RASA_LICENSE`  
      **Value:** your actual Rasa Pro license.
-   - **Name:** `OPENAI_API_KEY`  
-     **Value:** your actual OpenAI API key.
+   - **Optional (only if your course unit uses OpenAI-backed `model_groups`):** **Name:** `OPENAI_API_KEY` — **Value:** your OpenAI API key.
 4. Save.
 5. **Restart the box** so the vars take effect: **Project** → **Restart Box**.
 
@@ -37,7 +36,8 @@ Because Codio does **not** give students the instructor’s Preferences env vars
    - Contents (no quotes unless the value has spaces):
      ```bash
      export RASA_LICENSE=your-actual-license
-     export OPENAI_API_KEY=your-actual-key
+     # Optional, only if needed for your stack:
+     # export OPENAI_API_KEY=your-actual-key
      ```
 2. The repo has **`secure/rasa_env`** in `.gitignore` (so real keys are never committed) and **`secure/rasa_env.template`** committed as a placeholder. Copy the template to `rasa_env` and add your real values.
 3. When you **publish** the assignment: do **not** add `secure/` to `.assignmentignore`. Ensure `secure/rasa_env` (with real values) is present in the project in Codio when you publish—e.g. copy from template and fill in, or upload your existing file. Then students’ boxes will have the file and the startup script will load it. Students could open the file if they look.

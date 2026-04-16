@@ -887,8 +887,8 @@ project/
 ```
 
 **Environment Variables**:
-- `RASA_LICENSE=...`
-- `OPENAI_API_KEY=...`
+- `RASA_LICENSE=...` (required)
+- LLM access uses the **tutorial** endpoint in `endpoints.yml` (`rasa_command_generation_model` / `https://tutorial-llm.rasa.ai`); students do not need `OPENAI_API_KEY` for Level 2.
 
 **Port Configuration**:
 - Rasa Inspector: 5005 (default)
