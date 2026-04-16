@@ -6,19 +6,18 @@ nlg:
   llm:
     model_group: openai-gpt-5-1
 
-# Tools (Level 5)
-tools:
-  tools_module: "tools"
-
-# Lab 3.1: Add `mcp_servers:` here so the sub-agent can reach the MCP process.
-# Do not remove sections above. Example shape (values must match your server):
+# Tool functions live in `tools/`; add `mcp_servers:` below when you connect a banking MCP server (name and URL must match your running process).
+# Example:
 # mcp_servers:
 #   - name: banking_mcp
 #     url: http://127.0.0.1:8080/mcp
 #     type: http
-# Start the server from level6: python mcp_server/banking.py
+# From `level6/`, you can start the sample server with: python mcp_server/banking.py
 
-# Single model group: Rasa tutorial host (RASA_LICENSE only — no separate API keys).
+tools:
+  tools_module: "tools"
+
+# Command and NLG models (Rasa tutorial host; use your Rasa license).
 # https://rasa.com/docs/rasa-pro/concepts/components/llm-configuration/
 model_groups:
   - id: openai-gpt-5-1

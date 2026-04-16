@@ -1,6 +1,4 @@
-# Level 4 Lab 4.1 targets transfer_money.yml; check_balance often stays as in Level 3/early 4.
-# This collect description is richer than a one-line hint in the level4 starter tree so CALM can
-# take the account from the same user turn as starting the flow (same spirit as Lab 4.1 collect text).
+# Collects an account for a balance check, including from the same message that starts the flow when the user gives the number up front.
 
 flows:
   check_balance:

@@ -1,9 +1,5 @@
-## Level 1: Just Responses
-#
-# This is the simplest possible domain file.
-# - Only responses (predefined agent messages)
-# - No slots (memory)
-# - No actions (custom code)
+# Scripted replies for your assistant—everything the bot says here is declared as a response.
+# This level does not use slots or custom actions yet.
 
 version: "3.1"
 

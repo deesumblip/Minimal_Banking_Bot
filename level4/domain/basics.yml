@@ -1,10 +1,5 @@
-## Level 4 starter: Level 3 completion (same agent as finished `level3/`)
-#
-# This file matches the end of Level 3: `account` slot, `utter_ask_account`, Level 1–2–3
-# actions and responses. No transfer fields yet.
-#
-# Level 4 labs add (in order): Lab 0.1 pipeline → Lab 2.1 domain (amount, recipient,
-# account_from + utter_ask_* + action_process_transfer) → Lab 3.1 action → Lab 4.1 flow.
+# Picks up where Level 3 ends: account collection, hour and balance actions, and the same responses you already use.
+# This level adds transfer-related slots, actions, and flows.
 
 version: "3.1"
 

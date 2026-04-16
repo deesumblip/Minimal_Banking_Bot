@@ -1,8 +1,5 @@
-## Level 6 starter: Level 5 completion (same agent as `level5/`) + Level 6 scaffolding.
-## Students add in Level 6: `sub_agents/banking_assistant/config.yml`, `mcp_servers` in
-## `endpoints.yml`, and `data/basics/ask_banking_assistant.yml` (see guide).
-#
-# Every `action:` in flows (including utter_*) must appear under actions:.
+# Same agent as Level 5; you’ll wire in a banking sub-agent, MCP settings in `endpoints.yml`, and new flows as the guide shows.
+# Every step name from your flows—including `utter_*`—belongs in `actions:`.
 
 version: "3.1"
 
