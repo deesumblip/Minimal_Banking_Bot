@@ -13,7 +13,7 @@ echo ""
 echo "Check 1: Verifying Inspector log file exists..."
 if [ ! -f "logs/logs.out" ]; then
     echo "❌ Check 1: FAILED - level2/logs/logs.out not found (0 points)"
-    echo "Hint: From level2, run: python -m rasa inspect --debug --log-file logs/logs.out"
+    echo "Hint: From level2, run: mkdir -p logs && python -m rasa inspect --debug --log-file logs/logs.out"
     exit 1
 fi
 echo " Check 1: PASSED - logs/logs.out exists"

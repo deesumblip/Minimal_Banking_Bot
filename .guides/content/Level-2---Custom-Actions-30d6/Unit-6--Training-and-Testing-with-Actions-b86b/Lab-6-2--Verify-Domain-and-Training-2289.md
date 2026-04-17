@@ -6,9 +6,10 @@ You’ve already trained your Level 2 agent in **Lab 6.1**. This lab is about **
 
 #### Step 1: Start Inspector
 
-From the `level2` folder, start Inspector and write logs to `logs/logs.out`:
+From the `level2` folder, ensure a `logs` directory exists, then start Inspector and write logs to `logs/logs.out`. In **Codio** or **macOS / Linux**, use `mkdir -p logs`. In **Windows PowerShell**, use `mkdir logs` if the folder is not there yet.
 
 ```bash
+mkdir -p logs
 python -m rasa inspect --debug --log-file logs/logs.out
 ```
 

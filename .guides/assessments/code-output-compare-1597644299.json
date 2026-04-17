@@ -4,7 +4,7 @@
 	"source": {
 		"name": "Lab 6.2: Training and Testing",
 		"showName": true,
-		"instructions": "This assessment only checks that you ran Rasa Inspector with a log file as in the lab:\n\n• Check 1: The file level2/logs/logs.out exists (from --log-file logs/logs.out).\n• Check 2: That file contains evidence that Inspector / the server started.\n\nIt does not re-check your domain or training (those are covered in Lab 4.1 and Lab 6.1).",
+		"instructions": "This assessment only checks that you ran Rasa Inspector with a log file as in the lab:\n\n• Check 1: The file level2/logs/logs.out exists (create the logs folder first if needed, then use --log-file logs/logs.out).\n• Check 2: That file contains evidence that Inspector / the server started.\n\nIt does not re-check your domain or training (those are covered in Lab 4.1 and Lab 6.1).",
 		"command": "bash /home/codio/workspace/.guides/secure/level2_graders/lab_6.2_grader.sh",
 		"preExecuteCommand": "",
 		"options": {
@@ -33,7 +33,7 @@
 		},
 		"bloomsObjectiveLevel": "",
 		"learningObjectives": "",
-		"guidance": "From the level2 folder (venv active), run: python -m rasa inspect --debug --log-file logs/logs.out. Wait until the server has started so logs/logs.out contains Inspector output, then run Check It! again.",
+		"guidance": "From the level2 folder (venv active), run: mkdir -p logs, then python -m rasa inspect --debug --log-file logs/logs.out. On Windows PowerShell use mkdir logs if needed. Wait until the server has started so logs/logs.out contains Inspector output, then run Check It! again.",
 		"showGuidanceAfterResponseOption": {
 			"type": "Never"
 		},
