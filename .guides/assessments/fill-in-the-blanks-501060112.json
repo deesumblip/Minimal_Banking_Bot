@@ -25,7 +25,7 @@
 		},
 		"bloomsObjectiveLevel": "",
 		"learningObjectives": "",
-		"guidance": "**`name`** must match **`connections.mcp_servers`** in **`sub_agents/banking_assistant/config.yml`**. **`url`** is the Streamable HTTP endpoint for this repo’s FastMCP server (**`/mcp`** path). **`type`** is **`http`**. **After you pass,** merge into **`level6/endpoints.yml`**, save, then run the **Code Test**.",
+		"guidance": "**`name`** must match **`connections.mcp_servers`** in **`sub_agents/banking_assistant/config.yml`**. **`url`** is the Streamable HTTP endpoint for this repo’s FastMCP server (**`/mcp`** path). **`type`** is **`http`**.\n\nHere is the completed block (merge into `level6/endpoints.yml` after `tools:` and before `model_groups:`):\n\n```yaml\nmcp_servers:\n  - name: banking_mcp\n    url: http://127.0.0.1:8080/mcp\n    type: http\n```\n\nAfter you merge and save, run the **Code Test**.",
 		"showGuidanceAfterResponseOption": {
 			"type": "Attempts",
 			"passedFrom": 1

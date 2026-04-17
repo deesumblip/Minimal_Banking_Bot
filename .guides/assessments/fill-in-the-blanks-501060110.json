@@ -25,7 +25,7 @@
 		},
 		"bloomsObjectiveLevel": "",
 		"learningObjectives": "",
-		"guidance": "Top-level key is **`flows:`**. Flow id **`ask_banking_assistant`** matches other flows’ **`active_flow`** hints. **`call:`** must match **`agent.name`** (**`banking_assistant`**). **`utter_help`** is a response action on the main agent after the sub-agent returns. **After you pass,** save the completed YAML as **`level6/data/basics/ask_banking_assistant.yml`**, then run the **Code Test**.",
+		"guidance": "Top-level key is **`flows:`**. Flow id **`ask_banking_assistant`** matches other flows’ **active_flow** hints. **`call:`** must match **`agent.name`** (**`banking_assistant`**). **`utter_help`** is a response action on the main agent after the sub-agent returns.\n\nHere is the completed flow file (paste into `level6/data/basics/ask_banking_assistant.yml`):\n\n```yaml\nflows:\n  ask_banking_assistant:\n    name: ask banking assistant\n    description: |\n      Start when the user wants the banking assistant sub-agent or specialist; delegate balance, transfers, or account info.\n    steps:\n      - call: banking_assistant\n      - action: utter_help\n```\n\nAfter you paste and save the file, run the **Code Test**.",
 		"showGuidanceAfterResponseOption": {
 			"type": "Attempts",
 			"passedFrom": 1
