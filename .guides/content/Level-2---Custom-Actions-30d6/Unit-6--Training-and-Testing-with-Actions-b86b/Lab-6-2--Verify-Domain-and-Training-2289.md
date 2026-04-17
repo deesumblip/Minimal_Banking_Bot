@@ -1,6 +1,6 @@
 You’ve already trained your Level 2 agent in **Lab 6.1**. This lab is about **testing** your flows and actions end-to-end in **Rasa Inspector**.
 
-**Before you start:** Activate your virtual environment (from the project root) and run these commands from inside `level2/` (same setup as Lab 6.1).
+**Before you start:** Activate your virtual environment from the project root. Run the steps below from inside `level2/`, using the same setup as **Lab 6.1**.
 
 ---
 
@@ -30,18 +30,18 @@ Use these prompts to verify the latest flows and actions:
 
 #### Step 3: Check the debug panel
 
-With `--debug` and the log file from step 1, use Inspector’s debug output (and `logs/logs.out`) to confirm which **flow** fired, which **action** ran, and whether the action finished without errors.
+With `--debug` and the log file from step 1, use Inspector’s debug output and `logs/logs.out` to confirm which **flow** fired, which **action** ran, and whether the action finished without errors.
 
 ##### Common issues
 
-1. **Action doesn't trigger** — Does the flow `description` match what the user said? Is the action listed under `actions:` in the domain? Does the Python file exist under `actions/`?
-2. **Action runs but no message** — Is `dispatcher.utter_message()` called? Check `logs/logs.out` for Python errors.
-3. **Python errors** — Fix syntax, imports, and method names (`name()`, `run()`, etc.), then train again.
+1. **Action doesn't trigger.** Check whether the flow `description` matches what the user said, whether the action is listed under `actions:` in the domain, and whether the Python file exists under `actions/`.
+2. **Action runs but no message.** Confirm `dispatcher.utter_message()` is called. Check `logs/logs.out` for Python errors.
+3. **Python errors.** Fix syntax, imports, and method names such as `name()` and `run()`, then train again.
 
 ---
 
 #### Run the Lab 6.2 assessment
 
-When you’re done testing, run the Check It! below (it verifies your domain registration plus that a trained model exists under `level2/models/`).
+When you’re done testing, run the Check It! below. It only checks that **`level2/logs/logs.out`** exists and shows you ran **`rasa inspect`** with **`--log-file`**, using the same command as in step 1. It does not re-check domain or training.
 
 {Check It!|assessment}(code-output-compare-1597644299)

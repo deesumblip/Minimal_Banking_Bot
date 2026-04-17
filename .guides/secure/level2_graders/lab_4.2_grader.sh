@@ -1,4 +1,5 @@
 #!/bin/bash
+# (Not used by Level 2 Lab 6.2 Codio assessment; that uses lab_6.2_grader.sh for Inspector logs only.)
 # Lab 4.2: Multiple Actions – verification that domain is correct AND student has trained
 # Runs Lab 4.1 checks (both actions registered), then verifies a model file exists (training was run).
 

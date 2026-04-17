@@ -2,7 +2,7 @@
 
 ### Your Task
 
-**Unit 2.1** walks through the full **`action_bank_hours.py`** example. This lab creates **`action_holiday_hours`**: the bank's holiday schedule **based on today's date**—same Rasa action pattern, with holiday date logic instead of weekday logic.
+**Unit 2.1** walks through the full **`action_bank_hours.py`** example. This lab creates **`action_holiday_hours`**: the bank's holiday schedule **based on today's date**. It uses the same Rasa action pattern, with holiday date logic instead of weekday logic.
 
 **Codio guide:** Unit 3 opens with this lab. Students complete the **Fill in the blanks** assessment first, paste into **`level2/actions/action_holiday_hours.py`**, then run the **Code Test**. The optional manual steps below match that solution if you are editing without Codio.
 
@@ -31,8 +31,8 @@ You can also add `from typing import Any, Dict, List, Text` for type hints.
 **Step 5 – Implement `run()` with date-based logic**  
 - Add the `run()` method with parameters: `dispatcher`, `tracker`, and `domain`.  
 - Get today's date, e.g. `now = datetime.now()` and use `now.month` and `now.day` to check if today is a holiday.  
-- **If today is a holiday** (e.g. New Year's Day Jan 1, Independence Day July 4, or Christmas Dec 25—you can use these or your own list): set a message like *"We're closed today for [holiday name]."*  
-- **Otherwise**: set a message with the general holiday schedule, e.g. *"We're closed on New Year's Day, Independence Day, and Christmas. On other holidays we may have limited hours—please call ahead."*  
+- **If today is a holiday**, such as New Year's Day on January 1, Independence Day on July 4, or Christmas on December 25, you can use that list or define your own. Set a message like *"We're closed today for [holiday name]."*  
+- **Otherwise** set a message with the general holiday schedule, for example *"We're closed on New Year's Day, Independence Day, and Christmas. On other holidays we may have limited hours. Please call ahead."*  
 - Call `dispatcher.utter_message(text=message)` **once** with whichever message you chose.  
 - At the end of `run()`, return `[]` (an empty list).
 
@@ -46,7 +46,7 @@ You can also add `from typing import Any, Dict, List, Text` for type hints.
 Before submitting, confirm:
 
 - File is in the `actions/` folder and named `action_holiday_hours.py`
-- You import `datetime` and use it (e.g. `datetime.now()`) to choose the message
+- You import `datetime` and use it, for example `datetime.now()`, to choose the message
 - Class is `ActionHolidayHours(Action)`
 - `name()` returns `"action_holiday_hours"`
 - `run()` calls `dispatcher.utter_message()` and returns `[]`

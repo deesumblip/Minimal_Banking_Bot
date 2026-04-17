@@ -114,7 +114,7 @@ All corresponding JSONs exist under `.guides/assessments/` with matching `taskId
   - JSON: `.guides/assessments/code-output-compare-1451983168.json`.
 - **Lab 6.2 – Training and Testing** (Unit 6, right after Lab 6.1)
   - Guide: `Unit-6--Training-and-Testing-with-Actions-b86b/Lab-6-2--Verify-Domain-and-Training-2289.md`.
-  - Assessment: `{Check It!|assessment}(code-output-compare-1597644299)`.
+  - Assessment: `{Check It!|assessment}(code-output-compare-1597644299)` — grader `lab_6.2_grader.sh` checks only **`level2/logs/logs.out`** from `rasa inspect --log-file`.
   - JSON: `.guides/assessments/code-output-compare-1597644299.json`.
 - **Lab 5.1 – Using Actions in Flows**
   - Guide: `Unit-5--Using-Actions-in-Flows-b1ff/Lab-5-1--Using-Actions-in-Flows-e512.md`.

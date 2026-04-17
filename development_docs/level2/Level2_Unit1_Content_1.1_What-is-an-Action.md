@@ -19,12 +19,12 @@ An **action** is custom Python code that your agent can execute. Actions allow y
 
 #### When to Use Actions
 
- **Use actions when you need**:
-- Dynamic responses (e.g., "We're open today until 5pm" - changes based on current day)
-- Calculations (e.g., calculating interest, fees)
-- Data processing (e.g., formatting dates, validating input)
-- External integrations (e.g., checking account balance from a database)
-- Conditional logic (e.g., different responses based on conditions)
+**Use actions when you need**:
+- Dynamic responses that depend on context, such as different hours depending on the current day
+- Calculations such as interest or fees
+- Data processing such as formatting dates or validating input
+- External integrations such as reading an account balance from a database
+- Conditional logic that picks different replies based on conditions
 
 ❌ **Don't use actions for**:
 - Simple static text (use responses instead)

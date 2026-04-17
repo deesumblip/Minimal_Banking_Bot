@@ -2,10 +2,10 @@
 	"type": "code-output-compare",
 	"taskId": "code-output-compare-1597644299",
 	"source": {
-		"name": "Lab 6.2: Verify Domain and Training",
+		"name": "Lab 6.2: Training and Testing",
 		"showName": true,
-		"instructions": "To pass this assessment, all of the following must be true:\n\n• Checks 1–6 (Lab 4.1): domain/basics.yml exists; actions: section present; action_bank_hours and action_holiday_hours registered under actions:; valid YAML list syntax; file is valid YAML.\n• Check 7 (Lab 6.2): A trained model file (.tar.gz) exists in level2/models/ (you must run 'python -m rasa train' from level2 with venv active).",
-		"command": "bash /home/codio/workspace/.guides/secure/level2_graders/lab_4.2_grader.sh",
+		"instructions": "This assessment only checks that you ran Rasa Inspector with a log file as in the lab:\n\n• Check 1: The file level2/logs/logs.out exists (from --log-file logs/logs.out).\n• Check 2: That file contains evidence that Inspector / the server started.\n\nIt does not re-check your domain or training (those are covered in Lab 4.1 and Lab 6.1).",
+		"command": "bash /home/codio/workspace/.guides/secure/level2_graders/lab_6.2_grader.sh",
 		"preExecuteCommand": "",
 		"options": {
 			"timeout": 60,
@@ -22,8 +22,7 @@
 				}
 			],
 			"files": [
-				".guides/secure/level2_graders/lab_4.1_grader.sh",
-				".guides/secure/level2_graders/lab_4.2_grader.sh"
+				".guides/secure/level2_graders/lab_6.2_grader.sh"
 			],
 			"opened": [
 				{
@@ -34,7 +33,7 @@
 		},
 		"bloomsObjectiveLevel": "",
 		"learningObjectives": "",
-		"guidance": "The grader runs Lab 4.1 checks (both actions in domain) then verifies a model file exists in level2/models/. If domain fails, fix domain and re-run. If Check 7 fails, run 'cd level2' and 'python -m rasa train' from project root with venv active.",
+		"guidance": "From the level2 folder (venv active), run: python -m rasa inspect --debug --log-file logs/logs.out. Wait until the server has started so logs/logs.out contains Inspector output, then run Check It! again.",
 		"showGuidanceAfterResponseOption": {
 			"type": "Never"
 		},
@@ -63,35 +62,7 @@
 			{
 				"arguments": "",
 				"input": "",
-				"output": "Check 3: PASSED",
-				"showFeedback": false,
-				"feedback": ""
-			},
-			{
-				"arguments": "",
-				"input": "",
-				"output": "Check 4: PASSED",
-				"showFeedback": false,
-				"feedback": ""
-			},
-			{
-				"arguments": "",
-				"input": "",
-				"output": "Check 5: PASSED",
-				"showFeedback": false,
-				"feedback": ""
-			},
-			{
-				"arguments": "",
-				"input": "",
-				"output": "Check 6: PASSED",
-				"showFeedback": false,
-				"feedback": ""
-			},
-			{
-				"arguments": "",
-				"input": "",
-				"output": "Check 7: PASSED",
+				"output": "Successfully passed!",
 				"showFeedback": false,
 				"feedback": ""
 			}

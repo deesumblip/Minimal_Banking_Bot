@@ -1,14 +1,14 @@
-Training in Level 2 is the same idea as Level 1: you run `rasa train` and Rasa writes a packaged model under **`models/`**. What changes is that Rasa now **also reads your custom actions** under **`actions/`** and folds them together with **`domain/`** and **`data/`**—so the model knows about `action_bank_hours` and `action_holiday_hours`, not only `utter_*` responses.
+Training in Level 2 is the same idea as Level 1: you run `rasa train` and Rasa writes a packaged model under **`models/`**. What changes is that Rasa now **also reads your custom actions** under **`actions/`** and folds them together with **`domain/`** and **`data/`**. That way the model knows about `action_bank_hours` and `action_holiday_hours`, not only `utter_*` responses.
 
-You should already have finished **Labs 3.1–5.1**: both actions appear in the domain, **`hours.yml`** uses `action_bank_hours`, and **`holiday_hours.yml`** uses `action_holiday_hours`.
+You should already have finished **Labs 3.1 through 5.1**: both actions appear in the domain, **`hours.yml`** uses `action_bank_hours`, and **`holiday_hours.yml`** uses `action_holiday_hours`.
 
-#### Step 1: Go to the main folder (project root)
+#### Step 1: Go to the project root
 
-Go to the project root (one level *above* `level2`—the folder that contains `level1`, `level2`, and `.guides`).
+Go to the project root. It sits one level above `level2` and contains `level1`, `level2`, and `.guides`. **In Codio**, your terminal prompt should end with **`~/workspace$`** so you are in that root before you activate the venv and `cd level2`.
 
 #### Step 2: Activate the virtual environment
 
-Activate the virtual environment from the project root (e.g. `.venv`). Your prompt should show `(.venv)` when active.
+Activate the virtual environment from the project root. The environment folder is often named `.venv`. Your prompt should show `(.venv)` when active.
 
 - **In Codio (Linux):**
 

@@ -39,7 +39,7 @@ Level 2 uses **7 units** (0–6): Recap → Introduction to Actions → Action C
 | 4.1 | Level2_Lab4.1_Content.md | Level2_Lab4.1_Assessment_Setup.md | — | .guides/secure/level2_graders/lab_4.1_grader.sh |
 | 5.1 | Level2_Lab5.1_Content.md | Level2_Lab5.1_Assessment_Setup.md | — | .guides/secure/level2_graders/lab_5.1_grader.sh |
 | 6.1 | Level2_Lab6.1_Content.md | Level2_Lab6.1_Assessment_Setup.md | — | .guides/secure/level2_graders/lab_6.1_grader.sh |
-| 6.2 | Level2_Lab6.2_Content.md | Level2_Lab6.2_Assessment_Setup.md | code-output-compare-1597644299 | .guides/secure/level2_graders/lab_4.2_grader.sh |
+| 6.2 | Level2_Lab6.2_Content.md | Level2_Lab6.2_Assessment_Setup.md | code-output-compare-1597644299 | .guides/secure/level2_graders/lab_6.2_grader.sh |
 
 **Execution:** Code Test graders are run from the workspace (e.g. `bash /home/codio/workspace/.guides/secure/level2_graders/lab_3.2_grader.sh` for Lab 3.1). Working directory for labs: `/home/codio/workspace/level2`. Do not upload grader scripts into the assessment; run from workspace so `git pull` updates them.
 

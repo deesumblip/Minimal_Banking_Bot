@@ -1,4 +1,4 @@
-Before we add actions, let's recap what you've already built in Level 1. **All of this remains unchanged** — Level 2 builds on top of it!
+Before we add actions, let's recap what you've already built in Level 1. **All of this remains unchanged.** Level 2 builds on top of it.
 
 #### What You Have from Level 1
 
@@ -36,29 +36,31 @@ Your Level 1 agent was limited to **static responses** - predefined text that ne
 
 #### What's new in Level 2
 
-Level 2 introduces **Actions** — custom Python code that your agent can execute. This enables:
+Level 2 introduces **Actions**, which are custom Python code that your agent can execute. This enables:
 
 - Dynamic responses based on calculations
 - Data processing and logic
 - Integration with external systems
 - Custom business logic
 
-**Your existing Level 1 agent continues to work** — Level 2 adds actions on top of it!
+**Your existing Level 1 agent continues to work.** Level 2 adds actions on top of it.
 
-**Already in the project before Lab 3.1** (starter):
-- `actions/` folder, `actions/__init__.py`, and `actions/action_bank_hours.py` — example action you study in Units 2–3 (the domain does not list it until **Lab 4.1**).
-- No `action_holiday_hours.py` yet, no `actions:` section in `domain/basics.yml`, and no `hours.yml` / `holiday_hours.yml` — you add those in the labs below.
+**What's already in the project before Lab 3.1.** The repository includes the `actions/` folder, `actions/__init__.py`, and `actions/action_bank_hours.py`. You study this example action in Units 2 and 3. The starter domain does not list the action until you reach **Lab 4.1**.
 
-**What you'll build**: In **Unit 3 / Lab 3.1** you'll create your own action (**action_holiday_hours**) that uses the current date—if today is a holiday it says we're closed today, otherwise it returns the general holiday schedule. In **Lab 4.1** you'll register both actions in the domain. In **Lab 5.1** you'll create **`hours.yml`** (for the example action) and **`holiday_hours.yml`** (for your action).
+You do not yet have `action_holiday_hours.py`, an `actions:` section in `domain/basics.yml`, or the `hours.yml` and `holiday_hours.yml` flow files. You will add those files in the labs below.
 
-**Modified Files** (as you complete the labs):
-- `domain/basics.yml` — You'll add an `actions:` section and list both the example action and your action (Lab 4.1)
-- `data/basics/hours.yml` — Example flow for `action_bank_hours` (Lab 5.1)
-- `data/basics/holiday_hours.yml` — Flow for `action_holiday_hours` (Lab 5.1)
+**What you'll build.** In **Unit 3** and **Lab 3.1** you will create **action_holiday_hours**, which uses the current date. If today is a holiday, the action reports that the bank is closed today. Otherwise it returns the general holiday schedule. In **Lab 4.1** you will register both actions in the domain. In **Lab 5.1** you will create **hours.yml** for the example action and **holiday_hours.yml** for your action.
 
-**Unchanged Files**:
-- All Level 1 responses remain
-- All Level 1 flows remain
-- **Configuration** — Same **tutorial LLM** setup as Level 1 (`SearchReadyLLMCommandGenerator`, `rasa_command_generation_model`, `flow_retrieval.active: false` in `config.yml`; `https://tutorial-llm.rasa.ai` in `endpoints.yml`). Level 2’s `endpoints.yml` also defines **`action_endpoint`** so Rasa loads custom actions from the **`actions`** package.
+**Modified files as you complete the labs**
+
+In **Lab 4.1** you will edit `domain/basics.yml` and add an `actions:` section that lists the example action and your action.
+
+In **Lab 5.1** you will add `data/basics/hours.yml` as the example flow for `action_bank_hours` and `data/basics/holiday_hours.yml` as the flow for `action_holiday_hours`.
+
+**Unchanged files**
+
+All Level 1 responses remain. All Level 1 flows remain.
+
+**Configuration** matches Level 1’s **tutorial LLM** setup. Your `config.yml` lists `SearchReadyLLMCommandGenerator`, `rasa_command_generation_model`, and `flow_retrieval.active: false`. Your `endpoints.yml` points to `https://tutorial-llm.rasa.ai`. Level 2’s `endpoints.yml` also defines **`action_endpoint`** so Rasa loads custom actions from the **`actions`** package.
 
 ---

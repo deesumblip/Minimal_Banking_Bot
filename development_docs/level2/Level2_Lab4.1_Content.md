@@ -4,7 +4,7 @@ You'll edit `domain/basics.yml` so Rasa knows about your actions. Without this s
 
 #### Domain structure (Level 2)
 
-Your domain has `responses:` (from Level 1) and now an `actions:` section. The actions list is a YAML list—each action on its own line with a dash. The name must match exactly what the action's `name()` method returns (e.g. `"action_bank_hours"`), and use lowercase with underscores.
+Your domain has `responses:` from Level 1 and now an `actions:` section. The actions list is a YAML list, each action on its own line with a dash. The name must match exactly what the action's `name()` method returns, for example `"action_bank_hours"`, and use lowercase with underscores.
 
 ```yaml
 # In domain/basics.yml, top level (same indentation as responses:)
@@ -17,10 +17,10 @@ actions:
 
 Add an `actions:` section to `domain/basics.yml` and register **both**:
 
-- **action_bank_hours** – the example action you studied in the units  
-- **action_holiday_hours** – the action you created in Lab 3.1  
+- **action_bank_hours**, the example action you studied in the earlier units
+- **action_holiday_hours**, the action you created in **Lab 3.1**
 
-The Level 2 starter does **not** include an `actions:` section yet; you add it in this lab. Each action must appear as a list item under `actions:` (e.g. `- action_bank_hours`).
+The Level 2 starter does **not** include an `actions:` section yet. You add it in this lab. Each action must appear as a list item under `actions:`, for example `- action_bank_hours`.
 
 ---
 
@@ -48,11 +48,11 @@ actions:
 ```
 
 Important:
-- `actions:` is at the same indentation level as `responses:` (top-level key)
+- `actions:` is at the same indentation level as `responses:`. Both are top-level keys.
 - The dash (`-`) indicates a list item
 - Action names must match exactly what each action’s `name()` method returns
 
-**Common mistakes**: wrong action name (e.g. `action_bank_hour`), missing dash, wrong indentation, or a name that doesn’t match `name()`.
+**Common mistakes** include a wrong action name such as `action_bank_hour`, a missing dash, wrong indentation, or a name that does not match `name()`.
 
 ---
 
@@ -60,8 +60,10 @@ Important:
 
 - `actions:` section exists
 - Both `action_bank_hours` and `action_holiday_hours` are listed
-- YAML is valid (correct indentation and dashes)
+- YAML is valid with correct indentation and list dashes
 
 Run the assessment when you're done.
+
+{Check It!|assessment}(code-output-compare-1451983168)
 
 Optional: after the assessment, see Level 1 **Lab 6.2** to try the agent in the Inspector.

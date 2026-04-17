@@ -48,14 +48,14 @@ No venv, model recency, or action file checks. **Verdict**: Fully aligned (4 poi
 
 ---
 
-## Lab 6.2: Training and Testing (domain + training)
+## Lab 6.2: Training and Testing (Inspector log only)
 
 | Content step (Unit 6 / Lab 6.2) | Assessment check | Aligned? |
 |----------------------------------|------------------|----------|
-| Lab 4.1 done (both actions in domain) | Lab 6.2 grader runs lab_4.1_grader.sh | ✓ |
-| Train from level2 (model file exists) | Check 7: level2/models/*.tar.gz exists | ✓ |
+| Run `rasa inspect` with `--log-file logs/logs.out` from `level2/` | Check 1: `level2/logs/logs.out` exists | ✓ |
+| Log shows Inspector / server started | Check 2: log matches expected patterns | ✓ |
 
-**Verdict**: Fully aligned (11 points). Grader: `lab_4.2_grader.sh`. TaskId: code-output-compare-1597644299.
+**Verdict**: Fully aligned (11 points). Grader: `lab_6.2_grader.sh`. TaskId: code-output-compare-1597644299. Domain and training are assessed in Lab 4.1 and Lab 6.1.
 
 ---
 
@@ -65,6 +65,6 @@ No venv, model recency, or action file checks. **Verdict**: Fully aligned (4 poi
 |-----|-----------|--------|
 | 3.1 | Full | Grader includes only what the lab instructs: action file, imports, datetime, class, name(), run() (8 pts) |
 | 4.1 | Full | Domain actions section, both actions, valid YAML; no venv (11 pts) |
-| 4.2 | Full | Runs 4.1 checks + model file in level2/models/ (11 pts) |
+| 6.2 | Full | Inspector log only: level2/logs/logs.out + evidence of inspect run (11 pts) |
 | 5.1 | Full | hours.yml + holiday_hours.yml flows and actions; name/description only for holiday_hours; no venv (12 pts) |
 | 6.1 | Full | Model exists, no errors in logs; no venv, recency, or action file (4 pts) |

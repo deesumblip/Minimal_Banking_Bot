@@ -39,7 +39,7 @@ The grader checks that the file exists, has the right structure, imports, `datet
 Before the Code Test, confirm your pasted file matches what you submitted in the fill-in exercise:
 
 - File is under **`level2/actions/`** and named **`action_holiday_hours.py`**
-- You import **`datetime`** and use it (e.g. **`datetime.now()`**) to choose the message
+- You import **`datetime`** and use it, for example **`datetime.now()`**, to choose the message
 - Class is **`ActionHolidayHours(Action)`**
 - **`name()`** returns **`"action_holiday_hours"`**
 - **`run()`** calls **`dispatcher.utter_message()`** and returns **`[]`**

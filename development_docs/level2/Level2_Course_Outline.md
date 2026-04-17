@@ -147,7 +147,7 @@
   - Error: Action Not Found
   - Error: Import Error
   - Error: Name Mismatch
-- Lab 6.2: Training and Testing (domain + model file check; Inspector testing + debug checklist)
+- Lab 6.2: Training and Testing (Inspector testing + debug checklist; graded check: `level2/logs/logs.out` from `rasa inspect` only)
 - **6.4 See it all together** (stem `6-4-Level-2-Wrap-Up-d798`)
   - Full conversation example (Level 1 + example action + your Lab 3.1 action)
   - Project structure at a glance; best practices; **5×** Check It! MCQs
@@ -214,7 +214,7 @@
 | Unit 4 | Lab 4.1 | 11 | Standard Code Test | `lab_4.1_grader.sh` |
 | Unit 5 | Lab 5.1 | 12 | Standard Code Test | `lab_5.1_grader.sh` |
 | Unit 6 | Lab 6.1 | 4 | Standard Code Test | `lab_6.1_grader.sh` |
-| Unit 6 | Lab 6.2 | 11 | Code Output Compare | `lab_4.2_grader.sh` (domain + model file) |
+| Unit 6 | Lab 6.2 | 11 | Code Output Compare | `lab_6.2_grader.sh` (Inspector log file only) |
 
 **Total Assessment Points**: 51 points (5 + 8 + 11 + 12 + 4 + 11)
 

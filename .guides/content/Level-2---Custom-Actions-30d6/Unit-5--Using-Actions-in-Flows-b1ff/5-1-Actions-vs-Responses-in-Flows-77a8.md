@@ -1,4 +1,4 @@
-Now that your actions are registered in the domain (Lab 4.1), you need flows that call them: the example **hours** flow and your **holiday_hours** flow. In Level 1, flows used only `utter_*` responses. In Level 2, flows can also call `action_*` custom actions.
+Now that you have registered your actions in the domain in **Lab 4.1**, you need flows that call them: the example **hours** flow and your **holiday_hours** flow. In Level 1, flows used only `utter_*` responses. In Level 2, flows can also call `action_*` custom actions.
 
 #### Level 1 flow (response)
 
@@ -22,7 +22,7 @@ flows:
       - action: action_bank_hours  # ← Uses an action
 ```
 
-**What changes:** names starting with `utter_` refer to predefined text in the domain; names starting with `action_` refer to Python in `actions/`. In both cases you still write `- action:` under `steps:`—Rasa decides which kind of step it is from the name.
+**What changes:** names starting with `utter_` refer to predefined text in the domain; names starting with `action_` refer to Python in `actions/`. In both cases you still write `- action:` under `steps:`. Rasa decides which kind of step it is from the name.
 
 #### Mixing responses and actions in one flow
 
@@ -40,7 +40,7 @@ flows:
 
 **Execution order**
 
-1. **`action_bank_hours`** runs first (dynamic hours message).
-2. **`utter_contact`** runs next (static contact text).
+1. **`action_bank_hours`** runs first and sends the dynamic hours message.
+2. **`utter_contact`** runs next and sends the static contact text.
 
 ---
