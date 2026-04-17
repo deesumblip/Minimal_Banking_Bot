@@ -2,7 +2,7 @@
 
 ## Overview
 
-Lab 6.2 is hands-on **Rasa Inspector** testing from **`level2/`**: students run `mkdir -p logs` (or `mkdir logs` on Windows PowerShell), then `python -m rasa inspect --debug --log-file logs/logs.out`. Domain and training are assessed elsewhere (**Lab 4.1**, **Lab 6.1**).
+Lab 6.2 is hands-on **Rasa Inspector** testing from **`level2/`**: students create a **`logs`** folder with `mkdir -p logs` or `mkdir logs` on Windows PowerShell, then run `python -m rasa inspect --debug --log-file logs/logs.out`. Domain and training are assessed elsewhere (**Lab 4.1**, **Lab 6.1**).
 
 **Graded assessment** verifies only that the student ran Inspector with the lab’s log path: **`level2/logs/logs.out`** exists and contains evidence that Inspector / the server started (same idea as Level 1 Lab 6.2’s log check).
 

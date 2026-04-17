@@ -6,7 +6,7 @@ You’ve already trained your Level 2 agent in **Lab 6.1**. This lab is about **
 
 #### Step 1: Start Inspector
 
-From the `level2` folder, ensure a `logs` directory exists, then start Inspector and write logs to `logs/logs.out`. In **Codio** or **macOS / Linux**, use `mkdir -p logs`. In **Windows PowerShell**, use `mkdir logs` if the folder is not there yet.
+From the `level2` folder, create the `logs` folder, then start Inspector and write logs to `logs/logs.out`. In **Codio** or **macOS / Linux**, run `mkdir -p logs`. In **Windows PowerShell**, run `mkdir logs`.
 
 ```bash
 mkdir -p logs
