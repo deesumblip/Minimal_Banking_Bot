@@ -112,7 +112,7 @@ All corresponding JSONs exist under `.guides/assessments/` with matching `taskId
   - Guide: `Unit-4--Registering-Actions-in-the-Domain-a7fc/Lab-4-1--Registering-Actions-in-the-Domain-3406.md`.
   - Assessment: `{Check It!|assessment}(code-output-compare-1451983168)`.
   - JSON: `.guides/assessments/code-output-compare-1451983168.json`.
-- **Lab 6.2 – Verify Domain and Training** (Unit 6, right after Lab 6.1)
+- **Lab 6.2 – Training and Testing** (Unit 6, right after Lab 6.1)
   - Guide: `Unit-6--Training-and-Testing-with-Actions-b86b/Lab-6-2--Verify-Domain-and-Training-2289.md`.
   - Assessment: `{Check It!|assessment}(code-output-compare-1597644299)`.
   - JSON: `.guides/assessments/code-output-compare-1597644299.json`.

@@ -34,7 +34,7 @@ Students train, open Inspector, and try:
 
 ---
 
-## 3. **Lab 6.2 (Verify Domain and Training)** — main place
+## 3. **Lab 6.2 (Training and Testing)** — main place
 
 **Modification so far:** Everything is in place (actions, domain, flows); students are doing formal testing.
 

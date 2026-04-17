@@ -1,4 +1,4 @@
-# Lab 6.2: Verify Domain and Training
+# Lab 6.2: Training and Testing
 
 You've now registered both actions in the domain (Unit 4), connected them to flows (Lab 5.1), and trained (Lab 6.1). This lab verifies that your agent is **ready to run**:
 
@@ -7,7 +7,7 @@ You've now registered both actions in the domain (Unit 4), connected them to flo
 
 ---
 
-#### Optional: Test and debug in Inspector
+#### Test and debug in Inspector
 
 Use the steps below to run the Level 2 agent and confirm that both flows and actions trigger correctly.
 
@@ -31,6 +31,14 @@ python -m rasa train
 ```
 
 Wait for training to finish and for a new `.tar.gz` to appear under `models/`.
+
+---
+
+#### Run the assessment
+
+Submit the Check It! below once you meet the checks (domain registration and a trained model under `models/`).
+
+{Check It!|assessment}(code-output-compare-1597644299)
 
 5. **Start Inspector:** run the server and write logs to `logs/logs.out`:
 
@@ -63,7 +71,5 @@ With `--debug` and the log file from step 5, use Inspector’s debug output (and
 1. **Action doesn't trigger** — Does the flow `description` match what the user said? Is the action listed under `actions:` in the domain? Does the Python file exist under `actions/`?
 2. **Action runs but no message** — Is `dispatcher.utter_message()` called? Check `logs/logs.out` for Python errors.
 3. **Python errors** — Fix syntax, imports, and method names (`name()`, `run()`, etc.), then train again.
-
----
-
+ 
 Submit the **Check It!** in the Codio guide once you meet the checks (domain registration and a trained model; assessment `code-output-compare-1597644299`).

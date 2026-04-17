@@ -1,4 +1,4 @@
-# Lab 6.2: Verify Domain and Training – Assessment Setup
+# Lab 6.2: Training and Testing – Assessment Setup
 
 ## Overview
 

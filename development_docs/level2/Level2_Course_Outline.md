@@ -98,7 +98,7 @@
 - 4.1 Why Register Actions?
 - Lab 4.1: Registering Actions in the Domain
 
-*(Lab 6.2: Verify Domain and Training appears in Unit 6, right after Lab 6.1.)*
+*(Lab 6.2: Training and Testing appears in Unit 6, right after Lab 6.1.)*
 
 **Key Concepts**: Domain registration, YAML syntax, action naming
 
@@ -139,7 +139,7 @@
 
 ### Unit 6: Training, Testing, and Level 2 Wrap-Up
 **Type**: Lab (with Assessments) + closing content page  
-**Assessments**: Lab 6.1 - Training and Testing with Actions (4 points). Lab 6.2 - Verify Domain and Training (11 points; right after Lab 6.1). **6.4** embeds five multiple-choice Check It! items on the page (not part of the 51 graded lab points).
+**Assessments**: Lab 6.1 - Training and Testing with Actions (4 points). Lab 6.2 - Training and Testing (11 points; right after Lab 6.1). **6.4** embeds five multiple-choice Check It! items on the page (not part of the 51 graded lab points).
 
 **Sections**:
 - Lab 6.1: Training and Testing with Actions (training overview, `cd level2` + `rasa train`, assessment)
@@ -147,7 +147,7 @@
   - Error: Action Not Found
   - Error: Import Error
   - Error: Name Mismatch
-- Lab 6.2: Verify Domain and Training (domain + model file check; optional Inspector testing + debug checklist)
+- Lab 6.2: Training and Testing (domain + model file check; Inspector testing + debug checklist)
 - **6.4 See it all together** (stem `6-4-Level-2-Wrap-Up-d798`)
   - Full conversation example (Level 1 + example action + your Lab 3.1 action)
   - Project structure at a glance; best practices; **5×** Check It! MCQs
@@ -240,7 +240,7 @@ Content is split by subsection (one file per numbered subsection). Examples:
 ### Assessment Files (Implementation Instructions)
 - `Level2_Lab3.1_Content.md` / `Level2_Lab3.1_Assessment_Setup.md` - Lab 3.1 (student page + implementer doc)
 - `Level2_Lab4.1_Content.md` / `Level2_Lab4.1_Assessment_Setup.md` – Lab 4.1
-- `Level2_Lab6.2_Content.md` / `Level2_Lab6.2_Assessment_Setup.md` – Lab 6.2 (Verify Domain and Training)
+- `Level2_Lab6.2_Content.md` / `Level2_Lab6.2_Assessment_Setup.md` – Lab 6.2 (Training and Testing)
 - `Level2_Lab5.1_Content.md` / `Level2_Lab5.1_Assessment_Setup.md` - Lab 5.1
 - `Level2_Lab6.1_Content.md` / `Level2_Lab6.1_Assessment_Setup.md` - Lab 6.1
 

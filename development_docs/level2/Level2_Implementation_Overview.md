@@ -19,7 +19,7 @@ This document provides implementation guidance for **Level 2: Simple Actions** o
 - Student-facing lab content is in `Level2_Lab*_Content.md`; full setup (grader, config) is in `Level2_Lab*_Assessment_Setup.md` (synced to Codio Lab-Implementation folder):
   - `Level2_Lab3.1_Content.md` / `Level2_Lab3.1_Assessment_Setup.md` - Lab 3.1: Creating Your Own Action
   - `Level2_Lab4.1_Content.md` / `Level2_Lab4.1_Assessment_Setup.md` - Lab 4.1: Registering Actions in the Domain
-  - `Level2_Lab6.2_Content.md` / `Level2_Lab6.2_Assessment_Setup.md` - Lab 6.2: Verify Domain and Training (domain + training; has own grader; in Unit 6 after Lab 6.1)
+  - `Level2_Lab6.2_Content.md` / `Level2_Lab6.2_Assessment_Setup.md` - Lab 6.2: Training and Testing (domain + training; has own grader; in Unit 6 after Lab 6.1)
   - `Level2_Lab5.1_Content.md` / `Level2_Lab5.1_Assessment_Setup.md` - Lab 5.1: Using Actions in Flows
   - `Level2_Lab6.1_Content.md` / `Level2_Lab6.1_Assessment_Setup.md` - Lab 6.1: Training and Testing with Actions
 

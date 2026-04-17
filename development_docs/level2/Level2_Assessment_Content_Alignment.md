@@ -48,7 +48,7 @@ No venv, model recency, or action file checks. **Verdict**: Fully aligned (4 poi
 
 ---
 
-## Lab 6.2: Verify Domain and Training (domain + training)
+## Lab 6.2: Training and Testing (domain + training)
 
 | Content step (Unit 6 / Lab 6.2) | Assessment check | Aligned? |
 |----------------------------------|------------------|----------|
