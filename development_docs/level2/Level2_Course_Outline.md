@@ -147,8 +147,7 @@
   - Error: Action Not Found
   - Error: Import Error
   - Error: Name Mismatch
-- 6.3 Testing and Debugging Your Action (workflow, Inspector, debug panel, common issues)
-- Lab 6.2: Verify Domain and Training (domain + model file check; optional Inspector)
+- Lab 6.2: Verify Domain and Training (domain + model file check; optional Inspector testing + debug checklist)
 - **6.4 See it all together** (stem `6-4-Level-2-Wrap-Up-d798`)
   - Full conversation example (Level 1 + example action + your Lab 3.1 action)
   - Project structure at a glance; best practices; **5×** Check It! MCQs

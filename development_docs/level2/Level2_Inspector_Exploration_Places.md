@@ -34,7 +34,7 @@ Students train, open Inspector, and try:
 
 ---
 
-## 3. **Unit 6.3 (Testing your action)** — main place
+## 3. **Lab 6.2 (Verify Domain and Training)** — main place
 
 **Modification so far:** Everything is in place (actions, domain, flows); students are doing formal testing.
 
@@ -45,7 +45,7 @@ This is already the main “test in Inspector” moment. It’s the right place 
 - Which **action** ran (e.g. `action_bank_hours` vs `action_holiday_hours`).
 - How the **message** varies (e.g. date-based for holiday hours).
 
-**Suggested placement:** In **6.3**, add a sentence or two: when testing in Inspector, **observe** which flow and action are shown (e.g. in the debug/flow view) so you can see how your code and YAML changes map to behavior.
+**Suggested placement:** In **Lab 6.2**, add a sentence or two: when testing in Inspector, **observe** which flow and action are shown (e.g. in the debug/flow view) so you can see how your code and YAML changes map to behavior.
 
 ---
 
@@ -66,7 +66,7 @@ The walkthrough describes the same kind of conversation students can have in Ins
 |---------------------------|--------------------------------------------------------|----------------------------------------------------|
 | After Unit 4 (optional)   | Hours works; holiday hours often doesn’t (no flow)    | Need a flow that uses the action → Unit 5          |
 | After Unit 5 (optional)   | Both questions work; both flows trigger                | My changes show up in the agent → Unit 6             |
-| Unit 6.3                  | Which flow/action run; how messages vary               | Connect edits to observable behavior               |
+| Lab 6.2                   | Which flow/action run; how messages vary               | Connect edits to observable behavior               |
 | Unit 7.1                  | Walkthrough = what you’d see in Inspector              | Inspector is where you see the full picture        |
 
-The **must-have** is **Unit 6.3** (already there; can add explicit “observe flow/action in Inspector”). The **after Unit 4** and **after Unit 5** checkpoints are **optional** and work well if you want students to “explore early” and see how each modification step changes Inspector behavior.
+The **must-have** is **Lab 6.2** (already there; can add explicit “observe flow/action in Inspector”). The **after Unit 4** and **after Unit 5** checkpoints are **optional** and work well if you want students to “explore early” and see how each modification step changes Inspector behavior.

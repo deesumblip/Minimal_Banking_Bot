@@ -41,8 +41,8 @@
 
 **Content changes:**
 - **6.1:** No structural change; training still loads all actions and flows.
-- **6.3 Testing:** Add a bullet: *"Test both flows: ask about regular hours and about holiday hours; confirm both your action and the example action run."*
-- **6.2 / 6.3:** Error content in 6.2; testing + debugging at end of **6.3** (former 6.4 merged there).
+- **Lab 6.2 testing:** Add a bullet: *"Test both flows: ask about regular hours and about holiday hours; confirm both your action and the example action run."*
+- **6.2 / Lab 6.2:** Error content in 6.2; testing + debugging in **Lab 6.2**.
 
 No grader change for Lab 6.1 (still "model exists, training succeeded"); the lab just benefits from students having both actions and flows.
 
@@ -85,7 +85,7 @@ No grader change for Lab 6.1 (still "model exists, training succeeded"); the lab
 | **Lab 4.1** | Grader: require `action_holiday_hours` in domain; student instructions: register both actions. |
 | **Unit 5 content** | Lab 5.1: add "Your flow: holiday_hours.yml" using action_holiday_hours. |
 | **Lab 5.1** | Grader: require holiday_hours.yml + structure + action_holiday_hours; student instructions: create hours.yml (if needed) and holiday_hours.yml. |
-| **Unit 6** | 6.3: add "test both regular and holiday hours." |
+| **Unit 6** | Lab 6.2: add "test both regular and holiday hours." |
 | **Unit 6 (6.4)** | Single page: walkthrough, both actions/flows, practices, MC check, recap, limitations, L3 preview, readiness (former Unit 7 and Unit 8 merged). |
 | **README** | Clarify example vs. your action; align exercises. |
 

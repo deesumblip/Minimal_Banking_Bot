@@ -564,7 +564,7 @@ Flow creation (`hours.yml`, `holiday_hours.yml`) is covered in **Lab 5.1**; see 
 
 ## Unit 6: Training, Testing, and Level 2 Wrap-Up
 
-**Codio guide:** Student-facing pages include **Lab 6.1** (`Lab-6-1--Training-and-Testing-with-Actions-7710.md`), **6.2**, **Lab 6.2**, **6.3**, **6.4** *See it all together* (`6-4-Level-2-Wrap-Up-d798.md` — integration, practices, knowledge check), and **6.5** *Before you continue* (`6-5-Core-Ideas-and-Level-3-Readiness-b91a.md` — short checkpoint; handoff to Level 3 Unit 0). The subsections below are the full instructor reference (including local PowerShell).
+**Codio guide:** Student-facing pages include **Lab 6.1** (`Lab-6-1--Training-and-Testing-with-Actions-7710.md`), **6.2**, **Lab 6.2**, **6.4** *See it all together* (`6-4-Level-2-Wrap-Up-d798.md` — integration, practices, knowledge check), and **6.5** *Before you continue* (`6-5-Core-Ideas-and-Level-3-Readiness-b91a.md` — short checkpoint; handoff to Level 3 Unit 0). The subsections below are the full instructor reference (including local PowerShell).
 
 ### 6.1 Training with Actions
 
@@ -655,7 +655,7 @@ Error: Action name 'action_bank_hours' in domain doesn't match class name
 
 ---
 
-### 6.3 Testing and Debugging Your Action
+### Lab 6.2 (continued): Testing and Debugging Your Action
 
 #### Basic Testing Workflow
 

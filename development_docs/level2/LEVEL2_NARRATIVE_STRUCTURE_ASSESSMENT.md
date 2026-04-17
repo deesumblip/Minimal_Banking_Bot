@@ -1,6 +1,6 @@
 # Level 2: Narrative Structure Assessment
 
-Assessment of the **Level2_*** content and lab files read in sequence from start to finish. Intended order: **Unit 0 → 1 → 2 → [Lab 2.1] → Lab 3.1 (Unit 3) → Unit 4 → Lab 4.1 → Unit 5 → Lab 5.1 → Unit 6** (labs 6.1–6.2, pages 6.2–6.3, then **6.4** *See it all together*, **6.5** *Before you continue*; former Unit 7 / Unit 8 material split across those two pages).
+Assessment of the **Level2_*** content and lab files read in sequence from start to finish. Intended order: **Unit 0 → 1 → 2 → [Lab 2.1] → Lab 3.1 (Unit 3) → Unit 4 → Lab 4.1 → Unit 5 → Lab 5.1 → Unit 6** (labs 6.1–6.2, page 6.2, then **6.4** *See it all together*, **6.5** *Before you continue*; former Unit 7 / Unit 8 material split across those two pages).
 
 ---
 
@@ -70,7 +70,7 @@ Assessment of the **Level2_*** content and lab files read in sequence from start
 
 - **Repetition of "action you created in Lab 3.1" / "action_holiday_hours":** Used in 4.2, 4.3, 4.4, Lab 5.1, 7.1. This reinforces the thread without feeling heavy.
 - **Recap of structure (imports, name(), run(), return []):** In Unit 1.3, 2.1, Lab 3.1. Appropriate for learning; Lab 3.1 ties it to "your" action and ends with execution steps.
-- **Training/testing:** **Lab 6.1** explains training; **6.3** describes Inspector testing and debugging tips; **6.4** shows a full conversation and closes the level. No unnecessary duplication.
+- **Training/testing:** **Lab 6.1** explains training; **Lab 6.2** covers Inspector testing and debugging tips; **6.4** shows a full conversation and closes the level. No unnecessary duplication.
 
 **Verdict:** Redundancy is controlled and supports the narrative. Pacing (concepts → one hands-on create → register → flow → train → integrate → review) is good.
 
@@ -89,7 +89,7 @@ Assessment of the **Level2_*** content and lab files read in sequence from start
 | Lab 4.1 | ✓ | "register both …" | — |
 | Unit 5 | ✓ | "action you created in Lab 3.1", → Unit 6 | Optional bridge at 5.1 |
 | Lab 5.1 | ✓ | "example flow" + "your flow" | — |
-| Unit 6 | ✓ | 6.3 tests both flows | 6.1: mention holiday_hours.yml / action_holiday_hours in training |
+| Unit 6 | ✓ | Lab 6.2 tests both flows | 6.1: mention holiday_hours.yml / action_holiday_hours in training |
 | Lab 6.1 | ✓ | — | — |
 | 6.4 / 6.5 | ✓ | **6.4** *See it all together*: trace + map + practices + MC check; **6.5** *Before you continue*: readiness + Level 3 handoff | — |
 

@@ -11,6 +11,6 @@ python -m rasa train
 
 When that command runs, Rasa loads flows from **`data/`**—including **`hours.yml`**, **`holiday_hours.yml`**, and your unchanged Level 1 flows. It loads **`domain/`** (Level 1 responses and every entry under **`actions:`**). It checks that each registered action has a matching file under **`actions/`**, with a proper class and a **`name()`** that matches the domain. It then writes a **`.tar.gz`** into **`models/`** that includes that registration.
 
-After a successful run, use **section 6.3** for Inspector test prompts and **Lab 6.2** for Inspector setup (including Codio port forwarding) and the extra domain/training verification assessment.
+After a successful run, use **Lab 6.2** for Inspector setup plus a short testing checklist (example prompts, debug panel, common issues), and the extra domain/training verification assessment.
 
 Submit the **Check It!** in the Codio guide once training has finished without errors and **`level2/models/`** contains at least one new **`.tar.gz`** (assessment `code-output-compare-1070925386`).

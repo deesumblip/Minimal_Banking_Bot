@@ -165,7 +165,7 @@ For Unit 6 (Testing with Actions), configure the terminal so students can "jump 
 - `Level2_Lab3.1_Content.md`, `Level2_Unit3_Content_3.2_*` (stub; execution text is in Lab 3.1) — Unit 3
 - `Level2_Unit4_Content.md` - Registering Actions in the Domain
 - `Level2_Unit5_Content.md` - Using Actions in Flows
-- `Level2_Unit6_Content_6.2_*.md`, `6.3_*.md`, `6.4_*.md` - Training, testing, debugging, and **Level 2 wrap-up** (single **6.4** page; former standalone Unit 7 and Unit 8 merged here)
+- `Level2_Unit6_Content_6.2_*.md`, `6.4_*.md` - Training (Lab 6.1), errors (6.2), testing/debugging (Lab 6.2), and **Level 2 wrap-up** (single **6.4** page; former standalone Unit 7 and Unit 8 merged here)
 - `Level2_Troubleshooting_Content.md` - Troubleshooting Guide
 - `Level2_AdditionalResources_Content.md` - Extension Exercises
 

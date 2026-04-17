@@ -50,6 +50,6 @@ flows:
 - Each flow has `name:`, `description:`, and `steps:` with the correct action
 - YAML syntax is correct (spaces, no tabs)
 
-Run the **Lab 5.1 assessment** when you're done. In Unit 6 you'll train and test both flows; **section 6.3** and optional **Lab 6.2** walk through Inspector and example questions.
+Run the **Lab 5.1 assessment** when you're done. In Unit 6 you’ll train and test both flows; **Lab 6.2** includes Inspector setup, example questions, and debugging tips.
 
 {Check It!|assessment}(code-output-compare-389374509)
