@@ -1,28 +1,36 @@
+We’ve all heard a lot of names for systems that can “talk”: *agents*, *digital assistants*, *virtual agents*, or more recently just *agents*. Names have changed over the years, but the core idea hasn’t: these are **conversational interfaces**. Systems that communicate with humans in natural language.
 
-Chatbots, digital assistants, virtual agents. The labels change, but the idea is steady: software that talks with people in **natural language**. This course uses **conversational agent**, or **agent** for short.
+In this course, we’ll use the term **conversational agent**, or simply **agent**. With Rasa, you’re not just wiring up scripts that return canned replies. You’re building **dialogue systems that can manage conversations across a spectrum of autonomy**, from fully guided flows to semi- or fully autonomous interactions.
 
-Shipping one is harder than it sounds. Users paraphrase, change their minds, and expect the system to track what they just said. **Rasa** exists to build **dialogue systems** that can span the whole range from **guided, step-by-step flows** to behavior that **reasons and uses tools**. Not canned replies or a decision tree with a thin coat of “AI.”
+---
 
-#### What good agents get right
+## Types of Agent skills you can build with Rasa
 
-First, **understanding**: mapping many phrasings to the same goal and using **context** so follow-ups still make sense. For example, someone might say “What are your hours?”, then “And on Sundays?”, then “When can I stop by?” A brittle system treats those as unrelated strings. A capable agent treats them as one conversation.
+**Guided Skills:** Also known as "flows" in Rasa 
+- ✅ Pros: predictable, no hallucinations  
+- ❌ Cons: rigid; conversations can feel robotic  
+- Best for regulated or process-heavy scenarios where the steps are clear and the system should not deviate. 
 
-Second, **memory**: state carried from turn to turn so people are not repeating themselves. Rasa supports this. **rich memory** appears in **Level 3**, while **Level 1** stays deliberately small.
+**Fully-Autonomous Skills:**  Also known as "sub-agents" in Rasa. Chains of reasoning that can decide how to accomplish a goal using a set of tools  
+- ✅ Pros: flexible, great for open-ended, exploratory, or research-driven conversations  
+- ❌ Cons: needs careful design to stay accurate and reliable
+- Best for open-ended consultation, research, or negotiation. 
 
-Third, **dialogue management**: the layer that decides each turn whether to clarify, move a flow forward, call a **tool**, or end. Without those decisions, you have a lookup table, not an agent.
+**Hybrid Skills:**  A skill that combines both structured steps of a flow and a sub-agent
+- Flexibility when you need it, precision when you want it.  
 
-#### Rule-based, autonomous, and hybrid agents
+---
 
-Design is a tradeoff about how much freedom you give the system. **Rule-based** agents follow fixed scripts. They are predictable and safe for strict processes such as **compliance** workflows and **onboarding**, but they struggle when users go off-script. **Fully autonomous** agents take a goal plus **tools** and reason toward an outcome. They suit open-ended tasks but need careful design so flexibility does not turn into chaos.
+## What you will learn
 
-**Hybrid** agents mix **guided flows** with more open-ended steps. **Rasa is aimed at that blend**: precision where you need it, flexibility where you do not. Most serious production agents end up hybrid, and this course prepares you for that path.
+By the end of this course, you’ll be able to build agents that handle:
 
-#### Why Rasa Pro and CALM
+- **Dialogue Understanding** – Use language models to truly understand the intent of your users and what they want to accomplish.  
+- **Guided Skills** – Build predictable, maintainable flows that don’t hallucinate.  
+- **Autonomous Skills** – ReAct-style sub-agents that can reason and act using tools.  
+- **Memory** – Capture, store, and leverage conversation data to inform decisions and update systems.  
+- **Orchestration** – Combine guided and autonomous skills into a single agent.
 
-Rasa has years of production use. The framework is built for **dialogue**. Understanding, memory, reasoning, and orchestration in one place. Instead of generic ML pieces you wire up yourself. **Rasa Pro** with **CALM** adds **LLM-powered understanding** and **flow-based structure**, so you can start with a modest agent and grow without throwing your work away.
-
-#### What you will do in this course
-
-The levels stack. **Level 1** gives you concepts, terminology, **flows**, and **responses**. The mental model for everything after. As you continue, you will move toward agents that cover varied phrasing, dependable flows, tools where they matter, and stronger context, wired together as **one orchestrated system**.
+By the end of this course, you’ll have an **intelligent agent** that can think, act, and remember.
 
 ---

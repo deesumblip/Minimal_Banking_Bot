@@ -18,4 +18,4 @@ Files involved: `data/system/patterns/patterns.yml` (session start), `domain/bas
 
 1. **Start Inspector** (if not already running).
 2. **Have a complete conversation**: Open a new session (triggers `pattern_session_start`), ask for help, ask for contact info, end the conversation.
-3. **Observe**: Which flow triggers for each message. Use debug output to see LLM understanding. See how flows and responses connect.
+3. **Observe**: Which flow is activated for each message. Use debug output to see LLM understanding. See how flows and responses connect.

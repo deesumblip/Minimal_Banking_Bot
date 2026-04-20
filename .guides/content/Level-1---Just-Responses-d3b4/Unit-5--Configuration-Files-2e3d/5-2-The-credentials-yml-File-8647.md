@@ -1,10 +1,6 @@
+`credentials.yml` defines how your agent connects to chat interfaces. You do not need to modify this file in this course.
 
-
-The `credentials.yml` file defines **how the agent connects to chat interfaces**.
-
-**File Location**: `credentials.yml` (root of your agent folder)
-
-#### Complete credentials.yml Breakdown
+File Location: `credentials.yml` (root of your agent folder)
 
 ```yaml
 rest:
@@ -15,38 +11,15 @@ socketio:
   user_message_evt: user_uttered
 ```
 
-#### Section-by-Section Explanation
+| Field | What it does |
+|---|---|
+| `rest` | Enables the REST API channel. Empty means use defaults. |
+| `socketio` | Enables the Socket.IO channel, used by the Rasa Inspector for testing in this course. |
+| `bot_message_evt` | The event name emitted when the agent sends a message. |
+| `session_persistence` | Keeps conversation state across messages. Required for multi-turn conversations. |
+| `user_message_evt` | The event name emitted when the user sends a message. |
 
-1. **`rest:`** (empty)
-   - Enables REST API access
-   - Allows programmatic access to the agent
-   - Empty means "use defaults"
-
-2. **`socketio:`**
-   - Enables Socket.IO interface
-   - This is what Inspector uses for testing
-   - Required for the web-based testing interface
-
-3. **`bot_message_evt: bot_uttered`**
-   - Event name when agent sends a message
-   - Technical detail - usually don't need to change
-
-4. **`session_persistence: true`**
-   - Keeps conversation state between messages
-   - Required for multi-turn conversations
-   - Should always be `true`
-
-5. **`user_message_evt: user_uttered`**
-   - Event name when user sends a message
-   - Technical detail - usually don't need to change
-
-#### When You'd Modify This
-
-- **Add Slack**: Add a `slack:` section with your Slack credentials
-- **Add Teams**: Add a `msteams:` section
-- **Add custom channel**: Add your custom channel configuration
-
-For Level 1, you typically don't need to modify this file.
+To connect additional channels such as Slack, Twilio, or a custom interface, add the relevant section to this file with the required credentials. Each channel Rasa supports has its own configuration block.
 
 {Check It!|assessment}(multiple-choice-372693770)
 

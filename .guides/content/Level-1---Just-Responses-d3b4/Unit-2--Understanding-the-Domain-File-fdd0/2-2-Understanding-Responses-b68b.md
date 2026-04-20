@@ -1,5 +1,5 @@
 
-A **response** is a predefined message the agent can send. You declare responses in the domain and **flows** decide when to use them. That pairing is the whole contract between content and behavior.
+A **response** is a predefined message the agent can send. Responses are defined in the domain file and used in flows.
 
 #### A real response from `domain/basics.yml`
 

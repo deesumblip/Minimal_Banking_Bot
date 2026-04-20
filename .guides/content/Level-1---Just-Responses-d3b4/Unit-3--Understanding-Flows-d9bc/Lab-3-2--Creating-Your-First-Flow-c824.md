@@ -1,13 +1,6 @@
 **Objective**: Create a new `goodbye.yml` flow that uses the `utter_goodbye` response from Lab 2.1.
 
-#### Before You Begin
-
-**Checklist**:
-- You've completed Lab 2.1 (created `utter_goodbye` in the domain)
-- You know where the `data/basics/` folder is
-- You have a text editor ready
-
-#### Step-by-Step Tutorial
+#### Steps
 
 **Step 1: Navigate to the Data Folder**
 

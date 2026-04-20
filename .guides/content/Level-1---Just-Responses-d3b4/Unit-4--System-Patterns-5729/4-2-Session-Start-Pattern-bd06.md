@@ -1,4 +1,4 @@
-The `pattern_session_start` flow automatically triggers when a new conversation begins.
+The `pattern_session_start` runs automatically when a new conversation begins, before the user says anything.
 
 #### How It Works
 
@@ -13,20 +13,11 @@ flows:
       - action: utter_greet
 ```
 
-#### Breaking It Down
 
-1. **`pattern_session_start`**: Special name Rasa recognizes
-   - Must be exactly this name
-   - Rasa automatically triggers this on new conversations
+`nlu_trigger` activates a flow on a specific intent rather than through the LLM Command Generator. Here it listens for `session_start`, a built-in intent Rasa fires when a new session opens. No user message needed.
 
-2. **`nlu_trigger: - intent: session_start`**: When to trigger
-   - `session_start` is a special intent Rasa generates
-   - Triggers automatically when conversation begins
-   - No user message needed
+This is the only place in this course you will see `nlu_trigger`. For everything else, the command generator reads skill `description:` to decide which flows or sub-agents to start. This pattern bypasses that process entirely and activates on a system event instead.
 
-3. **`steps: - action: utter_greet`**: What to do
-   - Executes when pattern triggers
-   - In this case, greets the user
 
 #### Conversation Flow
 
@@ -35,16 +26,15 @@ User opens chat
     ↓
 Rasa detects new session
     ↓
-pattern_session_start triggers automatically
+pattern_session_start activates automatically
     ↓
 Agent says utter_greet
     ↓
 User sees: "Hi! I'm a banking assistant..."
 ```
 
-**Key Point**: The user doesn't need to say anything - the agent greets them automatically.
+**Key Point**: The user doesn't need to say anything, the agent greets them automatically once the session starts.
 
 {Check It!|assessment}(multiple-choice-662755326)
-
 
 ---

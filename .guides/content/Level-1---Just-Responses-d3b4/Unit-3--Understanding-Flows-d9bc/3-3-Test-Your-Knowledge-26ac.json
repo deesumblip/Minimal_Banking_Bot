@@ -1,6 +1,6 @@
 {
 	"id": "26ac0075-299d-6b97-9314-39a1a9cdb79a",
-	"title": "3.4 Test Your Knowledge",
+	"title": "3.3 Test Your Knowledge",
 	"files": [
 		{
 			"path": "#tabs",
@@ -12,7 +12,8 @@
 		"level1"
 	],
 	"type": "page",
-	"contentType": "markdown", "content": "",
+	"contentType": "markdown",
+	"content": "",
 	"teacherOnly": false,
 	"closeTerminalSession": true,
 	"learningObjectives": "Confirm mastery of flow concepts through the embedded multiple-choice checks."
