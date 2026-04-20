@@ -1,4 +1,4 @@
-The `pattern_completed` flow handles what happens when a flow finishes.
+`pattern_completed` runs when a flow finishes and there is nothing else to do.
 
 ```yaml
 flows:
@@ -9,22 +9,7 @@ flows:
         next: END
 ```
 
-#### Breaking It Down
-
-1. **`pattern_completed`**: Special name Rasa recognizes
-   - Must be exactly this name
-   - Triggers when a flow completes
-
-2. **`- noop: true`**: No operation
-   - `noop` means "no operation" - do nothing
-   - Just a placeholder step
-
-3. **`next: END`**: End the conversation
-   - Tells Rasa the conversation is complete
-   - Agent waits for next user message
-
-#### When It Triggers
-
-After any flow completes, if there's nothing else to do, `pattern_completed` runs and the conversation ends (waits for next input).
+`noop` means no operation. The pattern takes no action and returns the agent to a ready state, waiting for the next user message. You can customize this in `patterns.yml` to add a closing message or leave as is and have the agent listen for further questions.
 
 ---
+

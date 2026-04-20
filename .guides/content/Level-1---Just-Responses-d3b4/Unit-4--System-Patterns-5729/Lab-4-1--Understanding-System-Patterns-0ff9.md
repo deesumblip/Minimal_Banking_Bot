@@ -1,19 +1,15 @@
-**Objective**: Explore system patterns and understand their purpose.
+**Objective:** Open the patterns file and identify what each pattern does.
 
 #### Steps
 
-1. **Open the Patterns File**
-   - Navigate to `data/system/patterns/patterns.yml
-`
-   - You should see both `pattern_session_start` and `pattern_completed`
+1. **Open the patterns file**
+   - Navigate to `data/system/patterns/patterns.yml`.
 
 2. **Examine `pattern_session_start`**
-   - Notice it has `nlu_trigger: - intent: session_start`
-   - Notice it automatically triggers (no user message needed)
-   - Notice what step it executes
+   - Find the `nlu_trigger` field. Remember how this is used to activate the session without a user input?
+   - What step does it run?
 
 3. **Examine `pattern_completed`**
-   - Notice it has `noop: true` and `next: END`
-   - Understand this marks the end of a conversation
+   - Find the `noop` step. Remember what this does when a flow finishes?
 
 {Check It!|assessment}(multiple-choice-643354025)

@@ -1,20 +1,18 @@
+The **domain file** is a Rasa agent's knowledge base. It defines everything the agent "knows":
+- What it can **say** (responses)
+- What it can **remember** (slots) - not in Level 1
+- What code it can **run** (actions) - not in Level 1
 
-The **domain file** is the agent’s knowledge base. It defines everything the agent is allowed to “know” in one place:
+**File Location**: `domain/basics.yml`
 
-- What it can **say**, using **responses**
-- What it could **remember**, using **slots** in later levels. **Level 1** does not use slots yet.
-- What code it could **run**, using **actions** in later levels. **Level 1** does not use actions yet.
+**Analogy**: The domain is like a dictionary that defines all the words (responses) the agent can use.
 
-**Where it lives:** `domain/basics.yml`.
+#### Domain Structure
 
-**Analogy:** The domain is like a dictionary of the phrases the agent is permitted to use. Flows choose *when* to speak. The domain defines *what* can be said.
-
-#### Domain structure
-
-A full Rasa domain may declare **responses**, **slots**, and **actions**, but **Level 1** only uses the **`responses:`** block:
+The domain file has three main sections (but Level 1 only uses `responses:`):
 
 ```yaml
-version: "3.1"        # Rasa version (always "3.1" for current Rasa Pro)
+version: "3.1"        # Rasa version (always "3.1")
 
 responses:            # ← Level 1: We use this section
                       # All predefined messages go here
@@ -22,10 +20,10 @@ responses:            # ← Level 1: We use this section
 slots:                # ← Level 3: Memory variables (not used in Level 1)
                       # Memory variables go here
 
-actions:              # ← Level 2: Custom Python code (not used in Level 1)
-                      # Custom Python code goes here
+actions:              # ← Level 2: Names of available actions (not used in Level 1)
+                      # Custom Python code goes in actions/
 ```
 
-⚠️ **For Level 1:** Put all canned messages under **`responses:`**. Leave **`slots:`** and **`actions:`** empty for now. Later units introduce memory and custom code when you are ready.
+⚠️ **For Level 1**: We only use the `responses:` section. The `slots:` and `actions:` sections are empty (we'll learn about them in later levels).
 
 ---

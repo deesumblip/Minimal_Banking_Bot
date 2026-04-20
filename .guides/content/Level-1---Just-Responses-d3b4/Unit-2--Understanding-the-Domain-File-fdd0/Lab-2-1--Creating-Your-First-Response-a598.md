@@ -1,6 +1,6 @@
 **Objective**: Add a new `utter_goodbye` response to your agent’s domain file.
 
-#### Step-by-step
+#### Steps
 
 **Step 1: Open the domain file**
 

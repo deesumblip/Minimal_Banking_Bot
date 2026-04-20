@@ -19,13 +19,6 @@ Test your agent with multiple phrasings so you see how the LLM matches different
 3. **Contact**: Try 3 different ways to ask for contact info.
 4. **Goodbye**: If you added a goodbye flow, test that too.
 
-For each test, note: what you said, which flow triggered, what the agent replied, and whether it matched your expectations. That makes it easier to spot when the wrong flow runs or a response is off.
+For each test, note: what you said, which flow was activated, what the agent replied, and whether it matched your expectations. That makes it easier to spot when the wrong flow runs or a response is off.
 
-#### Understanding flow triggers
-
-The LLM uses your flow descriptions to match user messages. For example:
-- **Flow**: `greet` with a description like "Greet the user when they start a conversation"
-- **User says**: "hello", "hi", "hey", "good morning"
-- **Result**: All of these can trigger the `greet` flow because the LLM treats them as greetings
-
-If the wrong flow triggers for something you said, improve that flow's description (or add examples) so the LLM can match it better.
+If the wrong flow is activated, improve that flow's description (or add examples) so the command generator can match it better.
