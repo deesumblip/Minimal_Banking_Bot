@@ -1,8 +1,14 @@
-# Publish this repo to multiple Codio assignments on every push to main.
+# Publish this repo to the Codio course on every push to main.
 #
-# Per-assignment mapping (which paths go to which assignment) lives in
-# .github/yaml_map/*.yml. Add or edit files in that folder to change the
-# fan-out without touching this workflow.
+# The publish is split into two steps:
+#   1. Whole-course assignment: published directly via `assignment-id:` with no
+#      yml mapping, preserving the original "publish everything" behaviour.
+#   2. Level-subset assignments (Level 1, Level 2, ...): published via
+#      `yml: ./.github/yaml_map`, which contains per-assignment mapping files
+#      that list `[Chapter, Section]` pairs and the file `paths` to copy.
+#
+# To fan out to a new level assignment, add a file in .github/yaml_map/.
+# To change what the whole-course assignment publishes, edit the first step.
 #
 # Docs: https://docs.codio.com/develop/develop/ide/tools/ghapi.html
 #
@@ -23,16 +29,28 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Publish to Codio
+      # Course ID is shared across every assignment in this repo.
+      # Per-assignment IDs below / in .github/yaml_map/*.yml.
+
+      - name: Publish whole-course assignment (Minimal_Banking_Bot)
         uses: codio/codio-assignment-publish-action@master
         with:
           client-id: ${{ secrets.CODIO_PRODUCTION_CLIENT_ID }}
           secret-id: ${{ secrets.CODIO_PRODUCTION_SECRET_ID }}
           dir: ./
-          # Course ID is shared across all three assignments in this repo.
-          # Per-assignment IDs live in .github/yaml_map/*.yml.
+          course-id: aa4e8b53acdf01910c922abe1cc3a79f
+          assignment-id: a5f4cb7c5fc7e8a37afb029730d1ae48
+          changelog: ${{ github.event.head_commit.message }}
+          # Set repo variable CODIO_DOMAIN to codio.co.uk if you use the UK site; otherwise codio.com
+          domain: ${{ vars.CODIO_DOMAIN || 'codio.com' }}
+
+      - name: Publish level-subset assignments (Level 1, Level 2)
+        uses: codio/codio-assignment-publish-action@master
+        with:
+          client-id: ${{ secrets.CODIO_PRODUCTION_CLIENT_ID }}
+          secret-id: ${{ secrets.CODIO_PRODUCTION_SECRET_ID }}
+          dir: ./
           course-id: aa4e8b53acdf01910c922abe1cc3a79f
           yml: ./.github/yaml_map
           changelog: ${{ github.event.head_commit.message }}
-          # Set repo variable CODIO_DOMAIN to codio.co.uk if you use the UK site; otherwise codio.com
           domain: ${{ vars.CODIO_DOMAIN || 'codio.com' }}
