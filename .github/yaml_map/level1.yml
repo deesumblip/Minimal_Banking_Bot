@@ -1,0 +1,20 @@
+# Publishes only Level 1 content and bot code to the Level 1 assignment.
+- assignment: ce3030d4a593a5a999172fae3be31ff1
+  section:
+    - "Level 1 - Just Responses"
+  paths:
+    # Level 1 bot code
+    - "level1/**"
+    # Level 1 guide content + top-level guide navigation
+    - ".guides/content/index.json"
+    - ".guides/content/Level-1---Just-Responses-d3b4/**"
+    # All assessments (Codio renders only those referenced by included pages)
+    - ".guides/assessments/**"
+    # Level 1 graders
+    - ".guides/secure/level1_graders/**"
+    # Shared guide scripts and startup hooks
+    - ".guides/scripts/**"
+    - ".guides/startup.sh"
+    # Shared box configuration
+    - ".codio"
+    - ".gitignore"

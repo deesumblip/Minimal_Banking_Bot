@@ -1,0 +1,12 @@
+# Publishes the full monorepo to the Minimal_Banking_Bot assignment.
+# Preserves the previous single-assignment behaviour (publish everything).
+- assignment: a5f4cb7c5fc7e8a37afb029730d1ae48
+  section:
+    - "Level 1 - Just Responses"
+    - "Level 2 - Custom Actions"
+    - "Level 3 - Slot Collection"
+    - "Level 4 - Multiple Slots"
+    - "Level 5 - Tool Calling"
+    - "Level 6 - Sub-Agents"
+  paths:
+    - "**"

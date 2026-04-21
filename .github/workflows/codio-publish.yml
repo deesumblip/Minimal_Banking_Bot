@@ -1,8 +1,13 @@
-# Publish this repo to a Codio assignment when code is pushed to main.
-# See CODIO_GITHUB_ACTIONS_SETUP.md for setup steps.
-# Docs: https://docs.codio.com/develop/develop/ide/tools/ghapi.html#implementing-workflow-actions
+# Publish this repo to multiple Codio assignments on every push to main.
 #
-# 404? Ensure assignment is published, then use course-id/assignment-id from the URL on the assignment Overview tab.
+# Per-assignment mapping (which paths go to which assignment) lives in
+# .github/yaml_map/*.yml. Add or edit files in that folder to change the
+# fan-out without touching this workflow.
+#
+# Docs: https://docs.codio.com/develop/develop/ide/tools/ghapi.html
+#
+# 404 from Codio usually means the assignment ID is wrong or the assignment
+# has never been published. Publish it manually once in Codio, then retry.
 
 name: codio-publish
 
@@ -18,19 +23,16 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # Optional: remove or modify files before Codio receives the project
-      # - name: Cleanup
-      #   run: rm -rf README.md
-
       - name: Publish to Codio
         uses: codio/codio-assignment-publish-action@master
         with:
           client-id: ${{ secrets.CODIO_PRODUCTION_CLIENT_ID }}
           secret-id: ${{ secrets.CODIO_PRODUCTION_SECRET_ID }}
           dir: ./
-          # IDs from Overview URL (path = course-id, assignmentId = assignment-id)
+          # Course ID is shared across all three assignments in this repo.
+          # Per-assignment IDs live in .github/yaml_map/*.yml.
           course-id: aa4e8b53acdf01910c922abe1cc3a79f
-          assignment-id: a5f4cb7c5fc7e8a37afb029730d1ae48
+          yml: ./.github/yaml_map
           changelog: ${{ github.event.head_commit.message }}
           # Set repo variable CODIO_DOMAIN to codio.co.uk if you use the UK site; otherwise codio.com
           domain: ${{ vars.CODIO_DOMAIN || 'codio.com' }}
