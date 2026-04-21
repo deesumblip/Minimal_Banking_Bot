@@ -1,5 +1,0 @@
-# Publishes the full monorepo to the Minimal_Banking_Bot assignment.
-# Preserves the previous single-assignment behaviour (publish everything).
-- assignment: a5f4cb7c5fc7e8a37afb029730d1ae48
-  paths:
-    - "**"

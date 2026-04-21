@@ -1,6 +1,13 @@
-# Publishes only Level 1 content and bot code to the Level 1 assignment.
+# Publishes Level 1 content and bot code to the Level 1 Codio assignment.
+#
+# Codio's yaml_map requires ONE entry per [Chapter, Section] pair
+# (see https://docs.codio.com/develop/develop/ide/tools/ghapi.html),
+# so we list every Unit in Level 1 explicitly. `paths:` is shared across
+# entries via a YAML anchor (&level1-paths / *level1-paths).
+
 - assignment: ce3030d4a593a5a999172fae3be31ff1
-  paths:
+  section: ["Level 1 - Just Responses", "Unit 0: Prerequisites and Setup"]
+  paths: &level1-paths
     # Level 1 bot code
     - "level1/**"
     # Level 1 guide content + top-level guide navigation
@@ -16,3 +23,35 @@
     # Shared box configuration
     - ".codio"
     - ".gitignore"
+
+- assignment: ce3030d4a593a5a999172fae3be31ff1
+  section: ["Level 1 - Just Responses", "Unit 1: Introduction to Rasa Agents"]
+  paths: *level1-paths
+
+- assignment: ce3030d4a593a5a999172fae3be31ff1
+  section: ["Level 1 - Just Responses", "Unit 2: Understanding the Domain File"]
+  paths: *level1-paths
+
+- assignment: ce3030d4a593a5a999172fae3be31ff1
+  section: ["Level 1 - Just Responses", "Unit 3: Understanding Flows"]
+  paths: *level1-paths
+
+- assignment: ce3030d4a593a5a999172fae3be31ff1
+  section: ["Level 1 - Just Responses", "Unit 4: System Patterns"]
+  paths: *level1-paths
+
+- assignment: ce3030d4a593a5a999172fae3be31ff1
+  section: ["Level 1 - Just Responses", "Unit 5: Configuration Files"]
+  paths: *level1-paths
+
+- assignment: ce3030d4a593a5a999172fae3be31ff1
+  section: ["Level 1 - Just Responses", "Unit 6: Training and Testing"]
+  paths: *level1-paths
+
+- assignment: ce3030d4a593a5a999172fae3be31ff1
+  section: ["Level 1 - Just Responses", "Unit 7: Putting It All Together"]
+  paths: *level1-paths
+
+- assignment: ce3030d4a593a5a999172fae3be31ff1
+  section: ["Level 1 - Just Responses", "Unit 8: Assessment and Next Steps"]
+  paths: *level1-paths
