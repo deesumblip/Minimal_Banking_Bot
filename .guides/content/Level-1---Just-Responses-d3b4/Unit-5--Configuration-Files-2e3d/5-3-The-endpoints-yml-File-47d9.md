@@ -1,5 +1,3 @@
-
-
 The `endpoints.yml` file defines **where Rasa can find actions and how LLM features are configured**.
 
 **File Location**: `endpoints.yml` (root of your agent folder)

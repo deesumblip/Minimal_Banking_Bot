@@ -13,7 +13,7 @@ flows:
       - intent: session_start
     steps:
       - action: utter_greet
-      - action: utter_help
+      - action: utter_contact
 ```
 
 **Result**: When a user opens the chat, they see both the greeting and the help message back to back.

@@ -24,7 +24,7 @@ responses:
   utter_contact:
     - text: "You can reach us at support@bank.com or call 1-800-BANK-123."
       metadata:
-        rephrase: True
+        rephrase: False
 ```
 
 Each response name uses the `utter_` prefix and sits under **`responses:`** with consistent indentation.
@@ -78,7 +78,7 @@ responses:
   utter_contact:
     - text: "You can reach us at support@bank.com or call 1-800-BANK-123."
       metadata:
-        rephrase: True
+        rephrase: False
 
   utter_goodbye:
     - text: "Goodbye! Have a great day!"

@@ -40,78 +40,25 @@ flows:
       - action: utter_goodbye
 ```
 
-⚠️ **Pay attention to indentation**:
-- `flows:` is at the start (no indentation)
-- `goodbye:` is indented 2 spaces under `flows:`
-- `name:`, `description:`, and `steps:` are indented 2 spaces under `goodbye:`
-- `- action: utter_goodbye` is indented 4 spaces (under `steps:`)
 
-**What each part does**:
-- `flows:` - Top-level key (tells Rasa this file contains flows)
-- `goodbye:` - Flow identifier (how you reference it internally)
-- `name: say goodbye` - Human-readable name (for logs/debugging)
-- `description: ...` - **Critical!** The LLM uses this to match user messages
-- `steps:` - List of actions to execute
-- `- action: utter_goodbye` - The action to perform (uses the response we created)
+
+| Property | What it does |
+|---|---|
+| `flows:` | Top-level key. Tells Rasa this file contains flow definitions. |
+| `goodbye:` | The flow ID. Alphanumeric characters, underscores, and hyphens only. |
+| `name: say goodbye` | Human-readable label for logs and debugging. Does not affect behavior. |
+| `description:` | The Command Generator uses an LLM to read this and decide when to start a flow. A good description helps the flow be activated at the right times. |
+| `steps:` | The ordered list of actions the flow executes. |
+| `- action: utter_goodbye` | Calls the response defined in your domain file. Spelling and casing must match exactly. |
 
 ---
 
-**Step 4: Verify the Structure**
-
-Before saving, check:
-
-**Required fields present**:
-- `flows:` at the top
-- Flow identifier (`goodbye:`) with colon
-- `name:` field (human-readable name)
-- `description:` field (what the flow does - very important!)
-- `steps:` section
-- At least one step (`- action: ...`)
-
-**Indentation correct**:
-- Use 2 spaces consistently
-- `goodbye:` aligned under `flows:`
-- `name:`, `description:`, `steps:` aligned under `goodbye:`
-- `- action:` indented under `steps:`
-
-**Response exists**:
-- The response `utter_goodbye` exists in `domain/basics.yml`
-- Spelling matches exactly (case-sensitive!)
-
-**Common mistakes to avoid**:
-- Missing `flows:` at the top
-- Missing `description:` field (this is critical - flows won't match without it!)
-- Wrong indentation
-- Response name typo (e.g., `utter_goodby` instead of `utter_goodbye`)
-- Missing colon after flow name (`goodbye` instead of `goodbye:`)
-
----
-
-**Step 5: Save and Verify**
+**Step 4: Save and Verify**
 
 1. Save the file (Ctrl+S or Cmd+S)
 2. Your file should now contain a complete flow definition
 
 {Check It!|assessment}(code-output-compare-303200002)
 
-#### Complete File
-
-`data/basics/goodbye.yml`:
-
-```yaml
-flows:
-  goodbye:
-    name: say goodbye
-    description: Farewell the user when they end the conversation.
-    steps:
-      - action: utter_goodbye
-```
-
-#### How Rasa Finds Flows
-
-Rasa automatically searches the `data/` folder (and subfolders) for `.yml` files containing flows. You can organize flows however you like:
-- One flow per file (recommended for clarity)
-- Multiple flows per file (okay for related flows)
-- Nested folders (good for organization)
-
 ---
+
