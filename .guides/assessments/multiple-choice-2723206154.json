@@ -11,22 +11,22 @@
 			{
 				"_id": "68080825-395d-834e-dede-3c404364c918",
 				"correct": false,
-				"answer": "```yaml-hide-clipboard\ngreet:\n  flows:\n    name: Greeting Flow\n    description: A simple flow that greets the user.\n    steps:\n      - action: Hello, how can I help you today?\n```"
+				"answer": "```yaml-hide-clipboard\ngreet:\n  flows:\n    name: Greeting Flow\n    description: A simple flow that greets the user.\n    steps:\n      - action: utter_greet\n```"
 			},
 			{
 				"_id": "176a1d04-01d7-15df-7569-a93e712a4a1f",
 				"correct": false,
-				"answer": "```yaml-hide-clipboard\nflows:\n  greet:\n    name: Greeting Flow\n    steps:\n      - action: Hello, how can I help you today?\n    description: A simple flow that greets the user.\n```"
+				"answer": "```yaml-hide-clipboard\nflows:\n  greet:\n    name: Greeting Flow\n    steps:\n      - action: utter_greet\n    description: A simple flow that greets the user.\n```"
 			},
 			{
 				"_id": "e5b0146b-4706-a4e1-20f3-d57c5de2acf1",
 				"correct": true,
-				"answer": "```yaml-hide-clipboard\nflows:\n  greet:\n    name: Greeting Flow\n    description: A simple flow that greets the user.\n    steps:\n      - action: Hello, how can I help you today?\n```"
+				"answer": "```yaml-hide-clipboard\nflows:\n  greet:\n    name: Greeting Flow\n    description: A simple flow that greets the user.\n    steps:\n      - action: utter_greet\n```"
 			},
 			{
 				"_id": "ec9f30d6-5fc9-1224-e9bb-e6f562dfdcc9",
 				"correct": false,
-				"answer": "```yaml-hide-clipboard\nname: Greeting Flow\ndescription: A simple flow that greets the user.\nflows:\n  greet:\n    steps:\n      - action: Hello, how can I help you today?\n```"
+				"answer": "```yaml-hide-clipboard\nname: Greeting Flow\ndescription: A simple flow that greets the user.\nflows:\n  greet:\n    steps:\n      - action: utter_greet\n```"
 			}
 		],
 		"metadata": {
