@@ -1,14 +1,14 @@
-Rasa uses a component called the **Command Generator** to decide which flows and sub-agents to run. When a user sends a message, the Command Generator analyzes it using the current conversation context and relevant descriptions, then outputs commands like `StartFlow("greet")` that represent how the user wants to progress the conversation.
-
-This makes `description:` the most critical field in a flow. The Command Generator relies on your description to understand when to trigger each flow. If your description is unclear or inaccurate, the right flow may never run.
+Rasa uses a component called the **Command Generator** to decide how to progress the conversation based on incoming user messages.
 
 **The routing process:**
 
-1. User sends a message
-2. The Command Generator analyzes the message using the current conversation context and relevant flow descriptions (not necessarily every flow)
-3. The Command Generator outputs commands like `StartFlow("greet")` that represent how the user wants to progress the conversation
+1. A user sends a message
+2. The Command Generator uses a language model to analyze it using the full conversation context (active flows, filled slots, relevant patterns, conversation history) alongside your flow descriptions
+3. It outputs commands like `StartFlow("greet")` that represent how the user wants to progress the conversation
 
-No intent classifiers. No keyword matching. No training data required. Just the sentences you write in your flow descriptions, measured against what the user said in the context of the conversation.
+No intent classifiers. No keyword matching. No training data. Just the sentences you write in `description:`, measured against what the user said.
+
+This makes `description:` one of the most important properties in a flow. If it is vague or inaccurate, the correct flow may never run, even if everything else is configured correctly.
 
 ---
 
