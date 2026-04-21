@@ -1,0 +1,20 @@
+# Publishes only Level 2 content and bot code to the Level 2 assignment.
+- assignment: 0ef39b54b918ebe3c5c783193f91fb99
+  section:
+    - "Level 2 - Custom Actions"
+  paths:
+    # Level 2 bot code (includes the actions/ module for custom actions)
+    - "level2/**"
+    # Level 2 guide content + top-level guide navigation
+    - ".guides/content/index.json"
+    - ".guides/content/Level-2---Custom-Actions-30d6/**"
+    # All assessments (Codio renders only those referenced by included pages)
+    - ".guides/assessments/**"
+    # Level 2 graders
+    - ".guides/secure/level2_graders/**"
+    # Shared guide scripts and startup hooks
+    - ".guides/scripts/**"
+    - ".guides/startup.sh"
+    # Shared box configuration
+    - ".codio"
+    - ".gitignore"
