@@ -1,7 +1,5 @@
 # Publishes only Level 2 content and bot code to the Level 2 assignment.
 - assignment: 0ef39b54b918ebe3c5c783193f91fb99
-  section:
-    - "Level 2 - Custom Actions"
   paths:
     # Level 2 bot code (includes the actions/ module for custom actions)
     - "level2/**"
