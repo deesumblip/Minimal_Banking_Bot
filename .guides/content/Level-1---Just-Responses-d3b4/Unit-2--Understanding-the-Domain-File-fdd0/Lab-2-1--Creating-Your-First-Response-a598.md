@@ -29,6 +29,8 @@ responses:
 
 Each response name uses the `utter_` prefix and sits under **`responses:`** with consistent indentation.
 
+Notice that **`utter_contact`** uses **`rephrase: False`** because its text contains an exact email and phone number that must not be reworded. For conversational lines like **`utter_greet`** and **`utter_help`**, **`rephrase: True`** keeps replies sounding natural.
+
 **Step 3: Add `utter_goodbye`**
 
 1. After the **last** response block, add a blank line, then add your new response. You may change the farewell text, but keep the same shape as the other responses:

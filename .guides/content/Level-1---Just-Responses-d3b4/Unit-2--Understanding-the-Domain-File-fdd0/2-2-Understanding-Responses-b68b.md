@@ -22,6 +22,17 @@ With rephrasing enabled, “Hi! I'm a banking assistant.” might become “Hell
 
 ⚠️ **Important:** `rephrase: True` is optional, but it is the main lever for natural variation at Level 1. Real conversations are not perfectly repetitive. This setting helps your agent match that expectation.
 
+#### When to set `rephrase: False`
+
+Rephrasing is great for conversational lines but risky for **exact information**. Set **`rephrase: False`** whenever a response contains literal text that must not change, for example:
+
+- Email addresses and phone numbers
+- Account numbers, reference codes, or IDs
+- Legal disclaimers or policy wording
+- Specific amounts, dates, or times
+
+You'll see this pattern in the next lab: **`utter_contact`** uses **`rephrase: False`** so the support email and phone number stay exactly as written.
+
 #### Why responses are lists
 
 Responses are lists so you can offer **multiple canned lines** for the same intent. Rasa can choose one at random, which adds variety **without** relying on the LLM:
