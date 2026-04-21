@@ -29,6 +29,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      # Strip author-only material from the runner tree before any Codio
+      # publish step runs, so none of these files can leak into any
+      # assignment workspace. See _dev/README.md for what lives there and why.
+      - name: Strip _dev/ (teacher-only content) from publish tree
+        run: rm -rf _dev
+
       # Course ID is shared across every assignment in this repo.
       # Per-assignment IDs below / in .github/yaml_map/*.yml.
 
