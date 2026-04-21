@@ -1,7 +1,5 @@
 # Publishes only Level 1 content and bot code to the Level 1 assignment.
 - assignment: ce3030d4a593a5a999172fae3be31ff1
-  section:
-    - "Level 1 - Just Responses"
   paths:
     # Level 1 bot code
     - "level1/**"
