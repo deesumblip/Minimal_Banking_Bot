@@ -1,9 +1,9 @@
 
-**Patterns** are special system flows that Rasa uses internally to manage conversation lifecycle. They're not user-facing flows, but rather system-level behaviors.
+**Patterns** are special system flows that Rasa uses internally to manage conversation lifecycle. They're used to govern system-level behaviors.
 
 **File Location**: `data/system/patterns/patterns.yml`
 
-**Analogy**: System patterns are like the operating system of your agent, they handle the "behind the scenes" stuff.
+**Analogy**: System patterns are like the operating system of your agent, they handle the "behind the scenes" stuff. They are ready to go out of the box, but if you want to adjust them you can make changes in the `patterns.yml` file. 
 
 #### Two Key Patterns We Will Learn
 
@@ -25,7 +25,7 @@ You don't need to know all of these now, but if you want to get a sense of all t
 | `pattern_cannot_handle` | No flow matches the user's request |
 | `pattern_internal_error` | A system error occurs at runtime |
 | `pattern_chitchat` | A user sends an off-topic or casual message |
-| `pattern_repeat_bot_messages` | A user asks the agent to repeat the last message |
+| `pattern_repeat_bot_messages` | Voice only - a user asks the agent to repeat the last message |
 | `pattern_customer_satisfaction` | A conversation ends, triggering a CSAT message |
 
 All patterns follow the same YAML structure as any other flow. Your business flows stay focused on the task. Patterns handle everything else.

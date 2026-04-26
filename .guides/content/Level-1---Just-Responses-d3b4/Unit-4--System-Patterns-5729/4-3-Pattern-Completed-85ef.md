@@ -9,7 +9,7 @@ flows:
         next: END
 ```
 
-`noop` means no operation. The pattern takes no action and returns the agent to a ready state, waiting for the next user message. You can customize this in `patterns.yml` to add a closing message or leave as is and have the agent listen for further questions.
+`noop` means no operation. The pattern takes no action and returns the agent to a ready state, waiting for the next user message. 
 
 ---
 

@@ -3,8 +3,8 @@
 #### Steps
 
 1. Find **`utter_goodbye`** in **`domain/basics.yml`**. It should be the last block in the **`responses:`** section.
-2. Add a second **`- text:`** line with a different farewell message. The new **`- text:`** must sit at the **same** indentation as the first **`- text:`** line. You might use lines such as “See you later!”, “Take care!”, or another short goodbye you prefer.
-3. Keep a single **`metadata:`** block. It may sit under the last **`text:`** entry, which is the usual pattern when both lines share the same rephrasing settings.
+2. Add a second **`- text:`** line with a different farewell message. The new **`- text:`** must sit at the **same** indentation as the first **`- text:`** line. 
+3. Ensure **`metadata:`** is recorded under each response in the list where you want rephrasing to occur. In the example below only the last response `- text: "See you later! Take care!"` will be rephrased.
 
 **Example:**
 

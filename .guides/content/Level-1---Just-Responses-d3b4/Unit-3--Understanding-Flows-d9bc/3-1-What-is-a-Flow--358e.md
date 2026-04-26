@@ -19,7 +19,7 @@ flows:                          # Top level key
       - action: utter_greet     # Sends a response, text defined in domain/basics.yml
 ```
 
-The LLM routes by reading `description:` not `name:`, not the flow ID. A vague or missing description means the flow won't trigger reliably.
+The LLM routes by reading `description:` and `name:`. If `name` is not present (as it is optional) it will include the Flow ID. This is why a vague or missing descriptions and names mean the flow won't activate reliably.
 
 ---
 
