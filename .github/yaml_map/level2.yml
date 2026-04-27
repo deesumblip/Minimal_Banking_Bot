@@ -37,7 +37,7 @@
   paths: *level2-paths
 
 - assignment: 0ef39b54b918ebe3c5c783193f91fb99
-  section: ["Level 2 - Custom Actions", "Unit 4: Registering Actions in the Domain"]
+  section: ["Level 2 - Custom Actions", "Unit 4: Registering Custom Actions in the Domain"]
   paths: *level2-paths
 
 - assignment: 0ef39b54b918ebe3c5c783193f91fb99
