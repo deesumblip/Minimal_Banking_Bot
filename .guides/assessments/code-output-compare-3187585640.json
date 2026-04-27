@@ -2,7 +2,7 @@
 	"type": "code-output-compare",
 	"taskId": "code-output-compare-3187585640",
 	"source": {
-		"name": "Lab 3.1: Defining a Slot in the Domain",
+		"name": "Lab 2.1: Defining a Slot in the Domain",
 		"showName": true,
 		"instructions": "To pass this assessment, all of the following must be true (same Codio layout as Level 2 Lab 6.2):\n\n• Check 1: level3/domain/basics.yml exists.\n• Check 2: File is valid YAML with a top-level mapping.\n• Check 3: Top-level slots: section is present.\n• Check 4: account slot has type: text.\n• Check 5: utter_ask_account has at least one text message.\n• Check 6: action_check_balance_simple is listed under actions:.\n• Check 7: action_bank_hours is listed under actions:.\n• Check 8: action_holiday_hours is listed under actions:.\n\nFull score: 10/10.",
 		"command": "bash /home/codio/workspace/.guides/scripts/run_python_grader.sh /home/codio/workspace/.guides/secure/level3_graders/lab_3.1_grader.py",
@@ -28,7 +28,8 @@
 			"opened": [
 				{
 					"type": "terminal",
-					"panelNumber": 1
+					"panelNumber": 1,
+					"content": ""
 				}
 			]
 		},

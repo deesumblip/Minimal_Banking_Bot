@@ -37,12 +37,7 @@
 				}
 			],
 			"files": [],
-			"opened": [
-				{
-					"type": "terminal",
-					"panelNumber": 1
-				}
-			]
+			"opened": []
 		},
 		"bloomsObjectiveLevel": "2",
 		"learningObjectives": "SWBAT identify the primary purpose of slots in conversational agents",

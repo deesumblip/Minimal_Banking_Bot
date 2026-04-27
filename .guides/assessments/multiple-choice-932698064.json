@@ -37,12 +37,7 @@
 				}
 			],
 			"files": [],
-			"opened": [
-				{
-					"type": "terminal",
-					"panelNumber": 1
-				}
-			]
+			"opened": []
 		},
 		"bloomsObjectiveLevel": "2",
 		"learningObjectives": "SWBAT identify how to read a slot in an action",

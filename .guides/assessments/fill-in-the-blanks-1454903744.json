@@ -7,7 +7,7 @@
 		"instructions": "**Fill in the blanks to describe how slot collection works in flows.**",
 		"showValues": true,
 		"text": "When a flow encounters a `collect:` step:\n\n* If the slot is <<<empty>>>, the agent will <<<ask>>> for the value using an `utter_ask_*` response\n* If the slot already has a <<<value>>>, the flow <<<continues>>> immediately without asking\n* When the user provides input, the agent <<<stores>>> it in the specified slot\n\nThis behavior allows flows to be <<<efficient>>> by skipping unnecessary questions when data is already available.",
-		"distractors": "null\nrequests\ndata\nstops\nsaves\nfast",
+		"distractors": "null\nrequests\ndata\nstops\nfast",
 		"metadata": {
 			"tags": [
 				{
@@ -16,12 +16,7 @@
 				}
 			],
 			"files": [],
-			"opened": [
-				{
-					"type": "terminal",
-					"panelNumber": 1
-				}
-			]
+			"opened": []
 		},
 		"bloomsObjectiveLevel": "",
 		"learningObjectives": "",
@@ -50,15 +45,15 @@
 				"When a flow encounters a `collect:` step:\n\n* If the slot is ",
 				0,
 				", the agent will ",
-				1,
+				0,
 				" for the value using an `utter_ask_*` response\n* If the slot already has a ",
-				2,
+				0,
 				", the flow ",
-				3,
+				0,
 				" immediately without asking\n* When the user provides input, the agent ",
-				4,
+				0,
 				" it in the specified slot\n\nThis behavior allows flows to be ",
-				5,
+				0,
 				" by skipping unnecessary questions when data is already available."
 			],
 			"regexPositions": []

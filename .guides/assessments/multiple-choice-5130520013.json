@@ -37,12 +37,7 @@
 				}
 			],
 			"files": [],
-			"opened": [
-				{
-					"type": "terminal",
-					"panelNumber": 1
-				}
-			]
+			"opened": []
 		},
 		"bloomsObjectiveLevel": "2",
 		"learningObjectives": "SWBAT explain collect-step behavior when the target slot is already set",

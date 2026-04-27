@@ -37,12 +37,7 @@
 				}
 			],
 			"files": [],
-			"opened": [
-				{
-					"type": "terminal",
-					"panelNumber": 1
-				}
-			]
+			"opened": []
 		},
 		"bloomsObjectiveLevel": "1",
 		"learningObjectives": "SWBAT identify where slots are defined in Rasa",

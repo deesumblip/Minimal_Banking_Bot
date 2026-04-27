@@ -2,9 +2,9 @@
 	"type": "code-output-compare",
 	"taskId": "code-output-compare-2346557110",
 	"source": {
-		"name": "Lab 4.1: Writing the Action That Uses the Slot",
+		"name": "Lab 3.1: Writing the Action That Uses the Slot",
 		"showName": true,
-		"instructions": "To pass this assessment, all of the following must be true (same Codio layout as Level 2 Lab 6.2):\n\n• Check 1: level3/actions/action_check_balance_simple.py exists.\n• Check 2: Correct imports (Action, Tracker, CollectingDispatcher / dispatcher).\n• Check 3: Class ActionCheckBalanceSimple(Action) is defined.\n• Check 4: name() returns action_check_balance_simple.\n• Check 5: run() reads the account slot (get_slot).\n• Check 6: Placeholder handling and re-prompt with utter_ask_account.\n• Check 7: Balance / account message for valid slot.\n\nFull score: 10/10.",
+		"instructions": "To pass this assessment, all of the following must be true:\n\n• Check 1: level3/actions/action_check_balance_simple.py exists.\n• Check 2: Correct imports (Action, Tracker, CollectingDispatcher / dispatcher).\n• Check 3: Class ActionCheckBalanceSimple(Action) is defined.\n• Check 4: name() returns action_check_balance_simple.\n• Check 5: run() reads the account slot (get_slot).\n• Check 6: Balance / account message for valid slot.\n\nFull score: 8/8.",
 		"command": "bash /home/codio/workspace/.guides/scripts/run_python_grader.sh /home/codio/workspace/.guides/secure/level3_graders/lab_4.1_grader.py",
 		"preExecuteCommand": "",
 		"options": {
@@ -27,13 +27,14 @@
 			"opened": [
 				{
 					"type": "terminal",
-					"panelNumber": 1
+					"panelNumber": 1,
+					"content": ""
 				}
 			]
 		},
 		"bloomsObjectiveLevel": "",
 		"learningObjectives": "",
-		"guidance": "The grader lists Check 1–7 like Lab 3.1 / Level 2 Lab 6.2. Open the terminal output for details. Full credit needs Score 10/10.",
+		"guidance": "The grader lists Check 1–6 like Lab 3.1 / Level 2 Lab 6.2. Open the terminal output for details. Full credit needs Score 10/10.",
 		"showGuidanceAfterResponseOption": {
 			"type": "Never"
 		},
@@ -84,13 +85,6 @@
 				"arguments": "",
 				"input": "",
 				"output": "Check 6: PASSED",
-				"showFeedback": false,
-				"feedback": ""
-			},
-			{
-				"arguments": "",
-				"input": "",
-				"output": "Check 7: PASSED",
 				"showFeedback": false,
 				"feedback": ""
 			}
