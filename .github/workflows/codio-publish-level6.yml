@@ -1,0 +1,50 @@
+name: codio-publish-level6
+
+on:
+  workflow_dispatch:
+    inputs:
+      changelog:
+        description: "Optional changelog message"
+        required: false
+        default: ""
+
+jobs:
+  publish-level6-to-codio:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Strip _dev/ (teacher-only content) from publish tree
+        run: rm -rf _dev
+
+      - name: Prepare yaml_map (level6 only)
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          LEVEL_INPUT="level6"
+          TMP_DIR=".github/yaml_map_dispatch"
+
+          rm -rf "${TMP_DIR}"
+          mkdir -p "${TMP_DIR}"
+
+          if [ ! -f ".github/yaml_map/${LEVEL_INPUT}.yml" ]; then
+            echo "Missing map file: .github/yaml_map/${LEVEL_INPUT}.yml"
+            exit 1
+          fi
+
+          cp ".github/yaml_map/${LEVEL_INPUT}.yml" "${TMP_DIR}/${LEVEL_INPUT}.yml"
+          echo "Prepared yaml_map: ${LEVEL_INPUT}"
+
+      - name: Publish subset assignment (Level 6)
+        uses: codio/codio-assignment-publish-action@master
+        with:
+          client-id: ${{ secrets.CODIO_PRODUCTION_CLIENT_ID }}
+          secret-id: ${{ secrets.CODIO_PRODUCTION_SECRET_ID }}
+          dir: ./
+          course-id: aa4e8b53acdf01910c922abe1cc3a79f
+          yml: ./.github/yaml_map_dispatch
+          changelog: ${{ inputs.changelog || github.sha }}
+          domain: ${{ vars.CODIO_DOMAIN || 'codio.com' }}
+

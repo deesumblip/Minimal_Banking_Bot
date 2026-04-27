@@ -1,19 +1,15 @@
-name: codio-publish-level
+name: codio-publish-level1
 
 on:
   workflow_dispatch:
     inputs:
-      level:
-        description: "Which subset assignment to publish (level1..level6, or all)"
-        required: true
-        default: "level1"
       changelog:
         description: "Optional changelog message"
         required: false
         default: ""
 
 jobs:
-  publish-level-to-codio:
+  publish-level1-to-codio:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -22,34 +18,26 @@ jobs:
       - name: Strip _dev/ (teacher-only content) from publish tree
         run: rm -rf _dev
 
-      - name: Prepare yaml_map
+      - name: Prepare yaml_map (level1 only)
         shell: bash
         run: |
           set -euo pipefail
 
-          LEVEL_INPUT="${{ inputs.level }}"
+          LEVEL_INPUT="level1"
           TMP_DIR=".github/yaml_map_dispatch"
 
           rm -rf "${TMP_DIR}"
-
-          if [ "${LEVEL_INPUT}" = "all" ]; then
-            mkdir -p "${TMP_DIR}"
-            cp .github/yaml_map/*.yml "${TMP_DIR}/"
-            echo "Prepared yaml_map: all levels"
-            exit 0
-          fi
+          mkdir -p "${TMP_DIR}"
 
           if [ ! -f ".github/yaml_map/${LEVEL_INPUT}.yml" ]; then
-            echo "Unknown level input: ${LEVEL_INPUT}"
-            echo "Expected one of: level1, level2, level3, level4, level5, level6, all"
+            echo "Missing map file: .github/yaml_map/${LEVEL_INPUT}.yml"
             exit 1
           fi
 
-          mkdir -p "${TMP_DIR}"
           cp ".github/yaml_map/${LEVEL_INPUT}.yml" "${TMP_DIR}/${LEVEL_INPUT}.yml"
           echo "Prepared yaml_map: ${LEVEL_INPUT}"
 
-      - name: Publish subset assignment
+      - name: Publish subset assignment (Level 1)
         uses: codio/codio-assignment-publish-action@master
         with:
           client-id: ${{ secrets.CODIO_PRODUCTION_CLIENT_ID }}
