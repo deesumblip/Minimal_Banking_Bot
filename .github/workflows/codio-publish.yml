@@ -50,13 +50,13 @@ jobs:
           # Set repo variable CODIO_DOMAIN to codio.co.uk if you use the UK site; otherwise codio.com
           domain: ${{ vars.CODIO_DOMAIN || 'codio.com' }}
 
-      - name: Publish level-subset assignments (Level 1, Level 2)
+      - name: Publish level-subset assignment (Level 1 only)
         uses: codio/codio-assignment-publish-action@master
         with:
           client-id: ${{ secrets.CODIO_PRODUCTION_CLIENT_ID }}
           secret-id: ${{ secrets.CODIO_PRODUCTION_SECRET_ID }}
           dir: ./
           course-id: aa4e8b53acdf01910c922abe1cc3a79f
-          yml: ./.github/yaml_map
+          yml: ./.github/yaml_map/level1.yml
           changelog: ${{ github.event.head_commit.message }}
           domain: ${{ vars.CODIO_DOMAIN || 'codio.com' }}
