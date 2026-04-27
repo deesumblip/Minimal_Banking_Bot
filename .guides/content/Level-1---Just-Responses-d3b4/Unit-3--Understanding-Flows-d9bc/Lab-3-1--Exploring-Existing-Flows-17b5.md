@@ -8,7 +8,7 @@
 
 2. **Examine `greet.yml`**
    - Open the file and match each line to the structure covered in 3.1.
-   - Pay attention to the `description:` field. This is what the LLM reads to decide when to activate the flow.
+   - Pay attention to the `description:` field. This, alongside `name` is what the LLM reads to decide when to activate the flow.
 
 3. **Compare flows**
    - Open `help.yml` and `contact.yml`.

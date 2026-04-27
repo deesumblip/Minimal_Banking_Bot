@@ -1,12 +1,10 @@
-Rasa uses a component called the **Command Generator** to decide how to progress the conversation based on incoming user messages.
+Rasa uses a component called the **Command Generator** to decide how to progress the conversation based on incoming user messages. The command generator is governed by a prompt that outlines how Rasa should orchestrate the conversation across different skills (flows and sub-agents). You can learn how to edit this prompt and see the defaults being used [here](https://rasa.com/docs/reference/config/components/llm-command-generators/). We are using the [SearchReadyLLMCommandGenerator](https://rasa.com/docs/reference/config/components/llm-command-generators/#searchreadyllmcommandgenerator) in this course. 
 
-**The routing process:**
+**How it works:**
 
 1. A user sends a message
-2. The Command Generator uses a language model to analyze it using the full conversation context (active flows, filled slots, relevant patterns, conversation history) alongside your flow descriptions
+2. The Command Generator uses a language model to analyze the message, including the full conversation context (active flows, filled slots, relevant patterns, conversation history) alongside your flow descriptions
 3. It outputs commands like `StartFlow("greet")` that represent how the user wants to progress the conversation
-
-No intent classifiers. No keyword matching. No training data. Just the sentences you write in `description:`, measured against what the user said.
 
 This makes `description:` one of the most important properties in a flow. If it is vague or inaccurate, the correct flow may never run, even if everything else is configured correctly.
 

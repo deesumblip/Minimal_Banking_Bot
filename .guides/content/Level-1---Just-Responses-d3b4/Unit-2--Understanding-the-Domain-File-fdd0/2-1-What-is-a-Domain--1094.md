@@ -1,7 +1,7 @@
 The **domain file** is a Rasa agent's knowledge base. It defines everything the agent "knows":
 - What it can **say** (responses)
-- What it can **remember** (slots) - not in Level 1
-- What code it can **run** (actions) - not in Level 1
+- What code it can **run** (actions) - introduced in Level 2
+- What it can **remember** (slots) - introduced in Level 3
 
 **File Location**: `domain/basics.yml`
 
@@ -12,7 +12,7 @@ The **domain file** is a Rasa agent's knowledge base. It defines everything the 
 The domain file has three main sections (but Level 1 only uses `responses:`):
 
 ```yaml
-version: "3.1"        # Rasa version (always "3.1")
+version: "3.1"        # Rasa YAML schema version (always "3.1")
 
 responses:            # ← Level 1: We use this section
                       # All predefined messages go here

@@ -1,6 +1,6 @@
 We’ve all heard a lot of names for systems that can “talk”: *agents*, *digital assistants*, *virtual agents*, or more recently just *agents*. Names have changed over the years, but the core idea hasn’t: these are **conversational interfaces**. Systems that communicate with humans in natural language.
 
-In this course, we’ll use the term **conversational agent**, or simply **agent**. With Rasa, you’re not just wiring up scripts that return canned replies. You’re building **dialogue systems that can manage conversations across a spectrum of autonomy**, from fully guided flows to semi- or fully autonomous interactions.
+In this course, we’ll use the term **conversational agent**, or simply **agent**. Rasa allows you to build **dialogue systems that can manage conversations across a spectrum of autonomy**, from fully guided flows to semi- or fully autonomous interactions.
 
 ---
 
@@ -26,8 +26,8 @@ In this course, we’ll use the term **conversational agent**, or simply **agent
 By the end of this course, you’ll be able to build agents that handle:
 
 - **Dialogue Understanding** – Use language models to truly understand the intent of your users and what they want to accomplish.  
-- **Guided Skills** – Build predictable, maintainable flows that don’t hallucinate.  
-- **Autonomous Skills** – ReAct-style sub-agents that can reason and act using tools.  
+- **Guided Skills** – Hard-coded flows that are predictable, and don't hallucinate.  
+- **Autonomous Skills** – Prompt-driven sub-agents that can reason and act on their own.  
 - **Memory** – Capture, store, and leverage conversation data to inform decisions and update systems.  
 - **Orchestration** – Combine guided and autonomous skills into a single agent.
 

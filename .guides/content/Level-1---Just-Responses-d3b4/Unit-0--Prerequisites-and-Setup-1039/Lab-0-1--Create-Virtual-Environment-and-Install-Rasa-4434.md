@@ -1,6 +1,6 @@
-Create a virtual environment in the **project root**, install Rasa Pro, configure **your own** Rasa Pro license using the **`RASA_LICENSE`** variable, and confirm the tools work. This is your first lab. Complete it before any other hands-on work.
+Create a virtual environment in the **project root**, install Rasa, configure **your own** Rasa developer edition license using the **`RASA_LICENSE`** variable, and confirm the tools work. This is your first lab. Complete it before any other hands-on work.
 
-This course expects a valid **`RASA_LICENSE`** for Rasa Pro.
+This course expects a valid **`RASA_LICENSE`**.
 
 Install the **`rasa-pro`** package at version **3.16.3** (pinned in the commands below) so your environment matches the course materials.
 
@@ -10,7 +10,7 @@ Install the **`rasa-pro`** package at version **3.16.3** (pinned in the commands
 
 1. Check Python and pip.
 2. Create a virtual environment named **`.venv`** in the **project root**. You reuse this same environment for **level1**, **level2**, **level3**, and the rest of the course.
-3. Install Rasa Pro inside that virtual environment.
+3. Install Rasa inside that virtual environment.
 4. Create a **`.env`** file in the **project root** with your **`RASA_LICENSE`** (via the terminal).
 5. Run **`rasa --version`** after loading the license from `.env` into your shell.
 6. Confirm the **`level1`** project layout is present.
@@ -23,14 +23,7 @@ Install the **`rasa-pro`** package at version **3.16.3** (pinned in the commands
 
 ---
 
-## Before you start
-
-- Open a terminal on **Codio** or on your own computer.
-- Run all setup steps from the **project root**. Use the section below that matches your environment: **Codio**, **Windows**, **macOS**, or **Linux**.
-
----
-
-## On Codio
+## In the terminal on the right
 
 Follow these steps from the **project root**, often **`~/workspace`**. You do **not** need to create a new folder or **`cd`** away from the root before you begin.
 
@@ -69,7 +62,7 @@ source .venv/bin/activate
 
 Your prompt should show `(.venv)` at the start.
 
-**3. Install Rasa Pro**
+**3. Install Rasa**
 
 ```bash
 pip install --no-cache-dir rasa-pro==3.16.3
@@ -79,7 +72,7 @@ Installation takes 2–5 minutes.
 
 **4. Create `.env` in the project root with `RASA_LICENSE`**
 
-Stay in the **project root** (the folder that contains `level1/`, `level2/`, `.guides/`, **not** inside `level1`). Replace `YOUR_LICENSE_KEY` with your actual Rasa Pro license (paste the whole key):
+Stay in the **project root** (the folder that contains `level1/`, `level2/`, `.guides/`, **not** inside `level1`). Replace `YOUR_LICENSE_KEY` with your actual Rasa license key (paste the whole key):
 
 ```bash
 echo 'RASA_LICENSE=YOUR_LICENSE_KEY' > .env
@@ -124,12 +117,5 @@ level1/
 ```
 
 Confirm that the **domain/** and **data/** directories exist and that the three config files (`config.yml`, `credentials.yml`, `endpoints.yml`) are present in `level1`.
-
----
-
-## Success criteria
-
-- **Project-root `.env`** contains a real **`RASA_LICENSE=...`** line (not a placeholder), and you can run `rasa --version` successfully after loading `.env` in your shell.
-- The `level1` folder has the expected structure (domain, data, config files).
 
 ---

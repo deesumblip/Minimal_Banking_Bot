@@ -1,12 +1,11 @@
 {
-  "id": "9f4ed7ec-a67e-4b21-8c3d-1e5f6a7b9c0d",
-  "type": "section",
-  "title": "Unit 6: Training and Testing",
-  "order": [
-    "6-1-What-is-Training-a1b2",
-    "Lab-6-1-Training-Your-Agent-c3d4",
-    "Lab-6-2-Using-Rasa-Inspector-e5f6",
-    "6-2-Testing-Your-Agent-f6a7"
-  ],
-  "content": "Order: reading **6.1**, **Lab 6.1** (train from `level1`), **Lab 6.2** (Rasa Inspector), reading **6.2 Testing Your Agent** (testing workflow)—that reading is the last page in this unit."
+ "id": "9f4ed7ec-a67e-4b21-8c3d-1e5f6a7b9c0d",
+ "title": "Unit 6: Training and Testing",
+ "type": "section",
+ "order": [
+  "6-1-What-is-Training-a1b2",
+  "Lab-6-1-Training-Your-Agent-c3d4",
+  "Lab-6-2-Using-Rasa-Inspector-e5f6",
+  "6-2-Testing-Your-Agent-f6a7"
+ ]
 }
