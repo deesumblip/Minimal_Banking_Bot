@@ -42,7 +42,6 @@ Notice that **`utter_contact`** uses **`rephrase: False`** because its text cont
          rephrase: True
    ```
 
-2. **Indentation:** Align **`utter_goodbye:`** with names like **`utter_contact:`**. The **`- text:`** line is indented two spaces deeper than the response name. **`metadata:`** lines up with **`text:`**, and **`rephrase: True`** sits under **`metadata:`**.
 
 Response order does not change how Rasa runs, but keeping the file tidy makes later edits easier.
 
@@ -51,6 +50,7 @@ Response order does not change how Rasa runs, but keeping the file tidy makes la
 - Use spaces only, no tabs, with two spaces per indent level.
 - The response name ends with a colon. Each message line starts with **`-`** before **`text:`**.
 - Spell **`utter_goodbye`** and **`rephrase`** exactly as shown.
+- Make sure the responses are aligned. To check your YAML formatting, you can always use tools like https://yamlchecker.com. 
 
 **Step 5: Save**
 

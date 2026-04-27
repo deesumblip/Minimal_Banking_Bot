@@ -34,7 +34,7 @@ User sends message
 ↓
 config.yml (defines how to understand it)
 ↓
-data/.yml (sub-agents and flows define what to do)
+data/*.yml (sub-agents and flows define what to do)
 ↓
 domain/basics.yml (responses define what to say)
 ↓

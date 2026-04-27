@@ -11,7 +11,7 @@
 			{
 				"_id": "c0afdf65-bbd4-6b60-88a4-23eebdb29b33",
 				"correct": true,
-				"answer": "Response names must start with the prefix 'utter_'"
+				"answer": "Response names should start with the prefix 'utter_'"
 			},
 			{
 				"_id": "b39018e5-a044-992e-6d9f-d539fe1690a6",
@@ -48,7 +48,7 @@
 				{
 					"type": "file",
 					"panelNumber": 1,
-					"path": "level1/domain/basics.yml"
+					"content": "level1/domain/basics.yml"
 				}
 			]
 		},
