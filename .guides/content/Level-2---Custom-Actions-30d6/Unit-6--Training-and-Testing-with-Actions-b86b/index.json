@@ -1,12 +1,10 @@
 {
-  "id": "b86bd7ec-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-  "type": "section",
-  "title": "Unit 6: Training, Testing, and Level 2 Wrap-Up",
-  "order": [
-    "Lab-6-1--Training-and-Testing-with-Actions-7710",
-    "6-2-Common-Training-Errors-with-Actions-9733",
-    "Lab-6-2--Verify-Domain-and-Training-2289",
-    "6-4-Level-2-Wrap-Up-d798",
-    "6-5-Core-Ideas-and-Level-3-Readiness-b91a"
-  ]
+	"id": "b86bd7ec-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+	"title": "Unit 6: Training, Testing, and Level 2 Wrap-Up",
+	"type": "section",
+	"order": [
+		"Lab-6-1--Training-with-Custom-Actions-6304",
+		"Lab-6-2--Testing-your-Custom-Actions-f68f",
+		"6-1-See-it-all-together-a5d9"
+	]
 }

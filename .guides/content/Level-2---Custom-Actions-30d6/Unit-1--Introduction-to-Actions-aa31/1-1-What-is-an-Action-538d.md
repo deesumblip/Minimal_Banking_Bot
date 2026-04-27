@@ -1,50 +1,38 @@
-An **action** is custom Python code that your agent can execute. Actions allow your agent to do more than just say predefined text - they can perform calculations, access databases, call APIs, and execute any Python logic you write.
+Rasa has three action types: 
+1. **Responses**: Send text or media to the user
+2. **Custom actions**: Execute user-defined code
+3. **Default actions**: Run automatically to manage conversation state. 
 
-#### Actions vs. Responses
+You worked with responses in Level 1. Level 2 introduces custom actions.
 
-**Responses (`utter_*`)**:
-- Predefined text messages
-- No custom logic
-- Just sends text to the user
-- Defined in `domain/basics.yml` under `responses:`
+| | 1. Responses (`utter_*`) | 2. Custom Actions (`action_*`) | 3. Default Actions |
+|---|---|---|---|
+| **What it is** | Predefined text, rich media, or buttons | User-defined code executed by the action server | Built-in actions Rasa runs automatically behind the scenes |
+| **Defined in** | `domain/basics.yml` under `responses:` | `actions/*.py`, registered in `domain/basics.yml` under `actions:` | Built into Rasa, no definition required |
+| **Logic** | None, static text only | Any Python | Fixed behaviour, e.g. starting a new session, waiting for user input |
+| **Example** | `action: utter_greet` | `action_bank_hours` | `action_session_start`, `action_listen` |
 
-**Actions (`action_*`)**:
-- Custom Python code
-- Can execute any logic
-- Can access databases, APIs, perform calculations
-- Defined in Python files in `actions/` folder
-- Registered in `domain/basics.yml` under `actions:`
-
-#### When to Use Actions
-
-**Use actions when you need**:
-- Dynamic responses that depend on context, such as different hours depending on the current day
-- Calculations such as interest or fees
-- Data processing such as formatting dates or validating input
-- External integrations such as reading an account balance from a database
-- Conditional logic that picks different replies based on conditions
-
-❌ **Don't use actions for**:
-- Simple static text (use responses instead)
-- Messages that never change
-- Text that doesn't require any processing
+A custom action is user-defined code that executes during a conversation. In this course you will write custom actions as Python classes using the Rasa SDK. Where a response sends predefined text, a custom action can run any logic: calculations, database queries, API calls. It returns events to update the conversation state.
 
 #### Example: Bank Hours
 
-**Level 1 approach** (static response):
+**Response (static):**
 
 ```yaml
 utter_hours:
   - text: "We're open Monday-Friday 9am-5pm, Saturday 10am-2pm."
 ```
 
-**Level 2 approach** (dynamic action):
+**Custom action (dynamic):**
 
 ```python
-def run(self, dispatcher, tracker, domain):
+def run(self, dispatcher, domain):
     # Check current day
     # Check if it's a holiday
     # Return dynamic message: "We're open today until 5pm" or "We're closed today"
 ```
 
+Use a response when the text never changes. Use a custom action when the reply depends on the current date, a database value, a calculation, or any condition evaluated at runtime.
+
 ---
+

@@ -1,23 +1,29 @@
-Every action is a Python class that inherits from `Action`. Here's the basic structure:
+In this course, custom actions are written using the Rasa SDK. Each action is a Python class that inherits from `Action` and requires you to implement two methods:
+
+| Method | Purpose |
+|---|---|
+| `name()` | Returns the action name. Must match the name registered in the domain. |
+| `run()` | Contains your custom logic. Sends responses via `dispatcher.utter_message()`. |
 
 ```python
+from typing import Text, Dict, Any, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 
 class ActionBankHours(Action):
+
     def name(self) -> Text:
         return "action_bank_hours"
-    
-    def run(self, dispatcher, tracker, domain):
-        # Your custom code here
-        dispatcher.utter_message("Your message here")
+
+    async def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any]
+    ) -> List[Dict[Text, Any]]:
+        # Your custom logic here
+        dispatcher.utter_message(text="Your message here")
         return []
 ```
 
-**Required Methods**:
-1. **`name()`** - Returns the action name (must match what's in domain)
-2. **`run()`** - Contains your custom logic
-
-**Note**: In Unit 2 you'll see the full `action_bank_hours`, it uses `datetime` to return different messages for weekdays, Saturday, and Sunday. That's why it's an action, not a simple `utter_*` response.
-
----
+In this level, you will implement the full `action_bank_hours` implementation. It uses `datetime` to return different messages for weekdays, Saturday, and Sunday. That is what makes it an action rather than a static `utter_*` response.

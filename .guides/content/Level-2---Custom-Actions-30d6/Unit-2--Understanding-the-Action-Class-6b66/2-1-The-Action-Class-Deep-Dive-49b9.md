@@ -1,6 +1,4 @@
-Let's examine the actual `action_bank_hours.py` file to understand how actions work.
-
-**Why an action (not an utter)?** This action returns a *different* message depending on the current day, Saturday, Sunday, or weekday. That requires Python logic and `datetime`. A simple `utter_*` response can't change based on when the user asks, so we need an action.
+To get to know a basic custom action, take a look at `action_bank_hours.py` below. This custom action returns a different message depending on whether today is a weekday, Saturday, or Sunday. Because the reply depends on `datetime`, a static `utter_*` response is not sufficient.
 
 #### Complete Action File
 
@@ -53,6 +51,8 @@ class ActionBankHours(Action):
         return []
 ```
 
+**Update your `action_bank_hours.py` folder with this new action code above for a more dynamic bank hours flow.** 
+
 #### Breaking Down Each Component
 
 1. **Imports**:
@@ -65,6 +65,7 @@ class ActionBankHours(Action):
    - `Action` - Base class all actions inherit from
    - `Tracker` - Contains conversation history and slots (we'll use this in Level 3)
    - `CollectingDispatcher` - Used to send messages to the user
+
 
 2. **Class Definition**:
    ```python
@@ -90,6 +91,7 @@ class ActionBankHours(Action):
    - **`tracker`**: Access conversation history and slots (Level 3+)
    - **`domain`**: Access domain configuration (rarely needed)
    - **Returns**: List of events (usually empty `[]` for simple actions)
+   
 
 5. **Sending Messages**:
    ```python
