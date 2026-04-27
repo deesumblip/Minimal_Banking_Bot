@@ -1,3 +1,0 @@
-In **Unit 4** you implemented `action_check_balance_simple`, which reads the **account** slot from the tracker. You will now connect that action to a flow that **collects** the slot first.
-
-You will add **`level3/data/basics/check_balance.yml`** with a flow id such as **`check_balance`**. The flow needs at least two steps: a **`collect:`** step for **`account`**, then an **`action:`** step for **`action_check_balance_simple`**. You already defined the slot, **`utter_ask_account`**, and the action registration in **Lab 3.1**, and you wrote the Python in **Lab 4.1**. **Lab 5.1** has the exact YAML and file layout so your project matches the course checks.

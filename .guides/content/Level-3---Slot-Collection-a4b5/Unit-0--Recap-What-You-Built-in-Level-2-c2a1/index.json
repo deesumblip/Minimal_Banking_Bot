@@ -1,10 +1,9 @@
 {
-  "id": "71a83508-b0b0-5ebd-8b6d-c681e49748dc",
-  "type": "section",
-  "title": "Unit 0: Recap - What you built in Level 2",
-  "order": [
-    "0-1-Your-Level-2-Banking-Agent-c2a1",
-    "0-2-What-Level-3-Adds-1b3c"
-  ],
-  "content": ""
+	"id": "71a83508-b0b0-5ebd-8b6d-c681e49748dc",
+	"type": "section",
+	"title": "Unit 0: Recap - What you built in Level 2",
+	"order": [
+		"0-1-Introducing-Level-3-b37a"
+	],
+	"content": ""
 }

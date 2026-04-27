@@ -16,7 +16,7 @@ WORKSPACE_ROOT = Path("/home/codio/workspace")
 ACTION_PATH = WORKSPACE_ROOT / "level3" / "actions" / "action_check_balance_simple.py"
 
 score = 0
-max_score = 10
+max_score = 8
 
 print("Running Lab 4.1 Assessment Checks...")
 print("")
@@ -86,37 +86,37 @@ if slot_read:
     score += 2
 else:
     print("❌ Check 5: FAILED - run() must read the slot with tracker.get_slot('account') (0 points)")
-    print("Hint: account = tracker.get_slot('account') or '<missing>'")
+    print("Hint: account = tracker.get_slot('account')")
 print("")
 
 # Check 6: Placeholder check and re-prompt (2 points)
-print("Check 6: Verifying placeholder handling and re-prompt...")
-has_utter_ask = "utter_ask_account" in content and "utter_message" in content_lower
-has_placeholder_idea = any(
-    x in content_lower for x in ["placeholder", "account number", "<missing>", "missing"]
-)
-if has_utter_ask and has_placeholder_idea:
-    print(" Check 6: PASSED - Re-prompts with utter_ask_account when slot is placeholder (2 points)")
-    score += 2
-else:
-    if not has_utter_ask:
-        print("❌ Check 6: FAILED - Must call dispatcher.utter_message(response='utter_ask_account') when slot is a placeholder (0 points)")
-    else:
-        print("❌ Check 6: FAILED - Must detect placeholder values and re-prompt (0 points)")
-    print("Hint: If account (lowercased) is in your placeholder list, call dispatcher.utter_message(response='utter_ask_account') and return []")
-print("")
+#print("Check 6: Verifying placeholder handling and re-prompt...")
+#has_utter_ask = "utter_ask_account" in content and "utter_message" in content_lower
+#has_placeholder_idea = any(
+#    x in content_lower for x in ["placeholder", "account number", "<missing>", "missing"]
+#)
+#if has_utter_ask and has_placeholder_idea:
+#    print(" Check 6: PASSED - Re-prompts with utter_ask_account when slot is placeholder (2 points)")
+#    score += 2
+#else:
+#    if not has_utter_ask:
+#        print("❌ Check 6: FAILED - Must call dispatcher.utter_message(response='utter_ask_account') when slot is a placeholder (0 points)")
+#    else:
+#        print("❌ Check 6: FAILED - Must detect placeholder values and re-prompt (0 points)")
+#    print("Hint: If account (lowercased) is in your placeholder list, call dispatcher.utter_message(response='utter_ask_account') and return []")
+#print("")
 
-# Check 7: Balance message (1 point)
-print("Check 7: Verifying balance message...")
+# Check 6: Balance message (1 point)
+print("Check 6: Verifying balance message...")
 if (
     "utter_message" in content_lower
     and ("balance" in content_lower or "account" in content)
     and "text" in content_lower
 ):
-    print(" Check 7: PASSED - Sends a message with balance/account for non-placeholder (1 point)")
+    print(" Check 6: PASSED - Sends a message with balance/account (1 point)")
     score += 1
 else:
-    print("❌ Check 7: FAILED - When slot is valid, send a balance/account message via utter_message (0 points)")
+    print("❌ Check 6: FAILED - When slot is valid, send a balance/account message via utter_message (0 points)")
 print("")
 
 print("==========================================")
@@ -128,7 +128,7 @@ print("==========================================")
 print("")
 print(
     "Summary: Check 1 (file) | Check 2 (imports) | Check 3 (class) | Check 4 (name) | "
-    "Check 5 (get_slot account) | Check 6 (placeholder + re-prompt) | Check 7 (balance message)"
+    "Check 5 (get_slot account) | Check 6 (balance message)"
 )
 print(f"Score: {score}/{max_score}")
 

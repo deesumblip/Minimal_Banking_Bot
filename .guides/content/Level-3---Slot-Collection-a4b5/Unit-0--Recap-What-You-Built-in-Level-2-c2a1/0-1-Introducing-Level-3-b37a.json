@@ -1,0 +1,20 @@
+{
+	"id": "b37a266c-9a6d-5e48-a2b9-de81e8f59f87",
+	"title": "0.1 Introducing Level 3",
+	"files": [
+		{
+			"path": "#tabs",
+			"action": "close"
+		}
+	],
+	"layout": "2-panels-tree-guides-left",
+	"path": [
+		"level3"
+	],
+	"type": "page",
+	"contentType": "markdown",
+	"content": "",
+	"teacherOnly": false,
+	"closeTerminalSession": true,
+	"learningObjectives": "Describe what Level 3 adds with slots and the intended build order (domain, action, flow)."
+}
