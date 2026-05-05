@@ -4,7 +4,7 @@
 	"source": {
 		"name": "Lab 2.1: Adding Multiple Slots in the Domain",
 		"showName": true,
-		"instructions": "To pass this assessment, all of the following must be true (same Codio layout as Level 2 Lab 6.2):\n\n• Check 1: level4/domain/basics.yml exists.\n• Check 2: Slots amount, recipient, account_from, and account (Level 3) are present.\n• Check 3: utter_ask_amount, utter_ask_recipient, utter_ask_account_from, and utter_ask_account each have a text message.\n• Check 4: action_process_transfer is listed under actions:.\n• Check 5: action_bank_hours, action_holiday_hours, and action_check_balance_simple are still listed under actions: (do not remove them when adding the transfer action).\n\nFull score: 12/12.",
+		"instructions": "To pass this assessment, all of the following must be true:\n\n• Check 1: level4/domain/basics.yml exists.\n• Check 2: Slots amount, recipient, account_from, and account (Level 3) are present.\n• Check 3: utter_ask_amount, utter_ask_recipient, and utter_ask_account each have a text message.\n• Check 4: action_process_transfer is listed under actions:.\n• Check 5: action_bank_hours, action_holiday_hours, and action_check_balance_simple are still listed under actions: (do not remove them when adding the transfer action).\n\nFull score: 12/12.",
 		"command": "bash /home/codio/workspace/.guides/scripts/run_python_grader.sh /home/codio/workspace/.guides/secure/level4_graders/lab_2.1_grader.py",
 		"preExecuteCommand": "",
 		"options": {
@@ -27,7 +27,8 @@
 			"opened": [
 				{
 					"type": "terminal",
-					"panelNumber": 1
+					"panelNumber": 1,
+					"content": ""
 				}
 			]
 		},

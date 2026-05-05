@@ -4,7 +4,7 @@
 	"source": {
 		"name": "Lab 5.1: Training the Level 4 Agent",
 		"showName": true,
-		"instructions": "To pass, all checks must pass:\n\n• Check 1: Project .venv exists with Python.\n• Check 2: A .tar.gz model exists in level4/models/.\n• Check 3: Model is recent (under 10 minutes old).\n• Check 4: logs.out has no obvious errors (or no log file).\n• Check 5: level4/config.yml pipeline uses CompactLLMCommandGenerator (not SearchReadyLLMCommandGenerator).\n\nFull score: 12/12. Partial credit possible on checks 3–4 if warnings appear.",
+		"instructions": "To pass, all checks must pass:\n\n• Check 1: Project .venv exists with Python.\n• Check 2: A .tar.gz model exists in level4/models/.\n• Check 3: Model is recent (under 10 minutes old).\n• Check 4: logs.out has no obvious errors (or no log file).\n\nFull score: 10/10. Partial credit possible on checks 3–4 if warnings appear.",
 		"command": "bash /home/codio/workspace/.guides/scripts/run_python_grader.sh /home/codio/workspace/.guides/secure/level4_graders/lab_5.1_grader.py",
 		"preExecuteCommand": "",
 		"options": {
@@ -27,7 +27,8 @@
 			"opened": [
 				{
 					"type": "terminal",
-					"panelNumber": 1
+					"panelNumber": 1,
+					"content": ""
 				}
 			]
 		},
@@ -70,13 +71,6 @@
 				"arguments": "",
 				"input": "",
 				"output": "Check 4: PASSED",
-				"showFeedback": false,
-				"feedback": ""
-			},
-			{
-				"arguments": "",
-				"input": "",
-				"output": "Check 5: PASSED",
 				"showFeedback": false,
 				"feedback": ""
 			}

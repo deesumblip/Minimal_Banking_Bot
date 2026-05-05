@@ -4,7 +4,7 @@
 	"source": {
 		"name": "Lab 4.1: Creating the Transfer Flow",
 		"showName": true,
-		"instructions": "To pass, all checks must pass:\n\n• Check 1: level4/data/basics/transfer_money.yml exists.\n• Check 2: flows: includes a flow with name and steps.\n• Check 3: collect steps for amount, recipient, account_from.\n• Check 4: A step with action: action_process_transfer.\n\nFull score: 8/8.",
+		"instructions": "To pass, all checks must pass:\n\n• Check 1: level4/data/basics/transfer_money.yml exists.\n• Check 2: flows: includes a flow with name and steps.\n• Check 3: collect steps for amount, recipient, account.\n• Check 4: A step with action: action_process_transfer.\n\nFull score: 8/8.",
 		"command": "bash /home/codio/workspace/.guides/scripts/run_python_grader.sh /home/codio/workspace/.guides/secure/level4_graders/lab_4.1_grader.py",
 		"preExecuteCommand": "",
 		"options": {
@@ -27,7 +27,8 @@
 			"opened": [
 				{
 					"type": "terminal",
-					"panelNumber": 1
+					"panelNumber": 1,
+					"content": ""
 				}
 			]
 		},

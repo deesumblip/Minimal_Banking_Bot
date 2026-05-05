@@ -4,7 +4,7 @@
 	"source": {
 		"name": "Level 2: 1.4 Test Your Knowledge - What is an Action",
 		"showName": false,
-		"instructions": "**What is a custom action in Rasa?**",
+		"instructions": "**What is an action in Rasa?**",
 		"multipleResponse": false,
 		"isRandomized": false,
 		"answers": [
