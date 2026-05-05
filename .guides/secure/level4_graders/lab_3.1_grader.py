@@ -4,9 +4,8 @@ Lab 3.1: Writing the Action That Uses Multiple Slots - Grader Script
 Output format matches Level 2 Lab 6.2 template (leading space on PASSED lines,
 no emoji on pass; ❌ on fail; ========== summary band; exit 0 only on full score).
 
-Checks level4/actions/action_process_transfer.py for: correct class, name(),
-run() reading amount, recipient, account_from slots, and sending a message.
-Runs from workspace root; expects /home/codio/workspace.
+Checks level4/actions/action_process_transfer.py using plain string matching.
+No third-party dependencies. Runs from any Python 3 interpreter.
 """
 
 import re
@@ -22,7 +21,7 @@ max_score = 10
 print("Running Lab 3.1 Assessment Checks...")
 print("")
 
-# Check 1: Action file exists
+# Check 1: Action file exists (1 point)
 print("Check 1: Verifying action file exists...")
 if not ACTION_PATH.exists():
     print("❌ Check 1: FAILED - level4/actions/action_process_transfer.py not found (0 points)")
@@ -77,12 +76,12 @@ else:
 print("")
 
 # Check 5: run() reads all three slots (3 points)
-print("Check 5: Verifying run() reads amount, recipient, account_from...")
+print("Check 5: Verifying run() reads amount, recipient, account...")
 has_amount = "get_slot" in content and ('"amount"' in content or "'amount'" in content)
 has_recipient = "recipient" in content and "get_slot" in content
-has_account_from = "account_from" in content and "get_slot" in content
-if has_amount and has_recipient and has_account_from:
-    print(" Check 5: PASSED - run() reads amount, recipient, account_from (3 points)")
+has_account = "account" in content and "get_slot" in content
+if has_amount and has_recipient and has_account:
+    print(" Check 5: PASSED - run() reads amount, recipient, account (3 points)")
     score += 3
 else:
     missing = []
@@ -90,13 +89,13 @@ else:
         missing.append("amount")
     if not has_recipient:
         missing.append("recipient")
-    if not has_account_from:
-        missing.append("account_from")
+    if not has_account:
+        missing.append("account")
     print(f"❌ Check 5: FAILED - run() must read all three slots; missing or unclear: {missing} (0 points)")
-    print("Hint: amount = tracker.get_slot('amount') or ''; same for recipient and account_from")
+    print("Hint: amount = tracker.get_slot('amount') or ''; same for recipient and account")
 print("")
 
-# Check 6: Sends a message (2 points total remainder: was 1pt — keep 2 pts for max 10)
+# Check 6: Sends a message (2 points)
 print("Check 6: Verifying confirmation message...")
 if "utter_message" in content_lower and (
     "transfer" in content_lower or "amount" in content or "recipient" in content

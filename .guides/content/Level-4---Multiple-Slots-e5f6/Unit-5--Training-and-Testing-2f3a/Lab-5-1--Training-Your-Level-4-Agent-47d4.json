@@ -1,9 +1,9 @@
 {
-	"id": "e5f68001-e4f5-4e5f-8a9b-0c1d0e000001",
-	"title": "0.1 Your Level 3 Banking Agent",
+	"id": "47d4bd02-002a-5f63-bdfa-8904782052d7",
+	"title": "Lab 5.1: Training Your Level 4 Agent",
 	"files": [
 		{
-			"path": "",
+			"path": "#terminal",
 			"panel": 1,
 			"action": "open"
 		}

@@ -3,23 +3,16 @@
 Lab 4.1: Creating the Transfer Flow - Grader Script
 Output format matches Level 2 Lab 6.2 template.
 
-Checks level4/data/basics/transfer_money.yml for: file exists, valid YAML with flows:,
-flow with collect: amount, collect: recipient, collect: account_from, action: action_process_transfer.
-Runs from workspace root; expects /home/codio/workspace.
+Checks level4/data/basics/transfer_money.yml using plain string matching.
+No third-party dependencies. Runs from any Python 3 interpreter.
 """
 
+import re
 import sys
 from pathlib import Path
 
 WORKSPACE_ROOT = Path("/home/codio/workspace")
 FLOW_PATH = WORKSPACE_ROOT / "level4" / "data" / "basics" / "transfer_money.yml"
-
-try:
-    import yaml
-except ImportError:
-    print("FAIL")
-    print("Hint: PyYAML is required. Use the project venv Python: .venv/bin/python3")
-    sys.exit(1)
 
 score = 0
 max_score = 8
@@ -33,7 +26,7 @@ if not FLOW_PATH.exists():
     print("❌ Check 1: FAILED - level4/data/basics/transfer_money.yml not found (0 points)")
     print(
         "Hint: Create the file in level4/data/basics/ with a flow that has collect amount, "
-        "recipient, account_from and action: action_process_transfer"
+        "recipient, account and action: action_process_transfer"
     )
     print("FAIL")
     sys.exit(1)
@@ -41,73 +34,43 @@ print(" Check 1: PASSED - file exists (2 points)")
 score += 2
 print("")
 
-try:
-    with open(FLOW_PATH, encoding="utf-8") as f:
-        data = yaml.safe_load(f)
-except Exception as e:
-    print("❌ FAILED - transfer_money.yml has YAML syntax errors:")
-    print(f"   {e}")
-    print("FAIL")
-    sys.exit(1)
+content = FLOW_PATH.read_text(encoding="utf-8")
 
-if not isinstance(data, dict):
-    print("❌ FAILED - file must be a YAML mapping.")
-    print("FAIL")
-    sys.exit(1)
-
-flows = data.get("flows")
-if not isinstance(flows, dict) or not flows:
-    print("❌ Check 2: FAILED - No top-level 'flows:' section or it is empty (0 points)")
-    print("FAIL")
-    sys.exit(1)
-
-# Check 2: flows with name and steps (2 points)
-has_valid_flow = False
-for flow_def in flows.values():
-    if isinstance(flow_def, dict) and "name" in flow_def and "steps" in flow_def:
-        has_valid_flow = True
-        break
+# Check 2: flows: section with name and steps (2 points)
 print("Check 2: Verifying flows structure...")
-if has_valid_flow:
+has_flows = re.search(r"^flows\s*:", content, re.MULTILINE)
+has_name = re.search(r"^\s+name\s*:", content, re.MULTILINE)
+has_steps = re.search(r"^\s+steps\s*:", content, re.MULTILINE)
+if has_flows and has_name and has_steps:
     print(" Check 2: PASSED - flows: with at least one flow (name, steps) (2 points)")
     score += 2
 else:
     print("❌ Check 2: FAILED - At least one flow must have 'name' and 'steps' (0 points)")
 print("")
 
-# Check 3: collect amount, recipient, account_from (2 points)
-collect_required = {"amount", "recipient", "account_from"}
-collect_found = set()
-for flow_def in flows.values() if isinstance(flows, dict) else []:
-    if not isinstance(flow_def, dict):
-        continue
-    steps = flow_def.get("steps") or []
-    for step in steps:
-        if isinstance(step, dict) and "collect" in step:
-            collect_found.add(step.get("collect"))
+# Check 3: collect amount, recipient, account (2 points)
 print("Check 3: Verifying collect steps...")
-if collect_required.issubset(collect_found):
-    print(" Check 3: PASSED - collect: amount, recipient, account_from found (2 points)")
+has_amount = re.search(r"^\s+-\s+collect\s*:\s*amount", content, re.MULTILINE)
+has_recipient = re.search(r"^\s+-\s+collect\s*:\s*recipient", content, re.MULTILINE)
+has_account = re.search(r"^\s+-\s+collect\s*:\s*account", content, re.MULTILINE)
+missing = []
+if not has_amount:
+    missing.append("amount")
+if not has_recipient:
+    missing.append("recipient")
+if not has_account:
+    missing.append("account")
+if not missing:
+    print(" Check 3: PASSED - collect: amount, recipient, account found (2 points)")
     score += 2
 else:
-    missing = collect_required - collect_found
     print(f"❌ Check 3: FAILED - Missing collect steps: {missing} (0 points)")
-    print("Hint: Add steps with collect: amount, collect: recipient, collect: account_from")
+    print("Hint: Add steps with collect: amount, collect: recipient, collect: account")
 print("")
 
 # Check 4: action: action_process_transfer (2 points)
-has_action = False
-for flow_def in flows.values() if isinstance(flows, dict) else []:
-    if not isinstance(flow_def, dict):
-        continue
-    for step in flow_def.get("steps") or []:
-        if isinstance(step, dict) and step.get("action") == "action_process_transfer":
-            has_action = True
-            break
-    if has_action:
-        break
 print("Check 4: Verifying action step...")
-if has_action:
+if re.search(r"^\s+-\s+action\s*:\s*action_process_transfer", content, re.MULTILINE):
     print(" Check 4: PASSED - action: action_process_transfer found (2 points)")
     score += 2
 else:

@@ -1,19 +1,9 @@
-**Starting point:** Work in **`level4/`** (see **Unit 0.1**).
-
-In Unit 4 you saw an example `transfer_money` flow: YAML with three `collect:` steps and one `action:` step. You already added the slots and ask responses in the domain (**Lab 2.1**) and created the action (**Lab 3.1**). In this lab you add the flow file: `level4/data/basics/transfer_money.yml`, ending with `action_process_transfer`.
-
-## Part 1: In Codio
-
-1. **Create** the file `data/basics/transfer_money.yml` under the `level4` folder (use the file tree / editor, you do not need to activate the virtual environment for this lab. **Check It!** only checks your saved YAML).
-
-2. **Add** the following flow:
+Create `data/basics/transfer_money.yml` under `level4/` and add the following:
 
 ```yaml
 flows:
   transfer_money:
     name: transfer money
-    always_include_in_prompt: true
-    if: true
     description: |
       Transfer money in USD. Steps: get dollar amount, then who receives it (any name or text), then which account to take it from, then run the transfer action.
     steps:
@@ -22,24 +12,26 @@ flows:
           US dollar amount. Parse the user's message and set slot amount to the main number as text (e.g. 20 from "20 dollars").
       - collect: recipient
         description: |
-          Payee: any free-text string. Set slot recipient to the user's full message (plain text), up to 100 characters.
-      - collect: account_from
+          Transfer recipient / payee (free text).
+          Extract the recipient identifier from the user's message.
+          - Good examples: "Jen", "Sarah Connor", "Fred", etc.
+          - If the user provides a longer sentence, extract only the recipient part (e.g. "send it to Jen please" -> "Jen").
+          - If the user provides multiple recipients (e.g. "Jen or Joe"), ask again (do not guess).
+      - collect: account
+        ask_before_filling: true
         description: |
-          Source account. Set slot account_from to the user's full message (plain text), up to 120 characters.
+          A numeric account number consisting ONLY of digits (e.g., 123456, 987654321).
+          CRITICAL: Do NOT extract this slot unless the user explicitly provides numbers.
+          Do NOT extract from phrases like "account balance", "check account", "my account".
+          Only extract when the user says actual digits like "123456" or "my account number is 789012".
       - action: action_process_transfer
 ```
 
-**Why these `description` lines?** Rasa Pro’s **LLM command generator** uses them when filling slots. For payee and account, a practical pattern is to store the **entire user message** as plain text within a **length range** (here up to 100 characters for recipient and 120 for account). See [Rasa’s guidance on customizing the prompt](https://rasa.com/docs/reference/config/components/llm-command-generators/#customizing-the-prompt).
+Remember: `account` has `ask_before_filling: true` because `check_balance` persists that slot, without it, a returning user's account would be silently reused. `amount` and `recipient` have no such risk, so they fill immediately if provided upfront.
 
-3. **Verify.** The file is in `data/basics/`, and the flow has `name`, `description`, and `steps` with the three collect steps and the action step.
+Another way to enhance the conversation design of this flow would be to confirm with the user that everything has been properly collected before submitting the money transfer request - something to try building in after you have completed this course. 
 
-**Use Check It!** below when done (Codio).
+
+**Use Check It!** below when done.
 
 {Check It!|assessment}(code-output-compare-401040001)
-
-## Part 2: Running locally
-
-1. In your editor, create `level4/data/basics/transfer_money.yml` with the flow structure above (no terminal or venv required for this lab).
-2. Verify as in Part 1.
-
-You're done when `data/basics/transfer_money.yml` exists with a flow that has `collect: amount`, `collect: recipient`, `collect: account_from`, and `action: action_process_transfer`.

@@ -23,5 +23,5 @@ class ActionCheckBalanceSimple(Action):
             dispatcher.utter_message(response="utter_ask_account")
             return []
         
-        dispatcher.utter_message(text=f"(Demo) Balance for account {account} is $123.45.")
+        dispatcher.utter_message(text=f"The balance for account {account} is $123.45.")
         return []

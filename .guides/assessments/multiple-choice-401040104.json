@@ -8,18 +8,54 @@
 		"multipleResponse": false,
 		"isRandomized": true,
 		"answers": [
-			{"_id": "a0104014-0001-4000-8000-000000000001", "correct": false, "answer": "Only `account`"},
-			{"_id": "a0104014-0002-4000-8000-000000000002", "correct": true, "answer": "`amount`, `recipient`, and `account_from`"},
-			{"_id": "a0104014-0003-4000-8000-000000000003", "correct": false, "answer": "`transfer`, `money`, and `flow`"},
-			{"_id": "a0104014-0004-4000-8000-000000000004", "correct": false, "answer": "`from_account` and `to_account`"}
+			{
+				"_id": "a0104014-0001-4000-8000-000000000001",
+				"correct": false,
+				"answer": "Only `account`"
+			},
+			{
+				"_id": "a0104014-0002-4000-8000-000000000002",
+				"correct": true,
+				"answer": "`amount`, and `recipient`"
+			},
+			{
+				"_id": "a0104014-0003-4000-8000-000000000003",
+				"correct": false,
+				"answer": "`transfer`, `money`, and `flow`"
+			},
+			{
+				"_id": "a0104014-0004-4000-8000-000000000004",
+				"correct": false,
+				"answer": "`from_account` and `to_account`"
+			}
 		],
-		"metadata": {"tags": [{"name": "Assessment Type", "value": "Multiple Choice"}], "files": [], "opened": []},
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Multiple Choice"
+				}
+			],
+			"files": [],
+			"opened": [
+				{
+					"type": "terminal",
+					"panelNumber": 1,
+					"content": ""
+				}
+			]
+		},
 		"bloomsObjectiveLevel": "2",
 		"learningObjectives": "SWBAT identify Level 4 transfer flow slots",
-		"guidance": "Level 4 adds `amount`, `recipient`, and `account_from` for the transfer flow.",
-		"showGuidanceAfterResponseOption": {"type": "Attempts", "passedFrom": 1},
+		"guidance": "Level 4 adds `amount`, and `recipient` for the transfer flow. `account`was added in the prior level for the `check_balance` flow. ",
+		"showGuidanceAfterResponseOption": {
+			"type": "Attempts",
+			"passedFrom": 1
+		},
 		"maxAttemptsCount": 1,
-		"showExpectedAnswerOption": {"type": "Always"},
+		"showExpectedAnswerOption": {
+			"type": "Always"
+		},
 		"points": 5,
 		"incorrectPoints": 0,
 		"arePartialPointsAllowed": false,
