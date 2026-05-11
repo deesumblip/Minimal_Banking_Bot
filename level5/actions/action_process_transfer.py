@@ -16,17 +16,9 @@ class ActionProcessTransfer(Action):
         tracker: Tracker,
         domain: Dict[Text, Any],
     ) -> List[Dict[Text, Any]]:
-        amount = tracker.get_slot("amount")
-        recipient = tracker.get_slot("recipient")
-        account_from = tracker.get_slot("account_from")
-        
-        if not amount or not recipient or not account_from:
-            dispatcher.utter_message(
-                text="I'm missing some information. Please provide amount, recipient, and source account."
-            )
-            return []
-        
-        dispatcher.utter_message(
-            text=f"Transfer of ${amount} from account {account_from} to {recipient} has been processed successfully."
-        )
+        amount = tracker.get_slot("amount") or ""
+        recipient = (tracker.get_slot("recipient") or "")
+        account = tracker.get_slot("account") or ""
+
+        dispatcher.utter_message(text=f"Transfer of ${amount} from account {account} to {recipient} has been processed successfully.")
         return []
