@@ -1,34 +1,13 @@
-
 version: "3.1"
 
 slots:
   account:
     type: text
-    mappings:
-      - type: from_llm
-        conditions:
-          - active_flow: check_balance
-
   amount:
     type: text
-    mappings:
-      - type: from_llm
-        conditions:
-          - active_flow: transfer_money
-
   recipient:
     type: text
-    mappings:
-      - type: from_llm
-        conditions:
-          - active_flow: transfer_money
 
-  account_from:
-    type: text
-    mappings:
-      - type: from_llm
-        conditions:
-          - active_flow: transfer_money
 
 responses:
   utter_greet:
@@ -57,19 +36,19 @@ responses:
         rephrase: True
 
   utter_ask_account:
-    - text: "What is your account number?"
+    - text: "What is the account number?"
       metadata:
         rephrase: True
 
   utter_ask_amount:
     - text: "How much would you like to transfer?"
       metadata:
-        rephrase: True
-
+        rephrase: False
+ 
   utter_ask_recipient:
     - text: "Who would you like to transfer money to?"
       metadata:
-        rephrase: True
+        rephrase: False
 
 
 actions:
