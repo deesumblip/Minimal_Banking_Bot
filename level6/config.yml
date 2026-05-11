@@ -1,17 +1,22 @@
-# Level 6 main assistant: SearchReady with a slot-aware prompt template; add sub-agent YAML under `sub_agents/` and MCP connection details in `endpoints.yml`.
-
 recipe: default.v1
 language: en
-assistant_id: level6-agent
+assistant_id: level1-agent
 
 pipeline:
   - name: SearchReadyLLMCommandGenerator
-    prompt_template: data/prompts/command_prompt_v3_slot_names.jinja2
     llm:
-      model_group: openai-gpt-5-1
-    # Off by default so you can train and run with your Rasa license alone; turn on if you add OpenAI-backed flow retrieval.
+      model_group: rasa_command_generation_model
     flow_retrieval:
       active: false
 
 policies:
   - name: FlowPolicy
+  - name: EnterpriseSearchPolicy
+    vector_store:
+      type: faiss
+      source: ./docs
+    llm:
+      model_group: openai-gpt-5-mini
+    embeddings:
+      model_group: openai-embeddings
+    check_relevancy: true
