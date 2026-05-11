@@ -26,16 +26,7 @@ class ActionProcessTransfer(Action):
             )
             return []
         
-        placeholder_values = ["amount", "recipient", "account number", "user_account_number"]
-        if (amount.lower() in [p.lower() for p in placeholder_values] or
-            recipient.lower() in [p.lower() for p in placeholder_values] or
-            account_from.lower() in [p.lower() for p in placeholder_values]):
-            dispatcher.utter_message(
-                text="I need the actual values, not placeholders. Please provide the real amount, recipient name, and account number."
-            )
-            return []
-        
         dispatcher.utter_message(
-            text=f"(Demo) Transfer of ${amount} from account {account_from} to {recipient} has been processed successfully."
+            text=f"Transfer of ${amount} from account {account_from} to {recipient} has been processed successfully."
         )
         return []
