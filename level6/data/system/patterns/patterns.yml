@@ -12,3 +12,9 @@ flows:
       - intent: session_start
     steps:
       - action: utter_greet
+
+  pattern_search:
+    name: pattern search
+    description: Answers knowledge questions using the enterprise search index.
+    steps:
+      - action: action_trigger_search
