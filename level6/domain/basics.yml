@@ -1,45 +1,13 @@
-# Same agent as Level 5; you’ll wire in a banking sub-agent, MCP settings in `endpoints.yml`, and new flows as the guide shows.
-# Every step name from your flows—including `utter_*`—belongs in `actions:`.
-
 version: "3.1"
 
 slots:
   account:
     type: text
-    mappings:
-      - type: from_llm
-        conditions:
-          - active_flow: check_balance
-
   amount:
     type: text
-    mappings:
-      - type: from_llm
-        conditions:
-          - active_flow: transfer_money
-      - type: from_llm
-        conditions:
-          - active_flow: transfer_money_tools
-
   recipient:
     type: text
-    mappings:
-      - type: from_llm
-        conditions:
-          - active_flow: transfer_money
-      - type: from_llm
-        conditions:
-          - active_flow: transfer_money_tools
 
-  account_from:
-    type: text
-    mappings:
-      - type: from_llm
-        conditions:
-          - active_flow: transfer_money
-      - type: from_llm
-        conditions:
-          - active_flow: transfer_money_tools
 
 responses:
   utter_greet:
@@ -68,32 +36,23 @@ responses:
         rephrase: True
 
   utter_ask_account:
-    - text: "What is your account number?"
+    - text: "What is the account number?"
       metadata:
         rephrase: True
 
   utter_ask_amount:
     - text: "How much would you like to transfer?"
       metadata:
-        rephrase: True
-
+        rephrase: False
+ 
   utter_ask_recipient:
     - text: "Who would you like to transfer money to?"
       metadata:
-        rephrase: True
+        rephrase: False
 
-  utter_ask_account_from:
-    - text: "Which account would you like to transfer from?"
-      metadata:
-        rephrase: True
 
 actions:
-  - utter_greet
-  - utter_help
-  - utter_contact
-  - utter_goodbye
   - action_bank_hours
   - action_holiday_hours
   - action_check_balance_simple
   - action_process_transfer
-  - action_process_transfer_with_tools
