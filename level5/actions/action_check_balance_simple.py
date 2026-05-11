@@ -18,10 +18,5 @@ class ActionCheckBalanceSimple(Action):
     ) -> List[Dict[Text, Any]]:
         account = tracker.get_slot("account") or "<missing>"
         
-        placeholder_values = ["account number", "user_account_number", "<missing>"]
-        if account.lower() in [p.lower() for p in placeholder_values]:
-            dispatcher.utter_message(response="utter_ask_account")
-            return []
-        
         dispatcher.utter_message(text=f"(Demo) Balance for account {account} is $123.45.")
         return []
