@@ -1,9 +1,9 @@
 """
 Appointment Booking MCP server for Level 6 (Streamable HTTP — required by Rasa's MCP client).
- 
+
 Run from level6:
-  python mcp_server/banking.py
- 
+  python mcp_server/BookAppointment.py
+
 Default URL for endpoints.yml:
   http://127.0.0.1:8080/mcp
 """
@@ -11,25 +11,25 @@ import asyncio
 import json
 import sys
 from datetime import datetime, timedelta
- 
+
 from mcp.server.fastmcp import FastMCP
- 
+
 PORT = 8080
 STREAMABLE_PATH = "/mcp"
- 
+
 mcp = FastMCP(
-    "Banking",
-    instructions="Appointment scheduling tools for the Level 6 financial advisor sub-agent.",
+    "AppointmentBooking",
+    instructions="Appointment scheduling tools for the Level 6 branch appointment sub-agent.",
     host="0.0.0.0",
     port=PORT,
     streamable_http_path=STREAMABLE_PATH,
 )
- 
- 
+
+
 def _as_json(obj) -> str:
     return json.dumps(obj, ensure_ascii=False)
- 
- 
+
+
 def _is_holiday(date: datetime) -> str | None:
     """Return holiday name if the date is a bank holiday, otherwise None."""
     holidays = {
@@ -38,8 +38,8 @@ def _is_holiday(date: datetime) -> str | None:
         (12, 25): "Christmas Day",
     }
     return holidays.get((date.month, date.day))
- 
- 
+
+
 # Fixed availability pattern per weekday (0=Monday ... 4=Friday)
 SLOT_AVAILABILITY = {
     0: {"9:00 AM": True,  "10:00 AM": False, "11:00 AM": True,  "1:00 PM": False, "2:00 PM": True,  "3:00 PM": True,  "4:00 PM": False},
@@ -48,8 +48,8 @@ SLOT_AVAILABILITY = {
     3: {"9:00 AM": False, "10:00 AM": True,  "11:00 AM": True,  "1:00 PM": True,  "2:00 PM": False, "3:00 PM": True,  "4:00 PM": False},
     4: {"9:00 AM": True,  "10:00 AM": False, "11:00 AM": True,  "1:00 PM": False, "2:00 PM": True,  "3:00 PM": False, "4:00 PM": True },
 }
- 
- 
+
+
 @mcp.tool()
 def get_available_slots() -> str:
     """
@@ -57,13 +57,13 @@ def get_available_slots() -> str:
     The bank is open Monday to Friday, 9:00 AM to 5:00 PM.
     Closed on weekends and major public holidays.
     Not all slots are available — some are already booked.
-    Call this first before asking the user to choose a time.
+    Call this once at the start before asking the user to choose a time.
     """
     now = datetime.now()
     slots = []
     day = now
     count = 0
- 
+
     while count < 3:
         day = day + timedelta(days=1)
         if day.weekday() >= 5:
@@ -86,14 +86,14 @@ def get_available_slots() -> str:
             "note": f"{len(available)} of 7 slots available"
         })
         count += 1
- 
+
     return _as_json({
         "today": now.strftime("%A, %d %B %Y"),
         "bank_hours": "Monday to Friday, 9:00 AM - 5:00 PM",
         "available_slots": slots
     })
- 
- 
+
+
 @mcp.tool()
 def book_appointment(date: str, time: str, name: str) -> str:
     """
@@ -112,17 +112,17 @@ def book_appointment(date: str, time: str, name: str) -> str:
         "reference": reference,
         "notes": "Please bring valid ID. Call 1-800-BANK-123 to reschedule."
     })
- 
- 
+
+
 async def _run() -> None:
     print(
-        f"Banking MCP (Streamable HTTP)\n"
+        f"Appointment Booking MCP (Streamable HTTP)\n"
         f"URL for endpoints.yml:\n  http://127.0.0.1:{mcp.settings.port}{STREAMABLE_PATH}",
         flush=True,
     )
     await mcp.run_streamable_http_async()
- 
- 
+
+
 def main() -> None:
     port = PORT
     if len(sys.argv) > 1:
@@ -132,8 +132,7 @@ def main() -> None:
             pass
     mcp.settings.port = port
     asyncio.run(_run())
- 
- 
+
+
 if __name__ == "__main__":
     main()
- 
