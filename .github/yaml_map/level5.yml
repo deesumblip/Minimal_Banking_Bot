@@ -6,6 +6,8 @@
   paths: &level5-paths
     - "level5/**"
     - "level6/**"
+    - ".guides/styles.css"
+    - ".guides/img/**"
     - ".codio"
     - ".gitignore"
 
