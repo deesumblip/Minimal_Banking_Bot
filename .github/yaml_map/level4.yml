@@ -3,7 +3,7 @@
 
 - assignment: 2053b50f11c318747dda88aa857b1264
   section: ["Level 4 - Multiple Slots", "Unit 0: Recap - What you built in Level 3"]
-  paths: &level4-paths
+  paths: &l4
     - "level4/**"
     - "level5/**"
     - ".guides/styles.css"
@@ -13,24 +13,24 @@
 
 - assignment: 2053b50f11c318747dda88aa857b1264
   section: ["Level 4 - Multiple Slots", "Unit 1: Multiple Slots"]
-  paths: *level4-paths
+  paths: *l4
 
 - assignment: 2053b50f11c318747dda88aa857b1264
   section: ["Level 4 - Multiple Slots", "Unit 2: Adding Slots and Responses"]
-  paths: *level4-paths
+  paths: *l4
 
 - assignment: 2053b50f11c318747dda88aa857b1264
   section: ["Level 4 - Multiple Slots", "Unit 3: Reading Multiple Slots in Actions"]
-  paths: *level4-paths
+  paths: *l4
 
 - assignment: 2053b50f11c318747dda88aa857b1264
   section: ["Level 4 - Multiple Slots", "Unit 4: Flows with Multiple Collect Steps"]
-  paths: *level4-paths
+  paths: *l4
 
 - assignment: 2053b50f11c318747dda88aa857b1264
   section: ["Level 4 - Multiple Slots", "Unit 5: Training and Testing"]
-  paths: *level4-paths
+  paths: *l4
 
 - assignment: 2053b50f11c318747dda88aa857b1264
   section: ["Level 4 - Multiple Slots", "Unit 6: Summary and Next Steps"]
-  paths: *level4-paths
+  paths: *l4
