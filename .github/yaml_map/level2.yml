@@ -10,6 +10,8 @@
   paths: &level2-paths
     # Level 2 bot code (includes the actions/ module for custom actions)
     - "level2/**"
+    # Level 3 starter files (copied forward when student starts Level 3)
+    - "level3/**"
     # Level 2 guide content + top-level guide navigation
     - ".guides/content/index.json"
     - ".guides/content/Level-2---Custom-Actions-30d6/**"
@@ -45,5 +47,4 @@
   paths: *level2-paths
 
 - assignment: 0ef39b54b918ebe3c5c783193f91fb99
-  section: ["Level 2 - Custom Actions", "Unit 6: Training, Testing, and Level 2 Wrap-Up"]
-  paths: *level2-paths
+  section: ["Level 2 - Custom Actions", "Unit 6: Training, Testing, and
