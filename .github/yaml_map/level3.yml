@@ -1,0 +1,39 @@
+# Publishes Level 3 bot code to the Level 3 Codio assignment.
+# Guide content is managed directly in Codio UI.
+#
+# Codio's yaml_map requires ONE entry per [Chapter, Section] pair
+# (see https://docs.codio.com/develop/develop/ide/tools/ghapi.html),
+# so we list every Unit in Level 3 explicitly. `paths:` is shared across
+# entries via a YAML anchor (&level3-paths / *level3-paths).
+
+- assignment: c624c6207564c7ee228de3010b0e3a5b
+  section: ["Level 3 - Slot Collection", "Unit 0: Recap - What you built in Level 2"]
+  paths: &level3-paths
+    - "level3/**"
+    - "level4/**"
+    - ".codio"
+    - ".gitignore"
+
+- assignment: c624c6207564c7ee228de3010b0e3a5b
+  section: ["Level 3 - Slot Collection", "Unit 1: Introduction to Memory"]
+  paths: *level3-paths
+
+- assignment: c624c6207564c7ee228de3010b0e3a5b
+  section: ["Level 3 - Slot Collection", "Unit 2: Defining Slots in the Domain"]
+  paths: *level3-paths
+
+- assignment: c624c6207564c7ee228de3010b0e3a5b
+  section: ["Level 3 - Slot Collection", "Unit 3: Reading Slots in Actions"]
+  paths: *level3-paths
+
+- assignment: c624c6207564c7ee228de3010b0e3a5b
+  section: ["Level 3 - Slot Collection", "Unit 4: Collecting Slots in Flows"]
+  paths: *level3-paths
+
+- assignment: c624c6207564c7ee228de3010b0e3a5b
+  section: ["Level 3 - Slot Collection", "Unit 5: Training and Testing with Slots"]
+  paths: *level3-paths
+
+- assignment: c624c6207564c7ee228de3010b0e3a5b
+  section: ["Level 3 - Slot Collection", "Unit 6: Assessment and Next Steps"]
+  paths: *level3-paths
