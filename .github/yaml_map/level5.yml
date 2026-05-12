@@ -2,7 +2,7 @@
 # Guide content is managed directly in Codio UI.
 
 - assignment: 5cb47ad7c761b9dc34269db45a12fc95
-  section: ["Level 5 - Enterprise Search", "Unit 1: Introduction to Enterprise Search"]
+  section: ["Level 5 - Tool Calling", "Unit 1: Introduction to Enterprise Search"]
   paths: &l5
     - "level5/**"
     - "level6/**"
@@ -12,21 +12,21 @@
     - ".gitignore"
 
 - assignment: 5cb47ad7c761b9dc34269db45a12fc95
-  section: ["Level 5 - Enterprise Search", "Unit 1: How RAG Works"]
+  section: ["Level 5 - Tool Calling", "Unit 1: How RAG Works"]
   paths: *l5
 
 - assignment: 5cb47ad7c761b9dc34269db45a12fc95
-  section: ["Level 5 - Enterprise Search", "Unit 2: Setting up Enterprise Search"]
+  section: ["Level 5 - Tool Calling", "Unit 2: Setting up Enterprise Search"]
   paths: *l5
 
 - assignment: 5cb47ad7c761b9dc34269db45a12fc95
-  section: ["Level 5 - Enterprise Search", "Unit 3: Override default search pattern"]
+  section: ["Level 5 - Tool Calling", "Unit 3: Override default search pattern"]
   paths: *l5
 
 - assignment: 5cb47ad7c761b9dc34269db45a12fc95
-  section: ["Level 5 - Enterprise Search", "Unit 4: Train and Test for Search"]
+  section: ["Level 5 - Tool Calling", "Unit 4: Train and Test for Search"]
   paths: *l5
 
 - assignment: 5cb47ad7c761b9dc34269db45a12fc95
-  section: ["Level 5 - Enterprise Search", "Unit 5: Summary and Next Steps"]
+  section: ["Level 5 - Tool Calling", "Unit 5: Summary and Next Steps"]
   paths: *l5
