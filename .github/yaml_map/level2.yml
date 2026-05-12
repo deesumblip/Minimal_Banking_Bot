@@ -1,4 +1,5 @@
-# Publishes Level 2 content and bot code to the Level 2 Codio assignment.
+# Publishes Level 2 bot code to the Level 2 Codio assignment.
+# Guide content is managed directly in Codio UI.
 #
 # Codio's yaml_map requires ONE entry per [Chapter, Section] pair
 # (see https://docs.codio.com/develop/develop/ide/tools/ghapi.html),
@@ -8,21 +9,10 @@
 - assignment: 0ef39b54b918ebe3c5c783193f91fb99
   section: ["Level 2 - Custom Actions", "Unit 0: Recap - What you built in Level 1"]
   paths: &level2-paths
-    # Level 2 bot code (includes the actions/ module for custom actions)
     - "level2/**"
-    # Level 3 starter files (copied forward when student starts Level 3)
     - "level3/**"
-    # Level 2 guide content + top-level guide navigation
-    - ".guides/content/index.json"
-    - ".guides/content/Level-2---Custom-Actions-30d6/**"
-    # All assessments (Codio renders only those referenced by included pages)
-    - ".guides/assessments/**"
-    # Level 2 graders
-    - ".guides/secure/level2_graders/**"
-    # Shared guide scripts and startup hooks
-    - ".guides/scripts/**"
-    - ".guides/startup.sh"
-    # Shared box configuration
+    - ".guides/styles.css"
+    - ".guides/img/**"
     - ".codio"
     - ".gitignore"
 
@@ -47,4 +37,5 @@
   paths: *level2-paths
 
 - assignment: 0ef39b54b918ebe3c5c783193f91fb99
-  section: ["Level 2 - Custom Actions", "Unit 6: Training, Testing, and
+  section: ["Level 2 - Custom Actions", "Unit 6: Training, Testing, and Level 2 Wrap-Up"]
+  paths: *level2-paths
