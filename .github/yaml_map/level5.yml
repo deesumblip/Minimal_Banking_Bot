@@ -1,0 +1,30 @@
+# Publishes Level 5 bot code to the Level 5 Codio assignment.
+# Guide content is managed directly in Codio UI.
+
+- assignment: 5cb47ad7c761b9dc34269db45a12fc95
+  section: ["Level 5 - Enterprise Search", "Unit 1: Introduction to Enterprise Search"]
+  paths: &level5-paths
+    - "level5/**"
+    - "level6/**"
+    - ".codio"
+    - ".gitignore"
+
+- assignment: 5cb47ad7c761b9dc34269db45a12fc95
+  section: ["Level 5 - Enterprise Search", "Unit 1: How RAG Works"]
+  paths: *level5-paths
+
+- assignment: 5cb47ad7c761b9dc34269db45a12fc95
+  section: ["Level 5 - Enterprise Search", "Unit 2: Setting up Enterprise Search"]
+  paths: *level5-paths
+
+- assignment: 5cb47ad7c761b9dc34269db45a12fc95
+  section: ["Level 5 - Enterprise Search", "Unit 3: Override default search pattern"]
+  paths: *level5-paths
+
+- assignment: 5cb47ad7c761b9dc34269db45a12fc95
+  section: ["Level 5 - Enterprise Search", "Unit 4: Train and Test for Search"]
+  paths: *level5-paths
+
+- assignment: 5cb47ad7c761b9dc34269db45a12fc95
+  section: ["Level 5 - Enterprise Search", "Unit 5: Summary and Next Steps"]
+  paths: *level5-paths
