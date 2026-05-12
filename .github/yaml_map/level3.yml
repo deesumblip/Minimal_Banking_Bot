@@ -11,6 +11,8 @@
   paths: &level3-paths
     - "level3/**"
     - "level4/**"
+    - ".guides/styles.css"
+    - ".guides/img/**"
     - ".codio"
     - ".gitignore"
 
@@ -32,8 +34,4 @@
 
 - assignment: c624c6207564c7ee228de3010b0e3a5b
   section: ["Level 3 - Slot Collection", "Unit 5: Training and Testing with Slots"]
-  paths: *level3-paths
-
-- assignment: c624c6207564c7ee228de3010b0e3a5b
-  section: ["Level 3 - Slot Collection", "Unit 6: Assessment and Next Steps"]
-  paths: *level3-paths
+  paths: *lev
