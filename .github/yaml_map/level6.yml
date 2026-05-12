@@ -1,0 +1,33 @@
+# Publishes Level 6 bot code to the Level 6 Codio assignment.
+# Guide content is managed directly in Codio UI.
+
+- assignment: 8b6425b370c9831e75b5205b19e15636
+  section: ["Level 6 - Sub-Agents", "Unit 0: Intro to Sub-Agents"]
+  paths: &level6-paths
+    - "level6/**"
+    - ".codio"
+    - ".gitignore"
+
+- assignment: 8b6425b370c9831e75b5205b19e15636
+  section: ["Level 6 - Sub-Agents", "Unit 1: How Sub-Agents Work"]
+  paths: *level6-paths
+
+- assignment: 8b6425b370c9831e75b5205b19e15636
+  section: ["Level 6 - Sub-Agents", "Unit 2: Setting up the MCP Server"]
+  paths: *level6-paths
+
+- assignment: 8b6425b370c9831e75b5205b19e15636
+  section: ["Level 6 - Sub-Agents", "Unit 3: Building a Sub-Agent"]
+  paths: *level6-paths
+
+- assignment: 8b6425b370c9831e75b5205b19e15636
+  section: ["Level 6 - Sub-Agents", "Unit 4: Calling a Sub-Agent"]
+  paths: *level6-paths
+
+- assignment: 8b6425b370c9831e75b5205b19e15636
+  section: ["Level 6 - Sub-Agents", "Unit 5: Training and Testing"]
+  paths: *level6-paths
+
+- assignment: 8b6425b370c9831e75b5205b19e15636
+  section: ["Level 6 - Sub-Agents", "Unit 6: Summary and Next Steps"]
+  paths: *level6-paths
