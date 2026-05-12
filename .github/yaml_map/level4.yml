@@ -1,0 +1,34 @@
+# Publishes Level 4 bot code to the Level 4 Codio assignment.
+# Guide content is managed directly in Codio UI.
+
+- assignment: 2053b50f11c318747dda88aa857b1264
+  section: ["Level 4 - Multiple Slots", "Unit 0: Recap - What you built in Level 3"]
+  paths: &level4-paths
+    - "level4/**"
+    - "level5/**"
+    - ".codio"
+    - ".gitignore"
+
+- assignment: 2053b50f11c318747dda88aa857b1264
+  section: ["Level 4 - Multiple Slots", "Unit 1: Multiple Slots"]
+  paths: *level4-paths
+
+- assignment: 2053b50f11c318747dda88aa857b1264
+  section: ["Level 4 - Multiple Slots", "Unit 2: Adding Slots and Responses"]
+  paths: *level4-paths
+
+- assignment: 2053b50f11c318747dda88aa857b1264
+  section: ["Level 4 - Multiple Slots", "Unit 3: Reading Multiple Slots in Actions"]
+  paths: *level4-paths
+
+- assignment: 2053b50f11c318747dda88aa857b1264
+  section: ["Level 4 - Multiple Slots", "Unit 4: Flows with Multiple Collect Steps"]
+  paths: *level4-paths
+
+- assignment: 2053b50f11c318747dda88aa857b1264
+  section: ["Level 4 - Multiple Slots", "Unit 5: Training and Testing"]
+  paths: *level4-paths
+
+- assignment: 2053b50f11c318747dda88aa857b1264
+  section: ["Level 4 - Multiple Slots", "Unit 6: Summary and Next Steps"]
+  paths: *level4-paths
