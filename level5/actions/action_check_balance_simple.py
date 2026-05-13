@@ -18,5 +18,5 @@ class ActionCheckBalanceSimple(Action):
     ) -> List[Dict[Text, Any]]:
         account = tracker.get_slot("account") or "<missing>"
         
-        dispatcher.utter_message(text=f"(Demo) Balance for account {account} is $123.45.")
+        dispatcher.utter_message(text=f"The Balance for account {account} is $123.45.")
         return []
