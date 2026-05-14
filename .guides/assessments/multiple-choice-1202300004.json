@@ -30,26 +30,16 @@
 			}
 		],
 		"metadata": {
-			"tags": [
-				{
-					"name": "Assessment Type",
-					"value": "Multiple Choice"
-				}
-			],
+			"tags": [{"name": "Assessment Type", "value": "Multiple Choice"}],
 			"files": [],
 			"opened": []
 		},
 		"bloomsObjectiveLevel": "2",
 		"learningObjectives": "SWBAT explain when dynamic logic requires an action",
 		"guidance": "action_bank_hours returns a different message depending on the current day (e.g. 'Today is Sunday—we're closed' vs 'Today is Saturday—we're open 10am-2pm' vs weekday message). That requires Python logic and datetime; a simple utter_* response cannot change based on when the user asks, so an action is used.",
-		"showGuidanceAfterResponseOption": {
-			"type": "Attempts",
-			"passedFrom": 1
-		},
+		"showGuidanceAfterResponseOption": {"type": "Attempts", "passedFrom": 1},
 		"maxAttemptsCount": 1,
-		"showExpectedAnswerOption": {
-			"type": "Always"
-		},
+		"showExpectedAnswerOption": {"type": "Always"},
 		"points": 5,
 		"incorrectPoints": 0,
 		"arePartialPointsAllowed": false,

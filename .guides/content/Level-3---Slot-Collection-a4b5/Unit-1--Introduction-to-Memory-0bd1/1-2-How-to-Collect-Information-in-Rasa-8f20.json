@@ -7,7 +7,7 @@
 			"action": "close"
 		}
 	],
-	"layout": "2-panels-tree-guides-left",
+	"layout": "1-panel-tree",
 	"path": [
 		"level3"
 	],

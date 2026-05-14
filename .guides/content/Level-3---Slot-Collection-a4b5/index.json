@@ -1,15 +1,14 @@
 {
-	"id": "c351434a-d78c-5f12-939a-922aaf9ca6c7",
-	"type": "chapter",
-	"title": "Level 3 - Slot Collection",
-	"order": [
-		"Unit-0--Recap-What-You-Built-in-Level-2-c2a1",
-		"Unit-1--Introduction-to-Memory-0bd1",
-		"Unit-2--Defining-Slots-in-the-Domain-2f2b",
-		"Unit-3--Reading-Slots-in-Actions-d696",
-		"Unit-4--Collecting-Slots-in-Flows-196b",
-		"Unit-5--Training-and-Testing-with-Slots-af03",
-		"Unit-6--Assessment-and-Next-Steps-5f83"
-	],
-	"content": ""
+ "id": "c351434a-d78c-5f12-939a-922aaf9ca6c7",
+ "title": "Level 3 - Slot Collection",
+ "type": "chapter",
+ "order": [
+  "Unit-0--Recap-What-You-Built-in-Level-2-c2a1",
+  "Unit-1--Introduction-to-Memory-0bd1",
+  "Unit-2--Defining-Slots-in-the-Domain-2f2b",
+  "Unit-3--Reading-Slots-in-Actions-d696",
+  "Unit-4--Collecting-Slots-in-Flows-196b",
+  "Unit-5--Training-and-Testing-with-Slots-af03",
+  "Unit-6--Assessment-and-Next-Steps-5f83"
+ ]
 }

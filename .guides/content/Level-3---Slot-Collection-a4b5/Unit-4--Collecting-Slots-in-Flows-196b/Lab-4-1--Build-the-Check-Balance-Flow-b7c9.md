@@ -1,5 +1,8 @@
-Create `level3/data/basics/check_balance.yml`:
 
+<p style="font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#5a17ee;margin:0 0 4px;">Lab objective</p>
+
+Create `level3/data/basics/check_balance.yml`:
+ 
 ```yaml
 flows:
   check_balance:
@@ -19,27 +22,17 @@ flows:
             utter: utter_invalid_account
       - action: action_check_balance_simple
 ```
-
+ 
 | Field | What it does |
 |---|---|
 | `description` (flow) | Tells the LLM when to trigger this flow |
-| `persisted_slots` | Keeps the `account` value after the flow ends |
+| `persisted_slots` | Carries the `account` value into the next session |
 | `description` (collect) | Tells the LLM what a valid account value looks like |
-| `rejections` | Rejects values that don't match the condition after extraction |
-| `utter_invalid_account` | Sent when rejection fires, then `utter_ask_account` runs again |
+| `rejections` | Checks the extracted value against a condition |
+| `utter_invalid_account` | Sent when a rejection fires; `utter_ask_account` then runs again |
 | `action_check_balance_simple` | Reads the slot and returns the balance |
-
-## Verify
-
-`data/flows/check_balance.yml` should contain:
-
-- A flow with id `check_balance` and a `description`
-- `account` listed under `persisted_slots`
-- A `collect: account` step with a `description` field
-- A `rejections` block with a digits-only condition pointing to `utter_invalid_account`
-- An `action: action_check_balance_simple` step after the collect
-
-Use **Check It!** below to confirm.
+ 
 
 {Check It!|assessment}(code-output-compare-1235165472)
 
+---

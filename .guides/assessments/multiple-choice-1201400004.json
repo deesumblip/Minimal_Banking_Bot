@@ -2,7 +2,7 @@
 	"type": "multiple-choice",
 	"taskId": "multiple-choice-1201400004",
 	"source": {
-		"name": "Level 2: 1.3 Test Your Knowledge - Flow Calling an Action",
+		"name": "Level 2: 1.4 Test Your Knowledge - Flow Calling an Action",
 		"showName": false,
 		"instructions": "**When a flow step uses `- action: action_bank_hours`, what happens next?**",
 		"multipleResponse": false,
@@ -30,26 +30,16 @@
 			}
 		],
 		"metadata": {
-			"tags": [
-				{
-					"name": "Assessment Type",
-					"value": "Multiple Choice"
-				}
-			],
+			"tags": [{"name": "Assessment Type", "value": "Multiple Choice"}],
 			"files": [],
 			"opened": []
 		},
 		"bloomsObjectiveLevel": "2",
 		"learningObjectives": "SWBAT describe how a flow invokes an action",
 		"guidance": "When a flow has a step like `- action: action_bank_hours`, Rasa finds the corresponding action (by name) in the actions/ folder, then executes that action's run() method. The action runs your Python code and can send messages via the dispatcher. Rasa handles the execution; you provide the logic.",
-		"showGuidanceAfterResponseOption": {
-			"type": "Attempts",
-			"passedFrom": 1
-		},
+		"showGuidanceAfterResponseOption": {"type": "Attempts", "passedFrom": 1},
 		"maxAttemptsCount": 1,
-		"showExpectedAnswerOption": {
-			"type": "Always"
-		},
+		"showExpectedAnswerOption": {"type": "Always"},
 		"points": 5,
 		"incorrectPoints": 0,
 		"arePartialPointsAllowed": false,
