@@ -3,12 +3,11 @@
 	"title": "Lab 5.1: Using Custom Actions in Flows",
 	"files": [
 		{
-			"path": "level2/data/basics/greet.yml",
-			"panel": 1,
-			"action": "open"
+			"path": "#tabs",
+			"action": "close"
 		},
 		{
-			"path": "#terminal",
+			"path": "level2/data/basics/greet.yml",
 			"panel": 1,
 			"action": "open"
 		}
@@ -20,6 +19,6 @@
 	"type": "page",
 	"contentType": "markdown",
 	"teacherOnly": false,
-	"closeTerminalSession": true,
+	"closeTerminalSession": false,
 	"learningObjectives": ""
 }

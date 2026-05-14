@@ -1,11 +1,10 @@
 {
-	"id": "c524d8d9-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-	"title": "1.2 How Custom Actions Work",
+	"id": "ae9ff630-20a5-362f-e129-2b74dd5f1b46",
+	"title": "6.2 Level 2 Complete",
 	"files": [
 		{
-			"path": "",
-			"panel": 1,
-			"action": "open"
+			"path": "#tabs",
+			"action": "close"
 		}
 	],
 	"layout": "2-panels-tree-guides-left",
@@ -14,7 +13,6 @@
 	],
 	"type": "page",
 	"contentType": "markdown",
-	"content": "",
 	"teacherOnly": false,
 	"closeTerminalSession": true,
 	"learningObjectives": ""

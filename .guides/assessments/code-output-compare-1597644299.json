@@ -27,7 +27,8 @@
 			"opened": [
 				{
 					"type": "terminal",
-					"panelNumber": 1
+					"panelNumber": 1,
+					"content": ""
 				}
 			]
 		},

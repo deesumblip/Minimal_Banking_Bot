@@ -4,7 +4,7 @@
 	"source": {
 		"name": "Level 2: 2.3 Test Your Knowledge - Sending Messages from an Action",
 		"showName": false,
-		"instructions": "**How does an action send a text message to the user?**",
+		"instructions": "**How does a custom action send a text message to the user?**",
 		"multipleResponse": false,
 		"isRandomized": false,
 		"answers": [
@@ -30,16 +30,26 @@
 			}
 		],
 		"metadata": {
-			"tags": [{"name": "Assessment Type", "value": "Multiple Choice"}],
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Multiple Choice"
+				}
+			],
 			"files": [],
 			"opened": []
 		},
 		"bloomsObjectiveLevel": "1",
 		"learningObjectives": "SWBAT use the dispatcher to send messages from an action",
 		"guidance": "Inside run(), you send text to the user with dispatcher.utter_message(text=\"Your message here\"). The dispatcher (CollectingDispatcher) is the object that delivers messages from your action to the user. You can also use dispatcher.utter_message(response=\"utter_xyz\") to trigger a predefined response.",
-		"showGuidanceAfterResponseOption": {"type": "Attempts", "passedFrom": 1},
+		"showGuidanceAfterResponseOption": {
+			"type": "Attempts",
+			"passedFrom": 1
+		},
 		"maxAttemptsCount": 1,
-		"showExpectedAnswerOption": {"type": "Always"},
+		"showExpectedAnswerOption": {
+			"type": "Always"
+		},
 		"points": 5,
 		"incorrectPoints": 0,
 		"arePartialPointsAllowed": false,

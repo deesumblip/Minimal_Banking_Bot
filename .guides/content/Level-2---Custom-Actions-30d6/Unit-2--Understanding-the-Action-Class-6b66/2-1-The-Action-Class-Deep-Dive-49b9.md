@@ -1,103 +1,49 @@
-To get to know a basic custom action, take a look at `action_bank_hours.py` below. This custom action returns a different message depending on whether today is a weekday, Saturday, or Sunday. Because the reply depends on `datetime`, a static `utter_*` response is not sufficient.
-
-#### Complete Action File
-
+The starter project includes a working action in `actions/action_bank_hours.py`. Read it alongside the annotations below.
+ 
 ```python
-from datetime import datetime
+from datetime import datetime                    # (1)
 from typing import Any, Dict, List, Text
-
-from rasa_sdk import Action, Tracker
+from rasa_sdk import Action, Tracker             # (2)
 from rasa_sdk.executor import CollectingDispatcher
-
-
-class ActionBankHours(Action):
-    """A custom action that returns bank hours based on the current day.
-    
-    Uses datetime to tailor the message, this can't be done with a simple
-    utter response because the message changes depending on when the user asks.
-    """
-
+ 
+class ActionBankHours(Action):                   # (3)
+ 
     def name(self) -> Text:
-        """Return the name of this action.
-        
-        This name must match what you put in domain/basics.yml
-        under the 'actions:' list.
-        """
-        return "action_bank_hours"
-
-    def run(
+        return "action_bank_hours"               # (4)
+ 
+    async def run(
         self,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
+        dispatcher: CollectingDispatcher,        # (5)
+        tracker: Tracker,                        # (6)
         domain: Dict[Text, Any],
     ) -> List[Dict[Text, Any]]:
-        """Execute the action.
-        
-        Returns different messages based on the current day of the week.
-        """
-        weekday = datetime.now().weekday()  # 0=Monday, 5=Saturday, 6=Sunday
-
-        if weekday == 6:  # Sunday
+ 
+        weekday = datetime.now().weekday()       # 0=Mon, 5=Sat, 6=Sun
+ 
+        if weekday == 6:
             message = "Today is Sunday, we're closed."
-        elif weekday == 5:  # Saturday
+        elif weekday == 5:
             message = "Today is Saturday, we're open 10am-2pm."
-        else:  # Monday–Friday
+        else:
             message = (
                 "Our bank hours are Monday-Friday 9am-5pm, "
                 "Saturday 10am-2pm. We're closed on Sundays."
             )
-
-        dispatcher.utter_message(text=message)
-        return []
+ 
+        dispatcher.utter_message(text=message)   # (7)
+        return []                                # (8)
 ```
-
-**Update your `action_bank_hours.py` folder with this new action code above for a more dynamic bank hours flow.** 
-
-#### Breaking Down Each Component
-
-1. **Imports**:
-   ```python
-   from datetime import datetime
-   from rasa_sdk import Action, Tracker
-   from rasa_sdk.executor import CollectingDispatcher
-   ```
-   - `datetime` - Used to get the current day of the week
-   - `Action` - Base class all actions inherit from
-   - `Tracker` - Contains conversation history and slots (we'll use this in Level 3)
-   - `CollectingDispatcher` - Used to send messages to the user
-
-
-2. **Class Definition**:
-   ```python
-   class ActionBankHours(Action):
-   ```
-   - Must inherit from `Action`
-   - Class name should be descriptive (convention: `Action` + descriptive name)
-
-3. **`name()` Method**:
-   ```python
-   def name(self) -> Text:
-       return "action_bank_hours"
-   ```
-   - Returns the action identifier
-   - **Must match** what you register in `domain/basics.yml`
-   - Convention: starts with `action_`
-
-4. **`run()` Method**:
-   ```python
-   def run(self, dispatcher, tracker, domain):
-   ```
-   - **`dispatcher`**: Use this to send messages to the user
-   - **`tracker`**: Access conversation history and slots (Level 3+)
-   - **`domain`**: Access domain configuration (rarely needed)
-   - **Returns**: List of events (usually empty `[]` for simple actions)
-   
-
-5. **Sending Messages**:
-   ```python
-   dispatcher.utter_message(text="Your message here")
-   ```
-   - This is how you send text to the user
-   - Can also use `dispatcher.utter_message(response="utter_xyz")` to use a response
-
+ 
+| # | What it is | Why it is there |
+|---|---|---|
+| 1 | `from datetime import datetime` | Standard Python. Provides `datetime.now().weekday()` which returns an integer (0=Mon, 6=Sun). The weekday logic that follows is also plain Python, not Rasa-specific. |
+| 2 | `from rasa_sdk import Action, Tracker` | `Action` is the base class for custom actions. `Tracker` provides access to conversation state — slots, latest message, event history. |
+| 3 | `class ActionBankHours(Action)` | Subclassing `Action` defines this as a custom action. The class name is for your code only. Rasa identifies the action by what `name()` returns, not the class name. |
+| 4 | `return "action_bank_hours"` | The action name used in the domain's `actions:` list. The name here and the domain entry must match exactly. |
+| 5 | `dispatcher` | Used to send messages back to the user via `dispatcher.utter_message()`. |
+| 6 | `tracker` | Holds conversation state. Use `tracker.get_slot()` to read slot values and `tracker.latest_message` to access what the user said. |
+| 7 | `dispatcher.utter_message(text=message)` | Sends the computed string to the user. |
+| 8 | `return []` | Returns no events. Pass slot update events here when you need to set memory. |
+ 
 ---
+ 

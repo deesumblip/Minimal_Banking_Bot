@@ -4,7 +4,7 @@
 	"source": {
 		"name": "Level 2: 6.4 See it all together - Required Action Method",
 		"showName": false,
-		"instructions": "**What method must every action have?**",
+		"instructions": "**What method must every custom action have?**",
 		"multipleResponse": false,
 		"isRandomized": false,
 		"answers": [
@@ -30,16 +30,32 @@
 			}
 		],
 		"metadata": {
-			"tags": [{"name": "Assessment Type", "value": "Multiple Choice"}],
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Multiple Choice"
+				}
+			],
 			"files": [],
-			"opened": []
+			"opened": [
+				{
+					"type": "terminal",
+					"panelNumber": 1,
+					"content": ""
+				}
+			]
 		},
 		"bloomsObjectiveLevel": "1",
 		"learningObjectives": "SWBAT name the method Rasa calls to execute an action",
 		"guidance": "Rasa calls your action's `run()` method. You also implement `name()` so the action id matches the domain.",
-		"showGuidanceAfterResponseOption": {"type": "Attempts", "passedFrom": 1},
+		"showGuidanceAfterResponseOption": {
+			"type": "Attempts",
+			"passedFrom": 1
+		},
 		"maxAttemptsCount": 1,
-		"showExpectedAnswerOption": {"type": "Always"},
+		"showExpectedAnswerOption": {
+			"type": "Always"
+		},
 		"points": 5,
 		"incorrectPoints": 0,
 		"arePartialPointsAllowed": false,

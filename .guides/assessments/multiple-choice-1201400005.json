@@ -2,7 +2,7 @@
 	"type": "multiple-choice",
 	"taskId": "multiple-choice-1201400005",
 	"source": {
-		"name": "Level 2: 1.4 Test Your Knowledge - Action Class Structure",
+		"name": "Level 2: 1.3 Test Your Knowledge - Action Class Structure",
 		"showName": false,
 		"instructions": "**Which two methods must every Rasa action class implement?**",
 		"multipleResponse": false,
@@ -30,16 +30,26 @@
 			}
 		],
 		"metadata": {
-			"tags": [{"name": "Assessment Type", "value": "Multiple Choice"}],
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Multiple Choice"
+				}
+			],
 			"files": [],
 			"opened": []
 		},
 		"bloomsObjectiveLevel": "1",
 		"learningObjectives": "SWBAT identify required methods of an action class",
 		"guidance": "Every action is a Python class that inherits from Action and must implement: (1) name() — returns the action name (e.g. 'action_bank_hours'), which must match what is registered in the domain; (2) run() — contains your custom logic and receives dispatcher, tracker, and domain. You send messages with dispatcher.utter_message() inside run().",
-		"showGuidanceAfterResponseOption": {"type": "Attempts", "passedFrom": 1},
+		"showGuidanceAfterResponseOption": {
+			"type": "Attempts",
+			"passedFrom": 1
+		},
 		"maxAttemptsCount": 1,
-		"showExpectedAnswerOption": {"type": "Always"},
+		"showExpectedAnswerOption": {
+			"type": "Always"
+		},
 		"points": 5,
 		"incorrectPoints": 0,
 		"arePartialPointsAllowed": false,

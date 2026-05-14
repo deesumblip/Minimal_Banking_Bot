@@ -1,15 +1,18 @@
-In this lab you **create** two new flow files that can call your custom actions. 
-
-### Step 1: Navigate to the data folder
-
-1. Go to the `data/basics/` folder inside your `level2` project.
-2. You should see your Level 1 flows: `greet.yml`, `help.yml`, `contact.yml`, `goodbye.yml`.
-
-### Step 2: Create the hours flow
-
-1. Create a new file: `data/basics/hours.yml`
-2. Add the following flow so it uses `action_bank_hours`:
-
+<p style="font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#5a17ee;margin:0 0 4px;">Lab objective</p>
+Create two flow files that activate your custom actions when users ask about bank hours or holiday hours.
+ 
+---
+ 
+**1. Confirm your existing flows**
+ 
+Open `data/basics/`. You should see: `greet.yml`, `help.yml`, `contact.yml`, `goodbye.yml`.
+ 
+---
+ 
+**2. Create the bank hours flow**
+ 
+Create `data/basics/hours.yml`:
+ 
 ```yaml
 flows:
   hours:
@@ -18,12 +21,13 @@ flows:
     steps:
       - action: action_bank_hours
 ```
-
-### Step 3: Create your holiday_hours flow
-
-1. Create a new file: `data/basics/holiday_hours.yml`
-2. Add a flow that uses **action_holiday_hours**. That is the action you created in the prior labs.
-
+ 
+---
+ 
+**3. Create the holiday hours flow**
+ 
+Create `data/basics/holiday_hours.yml`:
+ 
 ```yaml
 flows:
   holiday_hours:
@@ -32,13 +36,11 @@ flows:
     steps:
       - action: action_holiday_hours
 ```
-
-### Step 4: Verify
-
-- Both files are in `data/basics/`
-- Each flow has `name:`, `description:`, and `steps:` with the correct action
-- YAML syntax is correct. You can always use https://yamlchecker.com/ to check. 
-
-Run the **below assessment** when you're done to check that everything is correct. In Unit 6 you’ll train and test both flows in Rasa Inspector. 
-
+ 
+---
+ 
+**4. Verify before submitting**
+ 
+Both files should be in `data/basics/`, each with `name:`, `description:`, and a `steps:` block pointing to the correct action name. Use [yamlchecker.com](https://yamlchecker.com) if you are unsure about the syntax.
+ 
 {Check It!|assessment}(code-output-compare-389374509)

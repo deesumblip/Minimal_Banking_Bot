@@ -4,7 +4,7 @@
 	"source": {
 		"name": "Level 2: 6.4 See it all together - Sending a Message from an Action",
 		"showName": false,
-		"instructions": "**How do you send a message from an action?**",
+		"instructions": "**How do you send a message from a custom action?**",
 		"multipleResponse": false,
 		"isRandomized": false,
 		"answers": [
@@ -30,16 +30,32 @@
 			}
 		],
 		"metadata": {
-			"tags": [{"name": "Assessment Type", "value": "Multiple Choice"}],
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Multiple Choice"
+				}
+			],
 			"files": [],
-			"opened": []
+			"opened": [
+				{
+					"type": "terminal",
+					"panelNumber": 1,
+					"content": ""
+				}
+			]
 		},
 		"bloomsObjectiveLevel": "1",
 		"learningObjectives": "SWBAT send user-visible text from a custom action",
 		"guidance": "Use the `dispatcher` passed into `run()`—typically `dispatcher.utter_message(text=\"...\")` for plain text.",
-		"showGuidanceAfterResponseOption": {"type": "Attempts", "passedFrom": 1},
+		"showGuidanceAfterResponseOption": {
+			"type": "Attempts",
+			"passedFrom": 1
+		},
 		"maxAttemptsCount": 1,
-		"showExpectedAnswerOption": {"type": "Always"},
+		"showExpectedAnswerOption": {
+			"type": "Always"
+		},
 		"points": 5,
 		"incorrectPoints": 0,
 		"arePartialPointsAllowed": false,

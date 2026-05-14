@@ -3,6 +3,10 @@
 	"title": "Lab 6.1: Training with Custom Actions",
 	"files": [
 		{
+			"path": "#tabs",
+			"action": "close"
+		},
+		{
 			"path": "#terminal",
 			"panel": 1,
 			"action": "open"
