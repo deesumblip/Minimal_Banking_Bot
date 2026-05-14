@@ -1,36 +1,41 @@
-Rasa uses a component called the **Command Generator** to decide how to progress the conversation based on incoming user messages. The command generator is governed by a prompt that outlines how Rasa should orchestrate the conversation across different skills (flows and sub-agents). You can learn how to edit this prompt and see the defaults being used [here](https://rasa.com/docs/reference/config/components/llm-command-generators/). We are using the [SearchReadyLLMCommandGenerator](https://rasa.com/docs/reference/config/components/llm-command-generators/#searchreadyllmcommandgenerator) in this course. 
-
-**How it works:**
-
-1. A user sends a message
-2. The Command Generator uses a language model to analyze the message, including the full conversation context (active flows, filled slots, relevant patterns, conversation history) alongside your flow descriptions
-3. It outputs commands like `StartFlow("greet")` that represent how the user wants to progress the conversation
-
-This makes `description:` one of the most important properties in a flow. If it is vague or inaccurate, the correct flow may never run, even if everything else is configured correctly.
-
+The **Command Generator** is the component that decides which flow to run. On every turn it reads the user's message, the full conversation context, and your flow descriptions, then outputs a command like `StartFlow("greet")`.
+ 
+```text
+User sends a message
+  ↓
+Command Generator reads:
+  - the message
+  - active flows and filled slots
+  - conversation history
+  - all flow descriptions
+  ↓
+Selects the next best step(s)
+  ↓
+Outputs: StartFlow("greet")
+```
+ 
+This makes `description:` one of the most important fields in a flow. If it is vague or missing, the correct flow may never run, even if everything else is configured correctly.
+ 
 ---
-
-### What makes a description work
-
-Write the **situation**, not the action. Be precise about the flow's purpose and scope. The Command Generator needs to know *when* the flow applies, not just *what* it does.
-
-| Description | Problem |
+ 
+**What makes a description work**
+ 
+Write the **situation**, not the action. The Command Generator needs to know *when* a flow applies, not just *what* it does.
+ 
+| Description | Why it fails or works |
 |---|---|
-| *Say hello* | Describes the action, not the trigger |
-| *Help user* | Too vague, every flow could claim this |
-| *Respond only when the user types hello exactly* | Too narrow, misses "hi", "hey", "good morning" |
-| *Greet the user when they start a conversation* | Names the situation, matches naturally |
+| `Say hello` | Describes the action, not the trigger |
+| `Help user` | Too vague, every flow could claim this |
+| `Respond only when the user types hello exactly` | Too narrow, misses "hi", "hey", "good morning" |
+| `Greet the user when they start a conversation` | Names the situation clearly, works |
+ 
+**Tips for writing descriptions:**
+- Use action verbs and name the situation: *when the user asks for X*, *when the conversation starts*
+- Use plain, standard language, avoid jargon the LLM might interpret differently
+- Spell out brand names or specialised terms
+- Be specific enough to exclude flows that should not activate, but broad enough to match natural variation
+<table style="width:100%;border-collapse:collapse;margin:16px 0;"><tr style="background:transparent;border:none;"><td style="background:#fff9ed;border:1px solid #ffd594;border-left:3px solid #f59e0b;padding:12px 16px;line-height:1.6;color:#080327;font-size:0.9em;">If a flow is not activating when expected, the description is the first thing to check and adjust.</td></tr></table>
 
-Additional tips:
-- Use action verbs
-- Use clear and standard language - avoid unusual phrasing
-- Explain specialized terms or brand names
-- Clarify implicit knowledge 
-
-> If a flow is not activating at the right time, the `description:` is the first thing to check and adjust.
-
----
-
-**Next:** In **Lab 3.4**, complete the hours and balance flow YAML with the fill-in-the-blank exercises. In **Lab 3.5**, add those flows and their responses to your **`level1`** project.
+This course uses the [SearchReadyLLMCommandGenerator](https://rasa.com/docs/reference/config/components/llm-command-generators/#searchreadyllmcommandgenerator). See the [full docs](https://rasa.com/docs/reference/config/components/llm-command-generators/) to customise the underlying prompt.
 
 ---

@@ -1,15 +1,10 @@
-**Objective:** Open the patterns file and identify what each pattern does.
+<p style="font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#5a17ee;margin:0 0 4px;">Lab objective</p>
 
-#### Steps
-
-1. **Open the patterns file**
-   - Navigate to `data/system/patterns/patterns.yml`.
-
-2. **Examine `pattern_session_start`**
-   - Find the `nlu_trigger` field. Remember how this is used to activate the session without a user input?
-   - What step does it run?
-
-3. **Examine `pattern_completed`**
-   - Find the `noop` step. Remember what this does when a flow finishes?
-
+Have a look at the patterns file on the right and identify what each pattern does.
+ 
+1. Open `data/system/patterns/patterns.yml`.
+2. Find `pattern_session_start`. Locate the `nlu_trigger` field. What step does it run?
+3. Find `pattern_completed`. Locate the `noop` step. What happens after it runs?
 {Check It!|assessment}(multiple-choice-643354025)
+ 
+---

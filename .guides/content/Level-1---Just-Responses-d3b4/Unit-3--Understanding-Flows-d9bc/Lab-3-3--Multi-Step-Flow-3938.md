@@ -1,4 +1,6 @@
-**Objective**: Modify `greet.yml` to have two steps.
+<p style="font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#5a17ee;margin:0 0 4px;">Lab objective</p>
+
+Add additional steps to your flow to string together multiple responses. 
 
 #### Steps
 
@@ -22,6 +24,5 @@ flows:
 
 **What Happens**: When a user says "hello", the agent will run both steps in order: greet first (`utter_greet`), then show the help message (`utter_help`). This allows you to stack multiple steps in a row. 
 
-**Next:** Read **3.2 Flow Descriptions and LLM Understanding** for how the `description` field helps the LLM match user messages to flows. Then apply that in **Lab 3.4** with the hours and balance fill-in exercises.
 
 {Check It!|assessment}(code-output-compare-303300002)

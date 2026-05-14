@@ -1,7 +1,5 @@
-The `pattern_session_start` runs automatically when a new conversation begins, before the user says anything.
-
-#### How It Works
-
+`pattern_session_start` runs automatically when a new conversation begins, before the user says anything.
+ 
 ```yaml
 flows:
   pattern_session_start:
@@ -12,29 +10,25 @@ flows:
     steps:
       - action: utter_greet
 ```
+ 
+`nlu_trigger` activates a flow on a specific intent rather than through the Command Generator. The `session_start` intent is a built-in Rasa event that fires when a new session opens.
+ 
+<table style="width:100%;border-collapse:collapse;margin:16px 0;"><tr style="background:transparent;border:none;"><td style="background:#ebe8fe;border:1px solid #c4baf9;border-left:3px solid #5a17ee;padding:12px 16px;line-height:1.6;color:#080327;font-size:0.9em;">❗<code>nlu_trigger</code> is the only place in this course where a flow activates on a system event rather than through the Command Generator. For everything else, the Command Generator reads <code>description:</code> to decide what to run.</td></tr></table>
 
-
-`nlu_trigger` activates a flow on a specific intent rather than through the LLM Command Generator. Here it listens for `session_start`, a built-in intent Rasa fires when a new session opens. No user message needed.
-
-This is the only place in this course you will see `nlu_trigger`. For everything else, the command generator reads skill `description:` to decide which flows or sub-agents to start. This pattern bypasses that process entirely and activates on a system event instead.
-
-
-#### Conversation Flow
 
 ```text
 User opens chat
-    ↓
+  ↓
 Rasa detects new session
-    ↓
-pattern_session_start activates automatically
-    ↓
-Agent says utter_greet
-    ↓
+  ↓
+pattern_session_start activates
+  ↓
+utter_greet runs
+  ↓
 User sees: "Hi! I'm a banking assistant..."
 ```
-
-**Key Point**: The user doesn't need to say anything, the agent greets them automatically once the session starts.
-
+ 
 {Check It!|assessment}(multiple-choice-662755326)
-
+ 
 ---
+ 

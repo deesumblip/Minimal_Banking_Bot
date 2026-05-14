@@ -1,42 +1,36 @@
-A **flow** is a conversational path your agent can run from start to finish. It encodes the **business logic** for a single process: an ordered plan for what should happen when that process applies.
-
-Flows lean toward the **guided** end of the autonomy spectrum. They are the right tool when the steps are known in advance, **order matters**, and you do **not** want the language model inventing the sequence on the fly. Examples include onboarding checklists, scripted help, or any journey where straying from the path is a problem, not a feature.
-
-**Where flows live:** YAML files under `data/basics/`. You may use one file per flow or place several related flows in the same file.
-
----
-
-### Flow structure
-
-Every flow requires three elements: an ID, a `description`, and `steps`. The `name` field is optional.
-
+A **flow** is a conversational path the agent runs from start to finish. It encodes the business logic for a single process: an ordered plan for what to do when that process applies.
+ 
+Flows sit at the guided end of the autonomy spectrum. Use them when the steps are known in advance, order matters, and the language model should not invent the sequence.
+ 
+**Flow structure**
+ 
 ```yaml
-flows:                          # Top level key
+flows:
   greet:                        # Flow ID — unique, lowercase
-    name: say hello             # Optional, human readable label
-    description: Greet the user when they start a conversation  # LLM reads to decide when to activate
-    steps:                      # Ordered list of actions the agent runs
-      - action: utter_greet     # Sends a response, text defined in domain/basics.yml
+    name: say hello             # Optional human-readable label
+    description: Greet the user when they start a conversation
+    steps:
+      - action: utter_greet     # Calls the response from domain/basics.yml
 ```
+ 
+The Command Generator reads `description:` (and `name:` if present, otherwise the flow ID) to decide which flow to activate. A vague or missing description means the flow won't activate reliably.
+ 
+<table style="width:100%;border-collapse:collapse;margin:16px 0;"><tr style="background:transparent;border:none;"><td style="background:#ebe8fe;border:1px solid #c4baf9;border-left:3px solid #5a17ee;padding:12px 16px;line-height:1.6;color:#080327;font-size:0.9em;"><strong><code>description:</code> is the most important field in a flow.</strong> The LLM reads it to decide when to activate the flow. Everything else can be correct and it will be hard to get the flow to activate at the right times if the description is vague or missing.</td></tr></table>
 
-The LLM routes by reading `description:` and `name:`. If `name` is not present (as it is optional) it will include the Flow ID. This is why a vague or missing descriptions and names mean the flow won't activate reliably.
-
----
-
-### Flow execution
-
-When the `greet` flow is  activated by a user greeting, Rasa runs its steps in sequence:
-
+**Flows live in** `data/basics/*.yml`. One file per flow, or several related flows in the same file.
+ 
+**Execution**
+ 
 ```text
 User says "hello"
-    ↓
-Flow greet runs
-    ↓
+  ↓
+Flow greet activates
+  ↓
 Step 1: utter_greet
-    ↓
+  ↓
 Agent responds: "Hi! I'm a banking assistant..."
-    ↓
+  ↓
 Flow completes
 ```
-
-The sequence is linear and easy to inspect. When behavior is wrong, you can usually tie it to a specific step.
+ 
+---

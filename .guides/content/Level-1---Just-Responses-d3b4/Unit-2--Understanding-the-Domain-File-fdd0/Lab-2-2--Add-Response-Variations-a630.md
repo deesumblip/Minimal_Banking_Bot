@@ -1,13 +1,12 @@
-**Objective**: Add a second variation to `utter_goodbye`.
 
-#### Steps
 
-1. Find **`utter_goodbye`** in **`domain/basics.yml`**. It should be the last block in the **`responses:`** section.
-2. Add a second **`- text:`** line with a different farewell message. The new **`- text:`** must sit at the **same** indentation as the first **`- text:`** line. 
-3. Ensure **`metadata:`** is recorded under each response in the list where you want rephrasing to occur. In the example below only the last response `- text: "See you later! Take care!"` will be rephrased.
+<p style="font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#5a17ee;margin:0 0 4px;">Lab objective</p>
 
-**Example:**
 
+Add a second variation to `utter_goodbye`.
+ 
+Find `utter_goodbye` in `domain/basics.yml` and add a second `- text:` line at the same indentation:
+ 
 ```yaml
 utter_goodbye:
   - text: "Goodbye! Have a great day!"
@@ -15,10 +14,9 @@ utter_goodbye:
     metadata:
       rephrase: True
 ```
+ 
+Each time the flow calls `utter_goodbye`, Rasa picks one `text` entry at random. Adding `rephrase: True` to an entry stacks LLM rephrasing on top of that random pick.
 
-#### What this does
-
-Each time the flow uses **`utter_goodbye`**, Rasa picks **one** of the **`text:`** lines at random, so the agent is less likely to repeat the exact same line if the user triggers goodbye several times. If **`rephrase: True`** is also set, the LLM can still vary wording on top of those templates, which stacks two kinds of variety together.
 
 {Check It!|assessment}(code-output-compare-302300002)
 

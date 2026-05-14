@@ -1,6 +1,6 @@
 {
 	"id": "d01d719a-c5b2-b4db-8afb-f5865ac22bf6",
-	"title": "4.5 Test Your Knowledge",
+	"title": "4.4 Test Your Knowledge",
 	"files": [
 		{
 			"path": "#tabs",
@@ -12,7 +12,8 @@
 		"level1"
 	],
 	"type": "page",
-	"contentType": "markdown", "content": "",
+	"contentType": "markdown",
+	"content": "",
 	"teacherOnly": false,
 	"closeTerminalSession": true,
 	"learningObjectives": ""

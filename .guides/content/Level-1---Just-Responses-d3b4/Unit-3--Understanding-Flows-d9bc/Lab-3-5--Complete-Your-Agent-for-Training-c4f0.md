@@ -1,31 +1,25 @@
-**Objective**: Add the hours and balance flows (and their responses) to your `level1` project so your agent is ready for training.
+<p style="font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#5a17ee;margin:0 0 4px;">Lab objective</p>
 
----
-
-#### Step 1: Add two responses to the domain
-
-Open **`level1/domain/basics.yml`**. Under the `responses:` section, add the two blocks below after your last response (e.g. after `utter_goodbye`). Use the same indentation (2 spaces).
-
+Add the hours and balance flows and responses so the agent is ready to train.
+ 
+**1. Add two responses to `domain/basics.yml`**
+ 
+Under `responses:`, after `utter_goodbye`:
+ 
 ```yaml
   utter_hours:
     - text: "We're open Monday–Friday 9am–5pm and Saturday 9am–1pm. Closed Sundays."
       metadata:
         rephrase: True
-
+ 
   utter_balance:
-    - text: "To check your balance, we'll need your account number. You can say 'Check my balance' and have your account number ready."
+    - text: "To check your balance, say 'Check my balance' and have your account number ready."
       metadata:
         rephrase: True
 ```
-
-Save the file.
-
----
-
-#### Step 2: Create the hours flow file
-
-Create **`level1/data/basics/hours.yml`** with this content (same as the flow you completed in the page before, Lab 3.4):
-
+ 
+**2. Create `data/basics/hours.yml`**
+ 
 ```yaml
 flows:
   hours:
@@ -34,15 +28,9 @@ flows:
     steps:
       - action: utter_hours
 ```
-
-Save the file.
-
----
-
-#### Step 3: Create the balance flow file
-
-Create **`level1/data/basics/balance.yml`** with this content (same as the flow you completed in the page before, Lab 3.4):
-
+ 
+**3. Create `data/basics/balance.yml`**
+ 
 ```yaml
 flows:
   balance:
@@ -52,16 +40,6 @@ flows:
       - action: utter_balance
 ```
 
-Save the file.
-
----
-
-#### Checklist
-
-- `level1/domain/basics.yml` contains `utter_hours` and `utter_balance` under `responses:`
-- `level1/data/basics/hours.yml` exists with flow `hours` and step `utter_hours`
-- `level1/data/basics/balance.yml` exists with flow `balance` and step `utter_balance`
-
-Use **Check It!** below to verify your project is ready for training (Lab 6.1).
+Use **Check It!** below to verify everything has been input correctly.
 
 {Check It!|assessment}(code-output-compare-350500005)

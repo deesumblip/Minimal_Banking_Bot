@@ -1,72 +1,43 @@
-
-A **response** is a predefined message the agent can send. Responses are defined in the domain file and used in flows.
-
-#### A real response from `domain/basics.yml`
-
+A **response** is a predefined message the agent can send. Responses live in `domain/basics.yml` and are referenced by name in flows.
+ 
 ```yaml
 utter_greet:
   - text: "Hi! I'm a banking assistant. How can I help you today?"
     metadata:
       rephrase: True
 ```
-
-#### What each part does
-
-**Name, `utter_greet`.** A Rasa best practice is to start every response name starts with the `utter_` prefix. This makes it easy to search for responses in your project. The part after the underscore is yours to choose. Flows reference this name when they want the agent to speak.
-
-**List item, `- text: "..."`.** The dash means this entry is one item in a **list**. That matters because a single response can list several `text` lines. Rasa can pick among them. More on that below.
-
-**Optional metadata, `rephrase: True`.** When this is set, the **LLM** rephrase the wording while keeping the meaning using the [contextual response rephraser](https://rasa.com/docs/reference/primitives/contextual-response-rephraser/). You can tune the rephraser prompt in Rasa if you need tighter control. Without **`rephrase: True`**, the agent repeats the same string every time. Users notice when an agent sounds like a broken record.
-
-With rephrasing enabled, “Hi! I'm a banking assistant.” might become “Hello! What can I help you with today?” on the next turn. Same intent, different words, and a less robotic feel.
-
-⚠️ **Important:** `rephrase: True` is optional, but it is the main lever for natural variation at Level 1. Real conversations are not perfectly repetitive. This setting helps your agent match that expectation.
-
-#### When to set `rephrase: False`
-
-You also have the option to set in your endpoints.yml the option to rephrase everything like so:
-
-```
-nlg:
-  type: rephrase
-  rephrase_all: true
-```
-
-If you do this, you might still want responses that give **exact information**. When the rephraser is set globally, you can use **`rephrase: False`** whenever a response contains literal text that must not change, for example:
-
+ 
+| Part | What it does |
+|---|---|
+| `utter_greet` | The response name. The `utter_` prefix is a Rasa convention. Flows call this name to trigger the message. |
+| `- text: "..."` | The dash marks a list item. A single response can have multiple `text` entries; Rasa picks one at random. |
+| `rephrase: True` | Tells the LLM to rephrase the wording while keeping the meaning, via the [contextual response rephraser](https://rasa.com/docs/reference/primitives/contextual-response-rephraser/). Without it, the agent repeats the same string every time. |
+ 
+**When to use `rephrase: False`**
+ 
+If `rephrase_all: true` is set globally in `endpoints.yml`, pin specific responses to exact wording with `rephrase: False`:
+ 
 - Email addresses and phone numbers
 - Account numbers, reference codes, or IDs
 - Legal disclaimers or policy wording
 - Specific amounts, dates, or times
+<table style="width:100%;border-collapse:collapse;margin:16px 0;"><tr style="background:transparent;border:none;"><td style="background:#ebe8fe;border:1px solid #c4baf9;border-left:3px solid #5a17ee;padding:12px 16px;line-height:1.6;color:#080327;font-size:0.9em;"><code>utter_contact</code> in this project uses <code>rephrase: False</code> so the support email and phone number stay literal. Use <code>rephrase: False</code> any time exact wording is required: contact details, account numbers, legal disclaimers, specific amounts or dates.</td></tr></table>
 
-You'll see this pattern in the next lab: **`utter_contact`** uses **`rephrase: False`** so the support email and phone number stay exactly as written.
-
-#### Why responses are lists
-
-Responses are lists so you can offer **multiple response variations**. In this format, Rasa will choose one at random, which adds variety **without** relying on the LLM:
-
+**Multiple variations**
+ 
+List several `text` entries to add variety without the LLM, these will then be activated in a random order. 
+ 
 ```yaml
 utter_greet:
   - text: "Hi! I'm a banking assistant. How can I help you today?"
   - text: "Hello! How can I help you?"
   - text: "Welcome! I'm here to assist you."
 ```
-
-If you want to maximize variation, you can combine that random pick with **`rephrase: True`** so both the multiple response variations *and* the contextual response rephraser contribute to variety.
-
-```yaml
-utter_greet:
-  - text: "Hi! I'm a banking assistant. How can I help you today?"
-    metadata:
-      rephrase: True
-  - text: "Hello! How can I help you?"
-    metadata:
-      rephrase: True
-  - text: "Welcome! I'm here to assist you."
-    metadata:
-      rephrase: True
-```
-
+ 
+Combine multiple entries with `rephrase: True` on each for maximum variation.
+ 
 {Check It!|assessment}(multiple-choice-2055505786)
+
+
 
 ---

@@ -1,24 +1,24 @@
-Level 1 represents the **absolute minimum** a functional Rasa Agent needs. We intentionally start simple to build a solid foundation.
+The goal of this level (1 of 6 in the developer foundations course) is to build the simplest agent possible. 
 
-#### What Level 1 Includes
-
-- **Responses**: Predefined messages the agent can say
-- **Flows**: Simple conversation scripts that use those responses
-- **Basic configuration**: Files that tell Rasa how to organize the Agent
-
-#### What Level 1 Does NOT Include. These will come in later levels. 
-
-- **Slots (Memory)**: The agent cannot remember information from earlier in the conversation
-- **Actions (Custom Code)**: The agent cannot execute Python code or perform calculations
-- **Contextual Responses**: All responses are static - they don't change based on context
-- **Autonomous skills**: More autonomous, language model conversation is enabled in the later levels.
-
-#### Why Start Here?
-
-1. **Minimal Cognitive Load**: You only need to understand one concept: responses
-2. **Quick Wins**: You have a working agent in minutes
-3. **Foundation**: Everything else builds on this base
-
-**Analogy**: When you complete Level 1 of this course, you will have an agent that operates like an FAQ page. It provides information, but doesn't do anything complex (yet!).
-
----
+We will start by getting to know the **domain file** (`domain/basics.yml`) is the agent's knowledge base. It defines what the agent can say, run, and remember.
+ 
+| Section | Used in | Purpose |
+|---|---|---|
+| `responses:` | Level 1 | Predefined messages |
+| `actions:` | Level 2 | Custom Python code |
+| `slots:` | Level 3 | Memory variables |
+ 
+**Level 1 uses only `responses:`.** The other sections exist in the file but are empty.
+ 
+```yaml
+version: "3.1"
+ 
+responses:
+  # All predefined messages go here
+ 
+slots:
+  # Level 3 — empty for now
+ 
+actions:
+  # Level 2 — empty for now
+```
