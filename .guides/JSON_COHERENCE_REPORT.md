@@ -18,7 +18,7 @@ This report compares **content** (`.guides/content/` guide and unit structure) w
 | Level 2 — Custom Actions | Unit-0 … Unit-6 (7 units; Unit 6 ends with **6.4** *See it all together*, then **6.5** *Before you continue*) | Present | Yes |
 | Level 3 — Slot Collection | Unit-0 … Unit-8 (9 units) | Present | Yes |
 | Level 4 — Multiple Slots | Unit-0 … Unit-6 (7 units) | Unit-0 folder present; order matches | Yes |
-| Level 5 — Tool Calling | Unit-0 … Unit-6 (7 units) | Present | Yes |
+| Level 5 — Enterprise Search | Unit-0 … Unit-6 (7 units) | Present | Yes |
 | Level 6 — Sub-Agents | Unit-0 … Unit-6 (7 units) | Level index.json and all unit index.json + page .json added | Yes |
 
 **Level 3 metadata:** Guide, section, and page `id` fields use stable UUIDs (no `xxxx` placeholders). Reading pages use the same **#tabs** close pattern as Level 1. **Lab 6.1** display title: **Lab 6.1: Training Your Level 3 Agent**.

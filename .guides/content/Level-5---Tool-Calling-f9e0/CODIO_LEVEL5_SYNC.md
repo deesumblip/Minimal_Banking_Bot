@@ -1,4 +1,4 @@
-# Level 5 - Tool Calling: Codio Sync
+# Level 5 - Enterprise Search: Codio Sync
 
 This folder mirrors Level 5 teaching content (aligned with **`level5/`**) for Codio sync, same pattern as Level 4.
 

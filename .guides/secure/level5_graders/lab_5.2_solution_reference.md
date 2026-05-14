@@ -1,6 +1,6 @@
 # Lab 5.2 – Reference solution for Code Test (Completion Check)
 
-Use this file as reference for the Lab 5.2 code-output-compare grader (Testing Tool Calling / Completion Check).
+Use this file as reference for the Lab 5.2 code-output-compare grader (Testing Enterprise Search / Completion Check).
 
 ---
 
