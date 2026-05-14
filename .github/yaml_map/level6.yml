@@ -4,7 +4,7 @@
 # the full course index and all chapter folders.
 
 - assignment: 8b6425b370c9831e75b5205b19e15636
-  section: ["Level 6 - Sub-Agents", "Unit 0: Intro to Sub-Agents"]
+  section: ["Sub-Agents", "Unit 0: Recap - What you built in Level 5"]
   paths: &l6
     - "level6/**"
     - ".guides/content/index.json"
@@ -19,25 +19,25 @@
     - ".gitignore"
 
 - assignment: 8b6425b370c9831e75b5205b19e15636
-  section: ["Level 6 - Sub-Agents", "Unit 1: How Sub-Agents Work"]
+  section: ["Sub-Agents", "Unit 1: Sub-Agents Concept"]
   paths: *l6
 
 - assignment: 8b6425b370c9831e75b5205b19e15636
-  section: ["Level 6 - Sub-Agents", "Unit 2: Setting up the MCP Server"]
+  section: ["Sub-Agents", "Unit 2: Sub-Agent Config"]
   paths: *l6
 
 - assignment: 8b6425b370c9831e75b5205b19e15636
-  section: ["Level 6 - Sub-Agents", "Unit 3: Building a Sub-Agent"]
+  section: ["Sub-Agents", "Unit 3: MCP and ReAct Config"]
   paths: *l6
 
 - assignment: 8b6425b370c9831e75b5205b19e15636
-  section: ["Level 6 - Sub-Agents", "Unit 4: Calling a Sub-Agent"]
+  section: ["Sub-Agents", "Unit 4: Flow that Calls the Sub-Agent"]
   paths: *l6
 
 - assignment: 8b6425b370c9831e75b5205b19e15636
-  section: ["Level 6 - Sub-Agents", "Unit 5: Training and Testing"]
+  section: ["Sub-Agents", "Unit 5: Training and Testing"]
   paths: *l6
 
 - assignment: 8b6425b370c9831e75b5205b19e15636
-  section: ["Level 6 - Sub-Agents", "Unit 6: Summary and Next Steps"]
+  section: ["Sub-Agents", "Unit 6: Summary and Next Steps"]
   paths: *l6
