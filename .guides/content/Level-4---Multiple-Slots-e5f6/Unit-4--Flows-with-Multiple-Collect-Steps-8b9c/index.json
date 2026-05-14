@@ -1,10 +1,9 @@
 {
-	"id": "2721a646-4af1-53b9-adef-558f2cdb6d75",
-	"type": "section",
-	"title": "Unit 4: Flows with Multiple Collect Steps",
-	"order": [
-		"4-1-Ask-Before-Filling-Specification-633e",
-		"Lab-4-1-Creating-the-Transfer-Flow-e8f9"
-	],
-	"content": ""
+ "id": "2721a646-4af1-53b9-adef-558f2cdb6d75",
+ "title": "Unit 4: Flows with Multiple Collect Steps",
+ "type": "section",
+ "order": [
+  "4-1-Ask-Before-Filling-Specification-633e",
+  "Lab-4-1-Creating-the-Transfer-Flow-e8f9"
+ ]
 }

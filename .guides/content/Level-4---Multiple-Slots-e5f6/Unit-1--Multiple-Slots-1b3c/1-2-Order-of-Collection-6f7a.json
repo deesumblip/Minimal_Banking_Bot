@@ -1,14 +1,8 @@
 {
 	"id": "05ed56ca-e8c7-5e9e-b0f0-ee21595c8223",
 	"title": "1.2 Order of Collection",
-	"files": [
-		{
-			"path": "",
-			"panel": 1,
-			"action": "open"
-		}
-	],
-	"layout": "2-panels-tree-guides-left",
+	"files": [],
+	"layout": "1-panel-tree",
 	"path": [
 		"level4"
 	],

@@ -3,7 +3,7 @@
 	"title": "Lab 3.1: Writing the Action That Uses Multiple Slots",
 	"files": [
 		{
-			"path": "#terminal",
+			"path": "level4/actions/action_check_balance_simple.py",
 			"panel": 1,
 			"action": "open"
 		}

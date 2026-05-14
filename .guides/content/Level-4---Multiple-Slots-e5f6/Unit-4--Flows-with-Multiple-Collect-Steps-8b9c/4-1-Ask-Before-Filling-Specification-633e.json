@@ -3,12 +3,11 @@
 	"title": "4.1 Ask Before Filling Specification",
 	"files": [
 		{
-			"path": "",
-			"panel": 1,
-			"action": "open"
+			"path": "#tabs",
+			"action": "close"
 		}
 	],
-	"layout": "2-panels-tree-guides-left",
+	"layout": "1-panel-tree",
 	"path": [
 		"level4"
 	],
