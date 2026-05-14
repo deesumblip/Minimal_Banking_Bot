@@ -2,9 +2,12 @@
 # codio-publish-level6.yml runs prepare-level6-codio-publish.sh first so
 # index.json and the working tree are Level-6-only for publish; main keeps
 # the full course index and all chapter folders.
+#
+# `section:` must match the Codio assignment module + unit names exactly
+# (chapter title = Level-6 guide index.json "title"; unit = each Unit-*/index.json "title").
 
 - assignment: 8b6425b370c9831e75b5205b19e15636
-  section: ["Sub-Agents", "Unit 0: Recap - What you built in Level 5"]
+  section: ["Level 6 - Sub-Agents", "Unit 0: Recap - What you built in Level 5"]
   paths: &l6
     - "level6/**"
     - ".guides/content/index.json"
@@ -19,25 +22,25 @@
     - ".gitignore"
 
 - assignment: 8b6425b370c9831e75b5205b19e15636
-  section: ["Sub-Agents", "Unit 1: Sub-Agents Concept"]
+  section: ["Level 6 - Sub-Agents", "Unit 1: Sub-Agents Concept"]
   paths: *l6
 
 - assignment: 8b6425b370c9831e75b5205b19e15636
-  section: ["Sub-Agents", "Unit 2: Sub-Agent Config"]
+  section: ["Level 6 - Sub-Agents", "Unit 2: Sub-Agent Config"]
   paths: *l6
 
 - assignment: 8b6425b370c9831e75b5205b19e15636
-  section: ["Sub-Agents", "Unit 3: MCP and ReAct Config"]
+  section: ["Level 6 - Sub-Agents", "Unit 3: MCP and ReAct Config"]
   paths: *l6
 
 - assignment: 8b6425b370c9831e75b5205b19e15636
-  section: ["Sub-Agents", "Unit 4: Flow that Calls the Sub-Agent"]
+  section: ["Level 6 - Sub-Agents", "Unit 4: Flow that Calls the Sub-Agent"]
   paths: *l6
 
 - assignment: 8b6425b370c9831e75b5205b19e15636
-  section: ["Sub-Agents", "Unit 5: Training and Testing"]
+  section: ["Level 6 - Sub-Agents", "Unit 5: Training and Testing"]
   paths: *l6
 
 - assignment: 8b6425b370c9831e75b5205b19e15636
-  section: ["Sub-Agents", "Unit 6: Summary and Next Steps"]
+  section: ["Level 6 - Sub-Agents", "Unit 6: Summary and Next Steps"]
   paths: *l6
