@@ -4,7 +4,7 @@
 	"source": {
 		"name": "Level 2: 2.3 Test Your Knowledge - run() Parameters",
 		"showName": false,
-		"instructions": "**What are the three parameters passed to a custom action's run() method?**",
+		"instructions": "**What are the three parameters passed to an action's run() method?**",
 		"multipleResponse": false,
 		"isRandomized": false,
 		"answers": [
@@ -30,26 +30,16 @@
 			}
 		],
 		"metadata": {
-			"tags": [
-				{
-					"name": "Assessment Type",
-					"value": "Multiple Choice"
-				}
-			],
+			"tags": [{"name": "Assessment Type", "value": "Multiple Choice"}],
 			"files": [],
 			"opened": []
 		},
 		"bloomsObjectiveLevel": "1",
 		"learningObjectives": "SWBAT identify run() method parameters",
 		"guidance": "The run() method signature is run(self, dispatcher, tracker, domain). dispatcher is used to send messages to the user (e.g. dispatcher.utter_message()). tracker holds conversation history and slots (used in later levels). domain holds the domain configuration. You use dispatcher to send text; tracker and domain are available for more advanced logic.",
-		"showGuidanceAfterResponseOption": {
-			"type": "Attempts",
-			"passedFrom": 1
-		},
+		"showGuidanceAfterResponseOption": {"type": "Attempts", "passedFrom": 1},
 		"maxAttemptsCount": 1,
-		"showExpectedAnswerOption": {
-			"type": "Always"
-		},
+		"showExpectedAnswerOption": {"type": "Always"},
 		"points": 5,
 		"incorrectPoints": 0,
 		"arePartialPointsAllowed": false,

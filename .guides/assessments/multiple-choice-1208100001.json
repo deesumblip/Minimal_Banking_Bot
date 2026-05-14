@@ -4,7 +4,7 @@
 	"source": {
 		"name": "Level 2: 6.4 See it all together - What is an Action",
 		"showName": false,
-		"instructions": "**What is an custom action?**",
+		"instructions": "**What is an Action?**",
 		"multipleResponse": false,
 		"isRandomized": false,
 		"answers": [
@@ -30,32 +30,16 @@
 			}
 		],
 		"metadata": {
-			"tags": [
-				{
-					"name": "Assessment Type",
-					"value": "Multiple Choice"
-				}
-			],
+			"tags": [{"name": "Assessment Type", "value": "Multiple Choice"}],
 			"files": [],
-			"opened": [
-				{
-					"type": "terminal",
-					"panelNumber": 1,
-					"content": ""
-				}
-			]
+			"opened": []
 		},
 		"bloomsObjectiveLevel": "1",
 		"learningObjectives": "SWBAT define what an action is in Rasa",
 		"guidance": "Actions are Python classes that execute custom code. They allow the agent to do more than send static text—they can perform calculations, access databases, and run any Python logic.",
-		"showGuidanceAfterResponseOption": {
-			"type": "Attempts",
-			"passedFrom": 1
-		},
+		"showGuidanceAfterResponseOption": {"type": "Attempts", "passedFrom": 1},
 		"maxAttemptsCount": 1,
-		"showExpectedAnswerOption": {
-			"type": "Always"
-		},
+		"showExpectedAnswerOption": {"type": "Always"},
 		"points": 5,
 		"incorrectPoints": 0,
 		"arePartialPointsAllowed": false,

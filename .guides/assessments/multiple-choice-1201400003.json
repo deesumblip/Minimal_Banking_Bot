@@ -2,9 +2,9 @@
 	"type": "multiple-choice",
 	"taskId": "multiple-choice-1201400003",
 	"source": {
-		"name": "Level 2: 1.3 Test Your Knowledge - When to Use Actions",
+		"name": "Level 2: 1.4 Test Your Knowledge - When to Use Actions",
 		"showName": false,
-		"instructions": "**When should you use a custom action instead of a simple response?**",
+		"instructions": "**When should you use an action instead of a simple response?**",
 		"multipleResponse": false,
 		"isRandomized": false,
 		"answers": [
@@ -30,26 +30,16 @@
 			}
 		],
 		"metadata": {
-			"tags": [
-				{
-					"name": "Assessment Type",
-					"value": "Multiple Choice"
-				}
-			],
+			"tags": [{"name": "Assessment Type", "value": "Multiple Choice"}],
 			"files": [],
 			"opened": []
 		},
 		"bloomsObjectiveLevel": "2",
 		"learningObjectives": "SWBAT decide when to use actions vs responses",
 		"guidance": "Use actions when you need dynamic responses (e.g. 'We're open today until 5pm' based on current day), calculations, data processing, external integrations, or conditional logic. Use simple responses (utter_*) for static text that never changes and does not require any processing.",
-		"showGuidanceAfterResponseOption": {
-			"type": "Attempts",
-			"passedFrom": 1
-		},
+		"showGuidanceAfterResponseOption": {"type": "Attempts", "passedFrom": 1},
 		"maxAttemptsCount": 1,
-		"showExpectedAnswerOption": {
-			"type": "Always"
-		},
+		"showExpectedAnswerOption": {"type": "Always"},
 		"points": 5,
 		"incorrectPoints": 0,
 		"arePartialPointsAllowed": false,

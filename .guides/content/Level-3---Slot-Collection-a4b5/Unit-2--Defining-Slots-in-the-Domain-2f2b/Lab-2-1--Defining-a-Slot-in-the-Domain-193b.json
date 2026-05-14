@@ -3,7 +3,7 @@
 	"title": "Lab 2.1: Defining a Slot in the Domain",
 	"files": [
 		{
-			"path": "#terminal",
+			"path": "level3/domain/basics.yml",
 			"panel": 1,
 			"action": "open"
 		}
