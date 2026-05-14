@@ -1,12 +1,20 @@
-# Publishes Level 6 bot code to the Level 6 Codio assignment.
-# Guide content is managed directly in Codio UI.
+# Publishes Level 6 bot + guide to the Level 6 Codio assignment.
+# codio-publish-level6.yml runs prepare-level6-codio-publish.sh first so
+# index.json and the working tree are Level-6-only for publish; main keeps
+# the full course index and all chapter folders.
 
 - assignment: 8b6425b370c9831e75b5205b19e15636
   section: ["Level 6 - Sub-Agents", "Unit 0: Intro to Sub-Agents"]
   paths: &l6
     - "level6/**"
+    - ".guides/content/index.json"
+    - ".guides/content/Level-6---Sub-Agents-c7d8/**"
     - ".guides/styles.css"
     - ".guides/img/**"
+    - ".guides/assessments/**"
+    - ".guides/secure/level6_graders/**"
+    - ".guides/scripts/**"
+    - ".guides/startup.sh"
     - ".codio"
     - ".gitignore"
 

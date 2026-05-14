@@ -37,6 +37,10 @@ jobs:
           cp ".github/yaml_map/${LEVEL_INPUT}.yml" "${TMP_DIR}/${LEVEL_INPUT}.yml"
           echo "Prepared yaml_map: ${LEVEL_INPUT}"
 
+      - name: Level 6-only guide TOC and tree (publish tree only)
+        shell: bash
+        run: bash .github/scripts/prepare-level6-codio-publish.sh
+
       - name: Publish subset assignment (Level 6)
         uses: codio/codio-assignment-publish-action@master
         with:
