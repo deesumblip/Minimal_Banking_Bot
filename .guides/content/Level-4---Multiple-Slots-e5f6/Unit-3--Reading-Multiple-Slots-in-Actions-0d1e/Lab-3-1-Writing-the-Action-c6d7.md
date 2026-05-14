@@ -1,28 +1,18 @@
-Now that we have registered everything in the domain, we need to create the file, `actions/action_process_transfer.py` so that we can send all the values we collect from the user (account number, transfer recipient, and amount) to the backend system. 
+<p style="font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#5a17ee;margin:0 0 4px;">Lab objective</p>
 
-
----
-#### Complete the action file (fill in the blanks)
-
-The exercise uses the same pieces you saw in *The Action Class Deep Dive*, and allows you to build the custom action that will leverage the information you set in the slots to complete a money transfer flow. 
-
+Complete the action file using the fill-in-the-blanks exercise below, then create `level4/actions/action_process_transfer.py` and paste in your completed code. There is a reference action `action_check_balance.py` in the panel to the right to help with your fill in the blank activity. 
+ 
 {Check It!|assessment}(fill-in-the-blanks-401030010)
+ 
+**After completing the blanks:**
+ 
+1. Open `level4/actions/action_process_transfer.py` in the file tree (create the `actions` folder under `level4` if it does not exist).
+2. Paste your completed script so the file matches your answers.
+3. Save the file.
 
----
-
-### After you complete the blanks
-
-1. **Open** `level4/actions/action_process_transfer.py` in the file tree (create the `actions` folder under `level4` if needed).
-2. **Paste** your completed script from the exercise above so the file matches your answers (all blanks filled).
-3. **Save** the file.
-
----
-
-### Run the code assessment
-
-The grader checks that the file exists, has the right structure, reads the `amount`, `recipient`, and `account_from` slots with `get_slot`, and sends a transfer-related confirmation message.
-
+**Verify.** The grader below checks that the file exists, has the correct class structure, reads the `amount`, `recipient`, and `account` slots with `get_slot`, and sends a transfer confirmation message.
+ 
 {Check It!|assessment}(code-output-compare-401030001)
-
+ 
 ---
 

@@ -3,9 +3,8 @@
 	"title": "Lab 4.1: Creating the Transfer Flow",
 	"files": [
 		{
-			"path": "#terminal",
-			"panel": 1,
-			"action": "open"
+			"path": "#tabs",
+			"action": "close"
 		}
 	],
 	"layout": "2-panels-tree-guides-left",

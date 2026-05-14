@@ -8,6 +8,4 @@ Answer the following to check your understanding of Level 4 (multiple slots).
 
 {Check It!|assessment}(multiple-choice-401040106)
 
-{Check It!|assessment}(multiple-choice-401040107)
-
 {Check It!|assessment}(multiple-choice-401040108)

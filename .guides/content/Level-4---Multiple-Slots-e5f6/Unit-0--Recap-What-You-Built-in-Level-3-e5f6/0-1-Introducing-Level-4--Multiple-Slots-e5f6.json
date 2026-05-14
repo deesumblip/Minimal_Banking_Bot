@@ -1,14 +1,8 @@
 {
 	"id": "e5f68001-e4f5-4e5f-8a9b-0c1d0e000001",
 	"title": "0.1 Introducing Level 4: Multiple Slots",
-	"files": [
-		{
-			"path": "",
-			"panel": 1,
-			"action": "open"
-		}
-	],
-	"layout": "2-panels-tree-guides-left",
+	"files": [],
+	"layout": "1-panel-tree",
 	"path": [
 		"level4"
 	],

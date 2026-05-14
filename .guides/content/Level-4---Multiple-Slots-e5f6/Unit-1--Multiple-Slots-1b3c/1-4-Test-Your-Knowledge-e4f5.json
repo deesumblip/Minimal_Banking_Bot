@@ -1,14 +1,8 @@
 {
 	"id": "a8d6a251-4488-5b18-9592-4b2e2ad6abc1",
 	"title": "1.4 Test Your Knowledge",
-	"files": [
-		{
-			"path": "",
-			"panel": 1,
-			"action": "open"
-		}
-	],
-	"layout": "2-panels-tree-guides-left",
+	"files": [],
+	"layout": "1-panel-tree",
 	"path": [
 		"level4"
 	],

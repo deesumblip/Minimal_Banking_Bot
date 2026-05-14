@@ -1,14 +1,8 @@
 {
 	"id": "6addb8b6-1a88-5730-b9e9-8db4457eea9d",
 	"title": "1.3 Slot Naming",
-	"files": [
-		{
-			"path": "",
-			"panel": 1,
-			"action": "open"
-		}
-	],
-	"layout": "2-panels-tree-guides-left",
+	"files": [],
+	"layout": "1-panel-tree",
 	"path": [
 		"level4"
 	],

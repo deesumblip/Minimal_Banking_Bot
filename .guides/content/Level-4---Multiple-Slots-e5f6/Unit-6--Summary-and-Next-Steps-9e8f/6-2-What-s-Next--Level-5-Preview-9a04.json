@@ -1,14 +1,8 @@
 {
 	"id": "9a04f772-146e-54c5-99e7-b7f3f0fcfde1",
 	"title": "6.2 What's Next: Level 5 Preview",
-	"files": [
-		{
-			"path": "",
-			"panel": 1,
-			"action": "open"
-		}
-	],
-	"layout": "2-panels-tree-guides-left",
+	"files": [],
+	"layout": "1-panel-tree",
 	"path": [
 		"level4"
 	],

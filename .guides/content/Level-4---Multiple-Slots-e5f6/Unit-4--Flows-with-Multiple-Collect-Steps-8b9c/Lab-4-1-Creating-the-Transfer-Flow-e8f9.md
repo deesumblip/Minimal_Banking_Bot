@@ -1,5 +1,8 @@
-Create `data/basics/transfer_money.yml` under `level4/` and add the following:
 
+<p style="font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#5a17ee;margin:0 0 4px;">Lab objective</p>
+
+Create `level4/data/basics/transfer_money.yml`: a Flow that can collect multiple slots. 
+ 
 ```yaml
 flows:
   transfer_money:
@@ -26,12 +29,16 @@ flows:
           Only extract when the user says actual digits like "123456" or "my account number is 789012".
       - action: action_process_transfer
 ```
+**A note on slot descriptions** 
+You will notice in the flow template above, there are some very detailed slot descriptions. These are “instructions to the language model” for how to extract a slot value, so they directly improve the reliability of slot filling, especially for ambiguous or structured values (numbers, IDs, constrained formats) and when user messages contain extra words
+ 
+ **A note on `ask_before_filling`** 
+`account` has `ask_before_filling: true` because another flow, `check_balance`, persists that slot. Without it, a returning user's account would be silently reused without confirmation. `amount` and `recipient` have no such risk, so they fill immediately if provided upfront.
+ 
+## Verify
 
-Remember: `account` has `ask_before_filling: true` because `check_balance` persists that slot, without it, a returning user's account would be silently reused. `amount` and `recipient` have no such risk, so they fill immediately if provided upfront.
-
-Another way to enhance the conversation design of this flow would be to confirm with the user that everything has been properly collected before submitting the money transfer request - something to try building in after you have completed this course. 
-
-
-**Use Check It!** below when done.
-
+`data/basics/transfer_money.yml` should contain a `transfer_money` flow with three `collect:` steps and `ask_before_filling: true` on the `account` step.
+ 
 {Check It!|assessment}(code-output-compare-401040001)
+ 
+---
