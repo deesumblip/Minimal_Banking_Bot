@@ -1,0 +1,14 @@
+{
+	"id": "level5-chapter-f9e0-enterprise-search",
+	"type": "chapter",
+	"title": "Level 5 - Enterprise Search",
+	"order": [
+		"Unit-0--Introduction-to-Enterprise-Search-leve",
+		"Unit-1--How-RAG-Works-leve",
+		"Unit-2--Setting-up-Enterprise-Search-leve",
+		"Unit-3--Override-default-search-pattern-leve",
+		"Unit-4--Train-and-Test-for-Search-leve",
+		"Unit-5--Summary-and-Next-Steps-leve"
+	],
+	"content": ""
+}

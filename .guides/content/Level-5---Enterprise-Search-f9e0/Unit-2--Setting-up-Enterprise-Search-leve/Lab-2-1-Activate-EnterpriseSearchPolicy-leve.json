@@ -1,0 +1,26 @@
+{
+	"id": "level5-page-2-1-Creating-Tool-Functions-L5c1",
+	"title": "Lab 2.1 Activate EnterpriseSearchPolicy",
+	"files": [
+		{
+			"path": "level5/config.yml",
+			"panel": 1,
+			"action": "open"
+		},
+		{
+			"path": "level5/endpoints.yml",
+			"panel": 1,
+			"action": "open"
+		}
+	],
+	"layout": "2-panels-tree-guides-left",
+	"path": [
+		"level5"
+	],
+	"type": "page",
+	"contentType": "markdown",
+	"content": "",
+	"teacherOnly": false,
+	"closeTerminalSession": true,
+	"learningObjectives": ""
+}
