@@ -1,5 +1,5 @@
 `pattern_completed` runs when a flow finishes and there is nothing else to do.
-
+ 
 ```yaml
 flows:
   pattern_completed:
@@ -8,8 +8,7 @@ flows:
       - noop: true
         next: END
 ```
-
-`noop` means no operation. The pattern takes no action and returns the agent to a ready state, waiting for the next user message. 
-
+ 
+`noop` means no operation. The agent takes no action and returns to a ready state, waiting for the next user message.
+ 
 ---
-

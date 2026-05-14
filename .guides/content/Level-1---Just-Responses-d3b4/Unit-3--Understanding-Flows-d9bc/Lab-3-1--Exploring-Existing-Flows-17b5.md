@@ -1,23 +1,12 @@
-**Learning objective:** Read a Rasa flow file and explain what each field does.
+<p style="font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#5a17ee;margin:0 0 4px;">Lab objective</p>
 
-#### Steps
+Read a Rasa flow file and explain what each field does.
+ 
+1. Open `data/basics/` — you should see `greet.yml`, `help.yml`, and `contact.yml`.
+2. Open `greet.yml`. Pay attention to `description:`, this is what the LLM reads to decide when to activate the flow.
+3. Open `help.yml` and `contact.yml`. All three follow the same structure. Read the descriptions to understand when each flow would activate.
 
-1. **Navigate to the data folder**
-   - Open the `data/basics/` folder using the left panel.
-   - You should see `greet.yml`, `help.yml`, and `contact.yml`.
-
-2. **Examine `greet.yml`**
-   - Open the file and match each line to the structure covered in 3.1.
-   - Pay attention to the `description:` field. This, alongside `name` is what the LLM reads to decide when to activate the flow.
-
-3. **Compare flows**
-   - Open `help.yml` and `contact.yml`.
-   - All three follow the same structure. Read the descriptions to get a feel for when the flows would be activated.
-
----
 
 {Check It!|assessment}(multiple-choice-2723206154)
-
-{Check It!|assessment}(multiple-choice-1420316307)
 
 ---

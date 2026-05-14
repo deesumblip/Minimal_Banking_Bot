@@ -7,7 +7,7 @@
 			"action": "close"
 		},
 		{
-			"path": "#terminal",
+			"path": "level1/data/system/patterns/patterns.yml",
 			"panel": 1,
 			"action": "open"
 		}
@@ -17,7 +17,8 @@
 		"level1"
 	],
 	"type": "page",
-	"contentType": "markdown", "content": "",
+	"contentType": "markdown",
+	"content": "",
 	"teacherOnly": false,
 	"closeTerminalSession": true,
 	"learningObjectives": ""

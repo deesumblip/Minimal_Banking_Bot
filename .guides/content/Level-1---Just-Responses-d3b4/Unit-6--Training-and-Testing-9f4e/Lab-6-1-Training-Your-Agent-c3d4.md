@@ -1,55 +1,43 @@
-**Objective**: Train your agent and verify it works.
-
-#### Steps
-
-Run all commands from the **`level1`** folder with your virtual environment active. Do not run from the repository root.
-
+ 
+<p style="font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#5a17ee;margin:0 0 4px;">Lab objective</p>
+Run all commands from `level1/` with the virtual environment active.
+ 
 ```bash
-ls -la .venv
 source .venv/bin/activate
-# If .venv is missing: python3.11 -m venv .venv && source .venv/bin/activate
-
 cd level1
-pwd
 python -m rasa --version
 python -m rasa train
 ```
-
+ 
 Your prompt should show `(.venv)` and `pwd` should end with `level1`.
-
-If `python -m rasa --version` fails, install Rasa with the venv active:
+ 
+If `python -m rasa --version` fails:
+ 
 ```bash
 pip install rasa-pro==3.16.3
+echo 'RASA_LICENSE=YOUR_LICENSE_KEY' > .env
 ```
-
-Training takes several minutes the first time. When it succeeds you will see something like:
-
+ 
+Installing Rasa takes several minutes. On success:
+ 
 ```text
-INFO     rasa.model  - Successfully saved model to 'models/20250112-120817-descent-lard.tar.gz'
+INFO  rasa.model - Successfully saved model to 'models/20250112-120817-descent-lard.tar.gz'
 ```
-
-#### Common errors
-
-| Symptom | What to do |
-|--------|------------|
-| **YAML or parse error with a file path and line** | Open the file at that line. Use **2 spaces**, not tabs. Check colons after keys and list items that start with **`-`**. Save and train again from **`level1`**. |
-| **YAML syntax such as “block mapping”** | Fix indentation and structure, save, train again from **`level1`**. |
-| **Response `utter_…` not found** | A flow references a response that is not in the domain, often **`domain/basics.yml`**. Add the response or correct the name in the flow. |
-| **No module named `rasa`** | Activate the venv from the project root, **`cd level1`**, then run **`pip install rasa-pro==3.16.3`** if needed. |
-| **RASA_LICENSE not set** | See **Lab 0.1** for setting **`RASA_LICENSE`**, or ask your instructor. |
-
-Confirm that `level1/models/` contains a new `.tar.gz` file before clicking **Check It!** The assessment expects a model trained within the last 10 minutes. If you trained earlier, run `python -m rasa train` again.
-
----
-
-**Next**: In **Lab 6.2**, start Rasa Inspector and chat with the model you just built.
-
-**Check It!** runs in the course workspace after you have a new model under **`level1/models/`**. Click **Check It!** below when you are ready.
+ 
+**Common errors**
+If you have a problem not solved by this chart, paste your logs into the rasa docs bot on https://rasa.com/docs/ and it might be able to find the root cause. 
+ 
+| Symptom | Fix |
+|---|---|
+| YAML or parse error with a file path and line | Open the file at that line. Use 2 spaces, not tabs. Check colons after keys and `-` before list items. Make sure you are training again from `level1/` and not the root. |
+| "block mapping" YAML syntax error | Fix indentation and structure, save, train again from `level1/`. |
+| `utter_…` response not found | A flow references a response missing from `domain/basics.yml`. Add the response or fix the name. |
+| No module named `rasa` | Activate the venv from the project root, `cd level1`, then `pip install rasa-pro==3.16.3`. |
+| `RASA_LICENSE` not set | See Lab 0.1, or ask your instructor. |
+ 
+<table style="width:100%;border-collapse:collapse;margin:16px 0;"><tr style="background:transparent;border:none;"><td style="background:#fff9ed;border:1px solid #ffd594;border-left:3px solid #f59e0b;padding:12px 16px;line-height:1.6;color:#080327;font-size:0.9em;">Confirm <code>level1/models/</code> contains a new <code>.tar.gz</code> before clicking Check It!. The assessment expects a model trained within the last 10 minutes, if you trained earlier, run <code>python -m rasa train</code> again.</td></tr></table>
 
 {Check It!|assessment}(code-output-compare-2562507355)
-
-
-
-
-
+ 
 ---
+ 
